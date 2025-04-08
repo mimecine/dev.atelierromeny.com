@@ -1,0 +1,30 @@
+media:
+  input: src/assets/img
+  output: ../../media/img
+
+content:
+  - name: works
+    label: Works
+    type: collection
+    path: 'src/content/works'
+    view:
+      fields: [ title, year, date ]
+    fields:
+      - name: published
+        label: Published
+        type: boolean
+        default: true
+      - name: year
+        label: Date
+        type: date
+      - name: title
+        label: Title
+        type: string
+      - name: body
+        label: Body
+        type: rich-text
+      - name: image
+        label: Image
+        type: image
+        
+        
