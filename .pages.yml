@@ -1,5 +1,5 @@
 media:
-  input: src/assets/img
+  input: src/media/img
   output: ../../media/img
 
 content:
