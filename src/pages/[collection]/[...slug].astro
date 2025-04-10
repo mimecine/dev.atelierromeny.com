@@ -1,0 +1,112 @@
+---
+import { type CollectionEntry, getCollection, getEntry } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+
+export async function getStaticPaths() {
+  let works = (await getCollection("works")).filter((work) => work.data.image);
+  // let collections = await getCollection("collections");
+  const collections = [
+    { collection: "works", slug: "works" },
+    { collection: "exhibitions", slug: "exhibitions" },
+    { collection: "projects", slug: "projects" },
+  ];
+  return collections
+    .map(({ collection, slug }) => {
+      return works
+        .map((work, i) => ({
+          params: {
+            collection,
+            slug: work.id,
+          },
+          props: work,
+        }));
+    })
+    .flat();
+}
+type Props = CollectionEntry<"works">;
+
+const { collection = "works", slug } = Astro.params;
+const work = Astro.props;
+
+const works = (await getCollection("works")).filter((work) => work.data.image).sort((a, b) => a.data.title?.localeCompare(b.data.title) || 0);
+
+const { previous, next } = works.reduce(
+  (acc, work, i) => {
+    if (work.id === Astro.params.slug) {
+      acc.previous = works[i - 1];
+      acc.next = works[i + 1];
+    }
+    return acc;
+  },
+  { previous: null, next: null }
+);
+const { count, index } = works.reduce(
+  (acc, work, i) => {
+    if (work.id === Astro.params.slug) {
+      acc.count = works.length;
+      acc.index = i;
+    }
+    return acc;
+  },
+  { count: null, index: null }
+);
+---
+
+<Layout>
+  <section class="grid max-w-4xl mx-auto p-4 font-serif">
+    {
+      work.data.image && (
+        <Image src={work.data.image} alt={work.data.title || ""} width={1024} class=""/>
+      )
+    }
+    <h5>
+      {work.data.title}
+      {work.data.year_start && `, ${work.data.year_start}`}
+    </h5>
+
+
+    <ul class="flex justify-between items-center marker:text-red-400">
+        {previous && (
+          <li>
+            <a href={`/${collection}/${previous.id}`} alt={previous.data.title} title={previous.data.title}>&larr; Previous</a>
+          </li>
+        )}
+      <li>
+        {index + 1} of {count}
+      </li>
+        {next && (
+          <li>
+            <a href={`/${collection}/${next.id}`} alt={next.data.title} title={next.data.title}>Next &rarr;</a>
+          </li>
+        )}
+      </ul>
+
+      <details class="mt-4">
+        <summary>Info</summary>
+        <p><strong>Categories:</strong> {work.data.categories}</p>
+        <p><strong>Year:</strong> {work.data.year}</p>
+        <p><strong>Location:</strong> {work.data.location}</p>
+        <p><strong>Note:</strong> {work.data.note}</p>
+      </details>
+      <p>
+        <a href={`/${collection}`}>Back to {collection}</a>
+      </p>
+  </section>
+
+</Layout>
+
+<style>
+  @reference "../../styles/global.css";
+  article {
+    @apply p-4;
+  }
+  article img {
+    max-width: 100%;
+    height: auto;
+    @apply border  object-contain;
+  }
+  article h1 {
+    @apply text-2xl font-bold;
+  }
+</style>

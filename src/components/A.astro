@@ -1,0 +1,15 @@
+---
+const { href, ...attrs } = Astro.props;
+const path = Astro.url.pathname;
+const isActive = path === href || path.startsWith(href + "/");
+---
+
+<a href={href} class:list={isActive ? [`isactive`]:[]} {...attrs}
+  ><slot />
+  <style>
+    @reference "../styles/global.css";
+    a.isactive {
+      @apply italic text-red-700;
+    }
+  </style></a
+>

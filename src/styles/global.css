@@ -1,6 +1,9 @@
 @import "tailwindcss";
+@import "@fontsource-variable/roboto-condensed/wght-italic.css";
+@import "@fontsource-variable/roboto-condensed";
 
-html,
-body {
-    @apply m-0 min-w-lvw min-h-lvh w-full h-full;
+@theme {
+  --font-headline: "Roboto Condensed Variable", sans-serif;
 }
+
+

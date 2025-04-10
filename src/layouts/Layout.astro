@@ -1,24 +1,83 @@
 ---
 import "../styles/global.css";
+import A from '../components/A.astro';
+
+import { ClientRouter } from "astro:transitions";
+
+import { fade } from 'astro:transitions';
+
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  frontmatter?: Record<string, unknown>;
+}
+
+const { description, image, frontmatter, title = frontmatter?.title, ...props } = Astro.props;
+
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" transition:name="root" transition:animate="fade">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Atelier Romeny</title>
+    <meta name="description" content={description} />
+    <slot name="head" />
+    <title>{title && `${title} -`} Atelier Romeny</title>
+    <ClientRouter />
+
   </head>
-  <body>
-    <slot />
+  <body class="min-h-screen flex flex-col justify-between font-serif">
+    <header>
+      <h1><a href="/">Atelier Romeny</a></h1>
+      <nav class="flex gap-8 uppercase text-2xl">
+        <A href="/works">Works</A>
+        <A href="/about">About</A>
+        <slot name="nav" />
+      </nav>
+      <slot name="header" />
+    </header>
+    <main class="">
+      <slot/>
+    </main>
+    <footer class="text-xs text-gray-500 flex flex-col items-center">
+      <p>&copy; {new Date().getFullYear()} Atelier Romeny</p>
+      <slot name="footer" />
+      </footer>
   </body>
 </html>
 
-<style>
+<style is:global>
   @reference "../styles/global.css";
+  html,
   body {
-    @apply bg-amber-50;
+    @apply m-0  w-full h-full p-4 !bg-gray-50 **:[p]:py-2;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold font-headline tracking-tighter uppercase pb-8 text-lg;
+  }
+  h1 {
+    @apply text-3xl lg:text-4xl;
+  }
+  h2 {
+    @apply text-2xl lg:text-3xl;
+  }
+  h3 {
+    @apply text-xl lg:text-2xl;
+  }
+  h4 {
+    @apply text-lg lg:text-xl;
+  }
+  p > a {
+    @apply text-gray-700 hover:text-gray-500 underline;
   }
 </style>

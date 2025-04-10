@@ -11,5 +11,8 @@ year: '2005'
 year_start: 2005
 year_end:
 image: ../../media/img/IMG_20190416_202747.jpg
-
 ---
+
+import Image from 'astro:assets';
+
+<Image src={import.meta.glob('../../media/img/IMG_20190416_202747.jpg')} alt="Wo Hin 1" width={38} height={46} />
