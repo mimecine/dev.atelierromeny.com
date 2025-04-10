@@ -5,11 +5,12 @@ categories: Animaux
 w: 32
 h: 32
 location: old atelier
-note:
+note: null
 file: IMG_20180813_143335.jpg
 year: '1984'
 year_start: 1984
-year_end:
+year_end: null
 image: ../../media/img/IMG_20180813_143335.jpg
-
+uuid: d1f909c6-d429-4187-b564-fb28424fc054
 ---
+

@@ -4,12 +4,13 @@ title: Joueur de carte
 categories: Figures humaines
 w: 27
 h: 35
-location:
-note:
-file:
+location: null
+note: null
+file: null
 year: '1954'
 year_start: 1954
-year_end:
-image:
-
+year_end: null
+image: null
+uuid: d1394be0-dfca-4e26-844c-166369820290
 ---
+

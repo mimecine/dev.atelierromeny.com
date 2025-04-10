@@ -5,11 +5,12 @@ categories: Abstrait
 w: 41
 h: 26
 location: secondary storage
-note:
+note: null
 file: IMG_20190416_202234.jpg
 year: '1990'
 year_start: 1990
-year_end:
+year_end: null
 image: ../../media/img/IMG_20190416_202234.jpg
-
+uuid: 497ba255-6150-40be-8cc0-ed9e0ff4ddd7
 ---
+

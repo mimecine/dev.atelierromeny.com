@@ -5,11 +5,12 @@ categories: Abstrait
 w: 62
 h: 60
 location: secondary storage
-note:
+note: null
 file: IMG_20180925_120907.jpg
 year: '1973'
 year_start: 1973
-year_end:
+year_end: null
 image: ../../media/img/IMG_20180925_120907.jpg
-
+uuid: f0a82f91-2659-4b35-94d1-7f45c96e98a4
 ---
+

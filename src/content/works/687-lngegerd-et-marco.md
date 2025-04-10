@@ -5,11 +5,12 @@ categories: Figures humaines
 w: 48
 h: 64
 location: old atelier
-note:
+note: null
 file: IMG_20180814_163225.jpg
 year: '1974'
 year_start: 1974
-year_end:
+year_end: null
 image: ../../media/img/IMG_20180814_163225.jpg
-
+uuid: fdffbd1d-a764-42d0-910e-66d4a0dbfa53
 ---
+

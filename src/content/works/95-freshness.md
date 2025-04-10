@@ -4,12 +4,13 @@ title: Freshness
 categories: Abstrait
 w: 45
 h: 50
-location:
-note:
-file:
+location: null
+note: null
+file: null
 year: '1971'
 year_start: 1971
-year_end:
-image:
-
+year_end: null
+image: null
+uuid: 1793a7a6-fbd7-448b-9285-33fb663d4213
 ---
+

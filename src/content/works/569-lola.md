@@ -4,12 +4,13 @@ title: Lola
 categories: Métro
 w: 81
 h: 100
-location:
-note:
-file:
+location: null
+note: null
+file: null
 year: '1982'
 year_start: 1982
-year_end:
-image:
-
+year_end: null
+image: null
+uuid: 899ad769-0d9a-4bfa-88b4-352a45bc76dc
 ---
+

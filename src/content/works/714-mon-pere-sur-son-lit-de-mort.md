@@ -9,7 +9,8 @@ note: reserve
 file: IMG_20190416_195206.jpg
 year: '1965'
 year_start: 1965
-year_end:
+year_end: null
 image: ../../media/img/IMG_20190416_195206.jpg
-
+uuid: 9e6810eb-92b6-49d3-9edc-e50330e2bbbd
 ---
+

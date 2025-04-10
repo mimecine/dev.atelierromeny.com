@@ -12,9 +12,12 @@ collections:
     folder: "src/content/works"
     create: true
     slug: "{{id}}-{{title}}-{{year}}"
-    summary: "{{title}}, {{year}}, {{location}}"
+    summary: "{{title}}, {{year}}, {{location}}"  
     identifier_field: "title"
-    search_fields: ["title", "id", "year", "location"]
+    search_fields: ["title", "year", "location"]
+    filter:
+      field: "image"
+      pattern: ".{5,}"
     editor:
       preview: false
     # # sortable fields won't work until all fields are filled  on each item
@@ -23,10 +26,18 @@ collections:
     #   - "year"
     #   - "location"
     fields:
-      - { label: "ID", name: "id", widget: "number", required: true }
+      - { label: "UUID", name: "uuid", widget: "hidden", default: "{{uuid}}" }
+      # - { label: "ID", name: "id", widget: "number", required: false }
       - { label: "Title", name: "title", widget: "string", required: true }
       - { label: "Image", name: "image", widget: "image", required: false }
-      - { label: "Collections", name: "collections", widget: "relation", collection: "collections", search_fields: ["title"], value_field: "title", display_fields: ["title"], multiple: true, required: false }
+      - { label: "Collections", name: "collections", widget: "relation", collection: "collections", search_fields: ["title"], value_field: "uuid", display_fields: ["title"], multiple: true, required: false }
+      - label: "Tags"
+        name: "tags"
+        widget: list
+        required: false
+        fields:
+          - { label: "Tag", name: "tag", widget: "string" }
+      - { label: "Published", name: "published", widget: "boolean", default: true }
       - { label: "Categories", name: "categories", widget: "string", required: false }
       - { label: "Width (cm)", name: "w", widget: "number", required: false }
       - { label: "Height (cm)", name: "h", widget: "number", required: false }
@@ -43,13 +54,18 @@ collections:
     folder: "src/content/collections"
     create: true
     slug: "{{title}}"
-    identifier_field: "id"
-    summary: "{{title}}"
+    identifier_field: "title"
+    summary: "{{title}} - {{ published | ternary('published', 'unpublished') }}"
+    editor:
+      preview: false
     fields:
-      - { label: "ID", name: "id", widget: "uuid", required: true, hidden: true }
+      - { label: "UUID", name: "uuid", widget: "hidden", default: "{{uuid}}" }
+      # - { label: "ID", name: "id", widget: "uuid", required: true, hidden: true }
       - { label: "Title", name: "title", widget: "string", required: true }
-      - { label: "Notes", name: "notes", widget: "text", required: false }
+      - { label: "Published", name: "published", widget: "boolean", default: false }
+      - { label: "Shown In Menu", name: "inmenu", widget: "boolean", default: false}
       - { label: "Image", name: "image", widget: "image", required: false }
       - { label: "Description", name: "body", widget: "markdown", required: false }
-      - { label: "Works", name: "works", widget: "relation", collection: "works", search_fields: ["title","id","year_start","location"], value_field: "id", display_fields: ["title","year_start"], multiple: true, required: false }
+      # - { label: "Works", name: "works", widget: "relation", collection: "works", search_fields: ["title","id","year_start","location"], value_field: "id", display_fields: ["title","year_start"], multiple: true, required: false }
+      - { label: "Notes", name: "notes", widget: "text", required: false }
   

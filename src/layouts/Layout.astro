@@ -3,6 +3,7 @@ import "../styles/global.css";
 import A from '../components/A.astro';
 
 import { ClientRouter } from "astro:transitions";
+import { getCollection } from "astro:content"; 
 
 import { fade } from 'astro:transitions';
 
@@ -15,6 +16,9 @@ interface Props {
 }
 
 const { description, image, frontmatter, title = frontmatter?.title, ...props } = Astro.props;
+
+const collections = (await getCollection("collections"))
+.filter((collection) => collection.data.published && collection.data.inmenu);
 
 ---
 
@@ -31,12 +35,17 @@ const { description, image, frontmatter, title = frontmatter?.title, ...props } 
     <ClientRouter />
 
   </head>
-  <body class="min-h-screen flex flex-col justify-between font-serif">
+  <body class="min-h-screen flex flex-col justify-between font-headline font-thin">
     <header>
       <h1><a href="/">Atelier Romeny</a></h1>
-      <nav class="flex gap-8 uppercase text-2xl">
-        <A href="/works">Works</A>
-        <A href="/about">About</A>
+      <nav class="flex gap-8 uppercase text-lg">
+        {collections.map((collection) => (
+          <A href={`/${collection.id}`} class="hover:text-gray-500">
+            {collection.data.title}
+          </A>
+        ))}
+        <A href="/_works">[All Works]</A>
+        <A href="/bio">Biography</A>
         <slot name="nav" />
       </nav>
       <slot name="header" />

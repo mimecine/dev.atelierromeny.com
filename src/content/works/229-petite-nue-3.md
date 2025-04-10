@@ -5,11 +5,12 @@ categories: Nues
 w: 50
 h: 61
 location: graphic studio
-note:
+note: null
 file: IMG_20180922_190259.jpg
 year: '1997'
 year_start: 1997
-year_end:
+year_end: null
 image: ../../media/img/IMG_20180922_190259.jpg
-
+uuid: 4afe1837-373c-4131-8abb-d5678df066bf
 ---
+

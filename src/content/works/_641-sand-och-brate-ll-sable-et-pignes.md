@@ -5,11 +5,12 @@ categories: Abstrait
 w: 65
 h: 45
 location: graphic studio
-note:
+note: null
 file: IMG_20180922_133445.jpg
 year: '1984'
 year_start: 1984
-year_end:
+year_end: null
 image: ../../media/img/IMG_20180922_133445.jpg
-
+uuid: 64b04f6c-de4e-406d-b9a6-604b7a45afc2
 ---
+

@@ -5,11 +5,10 @@ categories: Natures mortes
 w: 60
 h: 90
 location: graphic studio
-note:
-# file: IMG_20180922_190113.jpg
+note: null
 year: '1953'
 year_start: 1953
-year_end:
-# image: ../../media/img/IMG_20180922_190113.jpg
-
+year_end: null
+uuid: fd79a44a-09e0-496e-9695-283b7e55cf17
 ---
+

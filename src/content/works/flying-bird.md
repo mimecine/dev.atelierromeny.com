@@ -1,15 +1,16 @@
 ---
-id:
+id: null
 title: Flying Bird
 categories: Birds
-w:
-h:
+w: null
+h: null
 location: old atelier
-note:
+note: null
 file: IMG_20180814_160808.jpg
 year: '---'
-year_start:
-year_end:
+year_start: null
+year_end: null
 image: ../../media/img/IMG_20180814_160808.jpg
-
+uuid: f899ad5c-e0c3-40d5-a261-b9436db8c3e2
 ---
+

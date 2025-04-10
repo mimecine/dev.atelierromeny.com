@@ -1,35 +1,41 @@
 ---
-import { type CollectionEntry, getCollection, getEntry } from "astro:content";
+import { type CollectionEntry, getCollection, getEntry, render } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import { Image } from "astro:assets";
 
 export async function getStaticPaths() {
+  let collections = await getCollection("collections");
+  collections.push({id:'_works',data:{title:'Works'}});
+  
   let works = (await getCollection("works")).filter((work) => work.data.image);
-  // let collections = await getCollection("collections");
-  const collections = [
-    { collection: "works", slug: "works" },
-    { collection: "exhibitions", slug: "exhibitions" },
-    { collection: "projects", slug: "projects" },
-  ];
+
   return collections
-    .map(({ collection, slug }) => {
+    .map(( collection ) => {
       return works
         .map((work, i) => ({
           params: {
-            collection,
+            collection: collection.id,
             slug: work.id,
           },
-          props: work,
+          props: {work, collection},
         }));
     })
     .flat();
 }
-type Props = CollectionEntry<"works">;
+type Props = CollectionEntry<"works"> & CollectionEntry<"collections"> ;
 
-const { collection = "works", slug } = Astro.params;
-const work = Astro.props;
+// const { collection = "works", slug } = Astro.params;
+const { work, collection } = Astro.props;
 
-const works = (await getCollection("works")).filter((work) => work.data.image).sort((a, b) => a.data.title?.localeCompare(b.data.title) || 0);
+const { Content } = await render(work);
+
+const works = (await getCollection("works"))
+  .filter((work) => work.data.image)
+  .filter((work) => work.data.collections?.includes(collection.data.title || '') || collection.data.title === "Works")
+  .sort((a, b) => a.data.title?.localeCompare(b.data.title || '(Untitled)') || 0);
+
+
+console.log(work)
 
 const { previous, next } = works.reduce(
   (acc, work, i) => {
@@ -54,44 +60,36 @@ const { count, index } = works.reduce(
 ---
 
 <Layout>
-  <section class="grid max-w-4xl mx-auto p-4 font-serif">
+  <section class="grid max-w-4xl mx-auto py-4">
     {
       work.data.image && (
-        <Image src={work.data.image} alt={work.data.title || ""} width={1024} class=""/>
+        <Image src={work.data.image} alt={work.data.title || ""} width={1024} class="object-contain h-[70vh]"/>
       )
     }
-    <h5>
+    <h5 class="pt-4">
       {work.data.title}
       {work.data.year_start && `, ${work.data.year_start}`}
+      {work.data.year_end && ` - ${work.data.year_end}`}
+      {work.data.w && work.data.h && `( ${work.data.w} x ${work.data.h} )`}
     </h5>
 
 
-    <ul class="flex justify-between items-center marker:text-red-400">
-        {previous && (
+    <ul class="flex justify-between items-center uppercase" x-data>
           <li>
-            <a href={`/${collection}/${previous.id}`} alt={previous.data.title} title={previous.data.title}>&larr; Previous</a>
+            {previous && (
+            <a @keyup.window.left="$el.click()" href={`/${collection.id}/${previous.id}`} alt={previous.data.title} title={previous.data.title}><span class="text-black opacity-30">&larr;</span> Previous</a>
+            )}
           </li>
-        )}
       <li>
         {index + 1} of {count}
       </li>
-        {next && (
           <li>
-            <a href={`/${collection}/${next.id}`} alt={next.data.title} title={next.data.title}>Next &rarr;</a>
+            {next && (
+            <a @keyup.window.right="$el.click()" href={`/${collection.id}/${next.id}`} alt={next.data.title} title={next.data.title}>Next <span class="text-black opacity-30">&rarr;</span></a>
+            )}
           </li>
-        )}
       </ul>
-
-      <details class="mt-4">
-        <summary>Info</summary>
-        <p><strong>Categories:</strong> {work.data.categories}</p>
-        <p><strong>Year:</strong> {work.data.year}</p>
-        <p><strong>Location:</strong> {work.data.location}</p>
-        <p><strong>Note:</strong> {work.data.note}</p>
-      </details>
-      <p>
-        <a href={`/${collection}`}>Back to {collection}</a>
-      </p>
+      <a href="./" @keyup.window.esc="$el.click()" class="hidden">Back to collection</a>
   </section>
 
 </Layout>

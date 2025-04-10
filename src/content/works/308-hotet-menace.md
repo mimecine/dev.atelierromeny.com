@@ -4,12 +4,13 @@ title: HOTET (Menace)
 categories: Abstrait
 w: 46
 h: 33
-location:
-note:
-file:
+location: null
+note: null
+file: null
 year: '1992'
 year_start: 1992
-year_end:
-image:
-
+year_end: null
+image: null
+uuid: fdf10c04-2957-4d83-b5e6-91f4085eeabd
 ---
+

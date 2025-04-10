@@ -5,11 +5,12 @@ categories: Abstrait
 w: 80
 h: 60
 location: graphic studio
-note:
+note: null
 file: IMG_20180922_181840.jpg
 year: '1967'
 year_start: 1967
-year_end:
+year_end: null
 image: ../../media/img/IMG_20180922_181840.jpg
-
+uuid: 9c4a7982-ffe1-4fbd-95f9-530750aa97b6
 ---
+
