@@ -1,0 +1,35 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import { type CollectionEntry, render, getEntry } from "astro:content";
+const page = await getEntry("pages", String(Astro.params.slug));
+if (!page) {
+  throw new Error("Page not found");
+}
+const { Content } = await render(page as CollectionEntry<"pages">);
+export const getStaticPaths: GetStaticPaths = async () => {
+  const pages = await getCollection("pages");
+  return pages.map((page) => ({
+    params: { slug: page.id },
+  }));
+};
+const { title, image, note, tags, css, js} = page.data;
+const layeredCss = `html, html#slug-${page.id}.slug-${page.id} {
+  ${css}
+}`;
+---
+
+<Layout title={title} slug={page.id} bodyclasses={`slug-${page.id}`} description={note} image={image} frontmatter={page.data}>
+  <section class="grid max-w-4xl mx-auto py-4 font-serif">
+    <div class="prose prose-lg w-full lg:w-4xl mx-auto">
+      <Content />
+    </div>
+  </section>
+</Layout>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<style>
+  @reference '../styles/global.css';
+</style>
+<style is:inline set:html={layeredCss} type="text/tailwindcss"/>
+<script is:inline set:html={js}/>

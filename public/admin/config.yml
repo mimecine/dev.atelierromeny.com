@@ -9,6 +9,7 @@ public_folder: "/src/media/img"
 collections:
   - name: "works"
     label: "Works"
+    label_singular: "Work"
     folder: "src/content/works"
     create: true
     slug: "{{id}}-{{title}}-{{year}}"
@@ -18,16 +19,25 @@ collections:
     filter:
       field: "image"
       pattern: ".{5,}"
+    view_groups:
+      - { label: "Years", field: year_start, pattern: "^[0-9]{4}$" }
+      - { label: "Decades", field: year_start, pattern: "^[0-9]{3}" }
+      - { label: "Location", field: location, pattern: "^\\w+" }
+    view_filters:
+      - { label: "Untitled", field: title, pattern: "(U|n)titled|null" }
+      - { label: "Undated", field: year_start, pattern: "^null$" }
+      - { label: "Unlocated", field: location, pattern: "^null$" }
+      - { label: "Missing ID", field: id, pattern: "^null$" }
     editor:
       preview: false
     # # sortable fields won't work until all fields are filled  on each item
     # sortable_fields: 
     #   - "title"
-    #   - "year"
+    #   - "year_start"
     #   - "location"
     fields:
       - { label: "UUID", name: "uuid", widget: "hidden", default: "{{uuid}}" }
-      # - { label: "ID", name: "id", widget: "number", required: false }
+      - { label: "Artist ID", name: "id", widget: "number", required: false }
       - { label: "Title", name: "title", widget: "string", required: true }
       - { label: "Image", name: "image", widget: "image", required: false }
       - { label: "Collections", name: "collections", widget: "relation", collection: "collections", search_fields: ["title"], value_field: "uuid", display_fields: ["title"], multiple: true, required: false }
@@ -64,8 +74,34 @@ collections:
       - { label: "Title", name: "title", widget: "string", required: true }
       - { label: "Published", name: "published", widget: "boolean", default: false }
       - { label: "Shown In Menu", name: "inmenu", widget: "boolean", default: false}
-      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Featured Image (Currently Unused)", name: "image", widget: "image", required: false }
       - { label: "Description", name: "body", widget: "markdown", required: false }
       # - { label: "Works", name: "works", widget: "relation", collection: "works", search_fields: ["title","id","year_start","location"], value_field: "id", display_fields: ["title","year_start"], multiple: true, required: false }
       - { label: "Notes", name: "notes", widget: "text", required: false }
+
+  - name: "pages"
+    label: "Pages"
+    folder: "src/content/pages"
+    create: true
+    slug: "{{title}}"
+    identifier_field: "title"
+    summary: "{{title}} - {{ published | ternary('published', 'unpublished') }}"
+    editor:
+      preview: true
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true, xpreview: false }
+      - { label: "Published", name: "published", widget: "boolean", default: true, xpreview: false }
+      - { label: "Content", name: "body", widget: "markdown", required: false }
+      - { label: "Image (Currently Unused)", name: "image", widget: "image", required: false, preview: false }
+      - label: "Tags"
+        name: "tags"
+        widget: list
+        required: false
+        preview: false
+        fields:
+          - { label: "Tag", name: "tag", widget: "string" }
+      - { label: "Notes (Internal)", name: "note", widget: "text", required: false, preview: false }
+      - { label: "Extra CSS", name: "css", widget: "text", hint: "Don't forget !important if needed. TailwindCSS @apply works.", required: false, preview: false }
+      - { label: "Extra JS", name: "js", widget: "text", required: false, preview: false }
+
   

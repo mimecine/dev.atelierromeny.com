@@ -1,21 +1,47 @@
 ---
+
 ---
+
 <!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
-    <link href="/admin_config.yml" type="application/yaml" rel="cms-config-url" />
+    <link
+      href="/config.yml"
+      type="application/yaml"
+      rel="cms-config-url"
+    />
+    <!-- 
+    Tailwind doesn't work unfortunately. Otherwise you could have set type="text/tailwindcss" have access to @theme, @apply, and their classes.
+    -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+    <style is:inline>
+      body {
+        --font-family--default: "Times New Roman", serif;
+        --font-family--heading: "Times New Roman", serif;
+        --font-family--monospace: "Courier New", monospace;
+        --font-size--default: 16px;
+        /* and whatever,  but this doesn't work yet */
+      }
+      [data-mode="preview"] [data-widget="markdown"][data-key-path="body"] {
+        font-family: var(--font-family--default);
+        h4:first-child {
+          display: none;
+        }
+      }
+    </style>
+
     <title>Content Manager</title>
   </head>
   <body>
     <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
     <script is:inline>
-      document.addEventListener('DOMContentLoaded', function () {
+      document.addEventListener("DOMContentLoaded", function () {
         // Initialize the CMS
         CMS.init();
       });
     </script>
-</body>
+  </body>
 </html>

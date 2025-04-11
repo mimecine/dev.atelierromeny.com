@@ -6,4 +6,18 @@ inmenu: true
 image: ''
 notes: ''
 ---
+# HEYY
 
+## Cool
+
+### stuff
+
+<details><summary>Duh</summary>Ok
+
+**_Whaaat?!_**</details>
+
+![](/src/media/img/IMG_20180803_160635.jpg)
+
+_What_? - **That**!
+<details><summary>Hey</summary>
+This is some funky shit.</details>

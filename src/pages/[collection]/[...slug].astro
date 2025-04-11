@@ -5,7 +5,8 @@ import { Image } from "astro:assets";
 
 export async function getStaticPaths() {
   let collections = await getCollection("collections");
-  collections.push({id:'_works',data:{title:'Works'}});
+  const allWorks: CollectionEntry<"collections"> = {id:'_works', collection: 'collections', data:{title:'Works'}};
+  collections.push(allWorks);
   
   let works = (await getCollection("works")).filter((work) => work.data.image);
 
@@ -22,33 +23,46 @@ export async function getStaticPaths() {
     })
     .flat();
 }
-type Props = CollectionEntry<"works"> & CollectionEntry<"collections"> ;
 
-// const { collection = "works", slug } = Astro.params;
+type Props = {
+  collection: CollectionEntry<"collections">;
+  work: CollectionEntry<"works">;
+};
+type Params = {
+  collection: string;
+  slug: string;
+};
 const { work, collection } = Astro.props;
 
 const { Content } = await render(work);
+
+
 
 const works = (await getCollection("works"))
   .filter((work) => work.data.image)
   .filter((work) => work.data.collections?.includes(collection.data.title || '') || collection.data.title === "Works")
   .sort((a, b) => a.data.title?.localeCompare(b.data.title || '(Untitled)') || 0);
 
-
-console.log(work)
-
+type Acc = {
+  previous: CollectionEntry<"works"> | null;
+  next: CollectionEntry<"works"> | null;
+};
+type AccCount = {
+  count: number | null;
+  index: number | null;
+};
 const { previous, next } = works.reduce(
-  (acc, work, i) => {
+  (acc: Acc, work, i) => {
     if (work.id === Astro.params.slug) {
-      acc.previous = works[i - 1];
-      acc.next = works[i + 1];
+      acc.previous = works[i - 1] || null;
+      acc.next = works[i + 1] || null;
     }
     return acc;
   },
   { previous: null, next: null }
 );
 const { count, index } = works.reduce(
-  (acc, work, i) => {
+  (acc: AccCount, work, i) => {
     if (work.id === Astro.params.slug) {
       acc.count = works.length;
       acc.index = i;

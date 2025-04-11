@@ -29,7 +29,7 @@ const _collections = defineCollection({
   }),
   schema: ({ image }) =>
     z.object({
-      id: z.string().optional().nullish(),
+      uuid: z.string().optional().nullish(),
       title: z.string().optional().nullish(),
       image: image().optional().nullish(),
       published: z.boolean().optional().nullish(),
@@ -37,7 +37,26 @@ const _collections = defineCollection({
     }),
 });
 
+const _pages = defineCollection({
+  loader: glob({
+    pattern: ["**/*.md", "!_*"],
+    base: "./src/content/pages",
+  }),
+  schema: ({ image }) =>
+    z.object({
+      layout: z.string().default("../../layouts/Layout.astro"),
+      title: z.string(),
+      image: image().optional().nullish(),
+      tags: z.array(z.string()).optional().nullish(),
+      published: z.boolean(),
+      note: z.string().optional().nullish(),
+      css: z.string().optional().nullish(),
+      js: z.string().optional().nullish(),
+    }),
+});
+
 export const collections = {
   works: _works,
   collections: _collections,
+  pages: _pages,
 };
