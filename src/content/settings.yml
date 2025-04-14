@@ -1,0 +1,33 @@
+site_title: Edlef Romeny
+menu:
+  - title: Marco
+    href: /marco
+  - title: Alisa
+    href: /alisa
+  - title: Bio
+    href: /bio
+  - title: '[[ All Works ]]'
+    href: /_works
+sections:
+  - type: collection
+    title: Collection
+    collection: marco
+    show_title: true
+    hidden: false
+  - type: collection
+    title: Collection
+    collection: alisa
+    show_title: true
+    hidden: false
+socials:
+  - title: Instagram
+    href: https://www.instagram.com/atelierromeny/
+copyright: The Estate of Edlef Romeny
+ga: ''
+css: ''
+js: ''
+collections:
+  - 678fc808-3192-4aaa-bb1d-51b51659ec00
+description: Edlef Romeny. A Dutch/Swedish artist who lived and painted in Provence.
+author: Marco Romeny
+email: marco@mimecom.net

@@ -4,6 +4,7 @@ title: A la cruche
 image: ../../media/img/IMG_20180818_163056.jpg
 collections:
   - b3a35e23-3944-45b5-addd-eb4125bd7142
+  - alisa
 categories: Natures mortes
 w: 70
 h: 50

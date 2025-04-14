@@ -12,9 +12,9 @@ collections:
     label_singular: "Work"
     folder: "src/content/works"
     create: true
-    slug: "{{id}}-{{title}}-{{year}}"
+    slug: "{{title}}"
     summary: "{{title}}, {{year}}, {{location}}"  
-    identifier_field: "title"
+    # identifier_field: "title"
     search_fields: ["title", "year", "location"]
     filter:
       field: "image"
@@ -30,17 +30,17 @@ collections:
       - { label: "Missing ID", field: id, pattern: "^null$" }
     editor:
       preview: false
-    # # sortable fields won't work until all fields are filled  on each item
+    # # sortable fields won"t work until all fields are filled  on each item
     # sortable_fields: 
     #   - "title"
     #   - "year_start"
     #   - "location"
     fields:
-      - { label: "UUID", name: "uuid", widget: "hidden", default: "{{uuid}}" }
+      # - { label: "UUID", name: "uuid", widget: "hidden", default: "{{uuid}}" }
       - { label: "Artist ID", name: "id", widget: "number", required: false }
       - { label: "Title", name: "title", widget: "string", required: true }
       - { label: "Image", name: "image", widget: "image", required: false }
-      - { label: "Collections", name: "collections", widget: "relation", collection: "collections", search_fields: ["title"], value_field: "uuid", display_fields: ["title"], multiple: true, required: false }
+      - { label: "Collections", name: "collections", widget: "relation", collection: "collections", xsearch_fields: ["title"], xvalue_field: "uuid", xdisplay_fields: ["title"], multiple: true, required: false }
       - label: "Tags"
         name: "tags"
         widget: list
@@ -64,12 +64,12 @@ collections:
     folder: "src/content/collections"
     create: true
     slug: "{{title}}"
-    identifier_field: "title"
-    summary: "{{title}} - {{ published | ternary('published', 'unpublished') }}"
+    # identifier_field: "title"
+    # summary: "{{title}} - {{ published  }}"
     editor:
       preview: false
     fields:
-      - { label: "UUID", name: "uuid", widget: "hidden", default: "{{uuid}}" }
+      # - { label: "UUID", name: "uuid", widget: "hidden", default: "{{uuid}}" }
       # - { label: "ID", name: "id", widget: "uuid", required: true, hidden: true }
       - { label: "Title", name: "title", widget: "string", required: true }
       - { label: "Published", name: "published", widget: "boolean", default: false }
@@ -85,7 +85,7 @@ collections:
     create: true
     slug: "{{title}}"
     identifier_field: "title"
-    summary: "{{title}} - {{ published | ternary('published', 'unpublished') }}"
+    # summary: "{{title}} - {{ published }}"
     editor:
       preview: true
     fields:
@@ -103,5 +103,111 @@ collections:
       - { label: "Notes (Internal)", name: "note", widget: "text", required: false, preview: false }
       - { label: "Extra CSS", name: "css", widget: "text", hint: "Don't forget !important if needed. TailwindCSS @apply works.", required: false, preview: false }
       - { label: "Extra JS", name: "js", widget: "text", required: false, preview: false }
+
+
+  - name: "settings"
+    label: "Settings"
+    editor:
+      preview: false
+    files:
+      - file: "src/content/settings.yml"
+        label: "Frontpage Settings"
+        name: "settings"
+        fields:
+          - { label: "Site Title", name: "site_title", widget: "string", required: true }
+          - label: "Site Menu"
+            label_singular: "Menu Item"
+            name: "menu"
+            widget: list
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: string
+                required: true
+              - label: "Url"
+                name: "href"
+                widget: string
+                required: true
+            # types:
+            #   - label: "Collection"
+            #     name: "collection"
+            #     widget: relation
+            #     collection: "collections"
+            #     search_fields: ["title"]
+            #     value_field: "uuid"
+            #     display_fields: ["title"]
+            #     required: false
+            #   - label: "Page"
+            #     name: "page"
+            #     widget: relation
+            #     collection: "pages"
+            #     search_fields: ["title"]
+            #     value_field: "uuid"
+            #     display_fields: ["title"]
+            #     required: false
+            #   - label: "External Link"
+            #     name: "external"
+            #     widget: object
+            #     summary: "{{fields.name}}"
+            #     fields:
+            #       - { label: "Name (e.g. Twitter)", name: "name", widget: string }
+            #       - { label: "URL (e.g. https://twitter.com/username)", name: "url", widget: string }
+          - label: "Frontpage Sections"
+            label_singular: "Section"
+            name: "sections"
+            widget: "list"
+            types:
+              - label: "Collection"
+                name: "collection"
+                widget: object
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: Title, name: title, widget: string, default: "Collection" }
+                  - { label: "Collection", name: collection, widget: relation, collection: "collections", xsearch_fields: ["title"], xvalue_field: "uuid", xdisplay_fields: ["title"], required: true }
+                  - { label: "Show Header", name: show_title, widget: boolean, default: true }
+                  - { label: "Hide?", name: hidden, widget: boolean, default: false }
+              - label: "Carousel"
+                name: "carousel"
+                widget: object
+                summary: "{{fields.header}}"
+                fields:
+                  - { label: Title, name: title, widget: string, default: "Image Gallery" }
+                  - label: Images
+                    name: images
+                    widget: list
+                    field: { label: Image, name: image, widget: image }
+                  - { label: "Hide?", name: hidden, widget: boolean, default: false }
+
+              - label: "Free Content Section"
+                name: "content"
+                widget: object
+                fields:
+                  - { label: "Hide Section", name: hidden, widget: boolean, default: false }
+                  - { label: Header, name: header, widget: string, required: true }
+                  - { label: "Show Header", name: show_title, widget: boolean, default: true }
+                  - { label: Content, name: text, widget: markdown, required: false }
+                  - { label: "Hide?", name: hidden, widget: boolean, default: false }
+
+
+          - label: "Footer Links (Currently Unused)"
+            name: "socials"
+            widget: list
+            required: false
+            fields:
+            - label: "Name (e.g. Twitter)"
+              name: "title"
+              widget: string
+            - label: "URL (e.g. https://twitter.com/username)"
+              name: "href"
+              widget: string
+          - { label: "Copyright", name: "copyright", widget: "string", required: false }
+          - { label: "Google Analytics", name: "ga", widget: "string", required: false }
+          - { label: "Extra CSS", name: "css", widget: "text", hint: "Don't forget !important if needed. TailwindCSS @apply works.", required: false, preview: false }
+          - { label: "Extra JS", name: "js", widget: "text", required: false, preview: false }
+          - { label: "Collections", name: "collections", widget: "relation", collection: "collections", search_fields: ["title"], value_field: "uuid", display_fields: ["title"], multiple: true, required: false }
+          - { label: "Description", name: "description", widget: "text", required: false }
+          - { label: "Author", name: "author", widget: "string", required: false }
+          - { label: "Email", name: "email", widget: "string", required: false }
+
 
   

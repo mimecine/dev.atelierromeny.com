@@ -1,13 +1,13 @@
 ---
 import "../styles/global.css";
-import A from '../components/A.astro';
-
+import A from "../components/A.astro";
+import { loadSettings } from "../lib/settings";
 
 import { ClientRouter } from "astro:transitions";
-import { getCollection } from "astro:content"; 
-
-import { fade } from 'astro:transitions';
-
+import { getCollection } from "astro:content";
+import { parse } from "yaml";
+import fs from "fs";
+import { fade } from "astro:transitions";
 
 interface Props {
   title?: string;
@@ -19,15 +19,32 @@ interface Props {
   [key: string]: unknown;
 }
 
-const { description, image, frontmatter, slug, bodyclasses, title = frontmatter?.title, ...props } = Astro.props;
+const {
+  description,
+  image,
+  frontmatter,
+  slug,
+  bodyclasses,
+  title = frontmatter?.title,
+  ...props
+} = Astro.props;
 
-const collections = (await getCollection("collections"))
-.filter((collection) => collection.data.published && collection.data.inmenu);
+const collections = await getCollection(
+  "collections",
+  (collection) => collection.data.published && collection.data.inmenu
+);
 
+const { menu } = loadSettings("./src/content/settings.yml");
 ---
 
 <!doctype html>
-<html lang="en" transition:name="root" transition:animate="fade" class:list={bodyclasses} id={slug && `slug-${slug}`}>
+<html
+  lang="en"
+  transition:name="root"
+  transition:animate="fade"
+  class:list={bodyclasses}
+  id={slug && `slug-${slug}`}
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -37,30 +54,32 @@ const collections = (await getCollection("collections"))
     <slot name="head" />
     <title>{title && `${title} -`} Atelier Romeny</title>
     <ClientRouter />
-
   </head>
-  <body class="min-h-screen flex flex-col justify-between font-headline font-thin" {...props}>
+  <body
+    class="min-h-screen flex flex-col justify-between font-headline font-thin"
+    {...props}
+  >
     <header class="flex flex-col items-center max-w-6xl mx-auto py-4">
       <h1><a href="/">Atelier Romeny</a></h1>
       <nav class="flex gap-8 uppercase text-lg">
-        {collections.map((collection) => (
-          <A href={`/${collection.id}`} class="hover:text-gray-500">
-            {collection.data.title}
-          </A>
-        ))}
-        <A href="/_works">[All Works]</A>
-        <A href="/bio">Biography</A>
+        {
+          menu.map((item) => (
+            <A href={`${item.href}`} class="hover:text-gray-500">
+              {item.title}
+            </A>
+          ))
+        }
         <slot name="nav" />
       </nav>
       <slot name="header" />
     </header>
     <main class="">
-      <slot/>
+      <slot />
     </main>
     <footer class="text-xs text-gray-500 flex flex-col items-center">
       <p>&copy; {new Date().getFullYear()} Atelier Romeny</p>
       <slot name="footer" />
-      </footer>
+    </footer>
   </body>
 </html>
 

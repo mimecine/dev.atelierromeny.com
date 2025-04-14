@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+  style="color:red"
+  width="250"
+  height="250"
+  viewBox="0 0 250 250"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+>
+  <defs>
+    <circle id="dot" cx="25" cy="25" r="25"></circle>
+  </defs>
+    <g fill="currentColor" stroke="currentColor">
+      <use href="#dot" x="0" y="0"></use>
+      <use href="#dot" x="100" y="0"></use>
+      <use href="#dot" x="200" y="0"></use>
+      <use href="#dot" x="0" y="100"></use>
+      <use href="#dot" x="100" y="100"></use>
+      <use href="#dot" x="200" y="100"></use>
+      <use href="#dot" x="0" y="200"></use>
+      <use href="#dot" x="100" y="200"></use>
+      <use href="#dot" x="200" y="200"></use>
+    </g>
+</svg>

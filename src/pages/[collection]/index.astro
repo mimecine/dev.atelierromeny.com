@@ -25,13 +25,8 @@ type Props = CollectionEntry<"collections">;
 const collection = Astro.props;
 const { Content } = await render(collection);
 
-const works = (await getCollection("works"))
-  .filter((work) => work.data.image)
-  .filter(
-    (work) =>
-      work.data.collections?.includes(collection.data.uuid ?? "") ||
-      collection.data.title === "Works"
-  )
+const works = (await getCollection("works",(work) => work.data.image && (work.data.collections?.includes(collection.id) ||
+collection.data.title === "Works")))
   .sort(
     (a, b) => a.data.title?.localeCompare(b.data.title || "(Untitled)") || 0
   );
@@ -43,7 +38,6 @@ const works = (await getCollection("works"))
     <meta name="robots" content="noindex" />
   </slot>
   <section class="grid max-w-6xl mx-auto py-4">
-    <!-- <h3>{collection.data.title}</h3> -->
     <Content />
     <div class="works-grid">
       {
