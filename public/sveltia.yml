@@ -2,6 +2,7 @@ backend:
   name: github
   repo: "mimecine/dev.atelierromeny.com" # The GitHub repository where the content will be stored
   branch: main
+  base_url: https://cms-auth.mimecom.workers.dev/
 
 media_folder: "src/media/img"
 public_folder: "/src/media/img"
