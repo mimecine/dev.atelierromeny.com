@@ -1,18 +1,18 @@
 ---
-import { boolean } from "astro:schema";
-import Layout from "../layouts/Layout.astro";
-import { loadSettings } from "../lib/settings";
+import Layout from "@layouts/Layout.astro";
+import { Image } from "astro:assets";
+import { loadSettings } from "@src/lib/settings";
 import { getCollection, getEntry } from "astro:content";
 const { sections } = loadSettings("./src/content/settings.yml");
 ---
 
 <Layout>
-  <section class="grid max-w-4xl mx-auto p-4 font-serif">
+  <section class="grid max-w-6xl mx-auto p-4 font-serif">
     <h1 class="text-5xl font-bold font-sans uppercase pb-8">Edlef Romeny</h1>
     <p>
       Welcome to the online portfolio of Edlef Romeny, a Dutch artist and
       designer based in Provence. The site showcases a selection of his <a
-        href="/works">works</a
+        href="/_works">works</a
       >
     </p>
   </section>
@@ -32,29 +32,43 @@ const { sections } = loadSettings("./src/content/settings.yml");
           // );
           break;
         case "collection":
-          const collection = await getEntry("collections", String(section.collection));
-          if(!collection || !collection.data.published) return null;
+          const collection = await getEntry(
+            "collections",
+            String(section.collection)
+          );
+          if (!collection || !collection.data.published) return null;
           const works = await getCollection("works", (work) =>
             work.data.collections?.includes(String(section.collection))
           );
           return (
-            <section class="grid max-w-4xl mx-auto p-4 font-serif">
+            <section class="grid max-w-6xl mx-auto p-4 font-serif">
               <h2 class="text-3xl font-bold font-sans uppercase pb-8">
                 {section.show_title && collection.data.title}
               </h2>
-              <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4">
+              <div
+                class="works-grid"
+                xclass="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4"
+              >
                 {works.map((work) => (
-                  <div class="bg-gray-100 p-4 rounded-lg shadow-md">
-                    <a href={`${section.collection}/${work.id}`}>
-                      <img
-                        src={work.data.image?.src}
-                        alt={work.data.title}
-                        class="w-full h-48 object-cover rounded-lg mb-4"
-                      />
-                      <h3 class="text-xl font-bold">{work.data.title}</h3>
-                      <p>{work.data.description}</p>
-                    </a>
-                  </div>
+                  <a href={`/${section.collection}/${work.id}`}>
+                    <div class="work-item" data-key={work.id}>
+                      <div class="work-thumbnail-container">
+                        {work.data.image && (
+                          <Image
+                            src={work.data.image}
+                            alt={work.data.title || ""}
+                            width={300}
+                            height={200}
+                            class="work-thumbnail"
+                          />
+                        )}
+                      </div>
+                      <div>
+                        {work.data.title || "(Untitled)"}
+                        {work.data.year_start && `, ${work.data.year_start}`}
+                      </div>
+                    </div>
+                  </a>
                 ))}
               </div>
             </section>
@@ -66,3 +80,7 @@ const { sections } = loadSettings("./src/content/settings.yml");
     })
   }
 </Layout>
+<style>
+  @reference "../styles/global.css";
+
+</style>

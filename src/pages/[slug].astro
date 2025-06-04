@@ -1,7 +1,7 @@
 ---
 import type { GetStaticPaths } from "astro";
 import { getCollection } from "astro:content";
-import Layout from "../layouts/Layout.astro";
+import Layout from "@layouts/Layout.astro";
 import { type CollectionEntry, render, getEntry } from "astro:content";
 const page = await getEntry("pages", String(Astro.params.slug));
 if (!page) {

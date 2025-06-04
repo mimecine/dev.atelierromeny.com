@@ -5,6 +5,28 @@
 
 @theme {
   --font-headline: "Roboto Condensed Variable", sans-serif;
+  --text-color: #333;
 }
 
+  :root {
+    @apply font-sans text-gray-900;
+  }
 
+  h1 {
+    @apply text-2xl font-bold py-4;
+  }
+  .works-grid {
+    /* display: grid; */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /* gap: 1rem; */
+    @apply py-4 grid gap-4;
+  }
+  .work-item {
+    text-align: center;
+    @apply border bg-gray-100 p-8 pb-2;
+  }
+  .work-item img {
+    /* max-width: 100%; */
+    /* height: auto; */
+    @apply border m-auto object-contain h-auto max-h-48 max-w-full p-2 bg-gray-300;
+  }

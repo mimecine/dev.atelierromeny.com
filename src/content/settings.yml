@@ -12,13 +12,13 @@ sections:
   - type: collection
     title: Collection
     collection: marco
-    show_title: true
+    show_title: false
     hidden: false
   - type: collection
     title: Collection
     collection: alisa
     show_title: true
-    hidden: false
+    hidden: true
 socials:
   - title: Instagram
     href: https://www.instagram.com/atelierromeny/

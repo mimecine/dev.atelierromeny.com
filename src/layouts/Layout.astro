@@ -1,13 +1,10 @@
 ---
-import "../styles/global.css";
-import A from "../components/A.astro";
-import { loadSettings } from "../lib/settings";
+import "@src/styles/global.css";
+import A from "@components/A.astro";
+import { loadSettings } from "@src/lib/settings";
 
 import { ClientRouter } from "astro:transitions";
 import { getCollection } from "astro:content";
-import { parse } from "yaml";
-import fs from "fs";
-import { fade } from "astro:transitions";
 
 interface Props {
   title?: string;
