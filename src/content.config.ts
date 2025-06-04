@@ -8,6 +8,7 @@ const _works = defineCollection({
       uuid: z.string().optional().nullish(),
       title: z.string().optional().nullish(),
       image: image().optional().nullish(),
+      description: z.string().optional().nullish(),
       categories: z.string().optional().nullish(),
       w: z.number().optional().nullish(),
       h: z.number().optional().nullish(),

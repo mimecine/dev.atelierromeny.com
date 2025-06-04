@@ -41,6 +41,7 @@ collections:
       - { label: "Artist ID", name: "id", widget: "number", required: false }
       - { label: "Title", name: "title", widget: "string", required: true }
       - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Description", name: "body", widget: "markdown", required: false }
       - { label: "Collections", name: "collections", widget: "relation", collection: "collections", xsearch_fields: ["title"], xvalue_field: "uuid", xdisplay_fields: ["title"], multiple: true, required: false }
       - label: "Tags"
         name: "tags"
