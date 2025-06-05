@@ -1,24 +1,23 @@
 site_title: Edlef Romeny
 menu:
-  - title: Marco
-    href: /marco
-  - title: Alisa
-    href: /alisa
+  - title: Abstract
+    href: /abstract
+  - title: Nature
+    href: /nature
+  - title: Still Life
+    href: /still-life
+  - title: Portraits
+    href: /portraits
   - title: Bio
     href: /bio
   - title: '[[ All Works ]]'
     href: /_works
 sections:
   - type: collection
-    title: Collection
-    collection: marco
+    title: Featured
+    collection: front-page-featured
     show_title: false
     hidden: false
-  - type: collection
-    title: Collection
-    collection: alisa
-    show_title: true
-    hidden: true
 socials:
   - title: Instagram
     href: https://www.instagram.com/atelierromeny/
