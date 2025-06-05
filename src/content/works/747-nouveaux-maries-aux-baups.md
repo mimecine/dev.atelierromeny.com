@@ -12,5 +12,7 @@ year_start: 2004
 year_end: null
 image: null
 uuid: f0525b2d-137f-487c-b209-608a1cb11501
+collections:
+  - figures-humaines
 ---
 

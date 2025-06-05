@@ -6,11 +6,13 @@ w: null
 h: null
 location: old atelier
 note: null
-file: IMG_20180814_160808.jpg
+file: '@img/flying-bird.jpg'
 year: '---'
 year_start: null
 year_end: null
-image: ../../media/img/IMG_20180814_160808.jpg
+image: '@img/flying-bird.jpg'
 uuid: f899ad5c-e0c3-40d5-a261-b9436db8c3e2
+collections:
+  - animaux
 ---
 

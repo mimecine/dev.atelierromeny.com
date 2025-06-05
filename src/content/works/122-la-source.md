@@ -6,11 +6,13 @@ w: 81
 h: 65
 location: graphic studio
 note: null
-file: IMG_20180922_170413.jpg
+file: '@img/122-la-source.jpg'
 year: '1985'
 year_start: 1985
 year_end: null
-image: ../../media/img/IMG_20180922_170413.jpg
+image: '@img/122-la-source.jpg'
 uuid: 12f72632-a347-4c01-adce-0d36cc9a616a
+collections:
+  - abstrait
 ---
 

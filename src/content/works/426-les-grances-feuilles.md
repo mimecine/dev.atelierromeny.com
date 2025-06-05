@@ -12,5 +12,7 @@ year_start: 1967
 year_end: null
 image: null
 uuid: 9c4901ab-1078-4d08-a2ff-7334a561b1cc
+collections:
+  - plantes
 ---
 

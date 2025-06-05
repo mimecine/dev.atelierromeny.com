@@ -6,11 +6,13 @@ w: 130
 h: 90
 location: secondary storage
 note: null
-file: IMG_20180925_130405.jpg
+file: '@img/373-vue-aerienne-rouge-ii.jpg'
 year: '1972'
 year_start: 1972
 year_end: null
-image: ../../media/img/IMG_20180925_130405.jpg
+image: '@img/373-vue-aerienne-rouge-ii.jpg'
 uuid: ae640caa-8d12-4897-8a01-90858ae1961d
+collections:
+  - abstrait
 ---
 

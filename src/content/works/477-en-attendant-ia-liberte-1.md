@@ -6,11 +6,13 @@ w: 120
 h: 100
 location: secondary storage
 note: null
-file: IMG_20180925_115945.jpg
+file: '@img/477-en-attendant-ia-liberte-1.jpg'
 year: '1979'
 year_start: 1979
 year_end: null
-image: ../../media/img/IMG_20180925_115945.jpg
+image: '@img/477-en-attendant-ia-liberte-1.jpg'
 uuid: 6d41499c-378c-4403-a975-c9ba1211e04b
+collections:
+  - animaux
 ---
 

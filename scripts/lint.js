@@ -46,7 +46,7 @@ function ensureUUID() {
     const content = fs.readFileSync(file, 'utf-8');
     const { data, content: markdownContent } = matter(content);
 
-    if (!data.uuid) {
+    if (data.uuid) {
       data.uuid = uuidv4();
       const updatedContent = matter.stringify(markdownContent, data);
       fs.writeFileSync(file, updatedContent, 'utf-8');

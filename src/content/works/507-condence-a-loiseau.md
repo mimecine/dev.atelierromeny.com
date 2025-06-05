@@ -12,5 +12,7 @@ year_start: 1971
 year_end: 1973
 image: null
 uuid: 00922123-66d7-49db-ba0d-90ef80735ab1
+collections:
+  - figures-humaines
 ---
 

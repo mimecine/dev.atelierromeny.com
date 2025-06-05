@@ -1,9 +1,10 @@
 ---
 id: 384
 title: Accouplement 2
-image: ../../media/img/IMG_20180814_160921.jpg
+image: '@img/384-accouplement-2.jpg'
 collections:
   - alisa
+  - animaux
 categories: Animaux
 w: 55
 h: 38
@@ -12,7 +13,7 @@ note: ''
 year: '1952'
 year_start: 1952
 year_end: null
-file: IMG_20180814_160921.jpg
+file: '@img/384-accouplement-2.jpg'
 uuid: e637c2b1-970d-4e09-b57f-63cec383f762
 ---
 

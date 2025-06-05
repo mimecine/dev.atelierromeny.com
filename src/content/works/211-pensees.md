@@ -6,11 +6,13 @@ w: 60
 h: 50
 location: house
 note: null
-file: IMG_20190531_192330.jpg
+file: '@img/211-pensees.jpg'
 year: '1976'
 year_start: 1976
 year_end: null
-image: ../../media/img/IMG_20190531_192330.jpg
+image: '@img/211-pensees.jpg'
 uuid: cd3c9d00-c18e-4562-950c-167463b54a4d
+collections:
+  - fleurs
 ---
 

@@ -6,11 +6,13 @@ w: 92
 h: 65
 location: main storage
 note: null
-file: IMG_20180924_170545.jpg
+file: '@img/772-saint-saturnin-dapt.jpg'
 year: '1991'
 year_start: 1991
 year_end: null
-image: ../../media/img/IMG_20180924_170545.jpg
+image: '@img/772-saint-saturnin-dapt.jpg'
 uuid: e3454661-6044-4d62-a8ef-148bf7c5eee8
+collections:
+  - paysages
 ---
 

@@ -12,5 +12,7 @@ year_start: 1993
 year_end: null
 image: null
 uuid: 72cc7b1e-869a-4d4b-a88a-4a0ad5b7d3fe
+collections:
+  - figures-humaines
 ---
 

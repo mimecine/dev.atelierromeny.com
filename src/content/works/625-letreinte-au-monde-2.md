@@ -12,5 +12,7 @@ year_start: 1998
 year_end: null
 image: null
 uuid: 1ef8e834-dc10-4f59-9289-e1217742220d
+collections:
+  - letreinte-au-monde
 ---
 

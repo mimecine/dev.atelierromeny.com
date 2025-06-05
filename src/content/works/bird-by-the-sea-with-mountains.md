@@ -6,11 +6,13 @@ w: 55
 h: 38
 location: old atelier
 note: null
-file: IMG_20180814_162756.jpg
+file: '@img/bird-by-the-sea-with-mountains.jpg'
 year: '---'
 year_start: null
 year_end: null
-image: ../../media/img/IMG_20180814_162756.jpg
+image: '@img/bird-by-the-sea-with-mountains.jpg'
 uuid: dd235dbf-b615-4305-a474-56b2fd8fa1ba
+collections:
+  - animaux
 ---
 

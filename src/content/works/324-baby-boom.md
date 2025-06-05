@@ -6,11 +6,13 @@ w: 22
 h: 27
 location: secondary storage
 note: null
-file: IMG_20190416_191847.jpg
+file: '@img/324-baby-boom.jpg'
 year: '1991'
 year_start: 1991
 year_end: null
-image: ../../media/img/IMG_20190416_191847.jpg
+image: '@img/324-baby-boom.jpg'
 uuid: 27b89b80-fd9b-4188-aa03-dc2598a58cb0
+collections:
+  - figures-humaines
 ---
 

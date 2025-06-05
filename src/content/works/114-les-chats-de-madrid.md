@@ -6,11 +6,13 @@ w: 33
 h: 22
 location: old atelier
 note: null
-file: IMG_20180818_163331.jpg
+file: '@img/114-les-chats-de-madrid.jpg'
 year: '1996'
 year_start: 1996
 year_end: null
-image: ../../media/img/IMG_20180818_163331.jpg
+image: '@img/114-les-chats-de-madrid.jpg'
 uuid: bc3adaab-6d3d-4b53-a21f-5758a4bc6719
+collections:
+  - animaux
 ---
 

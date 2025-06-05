@@ -12,5 +12,7 @@ year_start: 1993
 year_end: null
 image: null
 uuid: 8b478a06-6255-4218-aced-5e7dbc242b9c
+collections:
+  - abstrait
 ---
 

@@ -5,7 +5,7 @@ backend:
   base_url: https://cms-auth.mimecom.workers.dev/
 
 media_folder: "src/media/img"
-public_folder: "/src/media/img"
+public_folder: "@img"
 
 collections:
   - name: "works"

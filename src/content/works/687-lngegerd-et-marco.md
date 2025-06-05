@@ -6,11 +6,13 @@ w: 48
 h: 64
 location: old atelier
 note: null
-file: IMG_20180814_163225.jpg
+file: '@img/687-lngegerd-et-marco.jpg'
 year: '1974'
 year_start: 1974
 year_end: null
-image: ../../media/img/IMG_20180814_163225.jpg
+image: '@img/687-lngegerd-et-marco.jpg'
 uuid: fdffbd1d-a764-42d0-910e-66d4a0dbfa53
+collections:
+  - figures-humaines
 ---
 
