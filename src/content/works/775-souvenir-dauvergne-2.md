@@ -6,11 +6,13 @@ w: 40
 h: 30
 location: graphic studio
 note: null
-file: IMG_20180819_155816.jpg
+file: '@img/775-souvenir-dauvergne-2.jpg'
 year: '1985'
 year_start: 1985
 year_end: null
-image: ../../media/img/IMG_20180819_155816.jpg
+image: '@img/775-souvenir-dauvergne-2.jpg'
 uuid: b8f98064-33a6-40bb-aeb6-423a0ce3c730
+collections:
+  - abstrait
 ---
 

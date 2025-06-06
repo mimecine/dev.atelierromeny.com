@@ -6,11 +6,13 @@ w: 100
 h: 150
 location: secondary storage
 note: null
-file: IMG_20180925_133129.jpg
+file: '@img/544-les-deux-madeleine.jpg'
 year: '1951'
 year_start: 1951
 year_end: null
-image: ../../media/img/IMG_20180925_133129.jpg
+image: '@img/544-les-deux-madeleine.jpg'
 uuid: 474bea5e-195a-4123-af0c-d37295bf52fd
+collections:
+  - figures-humaines
 ---
 

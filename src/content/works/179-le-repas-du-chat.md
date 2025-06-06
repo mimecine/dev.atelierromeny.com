@@ -12,5 +12,7 @@ year_start: 1952
 year_end: null
 image: null
 uuid: 98231e50-5731-4c60-895b-16ffc977b31f
+collections:
+  - animaux
 ---
 

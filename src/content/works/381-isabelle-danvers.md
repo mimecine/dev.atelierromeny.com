@@ -12,5 +12,7 @@ year_start: 1950
 year_end: null
 image: null
 uuid: 4257dcb0-1700-48f1-91b3-ff06f9366496
+collections:
+  - figures-humaines
 ---
 

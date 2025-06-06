@@ -1,25 +1,33 @@
 ---
-import { type CollectionEntry, getCollection, getEntry, render } from "astro:content";
+import {
+  type CollectionEntry,
+  getCollection,
+  getEntry,
+  render,
+} from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import { Image } from "astro:assets";
 
 export async function getStaticPaths() {
   let collections = await getCollection("collections");
-  const allWorks: CollectionEntry<"collections"> = {id:'_works', collection: 'collections', data:{title:'Works'}};
+  const allWorks: CollectionEntry<"collections"> = {
+    id: "_works",
+    collection: "collections",
+    data: { title: "Works" },
+  };
   collections.push(allWorks);
-  
+
   let works = (await getCollection("works")).filter((work) => work.data.image);
 
   return collections
-    .map(( collection ) => {
-      return works
-        .map((work, i) => ({
-          params: {
-            collection: collection.id,
-            slug: work.id,
-          },
-          props: {work, collection},
-        }));
+    .map((collection) => {
+      return works.map((work, i) => ({
+        params: {
+          collection: collection.id,
+          slug: work.id,
+        },
+        props: { work, collection },
+      }));
     })
     .flat();
 }
@@ -36,12 +44,27 @@ const { work, collection } = Astro.props;
 
 const { Content } = await render(work);
 
-
-
 const works = (await getCollection("works"))
   .filter((work) => work.data.image)
-  .filter((work) => work.data.collections?.includes(collection.data.title || '') || collection.data.title === "Works")
-  .sort((a, b) => a.data.title?.localeCompare(b.data.title || '(Untitled)') || 0);
+  .filter(
+    (work) =>
+      work.data.collections?.includes(collection.id || "") ||
+      collection.id === "_works"
+  )
+  .sort(
+    (a, b) => a.data.title?.localeCompare(b.data.title || "(Untitled)") || 0
+  );
+
+console.log(
+  "len",
+  (await getCollection("works"))
+    .filter((work) => work.data.image)
+    .filter(
+      (work) =>
+        work.data.collections?.includes(collection.id || "") ||
+        collection.id === "_works"
+    ).length
+);
 
 type Acc = {
   previous: CollectionEntry<"works"> | null;
@@ -77,38 +100,64 @@ const { count, index } = works.reduce(
   <section class="grid max-w-4xl mx-auto py-4">
     {
       work.data.image && (
-        <Image src={work.data.image} alt={work.data.title || ""} width={1024} class="object-contain h-[70vh]"/>
+        <Image
+          src={work.data.image}
+          alt={work.data.title || ""}
+          width={1024}
+          class="object-contain h-[70vh]"
+        />
       )
     }
-    <h5 class="pt-4">
+    <h5 class="py-4">
       {work.data.title}
       {work.data.year_start && `, ${work.data.year_start}`}
       {work.data.year_end && ` - ${work.data.year_end}`}
       {work.data.w && work.data.h && `( ${work.data.w} x ${work.data.h} )`}
     </h5>
 
-
-    <ul class="flex justify-between items-center uppercase" x-data>
-          <li>
-            {previous && (
-            <a @keyup.window.left="$el.click()" href={`/${collection.id}/${previous.id}`} alt={previous.data.title} title={previous.data.title}><span class="text-black opacity-30">&larr;</span> Previous</a>
-            )}
-          </li>
+    <ul class="grid grid-cols-3 w-full place-items-center uppercase" x-data>
       <li>
-        {index > 0 && (
-          <span>{index + 1} of {count}</span>
-        
-        )}
+        {
+          previous && (
+            <a
+              @keyup.window.left="$el.click()"
+              href={`/${collection.id}/${previous.id}`}
+              alt={previous.data.title}
+              title={previous.data.title}
+            >
+              <span class="text-black opacity-30">&larr;</span> Previous
+            </a>
+          )
+        }
       </li>
-          <li>
-            {next && (
-            <a @keyup.window.right="$el.click()" href={`/${collection.id}/${next.id}`} alt={next.data.title} title={next.data.title}>Next <span class="text-black opacity-30">&rarr;</span></a>
-            )}
-          </li>
-      </ul>
-      <a href="./" @keyup.window.esc="$el.click()" class="hidden">Back to collection</a>
+      <li>
+        {
+          count > 1 && (
+            <span>
+              {index + 1} of {count}
+            </span>
+          )
+        }
+      </li>
+      <li>&nbsp;
+        {
+          next && (
+            <a
+              @keyup.window.right="$el.click()"
+              href={`/${collection.id}/${next.id}`}
+              alt={next.data.title}
+              title={next.data.title}
+            >
+              Next <span class="text-black opacity-30">&rarr;</span>
+            </a>
+          ) 
+        }
+      </li>
+    </ul>
+    <a href="./" @keyup.window.esc="$el.click()" class="hidden"
+      >Back to collection</a
+    >
   </section>
-
 </Layout>
 
 <style>

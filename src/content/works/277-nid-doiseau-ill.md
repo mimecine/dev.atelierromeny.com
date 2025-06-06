@@ -12,5 +12,7 @@ year_start: 2002
 year_end: null
 image: null
 uuid: b40a3938-bf31-448f-84d5-9f53567a42e8
+collections:
+  - animaux
 ---
 

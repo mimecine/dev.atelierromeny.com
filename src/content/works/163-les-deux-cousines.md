@@ -6,11 +6,13 @@ w: 61
 h: 41
 location: old atelier
 note: null
-file: IMG_20180813_143428.jpg
+file: '@img/163-les-deux-cousines.jpg'
 year: '1983'
 year_start: 1983
 year_end: null
-image: ../../media/img/IMG_20180813_143428.jpg
+image: '@img/163-les-deux-cousines.jpg'
 uuid: 4381c2f1-6cce-4a82-8776-5daa18b6f8dd
+collections:
+  - figures-humaines
 ---
 

@@ -6,11 +6,13 @@ w: 100
 h: 73
 location: graphic studio
 note: null
-file: IMG_20180922_191613.jpg
+file: '@img/243-lettre-a-ma-bien-aimee-ix.jpg'
 year: '1993'
 year_start: 1993
 year_end: null
-image: ../../media/img/IMG_20180922_191613.jpg
+image: '@img/243-lettre-a-ma-bien-aimee-ix.jpg'
 uuid: 1efa3194-7297-40d1-867b-424f1ed8ddb5
+collections:
+  - la-vie-de-femme
 ---
 

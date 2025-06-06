@@ -6,11 +6,13 @@ w: 33
 h: 41
 location: secondary storage
 note: null
-file: IMG_20190416_201829.jpg
+file: '@img/crepuscule-4.jpg'
 year: '2006'
 year_start: 2006
 year_end: null
-image: ../../media/img/IMG_20190416_201829.jpg
+image: '@img/crepuscule-4.jpg'
 uuid: 8824f79a-4f56-4e36-8807-40baa6f12a0a
+collections:
+  - paysages
 ---
 

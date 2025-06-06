@@ -6,11 +6,13 @@ w: 37
 h: 31
 location: secondary storage
 note: null
-file: IMG_20180921_170346.jpg
+file: '@img/619-tournesol-sur-fond-rouge.jpg'
 year: '1971'
 year_start: 1971
 year_end: null
-image: ../../media/img/IMG_20180921_170346.jpg
+image: '@img/619-tournesol-sur-fond-rouge.jpg'
 uuid: 8653484a-6098-4a1e-bf7f-e4eb855a6ed1
+collections:
+  - natures-mortes
 ---
 

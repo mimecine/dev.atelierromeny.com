@@ -6,11 +6,13 @@ w: 60
 h: 81
 location: graphic studio
 note: null
-file: IMG_20180922_170754.jpg
+file: '@img/146-bouquet-orange.jpg'
 year: '1983'
 year_start: 1983
 year_end: null
-image: ../../media/img/IMG_20180922_170754.jpg
+image: '@img/146-bouquet-orange.jpg'
 uuid: 060ee795-3953-433c-9d00-2bec9ad02a95
+collections:
+  - natures-mortes
 ---
 

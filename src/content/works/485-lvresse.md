@@ -12,5 +12,7 @@ year_start: 1980
 year_end: null
 image: null
 uuid: b1fe3a34-50bf-48f2-a2ce-848847b04cbf
+collections:
+  - metro
 ---
 

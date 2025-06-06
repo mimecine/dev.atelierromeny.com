@@ -12,5 +12,7 @@ year_start: 1999
 year_end: null
 image: null
 uuid: 7966bfb9-736b-4729-afdd-9ba98e5996d0
+collections:
+  - abstrait
 ---
 

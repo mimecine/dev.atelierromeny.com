@@ -6,11 +6,13 @@ w: 50
 h: 60
 location: graphic studio
 note: null
-file: IMG_20180922_181705.jpg
+file: '@img/333-les-demons.jpg'
 year: '1980'
 year_start: 1980
 year_end: null
-image: ../../media/img/IMG_20180922_181705.jpg
+image: '@img/333-les-demons.jpg'
 uuid: 55708e27-6127-4642-b62b-507c71d60e67
+collections:
+  - figures-humaines
 ---
 

@@ -12,5 +12,7 @@ year_start: 1989
 year_end: null
 image: null
 uuid: 38d41a95-febd-45a7-9b44-6feb96e6897a
+collections:
+  - paysages
 ---
 

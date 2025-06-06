@@ -12,5 +12,7 @@ year_start: 1976
 year_end: null
 image: null
 uuid: 4cf1d088-1bbb-47a6-8db9-69a216403be4
+collections:
+  - figures-humaines
 ---
 

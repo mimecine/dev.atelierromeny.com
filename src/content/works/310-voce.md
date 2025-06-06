@@ -1,10 +1,11 @@
 ---
 id: 310
 title: Voce
-image: ../../media/img/IMG_20180921_175250.jpg
+image: '@img/310-voce.jpg'
 collections:
   - Marco
   - Alisa
+  - abstrait
 categories: Abstrait
 w: 30
 h: 30
@@ -13,7 +14,7 @@ note: ''
 year: '1982'
 year_start: 1982
 year_end: null
-file: IMG_20180921_175250.jpg
+file: '@img/310-voce.jpg'
 uuid: 16c5f567-9ba6-4735-8476-bbd2def7e34e
 ---
 

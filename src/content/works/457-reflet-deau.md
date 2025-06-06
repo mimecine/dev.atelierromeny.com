@@ -6,11 +6,13 @@ w: 130
 h: 97
 location: attic
 note: null
-file: IMG_20190519_193439.jpg
+file: '@img/457-reflet-deau.jpg'
 year: '1969'
 year_start: 1969
 year_end: null
-image: ../../media/img/IMG_20190519_193439.jpg
+image: '@img/457-reflet-deau.jpg'
 uuid: 256d3e77-ad58-4a91-a2be-b1bd3befd9fd
+collections:
+  - abstrait
 ---
 

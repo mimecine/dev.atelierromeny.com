@@ -2,7 +2,7 @@
 uuid: 40105418-5b38-4e59-96ce-426c532e47f0
 id: null
 title: Test
-image: /src/media/img/1537866659089.jpg
+image: '@img/test.jpg'
 categories: ''
 w: null
 h: null
@@ -19,5 +19,6 @@ year-start: 1947
 year-end: 1951
 width: 100
 height: 100
+file: '@img/test.jpg'
 ---
 Test *Description*

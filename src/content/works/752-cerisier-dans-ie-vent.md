@@ -12,5 +12,7 @@ year_start: 2004
 year_end: null
 image: null
 uuid: c4370cf6-6034-4831-b900-4bbf8916ef5a
+collections:
+  - arbres-en-fleurs
 ---
 

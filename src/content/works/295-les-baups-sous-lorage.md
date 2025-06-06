@@ -12,5 +12,7 @@ year_start: 2001
 year_end: null
 image: null
 uuid: 342a02ca-fafa-494b-8f3e-19bb4ebfe6e7
+collections:
+  - paysages
 ---
 

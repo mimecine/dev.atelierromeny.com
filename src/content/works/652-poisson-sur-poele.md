@@ -6,11 +6,13 @@ w: 55
 h: 46
 location: graphic studio
 note: null
-file: IMG_20180921_165710.jpg
+file: '@img/652-poisson-sur-poele.jpg'
 year: '1998'
 year_start: 1998
 year_end: null
-image: ../../media/img/IMG_20180921_165710.jpg
+image: '@img/652-poisson-sur-poele.jpg'
 uuid: 873d6c98-fa32-416c-9917-237cbeee1b0f
+collections:
+  - natures-mortes
 ---
 

@@ -12,5 +12,7 @@ year_start: 1970
 year_end: null
 image: null
 uuid: 5362d419-a3dd-472d-9cb2-273712e5648f
+collections:
+  - abstrait
 ---
 
