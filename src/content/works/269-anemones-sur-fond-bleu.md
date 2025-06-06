@@ -12,7 +12,5 @@ year_start: 2001
 year_end: null
 image: null
 uuid: fd745202-6c00-481a-b65a-99fa33347adb
-collections:
-  - fleurs
 ---
 

@@ -6,13 +6,11 @@ w: 33
 h: 41
 location: secondary storage
 note: null
-file: '@img/vue-dans-ses-pensees.jpg'
+file: IMG_20190416_201730.jpg
 year: '2008'
 year_start: 2008
 year_end: null
-image: '@img/vue-dans-ses-pensees.jpg'
+image: ../../media/img/IMG_20190416_201730.jpg
 uuid: b2016121-9d9e-452e-b03c-cf129b263df6
-collections:
-  - portraits
 ---
 

@@ -6,13 +6,11 @@ w: 65
 h: 54
 location: graphic studio
 note: null
-file: '@img/340-composition-rouge-et-brun.jpg'
+file: IMG_20180922_181556.jpg
 year: '1969'
 year_start: 1969
 year_end: null
-image: '@img/340-composition-rouge-et-brun.jpg'
+image: ../../media/img/IMG_20180922_181556.jpg
 uuid: f7eef925-3184-4f03-9b06-e4a5f7142cf5
-collections:
-  - abstrait
 ---
 

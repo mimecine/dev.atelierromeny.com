@@ -6,13 +6,11 @@ w: 85
 h: 82
 location: null
 note: null
-file: '@img/461-exaltation.jpg'
+file: IMG_20190419_184113.jpg
 year: '1973'
 year_start: 1973
 year_end: null
-image: '@img/461-exaltation.jpg'
+image: ../../media/img/IMG_20190419_184113.jpg
 uuid: 28f61fc7-f74e-41d3-923b-c39b5404ad78
-collections:
-  - abstrait
 ---
 

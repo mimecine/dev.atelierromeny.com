@@ -12,7 +12,5 @@ year_start: 1963
 year_end: 1964
 image: null
 uuid: cfad31e1-58b3-4e8f-86e0-767b02b8cd47
-collections:
-  - figures-humaines
 ---
 

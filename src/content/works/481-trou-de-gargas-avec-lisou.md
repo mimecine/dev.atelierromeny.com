@@ -6,13 +6,11 @@ w: 100
 h: 100
 location: attic
 note: null
-file: '@img/481-trou-de-gargas-avec-lisou.jpg'
+file: IMG_20190519_200802.jpg
 year: '1991'
 year_start: 1991
 year_end: null
-image: '@img/481-trou-de-gargas-avec-lisou.jpg'
+image: ../../media/img/IMG_20190519_200802.jpg
 uuid: 9e4fc8cc-914f-420d-b94a-03fdec5a4c10
-collections:
-  - paysages
 ---
 

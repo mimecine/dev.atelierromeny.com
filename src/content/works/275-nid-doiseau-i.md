@@ -6,13 +6,11 @@ w: 33
 h: 46
 location: secondary storage
 note: null
-file: '@img/275-nid-doiseau-i.jpg'
+file: IMG_20190416_202841.jpg
 year: '2001'
 year_start: 2001
 year_end: null
-image: '@img/275-nid-doiseau-i.jpg'
+image: ../../media/img/IMG_20190416_202841.jpg
 uuid: 587afea4-765d-42b9-972a-2f976adbdd40
-collections:
-  - animaux
 ---
 

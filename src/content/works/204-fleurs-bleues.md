@@ -12,7 +12,5 @@ year_start: 1982
 year_end: null
 image: null
 uuid: 3e550fc7-0513-4adf-80df-4110fd1db02b
-collections:
-  - fleurs
 ---
 

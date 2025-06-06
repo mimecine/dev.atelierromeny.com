@@ -12,7 +12,5 @@ year_start: 1991
 year_end: null
 image: null
 uuid: 5075e86d-d7df-4769-af39-f74ae0bceb79
-collections:
-  - automne
 ---
 

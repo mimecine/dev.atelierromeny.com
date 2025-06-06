@@ -6,13 +6,11 @@ w: 65
 h: 45
 location: graphic studio
 note: null
-file: '@img/639-sand-och-brate-ill-sable-et-pignes.jpg'
+file: IMG_20180922_133335.jpg
 year: '1984'
 year_start: 1984
 year_end: null
-image: '@img/639-sand-och-brate-ill-sable-et-pignes.jpg'
+image: ../../media/img/IMG_20180922_133335.jpg
 uuid: 580403d3-2303-4844-b34b-5d28d742bf62
-collections:
-  - abstrait
 ---
 

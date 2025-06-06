@@ -6,13 +6,11 @@ w: 77
 h: 60
 location: attic
 note: null
-file: '@img/455-melancolie.jpg'
+file: IMG_20190519_193416.jpg
 year: '1964'
 year_start: 1964
 year_end: null
-image: '@img/455-melancolie.jpg'
+image: ../../media/img/IMG_20190519_193416.jpg
 uuid: be855397-fcd3-4b90-ac9e-99d3f4a59ace
-collections:
-  - abstrait
 ---
 

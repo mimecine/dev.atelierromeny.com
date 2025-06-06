@@ -6,13 +6,11 @@ w: 73
 h: 45
 location: old atelier
 note: null
-file: '@img/226-nu-entre-fleurs-et-ponpon.jpg'
+file: IMG_20180814_163349.jpg
 year: '1998'
 year_start: 1998
 year_end: null
-image: '@img/226-nu-entre-fleurs-et-ponpon.jpg'
+image: ../../media/img/IMG_20180814_163349.jpg
 uuid: 6ebfef5e-762b-41b8-921d-94cb30951270
-collections:
-  - figures-humaines
 ---
 

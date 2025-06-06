@@ -6,13 +6,11 @@ w: 73
 h: 54
 location: old atelier
 note: null
-file: '@img/cherry-tree.jpg'
+file: IMG_20180813_143827.jpg
 year: '---'
 year_start: null
 year_end: null
-image: '@img/cherry-tree.jpg'
+image: ../../media/img/IMG_20180813_143827.jpg
 uuid: a960b572-bdde-4427-b172-12fd4b2cb488
-collections:
-  - nature
 ---
 

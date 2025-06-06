@@ -6,13 +6,11 @@ w: 85
 h: 65
 location: graphic studio
 note: null
-file: '@img/603-contraste.jpg'
+file: IMG_20180922_190349.jpg
 year: '1969'
 year_start: 1969
 year_end: null
-image: '@img/603-contraste.jpg'
+image: ../../media/img/IMG_20180922_190349.jpg
 uuid: ccae5769-429f-4c3a-b7b9-3e7200d4be91
-collections:
-  - abstrait
 ---
 

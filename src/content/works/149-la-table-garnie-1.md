@@ -6,13 +6,11 @@ w: 54
 h: 65
 location: graphic studio
 note: null
-file: '@img/149-la-table-garnie-1.jpg'
+file: IMG_20180922_185837.jpg
 year: '1998'
 year_start: 1998
 year_end: null
-image: '@img/149-la-table-garnie-1.jpg'
+image: ../../media/img/IMG_20180922_185837.jpg
 uuid: a65c4e83-0806-4077-b600-629d66333d87
-collections:
-  - natures-mortes
 ---
 

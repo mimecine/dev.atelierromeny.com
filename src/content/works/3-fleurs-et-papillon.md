@@ -12,7 +12,5 @@ year_start: 1989
 year_end: null
 image: null
 uuid: 9aa1b2e8-b3f6-411f-8253-2f3dbeb47607
-collections:
-  - fleurs
 ---
 

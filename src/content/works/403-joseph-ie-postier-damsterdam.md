@@ -12,7 +12,5 @@ year_start: 1955
 year_end: null
 image: null
 uuid: 655291c5-be78-43f8-bcf8-6f3d0c3d9ad9
-collections:
-  - figures-humaines
 ---
 

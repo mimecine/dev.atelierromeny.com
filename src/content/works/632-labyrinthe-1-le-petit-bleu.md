@@ -6,13 +6,11 @@ w: 80
 h: 80
 location: secondary storage
 note: null
-file: '@img/632-labyrinthe-1-le-petit-bleu.jpg'
+file: IMG_20180925_135142.jpg
 year: '2003'
 year_start: 2003
 year_end: null
-image: '@img/632-labyrinthe-1-le-petit-bleu.jpg'
+image: ../../media/img/IMG_20180925_135142.jpg
 uuid: 73e23833-bc1b-461c-ac90-31358d768816
-collections:
-  - abstrait
 ---
 

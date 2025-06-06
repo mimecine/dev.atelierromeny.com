@@ -6,13 +6,11 @@ w: 73
 h: 54
 location: secondary storage
 note: null
-file: '@img/535-aux-chandelles-rouges.jpg'
+file: IMG_20180925_115517.jpg
 year: '2002'
 year_start: 2002
 year_end: null
-image: '@img/535-aux-chandelles-rouges.jpg'
+image: ../../media/img/IMG_20180925_115517.jpg
 uuid: 2edde7cc-02b6-4ca1-bea0-6c48a2574e7e
-collections:
-  - natures-mortes
 ---
 

@@ -6,13 +6,11 @@ w: 97
 h: 148
 location: main storage
 note: null
-file: '@img/41-moment-de-reve.jpg'
+file: IMG_20180924_170207.jpg
 year: '1986'
 year_start: 1986
 year_end: null
-image: '@img/41-moment-de-reve.jpg'
+image: ../../media/img/IMG_20180924_170207.jpg
 uuid: 3f702f96-9cff-4430-8085-ab336185a42e
-collections:
-  - figures-humaines
 ---
 

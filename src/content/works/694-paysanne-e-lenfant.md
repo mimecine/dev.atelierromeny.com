@@ -6,13 +6,11 @@ w: 60
 h: 81
 location: old atelier
 note: null
-file: '@img/694-paysanne-e-lenfant.jpg'
+file: IMG_20180813_134433.jpg
 year: '2001'
 year_start: 2001
 year_end: null
-image: '@img/694-paysanne-e-lenfant.jpg'
+image: ../../media/img/IMG_20180813_134433.jpg
 uuid: fb0b026d-63ff-40af-bf2d-af082844ef68
-collections:
-  - figures-humaines
 ---
 

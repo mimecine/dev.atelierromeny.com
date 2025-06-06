@@ -12,7 +12,5 @@ year_start: 1965
 year_end: null
 image: null
 uuid: e2725042-e4d6-4df4-a26e-9355debc70f3
-collections:
-  - animaux
 ---
 

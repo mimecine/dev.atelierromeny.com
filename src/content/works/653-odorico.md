@@ -6,13 +6,11 @@ w: 46
 h: 55
 location: house
 note: null
-file: '@img/653-odorico.jpg'
+file: IMG_20190531_192859.jpg
 year: '1991'
 year_start: 1991
 year_end: null
-image: '@img/653-odorico.jpg'
+image: ../../media/img/IMG_20190531_192859.jpg
 uuid: 4a13f511-e744-4b76-a69f-cc078c9c3bd8
-collections:
-  - figures-humaines
 ---
 

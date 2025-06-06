@@ -6,13 +6,11 @@ w: 65
 h: 55
 location: graphic studio
 note: null
-file: '@img/91-la-nuit.jpg'
+file: IMG_20180922_191310.jpg
 year: '1985'
 year_start: 1985
 year_end: null
-image: '@img/91-la-nuit.jpg'
+image: ../../media/img/IMG_20180922_191310.jpg
 uuid: 456899be-a3a4-45d6-a683-b4c08b1b7f44
-collections:
-  - abstrait
 ---
 

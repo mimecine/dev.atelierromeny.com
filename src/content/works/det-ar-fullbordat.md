@@ -6,13 +6,11 @@ w: 130
 h: 80
 location: secondary storage
 note: null
-file: '@img/det-ar-fullbordat.jpg'
+file: IMG_20180924_185217.jpg
 year: '1957'
 year_start: 1957
 year_end: null
-image: '@img/det-ar-fullbordat.jpg'
+image: ../../media/img/IMG_20180924_185217.jpg
 uuid: 4ad9670f-3925-4bcc-ae4c-465557832391
-collections:
-  - abstrait
 ---
 

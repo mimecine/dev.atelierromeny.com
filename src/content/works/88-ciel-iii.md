@@ -12,7 +12,5 @@ year_start: 1984
 year_end: null
 image: null
 uuid: 05113ef3-3b17-499b-9c93-4599ab791353
-collections:
-  - abstrait
 ---
 

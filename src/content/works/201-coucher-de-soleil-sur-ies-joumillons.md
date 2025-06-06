@@ -12,7 +12,5 @@ year_start: 1993
 year_end: null
 image: null
 uuid: d5d37700-327b-4444-9458-57aa9c74066f
-collections:
-  - paysages
 ---
 

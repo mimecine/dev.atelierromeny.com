@@ -12,7 +12,5 @@ year_start: 2001
 year_end: null
 image: null
 uuid: 9e2a9548-ba55-4ded-ae8a-88406e73caa0
-collections:
-  - abstrait
 ---
 

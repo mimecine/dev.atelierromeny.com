@@ -6,13 +6,11 @@ w: 97
 h: 130
 location: attic
 note: null
-file: '@img/440-errance.jpg'
+file: IMG_20190519_202954.jpg
 year: '1991'
 year_start: 1991
 year_end: null
-image: '@img/440-errance.jpg'
+image: ../../media/img/IMG_20190519_202954.jpg
 uuid: 4f717f7c-c270-49cb-837f-bc0661a66f1f
-collections:
-  - metro
 ---
 

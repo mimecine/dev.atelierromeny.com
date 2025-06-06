@@ -6,13 +6,11 @@ w: 38
 h: 46
 location: secondary storage
 note: null
-file: '@img/les-cartes-de-fanny-2.jpg'
+file: IMG_20190416_192058.jpg
 year: '2008'
 year_start: 2008
 year_end: null
-image: '@img/les-cartes-de-fanny-2.jpg'
+image: ../../media/img/IMG_20190416_192058.jpg
 uuid: e326239c-9fdd-47aa-a435-e0abe56f9b9f
-collections:
-  - portraits
 ---
 

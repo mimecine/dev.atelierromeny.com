@@ -12,7 +12,5 @@ year_start: 2003
 year_end: null
 image: null
 uuid: e94854e8-5bec-40c5-bcb7-6c18caf4e005
-collections:
-  - nues
 ---
 

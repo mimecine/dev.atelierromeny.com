@@ -6,13 +6,11 @@ w: 100
 h: 65
 location: graphic studio
 note: null
-file: '@img/126-le-grand-mas-a-villars.jpg'
+file: IMG_20180922_150541.jpg
 year: '1981'
 year_start: 1981
 year_end: null
-image: '@img/126-le-grand-mas-a-villars.jpg'
+image: ../../media/img/IMG_20180922_150541.jpg
 uuid: fbad884a-1287-45c5-8efa-b428b9b09e94
-collections:
-  - paysages
 ---
 

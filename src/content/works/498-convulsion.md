@@ -6,13 +6,11 @@ w: 130
 h: 120
 location: attic
 note: null
-file: '@img/498-convulsion.jpg'
+file: IMG_20190519_200614.jpg
 year: '1965'
 year_start: 1965
 year_end: null
-image: '@img/498-convulsion.jpg'
+image: ../../media/img/IMG_20190519_200614.jpg
 uuid: b5b979cb-8e04-4636-a0b9-52cf337b2f19
-collections:
-  - abstrait
 ---
 

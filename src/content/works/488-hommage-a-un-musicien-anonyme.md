@@ -6,13 +6,11 @@ w: 100
 h: 81
 location: secondary storage
 note: null
-file: '@img/488-hommage-a-un-musicien-anonyme.jpg'
+file: IMG_20180925_130449.jpg
 year: '1976'
 year_start: 1976
 year_end: null
-image: '@img/488-hommage-a-un-musicien-anonyme.jpg'
+image: ../../media/img/IMG_20180925_130449.jpg
 uuid: 5cc27beb-fc42-4266-a706-17d3fa911f5c
-collections:
-  - natures-mortes
 ---
 

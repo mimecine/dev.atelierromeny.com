@@ -6,13 +6,11 @@ w: 65
 h: 55
 location: old atelier
 note: null
-file: '@img/698-nature-morte-chez-monsieur-alata-souvenir-dorient.jpg'
+file: IMG_20180813_152807.jpg
 year: '1978'
 year_start: 1978
 year_end: null
-image: '@img/698-nature-morte-chez-monsieur-alata-souvenir-dorient.jpg'
+image: ../../media/img/IMG_20180813_152807.jpg
 uuid: 4322fede-a2c2-457f-a570-61307707b0c6
-collections:
-  - natures-mortes
 ---
 
