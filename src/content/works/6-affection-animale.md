@@ -5,6 +5,7 @@ image: '@img/6-affection-animale.jpg'
 collections:
   - alisa
   - animaux
+  - nfs
 categories: Animaux
 w: 33
 h: 41
