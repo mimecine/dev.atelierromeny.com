@@ -21,13 +21,25 @@ export async function getStaticPaths() {
 
   return collections
     .map((collection) => {
-      return works.map((work, i) => ({
-        params: {
-          collection: collection.id,
-          slug: work.id,
-        },
-        props: { work, collection },
-      }));
+      return works
+        .filter((work) => work.data.image)
+        .filter(
+          (work) =>
+            work.data.collections?.includes(collection.id) ||
+            collection.id === "_works"
+        )
+        .sort(
+          (a, b) =>
+            a.data.title?.localeCompare(b.data.title || "(Untitled)") || 0
+        )
+        .map((work, i) => ({
+          params: {
+            collection: collection.id,
+            slug: work.id,
+            index: i,
+          },
+          props: { work, collection },
+        }));
     })
     .flat();
 }
@@ -39,6 +51,7 @@ type Props = {
 type Params = {
   collection: string;
   slug: string;
+  index: number;
 };
 const { work, collection } = Astro.props;
 
@@ -123,8 +136,7 @@ const { count, index } = works.reduce(
               @keyup.window.left="$el.click()"
               href={`/${collection.id}/${previous.id}`}
               alt={previous.data.title}
-              title={previous.data.title}
-            >
+              title={previous.data.title}>
               <span class="text-black opacity-30">&larr;</span> Previous
             </a>
           )
@@ -139,18 +151,18 @@ const { count, index } = works.reduce(
           )
         }
       </li>
-      <li>&nbsp;
+      <li>
+        &nbsp;
         {
           next && (
             <a
               @keyup.window.right="$el.click()"
               href={`/${collection.id}/${next.id}`}
               alt={next.data.title}
-              title={next.data.title}
-            >
+              title={next.data.title}>
               Next <span class="text-black opacity-30">&rarr;</span>
             </a>
-          ) 
+          )
         }
       </li>
     </ul>
