@@ -5,7 +5,6 @@ image: '@img/564-bouquet-a-iancien.jpg'
 collections:
   - fleurs
   - selected-july-2025
-  - nfs
 categories: Fleurs
 w: 38
 h: 46
