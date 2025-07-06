@@ -1,69 +1,17 @@
 site_title: Edlef Romeny
 menu:
-  # - title: Abstract
-  #   href: /abstract
   - title: Abstrait
     href: /abstrait
-  # - title: Accident dans la montagne
-  #   href: /accident-dans-la-montagne
-  # - title: Alisa
-  #   href: /alisa
-  # - title: Animaux
-  #   href: /animaux
-  # - title: Animals
-  #   href: /animals
-  - title: Arbres
-    href: /arbres
-  # - title: Arbres en fleurs
-  #   href: /arbres-en-fleurs
-  # - title: Automne
-  #   href: /automne
-  # - title: Cartes
-  #   href: /cartes
-  # - title: Été
-  #   href: /ete
-  - title: Feuilles
-    href: /feuilles
-  # - title: Figures humaines
-  #   href: /figures-humaines
+  - title: Selected
+    href: /selected-july-2025
+  - title: NFS
+    href: /nfs
   - title: Fleurs
     href: /fleurs
-  # - title: La création
-  #   href: /la-creation
-  # - title: La vie de femme
-  #   href: /la-vie-de-femme
-  # - title: La vigne
-  #   href: /la-vigne
-  # - title: Le peintre et son modèle
-  #   href: /le-peintre-et-son-model
-  # - title: Les jours de la semaine
-  #   href: /les-jours-de-la-semaine
-  # - title: L'étreinte au monde
-  #   href: /letreinte-au-monde
-  # - title: Marco
-  #   href: /marco
-  # - title: Métro
-  #   href: /metro
-  # - title: Musique
-  #   href: /musique
-  # - title: Nature
-  #   href: /nature
   - title: Natures mortes
     href: /natures-mortes
-  # - title: Observations
-  #   href: /observations
   - title: Paysages
     href: /paysages
-  # - title: Plantes
-  #   href: /plantes
-  # - title: Portraits
-  #   href: /portraits
-  # - title: Rues
-  #   href: /rues
-    # - title: Still Life
-    #   href: /still-life
-  # - title: Tauromachie
-  #   href: /tauromachie
   - title: Bio
     href: /bio
   - title: '[[ All Works ]]'
