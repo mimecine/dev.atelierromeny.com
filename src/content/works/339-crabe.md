@@ -6,6 +6,7 @@ collections:
   - nature
   - animals
   - animaux
+  - nfs
 categories: Animaux
 w: 50
 h: 40
