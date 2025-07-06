@@ -5,6 +5,7 @@ image: '@img/206-bouquet-bleu.jpg'
 collections:
   - Selected Works
   - natures-mortes
+  - selected-july-2025
 categories: Natures mortes
 w: 46
 h: 65
