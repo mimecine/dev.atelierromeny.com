@@ -5,6 +5,7 @@ image: '@img/513-choux-rouge-aux-deux-bouquets.jpg'
 collections:
   - still-life
   - natures-mortes
+  - selected-july-2025
 categories: Natures mortes
 w: 100
 h: 80
