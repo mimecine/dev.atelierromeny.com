@@ -6,6 +6,7 @@ collections:
   - b3a35e23-3944-45b5-addd-eb4125bd7142
   - alisa
   - natures-mortes
+  - selected-july-2025
 categories: Natures mortes
 w: 70
 h: 50
