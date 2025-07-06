@@ -5,6 +5,7 @@ image: '@img/367-fruits.jpg'
 collections:
   - abstract
   - abstrait
+  - selected-july-2025
 categories: Abstrait
 w: 70
 h: 60

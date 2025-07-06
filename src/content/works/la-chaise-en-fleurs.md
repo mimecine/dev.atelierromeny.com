@@ -6,6 +6,7 @@ collections:
   - Marco
   - Alisa
   - natures-mortes
+  - selected-july-2025
 categories: Nature morte
 w: 80
 h: 60
