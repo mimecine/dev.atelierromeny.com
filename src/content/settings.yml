@@ -1,17 +1,9 @@
 site_title: Edlef Romeny
 menu:
-  - title: Abstrait
-    href: /abstrait
-  - title: Selected
+  - title: First Selection
     href: /selected-july-2025
-  - title: NFS
+  - title: Not for Sale
     href: /nfs
-  - title: Fleurs
-    href: /fleurs
-  - title: Natures mortes
-    href: /natures-mortes
-  - title: Paysages
-    href: /paysages
   - title: Bio
     href: /bio
   - title: '[[ All Works ]]'
