@@ -6,6 +6,7 @@ collections:
   - Marco
   - Alisa
   - abstrait
+  - selected-july-2025
 categories: Abstrait
 w: 110
 h: 90

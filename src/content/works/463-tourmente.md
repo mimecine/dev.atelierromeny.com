@@ -5,6 +5,7 @@ image: '@img/463-tourmente.jpg'
 collections:
   - Marco
   - abstrait
+  - selected-july-2025
 categories: Abstrait
 w: 115
 h: 80

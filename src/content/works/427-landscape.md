@@ -1,9 +1,10 @@
 ---
-uuid: bc484757-0ba8-40c0-a3a9-f927bafac536
+id: 427
 title: Landscape
 image: '@img/427-landscape.jpg'
 collections:
   - abstrait
+  - selected-july-2025
 categories: Abstrait
 w: 87
 h: 74
@@ -13,6 +14,6 @@ year: '1970'
 year_start: 1970
 year_end: null
 file: '@img/427-landscape.jpg'
-id: 427
+uuid: bc484757-0ba8-40c0-a3a9-f927bafac536
 ---
 
