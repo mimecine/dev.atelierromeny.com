@@ -1,0 +1,48 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
+
+// List of collection slugs to consider as "accepted"
+const acceptedCollections = [
+  "destroyed","selected-july-2025","nfs"
+];
+
+const works = await getCollection("works");
+const rejectedWorks = works.filter(
+  (work) =>
+    !work.data.collections ||
+    !work.data.collections.some((col) => acceptedCollections.includes(col))
+);
+---
+<Layout title="Rejected Works">
+  <section class="grid max-w-6xl mx-auto py-4">
+    <div class="works-grid">
+      {
+        works.map((work) => (
+          <a href={`/works/${work.id}`}>
+            <div class="work-item h-full" data-key={work.id}>
+              <div class="work-thumbnail-container">
+                {work.data.image && (
+                  <Image
+                    src={work.data.image}
+                    alt={work.data.title || ""}
+                    width={300}
+                    height={200}
+                    class="work-thumbnail"
+                  />
+                ) || (
+                  <div class="w-80 h-60 grid grid-cols-1 place-content-center">Image missing</div>
+                )}
+              </div>
+              <div>
+                {work.data.title || "(Untitled)"}
+                {work.data.year_start && `, ${work.data.year_start}`}
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+</Layout>

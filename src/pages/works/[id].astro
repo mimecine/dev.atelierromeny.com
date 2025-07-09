@@ -1,0 +1,41 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { type CollectionEntry, getCollection, render } from "astro:content";
+import { Image } from "astro:assets";
+
+// generate static paths for works
+export async function getStaticPaths() {
+  const works = await getCollection("works");
+  return works.map((work) => ({
+    params: { id: work.id },
+    props: work,
+  }));
+}
+
+type Props = CollectionEntry<"works">;
+
+const work = Astro.props;
+const { Content } = await render(work);
+
+---
+<Layout title="Work">
+  <section class="grid max-w-4xl mx-auto py-4 font-serif">
+    <div class="prose prose-lg w-full lg:w-4xl mx-auto">
+        <Content />
+        {work.data.image && (
+            <Image
+            src={work.data.image}
+            alt={work.data.title || ""}
+            width={600}
+            height={400}
+            class="work-image"
+            />
+        )}
+        <p>{work.data.description || "No description available."}</p>
+        {work.data.year_start && <p>Year: {work.data.year_start}</p>}
+        {work.data.collections && (
+            <p>Collections: {work.data.collections.join(", ")}</p>
+        )}  
+    </div>
+  </section>
+</Layout>

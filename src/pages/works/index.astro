@@ -1,0 +1,29 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
+
+const works = await getCollection("works");
+---
+<Layout title="All Works">
+  <section class="grid max-w-6xl mx-auto py-8">
+    <h1 class="text-3xl font-bold mb-8">All Works</h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      {works.map((work) => (
+        <a href={`/works/${work.id}`} class="block group">
+          {work.data.image && (
+            <Image
+              src={work.data.image}
+              alt={work.data.title || ""}
+              width={400}
+              height={300}
+              class="rounded shadow group-hover:scale-105 transition-transform duration-200"
+            />
+          )}
+          <div class="mt-2 text-lg font-semibold">{work.data.title || "Untitled"}</div>
+          {work.data.year_start && <div class="text-sm text-gray-500">{work.data.year_start}</div>}
+        </a>
+      ))}
+    </div>
+  </section>
+</Layout>
