@@ -1,8 +1,8 @@
 ---
-title: AAA Selected July 2025
+title: First Selection
 published: true
 inmenu: true
 image: ''
 notes: ''
 ---
-Selected works
+

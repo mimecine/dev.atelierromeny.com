@@ -1,7 +1,8 @@
 ---
 title: Fleurs
 published: true
-inmenu: true
+inmenu: false
 image: ''
 notes: ''
 ---
+

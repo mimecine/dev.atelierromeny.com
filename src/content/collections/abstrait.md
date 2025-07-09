@@ -1,7 +1,8 @@
 ---
 title: Abstrait
 published: true
-inmenu: true
+inmenu: false
 image: ''
 notes: ''
 ---
+
