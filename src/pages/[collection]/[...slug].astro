@@ -8,40 +8,74 @@ import {
 import Layout from "@layouts/Layout.astro";
 import { Image } from "astro:assets";
 
+// export async function getStaticPaths() {
+//   let collections = await getCollection("collections");
+//   const allWorks: CollectionEntry<"collections"> = {
+//     id: "_works",
+//     collection: "collections",
+//     data: { title: "Works" },
+//   };
+//   collections.push(allWorks);
+
+//   let works = (await getCollection("works")).filter((work) => work.data.image);
+
+//   return collections
+//     .map((collection) => {
+//       return works
+//         .filter((work) => work.data.image)
+//         .filter(
+//           (work) =>
+//             work.data.collections?.includes(collection.id) ||
+//             collection.id === "_works"
+//         )
+//         .sort(
+//           (a, b) =>
+//             a.data.title?.localeCompare(b.data.title || "(Untitled)") || 0
+//         )
+//         .map((work, i) => ({
+//           params: {
+//             collection: collection.id,
+//             slug: work.id,
+//             index: i,
+//           },
+//           props: { work, collection },
+//         }));
+//     })
+//     .flat();
+// }
+
 export async function getStaticPaths() {
-  let collections = await getCollection("collections");
-  const allWorks: CollectionEntry<"collections"> = {
+  const collections = await getCollection("collections");
+  const allWorks = {
     id: "_works",
     collection: "collections",
     data: { title: "Works" },
   };
   collections.push(allWorks);
 
-  let works = (await getCollection("works")).filter((work) => work.data.image);
+  const works = await getCollection("works");
 
-  return collections
-    .map((collection) => {
-      return works
-        .filter((work) => work.data.image)
-        .filter(
-          (work) =>
-            work.data.collections?.includes(collection.id) ||
-            collection.id === "_works"
-        )
-        .sort(
-          (a, b) =>
-            a.data.title?.localeCompare(b.data.title || "(Untitled)") || 0
-        )
-        .map((work, i) => ({
-          params: {
-            collection: collection.id,
-            slug: work.id,
-            index: i,
-          },
-          props: { work, collection },
-        }));
-    })
-    .flat();
+  return collections.flatMap((collection) => {
+    const collectionWorks = works
+      .filter((work) => work.data.image)
+      .filter((work) =>
+        work.data.collections?.includes(collection.id) ||
+        collection.id === "_works"
+      )
+      .sort((a, b) =>
+        a.data.title?.localeCompare(b.data.title || "(Untitled)") || 0
+      );
+
+    return collectionWorks.map((work, index) => ({
+      params: {
+        collection: collection.id,
+        slug: work.id,
+        index: index,
+      },
+      props: { work, collection },
+    }));
+  });
+  
 }
 
 type Props = {
@@ -120,6 +154,9 @@ const { count, index } = works.reduce(
           class="object-contain h-[70vh]"
         />
       )
+      || (
+                  <div class="w-80 h-60 grid grid-cols-1 place-content-center">Image missing</div>
+                )
     }
     <h5 class="py-4">
       {work.data.title}

@@ -1,6 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import { type CollectionEntry, getCollection, render } from "astro:content";
+import { type CollectionEntry, getCollection, getEntry, render } from "astro:content";
 import { Image } from "astro:assets";
 
 // generate static paths for works
@@ -21,7 +21,7 @@ const { Content } = await render(work);
 <Layout title="Work">
   <section class="grid max-w-4xl mx-auto py-4 font-serif">
     <div class="prose prose-lg w-full lg:w-4xl mx-auto">
-        <Content />
+        <h2 class="text-4xl font-bold mb-4">{work.data.title || "~ Untitled ~"}</h2>
         {work.data.image && (
             <Image
             src={work.data.image}
@@ -30,12 +30,28 @@ const { Content } = await render(work);
             height={400}
             class="work-image"
             />
-        )}
-        <p>{work.data.description || "No description available."}</p>
+        )|| (
+                  <div class="w-80 h-60 grid grid-cols-1 place-content-center border">Image missing</div>
+                )}
+        {work.data.description && <p>{work.data.description}</p>}
         {work.data.year_start && <p>Year: {work.data.year_start}</p>}
-        {work.data.collections && (
-            <p>Collections: {work.data.collections.join(", ")}</p>
-        )}  
+        <!-- {work.data.collections && (
+            <p>In: {work.data.collections.map((col: string) => col).join(", ")}</p>
+        )}   -->
+                {work.data.collections && (
+                  <p>
+                    In: {
+                      (await Promise.all(
+                        work.data.collections.map(async (col: string) => {
+                          const entry = await getEntry("collections", col);
+                          return entry?.data.title || col;
+                        })
+                      )).join(", ")
+                    }
+                  </p>
+                )}
+                <Content />
+
     </div>
   </section>
 </Layout>

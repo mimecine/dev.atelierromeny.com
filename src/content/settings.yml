@@ -1,12 +1,12 @@
 site_title: Edlef Romeny
 menu:
-  - title: First Selection
-    href: /selected-july-2025
   - title: Bio
     href: /bio
+  - title: '[[ First Round ]]'
+    href: /selected-july-2025
   - title: '[[ All Works ]]'
     href: /_works
-  - title: '[[ Rejected ]]'
+  - title: '[[ Unclassed ]]'
     href: /rejected
 sections:
   - type: collection
