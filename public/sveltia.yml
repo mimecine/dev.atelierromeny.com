@@ -16,9 +16,9 @@ collections:
     slug: "{{title}}"
     summary: "{{title}}, {{year}}, {{location}}"  
     search_fields: ["title", "year", "location"]
-    filter:
-      field: "image"
-      pattern: ".{5,}"
+    # filter:
+    #   field: "image"
+    #   pattern: ".{5,}"
     view_groups:
       - { label: "Years", field: year_start, pattern: "^[0-9]{4}$" }
       - { label: "Decades", field: year_start, pattern: "^[0-9]{3}" }
@@ -28,6 +28,8 @@ collections:
       - { label: "Undated", field: year_start, pattern: "^null$" }
       - { label: "Unlocated", field: location, pattern: "^null$" }
       - { label: "Missing ID", field: id, pattern: "^null$" }
+      - { label: "With Image", field: image, pattern: ".{5,}" }
+      - { label: "Without Image", field: image, pattern: "^.{0,5}$" }
     editor:
       preview: false
     # # sortable fields won"t work until all fields are filled  on each item
@@ -37,7 +39,7 @@ collections:
     #   - "location"
     fields:
       # - { label: "UUID", name: "uuid", widget: "hidden", default: "{{uuid}}" }
-      - { label: "Work ID", name: "id", widget: "number", required: false }
+      - { label: "Work ID", name: "id", widget: "string", required: false }
       - { label: "Title", name: "title", widget: "string", required: true }
       - { label: "Image", name: "image", widget: "image", required: false }
       - { label: "Description", name: "body", widget: "markdown", required: false }

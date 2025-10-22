@@ -1,0 +1,17 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Search from "astro-pagefind/components/Search";
+const title = "Search";
+---
+
+<Layout title={title}>
+    <main class="container search-page">
+        <h1>Search</h1>
+
+        <div class="search-panel">
+            <Search id="search" className="pagefind-ui" uiOptions={{ showImages: true }} />
+        </div>
+
+    </main>
+
+</Layout>

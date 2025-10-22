@@ -1,53 +1,3 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="noindex" />
-    <title>Content Manager</title>
-    <!-- 
-      Tailwind doesn't work unfortunately. Otherwise you could have set 
-      type="text/tailwindcss" on the style element and have access to 
-      @theme, @apply, and tailwind classes:
-
-      @theme {
-        --font-serif: "Comic Sans MS", sans-serif;
-      }
-      /* [data-key-path="body"] refers to the markdown field with name: body in your config */
-      [data-mode="preview"] [data-widget="markdown"][data-key-path="body"] {
-        @apply border-t-2 border-double border-gray-500;
-        @apply font-serif bg-red-200
-        h4:first-child { /* hide the title of the markdown field */ 
-        @apply hidden;
-        }
-        img {
-          @apply border-2 border-dotted border-pink-500;
-        }
-      }    
-    -->
-    <style>
-      :root {
-        --font-family--default: "Comic Sans MS", serif;
-        /* and whatever */
-      }
-      [data-mode="preview"] [data-widget="markdown"][data-key-path="body"] {
-        border-top: 2px double gray;
-        font-family: var(--font-family--default);
-        h4:first-child {
-          display: none;
-        }
-        img {
-          border: 2em dotted pink
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
-  </body>
-</html>
-
-
 <!doctype html>
 <html>
   <head>
@@ -74,7 +24,7 @@
         }
       }    
     -->
-    <style>
+    <style is:inlinete>
       :root {
         --font-family--default: "Comic Sans MS", serif;
         /* and whatever */

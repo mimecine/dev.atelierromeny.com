@@ -6,6 +6,7 @@ const _works = defineCollection({
   schema: ({ image }) =>
     z.object({
       uuid: z.string().optional().nullish(),
+      id: z.number().optional().nullish(),
       title: z.string().optional().nullish(),
       image: image().optional().nullish(),
       description: z.string().optional().nullish(),

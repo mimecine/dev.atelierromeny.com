@@ -8,6 +8,8 @@ menu:
     href: /_works
   - title: '[[ Unclassed ]]'
     href: /rejected
+  - title: SEARCH
+    href: /search
 sections:
   - type: collection
     title: Featured

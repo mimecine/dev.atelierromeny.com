@@ -1,21 +1,18 @@
 ---
 id: null
 title: Wo Hin 1
+image: '@img/wo-hin-1.jpg'
+collections:
+  - abstrait
 categories: Abstract
 w: 38
 h: 46
 location: secondary storage
-note: null
-file: '@img/wo-hin-1.jpg'
+note: ''
 year: '2005'
 year_start: 2005
 year_end: null
-image: '@img/wo-hin-1.jpg'
+file: '@img/wo-hin-1.jpg'
 uuid: 250e14c8-4f5d-42b5-be2a-f4f7e3091b5e
-collections:
-  - abstrait
 ---
 
-import Image from 'astro:assets';
-
-<Image src={import.meta.glob('../../media/img/IMG_20190416_202747.jpg')} alt="Wo Hin 1" width={38} height={46} />

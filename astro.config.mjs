@@ -7,6 +7,10 @@ import alpinejs from '@astrojs/alpinejs';
 
 import icon from 'astro-icon';
 
+
+import pagefind from 'astro-pagefind';
+
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://dev.atelierromeny.com',
@@ -14,5 +18,5 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
 
-  integrations: [alpinejs(), icon()]
+  integrations: [alpinejs(), icon(), pagefind()]
 });
