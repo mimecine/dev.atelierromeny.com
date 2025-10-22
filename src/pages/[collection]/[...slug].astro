@@ -8,41 +8,6 @@ import {
 import Layout from "@layouts/Layout.astro";
 import { Image } from "astro:assets";
 
-// export async function getStaticPaths() {
-//   let collections = await getCollection("collections");
-//   const allWorks: CollectionEntry<"collections"> = {
-//     id: "_works",
-//     collection: "collections",
-//     data: { title: "Works" },
-//   };
-//   collections.push(allWorks);
-
-//   let works = (await getCollection("works")).filter((work) => work.data.image);
-
-//   return collections
-//     .map((collection) => {
-//       return works
-//         .filter((work) => work.data.image)
-//         .filter(
-//           (work) =>
-//             work.data.collections?.includes(collection.id) ||
-//             collection.id === "_works"
-//         )
-//         .sort(
-//           (a, b) =>
-//             a.data.title?.localeCompare(b.data.title || "(Untitled)") || 0
-//         )
-//         .map((work, i) => ({
-//           params: {
-//             collection: collection.id,
-//             slug: work.id,
-//             index: i,
-//           },
-//           props: { work, collection },
-//         }));
-//     })
-//     .flat();
-// }
 
 export async function getStaticPaths() {
   const collections = await getCollection("collections");
@@ -158,12 +123,13 @@ const { count, index } = works.reduce(
                   <div class="w-80 h-60 grid grid-cols-1 place-content-center">Image missing</div>
                 )
     }
-    <h5 class="py-4">
-      {work.data.title}
-      {work.data.year_start && `, ${work.data.year_start}`}
-      {work.data.year_end && ` - ${work.data.year_end}`}
+    <div class="py-4 w-full text-center font-bold">
+      {work.data.title || "Untitled"}
+      {work.data.year_start && `, ${work.data.year_start || "Undated"}`}
+      {work.data.year_start && work.data.year_end && ` - ${work.data.year_end}`}
       {work.data.w && work.data.h && `( ${work.data.w} x ${work.data.h} )`}
-    </h5>
+      {work.data.id && `, #${work.data.id}`}
+    </div>
 
     <ul class="grid grid-cols-3 w-full place-items-center uppercase" x-data>
       <li>
@@ -172,7 +138,6 @@ const { count, index } = works.reduce(
             <a
               @keyup.window.left="$el.click()"
               href={`/${collection.id}/${previous.id}`}
-              alt={previous.data.title}
               title={previous.data.title}>
               <span class="text-black opacity-30">&larr;</span> Previous
             </a>
@@ -181,9 +146,9 @@ const { count, index } = works.reduce(
       </li>
       <li>
         {
-          count > 1 && (
+          count && count > 1 && (
             <span>
-              {index + 1} of {count}
+              {index && index + 1} of {count}
             </span>
           )
         }
@@ -195,7 +160,6 @@ const { count, index } = works.reduce(
             <a
               @keyup.window.right="$el.click()"
               href={`/${collection.id}/${next.id}`}
-              alt={next.data.title}
               title={next.data.title}>
               Next <span class="text-black opacity-30">&rarr;</span>
             </a>

@@ -24,33 +24,30 @@ const { Content } = await render(work);
 ---
 
 <Layout title={work.data.title || "~ Untitled ~"}>
-  <section class="grid max-w-4xl mx-auto py-4 font-serif">
-    <div class="prose prose-lg w-full lg:w-4xl mx-auto">
-      <!-- <h2 class="text-4xl font-bold mb-4">{work.data.title || "~ Untitled ~"}</h2> -->
+  <section class="grid max-w-4xl mx-auto py-4">
+    <div>
       {
         (work.data.image && (
           <Image
             src={work.data.image}
             alt={work.data.title || ""}
-            width={600}
-            height={400}
-            class="work-image"
+            width={1024}
+            class="object-contain h-[70vh]"
           />
         )) || (
-          <div class="w-80 h-60 grid grid-cols-1 place-content-center border">
+          <div class="bg-gray-200 w-80 h-60 grid grid-cols-1 place-content-center border">
             Image missing
           </div>
         )
       }
-      <div>
-        <span data-pagefind-body>{work.data.title || "~ Untitled ~"}, {
-          work.data.year_start || "(Undated)"
-        }
-        {work.data.id && `, #${work.data.id}`}</span>
-        {work.data.location && `, ${work.data.location}`}
-      </div>
-      <!-- {work.data.description && <p>{work.data.description}</p>}
-      {work.data.year_start && <p>{work.data.year_start}</p>} -->
+    <div class="py-4 w-full text-center font-bold">
+      {work.data.title || "Untitled"}
+      {work.data.year_start && `, ${work.data.year_start || "Undated"}`}
+      {work.data.year_start && work.data.year_end && ` - ${work.data.year_end}`}
+      {work.data.w && work.data.h && `( ${work.data.w} x ${work.data.h} )`}
+      {work.data.id && `, #${work.data.id}`}
+    </div>
+      <!-- {work.data.description && <div>{work.data.description}</div>} -->
       <!-- {
         work.data.collections && (
           <p>
