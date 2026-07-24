@@ -1,0 +1,73 @@
+---
+---
+
+<script>
+  const STORAGE_KEY = "savedWorks";
+
+  function readSaved(): string[] {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      const ids = raw ? JSON.parse(raw) : [];
+      return Array.isArray(ids) ? ids : [];
+    } catch {
+      return [];
+    }
+  }
+
+  function writeSaved(ids: string[]) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(ids));
+  }
+
+  document.addEventListener("alpine:init", () => {
+    // @ts-expect-error Alpine is set on window by @astrojs/alpinejs
+    Alpine.store("saved", {
+      ids: readSaved(),
+      has(id: string) {
+        return this.ids.includes(id);
+      },
+      toggle(id: string) {
+        this.ids = this.has(id)
+          ? this.ids.filter((i: string) => i !== id)
+          : [...this.ids, id];
+        writeSaved(this.ids);
+      },
+      remove(id: string) {
+        this.ids = this.ids.filter((i: string) => i !== id);
+        writeSaved(this.ids);
+      },
+    });
+
+    type SavedWork = { id: string; title: string | null; year_start: number | null; image: string };
+
+    // @ts-expect-error Alpine is set on window by @astrojs/alpinejs
+    Alpine.data("savedList", () => ({
+      items: [] as SavedWork[],
+      loading: true,
+      removing: [] as string[],
+      async init() {
+        this.loading = true;
+        try {
+          const res = await fetch("/works-index.json");
+          const all: SavedWork[] = await res.json();
+          const byId = new Map(all.map((w) => [w.id, w]));
+          // @ts-expect-error Alpine is set on window by @astrojs/alpinejs
+          this.items = Alpine.store("saved").ids
+            .map((id: string) => byId.get(id))
+            .filter(Boolean) as SavedWork[];
+        } finally {
+          this.loading = false;
+        }
+      },
+      remove(id: string) {
+        if (this.removing.includes(id)) return;
+        this.removing = [...this.removing, id];
+        setTimeout(() => {
+          // @ts-expect-error Alpine is set on window by @astrojs/alpinejs
+          Alpine.store("saved").remove(id);
+          this.items = this.items.filter((item) => item.id !== id);
+          this.removing = this.removing.filter((i) => i !== id);
+        }, 300);
+      },
+    }));
+  });
+</script>

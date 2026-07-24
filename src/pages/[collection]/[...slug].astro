@@ -129,6 +129,38 @@ const { count, index } = works.reduce(
       {work.data.id && `, #${work.data.id}`}
     </div>
 
+    <div class="flex justify-center pb-4" x-data={`{ id: ${JSON.stringify(work.id)} }`}>
+      <button
+        type="button"
+        class="icon-btn gap-2 uppercase text-sm tracking-wide"
+        @click="$store.saved.toggle(id)"
+        :aria-pressed="$store.saved.has(id)"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="22"
+          height="22"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+        >
+          <circle cx="12" cy="12" r="9" />
+          <line x1="8" y1="12" x2="16" y2="12" />
+          <line
+            x1="12"
+            y1="8"
+            x2="12"
+            y2="16"
+            :class="$store.saved.has(id) ? 'opacity-0' : 'opacity-100'"
+            style="transition: opacity .15s"
+          />
+        </svg>
+        <span x-text="$store.saved.has(id) ? 'Saved' : 'Save'"></span>
+      </button>
+    </div>
+
     <ul class="grid grid-cols-3 w-full place-items-center uppercase" x-data>
       <li>
         {

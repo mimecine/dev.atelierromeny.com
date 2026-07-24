@@ -1,0 +1,65 @@
+---
+import Layout from "@layouts/Layout.astro";
+---
+
+<Layout title="Saved works">
+  <slot name="head">
+    <title>Saved works - Atelier Romeny</title>
+    <meta name="robots" content="noindex" />
+  </slot>
+  <section class="grid max-w-6xl mx-auto py-4" x-data="savedList()" x-init="init()">
+    <h1>Saved</h1>
+    <p x-cloak x-show="!loading && items.length === 0" class="text-gray-500">
+      You haven't saved any works yet.
+    </p>
+    <div class="works-grid">
+      <template x-for="item in items" :key="item.id">
+        <div
+          class="work-item relative"
+          x-show="!removing.includes(item.id)"
+          x-transition:leave="transition ease-in duration-300"
+          x-transition:leave-start="opacity-100 scale-100"
+          x-transition:leave-end="opacity-0 scale-90"
+        >
+          <button
+            type="button"
+            class="icon-btn absolute top-1 right-1 bg-white/80 rounded-full p-1"
+            :disabled="removing.includes(item.id)"
+            @click="remove(item.id)"
+            aria-label="Remove from saved"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            >
+              <circle cx="12" cy="12" r="9" />
+              <line x1="8" y1="12" x2="16" y2="12" />
+            </svg>
+          </button>
+          <a :href="`/_works/${item.id}`">
+            <div class="work-thumbnail-container">
+              <img
+                :src="item.image"
+                :alt="item.title || ''"
+                class="work-thumbnail"
+                width="300"
+                height="200"
+                loading="lazy"
+              />
+            </div>
+            <div>
+              <span x-text="item.title || '(Untitled)'"></span>
+              <span x-show="item.year_start" x-text="', ' + item.year_start"></span>
+            </div>
+          </a>
+        </div>
+      </template>
+    </div>
+  </section>
+</Layout>

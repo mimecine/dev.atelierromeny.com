@@ -2,6 +2,7 @@
 import "@src/styles/global.css";
 import A from "@components/A.astro";
 import Barrier from "@components/Barrier.astro";
+import SavedStore from "@components/SavedStore.astro";
 import { loadSettings } from "@src/lib/settings";
 
 import { ClientRouter } from "astro:transitions";
@@ -58,10 +59,11 @@ const { menu } = loadSettings("./src/content/settings.yml");
     class="min-h-screen flex flex-col justify-between font-headline font-thin"
     {...props}
   >
+    <SavedStore />
     <Barrier password="edlef" days={7} />
     <header class="flex flex-col items-center max-w-6xl mx-auto py-4">
       <h1 data-pagefind-ignore><a href="/">Atelier Romeny</a></h1>
-      <nav class="flex gap-8 uppercase text-lg">
+      <nav class="flex items-center gap-8 uppercase text-lg" x-data>
         {
           menu.map((item) => (
             <A href={`${item.href}`} class="hover:text-gray-500">
@@ -69,6 +71,28 @@ const { menu } = loadSettings("./src/content/settings.yml");
             </A>
           ))
         }
+        <a
+          href="/saved"
+          x-cloak
+          x-show="$store.saved.ids.length > 0"
+          class="text-gray-700 hover:text-gray-500"
+          title="Saved works"
+          aria-label="Saved works"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.75"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M6 3.5h12a.5.5 0 0 1 .5.5v17l-6.5-4-6.5 4v-17a.5.5 0 0 1 .5-.5Z" />
+          </svg>
+        </a>
         <slot name="nav" />
       </nav>
       <slot name="header" />

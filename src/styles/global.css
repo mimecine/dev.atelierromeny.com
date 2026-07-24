@@ -12,6 +12,14 @@
     @apply font-sans text-gray-900;
   }
 
+  [x-cloak] {
+    display: none !important;
+  }
+
+  .icon-btn {
+    @apply inline-flex items-center justify-center text-gray-700 hover:text-gray-900 transition-colors cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed;
+  }
+
   h1 {
     @apply text-2xl font-bold py-4;
   }
