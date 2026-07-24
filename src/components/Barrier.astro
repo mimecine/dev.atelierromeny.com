@@ -11,12 +11,11 @@ const { password, days = 7 ,  ...attrs } = Astro.props;
 </div>
 <a id="logout-link" href="#">Logout</a>
 
-<script define:vars={{password, days}} data-astro-rerun>
-  
+<script define:vars={{password, days}}>
+(function () {
   const PASSWORD = password; // change this
   const COOKIE_NAME = "access_granted";
   const COOKIE_DAYS = days; // days until cookie expires. (1/24 = 1 hour)
-  console.log("Barrier loaded with password", password, days);
 
   function setCookie(name, value, days) {
     const d = new Date();
@@ -32,49 +31,43 @@ const { password, days = 7 ,  ...attrs } = Astro.props;
     document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
   }
 
-  const overlay = document.getElementById("password-overlay");
-  const logoutLink = document.getElementById("logout-link");
+  // Re-runs on every client-side navigation (view transitions swap in a
+  // fresh DOM, so elements/listeners from a previous page-load are stale).
+  function init() {
+    const overlay = document.getElementById("password-overlay");
+    const logoutLink = document.getElementById("logout-link");
 
-  // On load: check cookie
-  if (getCookie(COOKIE_NAME) === "true") {
-    overlay.style.display = "none";
-    logoutLink.style.display = "inline-block";
-  }
-  document.addEventListener("astro:page-load", () => {
-    console.log("page load event", getCookie(COOKIE_NAME));
     if (getCookie(COOKIE_NAME) === "true") {
-      console.log("hiding overlay");
-      overlay.style.display = "none";
-      console.log("showing logout");
-      logoutLink.style.display = "inline-block";
-    } 
-  });
-  
-
-  function handleLogin() {
-    const pw = document.getElementById("pw-input").value;
-    if (pw === PASSWORD) {
-      setCookie(COOKIE_NAME, "true", COOKIE_DAYS);
       overlay.style.display = "none";
       logoutLink.style.display = "inline-block";
     } else {
-      document.getElementById("pw-error").style.display = "block";
+      overlay.style.display = "flex";
+      logoutLink.style.display = "none";
     }
+
+    document.getElementById("pw-form").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const pw = document.getElementById("pw-input").value;
+      if (pw === PASSWORD) {
+        setCookie(COOKIE_NAME, "true", COOKIE_DAYS);
+        overlay.style.display = "none";
+        logoutLink.style.display = "inline-block";
+      } else {
+        document.getElementById("pw-error").style.display = "block";
+      }
+    });
+
+    logoutLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      deleteCookie(COOKIE_NAME);
+      overlay.style.display = "flex";
+      logoutLink.style.display = "none";
+    });
   }
 
-  // Handle form submission
-  document.getElementById("pw-form").addEventListener("submit", (e) => {
-    e.preventDefault();
-    handleLogin();
-  });
-
-  // Handle logout
-  logoutLink.addEventListener("click", (e) => {
-    e.preventDefault();
-    deleteCookie(COOKIE_NAME);
-    overlay.style.display = "flex";
-    logoutLink.style.display = "none";
-  });
+  init();
+  document.addEventListener("astro:page-load", init);
+})();
 </script>
 
 <style>

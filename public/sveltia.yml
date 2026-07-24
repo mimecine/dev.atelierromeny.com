@@ -163,7 +163,7 @@ collections:
                 summary: "{{fields.title}}"
                 fields:
                   - { label: Title, name: title, widget: string, default: "Collection" }
-                  - { label: "Collection", name: collection, widget: relation, collection: "collections", xsearch_fields: ["title"], xvalue_field: "uuid", xdisplay_fields: ["title"], required: true }
+                  - { label: "Collection", name: collection, widget: relation, collection: "collections", required: true }
                   - { label: "Show Header", name: show_title, widget: boolean, default: true }
                   - { label: "Hide?", name: hidden, widget: boolean, default: false }
               - label: "Carousel"
@@ -186,8 +186,6 @@ collections:
                   - { label: Header, name: header, widget: string, required: true }
                   - { label: "Show Header", name: show_title, widget: boolean, default: true }
                   - { label: Content, name: text, widget: markdown, required: false }
-                  - { label: "Hide?", name: hidden, widget: boolean, default: false }
-
 
           - label: "Footer Links (Currently Unused)"
             name: "socials"
