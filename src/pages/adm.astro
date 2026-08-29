@@ -1,0 +1,32 @@
+---
+import Layout from '@layouts/Layout.astro';
+---
+<Layout>
+ <link href="/sveltia.yml" type="text/yaml" rel="cms-config-url" slot="head" />
+ <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"  slot="head"></script> 
+  <section class="grid w-full mx-auto h-full" id="nc-root">
+    <h1 class="text-5xl font-bold font-sans uppercase pb-8">Admin</h1>
+    <p>
+      This is the admin page. You can use this page to manage your content and
+      settings.
+    </p>
+  </section>
+</Layout>
+<style>
+    @reference "@src/styles/global.css";
+
+      @theme {
+        --font-serif: "Comic Sans MS", sans-serif;
+      }
+      /* [data-key-path="body"] refers to the markdown field with name: body in your config */
+      [data-mode="preview"] [data-widget="markdown"][data-key-path="body"] {
+        @apply border-t-2 border-double border-gray-500;
+        @apply font-serif bg-red-200;
+        h4:first-child { /* hide the title of the markdown field */ 
+        @apply hidden;
+        }
+        img {
+          @apply border-2 border-dotted border-pink-500;
+        }
+      } 
+</style>
