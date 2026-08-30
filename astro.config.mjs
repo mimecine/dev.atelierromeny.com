@@ -34,8 +34,14 @@ export default defineConfig({
   },
 
   adapter: cloudflare({
-    // Transform astro:assets <Image>s at request time via the Cloudflare
-    // Images binding instead of the local sharp pipeline.
-    imageService: 'cloudflare-binding'
+    // Rewrite astro:assets <Image>s to Cloudflare's /cdn-cgi/image/ URL
+    // transform instead of the local sharp pipeline. Unlike
+    // 'cloudflare-binding', this works the same for prerendered pages (the
+    // whole works/collections catalog) and on-demand ones: it's a plain
+    // string rewrite done at render time either way, with the actual
+    // resizing happening lazily at Cloudflare's edge proxy on first
+    // request (then cached) rather than as a build-time or per-request
+    // Worker call. Requires "Image Transformations" enabled on the zone.
+    imageService: 'cloudflare'
   })
 });
