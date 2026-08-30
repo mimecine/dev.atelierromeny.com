@@ -1,8 +1,10 @@
 ---
+export const prerender = true;
 import type { GetStaticPaths } from "astro";
 import { getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import { type CollectionEntry, render, getEntry } from "astro:content";
+import { shortHash, getNavDigest } from "@src/lib/cache-key";
 const page = await getEntry("pages", String(Astro.params.slug));
 if (!page) {
   throw new Error("Page not found");
@@ -10,8 +12,10 @@ if (!page) {
 const { Content } = await render(page as CollectionEntry<"pages">);
 export const getStaticPaths: GetStaticPaths = async () => {
   const pages = await getCollection("pages");
+  const navDigest = await getNavDigest();
   return pages.map((page) => ({
     params: { slug: page.id },
+    cacheKey: shortHash(page.digest, navDigest),
   }));
 };
 const { title, image, note, tags, css, js} = page.data;

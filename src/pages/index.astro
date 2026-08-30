@@ -1,9 +1,10 @@
 ---
+export const prerender = true;
 import Layout from "@layouts/Layout.astro";
 import { Image } from "astro:assets";
 import { loadSettings } from "@src/lib/settings";
 import { getCollection, getEntry } from "astro:content";
-const { sections } = loadSettings("./src/content/settings.yml");
+const { sections } = loadSettings();
 ---
 
 <Layout>

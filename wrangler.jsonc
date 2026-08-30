@@ -1,0 +1,23 @@
+{
+	// This file is read by @astrojs/cloudflare's Vite plugin during `astro
+	// build`, which merges it into a fully-resolved config written to
+	// `dist/server/wrangler.json` (correct `main`/`assets` paths for the
+	// server+client output split, plus auto-provisioned bindings for
+	// sessions/images). Deploy with that generated file, not this one:
+	// `wrangler deploy --config dist/server/wrangler.json` (see the `deploy`
+	// npm script). Do NOT add a `main` field here — the build-time plugin
+	// eagerly checks that it points at an existing file, which doesn't exist
+	// yet on a clean checkout, so it breaks the very first build.
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "atelierromeny",
+	"compatibility_date": "2026-08-30",
+	"compatibility_flags": ["nodejs_compat"],
+	"assets": {
+		"binding": "ASSETS",
+		"directory": "./dist",
+		"not_found_handling": "404-page"
+	},
+	"observability": {
+		"enabled": true
+	}
+}

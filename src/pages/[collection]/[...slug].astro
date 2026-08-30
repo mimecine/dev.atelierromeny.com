@@ -1,4 +1,5 @@
 ---
+export const prerender = true;
 import {
   type CollectionEntry,
   getCollection,
@@ -7,6 +8,7 @@ import {
 } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import { Image } from "astro:assets";
+import { shortHash, getNavDigest } from "@src/lib/cache-key";
 
 
 export async function getStaticPaths() {
@@ -19,6 +21,7 @@ export async function getStaticPaths() {
   collections.push(allWorks);
 
   const works = await getCollection("works");
+  const navDigest = await getNavDigest();
 
   return collections.flatMap((collection) => {
     const collectionWorks = works
@@ -31,15 +34,27 @@ export async function getStaticPaths() {
         a.data.title?.localeCompare(b.data.title || "(Untitled)") || 0
       );
 
+    // Prev/next links and the "N of M" counter depend on the full ordered
+    // sibling list, so fold everyone's digest into every page in the set.
+    const siblingDigest = shortHash(
+      ...collectionWorks.map((work) => `${work.id}:${work.digest}`)
+    );
+
     return collectionWorks.map((work) => ({
       params: {
         collection: collection.id,
         slug: work.id,
       },
       props: { work, collection },
+      cacheKey: shortHash(
+        work.digest,
+        collection.digest,
+        siblingDigest,
+        navDigest
+      ),
     }));
   });
-  
+
 }
 
 type Props = {

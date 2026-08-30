@@ -1,4 +1,5 @@
 ---
+export const prerender = true;
 import Layout from "../../layouts/Layout.astro";
 import {
   type CollectionEntry,
@@ -7,13 +8,16 @@ import {
   render,
 } from "astro:content";
 import { Image } from "astro:assets";
+import { shortHash, getNavDigest } from "@src/lib/cache-key";
 
 // generate static paths for works
 export async function getStaticPaths() {
   const works = await getCollection("works");
+  const navDigest = await getNavDigest();
   return works.map((work) => ({
     params: { id: work.id },
     props: work,
+    cacheKey: shortHash(work.digest, navDigest),
   }));
 }
 

@@ -1,5 +1,9 @@
 import { parse } from "yaml";
-import { readFileSync } from "fs";
+// Imported as a module (not read via `fs` at request time) so it's part of
+// Astro's module dependency graph — required for the Cloudflare Workers
+// runtime (no source-tree filesystem access at runtime) and so that
+// experimental.incrementalBuild's dependency-graph hash picks up edits here.
+import settingsRaw from "../content/settings.yml?raw";
 
 export interface Settings {
   site_title: string;
@@ -30,9 +34,6 @@ export interface Section {
   images?: string[];
 }
 
-export function loadSettings(yaml_file: string): Settings {
-  const settingsFile = yaml_file;
-  const fileContent = readFileSync(settingsFile, "utf8");
-  const settings: Settings = parse(fileContent);
-  return settings;
+export function loadSettings(): Settings {
+  return parse(settingsRaw);
 }

@@ -1,7 +1,9 @@
 ---
+export const prerender = true;
 import Layout from "@layouts/Layout.astro";
 import { type CollectionEntry, getCollection, render } from "astro:content";
 import { Image } from "astro:assets";
+import { shortHash, getNavDigest } from "@src/lib/cache-key";
 
 export async function getStaticPaths() {
   let collections = await getCollection("collections",(col) => col.data.published !== false);
@@ -13,11 +15,28 @@ export async function getStaticPaths() {
   collections.push(allWorks);
 
   let works = (await getCollection("works")).filter((work) => work.data.image);
+  const navDigest = await getNavDigest();
 
-  return collections.map((collection) => ({
-    params: { collection: collection.id },
-    props: collection,
-  }));
+  return collections.map((collection) => {
+    // The page also lists/sorts every work that belongs to this collection,
+    // so its cacheKey must change if membership or any member's content
+    // changes, not just when the collection's own file changes.
+    const memberDigest = shortHash(
+      ...works
+        .filter(
+          (work) =>
+            work.data.collections?.includes(collection.id) ||
+            collection.data.title === "Works"
+        )
+        .map((work) => `${work.id}:${work.digest}`)
+        .sort()
+    );
+    return {
+      params: { collection: collection.id },
+      props: collection,
+      cacheKey: shortHash(collection.digest, memberDigest, navDigest),
+    };
+  });
 }
 
 type Props = CollectionEntry<"collections">;
