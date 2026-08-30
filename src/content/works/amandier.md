@@ -3,9 +3,7 @@ id: null
 title: Amandier
 image: '@img/amandier.jpg'
 collections:
-  - Selected Works
-  - 82a09d30-e116-4e19-86ae-688635ed51fb
-  - b3a35e23-3944-45b5-addd-eb4125bd7142
+  - marco
   - arbres
 categories: Arbres
 w: 116

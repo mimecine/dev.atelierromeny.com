@@ -3,7 +3,7 @@ id: 351
 title: Jouve, le facteur de Villars
 image: '@img/351-jouve-le-facteur-de-villars.jpg'
 collections:
-  - Marco
+  - marco
   - figures-humaines
   - selected-july-2025
 categories: Figures humaines

@@ -3,7 +3,7 @@ id: 206
 title: Bouquet bleu
 image: '@img/206-bouquet-bleu.jpg'
 collections:
-  - Selected Works
+  - marco
   - natures-mortes
   - nfs
 categories: Natures mortes

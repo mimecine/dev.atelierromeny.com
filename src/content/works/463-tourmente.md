@@ -3,7 +3,7 @@ id: 463
 title: Tourmente
 image: '@img/463-tourmente.jpg'
 collections:
-  - Marco
+  - marco
   - abstrait
   - selected-july-2025
 categories: Abstrait

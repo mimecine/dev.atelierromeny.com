@@ -3,7 +3,7 @@ id: 366
 title: Cobra
 image: '@img/366-cobra.jpg'
 collections:
-  - Marco
+  - marco
   - abstrait
   - selected-july-2025
 categories: Abstrait

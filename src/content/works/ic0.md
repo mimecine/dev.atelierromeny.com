@@ -3,10 +3,6 @@ id: null
 title: (Untitled)
 image: '@img/ic0.jpg'
 collections:
-  - 82a09d30-e116-4e19-86ae-688635ed51fb
-  - Selected Works
-  - b3a35e23-3944-45b5-addd-eb4125bd7142
-  - 678fc808-3192-4aaa-bb1d-51b51659eff4
   - marco
   - abstrait
 categories: Abstract

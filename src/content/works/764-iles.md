@@ -3,7 +3,7 @@ id: 764
 title: Iles
 image: '@img/764-iles.jpg'
 collections:
-  - Marco
+  - marco
   - abstrait
 categories: Abstrait
 w: 59

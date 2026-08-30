@@ -3,7 +3,7 @@ id: 332
 title: A la cruche
 image: '@img/332-a-la-cruche.jpg'
 collections:
-  - b3a35e23-3944-45b5-addd-eb4125bd7142
+  - marco
   - alisa
   - natures-mortes
   - selected-july-2025

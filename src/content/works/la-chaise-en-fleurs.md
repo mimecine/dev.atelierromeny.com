@@ -3,8 +3,8 @@ id: 20001
 title: La chaise en fleurs
 image: '@img/la-chaise-en-fleurs.jpg'
 collections:
-  - Marco
-  - Alisa
+  - marco
+  - alisa
   - natures-mortes
   - selected-july-2025
 categories: Nature morte

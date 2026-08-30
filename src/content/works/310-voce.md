@@ -3,8 +3,8 @@ id: 310
 title: Voce
 image: '@img/310-voce.jpg'
 collections:
-  - Marco
-  - Alisa
+  - marco
+  - alisa
   - abstrait
   - nfs
 categories: Abstrait

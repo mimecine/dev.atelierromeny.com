@@ -3,7 +3,7 @@ id: 152
 title: Branche d'amandier
 image: '@img/152-branche-damandier.jpg'
 collections:
-  - Selected Works
+  - marco
   - arbres-en-fleurs
   - selected-july-2025
 categories: Arbres en fleurs
