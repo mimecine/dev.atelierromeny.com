@@ -9,6 +9,7 @@ categories: La création
 w: 180
 h: 130
 location: secondary storage
+new_location: Basement
 note: ''
 year: '1965'
 year_start: 1965

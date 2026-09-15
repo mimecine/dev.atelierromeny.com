@@ -5,6 +5,7 @@ categories: Abstrait
 w: 160
 h: 125
 location: main storage
+new_location: Basement
 note: null
 file: '@img/40-la-terre.jpg'
 year: '1975'

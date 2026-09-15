@@ -10,6 +10,7 @@ categories: Figures humaines
 w: 65
 h: 80
 location: graphic studio
+new_location: Graphic Studio B
 note: ''
 year: '1969'
 year_start: 1969

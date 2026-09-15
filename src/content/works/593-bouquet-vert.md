@@ -9,6 +9,7 @@ categories: Fleurs
 w: 52
 h: 70
 location: graphic studio
+new_location: Graphic and Basement Walls
 note: ''
 year: '1971'
 year_start: 1971

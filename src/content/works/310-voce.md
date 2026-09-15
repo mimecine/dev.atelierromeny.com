@@ -11,6 +11,7 @@ categories: Abstrait
 w: 30
 h: 30
 location: graphic studio
+new_location: Graphic and Basement Walls
 note: ''
 year: '1982'
 year_start: 1982

@@ -9,6 +9,7 @@ categories: Animaux
 w: 81
 h: 65
 location: old atelier
+new_location: Graphic and Basement Walls
 note: ''
 year: '1991'
 year_start: 1991

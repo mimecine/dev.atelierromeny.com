@@ -5,6 +5,7 @@ categories: Natures mortes
 w: 50
 h: 60
 location: null
+new_location: Graphic and Basement Walls
 note: null
 file: null
 year: '1982'

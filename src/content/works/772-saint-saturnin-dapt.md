@@ -9,6 +9,7 @@ categories: Paysages
 w: 92
 h: 65
 location: main storage
+new_location: Atelier C
 note: ''
 year: '1991'
 year_start: 1991

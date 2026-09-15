@@ -9,6 +9,7 @@ categories: Abstrait
 w: 125
 h: 75
 location: attic
+new_location: Graphic and Basement Walls
 note: ''
 year: '1972'
 year_start: 1972

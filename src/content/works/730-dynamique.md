@@ -9,6 +9,7 @@ categories: Abstrait
 w: 130
 h: 81
 location: main storage
+new_location: Graphic and Basement Walls
 note: ''
 year: '2004'
 year_start: 2004

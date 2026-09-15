@@ -5,6 +5,7 @@ categories: La création
 w: 180
 h: 130
 location: secondary storage
+new_location: Basement
 note: null
 file: '@img/663-la-mort.jpg'
 year: '1965'

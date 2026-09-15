@@ -9,6 +9,7 @@ categories: natures mortes
 w: 60
 h: 54
 location: graphic studio
+new_location: Graphic Studio A
 note: ''
 year: '1979'
 year_start: 1979

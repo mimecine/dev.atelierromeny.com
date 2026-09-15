@@ -10,6 +10,7 @@ categories: Abstrait
 w: 64
 h: 52
 location: secondary storage
+new_location: Atelier C
 note: ''
 year: '1970'
 year_start: 1970

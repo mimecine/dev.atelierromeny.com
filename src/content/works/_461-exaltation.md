@@ -5,6 +5,7 @@ categories: Abstrait
 w: 85
 h: 82
 location: null
+new_location: Graphic Studio C
 note: null
 file: '@img/461-exaltation.jpg'
 year: '1973'

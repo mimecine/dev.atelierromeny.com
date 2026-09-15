@@ -9,6 +9,7 @@ categories: Abstrait
 w: 210
 h: 135
 location: main storage
+new_location: Basement
 note: ''
 year: '1965'
 year_start: 1965

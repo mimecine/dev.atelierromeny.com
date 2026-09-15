@@ -9,6 +9,7 @@ categories: Abstrait
 w: 120
 h: 105
 location: graphic studio
+new_location: Basement
 note: reserve
 year: '1966'
 year_start: 1966

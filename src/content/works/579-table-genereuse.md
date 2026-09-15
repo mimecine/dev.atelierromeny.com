@@ -9,6 +9,7 @@ categories: Natures mortes
 w: 120
 h: 80
 location: graphic studio
+new_location: Graphic Studio C
 note: ''
 year: '1983'
 year_start: 1983

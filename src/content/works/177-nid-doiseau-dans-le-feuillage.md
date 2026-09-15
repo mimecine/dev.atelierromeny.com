@@ -9,6 +9,7 @@ categories: Animaux
 w: 32
 h: 32
 location: old atelier
+new_location: Atelier Walls
 note: ''
 year: '1984'
 year_start: 1984

@@ -9,6 +9,7 @@ categories: Paysages
 w: 81
 h: 54
 location: secondary storage
+new_location: Atelier B
 note: ''
 year: '1990'
 year_start: 1990

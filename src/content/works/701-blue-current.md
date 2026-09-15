@@ -9,6 +9,7 @@ categories: Abstrait
 w: 81
 h: 60
 location: graphic studio
+new_location: Graphic Studio A
 note: ''
 year: '1966'
 year_start: 1966

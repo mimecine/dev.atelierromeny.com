@@ -9,6 +9,7 @@ categories: Fleurs
 w: 65
 h: 73
 location: secondary storage
+new_location: Graphic and Basement Walls
 note: ''
 year: '1984'
 year_start: 1984

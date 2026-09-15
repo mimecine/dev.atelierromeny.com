@@ -9,6 +9,7 @@ categories: Abstrait
 w: 49
 h: 41
 location: secondary storage
+new_location: Atelier A
 note: ''
 year: '1982'
 year_start: 1982

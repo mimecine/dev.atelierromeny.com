@@ -9,6 +9,7 @@ categories: Abstrait
 w: 96
 h: 130
 location: house
+new_location: Basement
 note: ''
 year: '1967'
 year_start: 1967

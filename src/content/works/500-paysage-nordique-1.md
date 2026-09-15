@@ -9,6 +9,7 @@ categories: Abstrait
 w: 120
 h: 100
 location: secondary storage
+new_location: Graphic and Basement Walls
 note: ''
 year: '1965'
 year_start: 1965

@@ -5,6 +5,7 @@ categories: Abstrait
 w: 65
 h: 45
 location: graphic studio
+new_location: Graphic Studio D
 note: null
 file: '@img/640-sand-och-brate-i-sable-et-pignes.jpg'
 year: '1984'

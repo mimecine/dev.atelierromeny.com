@@ -5,6 +5,7 @@ categories: Abstrait
 w: 45
 h: 45
 location: graphic studio
+new_location: Graphic Studio D
 note: null
 file: '@img/81-colorado-iii.jpg'
 year: '1981'

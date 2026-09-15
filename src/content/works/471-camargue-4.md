@@ -9,6 +9,7 @@ categories: Abstrait
 w: 100
 h: 80
 location: graphic studio
+new_location: Graphic and Basement Walls
 note: ''
 year: '1972'
 year_start: 1972

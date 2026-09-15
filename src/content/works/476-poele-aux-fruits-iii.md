@@ -9,6 +9,7 @@ categories: Natures mortes
 w: 81
 h: 100
 location: secondary storage
+new_location: Graphic Studio C
 note: ''
 year: '1984'
 year_start: 1984

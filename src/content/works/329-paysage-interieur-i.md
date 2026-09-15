@@ -9,6 +9,7 @@ categories: Abstrait
 w: 41
 h: 33
 location: graphic studio
+new_location: Graphic and Basement Walls
 note: ''
 year: '1994'
 year_start: 1994

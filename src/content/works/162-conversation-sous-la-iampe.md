@@ -9,6 +9,7 @@ categories: Figures humaines
 w: 33
 h: 24
 location: old atelier
+new_location: Atelier Walls
 note: ''
 year: '1996'
 year_start: 1996

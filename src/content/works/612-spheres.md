@@ -9,6 +9,7 @@ categories: Abstrait
 w: 81
 h: 63
 location: graphic studio
+new_location: Atelier B
 note: ''
 year: '1974'
 year_start: 1974

@@ -9,6 +9,7 @@ categories: Abstrait
 w: 95
 h: 65
 location: secondary storage
+new_location: Graphic Studio B
 note: ''
 year: '1968'
 year_start: 1968

@@ -5,6 +5,7 @@ categories: Abstrait
 w: 65
 h: 54
 location: graphic studio
+new_location: Atelier C
 note: null
 file: '@img/86-ciel-x.jpg'
 year: '1985'

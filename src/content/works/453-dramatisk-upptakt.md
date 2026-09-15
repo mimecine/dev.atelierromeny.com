@@ -9,6 +9,7 @@ categories: Abstrait
 w: 100
 h: 60
 location: attic
+new_location: Atelier C
 note: ''
 year: '1960'
 year_start: 1960

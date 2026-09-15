@@ -9,6 +9,7 @@ categories: Abstrait
 w: 55
 h: 38
 location: secondary storage
+new_location: Graphic and Basement Walls
 note: ''
 year: '1982'
 year_start: 1982

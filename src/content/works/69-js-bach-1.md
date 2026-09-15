@@ -9,6 +9,7 @@ categories: Musique
 w: 20
 h: 20
 location: old atelier
+new_location: Atelier Walls
 note: ''
 year: '1998'
 year_start: 1998

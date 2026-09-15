@@ -5,6 +5,7 @@ categories: Fleurs
 w: 55
 h: 50
 location: null
+new_location: Atelier Walls
 note: null
 file: null
 year: '1975'

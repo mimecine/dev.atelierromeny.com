@@ -9,6 +9,7 @@ categories: Natures mortes
 w: 37
 h: 31
 location: secondary storage
+new_location: Atelier Walls
 note: ''
 year: '1971'
 year_start: 1971

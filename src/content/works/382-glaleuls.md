@@ -9,6 +9,7 @@ categories: Fleurs
 w: 46
 h: 54
 location: old atelier
+new_location: Atelier Walls
 note: ''
 year: '1977'
 year_start: 1977

@@ -14,6 +14,7 @@ const _works = defineCollection({
       w: z.number().optional().nullish(),
       h: z.number().optional().nullish(),
       location: z.string().optional().nullish(),
+      new_location: z.string().optional().nullish(),
       note: z.string().optional().nullish(),
       file: z.string().optional().nullish(),
       year: z.string().optional().nullish(),
