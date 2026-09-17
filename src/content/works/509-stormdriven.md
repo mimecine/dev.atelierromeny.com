@@ -9,6 +9,7 @@ categories: Abstrait
 w: 150
 h: 110
 location: attic
+new_location: Attic
 note: ''
 year: '1960'
 year_start: 1960

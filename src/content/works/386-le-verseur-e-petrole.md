@@ -5,6 +5,7 @@ categories: natures mortes
 w: 50
 h: 65
 location: null
+new_location: Upper Atelier C
 note: null
 file: null
 year: '1959'

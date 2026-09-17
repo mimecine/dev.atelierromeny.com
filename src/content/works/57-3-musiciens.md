@@ -9,6 +9,7 @@ categories: Métro
 w: 92
 h: 73
 location: attic
+new_location: Attic
 note: ''
 year: '1990'
 year_start: 1990

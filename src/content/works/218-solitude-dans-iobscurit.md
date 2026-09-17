@@ -5,6 +5,7 @@ categories: Figures humaines
 w: 64
 h: 72
 location: old atelier
+new_location: Attic
 note: null
 file: '@img/218-solitude-dans-iobscurit.jpg'
 year: '1979'

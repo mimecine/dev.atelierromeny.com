@@ -5,10 +5,12 @@ image: '@img/636-mistral.jpg'
 collections:
   - paysages
   - nfs
+  - reserved-am
 categories: Paysages
 w: 110
 h: 66
 location: attic
+new_location: Attic
 note: ''
 year: '1965'
 year_start: 1965

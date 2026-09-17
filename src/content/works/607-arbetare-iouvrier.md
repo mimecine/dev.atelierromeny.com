@@ -9,6 +9,7 @@ categories: Figures humaines
 w: 42
 h: 56
 location: secondary storage
+new_location: Attic
 note: ''
 year: '1957'
 year_start: 1957

@@ -5,6 +5,7 @@ categories: Animaux
 w: 120
 h: 100
 location: null
+new_location: Attic
 note: null
 file: null
 year: '1979'

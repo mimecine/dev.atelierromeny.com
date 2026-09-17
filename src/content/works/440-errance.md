@@ -5,6 +5,7 @@ categories: Métro
 w: 97
 h: 130
 location: attic
+new_location: Attic
 note: null
 file: '@img/440-errance.jpg'
 year: '1991'

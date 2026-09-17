@@ -5,6 +5,7 @@ categories: Figures humaines
 w: 40
 h: 75
 location: secondary storage
+new_location: Attic
 note: 'reserve, lise?'
 file: '@img/399-autoportrait-de-jeunesse.jpg'
 year: '1952'

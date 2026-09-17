@@ -9,7 +9,7 @@ categories: Abstrait
 w: 63
 h: 57
 location: graphic studio
-new_location: Graphic Studio A
+new_location: Upper Atelier B
 note: ''
 year: '1973'
 year_start: 1973

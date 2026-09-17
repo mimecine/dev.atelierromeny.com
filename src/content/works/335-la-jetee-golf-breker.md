@@ -9,6 +9,7 @@ categories: Paysages
 w: 91
 h: 55
 location: graphic studio
+new_location: Upper Atelier B
 note: ''
 year: '1954'
 year_start: 1954

@@ -9,6 +9,7 @@ categories: Paysages
 w: 130
 h: 90
 location: attic
+new_location: Entrance to Graphics Studio
 note: ''
 year: '1961'
 year_start: 1961

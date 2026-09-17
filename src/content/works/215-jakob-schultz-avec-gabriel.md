@@ -14,5 +14,6 @@ image: '@img/215-jakob-schultz-avec-gabriel.jpg'
 uuid: 8be07ce4-ffc1-497f-a995-2f4edb5ff52d
 collections:
   - figures-humaines
+  - to-be-disposed-of
 ---
 

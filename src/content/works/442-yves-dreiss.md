@@ -5,6 +5,7 @@ categories: Figures humaines
 w: 81
 h: 100
 location: secondary storage
+new_location: Attic
 note: null
 file: '@img/442-yves-dreiss.jpg'
 year: '1980'

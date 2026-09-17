@@ -5,6 +5,7 @@ categories: Abstrait
 w: 100
 h: 80
 location: attic
+new_location: Attic
 note: null
 file: '@img/470-nocturne.jpg'
 year: '1972'

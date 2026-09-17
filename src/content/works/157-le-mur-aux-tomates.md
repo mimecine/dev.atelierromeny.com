@@ -9,7 +9,7 @@ categories: Natures mortes
 w: 61
 h: 50
 location: Bart ten Bruggenkate
-new_location: Atelier B
+new_location: Upper Atelier B
 note: ''
 year: '1975'
 year_start: 1975

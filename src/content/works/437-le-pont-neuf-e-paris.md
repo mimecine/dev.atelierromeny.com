@@ -5,6 +5,7 @@ categories: Paysages
 w: 145
 h: 115
 location: null
+new_location: Attic
 note: null
 file: null
 year: '1983'

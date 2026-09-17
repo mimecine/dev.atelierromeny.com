@@ -9,6 +9,7 @@ categories: Arbres
 w: 130
 h: 90
 location: attic
+new_location: Attic
 note: ''
 year: '1979'
 year_start: 1979

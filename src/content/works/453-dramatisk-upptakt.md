@@ -9,7 +9,7 @@ categories: Abstrait
 w: 100
 h: 60
 location: attic
-new_location: Atelier C
+new_location: Lower Atelier B
 note: ''
 year: '1960'
 year_start: 1960

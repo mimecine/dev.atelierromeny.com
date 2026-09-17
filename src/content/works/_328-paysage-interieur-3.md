@@ -5,6 +5,7 @@ categories: Abstrait
 w: 41
 h: 27
 location: mrs
+new_location: Upper Atelier A
 note: null
 file: '@img/328-paysage-interieur-3.jpg'
 year: '1994'

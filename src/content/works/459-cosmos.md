@@ -9,7 +9,7 @@ categories: Abstrait
 w: 90
 h: 125
 location: attic
-new_location: Graphic Studio C
+new_location: Entrance to Graphics Studio
 note: ''
 year: '1965'
 year_start: 1965

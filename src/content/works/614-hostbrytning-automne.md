@@ -5,10 +5,12 @@ image: '@img/614-hostbrytning-automne.jpg'
 collections:
   - abstrait
   - nfs
+  - reserved-am
 categories: Abstrait
 w: 80
 h: 60
 location: secondary storage
+new_location: Attic
 note: ''
 year: '1964'
 year_start: 1964

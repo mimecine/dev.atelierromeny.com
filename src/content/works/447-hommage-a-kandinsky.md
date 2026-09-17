@@ -5,10 +5,12 @@ image: '@img/447-hommage-a-kandinsky.jpg'
 collections:
   - abstrait
   - nfs
+  - reserved-am
 categories: Abstrait
 w: 110
 h: 70
 location: main storage
+new_location: Attic
 note: ''
 year: '1960'
 year_start: 1960

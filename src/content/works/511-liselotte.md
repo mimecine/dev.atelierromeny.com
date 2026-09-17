@@ -5,6 +5,7 @@ categories: Figures humaines
 w: 100
 h: 80
 location: attic
+new_location: Attic
 note: null
 file: '@img/511-liselotte.jpg'
 year: '1970'

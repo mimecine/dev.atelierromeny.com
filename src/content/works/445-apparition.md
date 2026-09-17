@@ -5,6 +5,7 @@ categories: Figures humaines
 w: 165
 h: 120
 location: attic
+new_location: Attic
 note: null
 file: '@img/445-apparition.jpg'
 year: '1956'

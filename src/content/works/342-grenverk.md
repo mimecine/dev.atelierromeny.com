@@ -9,7 +9,7 @@ categories: Abstrait
 w: 80
 h: 60
 location: graphic studio
-new_location: Graphic Studio A
+new_location: Lower Atelier A
 note: ''
 year: '1982'
 year_start: 1982

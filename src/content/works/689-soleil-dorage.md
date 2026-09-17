@@ -8,7 +8,7 @@ categories: Paysages
 w: 73
 h: 50
 location: anne-marie & rob
-new_location: Atelier B
+new_location: Upper Atelier A
 note: ''
 year: '1993'
 year_start: 1993

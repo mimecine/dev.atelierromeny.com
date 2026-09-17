@@ -5,6 +5,7 @@ categories: Abstrait
 w: 120
 h: 100
 location: attic
+new_location: Attic
 note: null
 file: '@img/411-les-traces-du-peintre-2.jpg'
 year: 1979-96

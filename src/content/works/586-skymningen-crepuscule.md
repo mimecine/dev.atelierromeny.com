@@ -9,6 +9,7 @@ categories: Abstrait
 w: 61
 h: 38
 location: graphic studio
+new_location: Upper Atelier A
 note: ''
 year: '1963'
 year_start: 1963

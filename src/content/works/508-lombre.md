@@ -5,6 +5,7 @@ categories: Figures humaines
 w: 130
 h: 90
 location: attic
+new_location: Attic
 note: null
 file: '@img/508-lombre.jpg'
 year: '1967'

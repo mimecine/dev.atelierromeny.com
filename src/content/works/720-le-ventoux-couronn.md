@@ -9,6 +9,7 @@ categories: Paysages
 w: 65
 h: 46
 location: old atelier
+new_location: Upper Atelier A
 note: ''
 year: '2003'
 year_start: 2003

@@ -5,6 +5,7 @@ categories: Abstrait
 w: 80
 h: 130
 location: attic
+new_location: Attic
 note: null
 file: '@img/456-mor-och-barn.jpg'
 year: '1965'

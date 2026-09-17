@@ -5,6 +5,7 @@ categories: Figures humaines
 w: 30
 h: 23
 location: secondary storage
+new_location: Attic
 note: reserve
 file: '@img/385-mon-pere.jpg'
 year: '1948'

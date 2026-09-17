@@ -9,7 +9,7 @@ categories: Abstrait
 w: 46
 h: 38
 location: secondary storage
-new_location: Atelier A
+new_location: Upper Atelier A
 note: ''
 year: '1994'
 year_start: 1994

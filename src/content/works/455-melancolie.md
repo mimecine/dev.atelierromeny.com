@@ -9,6 +9,7 @@ categories: Abstrait
 w: 77
 h: 60
 location: attic
+new_location: Lower Atelier A
 note: ''
 year: '1964'
 year_start: 1964

@@ -9,6 +9,7 @@ categories: Paysages
 w: 30
 h: 45
 location: secondary storage
+new_location: Upper Atelier A
 note: ''
 year: '1981'
 year_start: 1981

@@ -5,6 +5,7 @@ image: '@img/687-lngegerd-et-marco.jpg'
 collections:
   - figures-humaines
   - nfs
+  - to-be-disposed-of
 categories: Figures humaines
 w: 48
 h: 64

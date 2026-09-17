@@ -9,6 +9,7 @@ categories: Paysages
 w: 73
 h: 60
 location: graphic studio
+new_location: Upper Atelier B
 note: ''
 year: '1993'
 year_start: 1993

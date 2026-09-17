@@ -5,6 +5,7 @@ categories: Accident dans la montagne
 w: 140
 h: 120
 location: attic
+new_location: Attic
 note: null
 file: '@img/495-la-chute.jpg'
 year: '1978'

@@ -9,6 +9,7 @@ categories: Paysages
 w: 57
 h: 72
 location: old atelier
+new_location: Attic
 note: ''
 year: ---
 year_start: null

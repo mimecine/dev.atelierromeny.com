@@ -5,6 +5,7 @@ image: '@img/375-accouplement.jpg'
 collections:
   - alisa
   - animaux
+  - to-be-disposed-of
 categories: Animaux
 w: 66
 h: 55

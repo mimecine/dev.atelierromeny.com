@@ -9,6 +9,7 @@ categories: Animaux
 w: 55
 h: 38
 location: old atelier
+new_location: Attic
 note: ''
 year: '1952'
 year_start: 1952

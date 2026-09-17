@@ -5,6 +5,7 @@ categories: Figures humaines
 w: 92
 h: 120
 location: attic
+new_location: Attic
 note: null
 file: '@img/521-axel.jpg'
 year: '1978'

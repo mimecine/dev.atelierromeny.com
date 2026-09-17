@@ -5,6 +5,7 @@ categories: Métro
 w: 120
 h: 140
 location: null
+new_location: Attic
 note: null
 file: null
 year: '1990'

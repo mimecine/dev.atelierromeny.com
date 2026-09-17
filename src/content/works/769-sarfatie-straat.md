@@ -5,6 +5,7 @@ categories: Paysages
 w: 100
 h: 79
 location: attic
+new_location: Attic
 note: null
 file: '@img/769-sarfatie-straat.jpg'
 year: '1953'

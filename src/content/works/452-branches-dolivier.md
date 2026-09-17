@@ -5,6 +5,7 @@ categories: Abstrait
 w: 130
 h: 97
 location: null
+new_location: Attic
 note: null
 file: null
 year: '1969'

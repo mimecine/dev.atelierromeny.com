@@ -5,6 +5,7 @@ categories: Figures humaines
 w: 46
 h: 65
 location: old atelier
+new_location: Attic
 note: null
 file: '@img/234-maternite-vert-clair.jpg'
 year: '1997'

@@ -9,6 +9,7 @@ categories: Abstrait
 w: 46
 h: 38
 location: house
+new_location: Attic
 note: ''
 year: '2004'
 year_start: 2004

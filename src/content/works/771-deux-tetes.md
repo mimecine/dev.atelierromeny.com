@@ -9,6 +9,7 @@ categories: Cartes
 w: 46
 h: 38
 location: old atelier
+new_location: Attic
 note: ''
 year: '1973'
 year_start: 1973

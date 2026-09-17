@@ -9,7 +9,7 @@ categories: Natures mortes
 w: 87
 h: 73
 location: graphic studio
-new_location: Graphic Studio C
+new_location: Lower Atelier B
 note: ''
 year: '1971'
 year_start: 1971

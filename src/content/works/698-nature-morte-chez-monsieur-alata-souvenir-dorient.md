@@ -9,7 +9,7 @@ categories: Natures mortes
 w: 65
 h: 55
 location: old atelier
-new_location: Atelier C
+new_location: Upper Atelier B
 note: ''
 year: '1978'
 year_start: 1978

@@ -9,7 +9,7 @@ categories: Fleurs
 w: 50
 h: 70
 location: secondary storage
-new_location: Graphic Studio A
+new_location: Upper Atelier C
 note: ''
 year: '1983'
 year_start: 1983

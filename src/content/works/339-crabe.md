@@ -11,7 +11,7 @@ categories: Animaux
 w: 50
 h: 40
 location: old atelier
-new_location: Atelier A
+new_location: Upper Atelier C
 note: ''
 year: '1951'
 year_start: 1951

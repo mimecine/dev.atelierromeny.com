@@ -5,6 +5,7 @@ categories: Figures humaines
 w: 140
 h: 120
 location: main storage
+new_location: Attic
 note: null
 file: '@img/668-berger-aux-eymieux.jpg'
 year: '1988'

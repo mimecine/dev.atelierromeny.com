@@ -5,6 +5,7 @@ categories: Animaux
 w: 65
 h: 55
 location: house
+new_location: Attic
 note: null
 file: '@img/531-amour-maternel-i.jpg'
 year: '1978'

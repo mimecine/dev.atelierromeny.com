@@ -9,6 +9,7 @@ categories: Paysages
 w: 55
 h: 38
 location: secondary storage
+new_location: Upper Atelier A
 note: ''
 year: '1991'
 year_start: 1991

@@ -9,7 +9,7 @@ categories: Abstrait
 w: 75
 h: 60
 location: secondary storage
-new_location: Atelier C
+new_location: Lower Atelier A
 note: ''
 year: '1964'
 year_start: 1964

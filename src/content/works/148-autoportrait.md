@@ -5,6 +5,7 @@ categories: Figures humaines
 w: 80
 h: 65
 location: graphic studio
+new_location: Attic
 note: null
 file: '@img/148-autoportrait.jpg'
 year: '1987'

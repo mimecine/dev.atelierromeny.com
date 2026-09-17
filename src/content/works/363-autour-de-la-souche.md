@@ -9,6 +9,7 @@ categories: Abstrait
 w: 73
 h: 54
 location: graphic studio
+new_location: Upper Atelier B
 note: ''
 year: '1971'
 year_start: 1971

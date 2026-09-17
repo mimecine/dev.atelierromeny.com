@@ -9,6 +9,7 @@ categories: Fleurs
 w: 60
 h: 50
 location: graphic studio
+new_location: Upper Atelier A
 note: ''
 year: '1997'
 year_start: 1997

@@ -9,7 +9,7 @@ categories: Natures mortes
 w: 54
 h: 65
 location: graphic studio
-new_location: Atelier B
+new_location: Upper Atelier C
 note: ''
 year: '1998'
 year_start: 1998

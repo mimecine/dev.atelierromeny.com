@@ -9,6 +9,7 @@ categories: Figures humaines
 w: 90
 h: 50
 location: secondary storage
+new_location: Attic
 note: ''
 year: '1951'
 year_start: 1951

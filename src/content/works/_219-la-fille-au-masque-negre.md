@@ -5,6 +5,7 @@ categories: Figures humaines
 w: 81
 h: 65
 location: old atelier
+new_location: Attic
 note: null
 file: '@img/219-la-fille-au-masque-negre.jpg'
 year: '1999'

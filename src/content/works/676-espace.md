@@ -9,6 +9,7 @@ categories: Abstrait
 w: 40
 h: 27
 location: secondary storage
+new_location: Attic
 note: ''
 year: '1983'
 year_start: 1983

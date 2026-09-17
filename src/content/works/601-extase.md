@@ -9,7 +9,7 @@ categories: Abstrait
 w: 80
 h: 60
 location: graphic studio
-new_location: Graphic Studio A
+new_location: Upper Atelier B
 note: ''
 year: '1967'
 year_start: 1967

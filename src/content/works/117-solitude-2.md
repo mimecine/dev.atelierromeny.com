@@ -5,6 +5,7 @@ categories: Figures humaines
 w: 46
 h: 55
 location: secondary storage
+new_location: Attic
 note: null
 file: '@img/117-solitude-2.jpg'
 year: '1997'

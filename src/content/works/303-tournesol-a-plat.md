@@ -5,10 +5,12 @@ image: '@img/303-tournesol-a-plat.jpg'
 collections:
   - natures-mortes
   - nfs
+  - reserved-am
 categories: Natures mortes
 w: 65
 h: 46
 location: graphic studio
+new_location: Attic
 note: ''
 year: '1991'
 year_start: 1991

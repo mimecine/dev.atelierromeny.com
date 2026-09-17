@@ -5,6 +5,7 @@ categories: Figures humaines
 w: 130
 h: 90
 location: attic
+new_location: Attic
 note: null
 file: '@img/520-maternit.jpg'
 year: '1956'

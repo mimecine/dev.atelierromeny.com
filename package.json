@@ -15,20 +15,20 @@
     "@astrojs/alpinejs": "1.0.0",
     "@astrojs/cloudflare": "14.3.0",
     "@fontsource-variable/roboto-condensed": "^5.3.0",
-    "@sveltia/cms": "^0.207.1",
+    "@sveltia/cms": "^0.213.0",
     "@tailwindcss/typography": "^0.5.20",
     "@tailwindcss/vite": "^4.3.3",
     "@types/alpinejs": "^3.13.11",
-    "alpinejs": "^3.17.1",
+    "alpinejs": "^3.17.3",
     "astro": "7.3.1",
     "astro-icon": "^1.2.0",
     "astro-pagefind": "^2.0.1",
     "tailwindcss": "^4.3.3",
     "uuid": "^14.0.2",
-    "yaml": "^2.9.0"
+    "yaml": "^2.9.1"
   },
   "devDependencies": {
     "gray-matter": "^4.0.3",
-    "wrangler": "^4.129.0"
+    "wrangler": "^4.132.0"
   }
 }

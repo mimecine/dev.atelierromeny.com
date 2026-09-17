@@ -5,10 +5,12 @@ image: '@img/598-la-branche-noire.jpg'
 collections:
   - abstrait
   - selected-july-2025
+  - reserved-am
 categories: Abstrait
 w: 45
 h: 60
 location: graphic studio
+new_location: Attic
 note: ''
 year: '1962'
 year_start: 1962

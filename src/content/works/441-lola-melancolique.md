@@ -9,6 +9,7 @@ categories: Figures humaines
 w: 80
 h: 100
 location: attic
+new_location: Attic
 note: ''
 year: '1982'
 year_start: 1982

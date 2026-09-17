@@ -9,7 +9,7 @@ categories: Fleurs
 w: 130
 h: 90
 location: secondary storage
-new_location: Graphic Studio C
+new_location: Lower Atelier C
 note: ''
 year: '1971'
 year_start: 1971

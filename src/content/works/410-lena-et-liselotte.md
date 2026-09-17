@@ -5,6 +5,7 @@ categories: Figures humaines
 w: 100
 h: 81
 location: attic
+new_location: Attic
 note: null
 file: '@img/410-lena-et-liselotte.jpg'
 year: '1975'

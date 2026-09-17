@@ -9,7 +9,7 @@ categories: Natures mortes
 w: 100
 h: 81
 location: secondary storage
-new_location: Graphic Studio C
+new_location: Lower Atelier C
 note: ''
 year: '1976'
 year_start: 1976

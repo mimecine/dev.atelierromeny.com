@@ -9,6 +9,7 @@ categories: Abstrait
 w: 55
 h: 46
 location: secondary storage
+new_location: Attic
 note: ''
 year: '1993'
 year_start: 1993

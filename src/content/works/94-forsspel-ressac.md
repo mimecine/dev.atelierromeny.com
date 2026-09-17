@@ -9,7 +9,7 @@ categories: Abstrait
 w: 65
 h: 45
 location: graphic studio
-new_location: Atelier B
+new_location: Lower Atelier A
 note: ''
 year: '1964'
 year_start: 1964

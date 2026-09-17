@@ -5,6 +5,7 @@ categories: Figures humaines
 w: 120
 h: 90
 location: attic
+new_location: Attic
 note: null
 file: '@img/768-ingegerd-dans-le-jardin.jpg'
 year: '1975'

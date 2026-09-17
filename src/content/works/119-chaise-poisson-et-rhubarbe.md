@@ -5,6 +5,7 @@ categories: Natures mortes
 w: 60
 h: 90
 location: graphic studio
+new_location: Upper Atelier C
 note: null
 year: '1953'
 year_start: 1953

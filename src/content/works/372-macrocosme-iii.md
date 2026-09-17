@@ -5,6 +5,7 @@ categories: Abstrait
 w: 120
 h: 100
 location: attic
+new_location: Attic
 note: null
 file: '@img/372-macrocosme-iii.jpg'
 year: '1981'

@@ -11,6 +11,7 @@ categories: Natures mortes
 w: 70
 h: 50
 location: old atelier
+new_location: Upper Atelier B
 note: ''
 year: '1974'
 year_start: 1974

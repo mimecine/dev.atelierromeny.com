@@ -9,6 +9,7 @@ categories: Paysages
 w: 60
 h: 75
 location: attic
+new_location: Attic
 note: ''
 year: '1951'
 year_start: 1951

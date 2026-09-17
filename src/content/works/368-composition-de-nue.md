@@ -5,6 +5,7 @@ categories: Figures humaines
 w: 61
 h: 74
 location: null
+new_location: Attic
 note: null
 file: null
 year: '1973'

@@ -14,5 +14,6 @@ image: '@img/237-karine-et-son-petit-ii.jpg'
 uuid: 2029acf3-65c5-48c1-9489-744da76e40ad
 collections:
   - figures-humaines
+  - to-be-disposed-of
 ---
 

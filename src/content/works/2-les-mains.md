@@ -14,5 +14,6 @@ image: '@img/2-les-mains.jpg'
 uuid: 37aa276f-3b25-491d-a640-2c8072b837e0
 collections:
   - figures-humaines
+  - to-be-disposed-of
 ---
 

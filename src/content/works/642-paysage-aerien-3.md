@@ -9,6 +9,7 @@ categories: Abstrait
 w: 95
 h: 75
 location: attic
+new_location: Attic
 note: ''
 year: '1976'
 year_start: 1976

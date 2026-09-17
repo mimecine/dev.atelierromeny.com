@@ -5,6 +5,7 @@ categories: Figures humaines
 w: 13
 h: 97
 location: attic
+new_location: Attic
 note: null
 file: '@img/435-une-kanak.jpg'
 year: '1985'

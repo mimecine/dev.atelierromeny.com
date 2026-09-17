@@ -5,6 +5,7 @@ categories: Figures humaines
 w: 127
 h: 108
 location: attic
+new_location: Attic
 note: null
 file: '@img/378-marianka-schep-danseuse.jpg'
 year: '1971'

@@ -5,6 +5,7 @@ categories: Figures humaines
 w: 80
 h: 55
 location: null
+new_location: Attic
 note: null
 file: null
 year: '1955'
