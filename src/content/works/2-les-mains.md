@@ -5,6 +5,7 @@ categories: Figures humaines
 w: 45
 h: 45
 location: secondary storage
+new_location: Attic
 note: null
 file: '@img/2-les-mains.jpg'
 year: '1981'

@@ -5,6 +5,7 @@ categories: Figures humaines
 w: 73
 h: 80
 location: graphic studio
+new_location: Attic
 note: null
 file: '@img/133-veronicas-svetteduk.jpg'
 year: '1971'

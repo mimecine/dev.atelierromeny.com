@@ -9,7 +9,7 @@ categories: Abstrait
 w: 130
 h: 90
 location: secondary storage
-new_location: Graphic Studio C
+new_location: Attic
 note: ''
 year: '1972'
 year_start: 1972

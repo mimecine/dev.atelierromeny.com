@@ -9,7 +9,7 @@ categories: Abstrait
 w: 75
 h: 60
 location: graphic studio
-new_location: Lower Atelier B
+new_location: Graphic Studio B
 note: ''
 year: '1959'
 year_start: 1959

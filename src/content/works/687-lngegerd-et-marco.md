@@ -10,6 +10,7 @@ categories: Figures humaines
 w: 48
 h: 64
 location: old atelier
+new_location: Attic
 note: ''
 year: '1974'
 year_start: 1974

@@ -5,6 +5,7 @@ categories: Figures humaines
 w: 60
 h: 72
 location: old atelier
+new_location: Attic
 note: null
 file: '@img/237-karine-et-son-petit-ii.jpg'
 year: '1989'

@@ -9,7 +9,7 @@ categories: Natures mortes
 w: 90
 h: 75
 location: graphic studio
-new_location: Lower Atelier C
+new_location: Graphic Studio C
 note: ''
 year: '1984'
 year_start: 1984

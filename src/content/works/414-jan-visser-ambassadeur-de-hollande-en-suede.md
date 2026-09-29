@@ -5,6 +5,7 @@ categories: figures humaines
 w: 90
 h: 124
 location: null
+new_location: Attic
 note: null
 file: null
 year: 1963-64

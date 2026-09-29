@@ -5,6 +5,7 @@ categories: Figures humaines
 w: 100
 h: 73
 location: graphic studio
+new_location: Attic
 note: null
 file: '@img/746-lrak.jpg'
 year: '2004'

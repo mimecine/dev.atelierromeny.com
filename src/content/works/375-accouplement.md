@@ -10,6 +10,7 @@ categories: Animaux
 w: 66
 h: 55
 location: old atelier
+new_location: Attic
 note: ''
 year: '1988'
 year_start: 1988

@@ -5,6 +5,7 @@ categories: Figures humaines
 w: 38
 h: 55
 location: old atelier
+new_location: Attic
 note: null
 file: '@img/215-jakob-schultz-avec-gabriel.jpg'
 year: '1986'

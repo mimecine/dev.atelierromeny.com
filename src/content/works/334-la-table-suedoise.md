@@ -9,7 +9,7 @@ categories: Natures mortes
 w: 100
 h: 65
 location: graphic studio
-new_location: Lower Atelier B
+new_location: Graphic Studio B
 note: ''
 year: '1976'
 year_start: 1976

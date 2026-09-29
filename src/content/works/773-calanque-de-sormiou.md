@@ -9,7 +9,7 @@ categories: Paysages
 w: 100
 h: 73
 location: graphic studio
-new_location: Lower Atelier C
+new_location: Graphic Studio C
 note: ''
 year: '1993'
 year_start: 1993

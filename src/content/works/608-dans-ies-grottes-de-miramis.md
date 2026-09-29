@@ -9,7 +9,7 @@ categories: Abstrait
 w: 92
 h: 65
 location: secondary storage
-new_location: Lower Atelier A
+new_location: Graphic Studio A
 note: ''
 year: '1961'
 year_start: 1961
