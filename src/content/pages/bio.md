@@ -57,4 +57,3 @@ Few painters range as widely. Over a long working life he worked in oil, waterco
 His paintings hang in the Stedelijk Museum in Amsterdam and the Västerås Art Museum in Sweden. A self-portrait is in the Kunsthaus Zürich, and his work is also held by the New York Public Library. His windows still stand in the chapel at Beneden-Leeuwen and the old town hall of Heemskerk, and in the churches of Jonsberg and Motala.
 
 The rest is scattered across the homes of Sweden, the Netherlands and France, where his prints and canvases still turn up, carrying that one-word signature: _Romeny_.
-.
