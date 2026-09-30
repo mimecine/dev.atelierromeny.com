@@ -23,7 +23,7 @@ sections:
     header: ''
     text: _A Dutchman who painted his way from Antwerp to Stockholm to the Luberon, and never stopped looking for colour..._
 barrier:
-  enabled: true
+  enabled: false
   password: edlef
   days: 7
   text: |-
