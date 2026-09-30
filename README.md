@@ -73,7 +73,7 @@ The search page (`src/pages/search.astro`) renders its own results. It lists col
 
 ### Search engines
 
-Only the collections linked from *Settings → Menu* are open to search engines, along with the works shown under those collections, the home page and the markdown pages. Every other collection, the `/_works/` and `/works/` duplicates, Search and Saved are marked `noindex` (see `isMenuCollection` in `src/lib/settings.ts`). The collections' own "Shown In Menu" flag isn't used for this.
+Only the collections linked from *Settings → Menu* are open to search engines, along with the works shown under those collections, the home page and the markdown pages. Every other collection, the `/_works/` and `/works/` duplicates, Search and Saved are marked `noindex` (see `isMenuCollection` in `src/lib/settings.ts`). The collections' own "Shown In Menu" flag isn't used for this. The same pages are listed in `/sitemap.xml` (submitted in Google Search Console), and `robots.txt` points to it.
 
 ## Adding new photos of works
 
