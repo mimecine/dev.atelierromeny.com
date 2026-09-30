@@ -3,6 +3,7 @@ export const prerender = true;
 import type { GetStaticPaths } from "astro";
 import { getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
+import { Image } from "astro:assets";
 import { type CollectionEntry, render, getEntry } from "astro:content";
 import { shortHash, getNavDigest } from "@src/lib/cache-key";
 const page = await getEntry("pages", String(Astro.params.slug));
@@ -27,13 +28,21 @@ const layeredCss = `html, html#slug-${page.id}.slug-${page.id} {
 <Layout title={title} slug={page.id} bodyclasses={`slug-${page.id}`} description={note} image={image} frontmatter={page.data}>
   <section class="grid max-w-4xl mx-auto py-4 font-serif">
     <div class="prose prose-lg w-full lg:w-4xl mx-auto">
+      {
+        image && (
+          <div class="not-prose float-right ml-4 mb-2 mt-1 w-40 sm:w-52">
+            <Image src={image} alt={title} width={420} class="w-full h-auto" />
+          </div>
+        )
+      }
       <Content />
     </div>
   </section>
 </Layout>
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 <style>
   @reference '../styles/global.css';
 </style>
-<style is:inline set:html={layeredCss} type="text/tailwindcss"/>
-<script is:inline set:html={js}/>
+{/* A page's own CSS (compiled in the browser, so @apply etc. work) and JS, only when set */}
+{css && <script is:inline src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>}
+{css && <style is:inline set:html={layeredCss} type="text/tailwindcss" />}
+{js && <script is:inline set:html={js} />}

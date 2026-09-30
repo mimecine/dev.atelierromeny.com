@@ -16,7 +16,9 @@
   "dependencies": {
     "@astrojs/alpinejs": "1.0.0",
     "@astrojs/cloudflare": "14.3.0",
+    "@astrojs/markdown-satteri": "0.4.2",
     "@fontsource-variable/roboto-condensed": "^5.3.0",
+    "@fontsource/special-gothic-expanded-one": "^5.3.0",
     "@panzoom/panzoom": "^4.6.2",
     "@sveltia/cms": "^0.213.5",
     "@tailwindcss/typography": "^0.5.20",
@@ -26,6 +28,7 @@
     "astro": "7.3.1",
     "astro-icon": "^1.2.0",
     "astro-pagefind": "^2.0.1",
+    "satteri": "^0.10.5",
     "tailwindcss": "^4.3.3",
     "uuid": "^14.0.2",
     "yaml": "^2.9.1"

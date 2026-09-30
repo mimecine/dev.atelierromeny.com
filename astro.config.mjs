@@ -10,6 +10,9 @@ import icon from 'astro-icon';
 
 import pagefind from 'astro-pagefind';
 
+import { satteri } from '@astrojs/markdown-satteri';
+import satteriImagePathFix from './src/lib/satteri-image-path-fix.js';
+
 
 import cloudflare from '@astrojs/cloudflare';
 
@@ -46,6 +49,10 @@ export default defineConfig({
   },
 
   integrations: [alpinejs(), icon(), pagefind()],
+
+  markdown: {
+    processor: satteri({ mdastPlugins: [satteriImagePathFix] }),
+  },
 
   experimental: {
     // Skip re-rendering static pages whose `cacheKey` (see each route's

@@ -6,6 +6,16 @@ backend:
 
 media_folder: "src/media/img"
 public_folder: "@img"
+# Uploads are converted to WebP and capped at 3000px before they're saved
+media_libraries:
+  default:
+    config:
+      transformations:
+        raster_image:
+          format: webp
+          quality: 90
+          width: 3000
+          height: 3000
 
 collections:
   - name: "works"
@@ -87,6 +97,11 @@ collections:
   - name: "pages"
     label: "Pages"
     folder: "src/content/pages"
+    # Page images live in their own folder (a separate folder in the media library).
+    # Paths are written as /src/media/assets/…; the satteri plugin in astro.config.mjs
+    # makes images inside the page text resolve too.
+    media_folder: "/src/media/assets"
+    public_folder: "/src/media/assets"
     create: true
     slug: "{{title}}"
     identifier_field: "title"
@@ -96,7 +111,7 @@ collections:
       - { label: "Title", name: "title", widget: "string", required: true, xpreview: false }
       - { label: "Published", name: "published", widget: "boolean", default: true, xpreview: false }
       - { label: "Content", name: "body", widget: "markdown", required: false }
-      - { label: "Image (Currently Unused)", name: "image", widget: "image", required: false, preview: false }
+      - { label: "Side Image (floats right of the text)", name: "image", widget: "image", required: false, preview: false }
       - label: "Tags"
         name: "tags"
         widget: list
