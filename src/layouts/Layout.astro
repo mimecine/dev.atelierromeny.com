@@ -41,7 +41,11 @@ const collections = await getCollection(
   (collection) => collection.data.published && collection.data.inmenu
 );
 
-const { menu, socials = [], barrier } = loadSettings();
+const { menu, socials = [], barrier, ga } = loadSettings();
+// Google Analytics (Settings > Google Analytics). Only a well-formed ID is used, since it
+// ends up inside a script. Soft navigations (ClientRouter) are counted by GA4's enhanced
+// measurement ("page changes based on browser history events", on by default).
+const gaId = /^G-[A-Z0-9]+$/.test(ga ?? "") ? ga : undefined;
 // Rendered with satteri, which can't run inside the Cloudflare Worker: every page using
 // this layout must be prerendered (`export const prerender = true`).
 const barrierText = barrier?.enabled ? await renderMarkdown(barrier.text) : "";
@@ -69,6 +73,17 @@ const isHome = Astro.url.pathname === "/";
     <slot name="head" />
     <title>{title && `${title} -`} Atelier Romeny</title>
     <ClientRouter />
+    {
+      gaId && (
+        <>
+          <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} />
+          <script
+            is:inline
+            set:html={`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config',${JSON.stringify(gaId)});`}
+          />
+        </>
+      )
+    }
   </head>
   <body
     class="min-h-screen flex flex-col justify-between xgrid xgrid-rows-[auto,1fr,auto]  font-headline font-thin"

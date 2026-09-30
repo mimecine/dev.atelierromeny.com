@@ -252,7 +252,7 @@ collections:
               name: "href"
               widget: string
           - { label: "Copyright", name: "copyright", widget: "string", required: false }
-          - { label: "Google Analytics", name: "ga", widget: "string", required: false }
+          - { label: "Google Analytics", name: "ga", widget: "string", required: false, hint: "Measurement ID (G-XXXXXXXXXX). Leave empty to turn tracking off.", pattern: ["^(G-[A-Z0-9]+)?$", "Should look like G-XXXXXXXXXX"] }
           - { label: "Extra CSS", name: "css", widget: "text", hint: "Don't forget !important if needed. TailwindCSS @apply works.", required: false, preview: false }
           - { label: "Extra JS", name: "js", widget: "text", required: false, preview: false }
           - { label: "Collections", name: "collections", widget: "relation", collection: "collections", search_fields: ["title"], display_fields: ["title"], multiple: true, required: false }
