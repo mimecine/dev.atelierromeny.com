@@ -1,7 +1,7 @@
 ---
 id: 476
 title: Poéle aux fruits III
-image: '@img/476-poele-aux-fruits-iii-v2.jpg'
+image: '@img/476-poele-aux-fruits-iii-v2.webp'
 collections:
   - natures-mortes
   - selected-july-2025
@@ -15,8 +15,8 @@ note: ''
 year: '1984'
 year_start: 1984
 year_end: null
-file: '@img/476-poele-aux-fruits-iii.jpg'
+file: '@img/476-poele-aux-fruits-iii.webp'
 uuid: 0b7465b1-128e-4ef7-9ecd-d9b467e0d3d0
-old_image: '@img/476-poele-aux-fruits-iii.jpg'
+old_image: '@img/476-poele-aux-fruits-iii.webp'
 ---
 

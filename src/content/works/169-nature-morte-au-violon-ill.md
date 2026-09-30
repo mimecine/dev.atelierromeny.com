@@ -1,7 +1,7 @@
 ---
 id: 169
 title: nature morte au violon Ill
-image: '@img/169-nature-morte-au-violon-ill.jpg'
+image: '@img/169-nature-morte-au-violon-ill.webp'
 collections:
   - natures-mortes
   - nfs
@@ -13,7 +13,7 @@ note: ''
 year: '2000'
 year_start: 2000
 year_end: null
-file: '@img/169-nature-morte-au-violon-ill.jpg'
+file: '@img/169-nature-morte-au-violon-ill.webp'
 uuid: 9d660d20-e947-47da-a492-08f1f00f7a84
 ---
 

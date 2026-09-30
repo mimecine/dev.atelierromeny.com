@@ -1,7 +1,7 @@
 ---
 id: 771
 title: Deux tétes
-image: '@img/771-deux-tetes.jpg'
+image: '@img/771-deux-tetes.webp'
 collections:
   - cartes
   - selected-july-2025
@@ -14,7 +14,7 @@ note: ''
 year: '1973'
 year_start: 1973
 year_end: null
-file: '@img/771-deux-tetes.jpg'
+file: '@img/771-deux-tetes.webp'
 uuid: acc5dcfd-a84b-44a0-b271-863cd921f4d1
 ---
 

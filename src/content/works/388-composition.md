@@ -1,7 +1,7 @@
 ---
 id: 388
 title: Composition
-image: '@img/388-composition.jpg'
+image: '@img/388-composition.webp'
 collections:
   - abstrait
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '1972'
 year_start: 1972
 year_end: null
-file: '@img/388-composition.jpg'
+file: '@img/388-composition.webp'
 uuid: 9c2fa890-26db-4c1f-84fe-316677b1f1bc
 ---
 

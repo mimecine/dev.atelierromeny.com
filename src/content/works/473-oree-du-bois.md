@@ -1,7 +1,7 @@
 ---
 id: 473
 title: Orée du bois
-image: '@img/473-oree-du-bois.jpg'
+image: '@img/473-oree-du-bois.webp'
 collections:
   - paysages
   - nfs
@@ -13,7 +13,7 @@ note: ''
 year: '1976'
 year_start: 1976
 year_end: null
-file: '@img/473-oree-du-bois.jpg'
+file: '@img/473-oree-du-bois.webp'
 uuid: ffea3a89-8adb-478d-a2b2-aaa5daea0f48
 ---
 

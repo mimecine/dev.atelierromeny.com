@@ -7,15 +7,15 @@ h: 125
 location: main storage
 new_location: Basement
 note: null
-file: '@img/40-la-terre.jpg'
+file: '@img/40-la-terre.webp'
 year: '1975'
 year_start: 1975
 year_end: null
-image: '@img/40-la-terre-v2.jpg'
+image: '@img/40-la-terre-v2.webp'
 uuid: a44ef0f7-2939-4c66-ac02-baac88a87015
 collections:
   - abstrait
   - selected-paintings
-old_image: '@img/40-la-terre.jpg'
+old_image: '@img/40-la-terre.webp'
 ---
 

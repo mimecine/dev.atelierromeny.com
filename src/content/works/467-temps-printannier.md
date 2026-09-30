@@ -1,7 +1,7 @@
 ---
 id: 467
 title: Temps printannier
-image: '@img/467-temps-printannier.jpg'
+image: '@img/467-temps-printannier.webp'
 collections:
   - abstrait
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '1972'
 year_start: 1972
 year_end: null
-file: '@img/467-temps-printannier.jpg'
+file: '@img/467-temps-printannier.webp'
 uuid: edcbb090-de5c-42ba-90df-10ba087d61c7
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: 611
 title: Composition
-image: '@img/611-composition-v2.jpg'
+image: '@img/611-composition-v2.webp'
 collections:
   - abstrait
   - selected-july-2025
@@ -15,8 +15,8 @@ note: ''
 year: '1961'
 year_start: 1961
 year_end: null
-file: '@img/611-composition.jpg'
+file: '@img/611-composition.webp'
 uuid: 8f6683be-8bcb-4f55-857b-b978913767af
-old_image: '@img/611-composition.jpg'
+old_image: '@img/611-composition.webp'
 ---
 

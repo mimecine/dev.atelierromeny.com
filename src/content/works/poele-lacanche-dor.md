@@ -1,7 +1,7 @@
 ---
 id: null
 title: Poële 'Lacanche d'Or'
-image: '@img/poele-lacanche-dor.jpg'
+image: '@img/poele-lacanche-dor.webp'
 collections:
   - natures-mortes
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '1980'
 year_start: 1980
 year_end: null
-file: '@img/poele-lacanche-dor.jpg'
+file: '@img/poele-lacanche-dor.webp'
 uuid: a65f2881-7d60-4e77-b07a-5683d42c8b9c
 ---
 

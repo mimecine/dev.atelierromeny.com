@@ -1,7 +1,7 @@
 ---
 id: 519
 title: Serge Bec
-image: '@img/519-serge-bec.jpg'
+image: '@img/519-serge-bec.webp'
 collections:
   - figures-humaines
 categories: Figures humaines
@@ -12,7 +12,7 @@ note: ''
 year: '1994'
 year_start: 1994
 year_end: null
-file: '@img/519-serge-bec.jpg'
+file: '@img/519-serge-bec.webp'
 uuid: 3f35f223-de73-4f48-9584-0c2386189534
 ---
 

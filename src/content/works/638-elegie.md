@@ -1,7 +1,7 @@
 ---
 id: 638
 title: Elégie
-image: '@img/638-elegie.jpg'
+image: '@img/638-elegie.webp'
 collections:
   - abstrait
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '1971'
 year_start: 1971
 year_end: null
-file: '@img/638-elegie.jpg'
+file: '@img/638-elegie.webp'
 uuid: bc95ad6a-ae1e-4736-a816-25e26b71dcaa
 ---
 

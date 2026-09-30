@@ -1,7 +1,7 @@
 ---
 id: 275
 title: Nid d'oiseau I
-image: '@img/275-nid-doiseau-i.jpg'
+image: '@img/275-nid-doiseau-i.webp'
 collections:
   - animaux
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '2001'
 year_start: 2001
 year_end: null
-file: '@img/275-nid-doiseau-i.jpg'
+file: '@img/275-nid-doiseau-i.webp'
 uuid: 587afea4-765d-42b9-972a-2f976adbdd40
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: null
 title: (Untitled)
-image: '@img/ic0.jpg'
+image: '@img/ic0.webp'
 collections:
   - marco
   - abstrait
@@ -13,7 +13,7 @@ note: ''
 year: '2005'
 year_start: 2005
 year_end: null
-file: '@img/ic0.jpg'
+file: '@img/ic0.webp'
 uuid: cf946f8e-3e3f-4d2b-9c6b-0c66cd676ad7
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: 620
 title: 'La musique I: apparition=prélude'
-image: '@img/620-la-musique-i-apparitionprelude.jpg'
+image: '@img/620-la-musique-i-apparitionprelude.webp'
 collections:
   - abstrait
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '2003'
 year_start: 2003
 year_end: null
-file: '@img/620-la-musique-i-apparitionprelude.jpg'
+file: '@img/620-la-musique-i-apparitionprelude.webp'
 uuid: fd7e6abb-a73e-4513-ad5f-bc06eab240c5
 ---
 

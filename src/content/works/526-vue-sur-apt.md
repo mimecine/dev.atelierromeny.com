@@ -1,7 +1,7 @@
 ---
 id: 526
 title: Vue sur Apt
-image: '@img/526-vue-sur-apt.jpg'
+image: '@img/526-vue-sur-apt.webp'
 collections:
   - paysages
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '2002'
 year_start: 2002
 year_end: null
-file: '@img/526-vue-sur-apt.jpg'
+file: '@img/526-vue-sur-apt.webp'
 uuid: 53844745-ea5d-451a-9d00-51b40e1509ed
 ---
 

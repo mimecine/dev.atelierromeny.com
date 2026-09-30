@@ -1,7 +1,7 @@
 ---
 id: 97
 title: La nuit 1
-image: '@img/97-la-nuit-1-v2.jpg'
+image: '@img/97-la-nuit-1-v2.webp'
 collections:
   - abstrait
   - selected-july-2025
@@ -15,8 +15,8 @@ note: ''
 year: '1982'
 year_start: 1982
 year_end: null
-file: '@img/97-la-nuit-1.jpg'
+file: '@img/97-la-nuit-1.webp'
 uuid: 63998988-ae51-4122-a318-810467bd9919
-old_image: '@img/97-la-nuit-1.jpg'
+old_image: '@img/97-la-nuit-1.webp'
 ---
 

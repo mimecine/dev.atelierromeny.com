@@ -1,7 +1,7 @@
 ---
 id: 759
 title: Jeune pigeon au nid
-image: '@img/759-jeune-pigeon-au-nid.jpg'
+image: '@img/759-jeune-pigeon-au-nid.webp'
 collections:
   - animaux
   - nfs
@@ -14,7 +14,7 @@ note: ''
 year: '1993'
 year_start: 1993
 year_end: null
-file: '@img/759-jeune-pigeon-au-nid.jpg'
+file: '@img/759-jeune-pigeon-au-nid.webp'
 uuid: 250dd90c-5317-4600-865d-8d07785c7a7a
 ---
 

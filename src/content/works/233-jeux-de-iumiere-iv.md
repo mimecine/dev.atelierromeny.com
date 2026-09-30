@@ -1,7 +1,7 @@
 ---
 id: 233
 title: Jeux de Iumiére IV
-image: '@img/233-jeux-de-iumiere-iv.jpg'
+image: '@img/233-jeux-de-iumiere-iv.webp'
 collections:
   - abstrait
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '1994'
 year_start: 1994
 year_end: null
-file: '@img/233-jeux-de-iumiere-iv.jpg'
+file: '@img/233-jeux-de-iumiere-iv.webp'
 uuid: 0810dac5-4d12-4353-a47a-457bde2e0452
 ---
 

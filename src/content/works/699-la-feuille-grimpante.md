@@ -1,7 +1,7 @@
 ---
 id: 699
 title: La feuille grimpante
-image: '@img/699-la-feuille-grimpante.jpg'
+image: '@img/699-la-feuille-grimpante.webp'
 collections:
   - fleurs
   - nfs
@@ -13,7 +13,7 @@ note: ''
 year: '1983'
 year_start: 1983
 year_end: null
-file: '@img/699-la-feuille-grimpante.jpg'
+file: '@img/699-la-feuille-grimpante.webp'
 uuid: ece34b98-e8fc-4037-8e09-57fcba3a7929
 ---
 

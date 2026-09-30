@@ -1,7 +1,7 @@
 ---
 id: 447
 title: Hommage à Kandinsky
-image: '@img/447-hommage-a-kandinsky.jpg'
+image: '@img/447-hommage-a-kandinsky.webp'
 collections:
   - abstrait
   - nfs
@@ -15,7 +15,7 @@ note: ''
 year: '1960'
 year_start: 1960
 year_end: null
-file: '@img/447-hommage-a-kandinsky.jpg'
+file: '@img/447-hommage-a-kandinsky.webp'
 uuid: 51877c69-3dc2-4dcb-994c-8c96df628b6d
 ---
 

@@ -4,8 +4,8 @@ categories: Print
 collections:
   - selected-prints
 uuid: da2d7cbf-1515-45e4-b20f-97771608e649
-image: '@img/print-045.jpg'
+image: '@img/print-045.webp'
 images:
-  - '@img/print-045-2.jpg'
+  - '@img/print-045-2.webp'
 ---
 

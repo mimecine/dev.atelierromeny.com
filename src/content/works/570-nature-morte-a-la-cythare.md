@@ -1,7 +1,7 @@
 ---
 id: 570
 title: Nature morte a la Cythare
-image: '@img/570-nature-morte-a-la-cythare-v2.jpg'
+image: '@img/570-nature-morte-a-la-cythare-v2.webp'
 collections:
   - natures-mortes
   - selected-july-2025
@@ -15,10 +15,10 @@ note: ''
 year: '1976'
 year_start: 1976
 year_end: null
-file: '@img/570-nature-morte-a-la-cythare.jpg'
+file: '@img/570-nature-morte-a-la-cythare.webp'
 uuid: 44a36028-09c2-4fce-8026-47160650afdd
-old_image: '@img/570-nature-morte-a-la-cythare.jpg'
+old_image: '@img/570-nature-morte-a-la-cythare.webp'
 images:
-  - '@img/570-nature-morte-a-la-cythare-v2-2.jpg'
+  - '@img/570-nature-morte-a-la-cythare-v2-2.webp'
 ---
 

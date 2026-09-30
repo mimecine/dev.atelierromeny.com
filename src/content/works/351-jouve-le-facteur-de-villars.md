@@ -1,7 +1,7 @@
 ---
 id: 351
 title: 'Jouve, le facteur de Villars'
-image: '@img/351-jouve-le-facteur-de-villars-v2.jpg'
+image: '@img/351-jouve-le-facteur-de-villars-v2.webp'
 collections:
   - marco
   - figures-humaines
@@ -16,11 +16,11 @@ note: ''
 year: '1969'
 year_start: 1969
 year_end: null
-file: '@img/351-jouve-le-facteur-de-villars.jpg'
+file: '@img/351-jouve-le-facteur-de-villars.webp'
 uuid: 8523e5d2-18ee-4ad2-8835-5370e3bfd2e3
-old_image: '@img/351-jouve-le-facteur-de-villars.jpg'
+old_image: '@img/351-jouve-le-facteur-de-villars.webp'
 images:
-  - '@img/351-jouve-le-facteur-de-villars-v2-2.jpg'
-  - '@img/351-jouve-le-facteur-de-villars-v2-3.jpg'
+  - '@img/351-jouve-le-facteur-de-villars-v2-2.webp'
+  - '@img/351-jouve-le-facteur-de-villars-v2-3.webp'
 ---
 

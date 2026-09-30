@@ -1,7 +1,7 @@
 ---
 id: 150
 title: Vent dans les champs de blé
-image: '@img/150-vent-dans-les-champs-de-ble-v2.jpg'
+image: '@img/150-vent-dans-les-champs-de-ble-v2.webp'
 collections:
   - paysages
   - selected-july-2025
@@ -15,8 +15,8 @@ note: ''
 year: '1990'
 year_start: 1990
 year_end: null
-file: '@img/150-vent-dans-les-champs-de-ble.jpg'
+file: '@img/150-vent-dans-les-champs-de-ble.webp'
 uuid: d6d0213f-6041-4259-8fdd-df0873c93f31
-old_image: '@img/150-vent-dans-les-champs-de-ble.jpg'
+old_image: '@img/150-vent-dans-les-champs-de-ble.webp'
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: 317
 title: Tourbillon
-image: '@img/317-tourbillon.jpg'
+image: '@img/317-tourbillon.webp'
 collections:
   - abstrait
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '1985'
 year_start: 1985
 year_end: null
-file: '@img/317-tourbillon.jpg'
+file: '@img/317-tourbillon.webp'
 uuid: b19a87b3-4847-40e4-97da-c96839fbd3a0
 ---
 

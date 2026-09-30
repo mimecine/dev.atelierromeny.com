@@ -1,7 +1,7 @@
 ---
 id: 211
 title: Pensées
-image: '@img/211-pensees.jpg'
+image: '@img/211-pensees.webp'
 collections:
   - fleurs
   - nfs
@@ -13,7 +13,7 @@ note: ''
 year: '1976'
 year_start: 1976
 year_end: null
-file: '@img/211-pensees.jpg'
+file: '@img/211-pensees.webp'
 uuid: cd3c9d00-c18e-4562-950c-167463b54a4d
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: 538
 title: La mer au Rayol 2
-image: '@img/538-la-mer-au-rayol-2.jpg'
+image: '@img/538-la-mer-au-rayol-2.webp'
 collections:
   - paysages
   - selected-july-2025
@@ -14,7 +14,7 @@ note: ''
 year: '2002'
 year_start: 2002
 year_end: null
-file: '@img/538-la-mer-au-rayol-2.jpg'
+file: '@img/538-la-mer-au-rayol-2.webp'
 uuid: 7121a8b3-96b0-4b84-bbe0-974174771e3b
 ---
 

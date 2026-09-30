@@ -1,7 +1,7 @@
 ---
 id: 153
 title: L'automne autour de moi
-image: '@img/153-l-automne-autour-de-moi.jpg'
+image: '@img/153-l-automne-autour-de-moi.webp'
 collections:
   - paysages
   - selected-july-2025
@@ -15,10 +15,10 @@ note: ''
 year: '1993'
 year_start: 1993
 year_end: null
-file: '@img/153-lautomne-autour-de-moi.jpg'
+file: '@img/153-lautomne-autour-de-moi.webp'
 uuid: 1dfc887d-4b07-41a4-9fab-30ea178cc306
-old_image: '@img/153-lautomne-autour-de-moi.jpg'
+old_image: '@img/153-lautomne-autour-de-moi.webp'
 images:
-  - '@img/153-l-automne-autour-de-moi-2.jpg'
+  - '@img/153-l-automne-autour-de-moi-2.webp'
 ---
 

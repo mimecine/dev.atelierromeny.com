@@ -1,7 +1,7 @@
 ---
 id: 94
 title: Forsspel (Ressac)
-image: '@img/94-forsspel-ressac-v2.jpg'
+image: '@img/94-forsspel-ressac-v2.webp'
 collections:
   - abstrait
   - selected-july-2025
@@ -15,8 +15,8 @@ note: ''
 year: '1964'
 year_start: 1964
 year_end: null
-file: '@img/94-forsspel-ressac.jpg'
+file: '@img/94-forsspel-ressac.webp'
 uuid: 364f98d7-a7c6-406f-901d-6fed9f9ec098
-old_image: '@img/94-forsspel-ressac.jpg'
+old_image: '@img/94-forsspel-ressac.webp'
 ---
 

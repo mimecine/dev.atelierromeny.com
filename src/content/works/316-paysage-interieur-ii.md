@@ -1,7 +1,7 @@
 ---
 id: 316
 title: Paysage intérieur II
-image: '@img/316-paysage-interieur-ii.jpg'
+image: '@img/316-paysage-interieur-ii.webp'
 collections:
   - abstrait
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '1990'
 year_start: 1990
 year_end: null
-file: '@img/316-paysage-interieur-ii.jpg'
+file: '@img/316-paysage-interieur-ii.webp'
 uuid: 497ba255-6150-40be-8cc0-ed9e0ff4ddd7
 ---
 

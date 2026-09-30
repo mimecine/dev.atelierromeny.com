@@ -1,7 +1,7 @@
 ---
 id: 49
 title: Machine agricole
-image: '@img/49-machine-agricole.jpg'
+image: '@img/49-machine-agricole.webp'
 collections:
   - paysages
 categories: Paysages
@@ -12,7 +12,7 @@ note: ''
 year: '1973'
 year_start: 1973
 year_end: null
-file: '@img/49-machine-agricole.jpg'
+file: '@img/49-machine-agricole.webp'
 uuid: 4126a5b8-b1e0-4ae6-984a-50908493822b
 ---
 

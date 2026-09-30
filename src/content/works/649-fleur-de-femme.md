@@ -1,7 +1,7 @@
 ---
 id: 649
 title: Fleur de femme
-image: '@img/649-fleur-de-femme.jpg'
+image: '@img/649-fleur-de-femme.webp'
 collections:
   - abstrait
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '1967'
 year_start: 1967
 year_end: null
-file: '@img/649-fleur-de-femme.jpg'
+file: '@img/649-fleur-de-femme.webp'
 uuid: 13ce2c18-a23a-4921-8d98-bdcd8d695f82
 ---
 

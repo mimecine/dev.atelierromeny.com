@@ -7,17 +7,17 @@ h: 130
 location: secondary storage
 new_location: Basement
 note: null
-file: '@img/663-la-mort.jpg'
+file: '@img/663-la-mort.webp'
 year: '1965'
 year_start: 1965
 year_end: null
-image: '@img/663-la-mort-v2.jpg'
+image: '@img/663-la-mort-v2.webp'
 uuid: d50fd6db-b6c1-4064-a9c8-a050db39ec6d
 collections:
   - la-creation
   - selected-paintings
-old_image: '@img/663-la-mort.jpg'
+old_image: '@img/663-la-mort.webp'
 images:
-  - '@img/663-la-mort-v2-2.jpg'
+  - '@img/663-la-mort-v2-2.webp'
 ---
 

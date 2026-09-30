@@ -1,7 +1,7 @@
 ---
 id: 723
 title: Sonata rouge et noir
-image: '@img/723-sonata-rouge-et-noir.jpg'
+image: '@img/723-sonata-rouge-et-noir.webp'
 collections:
   - natures-mortes
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '1970'
 year_start: 1970
 year_end: null
-file: '@img/723-sonata-rouge-et-noir.jpg'
+file: '@img/723-sonata-rouge-et-noir.webp'
 uuid: 8b733c3a-e4d9-406b-9ac9-77a86cbf503c
 ---
 

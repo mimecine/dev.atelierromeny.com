@@ -1,7 +1,7 @@
 ---
 id: 773
 title: Calanque de Sormiou
-image: '@img/773-calanque-de-sormiou-v2.jpg'
+image: '@img/773-calanque-de-sormiou-v2.webp'
 collections:
   - paysages
   - selected-july-2025
@@ -15,11 +15,11 @@ note: ''
 year: '1993'
 year_start: 1993
 year_end: null
-file: '@img/773-calanque-de-sormiou.jpg'
+file: '@img/773-calanque-de-sormiou.webp'
 uuid: 34ef3ce7-c6fa-4e6f-bf0e-10184aa2f2e7
-old_image: '@img/773-calanque-de-sormiou.jpg'
+old_image: '@img/773-calanque-de-sormiou.webp'
 images:
-  - '@img/773-calanque-de-sormiou-v2-2.jpg'
-  - '@img/773-calanque-de-sormiou-v2-3.jpg'
+  - '@img/773-calanque-de-sormiou-v2-2.webp'
+  - '@img/773-calanque-de-sormiou-v2-3.webp'
 ---
 

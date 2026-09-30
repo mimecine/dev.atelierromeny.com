@@ -6,11 +6,11 @@ w: 100
 h: 115
 location: secondary storage
 note: null
-file: '@img/408-passe-2.jpg'
+file: '@img/408-passe-2.webp'
 year: '1996'
 year_start: 1996
 year_end: null
-image: '@img/408-passe-2.jpg'
+image: '@img/408-passe-2.webp'
 uuid: 381b1d40-bbae-4317-a5c5-fb6857d1eee2
 collections:
   - tauromachie

@@ -7,11 +7,11 @@ h: 100
 location: attic
 new_location: Attic
 note: null
-file: '@img/372-macrocosme-iii.jpg'
+file: '@img/372-macrocosme-iii.webp'
 year: '1981'
 year_start: 1981
 year_end: null
-image: '@img/372-macrocosme-iii.jpg'
+image: '@img/372-macrocosme-iii.webp'
 uuid: 10e6343e-f627-4341-83dc-b935c0b188ab
 collections:
   - abstrait

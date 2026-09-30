@@ -4,6 +4,6 @@ categories: Print
 collections:
   - selected-prints
 uuid: fde0fc0f-2463-442c-83aa-661668ff8d2c
-image: '@img/print-016.jpg'
+image: '@img/print-016.webp'
 ---
 

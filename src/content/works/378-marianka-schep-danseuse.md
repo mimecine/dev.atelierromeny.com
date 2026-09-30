@@ -7,11 +7,11 @@ h: 108
 location: attic
 new_location: Attic
 note: null
-file: '@img/378-marianka-schep-danseuse.jpg'
+file: '@img/378-marianka-schep-danseuse.webp'
 year: '1971'
 year_start: 1971
 year_end: null
-image: '@img/378-marianka-schep-danseuse.jpg'
+image: '@img/378-marianka-schep-danseuse.webp'
 uuid: 3ee79b4a-8ed4-4abc-a839-ca281988b1e7
 collections:
   - figures-humaines

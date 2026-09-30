@@ -1,7 +1,7 @@
 ---
 id: 382
 title: Gla'l'euls
-image: '@img/382-glaleuls.jpg'
+image: '@img/382-glaleuls.webp'
 collections:
   - fleurs
   - selected-july-2025
@@ -14,7 +14,7 @@ note: ''
 year: '1977'
 year_start: 1977
 year_end: null
-file: '@img/382-glaleuls.jpg'
+file: '@img/382-glaleuls.webp'
 uuid: 9144e6e7-1f8b-49a7-93a4-cfa660d557d0
 ---
 

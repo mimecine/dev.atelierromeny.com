@@ -18,9 +18,9 @@ sections:
     title: Image Gallery
     hidden: false
     images:
-      - '@img/127-la-serviette-bleue-v2.jpg'
-      - '@img/127-la-serviette-bleue-v2-2.jpg'
-      - '@img/127-la-serviette-bleue-v2-3.jpg'
+      - '@img/127-la-serviette-bleue-v2.webp'
+      - '@img/127-la-serviette-bleue-v2-2.webp'
+      - '@img/127-la-serviette-bleue-v2-3.webp'
 socials:
   - title: Instagram
     href: https://www.instagram.com/atelierromeny/

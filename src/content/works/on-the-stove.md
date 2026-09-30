@@ -1,7 +1,7 @@
 ---
 id: null
 title: On the stove
-image: '@img/on-the-stove.jpg'
+image: '@img/on-the-stove.webp'
 collections:
   - natures-mortes
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: ---
 year_start: null
 year_end: null
-file: '@img/on-the-stove.jpg'
+file: '@img/on-the-stove.webp'
 uuid: 814882eb-5fa8-431b-866a-2e5b0e99aa2f
 ---
 

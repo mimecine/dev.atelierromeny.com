@@ -1,7 +1,7 @@
 ---
 id: 591
 title: Poéle aux fruits et aubergine
-image: '@img/591-poele-aux-fruits-et-aubergine-v2.jpg'
+image: '@img/591-poele-aux-fruits-et-aubergine-v2.webp'
 collections:
   - natures-mortes
   - selected-july-2025
@@ -15,8 +15,8 @@ note: ''
 year: '1984'
 year_start: 1984
 year_end: null
-file: '@img/591-poele-aux-fruits-et-aubergine.jpg'
+file: '@img/591-poele-aux-fruits-et-aubergine.webp'
 uuid: beacad0a-538d-4659-b545-4134b93dc1ca
-old_image: '@img/591-poele-aux-fruits-et-aubergine.jpg'
+old_image: '@img/591-poele-aux-fruits-et-aubergine.webp'
 ---
 

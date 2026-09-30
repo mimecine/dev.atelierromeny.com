@@ -1,7 +1,7 @@
 ---
 id: 427
 title: Landscape
-image: '@img/427-landscape.jpg'
+image: '@img/427-landscape.webp'
 collections:
   - abstrait
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '1970'
 year_start: 1970
 year_end: null
-file: '@img/427-landscape.jpg'
+file: '@img/427-landscape.webp'
 uuid: bc484757-0ba8-40c0-a3a9-f927bafac536
 ---
 

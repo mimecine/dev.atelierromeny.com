@@ -1,7 +1,7 @@
 ---
 id: 700
 title: Tryptique d‘automne
-image: '@img/700-tryptique-dautomne.jpg'
+image: '@img/700-tryptique-dautomne.webp'
 collections:
   - abstrait
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '1968'
 year_start: 1968
 year_end: null
-file: '@img/700-tryptique-dautomne.jpg'
+file: '@img/700-tryptique-dautomne.webp'
 uuid: 0f101a64-e6c3-44cd-9148-26a9ab979faa
 ---
 

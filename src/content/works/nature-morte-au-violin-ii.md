@@ -1,7 +1,7 @@
 ---
 id: null
 title: Nature Morte au violin II
-image: '@img/nature-morte-au-violin-ii.jpg'
+image: '@img/nature-morte-au-violin-ii.webp'
 collections:
   - natures-mortes
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '2001'
 year_start: 2001
 year_end: null
-file: '@img/nature-morte-au-violin-ii.jpg'
+file: '@img/nature-morte-au-violin-ii.webp'
 uuid: 66d2e896-1095-436c-8e8e-a228f765f690
 ---
 

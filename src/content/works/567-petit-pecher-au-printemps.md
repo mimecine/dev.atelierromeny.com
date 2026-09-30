@@ -1,7 +1,7 @@
 ---
 id: 567
 title: petit pécher au Printemps
-image: '@img/567-petit-pecher-au-printemps.jpg'
+image: '@img/567-petit-pecher-au-printemps.webp'
 collections:
   - arbres-en-fleurs
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '1998'
 year_start: 1998
 year_end: null
-file: '@img/567-petit-pecher-au-printemps.jpg'
+file: '@img/567-petit-pecher-au-printemps.webp'
 uuid: 3d97e4f6-1f2b-4311-a191-f569758e24b6
 ---
 

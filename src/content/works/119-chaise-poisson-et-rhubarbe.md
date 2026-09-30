@@ -14,6 +14,6 @@ uuid: fd79a44a-09e0-496e-9695-283b7e55cf17
 collections:
   - natures-mortes
   - selected-paintings
-image: '@img/119-chaise-poisson-et-rhubarbe.jpg'
+image: '@img/119-chaise-poisson-et-rhubarbe.webp'
 ---
 

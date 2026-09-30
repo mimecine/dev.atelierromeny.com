@@ -92,6 +92,16 @@ export function loadState(photoDir: string): State | null {
   return fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, "utf-8")) : null;
 }
 
+/** Writes a WebP copy of `src`, shrunk (never enlarged) so its long edge is at most `maxEdge`. */
+export async function toWebp(src: string, dest: string, maxEdge: number, quality = 88) {
+  const { default: sharp } = await import("sharp");
+  await sharp(src)
+    .rotate()
+    .resize(maxEdge, maxEdge, { fit: "inside", withoutEnlargement: true })
+    .webp({ quality })
+    .toFile(dest);
+}
+
 /** Writes a JPEG copy of `src`, shrunk (never enlarged) so its long edge is at most `maxEdge`. */
 export async function toJpeg(src: string, dest: string, maxEdge: number, quality = 88) {
   const info = Bun.spawnSync(["sips", "-g", "pixelWidth", "-g", "pixelHeight", src]).stdout.toString();

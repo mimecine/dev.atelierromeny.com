@@ -7,11 +7,11 @@ h: 65
 location: graphic studio
 new_location: Attic
 note: null
-file: '@img/148-autoportrait.jpg'
+file: '@img/148-autoportrait.webp'
 year: '1987'
 year_start: 1987
 year_end: null
-image: '@img/148-autoportrait.jpg'
+image: '@img/148-autoportrait.webp'
 uuid: 00d00ec1-7986-4651-9bcb-d3a16ebd57ae
 collections:
   - figures-humaines

@@ -1,7 +1,7 @@
 ---
 id: 530
 title: Chévre
-image: '@img/530-chevre.jpg'
+image: '@img/530-chevre.webp'
 collections:
   - animaux
   - nfs
@@ -13,7 +13,7 @@ note: ''
 year: '1969'
 year_start: 1969
 year_end: null
-file: '@img/530-chevre.jpg'
+file: '@img/530-chevre.webp'
 uuid: 8948a528-667e-4b57-96ae-0a44b7a0f833
 ---
 

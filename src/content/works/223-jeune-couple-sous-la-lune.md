@@ -6,11 +6,11 @@ w: 65
 h: 92
 location: old atelier
 note: null
-file: '@img/223-jeune-couple-sous-la-lune.jpg'
+file: '@img/223-jeune-couple-sous-la-lune.webp'
 year: '1997'
 year_start: 1997
 year_end: null
-image: '@img/223-jeune-couple-sous-la-lune.jpg'
+image: '@img/223-jeune-couple-sous-la-lune.webp'
 uuid: 3c32aafb-b6cd-476e-9a48-a6ae72cbfcc0
 collections:
   - figures-humaines

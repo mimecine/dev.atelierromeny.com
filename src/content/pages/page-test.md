@@ -1,7 +1,7 @@
 ---
 title: Style Test
 published: true
-image: /src/media/img/export-2.jpg
+image: /src/media/img/export-2.webp
 tags: null
 note: ''
 css: |-
@@ -25,4 +25,4 @@ js: console.log("Extra JS");
 
 Having a **swell** _time_.
 
-![](/src/media/img/export-2.jpg)
+![](/src/media/img/export-2.webp)

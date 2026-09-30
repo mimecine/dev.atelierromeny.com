@@ -1,7 +1,7 @@
 ---
 id: null
 title: Wo Hin 1
-image: '@img/wo-hin-1.jpg'
+image: '@img/wo-hin-1.webp'
 collections:
   - abstrait
 categories: Abstract
@@ -12,7 +12,7 @@ note: ''
 year: '2005'
 year_start: 2005
 year_end: null
-file: '@img/wo-hin-1.jpg'
+file: '@img/wo-hin-1.webp'
 uuid: 250e14c8-4f5d-42b5-be2a-f4f7e3091b5e
 ---
 

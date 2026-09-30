@@ -1,7 +1,7 @@
 ---
 id: 303
 title: Tournesol a plat
-image: '@img/303-tournesol-a-plat.jpg'
+image: '@img/303-tournesol-a-plat.webp'
 collections:
   - natures-mortes
   - nfs
@@ -15,7 +15,7 @@ note: ''
 year: '1991'
 year_start: 1991
 year_end: null
-file: '@img/303-tournesol-a-plat.jpg'
+file: '@img/303-tournesol-a-plat.webp'
 uuid: a851673e-8149-43c9-88b4-3e317f2ca911
 ---
 

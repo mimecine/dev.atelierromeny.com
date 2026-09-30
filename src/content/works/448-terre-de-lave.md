@@ -1,7 +1,7 @@
 ---
 id: 448
 title: Terre de lave
-image: '@img/448-terre-de-lave.jpg'
+image: '@img/448-terre-de-lave.webp'
 collections:
   - marco
   - alisa
@@ -15,7 +15,7 @@ note: ''
 year: '1964'
 year_start: 1964
 year_end: null
-file: '@img/448-terre-de-lave.jpg'
+file: '@img/448-terre-de-lave.webp'
 uuid: f4ab6329-fcbc-4a3e-badb-c73b74976de3
 ---
 

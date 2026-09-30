@@ -1,7 +1,7 @@
 ---
 id: 762
 title: Coin du jardin
-image: '@img/762-coin-du-jardin-v2.jpg'
+image: '@img/762-coin-du-jardin-v2.webp'
 collections:
   - fleurs
   - selected-july-2025
@@ -15,8 +15,8 @@ note: ''
 year: '1997'
 year_start: 1997
 year_end: null
-file: '@img/762-coin-du-jardin.jpg'
+file: '@img/762-coin-du-jardin.webp'
 uuid: 8e9ed41a-4fb9-49d9-b686-eb33085a3819
-old_image: '@img/762-coin-du-jardin.jpg'
+old_image: '@img/762-coin-du-jardin.webp'
 ---
 

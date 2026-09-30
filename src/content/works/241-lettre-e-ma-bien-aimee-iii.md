@@ -6,11 +6,11 @@ w: 100
 h: 73
 location: graphic studio
 note: null
-file: '@img/241-lettre-e-ma-bien-aimee-iii.jpg'
+file: '@img/241-lettre-e-ma-bien-aimee-iii.webp'
 year: '1992'
 year_start: 1992
 year_end: null
-image: '@img/241-lettre-e-ma-bien-aimee-iii.jpg'
+image: '@img/241-lettre-e-ma-bien-aimee-iii.webp'
 uuid: 37d79892-1c0f-4683-856d-1a7a4cd16121
 collections:
   - la-vie-de-femme

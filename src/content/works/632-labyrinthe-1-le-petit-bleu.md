@@ -1,7 +1,7 @@
 ---
 id: 632
 title: Labyrinthe 1 (le petit bleu)
-image: '@img/632-labyrinthe-1-le-petit-bleu.jpg'
+image: '@img/632-labyrinthe-1-le-petit-bleu.webp'
 collections:
   - abstrait
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '2003'
 year_start: 2003
 year_end: null
-file: '@img/632-labyrinthe-1-le-petit-bleu.jpg'
+file: '@img/632-labyrinthe-1-le-petit-bleu.webp'
 uuid: 73e23833-bc1b-461c-ac90-31358d768816
 ---
 

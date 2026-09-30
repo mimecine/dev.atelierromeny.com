@@ -7,11 +7,11 @@ h: 80
 location: graphic studio
 new_location: Attic
 note: null
-file: '@img/133-veronicas-svetteduk.jpg'
+file: '@img/133-veronicas-svetteduk.webp'
 year: '1971'
 year_start: 1971
 year_end: null
-image: '@img/133-veronicas-svetteduk.jpg'
+image: '@img/133-veronicas-svetteduk.webp'
 uuid: f01f85cc-d2b0-42ab-9bc7-ea627d23d94d
 collections:
   - figures-humaines

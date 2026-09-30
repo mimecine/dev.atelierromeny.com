@@ -1,7 +1,7 @@
 ---
 id: 313
 title: Mouvement
-image: '@img/313-mouvement-v2.jpg'
+image: '@img/313-mouvement-v2.webp'
 collections:
   - abstrait
   - selected-july-2025
@@ -15,10 +15,10 @@ note: ''
 year: '1994'
 year_start: 1994
 year_end: null
-file: '@img/313-mouvement.jpg'
+file: '@img/313-mouvement.webp'
 uuid: 6137592d-68fd-447c-bf32-5969aca3a8f9
-old_image: '@img/313-mouvement.jpg'
+old_image: '@img/313-mouvement.webp'
 images:
-  - '@img/313-mouvement-v2-2.jpg'
+  - '@img/313-mouvement-v2-2.webp'
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: 612
 title: Sphéres
-image: '@img/612-spheres-v2.jpg'
+image: '@img/612-spheres-v2.webp'
 collections:
   - abstrait
   - selected-july-2025
@@ -15,8 +15,8 @@ note: ''
 year: '1974'
 year_start: 1974
 year_end: null
-file: '@img/612-spheres.jpg'
+file: '@img/612-spheres.webp'
 uuid: 8f988c57-19d4-4e8d-acde-5d6e5c24d9b3
-old_image: '@img/612-spheres.jpg'
+old_image: '@img/612-spheres.webp'
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: null
 title: Printemps 2
-image: '@img/printemps-2.jpg'
+image: '@img/printemps-2.webp'
 collections:
   - fleurs
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '2005'
 year_start: 2005
 year_end: null
-file: '@img/printemps-2.jpg'
+file: '@img/printemps-2.webp'
 uuid: d4db7758-65ea-4a21-b247-2a9824b7463e
 ---
 

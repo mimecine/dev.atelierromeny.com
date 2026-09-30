@@ -6,11 +6,11 @@ w: 65
 h: 81
 location: old atelier
 note: null
-file: '@img/216-nu-accroupi-avec-contour-rouge.jpg'
+file: '@img/216-nu-accroupi-avec-contour-rouge.webp'
 year: '1997'
 year_start: 1997
 year_end: null
-image: '@img/216-nu-accroupi-avec-contour-rouge.jpg'
+image: '@img/216-nu-accroupi-avec-contour-rouge.webp'
 uuid: b70fcff1-bbe1-4189-b26d-501abc9ae9c3
 collections:
   - figures-humaines

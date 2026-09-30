@@ -7,11 +7,11 @@ h: 97
 location: attic
 new_location: Attic
 note: null
-file: '@img/435-une-kanak.jpg'
+file: '@img/435-une-kanak.webp'
 year: '1985'
 year_start: 1985
 year_end: null
-image: '@img/435-une-kanak.jpg'
+image: '@img/435-une-kanak.webp'
 uuid: 2530755a-2deb-48e8-88c2-c11bcbf85d0f
 collections:
   - figures-humaines

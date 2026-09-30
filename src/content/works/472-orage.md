@@ -1,7 +1,7 @@
 ---
 id: 472
 title: Orage
-image: '@img/472-orage.jpg'
+image: '@img/472-orage.webp'
 collections:
   - abstrait
   - nfs
@@ -13,7 +13,7 @@ note: ''
 year: '1966'
 year_start: 1966
 year_end: null
-file: '@img/472-orage.jpg'
+file: '@img/472-orage.webp'
 uuid: 62059d37-2c13-4b4a-a202-457f1ea5b957
 ---
 

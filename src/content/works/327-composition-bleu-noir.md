@@ -1,7 +1,7 @@
 ---
 id: 327
 title: Composition bleu noir
-image: '@img/327-composition-bleu-noir.jpg'
+image: '@img/327-composition-bleu-noir.webp'
 collections:
   - abstrait
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '1988'
 year_start: 1988
 year_end: null
-file: '@img/327-composition-bleu-noir.jpg'
+file: '@img/327-composition-bleu-noir.webp'
 uuid: f8f132ae-f3e8-415c-a8d4-3257717913a7
 ---
 

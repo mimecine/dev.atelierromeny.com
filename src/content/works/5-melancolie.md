@@ -7,11 +7,11 @@ h: 50
 location: old atelier
 new_location: Attic
 note: null
-file: '@img/5-melancolie.jpg'
+file: '@img/5-melancolie.webp'
 year: '1979'
 year_start: 1979
 year_end: null
-image: '@img/5-melancolie.jpg'
+image: '@img/5-melancolie.webp'
 uuid: 1a0a016b-875a-4970-96cd-2885ee8dd9a6
 collections:
   - figures-humaines

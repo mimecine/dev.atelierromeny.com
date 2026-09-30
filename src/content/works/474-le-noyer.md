@@ -1,7 +1,7 @@
 ---
 id: 474
 title: Le noyer
-image: '@img/474-le-noyer.jpg'
+image: '@img/474-le-noyer.webp'
 collections:
   - arbres
   - selected-july-2025
@@ -14,7 +14,7 @@ note: ''
 year: '1979'
 year_start: 1979
 year_end: null
-file: '@img/474-le-noyer.jpg'
+file: '@img/474-le-noyer.webp'
 uuid: f0721d0e-fa20-496f-ac23-5281e82ba68e
 ---
 

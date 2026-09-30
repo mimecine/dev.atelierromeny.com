@@ -6,11 +6,11 @@ w: 95
 h: 145
 location: attic
 note: null
-file: '@img/490-composition-verticale.jpg'
+file: '@img/490-composition-verticale.webp'
 year: '1958'
 year_start: 1958
 year_end: null
-image: '@img/490-composition-verticale.jpg'
+image: '@img/490-composition-verticale.webp'
 uuid: 335802c9-f491-49cd-81f8-2189189feca5
 collections:
   - abstrait

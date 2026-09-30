@@ -1,7 +1,7 @@
 ---
 id: 331
 title: Paysage provencal - Sablet
-image: '@img/331-paysage-provencal-sablet.jpg'
+image: '@img/331-paysage-provencal-sablet.webp'
 collections:
   - paysages
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '1992'
 year_start: 1992
 year_end: null
-file: '@img/331-paysage-provencal-sablet.jpg'
+file: '@img/331-paysage-provencal-sablet.webp'
 uuid: 3feb3641-f898-460e-b3f3-6d6bc6ca9122
 ---
 

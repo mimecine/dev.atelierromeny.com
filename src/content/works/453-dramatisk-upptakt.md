@@ -1,7 +1,7 @@
 ---
 id: 453
 title: Dramatisk upptakt
-image: '@img/453-dramatisk-upptakt.jpg'
+image: '@img/453-dramatisk-upptakt.webp'
 collections:
   - abstrait
   - selected-july-2025
@@ -14,7 +14,7 @@ note: ''
 year: '1960'
 year_start: 1960
 year_end: null
-file: '@img/453-dramatisk-upptakt.jpg'
+file: '@img/453-dramatisk-upptakt.webp'
 uuid: c5f5a152-a935-43ea-9602-83485880551a
 ---
 

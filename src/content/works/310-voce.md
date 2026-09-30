@@ -1,7 +1,7 @@
 ---
 id: 310
 title: Voce
-image: '@img/310-voce.jpg'
+image: '@img/310-voce.webp'
 collections:
   - marco
   - alisa
@@ -16,7 +16,7 @@ note: ''
 year: '1982'
 year_start: 1982
 year_end: null
-file: '@img/310-voce.jpg'
+file: '@img/310-voce.webp'
 uuid: 16c5f567-9ba6-4735-8476-bbd2def7e34e
 ---
 

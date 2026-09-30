@@ -1,7 +1,7 @@
 ---
 id: 488
 title: Hommage a un musicien anonyme
-image: '@img/488-hommage-a-un-musicien-anonyme-v2.jpg'
+image: '@img/488-hommage-a-un-musicien-anonyme-v2.webp'
 collections:
   - natures-mortes
   - selected-july-2025
@@ -15,8 +15,8 @@ note: ''
 year: '1976'
 year_start: 1976
 year_end: null
-file: '@img/488-hommage-a-un-musicien-anonyme.jpg'
+file: '@img/488-hommage-a-un-musicien-anonyme.webp'
 uuid: 5cc27beb-fc42-4266-a706-17d3fa911f5c
-old_image: '@img/488-hommage-a-un-musicien-anonyme.jpg'
+old_image: '@img/488-hommage-a-un-musicien-anonyme.webp'
 ---
 

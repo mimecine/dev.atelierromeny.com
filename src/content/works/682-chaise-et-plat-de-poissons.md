@@ -1,7 +1,7 @@
 ---
 id: 682
 title: Chaise et plat de poissons
-image: '@img/682-chaise-et-plat-de-poissons.jpg'
+image: '@img/682-chaise-et-plat-de-poissons.webp'
 collections:
   - natures-mortes
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '2001'
 year_start: 2001
 year_end: null
-file: '@img/682-chaise-et-plat-de-poissons.jpg'
+file: '@img/682-chaise-et-plat-de-poissons.webp'
 uuid: ee166c2a-01de-44d7-911f-46a5bf570aa4
 ---
 

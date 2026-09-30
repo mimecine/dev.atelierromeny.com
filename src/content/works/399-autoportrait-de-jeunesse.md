@@ -7,11 +7,11 @@ h: 75
 location: secondary storage
 new_location: Attic
 note: 'reserve, lise?'
-file: '@img/399-autoportrait-de-jeunesse.jpg'
+file: '@img/399-autoportrait-de-jeunesse.webp'
 year: '1952'
 year_start: 1952
 year_end: null
-image: '@img/399-autoportrait-de-jeunesse.jpg'
+image: '@img/399-autoportrait-de-jeunesse.webp'
 uuid: ea1a1363-fe5d-4692-8d2c-886fff7183c2
 collections:
   - figures-humaines

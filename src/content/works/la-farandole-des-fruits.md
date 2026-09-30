@@ -1,7 +1,7 @@
 ---
 id: null
 title: La farandole des fruits
-image: '@img/la-farandole-des-fruits.jpg'
+image: '@img/la-farandole-des-fruits.webp'
 collections:
   - natures-mortes
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '2006'
 year_start: 2006
 year_end: null
-file: '@img/la-farandole-des-fruits.jpg'
+file: '@img/la-farandole-des-fruits.webp'
 uuid: 3fb9b4f4-8384-4bb8-a898-70e2f8b1cc24
 ---
 

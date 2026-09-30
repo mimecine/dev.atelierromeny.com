@@ -1,7 +1,7 @@
 ---
 id: 383
 title: Spanskt natt (nuit espagnole)
-image: '@img/383-spanskt-natt-nuit-espagnole.jpg'
+image: '@img/383-spanskt-natt-nuit-espagnole.webp'
 collections:
   - abstrait
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '1965'
 year_start: 1965
 year_end: null
-file: '@img/383-spanskt-natt-nuit-espagnole.jpg'
+file: '@img/383-spanskt-natt-nuit-espagnole.webp'
 uuid: 5e5dc1c0-d788-4e23-9e9f-bd9e41ab5a17
 ---
 

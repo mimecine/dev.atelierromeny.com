@@ -1,5 +1,5 @@
 // Applies <photo-folder>/matches.json made with server.ts:
-//  - copies each photo into src/media/img as <id>-<title>.jpg (extras get -2, -3, …),
+//  - copies each photo into src/media/img as <id>-<title>.webp (extras get -2, -3, …),
 //    resized so the long edge is at most --max px (default 3000)
 //  - sets `image` / `images` on the matching work; its previous `image` moves to `old_image`
 //    (never overwritten), so the old photo stays available in the CMS
@@ -23,7 +23,7 @@ import {
   loadWorks,
   mediaPath,
   slugify,
-  toJpeg,
+  toWebp,
   worksById,
 } from "./lib";
 
@@ -61,7 +61,7 @@ const claimedMedia = new Set<string>();
 const mediaFiles = fs.readdirSync(MEDIA_DIR);
 
 const namesFor = (base: string, count: number) =>
-  Array.from({ length: count }, (_, i) => (i === 0 ? `${base}.jpg` : `${base}-${i + 1}.jpg`));
+  Array.from({ length: count }, (_, i) => (i === 0 ? `${base}.webp` : `${base}-${i + 1}.webp`));
 
 /** A base name whose files don't collide with media we may not overwrite. */
 function uniqueBase(base: string, count: number, allowed: Set<string>) {
@@ -90,7 +90,9 @@ const applied: { created: Record<Target, string>; written: string[] } = fs.exist
   ? JSON.parse(fs.readFileSync(appliedPath, "utf-8"))
   : { created: {}, written: [] };
 const created = applied.created;
-const written = new Set(applied.written);
+// Compared without extension: media may since have been converted (e.g. .jpg -> .webp).
+const stem = (f: string) => path.basename(f).replace(/\.[^.]+$/, "");
+const written = new Set(applied.written.map(stem));
 let newIndex = 0;
 const log: string[] = [];
 const orphaned: string[] = [];
@@ -139,7 +141,7 @@ for (const [target, photos] of groups) {
 
   // Keep the pre-reshoot image. On a re-run `old_image` is already set and `image` is
   // one of ours from the previous run, which may be overwritten.
-  if (!work.data.old_image && work.data.image && !written.has(path.basename(work.data.image))) {
+  if (!work.data.old_image && work.data.image && !written.has(stem(work.data.image))) {
     work.data.old_image = work.data.image;
   }
   const keep = work.data.old_image ? path.basename(work.data.old_image) : null;
@@ -154,8 +156,8 @@ for (const [target, photos] of groups) {
   const names = namesFor(base, photos.length);
   for (const [i, photo] of photos.entries()) {
     log.push(`       ${photo} -> src/media/img/${names[i]}`);
-    if (write) await toJpeg(path.join(photoDir, photo), path.join(MEDIA_DIR, names[i]), maxEdge);
-    written.add(names[i]);
+    if (write) await toWebp(path.join(photoDir, photo), path.join(MEDIA_DIR, names[i]), maxEdge);
+    written.add(stem(names[i]));
   }
 
   for (const old of own) if (!names.includes(old)) orphaned.push(old);

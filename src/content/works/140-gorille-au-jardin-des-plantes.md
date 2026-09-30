@@ -6,11 +6,11 @@ w: 70
 h: 81
 location: graphic studio
 note: null
-file: '@img/140-gorille-au-jardin-des-plantes.jpg'
+file: '@img/140-gorille-au-jardin-des-plantes.webp'
 year: '1980'
 year_start: 1980
 year_end: null
-image: '@img/140-gorille-au-jardin-des-plantes.jpg'
+image: '@img/140-gorille-au-jardin-des-plantes.webp'
 uuid: da60b7c1-03c3-40e3-9e22-9819539cb3d8
 collections:
   - animaux

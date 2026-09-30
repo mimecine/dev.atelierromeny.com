@@ -1,7 +1,7 @@
 ---
 id: 608
 title: Dans Ies grottes de Miramis
-image: '@img/608-dans-ies-grottes-de-miramis-v2.jpg'
+image: '@img/608-dans-ies-grottes-de-miramis-v2.webp'
 collections:
   - abstrait
   - selected-july-2025
@@ -15,8 +15,8 @@ note: ''
 year: '1961'
 year_start: 1961
 year_end: null
-file: '@img/608-dans-ies-grottes-de-miramis.jpg'
+file: '@img/608-dans-ies-grottes-de-miramis.webp'
 uuid: 568bdfec-0335-46b5-9e37-3a0e04018d16
-old_image: '@img/608-dans-ies-grottes-de-miramis.jpg'
+old_image: '@img/608-dans-ies-grottes-de-miramis.webp'
 ---
 
