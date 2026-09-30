@@ -18,6 +18,16 @@ export interface Settings {
   description: string;
   author: string;
   email: string;
+  barrier?: Barrier;
+}
+
+/** Settings > Password Protection */
+export interface Barrier {
+  enabled?: boolean;
+  password?: string;
+  days?: number;
+  /** markdown shown under the password field */
+  text?: string;
 }
 
 export interface Link {

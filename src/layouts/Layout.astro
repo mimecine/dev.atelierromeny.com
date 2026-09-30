@@ -4,6 +4,7 @@ import A from "@components/A.astro";
 import Barrier from "@components/Barrier.astro";
 import SavedStore from "@components/SavedStore.astro";
 import { loadSettings } from "@src/lib/settings";
+import { renderMarkdown } from "@src/lib/markdown";
 
 import { ClientRouter } from "astro:transitions";
 import { getCollection } from "astro:content";
@@ -37,7 +38,10 @@ const collections = await getCollection(
   (collection) => collection.data.published && collection.data.inmenu
 );
 
-const { menu, socials = [] } = loadSettings();
+const { menu, socials = [], barrier } = loadSettings();
+// Rendered with satteri, which can't run inside the Cloudflare Worker: every page using
+// this layout must be prerendered (`export const prerender = true`).
+const barrierText = barrier?.enabled ? await renderMarkdown(barrier.text) : "";
 const isHome = Astro.url.pathname === "/";
 ---
 
@@ -64,7 +68,11 @@ const isHome = Astro.url.pathname === "/";
     {...props}
   >
     <SavedStore />
-    <Barrier password="edlef" days={7} />
+    {
+      barrier?.enabled && barrier.password && (
+        <Barrier password={barrier.password} days={barrier.days || 7} text={barrierText} />
+      )
+    }
     <header class:list={["site-header", isHome && "is-home"]}>
       <h1 data-pagefind-ignore class="logo" transition:name="site-logo"><a href="/">Atelier Romeny</a></h1>
       <nav class="site-nav" x-data transition:name="site-nav">

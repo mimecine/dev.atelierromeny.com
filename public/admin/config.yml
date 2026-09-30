@@ -228,6 +228,16 @@ collections:
                   - { label: Columns, name: columns, widget: select, options: [1, 2, 3], default: 1, hint: "Text flows into this many columns on wide screens" }
                   - { label: "Hide Section", name: hidden, widget: boolean, default: false }
 
+          - label: "Password Protection"
+            name: "barrier"
+            widget: object
+            collapsed: true
+            hint: "Keeps casual visitors out while the site is being built. Not real security: the password is in the page source."
+            fields:
+              - { label: "Require password", name: enabled, widget: boolean, default: true }
+              - { label: Password, name: password, widget: string, required: false, hint: "Changing it logs everyone out" }
+              - { label: "Remember for (days)", name: days, widget: number, value_type: int, min: 1, default: 7 }
+              - { label: "Text under the password field", name: text, widget: markdown, required: false }
           - label: "Footer Links"
             label_singular: "Footer Link"
             hint: "Shown in a row just above the copyright"

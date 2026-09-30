@@ -1,5 +1,13 @@
 ---
-const { password, days = 7 ,  ...attrs } = Astro.props;
+// Client-side password gate, configured in Settings > Password Protection.
+// Keeps casual visitors out; it is not real security (the password is in the page).
+interface Props {
+  password: string;
+  days?: number;
+  /** optional HTML shown under the password field */
+  text?: string;
+}
+const { password, days = 7, text } = Astro.props;
 ---
 <div id="password-overlay" transition:persist data-pagefind-ignore>
   <h2>Enter password</h2>
@@ -8,14 +16,20 @@ const { password, days = 7 ,  ...attrs } = Astro.props;
     <button id="pw-btn" type="submit">Submit</button>
   </form>
   <p id="pw-error">Wrong password</p>
+  {text && <div id="pw-text" class="prose prose-invert prose-sm" set:html={text} />}
 </div>
 <a id="logout-link" href="#" transition:persist>Logout</a>
 
 <script define:vars={{password, days}}>
 (function () {
-  const PASSWORD = password; // change this
+  const PASSWORD = password;
   const COOKIE_NAME = "access_granted";
   const COOKIE_DAYS = days; // days until cookie expires. (1/24 = 1 hour)
+  // The cookie holds a hash of the password, so changing the password in the
+  // CMS logs everyone out instead of old cookies still letting them in.
+  let hash = 5381;
+  for (const c of PASSWORD) hash = ((hash * 33) ^ c.charCodeAt(0)) >>> 0;
+  const COOKIE_VALUE = "v" + hash.toString(36);
 
   function setCookie(name, value, days) {
     const d = new Date();
@@ -39,7 +53,7 @@ const { password, days = 7 ,  ...attrs } = Astro.props;
     const overlay = document.getElementById("password-overlay");
     const logoutLink = document.getElementById("logout-link");
 
-    if (getCookie(COOKIE_NAME) === "true") {
+    if (getCookie(COOKIE_NAME) === COOKIE_VALUE) {
       overlay.style.display = "none";
       logoutLink.style.display = "inline-block";
     } else {
@@ -54,7 +68,7 @@ const { password, days = 7 ,  ...attrs } = Astro.props;
       e.preventDefault();
       const pw = document.getElementById("pw-input").value;
       if (pw === PASSWORD) {
-        setCookie(COOKIE_NAME, "true", COOKIE_DAYS);
+        setCookie(COOKIE_NAME, COOKIE_VALUE, COOKIE_DAYS);
         overlay.style.display = "none";
         logoutLink.style.display = "inline-block";
       } else {
@@ -119,6 +133,16 @@ const { password, days = 7 ,  ...attrs } = Astro.props;
     display: none;
     z-index: 10000;
     font-size: 0.9em;
+  }
+
+  #pw-text {
+    max-width: 32rem;
+    padding: 1.5em 1em 0;
+    text-align: center;
+  }
+  #pw-text :global(a) {
+    color: #ddd;
+    text-decoration: underline;
   }
 
   #pw-form {
