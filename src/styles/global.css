@@ -24,14 +24,18 @@
     @apply text-2xl font-bold py-4;
   }
   .works-grid {
-    /* display: grid; */
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    /* gap: 1rem; */
-    @apply py-4 grid gap-4;
+    /* Two columns on phones, as many 300px columns as fit from sm up */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    @apply py-4 grid gap-2 sm:gap-4;
+  }
+  @media (min-width: 40rem) {
+    .works-grid {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
   }
   .work-item {
     text-align: center;
-    @apply border bg-gray-100 p-8 pb-2;
+    @apply border bg-gray-100 p-2 pb-1 text-sm sm:p-8 sm:pb-2 sm:text-base;
   }
   .work-item img {
     /* max-width: 100%; */

@@ -1,6 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import { Image } from "astro:assets";
+import { Image, getImage } from "astro:assets";
 
 interface Props {
   work: CollectionEntry<"works">;
@@ -10,6 +10,12 @@ const { work } = Astro.props;
 const alt = work.data.title || "";
 const gallery = [work.data.image, ...(work.data.images ?? [])].filter(
   (img) => !!img
+);
+// Larger versions for the zoom viewer; only downloaded when it's opened.
+const zoomSrcs = await Promise.all(
+  gallery.map(
+    async (img) => (await getImage({ src: img, width: Math.min(img.width, 3000) })).src
+  )
 );
 ---
 
@@ -21,7 +27,9 @@ const gallery = [work.data.image, ...(work.data.images ?? [])].filter(
           src={img}
           alt={alt}
           width={1024}
-          class="object-contain h-[70vh] w-full"
+          class="object-contain h-[70vh] w-full cursor-zoom-in"
+          data-zoom-src={zoomSrcs[i]}
+          title="Click to zoom"
           x-show={`active === ${i}`}
           style={i > 0 ? "display: none" : undefined}
         />
@@ -55,3 +63,8 @@ const gallery = [work.data.image, ...(work.data.images ?? [])].filter(
     </div>
   )
 }
+
+<script>
+  import { initZoom } from "@src/lib/zoom";
+  initZoom();
+</script>
