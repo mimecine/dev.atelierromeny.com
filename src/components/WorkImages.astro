@@ -1,0 +1,57 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { Image } from "astro:assets";
+
+interface Props {
+  work: CollectionEntry<"works">;
+}
+
+const { work } = Astro.props;
+const alt = work.data.title || "";
+const gallery = [work.data.image, ...(work.data.images ?? [])].filter(
+  (img) => !!img
+);
+---
+
+{
+  (gallery.length > 0 && (
+    <div x-data="{ active: 0 }">
+      {gallery.map((img, i) => (
+        <Image
+          src={img}
+          alt={alt}
+          width={1024}
+          class="object-contain h-[70vh] w-full"
+          x-show={`active === ${i}`}
+          style={i > 0 ? "display: none" : undefined}
+        />
+      ))}
+      {gallery.length > 1 && (
+        <ul class="flex justify-center gap-2 pt-3">
+          {gallery.map((img, i) => (
+            <li>
+              <button
+                type="button"
+                class="block border transition-opacity"
+                :class={`active === ${i} ? 'border-black opacity-100' : 'border-transparent opacity-50 hover:opacity-100'`}
+                @click={`active = ${i}`}
+                aria-label={`Image ${i + 1} of ${gallery.length}`}
+              >
+                <Image
+                  src={img}
+                  alt=""
+                  width={96}
+                  class="h-12 w-auto object-contain"
+                />
+              </button>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  )) || (
+    <div class="bg-gray-200 w-80 h-60 grid grid-cols-1 place-content-center border">
+      Image missing
+    </div>
+  )
+}

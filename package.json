@@ -9,7 +9,9 @@
     "astro": "astro",
     "deploy": "astro build && wrangler deploy --config dist/server/wrangler.json",
     "cf:preview": "astro build && wrangler dev --config dist/server/wrangler.json",
-    "generate-types": "astro build && wrangler types --config dist/server/wrangler.json"
+    "generate-types": "astro build && wrangler types --config dist/server/wrangler.json",
+    "match-photos": "bun scripts/photo-matcher/server.ts",
+    "apply-photos": "bun scripts/photo-matcher/apply.ts"
   },
   "dependencies": {
     "@astrojs/alpinejs": "1.0.0",
@@ -18,8 +20,8 @@
     "@sveltia/cms": "^0.213.5",
     "@tailwindcss/typography": "^0.5.20",
     "@tailwindcss/vite": "^4.3.3",
-    "@types/alpinejs": "^3.13.11",
-    "alpinejs": "^3.17.3",
+    "@types/alpinejs": "^3.17.0",
+    "alpinejs": "^3.17.4",
     "astro": "7.3.1",
     "astro-icon": "^1.2.0",
     "astro-pagefind": "^2.0.1",
@@ -29,6 +31,6 @@
   },
   "devDependencies": {
     "gray-matter": "^4.0.3",
-    "wrangler": "^4.133.0"
+    "wrangler": "^4.143.0"
   }
 }

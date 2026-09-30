@@ -6,9 +6,12 @@ const _works = defineCollection({
   schema: ({ image }) =>
     z.object({
       uuid: z.string().optional().nullish(),
-      id: z.number().optional().nullish(),
+      // Older CMS saves wrote the id as a string ('127')
+      id: z.union([z.number(), z.string().regex(/^\d+$/).transform(Number)]).optional().nullish(),
       title: z.string().optional().nullish(),
       image: image().optional().nullish(),
+      images: z.array(image()).optional().nullish(),
+      old_image: image().optional().nullish(), // pre-reshoot photo, kept for reference; not shown on the site
       description: z.string().optional().nullish(),
       categories: z.string().optional().nullish(),
       w: z.number().optional().nullish(),

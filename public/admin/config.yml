@@ -39,9 +39,15 @@ collections:
     #   - "year_start"
     #   - "location"
     fields:
-      - { label: "Work ID", name: "id", widget: "string", required: false }
+      - { label: "Work ID", name: "id", widget: "number", value_type: "int", required: false }
       - { label: "Title", name: "title", widget: "string", required: true }
       - { label: "Image", name: "image", widget: "image", required: false }
+      - label: "More Images"
+        name: "images"
+        widget: list
+        required: false
+        field: { label: "Image", name: "image", widget: "image" }
+      - { label: "Old Image (not shown on site)", name: "old_image", widget: "image", required: false }
       - { label: "Description", name: "body", widget: "markdown", required: false }
       - { label: "Collections", name: "collections", widget: "relation", collection: "collections",  multiple: true, required: false }
       - label: "Tags"

@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Photo matcher</title>
+<style>
+  :root { --bg: #1c1c1c; --panel: #262626; --fg: #eee; --dim: #999; --accent: #f5c542; --ok: #6cc070; --warn: #e0714f; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: var(--bg); color: var(--fg); font: 14px/1.4 system-ui, sans-serif; }
+  body { display: flex; flex-direction: column; height: 100vh; }
+  main, #grid { flex: 1; min-height: 0; }
+  body[data-mode="grid"] :is(main, .strip, #seqKeys, .seqOnly), body[data-mode="seq"] :is(#grid, #gridKeys) { display: none !important; }
+  header { display: flex; gap: 1.5rem; align-items: center; padding: .5rem 1rem; background: var(--panel); flex-wrap: wrap; }
+  header b { color: var(--accent); }
+  header form { margin-left: auto; display: flex; gap: .5rem; }
+  input { background: #111; color: var(--fg); border: 1px solid #444; padding: .25rem .5rem; width: 7rem; }
+  main { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; padding: 1rem; min-height: 0; }
+  .pane { display: grid; grid-template-rows: auto 1fr auto; min-height: 0; background: var(--panel); padding: .75rem; border-radius: 4px; }
+  .pane h2 { margin: 0 0 .25rem; font-size: 1.1rem; }
+  .meta { color: var(--dim); }
+  .imgwrap { min-height: 0; display: grid; place-items: center; }
+  .imgwrap img { max-width: 100%; max-height: 100%; object-fit: contain; }
+  .missing { color: var(--dim); border: 1px dashed #555; padding: 3rem; }
+  .warn { color: var(--warn); }
+  .ok { color: var(--ok); }
+  .thumbs { display: flex; gap: .25rem; margin-top: .5rem; min-height: 3.5rem; align-items: center; }
+  .thumbs img { height: 3rem; }
+  .strip { display: flex; gap: .4rem; padding: .5rem 1rem; overflow-x: auto; background: var(--panel); }
+  .strip figure { margin: 0; cursor: pointer; opacity: .55; text-align: center; font-size: 11px; flex: none; }
+  .strip figure img { height: 64px; display: block; }
+  .strip figure.done { opacity: .35; }
+  .strip figure.current { opacity: 1; outline: 2px solid var(--accent); }
+  .strip figure.skip img { filter: grayscale(1); }
+  footer { padding: .4rem 1rem; color: var(--dim); display: flex; gap: 1.25rem; flex-wrap: wrap; }
+  kbd { background: #333; border: 1px solid #555; border-radius: 3px; padding: 0 .3rem; color: var(--fg); font: inherit; }
+  button { background: #333; color: var(--fg); border: 1px solid #555; border-radius: 3px; padding: .15rem .5rem; cursor: pointer; font: inherit; }
+  button:hover { border-color: var(--accent); }
+  .modes button[aria-pressed="true"] { background: var(--accent); color: #111; border-color: var(--accent); }
+
+  /* Grid mode */
+  #grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; padding: 1rem; --card: 150px; }
+  .gpane { grid-template-rows: auto 1fr; overflow: hidden; }
+  .gbody { position: relative; min-height: 0; }
+  .gbody .cards { height: 100%; }
+  .ghead { display: flex; gap: .75rem; align-items: center; flex-wrap: wrap; padding-bottom: .5rem; }
+  .ghead h2 { margin: 0; }
+  .ghead label { color: var(--dim); display: flex; gap: .3rem; align-items: center; }
+  .ghead input[type=checkbox] { width: auto; }
+  .zone { border: 1px dashed #666; border-radius: 4px; padding: .3rem .7rem; color: var(--dim); }
+  .zone:first-of-type { margin-left: auto; }
+  .cards { overflow-y: auto; display: grid; grid-template-columns: repeat(auto-fill, minmax(var(--card), 1fr)); gap: .5rem; align-content: start; }
+  .card { margin: 0; padding: .3rem; border: 2px solid transparent; border-radius: 4px; background: #1f1f1f; cursor: pointer; font-size: 12px; }
+  .card img { display: block; width: 100%; height: var(--card); object-fit: contain; }
+  .card .noimg { height: var(--card); display: grid; place-items: center; color: var(--dim); border: 1px dashed #444; }
+  .card figcaption { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding-top: .2rem; }
+  .card .badge { color: var(--ok); }
+  .card.skipped { opacity: .5; }
+  .card.skipped .badge { color: var(--warn); }
+  .card.dragging { opacity: .3; }
+  .over { border-color: var(--accent) !important; background: #3a3420 !important; }
+  .lightbox { position: absolute; inset: 0; z-index: 2; display: grid; grid-template-rows: auto 1fr auto; gap: .5rem; padding: .75rem; background: rgba(28, 28, 28, .97); border: 2px solid transparent; border-radius: 4px; }
+  .lightbox[hidden] { display: none; }
+  .lightbox .bar { display: flex; gap: .5rem; align-items: center; flex-wrap: wrap; }
+  .lightbox .bar .grow { flex: 1; min-width: 0; }
+  .lightbox .big { min-height: 0; display: grid; place-items: center; }
+  .lightbox .big img { max-width: 100%; max-height: 100%; object-fit: contain; }
+  .lightbox .thumbs figure { margin: 0; position: relative; }
+  .lightbox .thumbs button { position: absolute; top: 0; right: 0; padding: 0 .3rem; }
+</style>
+</head>
+<body>
+<header>
+  <span class="modes"><button id="modeSeq" type="button">Sequence</button> <button id="modeGrid" type="button">Grid</button></span>
+  <span class="seqOnly">ID <b id="idCount"></b></span>
+  <span class="seqOnly">Photo <b id="photoCount"></b></span>
+  <span id="stats" class="meta"></span>
+  <span class="seqOnly">A adds to: <b id="lastTarget">—</b></span>
+  <form id="jump" class="seqOnly"><input name="id" placeholder="go to id…" autocomplete="off" /></form>
+</header>
+<main>
+  <section class="pane">
+    <div id="workHead"></div>
+    <div class="imgwrap" id="oldImg"></div>
+    <div>
+      <div class="meta">New photos assigned to this id:</div>
+      <div class="thumbs" id="assignedThumbs"></div>
+    </div>
+  </section>
+  <section class="pane">
+    <div id="photoHead"></div>
+    <div class="imgwrap" id="newImg"></div>
+    <div class="meta" id="photoStatus"></div>
+  </section>
+</main>
+<div class="strip" id="strip"></div>
+<section id="grid">
+  <div class="pane gpane" id="idPane">
+    <div class="ghead">
+      <h2>Ids <span class="meta" id="idsLeft"></span></h2>
+      <label><input type="checkbox" id="showMatched" /> show matched &amp; new works</label>
+    </div>
+    <div class="gbody">
+      <div class="cards" id="idCards"></div>
+      <div class="lightbox" id="idBox" hidden></div>
+    </div>
+  </div>
+  <div class="pane gpane" id="photoPane">
+    <div class="ghead">
+      <h2>Photos <span class="meta" id="photosLeft"></span></h2>
+      <label><input type="checkbox" id="showSkipped" /> show skipped</label>
+      <div class="zone" id="dropNew">+ new work (print)</div>
+      <div class="zone" id="dropSkip">skip</div>
+    </div>
+    <div class="gbody">
+      <div class="cards" id="photoCards"></div>
+      <div class="lightbox" id="photoBox" hidden></div>
+    </div>
+  </div>
+</section>
+<footer id="gridKeys">
+  <span>Drag a photo onto an id (or its enlarged view) to assign it</span>
+  <span>Click a thumbnail to enlarge it in its own pane</span>
+  <span><kbd>←</kbd><kbd>→</kbd> browse the enlarged photo</span>
+  <span><kbd>Esc</kbd> close</span>
+  <span><kbd>Z</kbd> undo</span>
+  <span><kbd>G</kbd> switch view</span>
+  <label>Size <input type="range" id="cardSize" min="80" max="320" value="150" /></label>
+</footer>
+<footer id="seqKeys">
+  <span><kbd>G</kbd> grid view</span>
+  <span><kbd>Enter</kbd> match &amp; next id</span>
+  <span><kbd>A</kbd> add as extra image to last work</span>
+  <span><kbd>N</kbd> new work (no id, e.g. print)</span>
+  <span><kbd>S</kbd> id not in photos, skip</span>
+  <span><kbd>X</kbd> skip photo</span>
+  <span><kbd>←</kbd><kbd>→</kbd> browse ids</span>
+  <span><kbd>[</kbd><kbd>]</kbd> browse photos</span>
+  <span><kbd>Z</kbd> undo</span>
+</footer>
+
+<script type="module">
+const $ = (id) => document.getElementById(id);
+const { photos, state: initial, works } = await (await fetch("/api/init")).json();
+let state = initial;
+const history = [];
+
+const photoUrl = (p, thumb) => `/photo/${encodeURIComponent(p)}${thumb ? "?size=thumb" : ""}`;
+const oldUrl = (f, thumb) => `/old/${encodeURIComponent(f)}${thumb ? "?size=thumb" : ""}`;
+const pref = (key, fallback) => { try { return localStorage.getItem(`matcher-${key}`) ?? fallback; } catch { return fallback; } };
+const setPref = (key, value) => { try { localStorage.setItem(`matcher-${key}`, value); } catch {} };
+const assignmentOf = (photo) => state.assignments.find((a) => a.photo === photo);
+const currentId = () => state.ids[state.idPos];
+const currentPhoto = () => photos[state.photoPos];
+
+function targetLabel(target) {
+  if (!target) return "—";
+  if (target.startsWith("new:")) return `new work ${target.slice(4)}`;
+  const t = works[target]?.[0]?.title;
+  return `#${target}${t ? " " + t : ""}`;
+}
+
+function isOpen(photo) {
+  return !assignmentOf(photo) && !state.skippedPhotos.includes(photo);
+}
+function nextOpenPhoto(from) {
+  for (let i = from + 1; i < photos.length; i++) if (isOpen(photos[i])) return i;
+  return Math.min(from + 1, photos.length);
+}
+
+// Saves run one at a time; the server refuses a save based on an outdated revision
+// (e.g. from a second, forgotten tab).
+let saveTimer, saving = Promise.resolve();
+function save() {
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(() => {
+    saving = saving.then(async () => {
+      const res = await fetch("/api/state", { method: "PUT", body: JSON.stringify(state) });
+      if (res.status === 409) {
+        alert("Progress was changed in another tab or window. Reloading to the latest version.");
+        location.reload();
+        return;
+      }
+      state.rev = (await res.json()).rev;
+    });
+  }, 250);
+}
+
+function change(fn) {
+  history.push(JSON.stringify(state));
+  if (history.length > 500) history.shift();
+  fn();
+  save();
+  render();
+}
+
+function assignPhoto(photo, target) {
+  state.assignments = state.assignments.filter((a) => a.photo !== photo);
+  state.skippedPhotos = state.skippedPhotos.filter((p) => p !== photo);
+  state.assignments.push({ photo, target });
+  state.skippedIds = state.skippedIds.filter((i) => String(i) !== target);
+  state.lastTarget = target;
+  if (photo === currentPhoto()) state.photoPos = nextOpenPhoto(state.photoPos);
+}
+
+function skipPhotoByName(photo) {
+  state.assignments = state.assignments.filter((a) => a.photo !== photo);
+  if (!state.skippedPhotos.includes(photo)) state.skippedPhotos.push(photo);
+  if (photo === currentPhoto()) state.photoPos = nextOpenPhoto(state.photoPos);
+}
+
+function assign(target) {
+  const photo = currentPhoto();
+  if (!photo) return false;
+  assignPhoto(photo, target);
+  return true;
+}
+
+const actions = {
+  match() {
+    const id = currentId();
+    if (id == null || !currentPhoto()) return;
+    change(() => {
+      assign(String(id));
+      state.idPos = Math.min(state.idPos + 1, state.ids.length);
+    });
+  },
+  extra() {
+    if (!state.lastTarget || !currentPhoto()) return;
+    change(() => assign(state.lastTarget));
+  },
+  newWork() {
+    if (!currentPhoto()) return;
+    change(() => {
+      state.newCount += 1;
+      assign(`new:${state.newCount}`);
+    });
+  },
+  skipId() {
+    const id = currentId();
+    if (id == null) return;
+    change(() => {
+      if (!state.skippedIds.includes(id)) state.skippedIds.push(id);
+      state.idPos = Math.min(state.idPos + 1, state.ids.length);
+    });
+  },
+  skipPhoto() {
+    const photo = currentPhoto();
+    if (!photo) return;
+    change(() => skipPhotoByName(photo));
+  },
+  idBy(d) {
+    change(() => (state.idPos = Math.max(0, Math.min(state.ids.length, state.idPos + d))));
+  },
+  photoBy(d) {
+    change(() => (state.photoPos = Math.max(0, Math.min(photos.length, state.photoPos + d))));
+  },
+  undo() {
+    if (!history.length) return;
+    const rev = state.rev;
+    state = { ...JSON.parse(history.pop()), rev };
+    save();
+    render();
+  },
+};
+
+document.addEventListener("keydown", (e) => {
+  if ((e.target.tagName === "INPUT" && e.target.type !== "checkbox" && e.target.type !== "range") || e.metaKey || e.ctrlKey || e.altKey) return;
+  const map = mode === "grid" ? {
+    z: actions.undo, Backspace: actions.undo, g: () => setMode("seq"),
+    Escape: () => { openPhoto = openTarget = null; renderGrid(); },
+    ArrowLeft: () => stepBox(-1), ArrowRight: () => stepBox(1),
+  } : {
+    g: () => setMode("grid"),
+    Enter: actions.match, a: actions.extra, n: actions.newWork, s: actions.skipId, x: actions.skipPhoto,
+    z: actions.undo, Backspace: actions.undo,
+    ArrowLeft: () => actions.idBy(-1), ArrowRight: () => actions.idBy(1),
+    "[": () => actions.photoBy(-1), "]": () => actions.photoBy(1),
+  };
+  const fn = map[e.key.length === 1 ? e.key.toLowerCase() : e.key];
+  if (fn) { e.preventDefault(); fn(); }
+});
+
+$("jump").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const input = e.target.elements.id;
+  const id = Number(input.value.trim());
+  input.value = "";
+  input.blur();
+  if (!id) return;
+  if (!works[id]) works[id] = await (await fetch(`/api/work?id=${id}`)).json();
+  change(() => {
+    let pos = state.ids.indexOf(id);
+    if (pos < 0) {
+      pos = Math.min(state.idPos + 1, state.ids.length);
+      state.ids.splice(pos, 0, id);
+    }
+    state.idPos = pos;
+  });
+});
+
+function img(src) {
+  const el = document.createElement("img");
+  el.src = src;
+  return el;
+}
+
+function render() {
+  const matched = new Set(state.assignments.map((a) => a.target));
+  $("stats").textContent =
+    `${state.assignments.length} photos placed · ${[...matched].filter((t) => !t.startsWith("new:")).length} ids matched · ` +
+    `${state.newCount} new works · ${state.skippedIds.length} ids skipped · ${state.skippedPhotos.length} photos skipped`;
+  if (mode === "grid") renderGrid();
+  else renderSeq();
+}
+
+function renderSeq() {
+  const id = currentId();
+  const photo = currentPhoto();
+
+  $("idCount").textContent = `${Math.min(state.idPos + 1, state.ids.length)} / ${state.ids.length}`;
+  $("photoCount").textContent = `${Math.min(state.photoPos + 1, photos.length)} / ${photos.length}`;
+  $("lastTarget").textContent = targetLabel(state.lastTarget);
+
+  // Left: the work as it is on the site now
+  const head = $("workHead"), old = $("oldImg"), thumbs = $("assignedThumbs");
+  old.replaceChildren();
+  thumbs.replaceChildren();
+  if (id == null) {
+    head.innerHTML = `<h2>End of id list</h2><div class="meta">Keep going with <kbd>N</kbd> / <kbd>A</kbd>, or jump to an id.</div>`;
+  } else {
+    const found = works[id] ?? [];
+    const w = found[0];
+    const bits = w ? [w.year, w.w && w.h ? `${w.w} × ${w.h}` : null, w.location, w.slug].filter(Boolean) : [];
+    head.innerHTML = `<h2>#${id} ${w?.title ?? ""}</h2><div class="meta"></div>`;
+    head.querySelector(".meta").textContent = bits.join(" · ");
+    if (found.length > 1) head.insertAdjacentHTML("beforeend", `<div class="warn">${found.length} works share this id: ${found.map((f) => f.slug).join(", ")}</div>`);
+    if (!w) head.insertAdjacentHTML("beforeend", `<div class="warn">No work with this id. Applying will create one.</div>`);
+    if (state.skippedIds.includes(id)) head.insertAdjacentHTML("beforeend", `<div class="warn">Marked as skipped</div>`);
+    if (w?.image) old.append(img(`/old/${encodeURIComponent(w.image)}`));
+    else old.innerHTML = `<div class="missing">No current image</div>`;
+    for (const a of state.assignments.filter((a) => a.target === String(id))) thumbs.append(img(photoUrl(a.photo, true)));
+  }
+
+  // Right: the next photo to identify
+  const newImg = $("newImg");
+  newImg.replaceChildren();
+  if (!photo) {
+    $("photoHead").innerHTML = `<h2>No more photos</h2>`;
+    $("photoStatus").textContent = "";
+  } else {
+    $("photoHead").innerHTML = `<h2></h2>`;
+    $("photoHead").firstChild.textContent = photo;
+    newImg.append(img(photoUrl(photo)));
+    const a = assignmentOf(photo);
+    $("photoStatus").innerHTML = a
+      ? `<span class="ok">Assigned to ${targetLabel(a.target)}</span>`
+      : state.skippedPhotos.includes(photo) ? `<span class="warn">Skipped</span>` : "Not assigned yet";
+  }
+
+  // Filmstrip around the current photo
+  const strip = $("strip");
+  strip.replaceChildren();
+  const from = Math.max(0, state.photoPos - 4);
+  for (let i = from; i < Math.min(photos.length, from + 18); i++) {
+    const p = photos[i], a = assignmentOf(p);
+    const fig = document.createElement("figure");
+    fig.className = [i === state.photoPos && "current", a && "done", state.skippedPhotos.includes(p) && "skip"].filter(Boolean).join(" ");
+    fig.append(img(photoUrl(p, true)));
+    const cap = document.createElement("figcaption");
+    cap.textContent = a ? (a.target.startsWith("new:") ? `new ${a.target.slice(4)}` : `#${a.target}`) : state.skippedPhotos.includes(p) ? "skip" : "·";
+    fig.append(cap);
+    fig.onclick = () => change(() => (state.photoPos = i));
+    strip.append(fig);
+  }
+  strip.querySelector(".current")?.scrollIntoView({ inline: "center", block: "nearest" });
+}
+
+// ---------- Grid view: unmatched ids on the left, unmatched photos on the right ----------
+
+let mode = pref("mode", "seq");
+let openTarget = null; // enlarged id / new work in the left pane
+let openPhoto = null; // enlarged photo in the right pane
+let visibleTargets = [], visiblePhotos = [];
+
+function setMode(m) {
+  mode = m;
+  setPref("mode", m);
+  document.body.dataset.mode = m;
+  $("modeSeq").setAttribute("aria-pressed", m === "seq");
+  $("modeGrid").setAttribute("aria-pressed", m === "grid");
+  render();
+}
+$("modeSeq").onclick = () => setMode("seq");
+$("modeGrid").onclick = () => setMode("grid");
+
+for (const key of ["showMatched", "showSkipped"]) {
+  $(key).checked = pref(key, "") === "1";
+  $(key).onchange = () => { setPref(key, $(key).checked ? "1" : ""); renderGrid(); };
+}
+const applySize = (v) => { $("grid").style.setProperty("--card", `${v}px`); $("cardSize").value = v; };
+applySize(pref("cardSize", "150"));
+$("cardSize").oninput = (e) => { applySize(e.target.value); setPref("cardSize", e.target.value); };
+
+const photosOf = (target) => state.assignments.filter((a) => a.target === target).map((a) => a.photo);
+
+function describe(target) {
+  if (target.startsWith("new:")) return { title: `New work ${target.slice(4)}`, meta: "no id", image: null };
+  const w = works[target]?.[0];
+  const bits = w ? [w.year, w.w && w.h ? `${w.w} × ${w.h}` : null, w.location].filter(Boolean) : ["no work with this id"];
+  return { title: `#${target} ${w?.title ?? ""}`, meta: bits.join(" · "), image: w?.image ?? null };
+}
+
+// Anything a photo can be dropped on. `resolve` returns the target at drop time.
+function dropTarget(el, resolve) {
+  el.addEventListener("dragover", (e) => {
+    if (!e.dataTransfer.types.includes("text/x-photo")) return;
+    e.preventDefault();
+    el.classList.add("over");
+  });
+  el.addEventListener("dragleave", (e) => { if (!el.contains(e.relatedTarget)) el.classList.remove("over"); });
+  el.addEventListener("drop", (e) => {
+    e.preventDefault();
+    el.classList.remove("over");
+    const photo = e.dataTransfer.getData("text/x-photo");
+    const target = resolve();
+    if (!photo || !target) return;
+    change(() => {
+      if (target === "skip") skipPhotoByName(photo);
+      else if (target === "new") { state.newCount += 1; assignPhoto(photo, `new:${state.newCount}`); }
+      else assignPhoto(photo, target);
+      if (openPhoto === photo) openPhoto = null;
+    });
+  });
+}
+
+function draggablePhoto(el, photo) {
+  el.draggable = true;
+  el.addEventListener("dragstart", (e) => {
+    e.dataTransfer.setData("text/x-photo", photo);
+    e.dataTransfer.effectAllowed = "move";
+    el.classList.add("dragging");
+  });
+  el.addEventListener("dragend", () => el.classList.remove("dragging"));
+}
+
+dropTarget($("dropNew"), () => "new");
+dropTarget($("dropSkip"), () => "skip");
+dropTarget($("idBox"), () => openTarget);
+
+// Cards are built once and reused, so re-rendering after a drop doesn't reload every image.
+const targetCards = new Map(), photoCards = new Map();
+
+function targetCard(target) {
+  let el = targetCards.get(target);
+  if (!el) {
+    el = document.createElement("figure");
+    el.className = "card";
+    el.innerHTML = `<div class="pic"></div><figcaption><b></b> <span class="badge"></span><div class="meta"></div></figcaption>`;
+    el.onclick = () => { openTarget = target; renderGrid(); };
+    dropTarget(el, () => target);
+    targetCards.set(target, el);
+  }
+  const d = describe(target);
+  const assigned = photosOf(target);
+  const src = d.image ? oldUrl(d.image, true) : assigned[0] ? photoUrl(assigned[0], true) : null;
+  const pic = el.querySelector(".pic");
+  if (pic.dataset.src !== (src ?? "")) {
+    pic.dataset.src = src ?? "";
+    pic.replaceChildren();
+    if (src) { const i = img(src); i.loading = "lazy"; pic.append(i); }
+    else pic.innerHTML = `<div class="noimg">no image</div>`;
+  }
+  el.querySelector("b").textContent = d.title;
+  el.querySelector("figcaption .meta").textContent = d.meta;
+  const skipped = state.skippedIds.includes(Number(target));
+  el.querySelector(".badge").textContent = assigned.length ? `✓ ${assigned.length}` : skipped ? "skipped" : "";
+  el.classList.toggle("skipped", skipped && !assigned.length);
+  el.title = d.title;
+  return el;
+}
+
+function photoCard(photo) {
+  let el = photoCards.get(photo);
+  if (!el) {
+    el = document.createElement("figure");
+    el.className = "card";
+    const i = img(photoUrl(photo, true));
+    i.loading = "lazy";
+    i.draggable = false;
+    el.append(i);
+    el.insertAdjacentHTML("beforeend", `<figcaption></figcaption>`);
+    el.querySelector("figcaption").textContent = photo;
+    el.title = photo;
+    el.onclick = () => { openPhoto = photo; renderGrid(); };
+    draggablePhoto(el, photo);
+    photoCards.set(photo, el);
+  }
+  el.classList.toggle("skipped", state.skippedPhotos.includes(photo));
+  return el;
+}
+
+function stepBox(d) {
+  if (openPhoto) {
+    const i = visiblePhotos.indexOf(openPhoto);
+    openPhoto = visiblePhotos[Math.max(0, Math.min(visiblePhotos.length - 1, i + d))] ?? null;
+  } else if (openTarget) {
+    const i = visibleTargets.indexOf(openTarget);
+    openTarget = visibleTargets[Math.max(0, Math.min(visibleTargets.length - 1, i + d))] ?? openTarget;
+  }
+  renderGrid();
+}
+
+function button(label, onclick) {
+  const b = document.createElement("button");
+  b.type = "button";
+  b.textContent = label;
+  b.onclick = (e) => { e.stopPropagation(); onclick(); };
+  return b;
+}
+
+function renderIdBox() {
+  const box = $("idBox");
+  box.hidden = !openTarget;
+  if (!openTarget) return;
+  const d = describe(openTarget);
+  const assigned = photosOf(openTarget);
+  const title = document.createElement("div");
+  title.className = "grow";
+  title.innerHTML = `<b></b><div class="meta"></div>`;
+  title.querySelector("b").textContent = d.title;
+  title.querySelector(".meta").textContent = d.meta;
+  const bar = document.createElement("div");
+  bar.className = "bar";
+  bar.append(button("‹", () => { openPhoto = null; stepBox(-1); }), title, button("›", () => { openPhoto = null; stepBox(1); }), button("✕", () => { openTarget = null; renderGrid(); }));
+
+  const big = document.createElement("div");
+  big.className = "big";
+  if (d.image) big.append(img(oldUrl(d.image)));
+  else if (assigned[0]) big.append(img(photoUrl(assigned[0])));
+  else big.innerHTML = `<div class="missing">No current image. Drop a photo here.</div>`;
+
+  const thumbs = document.createElement("div");
+  thumbs.className = "thumbs";
+  thumbs.append(Object.assign(document.createElement("span"), { className: "meta", textContent: assigned.length ? "Assigned:" : "Drop a photo here to assign it." }));
+  for (const p of assigned) {
+    const fig = document.createElement("figure");
+    fig.append(img(photoUrl(p, true)));
+    fig.append(button("✕", () => change(() => { state.assignments = state.assignments.filter((a) => a.photo !== p); })));
+    fig.title = `${p}: click ✕ to unassign`;
+    thumbs.append(fig);
+  }
+  box.replaceChildren(bar, big, thumbs);
+}
+
+function renderPhotoBox() {
+  const box = $("photoBox");
+  box.hidden = !openPhoto;
+  if (!openPhoto) return;
+  const photo = openPhoto;
+  const name = document.createElement("div");
+  name.className = "grow";
+  name.innerHTML = `<b></b> <span class="meta">drag onto an id to assign</span>`;
+  name.querySelector("b").textContent = photo;
+  const bar = document.createElement("div");
+  bar.className = "bar";
+  bar.append(button("‹", () => stepBox(-1)), name, button("›", () => stepBox(1)), button("✕", () => { openPhoto = null; renderGrid(); }));
+
+  const big = document.createElement("div");
+  big.className = "big";
+  const i = img(photoUrl(photo));
+  i.draggable = false;
+  big.append(i);
+  draggablePhoto(big, photo);
+
+  const actionsBar = document.createElement("div");
+  actionsBar.className = "bar";
+  const next = () => visiblePhotos[visiblePhotos.indexOf(photo) + 1] ?? visiblePhotos[visiblePhotos.indexOf(photo) - 1] ?? null;
+  actionsBar.append(
+    button("New work (print)", () => { const n = next(); change(() => { state.newCount += 1; assignPhoto(photo, `new:${state.newCount}`); openPhoto = n; }); }),
+    button(state.skippedPhotos.includes(photo) ? "Unskip" : "Skip", () => {
+      const n = next();
+      change(() => {
+        if (state.skippedPhotos.includes(photo)) state.skippedPhotos = state.skippedPhotos.filter((p) => p !== photo);
+        else { skipPhotoByName(photo); openPhoto = $("showSkipped").checked ? photo : n; }
+      });
+    }),
+  );
+  if (openTarget) actionsBar.append(button(`Assign to ${describe(openTarget).title}`, () => { const n = next(); change(() => { assignPhoto(photo, openTarget); openPhoto = n; }); }));
+  box.replaceChildren(bar, big, actionsBar);
+}
+
+function renderGrid() {
+  const matched = new Set(state.assignments.map((a) => a.target));
+  const showMatched = $("showMatched").checked;
+  const newTargets = [...matched].filter((t) => t.startsWith("new:"));
+  visibleTargets = [
+    ...state.ids.map(String).filter((t) => showMatched || !matched.has(t)),
+    ...(showMatched ? newTargets : []),
+  ];
+  const assigned = new Set(state.assignments.map((a) => a.photo));
+  visiblePhotos = photos.filter((p) => !assigned.has(p) && ($("showSkipped").checked || !state.skippedPhotos.includes(p)));
+
+  $("idsLeft").textContent = `${state.ids.filter((id) => !matched.has(String(id))).length} unmatched of ${state.ids.length}`;
+  $("photosLeft").textContent = `${photos.filter((p) => !assigned.has(p) && !state.skippedPhotos.includes(p)).length} unmatched of ${photos.length}`;
+  $("idCards").replaceChildren(...visibleTargets.map(targetCard));
+  $("photoCards").replaceChildren(...visiblePhotos.map(photoCard));
+
+  if (openTarget && !visibleTargets.includes(openTarget) && !matched.has(openTarget)) openTarget = null;
+  if (openPhoto && !photos.includes(openPhoto)) openPhoto = null;
+  renderIdBox();
+  renderPhotoBox();
+}
+
+setMode(mode);
+</script>
+</body>
+</html>

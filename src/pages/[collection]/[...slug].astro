@@ -7,7 +7,7 @@ import {
   render,
 } from "astro:content";
 import Layout from "@layouts/Layout.astro";
-import { Image } from "astro:assets";
+import WorkImages from "@components/WorkImages.astro";
 import { shortHash, getNavDigest } from "@src/lib/cache-key";
 
 
@@ -123,19 +123,7 @@ const { count, index } = works.reduce(
 
 <Layout>
   <section class="grid max-w-4xl mx-auto py-4">
-    {
-      work.data.image && (
-        <Image
-          src={work.data.image}
-          alt={work.data.title || ""}
-          width={1024}
-          class="object-contain h-[70vh]"
-        />
-      )
-      || (
-                  <div class="w-80 h-60 grid grid-cols-1 place-content-center">Image missing</div>
-                )
-    }
+    <WorkImages work={work} />
     <div class="py-4 w-full text-center font-bold">
       {work.data.title || "Untitled"}
       {work.data.year_start && `, ${work.data.year_start || "Undated"}`}
