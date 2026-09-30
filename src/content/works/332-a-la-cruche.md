@@ -1,12 +1,13 @@
 ---
 id: 332
 title: A la cruche
-image: '@img/332-a-la-cruche.jpg'
+image: '@img/332-a-la-cruche-v2.jpg'
 collections:
   - marco
   - alisa
   - natures-mortes
   - selected-july-2025
+  - selected-paintings
 categories: Natures mortes
 w: 70
 h: 50
@@ -18,5 +19,9 @@ year_start: 1974
 year_end: null
 file: '@img/332-a-la-cruche.jpg'
 uuid: 65c5fff0-9440-4503-80f8-4b382fc3cf76
+old_image: '@img/332-a-la-cruche.jpg'
+images:
+  - '@img/332-a-la-cruche-v2-2.jpg'
+  - '@img/332-a-la-cruche-v2-3.jpg'
 ---
 

@@ -1,10 +1,11 @@
 ---
 id: 500
 title: Paysage nordique 1
-image: '@img/500-paysage-nordique-1.jpg'
+image: '@img/500-paysage-nordique-1-v2.jpg'
 collections:
   - abstrait
   - selected-july-2025
+  - selected-paintings
 categories: Abstrait
 w: 120
 h: 100
@@ -16,5 +17,6 @@ year_start: 1965
 year_end: null
 file: '@img/500-paysage-nordique-1.jpg'
 uuid: e8c3113b-b14b-445f-93a3-a09d74149bfd
+old_image: '@img/500-paysage-nordique-1.jpg'
 ---
 

@@ -1,10 +1,11 @@
 ---
 id: 579
 title: Table généreuse
-image: '@img/579-table-genereuse.jpg'
+image: '@img/579-table-genereuse-v2.jpg'
 collections:
   - natures-mortes
   - selected-july-2025
+  - selected-paintings
 categories: Natures mortes
 w: 120
 h: 80
@@ -16,5 +17,9 @@ year_start: 1983
 year_end: null
 file: '@img/579-table-genereuse.jpg'
 uuid: 127362eb-0c54-4cb2-897a-75d28271cbff
+old_image: '@img/579-table-genereuse.jpg'
+images:
+  - '@img/579-table-genereuse-v2-2.jpg'
+  - '@img/579-table-genereuse-v2-3.jpg'
 ---
 

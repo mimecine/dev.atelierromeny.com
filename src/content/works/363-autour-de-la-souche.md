@@ -1,10 +1,11 @@
 ---
 id: 363
 title: Autour de la souche
-image: '@img/363-autour-de-la-souche.jpg'
+image: '@img/363-autour-de-la-souche-v2.jpg'
 collections:
   - abstrait
   - selected-july-2025
+  - selected-paintings
 categories: Abstrait
 w: 73
 h: 54
@@ -16,5 +17,9 @@ year_start: 1971
 year_end: null
 file: '@img/363-autour-de-la-souche.jpg'
 uuid: 489d36e7-239d-41e4-a99b-c1b63a430d8b
+old_image: '@img/363-autour-de-la-souche.jpg'
+images:
+  - '@img/363-autour-de-la-souche-v2-2.jpg'
+  - '@img/363-autour-de-la-souche-v2-3.jpg'
 ---
 

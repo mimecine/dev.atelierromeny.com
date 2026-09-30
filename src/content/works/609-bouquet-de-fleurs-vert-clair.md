@@ -1,10 +1,11 @@
 ---
 id: 609
 title: Bouquet de fleurs (vert Clair)
-image: '@img/609-bouquet-de-fleurs-vert-clair.jpg'
+image: '@img/609-bouquet-de-fleurs-vert-clair-v2.jpg'
 collections:
   - fleurs
   - selected-july-2025
+  - selected-paintings
 categories: Fleurs
 w: 50
 h: 70
@@ -16,5 +17,6 @@ year_start: 1983
 year_end: null
 file: '@img/609-bouquet-de-fleurs-vert-clair.jpg'
 uuid: ddde1355-0916-4046-b2af-93a5d0915da9
+old_image: '@img/609-bouquet-de-fleurs-vert-clair.jpg'
 ---
 

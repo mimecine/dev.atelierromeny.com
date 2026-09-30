@@ -1,10 +1,11 @@
 ---
 id: 601
 title: Extase
-image: '@img/601-extase.jpg'
+image: '@img/601-extase-v2.jpg'
 collections:
   - abstrait
   - selected-july-2025
+  - selected-paintings
 categories: Abstrait
 w: 80
 h: 60
@@ -16,5 +17,6 @@ year_start: 1967
 year_end: null
 file: '@img/601-extase.jpg'
 uuid: 9c4a7982-ffe1-4fbd-95f9-530750aa97b6
+old_image: '@img/601-extase.jpg'
 ---
 

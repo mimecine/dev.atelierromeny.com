@@ -1,10 +1,11 @@
 ---
 id: 762
 title: Coin du jardin
-image: '@img/762-coin-du-jardin.jpg'
+image: '@img/762-coin-du-jardin-v2.jpg'
 collections:
   - fleurs
   - selected-july-2025
+  - selected-paintings
 categories: Fleurs
 w: 60
 h: 50
@@ -16,5 +17,6 @@ year_start: 1997
 year_end: null
 file: '@img/762-coin-du-jardin.jpg'
 uuid: 8e9ed41a-4fb9-49d9-b686-eb33085a3819
+old_image: '@img/762-coin-du-jardin.jpg'
 ---
 

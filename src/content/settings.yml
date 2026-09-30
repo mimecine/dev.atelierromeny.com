@@ -2,20 +2,25 @@ site_title: Edlef Romeny
 menu:
   - title: Bio
     href: /bio
-  - title: '[[ First Round ]]'
-    href: /selected-july-2025
-  - title: '[[ All Works ]]'
-    href: /_works
-  - title: '[[ Unclassed ]]'
-    href: /rejected
+  - title: Paintings
+    href: /selected-paintings
+  - title: Prints
+    href: /selected-prints
   - title: SEARCH
     href: /search
 sections:
   - type: collection
     title: Featured
-    collection: front-page-featured
+    collection: selected-paintings
     show_title: false
     hidden: false
+  - type: carousel
+    title: Image Gallery
+    hidden: false
+    images:
+      - '@img/127-la-serviette-bleue-v2.jpg'
+      - '@img/127-la-serviette-bleue-v2-2.jpg'
+      - '@img/127-la-serviette-bleue-v2-3.jpg'
 socials:
   - title: Instagram
     href: https://www.instagram.com/atelierromeny/

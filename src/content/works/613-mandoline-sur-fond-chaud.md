@@ -1,10 +1,11 @@
 ---
 id: 613
 title: Mandoline sur fond Chaud
-image: '@img/613-mandoline-sur-fond-chaud.jpg'
+image: '@img/613-mandoline-sur-fond-chaud-v2.jpg'
 collections:
   - natures-mortes
   - selected-july-2025
+  - selected-paintings
 categories: Natures mortes
 w: 87
 h: 73
@@ -16,5 +17,6 @@ year_start: 1971
 year_end: null
 file: '@img/613-mandoline-sur-fond-chaud.jpg'
 uuid: de59a551-f9f2-4ba2-b6a2-e68574e67725
+old_image: '@img/613-mandoline-sur-fond-chaud.jpg'
 ---
 
