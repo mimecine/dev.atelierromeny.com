@@ -28,7 +28,7 @@ const isDev = process.argv[2] === 'dev';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://dev.atelierromeny.com',
+  site: 'https://atelierromeny.com',
   output: 'server',
 
   image: isDev ? { service: passthroughImageService() } : undefined,

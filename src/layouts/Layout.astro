@@ -63,6 +63,9 @@ const isHome = Astro.url.pathname === "/";
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
     {noindex && <meta name="robots" content="noindex" />}
+    {/* The site is also reachable on dev.atelierromeny.com and workers.dev; point search
+        engines at the main domain (`site` in astro.config.mjs) */}
+    {Astro.site && <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site).href} />}
     <slot name="head" />
     <title>{title && `${title} -`} Atelier Romeny</title>
     <ClientRouter />
