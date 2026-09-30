@@ -6,6 +6,7 @@ import WorkCard from "@components/WorkCard.astro";
 import SearchMeta from "@components/SearchMeta.astro";
 import { shortHash, getNavDigest } from "@src/lib/cache-key";
 import { isMenuCollection } from "@src/lib/settings";
+import { thumbnailOf } from "@src/lib/works";
 
 export async function getStaticPaths() {
   let collections = await getCollection("collections",(col) => col.data.published !== false);
@@ -55,6 +56,8 @@ collection.data.title === "Works")))
 
 <Layout
   title={collection.data.title || undefined}
+  image={works[0] && thumbnailOf(works[0])}
+  description={`${collection.data.title || "Works"}: ${works.length} works by Edlef Romeny`}
   searchable
   noindex={!isMenuCollection(collection.id)}
 >

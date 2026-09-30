@@ -12,6 +12,7 @@ import SearchMeta from "@components/SearchMeta.astro";
 import { shortHash, getNavDigest } from "@src/lib/cache-key";
 import { workTransitionName } from "@src/lib/view-transition";
 import { isMenuCollection } from "@src/lib/settings";
+import { thumbnailOf } from "@src/lib/works";
 
 
 export async function getStaticPaths() {
@@ -126,6 +127,12 @@ const { count, index } = works.reduce(
 
 <Layout
   title={work.data.title || "Untitled"}
+  image={thumbnailOf(work)}
+  description={[
+    `Edlef Romeny, ${work.data.title || "Untitled"}`,
+    work.data.year_start,
+    work.data.w && work.data.h && `${work.data.w} × ${work.data.h} cm`,
+  ].filter(Boolean).join(", ")}
   bodyclasses="work-page"
   searchable={collection.id === "_works"}
   noindex={!isMenuCollection(collection.id)}

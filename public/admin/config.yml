@@ -256,7 +256,8 @@ collections:
           - { label: "Extra CSS", name: "css", widget: "text", hint: "Don't forget !important if needed. TailwindCSS @apply works.", required: false, preview: false }
           - { label: "Extra JS", name: "js", widget: "text", required: false, preview: false }
           - { label: "Collections", name: "collections", widget: "relation", collection: "collections", search_fields: ["title"], display_fields: ["title"], multiple: true, required: false }
-          - { label: "Description", name: "description", widget: "text", required: false }
+          - { label: "Description", name: "description", widget: "text", required: false, hint: "Used by search engines and link previews when a page has no text of its own" }
+          - { label: "Sharing Image", name: "share_image", widget: "image", required: false, hint: "Shown when a link to the site is shared (Facebook, X, messages). Work, collection and page links use their own image." }
           - { label: "Author", name: "author", widget: "string", required: false }
           - { label: "Email", name: "email", widget: "string", required: false }
 

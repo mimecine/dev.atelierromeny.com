@@ -7,12 +7,17 @@ import { loadSettings } from "@src/lib/settings";
 import { renderMarkdown } from "@src/lib/markdown";
 
 import { ClientRouter } from "astro:transitions";
+import { getImage } from "astro:assets";
+import type { ImageMetadata } from "astro";
+import { resolveMedia } from "@src/lib/media";
 import { getCollection } from "astro:content";
 
 interface Props {
   title?: string;
+  /** meta description and sharing text; defaults to Settings > Description */
   description?: string;
-  image?: string;
+  /** image for link previews (Facebook, X, iMessage…); defaults to Settings > Sharing Image */
+  image?: ImageMetadata | null;
   frontmatter?: Record<string, unknown>;
   bodyclasses?: string | string[];
   slug?: string;
@@ -41,7 +46,23 @@ const collections = await getCollection(
   (collection) => collection.data.published && collection.data.inmenu
 );
 
-const { menu, socials = [], barrier, ga } = loadSettings();
+const {
+  menu,
+  socials = [],
+  barrier,
+  ga,
+  description: siteDescription,
+  share_image,
+} = loadSettings();
+
+// Link previews (Open Graph / Twitter cards): a 1200px JPEG, which every service accepts.
+const absolute = (path: string) => new URL(path, Astro.site ?? Astro.url).href;
+const pageDescription = description || siteDescription;
+const shareSource = image ?? resolveMedia(share_image);
+const share = shareSource
+  ? await getImage({ src: shareSource, width: Math.min(shareSource.width, 1200), format: "jpg" })
+  : undefined;
+const shareTitle = title ? `${title} - Atelier Romeny` : "Atelier Romeny";
 // Google Analytics (Settings > Google Analytics). Only a well-formed ID is used, since it
 // ends up inside a script. Soft navigations (ClientRouter) are counted by GA4's enhanced
 // measurement ("page changes based on browser history events", on by default).
@@ -65,7 +86,24 @@ const isHome = Astro.url.pathname === "/";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="description" content={description} />
+    <meta name="description" content={pageDescription} />
+    <meta property="og:site_name" content="Atelier Romeny" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={shareTitle} />
+    {pageDescription && <meta property="og:description" content={pageDescription} />}
+    <meta property="og:url" content={absolute(Astro.url.pathname)} />
+    {
+      share && (
+        <>
+          <meta property="og:image" content={absolute(share.src)} />
+          <meta property="og:image:width" content={String(share.attributes.width)} />
+          <meta property="og:image:height" content={String(share.attributes.height)} />
+          <meta property="og:image:alt" content={title || "Atelier Romeny"} />
+        </>
+      )
+    }
+    {/* small images (like the bio portrait) look better as a compact card */}
+    <meta name="twitter:card" content={share && share.attributes.width >= 600 ? "summary_large_image" : "summary"} />
     {noindex && <meta name="robots" content="noindex" />}
     {/* The site is also reachable on dev.atelierromeny.com and workers.dev; point search
         engines at the main domain (`site` in astro.config.mjs) */}

@@ -18,6 +18,8 @@ export interface Settings {
   description: string;
   author: string;
   email: string;
+  /** default image for link previews */
+  share_image?: string;
   barrier?: Barrier;
 }
 
