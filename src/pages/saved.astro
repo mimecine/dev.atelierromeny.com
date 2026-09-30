@@ -3,11 +3,7 @@ export const prerender = true;
 import Layout from "@layouts/Layout.astro";
 ---
 
-<Layout title="Saved works">
-  <slot name="head">
-    <title>Saved works - Atelier Romeny</title>
-    <meta name="robots" content="noindex" />
-  </slot>
+<Layout title="Saved works" noindex>
   <section class="grid max-w-6xl mx-auto py-4" x-data="savedList()" x-init="init()">
     <h1>Saved</h1>
     <p x-cloak x-show="!loading && items.length === 0" class="text-gray-500">

@@ -63,3 +63,11 @@ export interface Section {
 export function loadSettings(): Settings {
   return parse(settingsRaw);
 }
+
+/** A collection is "in the menu" if a link in Settings > Menu points to it. Only those
+ *  collections, and works shown under them, are open to search engines.
+ *  (The collections' own "Shown In Menu" flag isn't used; the menu comes from Settings.) */
+export function isMenuCollection(id: string) {
+  const hrefs = (loadSettings().menu ?? []).map((m) => m.href.replace(/\/+$/, ""));
+  return hrefs.includes(`/${id}`);
+}

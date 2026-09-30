@@ -19,6 +19,8 @@ interface Props {
   /** Include this page in site search. Opt-in, so each work is indexed once (its
    *  /_works/ page) rather than once per collection it's in. See SearchMeta.astro. */
   searchable?: boolean;
+  /** Ask search engines not to index this page */
+  noindex?: boolean;
   [key: string]: unknown;
 }
 
@@ -29,6 +31,7 @@ const {
   slug,
   bodyclasses,
   searchable = false,
+  noindex = false,
   title = frontmatter?.title,
   ...props
 } = Astro.props;
@@ -59,6 +62,7 @@ const isHome = Astro.url.pathname === "/";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex" />}
     <slot name="head" />
     <title>{title && `${title} -`} Atelier Romeny</title>
     <ClientRouter />

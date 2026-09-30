@@ -11,6 +11,7 @@ import WorkImages from "@components/WorkImages.astro";
 import SearchMeta from "@components/SearchMeta.astro";
 import { shortHash, getNavDigest } from "@src/lib/cache-key";
 import { workTransitionName } from "@src/lib/view-transition";
+import { isMenuCollection } from "@src/lib/settings";
 
 
 export async function getStaticPaths() {
@@ -127,6 +128,7 @@ const { count, index } = works.reduce(
   title={work.data.title || "Untitled"}
   bodyclasses="work-page"
   searchable={collection.id === "_works"}
+  noindex={!isMenuCollection(collection.id)}
 >
   <section class="flex flex-col flex-1 min-h-0 w-full max-w-4xl mx-auto">
     <SearchMeta

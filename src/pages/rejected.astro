@@ -17,7 +17,7 @@ const rejectedWorks = works.filter(
     !work.data.collections.some((col) => acceptedCollections.includes(col))
 );
 ---
-<Layout title="Unclassed Works">
+<Layout title="Unclassed Works" noindex>
   <section class="grid max-w-6xl mx-auto py-4">
     <div class="works-grid">
       {

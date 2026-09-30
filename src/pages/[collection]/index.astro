@@ -5,6 +5,7 @@ import { type CollectionEntry, getCollection, render } from "astro:content";
 import WorkCard from "@components/WorkCard.astro";
 import SearchMeta from "@components/SearchMeta.astro";
 import { shortHash, getNavDigest } from "@src/lib/cache-key";
+import { isMenuCollection } from "@src/lib/settings";
 
 export async function getStaticPaths() {
   let collections = await getCollection("collections",(col) => col.data.published !== false);
@@ -52,8 +53,11 @@ collection.data.title === "Works")))
   );
 ---
 
-<Layout title={collection.data.title || undefined} searchable>
-  <meta slot="head" name="robots" content="noindex" />
+<Layout
+  title={collection.data.title || undefined}
+  searchable
+  noindex={!isMenuCollection(collection.id)}
+>
   <section class="grid max-w-6xl mx-auto py-4">
     <SearchMeta type="collection" title={collection.data.title || "Works"} />
     <Content />

@@ -8,7 +8,7 @@ import Layout from "@layouts/Layout.astro";
 import PagefindConfig from "astro-pagefind/components/PagefindConfig.astro";
 ---
 
-<Layout title="Search">
+<Layout title="Search" noindex>
   <section class="w-full max-w-4xl mx-auto py-4">
     <div class="pagefind-site">
       <PagefindConfig highlight-param="q" instance="site-search" />

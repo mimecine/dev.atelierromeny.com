@@ -71,6 +71,10 @@ Search uses [Pagefind](https://pagefind.app), built into `dist/client/pagefind` 
 
 The search page (`src/pages/search.astro`) renders its own results. It lists collections first, then pages, then works, pages through them, and keeps `?q=` in the URL, so Back returns to the same results.
 
+### Search engines
+
+Only the collections linked from *Settings → Menu* are open to search engines, along with the works shown under those collections, the home page and the markdown pages. Every other collection, the `/_works/` and `/works/` duplicates, Search and Saved are marked `noindex` (see `isMenuCollection` in `src/lib/settings.ts`). The collections' own "Shown In Menu" flag isn't used for this.
+
 ## Adding new photos of works
 
 For a batch of reshot paintings:

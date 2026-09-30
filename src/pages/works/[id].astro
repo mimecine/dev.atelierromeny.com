@@ -27,7 +27,7 @@ const work = Astro.props;
 const { Content } = await render(work);
 ---
 
-<Layout title={work.data.title || "~ Untitled ~"}>
+<Layout title={work.data.title || "~ Untitled ~"} noindex>
   <section class="grid max-w-4xl mx-auto py-4">
     <div>
       <div class="flex flex-col h-[75vh]"><WorkImages work={work} /></div>
