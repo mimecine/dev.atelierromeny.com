@@ -228,7 +228,9 @@ collections:
                   - { label: Columns, name: columns, widget: select, options: [1, 2, 3], default: 1, hint: "Text flows into this many columns on wide screens" }
                   - { label: "Hide Section", name: hidden, widget: boolean, default: false }
 
-          - label: "Footer Links (Currently Unused)"
+          - label: "Footer Links"
+            label_singular: "Footer Link"
+            hint: "Shown in a row just above the copyright"
             name: "socials"
             widget: list
             required: false
