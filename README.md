@@ -1,48 +1,106 @@
-# Astro Starter Kit: Basics
+# Atelier Romeny
 
-```sh
-bun create astro@latest -- --template basics
-```
+Portfolio site for the painter Edlef Romeny (1926–2017), with his paintings and prints.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+Built with Astro 7, Tailwind CSS 4 and Alpine.js. Content is edited in [Sveltia CMS](https://github.com/sveltia/sveltia-cms) at `/admin`. The site runs as a Cloudflare Worker, and every page is prerendered at build time.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Commands
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+Bun is the package manager and script runner.
 
-## 🚀 Project Structure
+| Command | What it does |
+| :-- | :-- |
+| `bun install` | Install dependencies |
+| `bun dev` | Dev server at `localhost:4321`. Images are served unoptimised (see *Gotchas*) |
+| `bun run build` | Production build to `dist/` |
+| `bun run cf:preview` | Build and run it locally in Wrangler, as it runs on Cloudflare |
+| `bun run deploy` | Build and deploy by hand (normally not needed, see *Deploying*) |
+| `bun run match-photos <folder> [ids.txt]` | Photo matcher, see *Adding new photos of works* |
+| `bun run apply-photos <folder> [--write]` | Import matched photos into the site |
 
-Inside of your Astro project, you'll see the following folders and files:  
+## Deploying
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+Cloudflare is connected to the GitHub repo, so every push to `main` builds and deploys. Edits saved in the CMS are commits to `main` too, so pull before working locally.
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## Content
 
-## 🧞 Commands
+Everything is in `src/content/`, and each part can be edited in the CMS:
 
-All commands are run from the root of the project, from a terminal:
+| Path | What it holds |
+| :-- | :-- |
+| `works/*.md` | One file per work: `id` (inventory number), title, year, size, location, `image`, extra `images`, `thumbnail`, `collections` |
+| `collections/*.md` | Named groups of works. Each has its own page at `/<collection>` and its works at `/<collection>/<work>` |
+| `pages/*.md` | Free pages such as `bio.md`, served at `/<page>`. A page's `image` floats to the right of its text |
+| `settings.yml` | Site title, menu, front page sections, footer links, password protection |
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `bun install`             | Installs dependencies                            |
-| `bun dev`             | Starts local dev server at `localhost:4321`      |
-| `bun build`           | Build your production site to `./dist/`          |
-| `bun preview`         | Preview your build locally, before deploying     |
-| `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `bun astro -- --help` | Get help using the Astro CLI                     |
+A few notes on works:
 
-## 👀 Want to learn more?
+- **Thumbnail:** `thumbnail` picks which image appears in grids and search results: 1 is `image`, 2 is the first of `images`, and so on. The work page always shows the images in their saved order.
+- **All works:** every work with an image also appears in `/_works`, the collection of all works. That's also the address search results link to.
+- **Old image:** `old_image` keeps the photo a work had before it was reshot. It isn't shown on the site.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+### Front page sections
+
+Set in *Settings → Frontpage Settings → Frontpage Sections*. Each type has its own component in `src/components/sections/`:
+
+- **Free Content:** markdown text in 1–3 columns. Images inside the text are optimised.
+- **Large Image:** a left-aligned image with an optional caption and link.
+- **Carousel:** 1–3 images visible at a time, with a height and optional autoplay. Autoplay pauses on hover, stops once a visitor uses the arrows, and stays off for visitors whose device is set to reduce motion.
+- **Collection:** a grid of 2–6 columns with a maximum number of rows, plus a "View all" link when works are left out.
+
+### Media
+
+| Folder | Holds |
+| :-- | :-- |
+| `src/media/works/` | Images of works |
+| `src/media/assets/` | Everything else: page, settings and collection images |
+
+- **Paths:** content stores images as `/src/media/…`, the form Sveltia writes by default.
+- **Frontmatter and settings:** `image()` fields resolve these paths directly. For settings, `src/lib/media.ts` does the same job.
+- **Images inside markdown text:** these are handled by a satteri plugin, `src/lib/satteri-image-path-fix.js`.
+- **Format:** everything is WebP. Sveltia converts uploads to WebP at a maximum of 3000px.
+
+### Search
+
+Search uses [Pagefind](https://pagefind.app), built into `dist/client/pagefind` at build time. Pages opt in to being indexed with `<Layout searchable>`:
+
+- **Works:** indexed once each, at their `/_works/` address.
+- **Collections and pages:** indexed as well.
+
+`<SearchMeta>` gives each indexed page its result title and type, and an `<img data-pagefind-meta="image[src]">` on the page gives it a thumbnail.
+
+The search page (`src/pages/search.astro`) renders its own results. It lists collections first, then pages, then works, pages through them, and keeps `?q=` in the URL, so Back returns to the same results.
+
+## Adding new photos of works
+
+For a batch of reshot paintings:
+
+1. **Start the matcher.** `bun run match-photos path/to/photos ids.txt` opens a local page at `localhost:4455`.
+   - **The id list:** one inventory number per line, in the order the paintings were shot. It's only needed the first time.
+   - **Sequence view:** shows each id's current photo next to the next new photo. Use Enter to match, A for an extra image, N for a new work without an id (such as a print), and Z to undo.
+   - **Grid view:** puts unmatched ids and unmatched photos side by side, to match by dragging.
+   - **Saving:** progress is saved to `matches.json` in the photo folder.
+2. **Preview the import.** `bun run apply-photos path/to/photos` is a dry run that shows what will happen.
+3. **Import.** `bun run apply-photos path/to/photos --write` does it:
+   - Photos are copied into `src/media/works/` as `<id>-<title>.webp`, at a maximum of 3000px.
+   - Each work's previous image moves to `old_image`.
+   - Matched works are added to the `new-paintings` collection.
+   - Works made with N become untitled `print-NNN` works in the `prints` collection.
+
+   Running it again is safe.
+
+If the camera files are large, `bun scripts/photo-matcher/to-webp.ts <folder>` replaces them with 3000px WebP copies and updates `matches.json`. **It deletes the originals**, so keep a copy elsewhere.
+
+## Password protection
+
+A simple password screen is set in *Settings → Password Protection*: on or off, the password, how many days it's remembered, and optional text. Changing the password logs everyone out.
+
+It keeps casual visitors out while the site is being built. It is not real security, because the password is in the page source.
+
+## Gotchas
+
+- **Every page must be prerendered** (`export const prerender = true`). Pages using `Layout.astro` render markdown with satteri, and sharp optimises the images. Neither can run inside the Cloudflare Worker, so a server-rendered page using the layout breaks the build.
+- **`bun dev` doesn't optimise images.** sharp can't run in the dev server's Worker sandbox, so it uses a passthrough image service. The real build uses sharp.
+- **Incremental builds** (`experimental.incrementalBuild`) reuse pages whose `cacheKey` hasn't changed. If built pages look stale, delete `dist`, `node_modules/.astro` and `node_modules/.vite` and build again.
+- **Some elements survive page changes.** The password overlay and logout link use `transition:persist`, so they carry over when the ClientRouter swaps pages instead of flashing on every navigation.
+- **Old scripts:** the Python scripts and the older `.js` files in `scripts/` are leftovers from earlier image clean-ups and aren't part of any current workflow.
