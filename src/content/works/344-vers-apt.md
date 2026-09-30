@@ -1,7 +1,7 @@
 ---
 id: 344
 title: Vers Apt
-image: '@img/344-vers-apt.webp'
+image: '/src/media/works/344-vers-apt.webp'
 collections:
   - paysages
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '1990'
 year_start: 1990
 year_end: null
-file: '@img/344-vers-apt.webp'
+file: '/src/media/works/344-vers-apt.webp'
 uuid: 05c2da6f-1225-43b2-ac10-ba728caeafab
 ---
 

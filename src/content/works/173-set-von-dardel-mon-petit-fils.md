@@ -1,7 +1,7 @@
 ---
 id: 173
 title: Set von Dardel (mon petit fils)
-image: '@img/173-set-von-dardel-mon-petit-fils.webp'
+image: '/src/media/works/173-set-von-dardel-mon-petit-fils.webp'
 collections:
   - figures-humaines
   - nfs
@@ -14,7 +14,7 @@ note: ''
 year: '1989'
 year_start: 1989
 year_end: null
-file: '@img/173-set-von-dardel-mon-petit-fils.webp'
+file: '/src/media/works/173-set-von-dardel-mon-petit-fils.webp'
 uuid: 011d2d8b-bc71-4200-b6e1-449dee816777
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: 579
 title: Table généreuse
-image: '@img/579-table-genereuse-v2.webp'
+image: '/src/media/works/579-table-genereuse-v2.webp'
 collections:
   - natures-mortes
   - selected-july-2025
@@ -15,11 +15,11 @@ note: ''
 year: '1983'
 year_start: 1983
 year_end: null
-file: '@img/579-table-genereuse.webp'
+file: '/src/media/works/579-table-genereuse.webp'
 uuid: 127362eb-0c54-4cb2-897a-75d28271cbff
-old_image: '@img/579-table-genereuse.webp'
+old_image: '/src/media/works/579-table-genereuse.webp'
 images:
-  - '@img/579-table-genereuse-v2-2.webp'
-  - '@img/579-table-genereuse-v2-3.webp'
+  - '/src/media/works/579-table-genereuse-v2-2.webp'
+  - '/src/media/works/579-table-genereuse-v2-3.webp'
 ---
 

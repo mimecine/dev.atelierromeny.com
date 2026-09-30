@@ -1,7 +1,7 @@
 ---
 id: 463
 title: Tourmente
-image: '@img/463-tourmente.webp'
+image: '/src/media/works/463-tourmente.webp'
 collections:
   - marco
   - abstrait
@@ -15,7 +15,7 @@ note: ''
 year: '1962'
 year_start: 1962
 year_end: null
-file: '@img/463-tourmente.webp'
+file: '/src/media/works/463-tourmente.webp'
 uuid: 6c175668-f6de-4381-958c-353d83809223
 ---
 

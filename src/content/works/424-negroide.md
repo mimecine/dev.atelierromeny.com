@@ -1,7 +1,7 @@
 ---
 id: 424
 title: Négroide
-image: '@img/424-negroide-v2.webp'
+image: '/src/media/works/424-negroide-v2.webp'
 collections:
   - natures-mortes
   - selected-july-2025
@@ -15,8 +15,8 @@ note: ''
 year: '1979'
 year_start: 1979
 year_end: null
-file: '@img/424-negroide.webp'
+file: '/src/media/works/424-negroide.webp'
 uuid: 676acf5d-ef40-4743-9cc6-7e072f951918
-old_image: '@img/424-negroide.webp'
+old_image: '/src/media/works/424-negroide.webp'
 ---
 

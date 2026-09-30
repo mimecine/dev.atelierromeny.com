@@ -1,7 +1,7 @@
 ---
 id: 342
 title: Grenverk
-image: '@img/342-grenverk.webp'
+image: '/src/media/works/342-grenverk.webp'
 collections:
   - abstrait
   - selected-july-2025
@@ -14,7 +14,7 @@ note: ''
 year: '1982'
 year_start: 1982
 year_end: null
-file: '@img/342-grenverk.webp'
+file: '/src/media/works/342-grenverk.webp'
 uuid: a88fb95a-2272-4322-84bf-3dc24c92b4bb
 ---
 

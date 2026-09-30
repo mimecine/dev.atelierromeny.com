@@ -1,7 +1,7 @@
 ---
 id: 16
 title: Artichauds en fleurs
-image: '@img/16-artichauds-en-fleurs.webp'
+image: '/src/media/works/16-artichauds-en-fleurs.webp'
 collections:
   - fleurs
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '1989'
 year_start: 1989
 year_end: null
-file: '@img/16-artichauds-en-fleurs.webp'
+file: '/src/media/works/16-artichauds-en-fleurs.webp'
 uuid: 7d582861-1e7a-4f7a-8739-3ffed694cbb2
 ---
 

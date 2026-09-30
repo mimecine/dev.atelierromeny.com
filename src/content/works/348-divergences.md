@@ -1,7 +1,7 @@
 ---
 id: 348
 title: Divergences
-image: '@img/348-divergences.webp'
+image: '/src/media/works/348-divergences.webp'
 collections:
   - abstrait
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '1979'
 year_start: 1979
 year_end: null
-file: '@img/348-divergences.webp'
+file: '/src/media/works/348-divergences.webp'
 uuid: f123a38e-3713-4b61-99cf-1f2c0279c3ac
 ---
 

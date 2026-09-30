@@ -1,7 +1,7 @@
 ---
 id: 676
 title: Espace
-image: '@img/676-espace.webp'
+image: '/src/media/works/676-espace.webp'
 collections:
   - abstrait
   - selected-july-2025
@@ -14,7 +14,7 @@ note: ''
 year: '1983'
 year_start: 1983
 year_end: null
-file: '@img/676-espace.webp'
+file: '/src/media/works/676-espace.webp'
 uuid: a98e7709-b6fd-4cfb-8b4c-4fbf6dcfc46b
 ---
 

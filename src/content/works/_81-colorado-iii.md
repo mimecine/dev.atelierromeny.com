@@ -7,11 +7,11 @@ h: 45
 location: graphic studio
 new_location: Graphic Studio D
 note: null
-file: '@img/81-colorado-iii.jpg'
+file: '/src/media/works/81-colorado-iii.jpg'
 year: '1981'
 year_start: 1981
 year_end: null
-image: '@img/81-colorado-iii.jpg'
+image: '/src/media/works/81-colorado-iii.jpg'
 uuid: e620b9d8-02b6-45f6-9996-06270707aa7f
 collections:
   - abstrait

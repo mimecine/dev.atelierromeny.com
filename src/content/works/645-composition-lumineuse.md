@@ -1,7 +1,7 @@
 ---
 id: 645
 title: Composition lumineuse
-image: '@img/645-composition-lumineuse.webp'
+image: '/src/media/works/645-composition-lumineuse.webp'
 collections:
   - abstrait
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '1972'
 year_start: 1972
 year_end: null
-file: '@img/645-composition-lumineuse.webp'
+file: '/src/media/works/645-composition-lumineuse.webp'
 uuid: fd4c26d9-08ba-4ae3-8b27-8d589f95b123
 ---
 

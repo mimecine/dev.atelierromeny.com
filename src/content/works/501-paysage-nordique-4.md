@@ -1,7 +1,7 @@
 ---
 id: 501
 title: Paysage nordique 4
-image: '@img/501-paysage-nordique-4-v2.webp'
+image: '/src/media/works/501-paysage-nordique-4-v2.webp'
 collections:
   - abstrait
   - selected-july-2025
@@ -15,8 +15,8 @@ note: ''
 year: '1965'
 year_start: 1965
 year_end: null
-file: '@img/501-paysage-nordique-4.webp'
+file: '/src/media/works/501-paysage-nordique-4.webp'
 uuid: a2f0403d-cdbd-4f50-91b1-62bcab460ca8
-old_image: '@img/501-paysage-nordique-4.webp'
+old_image: '/src/media/works/501-paysage-nordique-4.webp'
 ---
 

@@ -6,11 +6,11 @@ w: 80
 h: 100
 location: graphic studio
 note: null
-file: '@img/402-mario.webp'
+file: '/src/media/works/402-mario.webp'
 year: '1974'
 year_start: 1974
 year_end: null
-image: '@img/402-mario.webp'
+image: '/src/media/works/402-mario.webp'
 uuid: af6431f4-b25f-430a-a39f-5ad0868a1034
 collections:
   - figures-humaines

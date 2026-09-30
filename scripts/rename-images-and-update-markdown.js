@@ -5,7 +5,7 @@ import matter from 'gray-matter';
 
 // Directory paths
 const contentDir = path.resolve(__dirname, '../src/content');
-const mediaDir = path.resolve(__dirname, '../src/media/img');
+const mediaDir = path.resolve(__dirname, '../src/media/works');
 
 function main() {
   // 1. Scan all markdown files and build a map of old->new image renames
@@ -70,8 +70,8 @@ function main() {
   for (const { mdPath, newImageName } of mdUpdates) {
     const raw = fs.readFileSync(mdPath, 'utf-8');
     const { data, content } = matter(raw);
-    data.image = `@img/${newImageName}`;
-    data.file = `@img/${newImageName}`;
+    data.image = `/src/media/works/${newImageName}`;
+    data.file = `/src/media/works/${newImageName}`;
     const newContent = matter.stringify(content, data);
     fs.writeFileSync(mdPath, newContent, 'utf-8');
     console.log(`Updated: ${mdPath}`);

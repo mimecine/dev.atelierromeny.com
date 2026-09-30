@@ -1,7 +1,7 @@
 ---
 id: 59
 title: La Seine a Paris
-image: '@img/59-la-seine-a-paris-v2.webp'
+image: '/src/media/works/59-la-seine-a-paris-v2.webp'
 collections:
   - paysages
   - selected-july-2025
@@ -15,8 +15,8 @@ note: ''
 year: '1981'
 year_start: 1981
 year_end: null
-file: '@img/59-la-seine-a-paris.webp'
+file: '/src/media/works/59-la-seine-a-paris.webp'
 uuid: feddd64a-6527-486f-af8e-552fe73060f2
-old_image: '@img/59-la-seine-a-paris.webp'
+old_image: '/src/media/works/59-la-seine-a-paris.webp'
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: 764
 title: Iles
-image: '@img/764-iles.webp'
+image: '/src/media/works/764-iles.webp'
 collections:
   - marco
   - abstrait
@@ -13,7 +13,7 @@ note: ''
 year: '2004'
 year_start: 2004
 year_end: null
-file: '@img/764-iles.webp'
+file: '/src/media/works/764-iles.webp'
 uuid: e50f1613-673b-4da0-999c-bb91d6b7da4f
 ---
 

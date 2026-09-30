@@ -1,7 +1,7 @@
 ---
 id: 486
 title: Camargue 3
-image: '@img/486-camargue-3-v2.webp'
+image: '/src/media/works/486-camargue-3-v2.webp'
 collections:
   - abstrait
   - selected-july-2025
@@ -15,10 +15,10 @@ note: ''
 year: '1972'
 year_start: 1972
 year_end: null
-file: '@img/486-camargue-3.webp'
+file: '/src/media/works/486-camargue-3.webp'
 uuid: d96a31e0-bff0-44b7-8d95-44d804f51308
-old_image: '@img/486-camargue-3.webp'
+old_image: '/src/media/works/486-camargue-3.webp'
 images:
-  - '@img/486-camargue-3-v2-2.webp'
+  - '/src/media/works/486-camargue-3-v2-2.webp'
 ---
 

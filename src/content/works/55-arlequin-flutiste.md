@@ -1,7 +1,7 @@
 ---
 id: 55
 title: Arlequin flutiste
-image: '@img/55-arlequin-flutiste.webp'
+image: '/src/media/works/55-arlequin-flutiste.webp'
 collections:
   - metro
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '1990'
 year_start: 1990
 year_end: null
-file: '@img/55-arlequin-flutiste.webp'
+file: '/src/media/works/55-arlequin-flutiste.webp'
 uuid: 64134ee9-a31b-41cb-8eca-55c9fb490f57
 ---
 

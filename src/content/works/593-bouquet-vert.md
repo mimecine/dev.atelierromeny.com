@@ -1,7 +1,7 @@
 ---
 id: 593
 title: Bouquet vert
-image: '@img/593-bouquet-vert.webp'
+image: '/src/media/works/593-bouquet-vert.webp'
 collections:
   - fleurs
   - nfs
@@ -14,7 +14,7 @@ note: ''
 year: '1971'
 year_start: 1971
 year_end: null
-file: '@img/593-bouquet-vert.webp'
+file: '/src/media/works/593-bouquet-vert.webp'
 uuid: f1b34a37-66a2-44ef-bea6-30e89d777840
 ---
 

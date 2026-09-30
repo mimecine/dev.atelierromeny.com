@@ -4,7 +4,7 @@ import os
 import sys
 from glob import glob
 
-IN_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '../src/media/img'))
+IN_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '../src/media/works'))
 OUT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '../src/media/_debugrects'))
 os.makedirs(OUT_DIR, exist_ok=True)
 

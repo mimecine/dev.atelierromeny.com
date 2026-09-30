@@ -1,7 +1,7 @@
 ---
 id: 114
 title: Les chats de Madrid
-image: '@img/114-les-chats-de-madrid.webp'
+image: '/src/media/works/114-les-chats-de-madrid.webp'
 collections:
   - animaux
   - nfs
@@ -14,7 +14,7 @@ note: ''
 year: '1996'
 year_start: 1996
 year_end: null
-file: '@img/114-les-chats-de-madrid.webp'
+file: '/src/media/works/114-les-chats-de-madrid.webp'
 uuid: bc3adaab-6d3d-4b53-a21f-5758a4bc6719
 ---
 

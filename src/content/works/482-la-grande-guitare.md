@@ -1,7 +1,7 @@
 ---
 id: 482
 title: La grande guitare
-image: '@img/482-la-grande-guitare.webp'
+image: '/src/media/works/482-la-grande-guitare.webp'
 collections:
   - natures-mortes
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '1969'
 year_start: 1969
 year_end: null
-file: '@img/482-la-grande-guitare.webp'
+file: '/src/media/works/482-la-grande-guitare.webp'
 uuid: 1bc1c79b-cec9-4121-b4ed-529c8998bcf6
 ---
 

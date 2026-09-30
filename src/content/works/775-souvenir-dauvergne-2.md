@@ -1,7 +1,7 @@
 ---
 id: 775
 title: Souvenir d'Auvergne 2
-image: '@img/775-souvenir-dauvergne-2.webp'
+image: '/src/media/works/775-souvenir-dauvergne-2.webp'
 collections:
   - abstrait
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '1985'
 year_start: 1985
 year_end: null
-file: '@img/775-souvenir-dauvergne-2.webp'
+file: '/src/media/works/775-souvenir-dauvergne-2.webp'
 uuid: b8f98064-33a6-40bb-aeb6-423a0ce3c730
 ---
 

@@ -6,11 +6,11 @@ w: 60
 h: 30
 location: old atelier
 note: null
-file: '@img/tension-2.webp'
+file: '/src/media/works/tension-2.webp'
 year: '---'
 year_start: null
 year_end: null
-image: '@img/tension-2.webp'
+image: '/src/media/works/tension-2.webp'
 uuid: 671fa6a9-f884-4fab-a782-0c8ef20b29be
 ---
 

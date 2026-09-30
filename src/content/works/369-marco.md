@@ -1,7 +1,7 @@
 ---
 id: 369
 title: Marco
-image: '@img/369-marco.webp'
+image: '/src/media/works/369-marco.webp'
 collections:
   - figures-humaines
   - nfs
@@ -13,7 +13,7 @@ note: ''
 year: '1983'
 year_start: 1983
 year_end: null
-file: '@img/369-marco.webp'
+file: '/src/media/works/369-marco.webp'
 uuid: 3308ccfc-6442-4dc5-81c9-09cdf64149f0
 ---
 

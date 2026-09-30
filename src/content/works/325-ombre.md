@@ -1,7 +1,7 @@
 ---
 id: 325
 title: Ombre
-image: '@img/325-ombre.webp'
+image: '/src/media/works/325-ombre.webp'
 collections:
   - abstrait
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '1983'
 year_start: 1983
 year_end: null
-file: '@img/325-ombre.webp'
+file: '/src/media/works/325-ombre.webp'
 uuid: 41e497c8-617a-42e3-acb6-ddd138e31867
 ---
 

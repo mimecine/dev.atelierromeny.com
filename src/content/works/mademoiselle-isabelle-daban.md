@@ -6,11 +6,11 @@ w: 81
 h: 65
 location: graphic studio
 note: null
-file: '@img/mademoiselle-isabelle-daban.webp'
+file: '/src/media/works/mademoiselle-isabelle-daban.webp'
 year: '2006'
 year_start: 2006
 year_end: null
-image: '@img/mademoiselle-isabelle-daban.webp'
+image: '/src/media/works/mademoiselle-isabelle-daban.webp'
 uuid: d8d7536d-0dee-4b2f-8e9f-9d541eaca364
 collections:
   - portraits

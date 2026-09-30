@@ -7,11 +7,11 @@ h: 120
 location: attic
 new_location: Attic
 note: null
-file: '@img/445-apparition.webp'
+file: '/src/media/works/445-apparition.webp'
 year: '1956'
 year_start: 1956
 year_end: null
-image: '@img/445-apparition.webp'
+image: '/src/media/works/445-apparition.webp'
 uuid: 99d4b333-d987-4629-a139-70d5ad9dc228
 collections:
   - figures-humaines

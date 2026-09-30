@@ -1,7 +1,7 @@
 ---
 id: 149
 title: La table garnie 1
-image: '@img/149-la-table-garnie-1-v2.webp'
+image: '/src/media/works/149-la-table-garnie-1-v2.webp'
 collections:
   - natures-mortes
   - selected-july-2025
@@ -15,12 +15,12 @@ note: ''
 year: '1998'
 year_start: 1998
 year_end: null
-file: '@img/149-la-table-garnie-1.webp'
+file: '/src/media/works/149-la-table-garnie-1.webp'
 uuid: a65c4e83-0806-4077-b600-629d66333d87
-old_image: '@img/149-la-table-garnie-1.webp'
+old_image: '/src/media/works/149-la-table-garnie-1.webp'
 images:
-  - '@img/149-la-table-garnie-1-v2-2.webp'
-  - '@img/149-la-table-garnie-1-v2-3.webp'
-  - '@img/149-la-table-garnie-1-v2-4.webp'
+  - '/src/media/works/149-la-table-garnie-1-v2-2.webp'
+  - '/src/media/works/149-la-table-garnie-1-v2-3.webp'
+  - '/src/media/works/149-la-table-garnie-1-v2-4.webp'
 ---
 

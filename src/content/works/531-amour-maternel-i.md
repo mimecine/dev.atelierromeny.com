@@ -7,11 +7,11 @@ h: 55
 location: house
 new_location: Attic
 note: null
-file: '@img/531-amour-maternel-i.webp'
+file: '/src/media/works/531-amour-maternel-i.webp'
 year: '1978'
 year_start: 1978
 year_end: null
-image: '@img/531-amour-maternel-i.webp'
+image: '/src/media/works/531-amour-maternel-i.webp'
 uuid: fd99f14a-e03d-4461-b081-182745ee8b47
 collections:
   - animaux

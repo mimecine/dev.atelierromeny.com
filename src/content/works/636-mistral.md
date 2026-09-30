@@ -1,7 +1,7 @@
 ---
 id: 636
 title: Mistral
-image: '@img/636-mistral.webp'
+image: '/src/media/works/636-mistral.webp'
 collections:
   - paysages
   - nfs
@@ -15,7 +15,7 @@ note: ''
 year: '1965'
 year_start: 1965
 year_end: null
-file: '@img/636-mistral.webp'
+file: '/src/media/works/636-mistral.webp'
 uuid: 13d162f3-d7db-41ea-bbdf-e340104573f3
 ---
 

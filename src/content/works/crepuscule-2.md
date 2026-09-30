@@ -1,7 +1,7 @@
 ---
 id: null
 title: Crépuscule 2
-image: '@img/crepuscule-2.webp'
+image: '/src/media/works/crepuscule-2.webp'
 collections:
   - abstrait
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '2005'
 year_start: 2005
 year_end: null
-file: '@img/crepuscule-2.webp'
+file: '/src/media/works/crepuscule-2.webp'
 uuid: 87e75aa9-4a8d-4ccb-915a-839d5bf56f32
 ---
 

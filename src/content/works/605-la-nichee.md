@@ -1,7 +1,7 @@
 ---
 id: 605
 title: La nichée
-image: '@img/605-la-nichee.webp'
+image: '/src/media/works/605-la-nichee.webp'
 collections:
   - animaux
   - nfs
@@ -14,7 +14,7 @@ note: ''
 year: '1991'
 year_start: 1991
 year_end: null
-file: '@img/605-la-nichee.webp'
+file: '/src/media/works/605-la-nichee.webp'
 uuid: 58157694-aaa9-4f32-8689-5d6ea5c38f83
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: 457
 title: Reflet d'eau
-image: '@img/457-reflet-deau.webp'
+image: '/src/media/works/457-reflet-deau.webp'
 collections:
   - abstrait
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '1969'
 year_start: 1969
 year_end: null
-file: '@img/457-reflet-deau.webp'
+file: '/src/media/works/457-reflet-deau.webp'
 uuid: 256d3e77-ad58-4a91-a2be-b1bd3befd9fd
 ---
 

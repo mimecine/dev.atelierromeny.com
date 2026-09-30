@@ -1,7 +1,7 @@
 ---
 id: null
 title: Poële au fruits
-image: '@img/poele-au-fruits.webp'
+image: '/src/media/works/poele-au-fruits.webp'
 collections:
   - natures-mortes
   - nfs
@@ -13,7 +13,7 @@ note: ''
 year: '2006'
 year_start: 2006
 year_end: null
-file: '@img/poele-au-fruits.webp'
+file: '/src/media/works/poele-au-fruits.webp'
 uuid: fa412b62-e9a9-4f80-a101-284532ff983a
 ---
 

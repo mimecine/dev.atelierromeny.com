@@ -1,7 +1,7 @@
 ---
 id: 332
 title: A la cruche
-image: '@img/332-a-la-cruche-v2.webp'
+image: '/src/media/works/332-a-la-cruche-v2.webp'
 collections:
   - marco
   - alisa
@@ -17,11 +17,11 @@ note: ''
 year: '1974'
 year_start: 1974
 year_end: null
-file: '@img/332-a-la-cruche.webp'
+file: '/src/media/works/332-a-la-cruche.webp'
 uuid: 65c5fff0-9440-4503-80f8-4b382fc3cf76
-old_image: '@img/332-a-la-cruche.webp'
+old_image: '/src/media/works/332-a-la-cruche.webp'
 images:
-  - '@img/332-a-la-cruche-v2-2.webp'
-  - '@img/332-a-la-cruche-v2-3.webp'
+  - '/src/media/works/332-a-la-cruche-v2-2.webp'
+  - '/src/media/works/332-a-la-cruche-v2-3.webp'
 ---
 

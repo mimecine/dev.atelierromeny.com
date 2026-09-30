@@ -1,7 +1,7 @@
 ---
 id: 412
 title: Nature morte verte
-image: '@img/412-nature-morte-verte.webp'
+image: '/src/media/works/412-nature-morte-verte.webp'
 collections:
   - natures-mortes
 categories: Natures mortes
@@ -12,7 +12,7 @@ note: ''
 year: '1975'
 year_start: 1975
 year_end: null
-file: '@img/412-nature-morte-verte.webp'
+file: '/src/media/works/412-nature-morte-verte.webp'
 uuid: 15f643e2-0626-4bf3-b9f5-ab5c6e31aea2
 ---
 

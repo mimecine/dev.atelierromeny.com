@@ -5,7 +5,7 @@ import matter from 'gray-matter';
 import { v4 as uuidv4 } from 'uuid';
 
 const worksDir = path.resolve(__dirname, '../src/content/works');
-const mediaDir = path.resolve(__dirname, '../src/media/img');
+const mediaDir = path.resolve(__dirname, '../src/media/works');
 
 function lintImages() {
   const markdownFiles = glob.sync(`${worksDir}/*.md`);

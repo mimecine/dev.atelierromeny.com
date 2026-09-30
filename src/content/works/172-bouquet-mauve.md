@@ -11,7 +11,7 @@ file: null
 year: '1982'
 year_start: 1982
 year_end: null
-image: '@img/172-bouquet-mauve.webp'
+image: '/src/media/works/172-bouquet-mauve.webp'
 uuid: 2cfd8216-e719-429c-a1c2-62006c8433e9
 collections:
   - natures-mortes

@@ -6,11 +6,11 @@ w: 100
 h: 73
 location: graphic studio
 note: null
-file: '@img/691-lettre-a-ma-bien-aimee-vii.webp'
+file: '/src/media/works/691-lettre-a-ma-bien-aimee-vii.webp'
 year: '1993'
 year_start: 1993
 year_end: null
-image: '@img/691-lettre-a-ma-bien-aimee-vii.webp'
+image: '/src/media/works/691-lettre-a-ma-bien-aimee-vii.webp'
 uuid: c66e2ca0-1acd-47cf-bb7e-6184cef2e33c
 collections:
   - la-vie-de-femme

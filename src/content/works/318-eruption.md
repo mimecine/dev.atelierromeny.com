@@ -1,7 +1,7 @@
 ---
 id: 318
 title: Eruption
-image: '@img/318-eruption.webp'
+image: '/src/media/works/318-eruption.webp'
 collections:
   - abstrait
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '1985'
 year_start: 1985
 year_end: null
-file: '@img/318-eruption.webp'
+file: '/src/media/works/318-eruption.webp'
 uuid: a7a58a58-40cd-4893-b37a-dc1f2dbb8ade
 ---
 

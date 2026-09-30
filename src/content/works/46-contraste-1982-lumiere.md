@@ -1,7 +1,7 @@
 ---
 id: 46
 title: Contraste 1982 / Lumiere
-image: '@img/46-contraste-1982-lumiere.webp'
+image: '/src/media/works/46-contraste-1982-lumiere.webp'
 collections:
   - abstrait
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '1994'
 year_start: 1994
 year_end: null
-file: '@img/46-contraste-1982-lumiere.webp'
+file: '/src/media/works/46-contraste-1982-lumiere.webp'
 uuid: 2db8ff54-f19f-49f9-ab11-d2a08cf01b92
 ---
 

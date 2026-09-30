@@ -1,7 +1,7 @@
 ---
 id: 459
 title: Cosmos
-image: '@img/459-cosmos-v2.webp'
+image: '/src/media/works/459-cosmos-v2.webp'
 collections:
   - abstrait
   - selected-july-2025
@@ -15,8 +15,8 @@ note: ''
 year: '1965'
 year_start: 1965
 year_end: null
-file: '@img/459-cosmos.webp'
+file: '/src/media/works/459-cosmos.webp'
 uuid: f608cd37-c9d7-4608-a701-6b939cb36930
-old_image: '@img/459-cosmos.webp'
+old_image: '/src/media/works/459-cosmos.webp'
 ---
 

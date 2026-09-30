@@ -1,7 +1,7 @@
 ---
 id: 471
 title: Camargue 4
-image: '@img/471-camargue-4-v2.webp'
+image: '/src/media/works/471-camargue-4-v2.webp'
 collections:
   - abstrait
   - selected-july-2025
@@ -15,8 +15,8 @@ note: ''
 year: '1972'
 year_start: 1972
 year_end: null
-file: '@img/471-camargue-4.webp'
+file: '/src/media/works/471-camargue-4.webp'
 uuid: 99d4fed1-9b7a-4aa3-ac9c-91e2484ff809
-old_image: '@img/471-camargue-4.webp'
+old_image: '/src/media/works/471-camargue-4.webp'
 ---
 

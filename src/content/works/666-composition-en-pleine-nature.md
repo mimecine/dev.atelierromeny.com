@@ -1,7 +1,7 @@
 ---
 id: 666
 title: Composition en pleine nature
-image: '@img/666-composition-en-pleine-nature.webp'
+image: '/src/media/works/666-composition-en-pleine-nature.webp'
 collections:
   - abstrait
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '1965'
 year_start: 1965
 year_end: null
-file: '@img/666-composition-en-pleine-nature.webp'
+file: '/src/media/works/666-composition-en-pleine-nature.webp'
 uuid: 13cfd567-7025-4621-86ab-10603c720f56
 ---
 

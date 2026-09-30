@@ -1,7 +1,7 @@
 ---
 id: 590
 title: Composition
-image: '@img/590-composition-v2.webp'
+image: '/src/media/works/590-composition-v2.webp'
 collections:
   - abstrait
   - selected-july-2025
@@ -15,8 +15,8 @@ note: ''
 year: '1964'
 year_start: 1964
 year_end: null
-file: '@img/590-composition.webp'
+file: '/src/media/works/590-composition.webp'
 uuid: 321cffeb-43c7-4f0e-a8a9-ebe5c5b71c40
-old_image: '@img/590-composition.webp'
+old_image: '/src/media/works/590-composition.webp'
 ---
 

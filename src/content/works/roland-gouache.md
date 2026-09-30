@@ -1,7 +1,7 @@
 ---
 id: null
 title: Roland, gouache
-image: '@img/roland-gouache.webp'
+image: '/src/media/works/roland-gouache.webp'
 collections:
   - portraits
 categories: Portrait
@@ -12,7 +12,7 @@ note: ''
 year: '1964'
 year_start: 1964
 year_end: null
-file: '@img/roland-gouache.webp'
+file: '/src/media/works/roland-gouache.webp'
 uuid: f2d1e22c-53d9-4734-b567-eb4e2972db99
 ---
 

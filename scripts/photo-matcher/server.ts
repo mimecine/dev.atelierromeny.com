@@ -4,7 +4,7 @@
 //
 // Progress is saved continuously to <photo-folder>/matches.json; the id list is
 // only needed on the first run. When done, run apply.ts to copy the photos into
-// src/media/img and update the markdown.
+// src/media/works and update the markdown.
 import fs from "node:fs";
 import path from "node:path";
 import { createHash } from "node:crypto";

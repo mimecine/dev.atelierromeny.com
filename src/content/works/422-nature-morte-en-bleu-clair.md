@@ -1,7 +1,7 @@
 ---
 id: 422
 title: Nature morte en bleu Clair
-image: '@img/422-nature-morte-en-bleu-clair-v2.webp'
+image: '/src/media/works/422-nature-morte-en-bleu-clair-v2.webp'
 collections:
   - natures-mortes
   - selected-july-2025
@@ -15,10 +15,10 @@ note: ''
 year: '1986'
 year_start: 1986
 year_end: null
-file: '@img/422-nature-morte-en-bleu-clair.webp'
+file: '/src/media/works/422-nature-morte-en-bleu-clair.webp'
 uuid: e5a8939e-8acf-4bfe-9dbb-8da0c4840d8f
-old_image: '@img/422-nature-morte-en-bleu-clair.webp'
+old_image: '/src/media/works/422-nature-morte-en-bleu-clair.webp'
 images:
-  - '@img/422-nature-morte-en-bleu-clair-v2-2.webp'
+  - '/src/media/works/422-nature-morte-en-bleu-clair-v2-2.webp'
 ---
 

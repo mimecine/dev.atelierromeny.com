@@ -1,7 +1,7 @@
 ---
 id: 689
 title: Soleil d'orage
-image: '@img/689-soleil-d-orage.webp'
+image: '/src/media/works/689-soleil-d-orage.webp'
 collections:
   - paysages
   - selected-paintings
@@ -14,8 +14,8 @@ note: ''
 year: '1993'
 year_start: 1993
 year_end: null
-file: '@img/689-soleil-dorage.webp'
+file: '/src/media/works/689-soleil-dorage.webp'
 uuid: ed4573c0-3e19-4591-bc54-0fe3259a5490
-old_image: '@img/689-soleil-dorage.webp'
+old_image: '/src/media/works/689-soleil-dorage.webp'
 ---
 

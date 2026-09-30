@@ -7,11 +7,11 @@ h: 45
 location: graphic studio
 new_location: Graphic Studio D
 note: null
-file: '@img/641-sand-och-brate-ll-sable-et-pignes.jpg'
+file: '/src/media/works/641-sand-och-brate-ll-sable-et-pignes.jpg'
 year: '1984'
 year_start: 1984
 year_end: null
-image: '@img/641-sand-och-brate-ll-sable-et-pignes.jpg'
+image: '/src/media/works/641-sand-och-brate-ll-sable-et-pignes.jpg'
 uuid: 64b04f6c-de4e-406d-b9a6-604b7a45afc2
 collections:
   - abstrait

@@ -1,7 +1,7 @@
 ---
 id: null
 title: Petite Improvisation 2
-image: '@img/petite-improvisation-2.webp'
+image: '/src/media/works/petite-improvisation-2.webp'
 collections:
   - abstrait
   - nfs
@@ -13,7 +13,7 @@ note: ''
 year: '2010'
 year_start: 2010
 year_end: null
-file: '@img/petite-improvisation-2.webp'
+file: '/src/media/works/petite-improvisation-2.webp'
 uuid: d0d2067f-f82c-44f0-9bce-3798e7ae5dff
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: 458
 title: Souvenir d'un maitre verrier
-image: '@img/458-souvenir-dun-maitre-verrier.webp'
+image: '/src/media/works/458-souvenir-dun-maitre-verrier.webp'
 collections:
   - abstrait
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '1968'
 year_start: 1968
 year_end: null
-file: '@img/458-souvenir-dun-maitre-verrier.webp'
+file: '/src/media/works/458-souvenir-dun-maitre-verrier.webp'
 uuid: 1b8529ba-44bb-4a78-9dc5-405e0b6d4787
 ---
 

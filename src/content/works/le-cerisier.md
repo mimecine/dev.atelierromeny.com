@@ -1,7 +1,7 @@
 ---
 id: null
 title: le cerisier
-image: '@img/le-cerisier.webp'
+image: '/src/media/works/le-cerisier.webp'
 collections:
   - paysages
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '1999'
 year_start: 1999
 year_end: null
-file: '@img/le-cerisier.webp'
+file: '/src/media/works/le-cerisier.webp'
 uuid: 50f96b94-562e-40ae-8b60-467c21245b85
 ---
 

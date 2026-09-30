@@ -1,5 +1,5 @@
 // Applies <photo-folder>/matches.json made with server.ts:
-//  - copies each photo into src/media/img as <id>-<title>.webp (extras get -2, -3, …),
+//  - copies each photo into src/media/works as <id>-<title>.webp (extras get -2, -3, …),
 //    resized so the long edge is at most --max px (default 3000)
 //  - sets `image` / `images` on the matching work; its previous `image` moves to `old_image`
 //    (never overwritten), so the old photo stays available in the CMS
@@ -155,15 +155,15 @@ for (const [target, photos] of groups) {
 
   const names = namesFor(base, photos.length);
   for (const [i, photo] of photos.entries()) {
-    log.push(`       ${photo} -> src/media/img/${names[i]}`);
+    log.push(`       ${photo} -> src/media/works/${names[i]}`);
     if (write) await toWebp(path.join(photoDir, photo), path.join(MEDIA_DIR, names[i]), maxEdge);
     written.add(stem(names[i]));
   }
 
   for (const old of own) if (!names.includes(old)) orphaned.push(old);
 
-  work.data.image = `@img/${names[0]}`;
-  if (names.length > 1) work.data.images = names.slice(1).map((n) => `@img/${n}`);
+  work.data.image = `/src/media/works/${names[0]}`;
+  if (names.length > 1) work.data.images = names.slice(1).map((n) => `/src/media/works/${n}`);
   else delete work.data.images;
   touched.add(work.file);
 
@@ -200,6 +200,6 @@ console.log(log.join("\n"));
 console.log(`\n${groups.size} works, ${state.assignments.length} photos, ${state.skippedPhotos.length} photos skipped.`);
 if (unused.length) {
   console.log(`\n${unused.length} old images are no longer used (left in place, delete when happy):`);
-  for (const f of unused) console.log(`  src/media/img/${f}`);
+  for (const f of unused) console.log(`  src/media/works/${f}`);
 }
 console.log(write ? "\nDone." : "\nDry run. Re-run with --write to apply.");

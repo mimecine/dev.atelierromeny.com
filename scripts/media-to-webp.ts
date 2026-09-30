@@ -1,4 +1,4 @@
-// Converts src/media/img to WebP (same pixel size) and rewrites @img/ references in
+// Converts src/media/works to WebP (same pixel size) and rewrites @img/ references in
 // src/content. One file at a time, original deleted after the copy checks out; safe to
 // re-run after an interruption (references are fixed up for any file already converted).
 //
@@ -9,7 +9,7 @@ import path from "node:path";
 import sharp from "sharp";
 
 const ROOT = path.resolve(import.meta.dir, "..");
-const MEDIA = path.join(ROOT, "src/media/img");
+const MEDIA = path.join(ROOT, "src/media/works");
 const CONTENT = path.join(ROOT, "src/content");
 const write = process.argv.includes("--write");
 const quality = 90;

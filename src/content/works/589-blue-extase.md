@@ -1,7 +1,7 @@
 ---
 id: 589
 title: Blue extase
-image: '@img/589-blue-extase.webp'
+image: '/src/media/works/589-blue-extase.webp'
 collections:
   - abstrait
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '1970'
 year_start: 1970
 year_end: null
-file: '@img/589-blue-extase.webp'
+file: '/src/media/works/589-blue-extase.webp'
 uuid: a83e3ad7-b25f-4300-943d-bb1cfd4efebd
 ---
 

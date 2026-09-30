@@ -1,7 +1,7 @@
 ---
 id: 546
 title: Le cardinai
-image: '@img/546-le-cardinai.webp'
+image: '/src/media/works/546-le-cardinai.webp'
 collections:
   - natures-mortes
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '1975'
 year_start: 1975
 year_end: null
-file: '@img/546-le-cardinai.webp'
+file: '/src/media/works/546-le-cardinai.webp'
 uuid: bb86d9bb-4281-4c73-bf74-83c4db2ae2f8
 ---
 

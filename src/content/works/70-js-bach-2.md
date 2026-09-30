@@ -1,7 +1,7 @@
 ---
 id: 70
 title: JS BACH 2
-image: '@img/70-js-bach-2.webp'
+image: '/src/media/works/70-js-bach-2.webp'
 collections:
   - musique
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '1998'
 year_start: 1998
 year_end: null
-file: '@img/70-js-bach-2.webp'
+file: '/src/media/works/70-js-bach-2.webp'
 uuid: 6183fbe7-5bc5-492e-87cf-8e4900eb0b6e
 ---
 

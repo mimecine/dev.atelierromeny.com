@@ -1,7 +1,7 @@
 ---
 id: 329
 title: Paysage intérieur I
-image: '@img/329-paysage-interieur-i-v2.webp'
+image: '/src/media/works/329-paysage-interieur-i-v2.webp'
 collections:
   - abstrait
   - nfs
@@ -15,8 +15,8 @@ note: ''
 year: '1994'
 year_start: 1994
 year_end: null
-file: '@img/329-paysage-interieur-i.webp'
+file: '/src/media/works/329-paysage-interieur-i.webp'
 uuid: 1ad19847-6c1d-4e2d-8219-4f710040b0d6
-old_image: '@img/329-paysage-interieur-i.webp'
+old_image: '/src/media/works/329-paysage-interieur-i.webp'
 ---
 

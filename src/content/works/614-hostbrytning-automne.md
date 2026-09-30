@@ -1,7 +1,7 @@
 ---
 id: 614
 title: Höstbrytning (Automne)
-image: '@img/614-hostbrytning-automne.webp'
+image: '/src/media/works/614-hostbrytning-automne.webp'
 collections:
   - abstrait
   - nfs
@@ -15,7 +15,7 @@ note: ''
 year: '1964'
 year_start: 1964
 year_end: null
-file: '@img/614-hostbrytning-automne.webp'
+file: '/src/media/works/614-hostbrytning-automne.webp'
 uuid: 531e9935-0c73-4994-bce1-eb20f1bb92ba
 ---
 

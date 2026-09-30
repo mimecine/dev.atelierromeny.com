@@ -6,11 +6,11 @@ w: 120
 h: 100
 location: secondary storage
 note: null
-file: '@img/477-en-attendant-ia-liberte-1.webp'
+file: '/src/media/works/477-en-attendant-ia-liberte-1.webp'
 year: '1979'
 year_start: 1979
 year_end: null
-image: '@img/477-en-attendant-ia-liberte-1.webp'
+image: '/src/media/works/477-en-attendant-ia-liberte-1.webp'
 uuid: 6d41499c-378c-4403-a975-c9ba1211e04b
 collections:
   - animaux

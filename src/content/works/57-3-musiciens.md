@@ -1,7 +1,7 @@
 ---
 id: 57
 title: 3 musiciens
-image: '@img/57-3-musiciens.webp'
+image: '/src/media/works/57-3-musiciens.webp'
 collections:
   - marco
   - metro
@@ -14,7 +14,7 @@ note: ''
 year: '1990'
 year_start: 1990
 year_end: null
-file: '@img/57-3-musiciens.webp'
+file: '/src/media/works/57-3-musiciens.webp'
 uuid: a38fe9bc-0868-4321-90ae-64780947214c
 ---
 

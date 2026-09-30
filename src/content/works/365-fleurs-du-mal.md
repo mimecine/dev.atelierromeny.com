@@ -1,7 +1,7 @@
 ---
 id: 365
 title: Fleurs du mal
-image: '@img/365-fleurs-du-mal-v2.webp'
+image: '/src/media/works/365-fleurs-du-mal-v2.webp'
 collections:
   - abstrait
   - selected-july-2025
@@ -15,15 +15,15 @@ note: ''
 year: '1959'
 year_start: 1959
 year_end: null
-file: '@img/365-fleurs-du-mal.webp'
+file: '/src/media/works/365-fleurs-du-mal.webp'
 uuid: 15234b37-7b4a-4fcb-968f-30091a454514
-old_image: '@img/365-fleurs-du-mal.webp'
+old_image: '/src/media/works/365-fleurs-du-mal.webp'
 images:
-  - '@img/365-fleurs-du-mal-v2-2.webp'
-  - '@img/365-fleurs-du-mal-v2-3.webp'
-  - '@img/365-fleurs-du-mal-v2-4.webp'
-  - '@img/365-fleurs-du-mal-v2-5.webp'
-  - '@img/365-fleurs-du-mal-v2-6.webp'
-  - '@img/365-fleurs-du-mal-v2-7.webp'
+  - '/src/media/works/365-fleurs-du-mal-v2-2.webp'
+  - '/src/media/works/365-fleurs-du-mal-v2-3.webp'
+  - '/src/media/works/365-fleurs-du-mal-v2-4.webp'
+  - '/src/media/works/365-fleurs-du-mal-v2-5.webp'
+  - '/src/media/works/365-fleurs-du-mal-v2-6.webp'
+  - '/src/media/works/365-fleurs-du-mal-v2-7.webp'
 ---
 

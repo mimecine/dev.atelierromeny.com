@@ -1,7 +1,7 @@
 ---
 id: 619
 title: Tournesol sur fond rouge
-image: '@img/619-tournesol-sur-fond-rouge.webp'
+image: '/src/media/works/619-tournesol-sur-fond-rouge.webp'
 collections:
   - natures-mortes
   - nfs
@@ -14,7 +14,7 @@ note: ''
 year: '1971'
 year_start: 1971
 year_end: null
-file: '@img/619-tournesol-sur-fond-rouge.webp'
+file: '/src/media/works/619-tournesol-sur-fond-rouge.webp'
 uuid: 8653484a-6098-4a1e-bf7f-e4eb855a6ed1
 ---
 

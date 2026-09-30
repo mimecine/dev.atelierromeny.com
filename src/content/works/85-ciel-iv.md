@@ -1,7 +1,7 @@
 ---
 id: 85
 title: Ciel IV
-image: '@img/85-ciel-iv.webp'
+image: '/src/media/works/85-ciel-iv.webp'
 collections:
   - abstrait
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '1984'
 year_start: 1984
 year_end: null
-file: '@img/85-ciel-iv.webp'
+file: '/src/media/works/85-ciel-iv.webp'
 uuid: 969a8d4f-c69e-4a5b-a9ab-80db61bc72f2
 ---
 

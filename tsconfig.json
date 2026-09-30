@@ -22,9 +22,6 @@
       ],
       "@assets/*": [
         "src/assets/*"
-      ],
-      "@img/*": [
-        "src/media/img/*"
       ]
     }
   }

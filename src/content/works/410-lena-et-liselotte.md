@@ -7,11 +7,11 @@ h: 81
 location: attic
 new_location: Attic
 note: null
-file: '@img/410-lena-et-liselotte.webp'
+file: '/src/media/works/410-lena-et-liselotte.webp'
 year: '1975'
 year_start: 1975
 year_end: null
-image: '@img/410-lena-et-liselotte.webp'
+image: '/src/media/works/410-lena-et-liselotte.webp'
 uuid: ba3130ab-c377-497e-949f-02cb6f4a066f
 collections:
   - figures-humaines

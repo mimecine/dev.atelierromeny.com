@@ -1,7 +1,7 @@
 ---
 id: null
 title: Marco
-image: '@img/marco.webp'
+image: '/src/media/works/marco.webp'
 collections:
   - portraits
   - nfs
@@ -13,7 +13,7 @@ note: Dessin
 year: '1991'
 year_start: 1991
 year_end: null
-file: '@img/marco.webp'
+file: '/src/media/works/marco.webp'
 uuid: c565a94d-392c-4c64-b259-ce0c1808d489
 ---
 

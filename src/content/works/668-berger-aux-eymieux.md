@@ -7,11 +7,11 @@ h: 120
 location: main storage
 new_location: Attic
 note: null
-file: '@img/668-berger-aux-eymieux.webp'
+file: '/src/media/works/668-berger-aux-eymieux.webp'
 year: '1988'
 year_start: 1988
 year_end: null
-image: '@img/668-berger-aux-eymieux.webp'
+image: '/src/media/works/668-berger-aux-eymieux.webp'
 uuid: b11a775b-ab35-4623-b7dc-e02f4b995baa
 collections:
   - figures-humaines

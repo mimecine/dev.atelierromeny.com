@@ -1,7 +1,7 @@
 ---
 id: 373
 title: Vue aerienne rouge II
-image: '@img/373-vue-aerienne-rouge-ii.webp'
+image: '/src/media/works/373-vue-aerienne-rouge-ii.webp'
 collections:
   - abstrait
   - selected-july-2025
@@ -14,7 +14,7 @@ note: ''
 year: '1972'
 year_start: 1972
 year_end: null
-file: '@img/373-vue-aerienne-rouge-ii.webp'
+file: '/src/media/works/373-vue-aerienne-rouge-ii.webp'
 uuid: ae640caa-8d12-4897-8a01-90858ae1961d
 ---
 

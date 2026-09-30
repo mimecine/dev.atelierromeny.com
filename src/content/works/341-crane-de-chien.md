@@ -1,7 +1,7 @@
 ---
 id: 341
 title: Crane de chien
-image: '@img/341-crane-de-chien.webp'
+image: '/src/media/works/341-crane-de-chien.webp'
 collections:
   - observations
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '1966'
 year_start: 1966
 year_end: null
-file: '@img/341-crane-de-chien.webp'
+file: '/src/media/works/341-crane-de-chien.webp'
 uuid: e15eb93d-33b8-4142-9a0a-3add86fc1b94
 ---
 

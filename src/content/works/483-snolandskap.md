@@ -1,7 +1,7 @@
 ---
 id: 483
 title: Snölandskap
-image: '@img/483-snolandskap-v2.webp'
+image: '/src/media/works/483-snolandskap-v2.webp'
 collections:
   - paysages
   - selected-july-2025
@@ -15,10 +15,10 @@ note: ''
 year: '1961'
 year_start: 1961
 year_end: null
-file: '@img/483-snolandskap.webp'
+file: '/src/media/works/483-snolandskap.webp'
 uuid: d8563709-d8a5-4564-96d3-4bee74edd528
-old_image: '@img/483-snolandskap.webp'
+old_image: '/src/media/works/483-snolandskap.webp'
 images:
-  - '@img/483-snolandskap-v2-2.webp'
+  - '/src/media/works/483-snolandskap-v2-2.webp'
 ---
 

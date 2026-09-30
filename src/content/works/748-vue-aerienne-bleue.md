@@ -1,7 +1,7 @@
 ---
 id: 748
 title: Vue aerienne bleue
-image: '@img/748-vue-aerienne-bleue.webp'
+image: '/src/media/works/748-vue-aerienne-bleue.webp'
 collections:
   - abstrait
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '2003'
 year_start: 2003
 year_end: null
-file: '@img/748-vue-aerienne-bleue.webp'
+file: '/src/media/works/748-vue-aerienne-bleue.webp'
 uuid: 3d4cd208-c5f8-4bef-a71b-74010bd38afa
 ---
 

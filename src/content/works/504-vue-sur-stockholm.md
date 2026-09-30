@@ -1,7 +1,7 @@
 ---
 id: 504
 title: Vue sur Stockholm
-image: '@img/504-vue-sur-stockholm.webp'
+image: '/src/media/works/504-vue-sur-stockholm.webp'
 collections:
   - paysages
   - nfs
@@ -13,7 +13,7 @@ note: ''
 year: '1954'
 year_start: 1954
 year_end: null
-file: '@img/504-vue-sur-stockholm.webp'
+file: '/src/media/works/504-vue-sur-stockholm.webp'
 uuid: 4ef1cdfb-ba43-4d3f-b5f5-2fdfba307b49
 ---
 

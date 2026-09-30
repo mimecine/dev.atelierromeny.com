@@ -1,7 +1,7 @@
 ---
 id: 684
 title: nature morte au violon l
-image: '@img/684-nature-morte-au-violon-l-v2.webp'
+image: '/src/media/works/684-nature-morte-au-violon-l-v2.webp'
 collections:
   - natures-mortes
   - selected-july-2025
@@ -15,10 +15,10 @@ note: ''
 year: '2001'
 year_start: 2001
 year_end: null
-file: '@img/684-nature-morte-au-violon-l.webp'
+file: '/src/media/works/684-nature-morte-au-violon-l.webp'
 uuid: 3952d32f-6c8d-438e-8d79-a417d4ed9d72
-old_image: '@img/684-nature-morte-au-violon-l.webp'
+old_image: '/src/media/works/684-nature-morte-au-violon-l.webp'
 images:
-  - '@img/684-nature-morte-au-violon-l-v2-2.webp'
+  - '/src/media/works/684-nature-morte-au-violon-l-v2-2.webp'
 ---
 

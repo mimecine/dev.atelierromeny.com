@@ -7,11 +7,11 @@ h: 27
 location: mrs
 new_location: Upper Atelier A
 note: null
-file: '@img/328-paysage-interieur-3.jpg'
+file: '/src/media/works/328-paysage-interieur-3.jpg'
 year: '1994'
 year_start: 1994
 year_end: null
-image: '@img/328-paysage-interieur-3.jpg'
+image: '/src/media/works/328-paysage-interieur-3.jpg'
 uuid: de324ea2-30f3-4c08-8f87-3d1dcf3ea34d
 collections:
   - abstrait

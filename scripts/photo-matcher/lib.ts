@@ -5,7 +5,7 @@ import matter from "gray-matter";
 export const ROOT = path.resolve(import.meta.dir, "../..");
 export const WORKS_DIR = path.join(ROOT, "src/content/works");
 export const COLLECTIONS_DIR = path.join(ROOT, "src/content/collections");
-export const MEDIA_DIR = path.join(ROOT, "src/media/img");
+export const MEDIA_DIR = path.join(ROOT, "src/media/works");
 
 export const PHOTO_EXTS = [".jpg", ".jpeg", ".png", ".heic", ".tif", ".tiff", ".webp"];
 
@@ -52,7 +52,7 @@ export function worksById(works: Work[]) {
   return map;
 }
 
-/** "@img/foo.jpg" -> absolute path in src/media/img */
+/** "/src/media/works/foo.jpg" (or old "@img/foo.jpg") -> absolute path in src/media/works */
 export function mediaPath(ref: string | null | undefined) {
   if (!ref) return null;
   return path.join(MEDIA_DIR, path.basename(ref));

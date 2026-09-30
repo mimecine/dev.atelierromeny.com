@@ -1,7 +1,7 @@
 ---
 id: 642
 title: Paysage aérien 3
-image: '@img/642-paysage-aerien-3.webp'
+image: '/src/media/works/642-paysage-aerien-3.webp'
 collections:
   - abstrait
   - selected-july-2025
@@ -14,7 +14,7 @@ note: ''
 year: '1976'
 year_start: 1976
 year_end: null
-file: '@img/642-paysage-aerien-3.webp'
+file: '/src/media/works/642-paysage-aerien-3.webp'
 uuid: 4e87edcb-5900-4ab7-892b-bd6d6dd09171
 ---
 

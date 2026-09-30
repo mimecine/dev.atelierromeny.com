@@ -1,7 +1,7 @@
 ---
 id: 121
 title: Mandoline fruits et pichet
-image: '@img/121-mandoline-fruits-et-pichet.webp'
+image: '/src/media/works/121-mandoline-fruits-et-pichet.webp'
 collections:
   - natures-mortes
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '1976'
 year_start: 1976
 year_end: null
-file: '@img/121-mandoline-fruits-et-pichet.webp'
+file: '/src/media/works/121-mandoline-fruits-et-pichet.webp'
 uuid: ead1d20d-985c-4162-955c-98b28d5d1554
 ---
 

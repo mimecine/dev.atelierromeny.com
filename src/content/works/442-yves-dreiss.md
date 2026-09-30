@@ -7,11 +7,11 @@ h: 100
 location: secondary storage
 new_location: Attic
 note: null
-file: '@img/442-yves-dreiss.webp'
+file: '/src/media/works/442-yves-dreiss.webp'
 year: '1980'
 year_start: 1980
 year_end: null
-image: '@img/442-yves-dreiss.webp'
+image: '/src/media/works/442-yves-dreiss.webp'
 uuid: 8fddebb9-3a77-4691-ac7f-01127d375fbd
 collections:
   - figures-humaines

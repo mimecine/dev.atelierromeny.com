@@ -1,7 +1,7 @@
 ---
 id: 162
 title: Conversation sous la Iampe
-image: '@img/162-conversation-sous-la-iampe.webp'
+image: '/src/media/works/162-conversation-sous-la-iampe.webp'
 collections:
   - figures-humaines
   - nfs
@@ -14,7 +14,7 @@ note: ''
 year: '1996'
 year_start: 1996
 year_end: null
-file: '@img/162-conversation-sous-la-iampe.webp'
+file: '/src/media/works/162-conversation-sous-la-iampe.webp'
 uuid: cbf6fdd9-5c22-4e9c-a560-8bde3dfa1df5
 ---
 

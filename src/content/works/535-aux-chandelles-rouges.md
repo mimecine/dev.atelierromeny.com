@@ -1,7 +1,7 @@
 ---
 id: 535
 title: Aux chandelles rouges
-image: '@img/535-aux-chandelles-rouges.webp'
+image: '/src/media/works/535-aux-chandelles-rouges.webp'
 collections:
   - natures-mortes
   - selected-july-2025
@@ -13,7 +13,7 @@ note: ''
 year: '2002'
 year_start: 2002
 year_end: null
-file: '@img/535-aux-chandelles-rouges.webp'
+file: '/src/media/works/535-aux-chandelles-rouges.webp'
 uuid: 2edde7cc-02b6-4ca1-bea0-6c48a2574e7e
 ---
 

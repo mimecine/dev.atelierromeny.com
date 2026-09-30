@@ -6,11 +6,11 @@ w: 98
 h: 61
 location: graphic studio
 note: Dessin
-file: '@img/odorico.jpg'
+file: '/src/media/works/odorico.jpg'
 year: '2002'
 year_start: 2002
 year_end: null
-image: '@img/odorico.jpg'
+image: '/src/media/works/odorico.jpg'
 uuid: b56f6eec-cf5e-46b7-88b6-a98084d0fb02
 collections:
   - portraits

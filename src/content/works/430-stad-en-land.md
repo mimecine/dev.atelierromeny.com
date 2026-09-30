@@ -6,11 +6,11 @@ w: 60
 h: 55
 location: secondary storage
 note: null
-file: '@img/430-stad-en-land.webp'
+file: '/src/media/works/430-stad-en-land.webp'
 year: '1978'
 year_start: 1978
 year_end: null
-image: '@img/430-stad-en-land.webp'
+image: '/src/media/works/430-stad-en-land.webp'
 uuid: 331e9c96-5aaa-4e51-ac78-a36e0d0dbc90
 collections:
   - le-peintre-et-son-model
