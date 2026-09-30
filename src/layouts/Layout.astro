@@ -15,6 +15,9 @@ interface Props {
   frontmatter?: Record<string, unknown>;
   bodyclasses?: string | string[];
   slug?: string;
+  /** Include this page in site search. Opt-in, so each work is indexed once (its
+   *  /_works/ page) rather than once per collection it's in. See SearchMeta.astro. */
+  searchable?: boolean;
   [key: string]: unknown;
 }
 
@@ -24,6 +27,7 @@ const {
   frontmatter,
   slug,
   bodyclasses,
+  searchable = false,
   title = frontmatter?.title,
   ...props
 } = Astro.props;
@@ -56,15 +60,14 @@ const isHome = Astro.url.pathname === "/";
     <ClientRouter />
   </head>
   <body
-    data-pagefind-meta={`title: ${title}`}
     class="min-h-screen flex flex-col justify-between xgrid xgrid-rows-[auto,1fr,auto]  font-headline font-thin"
     {...props}
   >
     <SavedStore />
     <Barrier password="edlef" days={7} />
     <header class:list={["site-header", isHome && "is-home"]}>
-      <h1 data-pagefind-ignore class="logo"><a href="/">Atelier Romeny</a></h1>
-      <nav class="site-nav" x-data>
+      <h1 data-pagefind-ignore class="logo" transition:name="site-logo"><a href="/">Atelier Romeny</a></h1>
+      <nav class="site-nav" x-data transition:name="site-nav">
         {
           menu.map((item) => (
             <A href={`${item.href}`} class="hover:text-gray-500">
@@ -98,7 +101,7 @@ const isHome = Astro.url.pathname === "/";
       </nav>
       <slot name="header" />
     </header>
-    <main class="flex-1">
+    <main class="flex-1" data-pagefind-body={searchable ? "" : undefined}>
       <slot />
     </main>
     <footer
@@ -112,6 +115,10 @@ const isHome = Astro.url.pathname === "/";
     </footer>
   </body>
 </html>
+
+<script>
+  import "@src/lib/thumb-loading";
+</script>
 
 <style is:global>
   @reference "../styles/global.css";

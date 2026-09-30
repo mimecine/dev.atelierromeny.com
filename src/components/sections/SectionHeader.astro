@@ -1,0 +1,9 @@
+---
+interface Props {
+  title?: string | null;
+  show?: boolean;
+}
+const { title, show } = Astro.props;
+---
+
+{show && title && <h2 class="text-3xl font-bold font-sans uppercase pb-6">{title}</h2>}

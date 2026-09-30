@@ -1,0 +1,102 @@
+---
+import { Image } from "astro:assets";
+import SectionHeader from "./SectionHeader.astro";
+import { resolveMedia } from "@src/lib/media";
+import type { Section } from "@src/lib/settings";
+
+interface Props {
+  section: Section;
+}
+const { section } = Astro.props;
+const images = (section.images ?? []).map(resolveMedia).filter((i) => !!i);
+const visible = Math.min(Math.max(Number(section.visible) || 1, 1), 3);
+const height = Math.min(Math.max(Number(section.height) || 60, 20), 100);
+const autoplay = section.autoplay !== false && images.length > visible;
+const interval = Math.max(Number(section.interval) || 5, 2) * 1000;
+// Phones show one slide, tablets up to two.
+const vars = `--v: ${visible}; --v-sm: ${Math.min(visible, 2)}; height: ${height}vh`;
+---
+
+{
+  images.length > 0 && (
+    <section class="w-full max-w-6xl mx-auto p-4">
+      <SectionHeader title={section.title} show={section.show_title} />
+      <div
+        class="carousel relative"
+        style={vars}
+        x-data={`{
+          autoplay: ${autoplay},
+          interval: ${interval},
+          timer: null,
+          hovering: false,
+          init() {
+            if (!this.autoplay || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+            this.timer = setInterval(() => { if (!this.hovering && !document.hidden) this.move(1) }, this.interval);
+          },
+          destroy() { clearInterval(this.timer) },
+          stop() { clearInterval(this.timer); this.timer = null },
+          move(dir) {
+            const t = this.$refs.track, w = t.firstElementChild.offsetWidth;
+            const atEnd = t.scrollLeft + t.clientWidth >= t.scrollWidth - 2, atStart = t.scrollLeft <= 2;
+            if (dir > 0 && atEnd) t.scrollTo({ left: 0 });
+            else if (dir < 0 && atStart) t.scrollTo({ left: t.scrollWidth });
+            else t.scrollBy({ left: dir * w });
+          },
+        }`}
+        @mouseenter="hovering = true"
+        @mouseleave="hovering = false"
+      >
+        <div
+          x-ref="track"
+          class="carousel-track flex h-full overflow-x-auto snap-x snap-mandatory scroll-smooth"
+          @pointerdown="stop()"
+          @wheel="stop()"
+        >
+          {images.map((img, i) => (
+            <div class="carousel-slide h-full shrink-0 snap-start px-1 first:pl-0 last:pr-0">
+              <Image
+                src={img}
+                alt=""
+                width={Math.min(img.width, visible === 1 ? 2000 : 1200)}
+                loading={i < visible ? "eager" : "lazy"}
+                class="w-full h-full object-contain"
+              />
+            </div>
+          ))}
+        </div>
+        {images.length > visible && (
+          <>
+            <button type="button" class="carousel-btn left-2" aria-label="Previous" @click="stop(); move(-1)">&lsaquo;</button>
+            <button type="button" class="carousel-btn right-2" aria-label="Next" @click="stop(); move(1)">&rsaquo;</button>
+          </>
+        )}
+      </div>
+    </section>
+  )
+}
+
+<style>
+  @reference "../../styles/global.css";
+  .carousel-track {
+    scrollbar-width: none;
+  }
+  .carousel-track::-webkit-scrollbar {
+    display: none;
+  }
+  .carousel-slide {
+    flex-basis: 100%;
+  }
+  @media (min-width: 40rem) {
+    .carousel-slide {
+      flex-basis: calc(100% / var(--v-sm));
+    }
+  }
+  @media (min-width: 64rem) {
+    .carousel-slide {
+      flex-basis: calc(100% / var(--v));
+    }
+  }
+  .carousel-btn {
+    @apply absolute top-1/2 -translate-y-1/2 size-10 grid place-items-center rounded-full bg-white/70 text-2xl leading-none text-gray-900 hover:bg-white cursor-pointer;
+  }
+</style>

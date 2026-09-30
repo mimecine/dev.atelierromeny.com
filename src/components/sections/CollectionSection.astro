@@ -1,0 +1,45 @@
+---
+import { getCollection, getEntry } from "astro:content";
+import WorkCard from "@components/WorkCard.astro";
+import SectionHeader from "./SectionHeader.astro";
+import type { Section } from "@src/lib/settings";
+
+interface Props {
+  section: Section;
+}
+const { section } = Astro.props;
+const id = String(section.collection);
+const collection = await getEntry("collections", id);
+
+const works = collection?.data.published
+  ? (await getCollection("works", (w) => w.data.image && w.data.collections?.includes(id))).sort(
+      // by title, untitled works last
+      (a, b) => (a.data.title ? 0 : 1) - (b.data.title ? 0 : 1) || (a.data.title ?? "").localeCompare(b.data.title ?? "")
+    )
+  : [];
+
+const columns = Math.min(Math.max(Number(section.columns) || 3, 1), 6);
+const maxRows = Number(section.max_rows) || 0;
+const shown = maxRows ? works.slice(0, maxRows * columns) : works;
+---
+
+{
+  works.length > 0 && (
+    <section class="w-full max-w-6xl mx-auto p-4">
+      <SectionHeader title={section.title || collection?.data.title} show={section.show_title} />
+      <div
+        class="works-grid fixed-cols"
+        style={`--cols: ${columns}; --cols-sm: ${Math.min(columns, 2)}`}
+      >
+        {shown.map((work) => <WorkCard work={work} collection={id} />)}
+      </div>
+      {shown.length < works.length && (
+        <p class="text-right uppercase">
+          <a href={`/${id}`} class="hover:text-gray-500">
+            View all {works.length} &rarr;
+          </a>
+        </p>
+      )}
+    </section>
+  )
+}

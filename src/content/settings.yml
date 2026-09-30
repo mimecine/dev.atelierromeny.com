@@ -9,18 +9,19 @@ menu:
   - title: SEARCH
     href: /search
 sections:
-  - type: collection
-    title: Featured
-    collection: selected-paintings
+  - type: image
+    title: Image
     show_title: false
     hidden: false
-  - type: carousel
-    title: Image Gallery
+    image: /src/media/assets/Edlef While Painting.webp
+    caption: ''
+    href: ''
+  - type: content
+    show_title: false
+    columns: 1
     hidden: false
-    images:
-      - '@img/127-la-serviette-bleue-v2.webp'
-      - '@img/127-la-serviette-bleue-v2-2.webp'
-      - '@img/127-la-serviette-bleue-v2-3.webp'
+    header: ''
+    text: _A Dutchman who painted his way from Antwerp to Stockholm to the Luberon, and never stopped looking for colour..._
 socials:
   - title: Instagram
     href: https://www.instagram.com/atelierromeny/

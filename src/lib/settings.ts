@@ -25,13 +25,29 @@ export interface Link {
   href: string;
 }
 
+/** One front page section; which fields apply depends on `type` (see public/admin/config.yml). */
 export interface Section {
-  type: string;
-  title: string;
+  type: "collection" | "carousel" | "image" | "content" | string;
+  title?: string;
   hidden?: boolean;
-  collection?: string;
   show_title?: boolean;
+  // collection
+  collection?: string;
+  columns?: number | string;
+  max_rows?: number;
+  // carousel
   images?: string[];
+  visible?: number | string;
+  height?: number;
+  autoplay?: boolean;
+  interval?: number;
+  // image
+  image?: string;
+  caption?: string;
+  href?: string;
+  // content
+  header?: string;
+  text?: string;
 }
 
 export function loadSettings(): Settings {

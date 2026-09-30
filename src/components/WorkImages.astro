@@ -1,16 +1,19 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import { Image, getImage } from "astro:assets";
+import { imagesOf, thumbnailOf } from "@src/lib/works";
 
 interface Props {
   work: CollectionEntry<"works">;
+  /** view-transition-name for the first image (matches the grid thumbnail it came from) */
+  transitionName?: string;
 }
 
-const { work } = Astro.props;
+const { work, transitionName } = Astro.props;
 const alt = work.data.title || "";
-const gallery = [work.data.image, ...(work.data.images ?? [])].filter(
-  (img) => !!img
-);
+const gallery = imagesOf(work);
+// The chosen thumbnail is also the image shown for this page in search results.
+const searchIndex = Math.max(gallery.indexOf(thumbnailOf(work)!), 0);
 // Larger versions for the zoom viewer; only downloaded when it's opened.
 const zoomSrcs = await Promise.all(
   gallery.map(
@@ -35,9 +38,14 @@ const zoomSrcs = await Promise.all(
             width={1024}
             class="absolute inset-0 w-full h-full object-contain cursor-zoom-in"
             data-zoom-src={zoomSrcs[i]}
+            data-pagefind-meta={i === searchIndex ? "image[src]" : undefined}
             title="Click to zoom"
             x-show={`active === ${i}`}
-            style={i > 0 ? "display: none" : undefined}
+            style={
+              i > 0
+                ? "display: none"
+                : transitionName && `view-transition-name: ${transitionName}`
+            }
           />
         ))) || (
         <div class="absolute inset-0 grid place-content-center bg-gray-200 border">

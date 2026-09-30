@@ -11,6 +11,7 @@ const _works = defineCollection({
       title: z.string().optional().nullish(),
       image: image().optional().nullish(),
       images: z.array(image()).optional().nullish(),
+      thumbnail: z.number().int().optional().nullish(), // which image is the thumbnail: 1 = image, 2 = images[0], …
       old_image: image().optional().nullish(), // pre-reshoot photo, kept for reference; not shown on the site
       description: z.string().optional().nullish(),
       categories: z.string().optional().nullish(),

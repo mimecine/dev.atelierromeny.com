@@ -1,7 +1,7 @@
 ---
 const { password, days = 7 ,  ...attrs } = Astro.props;
 ---
-<div id="password-overlay">
+<div id="password-overlay" transition:persist data-pagefind-ignore>
   <h2>Enter password</h2>
   <form id="pw-form">
     <input id="pw-input" type="password" />
@@ -9,7 +9,7 @@ const { password, days = 7 ,  ...attrs } = Astro.props;
   </form>
   <p id="pw-error">Wrong password</p>
 </div>
-<a id="logout-link" href="#">Logout</a>
+<a id="logout-link" href="#" transition:persist>Logout</a>
 
 <script define:vars={{password, days}}>
 (function () {
@@ -31,8 +31,10 @@ const { password, days = 7 ,  ...attrs } = Astro.props;
     document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
   }
 
-  // Re-runs on every client-side navigation (view transitions swap in a
-  // fresh DOM, so elements/listeners from a previous page-load are stale).
+  // Runs on every client-side navigation. The overlay and logout link are
+  // transition:persist, so the same nodes (already hidden for a logged-in
+  // visitor) carry across pages instead of fresh, visible ones flashing up
+  // during the view transition. Their listeners are bound only once.
   function init() {
     const overlay = document.getElementById("password-overlay");
     const logoutLink = document.getElementById("logout-link");
@@ -44,6 +46,9 @@ const { password, days = 7 ,  ...attrs } = Astro.props;
       overlay.style.display = "flex";
       logoutLink.style.display = "none";
     }
+
+    if (overlay.dataset.bound) return;
+    overlay.dataset.bound = "true";
 
     document.getElementById("pw-form").addEventListener("submit", (e) => {
       e.preventDefault();

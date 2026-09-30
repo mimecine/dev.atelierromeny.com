@@ -1,86 +1,31 @@
 ---
 export const prerender = true;
 import Layout from "@layouts/Layout.astro";
-import { Image } from "astro:assets";
 import { loadSettings } from "@src/lib/settings";
-import { getCollection, getEntry } from "astro:content";
-const { sections } = loadSettings();
+import CollectionSection from "@components/sections/CollectionSection.astro";
+import CarouselSection from "@components/sections/CarouselSection.astro";
+import ImageSection from "@components/sections/ImageSection.astro";
+import ContentSection from "@components/sections/ContentSection.astro";
+
+// Sections are edited in the CMS: Settings > Frontpage Settings > Frontpage Sections
+const { sections = [] } = loadSettings();
+const components = {
+  collection: CollectionSection,
+  carousel: CarouselSection,
+  image: ImageSection,
+  content: ContentSection,
+} as const;
 ---
 
 <Layout>
-  <section class="grid max-w-6xl mx-auto p-4 font-serif">
-    <h1 class="text-5xl font-bold font-sans uppercase pb-8">Edlef Romeny</h1>
-    <p>
-      Welcome to the online portfolio of Edlef Romeny, a Dutch artist and
-      designer based in Provence. The site showcases a selection of his <a
-        href="/_works">works</a
-      >
-    </p>
-  </section>
-  {
-    sections.map(async (section) => {
-      if (section.hidden) return null;
-      switch (section.type) {
-        case "text":
-          // const text = await getEntry(section.collection, section.entry);
-          // return (
-          //   <section class="grid max-w-4xl mx-auto p-4 font-serif">
-          //     <h2 class="text-3xl font-bold font-sans uppercase pb-8">
-          //       {section.title}
-          //     </h2>
-          //     <div innerHTML={text.body} />
-          //   </section>
-          // );
-          break;
-        case "collection":
-          const collection = await getEntry(
-            "collections",
-            String(section.collection)
-          );
-          if (!collection || !collection.data.published) return null;
-          const works = await getCollection("works", (work) =>
-            work.data.collections?.includes(String(section.collection))
-          );
-          return (
-            <section class="grid max-w-6xl mx-auto p-4 font-serif">
-              <h2 class="text-3xl font-bold font-sans uppercase pb-8">
-                {section.show_title && collection.data.title}
-              </h2>
-              <div
-                class="works-grid"
-                xclass="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4"
-              >
-                {works.map((work) => (
-                  <a href={`/${section.collection}/${work.id}`}>
-                    <div class="work-item" data-key={work.id}>
-                      <div class="work-thumbnail-container">
-                        {work.data.image && (
-                          <Image
-                            src={work.data.image}
-                            alt={work.data.title || ""}
-                            width={600}
-                            class="work-thumbnail"
-                          />
-                        )}
-                      </div>
-                      <div>
-                        {work.data.title || "(Untitled)"}
-                        {work.data.year_start && `, ${work.data.year_start}`}
-                      </div>
-                    </div>
-                  </a>
-                ))}
-              </div>
-            </section>
-          );
-          break;
-        default:
-          break;
-      }
-    })
-  }
+  <div class="flex flex-col gap-8 pb-8">
+    {
+      sections
+        .filter((section) => !section.hidden && section.type in components)
+        .map((section) => {
+          const Section = components[section.type as keyof typeof components];
+          return <Section section={section} />;
+        })
+    }
+  </div>
 </Layout>
-<style>
-  @reference "../styles/global.css";
-
-</style>

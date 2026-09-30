@@ -35,6 +35,15 @@
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
   }
+  /* Front page collection sections choose their column count (--cols, --cols-sm on phones) */
+  .works-grid.fixed-cols {
+    grid-template-columns: repeat(var(--cols-sm), minmax(0, 1fr));
+  }
+  @media (min-width: 48rem) {
+    .works-grid.fixed-cols {
+      grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+    }
+  }
   .work-item {
     text-align: center;
     @apply border bg-gray-100 p-2 pb-1 text-sm sm:p-8 sm:pb-2 sm:text-base;
@@ -45,4 +54,15 @@
   }
   .work-item img {
     @apply border w-auto h-auto max-h-full max-w-full object-contain p-1 sm:p-2 bg-gray-300;
+  }
+  /* Until its image has loaded (see src/lib/thumb-loading.ts) the whole frame pulses
+     gray and the image stays invisible, instead of painting in from the top. */
+  .work-item img {
+    transition: opacity 0.3s ease-out;
+  }
+  .work-thumbnail-container:has(img:not([data-loaded])) {
+    @apply bg-gray-300 animate-pulse;
+  }
+  .work-thumbnail-container img:not([data-loaded]) {
+    opacity: 0;
   }

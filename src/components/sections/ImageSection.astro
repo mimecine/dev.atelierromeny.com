@@ -1,0 +1,32 @@
+---
+import { Image } from "astro:assets";
+import SectionHeader from "./SectionHeader.astro";
+import { resolveMedia } from "@src/lib/media";
+import type { Section } from "@src/lib/settings";
+
+interface Props {
+  section: Section;
+}
+const { section } = Astro.props;
+const image = resolveMedia(section.image);
+---
+
+{
+  image && (
+    <section class="w-full max-w-6xl mx-auto p-4">
+      <SectionHeader title={section.title} show={section.show_title} />
+      <figure class="flex flex-col items-start">
+        {(section.href && (
+          <a href={section.href}>
+            <Image src={image} alt={section.caption || section.title || ""} width={Math.min(image.width, 2000)} class="block w-auto h-auto max-w-full max-h-[80vh]" />
+          </a>
+        )) || (
+          <Image src={image} alt={section.caption || section.title || ""} width={Math.min(image.width, 2000)} class="block w-auto h-auto max-w-full max-h-[80vh]" />
+        )}
+        {section.caption && (
+          <figcaption class="pt-2 text-sm text-gray-600 whitespace-pre-line">{section.caption}</figcaption>
+        )}
+      </figure>
+    </section>
+  )
+}

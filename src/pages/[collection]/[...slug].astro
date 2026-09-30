@@ -8,7 +8,9 @@ import {
 } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import WorkImages from "@components/WorkImages.astro";
+import SearchMeta from "@components/SearchMeta.astro";
 import { shortHash, getNavDigest } from "@src/lib/cache-key";
+import { workTransitionName } from "@src/lib/view-transition";
 
 
 export async function getStaticPaths() {
@@ -121,9 +123,17 @@ const { count, index } = works.reduce(
 );
 ---
 
-<Layout bodyclasses="work-page">
+<Layout
+  title={work.data.title || "Untitled"}
+  bodyclasses="work-page"
+  searchable={collection.id === "_works"}
+>
   <section class="flex flex-col flex-1 min-h-0 w-full max-w-4xl mx-auto">
-    <WorkImages work={work} />
+    <SearchMeta
+      type="work"
+      title={[work.data.title || "Untitled", work.data.year_start, work.data.id && `#${work.data.id}`].filter(Boolean).join(", ")}
+    />
+    <WorkImages work={work} transitionName={workTransitionName(collection.id, work.id)} />
     <div class="py-3 w-full text-center font-bold shrink-0">
       {work.data.title || "Untitled"}
       {work.data.year_start && `, ${work.data.year_start || "Undated"}`}
@@ -132,7 +142,7 @@ const { count, index } = works.reduce(
       {work.data.id && `, #${work.data.id}`}
     </div>
 
-    <div class="flex justify-center pb-3 shrink-0" x-data={`{ id: ${JSON.stringify(work.id)} }`}>
+    <div class="flex justify-center pb-3 shrink-0" data-pagefind-ignore x-data={`{ id: ${JSON.stringify(work.id)} }`}>
       <button
         type="button"
         class="icon-btn gap-2 uppercase text-sm tracking-wide"
@@ -164,7 +174,7 @@ const { count, index } = works.reduce(
       </button>
     </div>
 
-    <ul class="grid grid-cols-3 w-full place-items-center uppercase shrink-0" x-data>
+    <ul class="grid grid-cols-3 w-full place-items-center uppercase shrink-0" data-pagefind-ignore x-data>
       <li>
         {
           previous && (
@@ -200,7 +210,7 @@ const { count, index } = works.reduce(
         }
       </li>
     </ul>
-    <a href="./" @keyup.window.esc="$el.click()" class="hidden"
+    <a href="./" @keyup.window.esc="$el.click()" class="hidden" data-pagefind-ignore
       >Back to collection</a
     >
   </section>

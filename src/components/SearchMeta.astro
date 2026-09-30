@@ -1,0 +1,12 @@
+---
+// Title and type for this page's search result (read by Pagefind; not displayed).
+// The result's image comes from an <img data-pagefind-meta="image[src]"> on the page.
+interface Props {
+  title: string;
+  type: "work" | "collection" | "page";
+}
+const { title, type } = Astro.props;
+---
+
+<!-- data-pagefind-ignore keeps the text out of excerpts; the metadata is still read -->
+<span class="hidden" data-pagefind-meta={`title, type:${type}`} data-pagefind-ignore>{title}</span>

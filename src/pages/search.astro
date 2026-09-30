@@ -1,17 +1,204 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Search from "astro-pagefind/components/Search.astro";
-const title = "Search";
+export const prerender = true;
+// Search page, modelled on the ar-new project's: a Pagefind input with our own result
+// rendering (collections, then pages, then works; thumbnail, title, excerpt), paging,
+// and the term kept in the URL (?q=…&page=…) so Back from a result returns here.
+// What gets indexed is decided per page: see `searchable` in Layout.astro and SearchMeta.astro.
+import Layout from "@layouts/Layout.astro";
+import PagefindConfig from "astro-pagefind/components/PagefindConfig.astro";
 ---
 
-<Layout title={title}>
-    <main class="container search-page">
-        <h1>Search</h1>
-
-        <div class="search-panel">
-            <Search id="search" className="pagefind-ui" uiOptions={{ showImages: true }} />
-        </div>
-
-    </main>
-
+<Layout title="Search">
+  <section class="w-full max-w-4xl mx-auto py-4">
+    <div class="pagefind-site">
+      <PagefindConfig highlight-param="q" instance="site-search" />
+      <pagefind-input instance="site-search" placeholder="Search for a painting, print, year or place" class="block! w-full"></pagefind-input>
+    </div>
+    <div class="pt-6">
+      <ul id="site-search-results" class="flex flex-col" aria-live="polite"></ul>
+      <p id="site-search-status" class="text-sm text-gray-500"></p>
+      <nav id="site-search-pager" aria-label="Search results pages" class="flex items-center gap-4 mt-4"></nav>
+    </div>
+  </section>
 </Layout>
+
+<script>
+  import { getInstanceManager } from "@pagefind/component-ui";
+
+  // Relevance alone can't keep collections above individual works, so results are
+  // stable-sorted by the type set with <SearchMeta>, keeping relevance within a type.
+  const TYPE_ORDER: Record<string, number> = { collection: 0, page: 1, work: 2 };
+  const TYPE_LABEL: Record<string, string> = { collection: "Collection", page: "Page", work: "" };
+  const PAGE_SIZE = 12;
+
+  type Result = { url: string; excerpt: string; meta: Record<string, string> };
+
+  // Looked up again on every astro:page-load: the ClientRouter rebuilds this page's DOM
+  // each time you come back to it, so references kept from a previous visit go stale.
+  let resultsEl = document.getElementById("site-search-results")!;
+  let statusEl = document.getElementById("site-search-status")!;
+  let pagerEl = document.getElementById("site-search-pager")!;
+
+  let sortedData: Result[] = [];
+  let currentPage = 0;
+  let currentTerm = "";
+  let pendingPageRestore: number | null = null;
+
+  const escapeHtml = (s: string) =>
+    s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]!);
+
+  function renderResult(d: Result) {
+    const li = document.createElement("li");
+    li.className = "border-b border-gray-200";
+    const image = d.meta?.image
+      ? `<img src="${escapeHtml(d.meta.image)}" alt="" class="w-24 h-20 object-contain bg-gray-200 shrink-0" loading="lazy">`
+      : `<div class="w-24 h-20 bg-gray-200 shrink-0"></div>`;
+    const label = TYPE_LABEL[d.meta?.type] ?? "";
+    li.innerHTML = `
+      <a href="${escapeHtml(d.url)}" class="flex gap-4 py-3 hover:bg-gray-100">
+        ${image}
+        <span class="flex flex-col min-w-0">
+          ${label ? `<span class="text-xs uppercase tracking-wide text-gray-500">${label}</span>` : ""}
+          <span class="text-lg">${escapeHtml(d.meta?.title ?? d.url)}</span>
+          <span class="text-sm text-gray-600 font-serif">${d.excerpt}</span>
+        </span>
+      </a>`;
+    return li;
+  }
+
+  const totalPages = () => Math.max(1, Math.ceil(sortedData.length / PAGE_SIZE));
+
+  function renderResultsPage() {
+    const start = currentPage * PAGE_SIZE;
+    resultsEl.replaceChildren(...sortedData.slice(start, start + PAGE_SIZE).map(renderResult));
+    statusEl.textContent = `${sortedData.length} result${sortedData.length === 1 ? "" : "s"}`;
+    renderPager();
+  }
+
+  function pagerButton(label: string, disabled: boolean, page: number) {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.textContent = label;
+    b.disabled = disabled;
+    b.className = "px-3 py-1 border border-gray-300 uppercase text-sm disabled:opacity-40 disabled:cursor-default cursor-pointer";
+    b.addEventListener("click", () => goToPage(page));
+    return b;
+  }
+
+  function renderPager() {
+    if (sortedData.length <= PAGE_SIZE) return pagerEl.replaceChildren();
+    const status = document.createElement("span");
+    status.className = "text-sm text-gray-500";
+    status.textContent = `Page ${currentPage + 1} of ${totalPages()}`;
+    pagerEl.replaceChildren(
+      pagerButton("Previous", currentPage === 0, currentPage - 1),
+      status,
+      pagerButton("Next", currentPage >= totalPages() - 1, currentPage + 1)
+    );
+  }
+
+  function goToPage(page: number) {
+    currentPage = Math.min(Math.max(0, page), totalPages() - 1);
+    renderResultsPage();
+    syncUrl(currentTerm, currentPage);
+    resultsEl.scrollIntoView({ block: "nearest" });
+  }
+
+  function clearResults() {
+    sortedData = [];
+    currentPage = 0;
+    resultsEl.replaceChildren();
+    pagerEl.replaceChildren();
+    statusEl.textContent = "";
+  }
+
+  // A slow render for an earlier keystroke must not overwrite the latest one.
+  let renderToken = 0;
+
+  async function handleResults(searchResult: { results: { data: () => Promise<Result> }[] }) {
+    const token = ++renderToken;
+    if (!searchResult.results.length) {
+      clearResults();
+      statusEl.textContent = currentTerm ? "No results" : "";
+      return;
+    }
+    const data = await Promise.all(searchResult.results.map((r) => r.data()));
+    if (token !== renderToken) return;
+    data.sort((a, b) => (TYPE_ORDER[a.meta?.type] ?? 99) - (TYPE_ORDER[b.meta?.type] ?? 99));
+    sortedData = data;
+    currentPage = pendingPageRestore !== null ? Math.min(pendingPageRestore, totalPages() - 1) : 0;
+    pendingPageRestore = null;
+    renderResultsPage();
+  }
+
+  // Term and page live in the URL (replaceState, so typing doesn't add history entries).
+  function syncUrl(term: string, page: number) {
+    const url = new URL(location.href);
+    if (term) url.searchParams.set("q", term);
+    else url.searchParams.delete("q");
+    if (page > 0) url.searchParams.set("page", String(page + 1));
+    else url.searchParams.delete("page");
+    history.replaceState(history.state, "", url);
+  }
+
+  const instance = getInstanceManager().getInstance("site-search");
+
+  // The instance survives soft navigation, so bind its listeners only once.
+  if (!(instance as any).__siteSearchBound) {
+    (instance as any).__siteSearchBound = true;
+    instance.on("search", (...args: unknown[]) => {
+      currentTerm = args[0] as string;
+      if (!currentTerm) clearResults();
+      if (pendingPageRestore === null) syncUrl(currentTerm, 0);
+    });
+    instance.on("results", (...args: unknown[]) => handleResults(args[0] as any));
+  }
+
+  function initPage() {
+    // astro:page-load fires on every page; only act on the search page.
+    const results = document.getElementById("site-search-results");
+    const status = document.getElementById("site-search-status");
+    const pager = document.getElementById("site-search-pager");
+    if (!results || !status || !pager) return;
+    resultsEl = results;
+    statusEl = status;
+    pagerEl = pager;
+    const params = new URLSearchParams(location.search);
+    const term = params.get("q");
+    if (!term) return clearResults();
+    const page = parseInt(params.get("page") || "1", 10);
+    pendingPageRestore = Number.isFinite(page) && page > 0 ? page - 1 : 0;
+    for (const input of instance.getInputs()) if (input.inputEl) input.inputEl.value = term;
+    instance.triggerSearch(term);
+  }
+
+  document.addEventListener("astro:page-load", initPage);
+</script>
+
+<style is:global>
+  #site-search-results mark {
+    background: transparent;
+    color: inherit;
+    font-weight: 600;
+  }
+  .pagefind-site {
+    /* Pagefind's own CSS uses 3x ID-level specificity, so only !important reaches it */
+    .pf-input-wrapper {
+      width: 100% !important;
+      max-width: var(--pf-searchbox-max-width) !important;
+      margin: 0 auto !important;
+    }
+    --pf-text: #1a1a1a;
+    --pf-text-secondary: #666;
+    --pf-background: #fff;
+    --pf-border: #d1d5db;
+    --pf-border-focus: #6b7280;
+    --pf-mark: #1a1a1a;
+    --pf-outline-width: 0px;
+    --pf-font: "Roboto Condensed Variable", sans-serif;
+    --pf-input-height: 56px;
+    --pf-input-font-size: 20px; /* 16px+ prevents iOS zooming in on focus */
+    --pf-border-radius: 0px;
+    --pf-searchbox-max-width: 100%;
+  }
+</style>
