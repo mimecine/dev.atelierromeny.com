@@ -34,6 +34,7 @@ const collections = await getCollection(
 );
 
 const { menu } = loadSettings();
+const isHome = Astro.url.pathname === "/";
 ---
 
 <!doctype html>
@@ -61,9 +62,9 @@ const { menu } = loadSettings();
   >
     <SavedStore />
     <Barrier password="edlef" days={7} />
-    <header class="flex flex-col items-center max-w-6xl mx-auto py-4">
-      <h1 data-pagefind-ignore><a href="/">Atelier Romeny</a></h1>
-      <nav class="flex items-center gap-8 uppercase text-lg" x-data>
+    <header class:list={["site-header", isHome && "is-home"]}>
+      <h1 data-pagefind-ignore class="logo"><a href="/">Atelier Romeny</a></h1>
+      <nav class="site-nav" x-data>
         {
           menu.map((item) => (
             <A href={`${item.href}`} class="hover:text-gray-500">
@@ -97,10 +98,15 @@ const { menu } = loadSettings();
       </nav>
       <slot name="header" />
     </header>
-    <main class="h-full">
+    <main class="flex-1">
       <slot />
     </main>
-    <footer class="text-xs text-gray-500 flex flex-col items-center">
+    <footer
+      class:list={[
+        "text-xs text-gray-500 flex flex-col pt-8",
+        isHome ? "items-center" : "items-end",
+      ]}
+    >
       <p>&copy; {new Date().getFullYear()} Atelier Romeny</p>
       <slot name="footer" />
     </footer>
@@ -109,9 +115,54 @@ const { menu } = loadSettings();
 
 <style is:global>
   @reference "../styles/global.css";
-  html,
+  html {
+    @apply h-full;
+  }
+  /* min-height (not height), so long pages push the footer down instead of running under it */
   body {
-    @apply m-0  w-full h-full p-4 !bg-gray-50 **:[p]:py-2;
+    @apply m-0 w-full min-h-full p-4 !bg-gray-50 **:[p]:py-2;
+  }
+
+  /* Home: large logo centred over the menu. Other pages: small logo in the left
+     corner, menu centred on the page, pushing right when there isn't room. */
+  .site-header {
+    @apply flex flex-col gap-y-3 pb-4;
+  }
+  .site-header .logo {
+    @apply font-logo font-normal tracking-normal leading-none text-xl md:text-2xl p-0;
+  }
+  .site-nav {
+    @apply flex flex-wrap items-center gap-x-6 gap-y-2 md:gap-x-8 uppercase text-lg;
+  }
+  @media (min-width: 48rem) {
+    .site-header:not(.is-home) {
+      display: grid;
+      grid-template-columns: minmax(max-content, 1fr) auto 1fr;
+      align-items: center;
+      column-gap: 2rem;
+    }
+  }
+  .site-header.is-home {
+    @apply items-center text-center gap-y-6 py-8 md:py-12;
+  }
+  .site-header.is-home .logo {
+    font-size: clamp(2.5rem, 9vw, 8rem);
+  }
+  .site-header.is-home .site-nav {
+    @apply justify-center;
+  }
+
+  /* Work pages are exactly one screen tall: the image takes what's left, so the
+     prev/next bar sits at the bottom and nothing moves between works. */
+  html.work-page body {
+    height: 100dvh;
+    min-height: 0;
+  }
+  html.work-page main {
+    @apply flex flex-col min-h-0;
+  }
+  html.work-page footer {
+    @apply pt-2;
   }
   h1,
   h2,

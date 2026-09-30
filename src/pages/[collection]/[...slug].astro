@@ -121,10 +121,10 @@ const { count, index } = works.reduce(
 );
 ---
 
-<Layout>
-  <section class="grid max-w-4xl mx-auto py-4">
+<Layout bodyclasses="work-page">
+  <section class="flex flex-col flex-1 min-h-0 w-full max-w-4xl mx-auto">
     <WorkImages work={work} />
-    <div class="py-4 w-full text-center font-bold">
+    <div class="py-3 w-full text-center font-bold shrink-0">
       {work.data.title || "Untitled"}
       {work.data.year_start && `, ${work.data.year_start || "Undated"}`}
       {work.data.year_start && work.data.year_end && ` - ${work.data.year_end}`}
@@ -132,7 +132,7 @@ const { count, index } = works.reduce(
       {work.data.id && `, #${work.data.id}`}
     </div>
 
-    <div class="flex justify-center pb-4" x-data={`{ id: ${JSON.stringify(work.id)} }`}>
+    <div class="flex justify-center pb-3 shrink-0" x-data={`{ id: ${JSON.stringify(work.id)} }`}>
       <button
         type="button"
         class="icon-btn gap-2 uppercase text-sm tracking-wide"
@@ -164,7 +164,7 @@ const { count, index } = works.reduce(
       </button>
     </div>
 
-    <ul class="grid grid-cols-3 w-full place-items-center uppercase" x-data>
+    <ul class="grid grid-cols-3 w-full place-items-center uppercase shrink-0" x-data>
       <li>
         {
           previous && (

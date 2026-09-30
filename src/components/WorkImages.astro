@@ -19,50 +19,57 @@ const zoomSrcs = await Promise.all(
 );
 ---
 
-{
-  (gallery.length > 0 && (
-    <div x-data="{ active: 0 }">
-      {gallery.map((img, i) => (
-        <Image
-          src={img}
-          alt={alt}
-          width={1024}
-          class="object-contain h-[70vh] w-full cursor-zoom-in"
-          data-zoom-src={zoomSrcs[i]}
-          title="Click to zoom"
-          x-show={`active === ${i}`}
-          style={i > 0 ? "display: none" : undefined}
-        />
-      ))}
-      {gallery.length > 1 && (
-        <ul class="flex justify-center gap-2 pt-3">
-          {gallery.map((img, i) => (
-            <li>
-              <button
-                type="button"
-                class="block border transition-opacity"
-                :class={`active === ${i} ? 'border-black opacity-100' : 'border-transparent opacity-50 hover:opacity-100'`}
-                @click={`active = ${i}`}
-                aria-label={`Image ${i + 1} of ${gallery.length}`}
-              >
-                <Image
-                  src={img}
-                  alt=""
-                  width={96}
-                  class="h-12 w-auto object-contain"
-                />
-              </button>
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
-  )) || (
-    <div class="bg-gray-200 w-80 h-60 grid grid-cols-1 place-content-center border">
-      Image missing
-    </div>
-  )
-}
+<!--
+  Fills whatever height its parent gives it (the image is absolutely positioned inside a
+  flexible box), and the thumbnail band keeps its height on desktop even when there's only
+  one image, so paging between works never shifts the layout.
+-->
+<div class="flex flex-col flex-1 min-h-0" x-data="{ active: 0 }">
+  <div class="relative flex-1 min-h-0">
+    {
+      (gallery.length > 0 &&
+        gallery.map((img, i) => (
+          <Image
+            src={img}
+            alt={alt}
+            width={1024}
+            class="absolute inset-0 w-full h-full object-contain cursor-zoom-in"
+            data-zoom-src={zoomSrcs[i]}
+            title="Click to zoom"
+            x-show={`active === ${i}`}
+            style={i > 0 ? "display: none" : undefined}
+          />
+        ))) || (
+        <div class="absolute inset-0 grid place-content-center bg-gray-200 border">
+          Image missing
+        </div>
+      )
+    }
+  </div>
+  <ul
+    class:list={[
+      "flex justify-center items-center gap-2 h-15 pt-3 shrink-0",
+      gallery.length < 2 && "max-md:hidden",
+    ]}
+  >
+    {
+      gallery.length > 1 &&
+        gallery.map((img, i) => (
+          <li>
+            <button
+              type="button"
+              class="block border transition-opacity"
+              :class={`active === ${i} ? 'border-black opacity-100' : 'border-transparent opacity-50 hover:opacity-100'`}
+              @click={`active = ${i}`}
+              aria-label={`Image ${i + 1} of ${gallery.length}`}
+            >
+              <Image src={img} alt="" width={96} class="h-12 w-auto object-contain" />
+            </button>
+          </li>
+        ))
+    }
+  </ul>
+</div>
 
 <script>
   import { initZoom } from "@src/lib/zoom";

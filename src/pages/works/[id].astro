@@ -30,7 +30,7 @@ const { Content } = await render(work);
 <Layout title={work.data.title || "~ Untitled ~"}>
   <section class="grid max-w-4xl mx-auto py-4">
     <div>
-      <WorkImages work={work} />
+      <div class="flex flex-col h-[75vh]"><WorkImages work={work} /></div>
     <div class="py-4 w-full text-center font-bold">
       {work.data.title || "Untitled"}
       {work.data.year_start && `, ${work.data.year_start || "Undated"}`}

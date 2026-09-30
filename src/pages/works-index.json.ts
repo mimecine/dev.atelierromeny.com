@@ -10,8 +10,7 @@ export const GET: APIRoute = async () => {
     works.map(async (work) => {
       const optimized = await getImage({
         src: work.data.image!,
-        width: 300,
-        height: 200,
+        width: 600,
       });
       return {
         id: work.id,
