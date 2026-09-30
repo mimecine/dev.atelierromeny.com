@@ -26,7 +26,10 @@ barrier:
   enabled: true
   password: edlef
   days: 7
-  text: ''
+  text: |-
+    _A Dutchman who painted his way from Antwerp to Stockholm to the Luberon, and never stopped looking for colour..._ 
+
+    _Questions? Ask_ [_Marco_](mailto:marco@atelierromeny.com)
 socials:
   - title: '@atelierromeny'
     href: https://www.instagram.com/atelierromeny/
