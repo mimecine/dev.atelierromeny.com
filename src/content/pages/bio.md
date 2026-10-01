@@ -1,7 +1,7 @@
 ---
 title: Bio
 published: true
-image: /src/media/assets/edlef-romeny.webp
+image: /src/media/assets/PXL_20260930_142607234.webp
 tags: []
 note: Edlef Romeny 1926-2017
 css: ''
@@ -40,6 +40,8 @@ He showed at Galerie Æsthetica in Stockholm in 1957 and at the Norrköping Art 
 
 ## Provence
 
+![Edlef and sons in Les Baups](/src/media/assets/PXL_20260930_142451565.MP.webp "Edlef and sons in Les Baups")
+
 But there was another light he could not forget. From 1965, perhaps even earlier, he spent his summers in a studio in Provence, enchanted by a landscape unlike anything in Twente or Stockholm. A painting from 1964 already bears the title _Vue de mon Abelier, Provence_.
 
 When his Swedish marriage ended, he followed that light south. From 1978 he divided his life between Paris and Provence, and in 1980 he married his first love from his youth, the soprano Lise Arséguet. In 1986 he settled in the Luberon for good.
@@ -56,4 +58,4 @@ Few painters range as widely. Over a long working life he worked in oil, waterco
 
 His paintings hang in the Stedelijk Museum in Amsterdam and the Västerås Art Museum in Sweden. A self-portrait is in the Kunsthaus Zürich, and his work is also held by the New York Public Library. His windows still stand in the chapel at Beneden-Leeuwen and the old town hall of Heemskerk, and in the churches of Jonsberg and Motala.
 
-The rest is scattered across the homes of Sweden, the Netherlands and France, where his prints and canvases still turn up, carrying that one-word signature: _Romeny_. 
+The rest is scattered across the homes of Sweden, the Netherlands and France, where his prints and canvases still turn up, carrying that one-word signature: _Romeny_.
