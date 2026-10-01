@@ -3,6 +3,7 @@ import "@src/styles/global.css";
 import A from "@components/A.astro";
 import Barrier from "@components/Barrier.astro";
 import SavedStore from "@components/SavedStore.astro";
+import Star from "@components/Star.astro";
 import { loadSettings } from "@src/lib/settings";
 import { renderMarkdown } from "@src/lib/markdown";
 
@@ -151,19 +152,7 @@ const isHome = Astro.url.pathname === "/";
           title="Saved works"
           aria-label="Saved works"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            width="20"
-            height="20"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.75"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M6 3.5h12a.5.5 0 0 1 .5.5v17l-6.5-4-6.5 4v-17a.5.5 0 0 1 .5-.5Z" />
-          </svg>
+          <Star size={20} class="star star-filled" />
         </a>
         <slot name="nav" />
       </nav>
@@ -224,7 +213,13 @@ const isHome = Astro.url.pathname === "/";
     @apply flex flex-col gap-y-3 pb-4;
   }
   .site-header .logo {
-    @apply font-logo font-normal tracking-normal leading-none text-xl md:text-2xl p-0;
+    @apply font-logo font-normal tracking-normal leading-none p-0;
+    font-size: 1.0625rem; /* 15% below text-xl */
+  }
+  @media (min-width: 48rem) {
+    .site-header .logo {
+      font-size: 1.275rem; /* 15% below text-2xl */
+    }
   }
   .site-nav {
     @apply flex flex-wrap items-center gap-x-6 gap-y-2 md:gap-x-8 uppercase text-lg;
@@ -241,7 +236,7 @@ const isHome = Astro.url.pathname === "/";
     @apply items-center text-center gap-y-6 py-8 md:py-12;
   }
   .site-header.is-home .logo {
-    font-size: clamp(2.5rem, 9vw, 8rem);
+    font-size: clamp(2.125rem, 7.65vw, 6.8rem);
   }
   .site-header.is-home .site-nav {
     @apply justify-center;

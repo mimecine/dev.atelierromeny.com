@@ -16,7 +16,10 @@ const { work, collection, searchImage } = Astro.props;
 const thumbnail = thumbnailOf(work);
 ---
 
-<a href={`/${collection}/${work.id}`}>
+<a
+  href={`/${collection}/${work.id}`}
+  title={[work.data.title || "Untitled", work.data.year_start].filter(Boolean).join(", ")}
+>
   <div class="work-item" data-key={work.id}>
     <div class="work-thumbnail-container">
       {
@@ -31,10 +34,6 @@ const thumbnail = thumbnailOf(work);
           />
         )
       }
-    </div>
-    <div>
-      {work.data.title || "(Untitled)"}
-      {work.data.year_start && `, ${work.data.year_start}`}
     </div>
   </div>
 </a>

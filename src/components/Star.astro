@@ -1,0 +1,25 @@
+---
+// Star icon for saving works. Pass Alpine bindings through (e.g. `:class`) to switch
+// between outline and the filled state (`star-filled`: gray fill, like the thumbnail mats).
+interface Props {
+  size?: number;
+  [key: string]: unknown;
+}
+const { size = 22, ...attrs } = Astro.props;
+---
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
+  width={size}
+  height={size}
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.75"
+  stroke-linejoin="round"
+  class="star"
+  aria-hidden="true"
+  {...attrs}
+>
+  <path d="M12 3.2l2.7 5.6 6.1.8-4.5 4.2 1.1 6.1L12 17l-5.4 2.9 1.1-6.1-4.5-4.2 6.1-.8z" />
+</svg>

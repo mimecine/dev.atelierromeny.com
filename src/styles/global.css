@@ -46,17 +46,20 @@
   }
   .work-item {
     text-align: center;
-    @apply border bg-gray-100 p-2 pb-1 text-sm sm:p-8 sm:pb-2 sm:text-base;
+    @apply border bg-gray-100 p-1.5 sm:p-3;
   }
-  /* Fixed-height frame; the whole picture is fitted inside it, never cropped */
+  /* Square frame filling the cell; the whole picture is fitted inside it, never cropped */
   .work-thumbnail-container {
-    @apply flex items-center justify-center h-36 sm:h-52;
+    @apply flex items-center justify-center aspect-square;
   }
   .work-item img {
     @apply border w-auto h-auto max-h-full max-w-full object-contain p-1 sm:p-2 bg-gray-300;
   }
   /* Until its image has loaded (see src/lib/thumb-loading.ts) the whole frame pulses
      gray and the image stays invisible, instead of painting in from the top. */
+  .star-filled {
+    @apply fill-gray-300;
+  }
   .work-item img {
     transition: opacity 0.3s ease-out;
   }

@@ -1,6 +1,7 @@
 ---
 export const prerender = true;
 import Layout from "@layouts/Layout.astro";
+import Star from "@components/Star.astro";
 ---
 
 <Layout title="Saved works" noindex>
@@ -25,32 +26,17 @@ import Layout from "@layouts/Layout.astro";
             @click="remove(item.id)"
             aria-label="Remove from saved"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              width="18"
-              height="18"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-            >
-              <circle cx="12" cy="12" r="9" />
-              <line x1="8" y1="12" x2="16" y2="12" />
-            </svg>
+            <Star size={18} class="star star-filled" />
           </button>
           <a :href="`/_works/${item.id}`">
             <div class="work-thumbnail-container">
               <img
                 :src="item.image"
                 :alt="item.title || ''"
+                :title="[item.title || 'Untitled', item.year_start].filter(Boolean).join(', ')"
                 class="work-thumbnail"
                 loading="lazy"
               />
-            </div>
-            <div>
-              <span x-text="item.title || '(Untitled)'"></span>
-              <span x-show="item.year_start" x-text="', ' + item.year_start"></span>
             </div>
           </a>
         </div>
