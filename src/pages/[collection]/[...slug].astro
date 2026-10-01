@@ -128,6 +128,12 @@ const { count, index } = works.reduce(
 
 <Layout
   title={work.data.title || "Untitled"}
+  printInfo={[
+    work.data.title || "Untitled",
+    work.data.year_start,
+    work.data.w && work.data.h && `${work.data.w} × ${work.data.h} cm`,
+    work.data.id && `#${work.data.id}`,
+  ].filter(Boolean).join(", ")}
   image={thumbnailOf(work)}
   description={[
     `Edlef Romeny, ${work.data.title || "Untitled"}`,
@@ -144,8 +150,8 @@ const { count, index } = works.reduce(
       title={[work.data.title || "Untitled", work.data.year_start, work.data.id && `#${work.data.id}`].filter(Boolean).join(", ")}
     />
     <WorkImages work={work} transitionName={workTransitionName(collection.id, work.id)} />
-    <!-- When printing, the info line moves up into the menu's place, beside the logo -->
-    <div class="work-info py-3 w-full text-center font-bold shrink-0 print:absolute print:top-0 print:inset-x-0 print:py-0 print:pl-64 print:text-right">
+    <!-- When printing, this line is printed beside the logo instead (printInfo above) -->
+    <div class="work-info py-3 w-full text-center font-bold shrink-0 print:hidden">
       {work.data.title || "Untitled"}
       {work.data.year_start && `, ${work.data.year_start || "Undated"}`}
       {work.data.year_start && work.data.year_end && ` - ${work.data.year_end}`}

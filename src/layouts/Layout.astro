@@ -13,6 +13,8 @@ import type { ImageMetadata } from "astro";
 import { resolveMedia } from "@src/lib/media";
 // Inlined so it takes the text colour (the SVG is drawn in currentColor)
 import signature from "@src/media/assets/romeny-signature.svg?raw";
+// The logo text as outlines (generated from the logo font), for printing
+import logoOutline from "@src/media/assets/atelier-romeny-logo.svg?raw";
 import { getCollection } from "astro:content";
 
 interface Props {
@@ -29,6 +31,8 @@ interface Props {
   searchable?: boolean;
   /** Ask search engines not to index this page */
   noindex?: boolean;
+  /** Text printed at the top right of every sheet, beside the logo */
+  printInfo?: string;
   [key: string]: unknown;
 }
 
@@ -40,6 +44,7 @@ const {
   bodyclasses,
   searchable = false,
   noindex = false,
+  printInfo,
   title = frontmatter?.title,
   ...props
 } = Astro.props;
@@ -66,6 +71,54 @@ const share = shareSource
   ? await getImage({ src: shareSource, width: Math.min(shareSource.width, 1200), format: "jpg" })
   : undefined;
 const shareTitle = title ? `${title} - Atelier Romeny` : "Atelier Romeny";
+
+// Printing: the logo, an optional info line, the copyright and the signature sit in
+// the page margins (@page margin boxes), so they repeat on every sheet and fit A4 and
+// Letter alike. Margin boxes take images and plain text, so the logo and signature go
+// in as SVG data URIs, coloured here, and anchored to the outer edges of fixed-width
+// boxes with preserveAspectRatio.
+const svgDataUri = (svg: string, color: string, width: string, height: string, align: string) =>
+  `url("data:image/svg+xml,${encodeURIComponent(
+    svg
+      .replace(/currentColor/g, color)
+      .replace("<svg ", `<svg width="${width}" height="${height}" preserveAspectRatio="${align} meet" `)
+  )}")`;
+const cssString = (text: string) => `"${text.replace(/\\/g, "\\\\").replace(/"/g, '\\"').replace(/\n/g, " ")}"`;
+const printCss = `@media print {
+  @page {
+    margin: 20mm 12mm 18mm;
+    @top-left {
+      content: ${svgDataUri(logoOutline, "#2a2622", "60mm", "4.2mm", "xMinYMax")};
+      width: 60mm;
+      vertical-align: bottom;
+      padding-bottom: 4mm;
+    }
+    ${
+      printInfo
+        ? `@top-right {
+      content: ${cssString(printInfo)};
+      font: 700 10pt "Roboto Condensed Variable", "Roboto Condensed", sans-serif;
+      color: #2a2622;
+      text-align: right;
+      vertical-align: bottom;
+      padding-bottom: 4mm;
+    }`
+        : ""
+    }
+    @bottom-left {
+      content: "© ${new Date().getFullYear()} Atelier Romeny";
+      font: 300 7pt "Roboto Condensed Variable", "Roboto Condensed", sans-serif;
+      color: #737373;
+      vertical-align: bottom;
+      padding-bottom: 1mm;
+    }
+    @bottom-right {
+      content: ${svgDataUri(signature, "#737373", "50mm", "8.5mm", "xMaxYMax")};
+      width: 50mm;
+      vertical-align: bottom;
+    }
+  }
+}`;
 // Google Analytics (Settings > Google Analytics). Only a well-formed ID is used, since it
 // ends up inside a script. Soft navigations (ClientRouter) are counted by GA4's enhanced
 // measurement ("page changes based on browser history events", on by default).
@@ -114,6 +167,7 @@ const isHome = Astro.url.pathname === "/";
     <slot name="head" />
     <title>{title && `${title} -`} Atelier Romeny</title>
     <ClientRouter />
+    <style is:inline set:html={printCss} />
     {
       gaId && (
         <>
@@ -319,9 +373,17 @@ const isHome = Astro.url.pathname === "/";
     /* (their own display rules would otherwise win over Tailwind's print:hidden) */
     #logout-link,
     #password-overlay,
-    .site-nav,
+    .site-header,
+    .site-footer,
     .icon-btn {
       display: none !important;
+    }
+    /* Keep headings with the text or image that follows them */
+    h2, h3, h4 {
+      break-after: avoid;
+    }
+    .md-figure {
+      break-inside: avoid;
     }
     /* Saved page: two across, never split a work over two sheets */
     .works-grid {
