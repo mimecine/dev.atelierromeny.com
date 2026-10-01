@@ -1,6 +1,6 @@
 ---
 id: 56
-title: passage
+title: Passage
 categories: Métro
 w: 92
 h: 65

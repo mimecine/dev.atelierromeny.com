@@ -1,6 +1,6 @@
 ---
 id: 61
-title: il lit Picasso
+title: Il lit Picasso
 categories: Figures humaines
 w: 33
 h: 41

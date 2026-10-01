@@ -1,6 +1,6 @@
 ---
 id: 227
-title: petite nue 1 (assise)
+title: Petite nue 1 (assise)
 categories: Nues
 w: 50
 h: 61

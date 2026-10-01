@@ -1,6 +1,6 @@
 ---
 id: null
-title: le cerisier
+title: Le cerisier
 image: '/src/media/works/le-cerisier.webp'
 collections:
   - paysages

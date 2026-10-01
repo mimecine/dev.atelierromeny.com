@@ -1,6 +1,6 @@
 ---
 id: null
-title: petite improvisation I
+title: Petite improvisation I
 image: '/src/media/works/petite-improvisation-i.webp'
 collections:
   - abstrait

@@ -1,6 +1,6 @@
 ---
 id: 74
-title: inspiré nature La flamme
+title: Inspiré nature La flamme
 categories: Abstrait
 w: 27
 h: 34

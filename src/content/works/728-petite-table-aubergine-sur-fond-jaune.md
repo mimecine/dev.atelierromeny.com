@@ -1,6 +1,6 @@
 ---
 id: 728
-title: 'petite table, aubergine, sur fond jaune'
+title: 'Petite table, aubergine, sur fond jaune'
 categories: Natures mortes
 w: 80
 h: 81

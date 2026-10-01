@@ -1,6 +1,6 @@
 ---
 id: 386
-title: le verseur é pe’trole
+title: Le verseur é pe’trole
 categories: natures mortes
 w: 50
 h: 65

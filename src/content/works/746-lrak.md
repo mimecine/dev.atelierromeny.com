@@ -1,6 +1,6 @@
 ---
 id: 746
-title: lrak
+title: Lrak
 categories: Figures humaines
 w: 100
 h: 73

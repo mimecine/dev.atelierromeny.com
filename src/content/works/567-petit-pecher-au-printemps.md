@@ -1,6 +1,6 @@
 ---
 id: 567
-title: petit pécher au Printemps
+title: Petit pécher au Printemps
 image: '/src/media/works/567-petit-pecher-au-printemps.webp'
 collections:
   - arbres-en-fleurs

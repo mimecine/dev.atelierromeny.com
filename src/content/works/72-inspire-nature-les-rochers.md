@@ -1,6 +1,6 @@
 ---
 id: 72
-title: inspiré nature Les rochers
+title: Inspiré nature Les rochers
 categories: Abstrait
 w: 27
 h: 40

@@ -1,6 +1,6 @@
 ---
 id: 727
-title: poire et violettes sur fond noir
+title: Poire et violettes sur fond noir
 categories: Natures mortes
 w: 50
 h: 46

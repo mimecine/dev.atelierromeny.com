@@ -1,6 +1,6 @@
 ---
 id: 228
-title: petite nue 2
+title: Petite nue 2
 categories: Nues
 w: 38
 h: 55

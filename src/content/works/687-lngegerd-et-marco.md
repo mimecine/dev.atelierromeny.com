@@ -1,6 +1,6 @@
 ---
 id: 687
-title: lngegerd et Marco
+title: Lngegerd et Marco
 image: '/src/media/works/687-lngegerd-et-marco.webp'
 collections:
   - figures-humaines
