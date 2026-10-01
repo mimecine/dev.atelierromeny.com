@@ -5,7 +5,7 @@ interface Props {
   size?: number;
   [key: string]: unknown;
 }
-const { size = 22, ...attrs } = Astro.props;
+const { size = 22, class: className, ...attrs } = Astro.props;
 ---
 
 <svg
@@ -17,7 +17,7 @@ const { size = 22, ...attrs } = Astro.props;
   stroke="currentColor"
   stroke-width="1.75"
   stroke-linejoin="round"
-  class="star"
+  class:list={["star", className]}
   aria-hidden="true"
   {...attrs}
 >

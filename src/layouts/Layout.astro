@@ -138,7 +138,7 @@ const isHome = Astro.url.pathname === "/";
     }
     <header class:list={["site-header", isHome && "is-home"]}>
       <h1 data-pagefind-ignore class="logo" transition:name="site-logo"><a href="/">Atelier Romeny</a></h1>
-      <nav class="site-nav" x-data transition:name="site-nav">
+      <nav class="site-nav print:hidden" x-data transition:name="site-nav">
         {
           menu.map((item) => (
             <A href={`${item.href}`} class="hover:text-gray-500">
@@ -154,7 +154,7 @@ const isHome = Astro.url.pathname === "/";
           title="Saved works"
           aria-label="Saved works"
         >
-          <Star size={20} class="star star-filled" />
+          <Star size={20} class="star-filled" />
         </a>
         <slot name="nav" />
       </nav>
@@ -167,7 +167,7 @@ const isHome = Astro.url.pathname === "/";
       <div class="footer-text">
       {
         socials.length > 0 && (
-          <ul class="flex flex-wrap gap-x-4 gap-y-1 uppercase tracking-wide">
+          <ul class="flex flex-wrap gap-x-4 gap-y-1 uppercase tracking-wide print:hidden">
             {socials.map((link) => {
               const external = /^https?:/.test(link.href);
               return (
@@ -300,6 +300,36 @@ const isHome = Astro.url.pathname === "/";
   }
   html.work-page footer {
     @apply pt-2;
+  }
+
+  /* Printing (work pages and the Saved page): no menu, pager, footer links or
+     buttons; the paper texture is left out by the browser. */
+  @media print {
+    @page {
+      margin: 12mm;
+    }
+    body {
+      @apply p-0;
+    }
+    /* A work page prints on one sheet: the painting fills what the header, info
+       line and footer leave. */
+    html.work-page body {
+      height: 100vh;
+    }
+    /* (their own display rules would otherwise win over Tailwind's print:hidden) */
+    #logout-link,
+    #password-overlay,
+    .site-nav,
+    .icon-btn {
+      display: none !important;
+    }
+    /* Saved page: two across, never split a work over two sheets */
+    .works-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+    .work-item {
+      break-inside: avoid;
+    }
   }
   h1,
   h2,

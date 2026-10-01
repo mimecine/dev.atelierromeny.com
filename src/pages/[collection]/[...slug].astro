@@ -144,13 +144,14 @@ const { count, index } = works.reduce(
       title={[work.data.title || "Untitled", work.data.year_start, work.data.id && `#${work.data.id}`].filter(Boolean).join(", ")}
     />
     <WorkImages work={work} transitionName={workTransitionName(collection.id, work.id)} />
-    <div class="py-3 w-full text-center font-bold shrink-0">
+    <!-- When printing, the info line moves up into the menu's place, beside the logo -->
+    <div class="work-info py-3 w-full text-center font-bold shrink-0 print:absolute print:top-0 print:inset-x-0 print:py-0 print:pl-64 print:text-right">
       {work.data.title || "Untitled"}
       {work.data.year_start && `, ${work.data.year_start || "Undated"}`}
       {work.data.year_start && work.data.year_end && ` - ${work.data.year_end}`}
       {work.data.w && work.data.h && `( ${work.data.w} x ${work.data.h} )`}
       {work.data.id && `, #${work.data.id}`}
-      <span data-pagefind-ignore x-data={`{ id: ${JSON.stringify(work.id)} }`}>
+      <span class="print:hidden" data-pagefind-ignore x-data={`{ id: ${JSON.stringify(work.id)} }`}>
         <button
           type="button"
           class="icon-btn align-[-0.2em] ml-1.5"
@@ -164,7 +165,7 @@ const { count, index } = works.reduce(
       </span>
     </div>
 
-    <ul class="grid grid-cols-3 w-full place-items-center uppercase shrink-0" data-pagefind-ignore x-data>
+    <ul class="grid grid-cols-3 w-full place-items-center uppercase shrink-0 print:hidden" data-pagefind-ignore x-data>
       <li>
         {
           previous && (

@@ -21,12 +21,12 @@ import Star from "@components/Star.astro";
         >
           <button
             type="button"
-            class="icon-btn absolute top-1 right-1 bg-white/80 rounded-full p-1"
+            class="icon-btn absolute top-1 right-1 bg-white/80 rounded-full p-1 print:hidden"
             :disabled="removing.includes(item.id)"
             @click="remove(item.id)"
             aria-label="Remove from saved"
           >
-            <Star size={18} class="star star-filled" />
+            <Star size={18} class="star-filled" />
           </button>
           <a :href="`/_works/${item.id}`">
             <div class="work-thumbnail-container">
@@ -39,6 +39,9 @@ import Star from "@components/Star.astro";
                 class="work-thumbnail"
                 loading="lazy"
               />
+            </div>
+            <div class="pt-1 text-sm text-center">
+              <span x-text="item.title || 'Untitled'"></span><span x-show="item.year_start" x-text="', ' + item.year_start"></span>
             </div>
           </a>
         </div>
