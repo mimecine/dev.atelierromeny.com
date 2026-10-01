@@ -6,7 +6,7 @@ import Star from "@components/Star.astro";
 
 <Layout title="Saved works" noindex>
   <section class="grid max-w-6xl mx-auto py-4" x-data="savedList()" x-init="init()">
-    <h1>Saved</h1>
+    <h1 class="print:hidden">Saved works</h1>
     <p x-cloak x-show="!loading && items.length === 0" class="text-gray-500">
       You haven't saved any works yet.
     </p>
