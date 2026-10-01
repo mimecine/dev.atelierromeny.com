@@ -18,6 +18,8 @@ export const GET: APIRoute = async () => {
         title: work.data.title ?? null,
         year_start: work.data.year_start ?? null,
         image: optimized.src,
+        width: optimized.attributes.width,
+        height: optimized.attributes.height,
       };
     }),
   );

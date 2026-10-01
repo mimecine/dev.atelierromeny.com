@@ -51,7 +51,7 @@ import PagefindConfig from "astro-pagefind/components/PagefindConfig.astro";
     const li = document.createElement("li");
     li.className = "border-b border-gray-200";
     const image = d.meta?.image
-      ? `<img src="${escapeHtml(d.meta.image)}" alt="" class="w-24 h-20 object-contain bg-gray-200 shrink-0" loading="lazy">`
+      ? `<img src="${escapeHtml(d.meta.image)}" alt="" width="96" height="80" class="w-24 h-20 object-contain bg-gray-200 shrink-0" loading="lazy">`
       : `<div class="w-24 h-20 bg-gray-200 shrink-0"></div>`;
     const label = TYPE_LABEL[d.meta?.type] ?? "";
     li.innerHTML = `

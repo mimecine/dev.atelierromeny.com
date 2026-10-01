@@ -33,6 +33,8 @@ import Star from "@components/Star.astro";
               <img
                 :src="item.image"
                 :alt="item.title || ''"
+                :width="item.width"
+                :height="item.height"
                 :title="[item.title || 'Untitled', item.year_start].filter(Boolean).join(', ')"
                 class="work-thumbnail"
                 loading="lazy"

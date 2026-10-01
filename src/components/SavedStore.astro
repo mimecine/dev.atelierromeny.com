@@ -37,7 +37,7 @@
       },
     });
 
-    type SavedWork = { id: string; title: string | null; year_start: number | null; image: string };
+    type SavedWork = { id: string; title: string | null; year_start: number | null; image: string; width: number; height: number };
 
     // @ts-expect-error Alpine is set on window by @astrojs/alpinejs
     Alpine.data("savedList", () => ({
