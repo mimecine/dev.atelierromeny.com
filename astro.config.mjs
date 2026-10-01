@@ -12,6 +12,7 @@ import pagefind from 'astro-pagefind';
 
 import { satteri } from '@astrojs/markdown-satteri';
 import satteriImagePathFix from './src/lib/satteri-image-path-fix.js';
+import satteriImageCaptions from './src/lib/satteri-image-captions.js';
 
 
 import cloudflare from '@astrojs/cloudflare';
@@ -51,7 +52,7 @@ export default defineConfig({
   integrations: [alpinejs(), icon(), pagefind()],
 
   markdown: {
-    processor: satteri({ mdastPlugins: [satteriImagePathFix] }),
+    processor: satteri({ mdastPlugins: [satteriImagePathFix], hastPlugins: [satteriImageCaptions] }),
   },
 
   experimental: {

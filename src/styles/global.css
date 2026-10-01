@@ -22,6 +22,18 @@
     text-wrap: pretty;
   }
 
+  /* Captioned markdown images (src/lib/satteri-image-captions.js) */
+  .md-figure img {
+    @apply mb-0;
+  }
+  /* Images in markdown text never get taller than the screen */
+  .prose img {
+    @apply w-auto h-auto max-h-[80vh];
+  }
+  .md-caption {
+    @apply block pt-1 text-sm italic text-gray-500 leading-snug;
+  }
+
   [x-cloak] {
     display: none !important;
   }
