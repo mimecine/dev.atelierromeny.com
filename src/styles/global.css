@@ -79,7 +79,7 @@
   /* Until its image has loaded (see src/lib/thumb-loading.ts) the whole frame pulses
      gray and the image stays invisible, instead of painting in from the top. */
   .star-filled {
-    @apply fill-gray-300;
+    @apply fill-neutral-400;
   }
   .work-item img {
     transition: opacity 0.3s ease-out;

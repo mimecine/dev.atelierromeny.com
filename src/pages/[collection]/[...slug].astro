@@ -150,19 +150,18 @@ const { count, index } = works.reduce(
       {work.data.year_start && work.data.year_end && ` - ${work.data.year_end}`}
       {work.data.w && work.data.h && `( ${work.data.w} x ${work.data.h} )`}
       {work.data.id && `, #${work.data.id}`}
-    </div>
-
-    <div class="flex justify-center pb-3 shrink-0" data-pagefind-ignore x-data={`{ id: ${JSON.stringify(work.id)} }`}>
-      <button
-        type="button"
-        class="icon-btn"
-        @click="$store.saved.toggle(id)"
-        :aria-pressed="$store.saved.has(id)"
-        :aria-label="$store.saved.has(id) ? 'Remove from saved' : 'Save'"
-        :title="$store.saved.has(id) ? 'Remove from saved' : 'Save'"
-      >
-        <Star size={26} :class="$store.saved.has(id) && 'star-filled'" />
-      </button>
+      <span data-pagefind-ignore x-data={`{ id: ${JSON.stringify(work.id)} }`}>
+        <button
+          type="button"
+          class="icon-btn align-[-0.2em] ml-1.5"
+          @click="$store.saved.toggle(id)"
+          :aria-pressed="$store.saved.has(id)"
+          :aria-label="$store.saved.has(id) ? 'Remove from saved' : 'Save'"
+          :title="$store.saved.has(id) ? 'Remove from saved' : 'Save'"
+        >
+          <Star size={20} :class="$store.saved.has(id) && 'star-filled'" />
+        </button>
+      </span>
     </div>
 
     <ul class="grid grid-cols-3 w-full place-items-center uppercase shrink-0" data-pagefind-ignore x-data>
