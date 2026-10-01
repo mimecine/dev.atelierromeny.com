@@ -14,6 +14,14 @@
     @apply font-sans text-gray-900;
   }
 
+  /* Even line lengths in headings; no lone last words in running text */
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  p, li, blockquote, figcaption, dd {
+    text-wrap: pretty;
+  }
+
   [x-cloak] {
     display: none !important;
   }
