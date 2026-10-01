@@ -239,9 +239,10 @@ const isHome = Astro.url.pathname === "/";
     container-type: inline-size;
   }
   .site-header.is-home .logo {
-    /* Exactly the header's width: the text is 10.606em wide in this font (measured),
-       so 100cqi / 10.606. Re-measure if the logo text or font changes. */
-    font-size: calc(100cqi / 10.606);
+    /* Exactly as wide as the content below it: the front page sections are at most
+       72rem (max-w-6xl) with 1rem padding (p-4). The text is 10.606em wide in this
+       font (measured), so divide by that. Re-measure if the text or font changes. */
+    font-size: calc((min(100cqi, 72rem) - 2rem) / 10.606);
     white-space: nowrap;
   }
   .site-header.is-home .site-nav {
