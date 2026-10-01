@@ -235,8 +235,14 @@ const isHome = Astro.url.pathname === "/";
   .site-header.is-home {
     @apply items-center text-center gap-y-6 py-8 md:py-12;
   }
+  .site-header.is-home {
+    container-type: inline-size;
+  }
   .site-header.is-home .logo {
-    font-size: clamp(2.125rem, 7.65vw, 6.8rem);
+    /* Exactly the header's width: the text is 10.606em wide in this font (measured),
+       so 100cqi / 10.606. Re-measure if the logo text or font changes. */
+    font-size: calc(100cqi / 10.606);
+    white-space: nowrap;
   }
   .site-header.is-home .site-nav {
     @apply justify-center;
