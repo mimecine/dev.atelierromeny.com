@@ -16,12 +16,6 @@ sections:
     image: /src/media/assets/Edlef While Painting.webp
     caption: ''
     href: ''
-  - type: content
-    show_title: false
-    columns: 1
-    hidden: false
-    header: ''
-    text: _A Dutchman who painted his way from Antwerp to Stockholm to the Luberon, and never stopped looking for colour..._
 barrier:
   enabled: false
   password: edlef
@@ -41,7 +35,7 @@ css: ''
 js: ''
 collections:
   - 678fc808-3192-4aaa-bb1d-51b51659ec00
-share_image: '/src/media/works/127-la-serviette-bleue-v2.webp'
 description: Edlef Romeny. A Dutch/Swedish artist who lived and painted in Provence.
+share_image: /src/media/works/127-la-serviette-bleue-v2.webp
 author: Marco Romeny
 email: marco@mimecom.net
