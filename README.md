@@ -87,14 +87,19 @@ Only the collections linked from *Settings → Menu* are open to search engines,
   - text and numbers: click to edit, Enter to save
   - yes/no fields: checkboxes, showing the field's default when the file has no value
   - relations: chips with × and a + picker
-  - images: drop files on the cell, or click +. Uploads are converted to WebP, at most 3000px, like Sveltia's.
+  - images: drop files on the cell, or click + (or the image) to pick from the media browser. Uploads are converted to WebP, at most 3000px, like Sveltia's.
   - lists of images: drag to reorder
   - fields it can't edit are shown read-only; edit those in Sveltia
 - **Rich text:** markdown fields open a WYSIWYG editor in a dialog (`richtext.ts`). It's built on Lexical, the editor Sveltia uses, and has a Markdown tab for the source.
   - **Images:** they're kept as their own node, so `![alt](src "caption")` survives editing, and images can be dropped in.
   - **Unchanged text:** it's written back exactly as it was. Italics are written as `_text_`.
 - **Saving:** "Save" (or Cmd/Ctrl+S) writes all edits and uploads together. Edited files are checked first: on GitHub it retries if only unrelated files changed, and otherwise (or locally) it says which entries changed elsewhere.
-- **Thumbnails:** they come from `/admin/thumbs.json`, built with the site. Images added since the last build are read from GitHub or the local folder.
+- **Media browser:** the "Media" button, or + on an image cell, opens the media folders from the config.
+  - It searches by file name, shows a thumbnail grid, and uploads files dropped on it.
+  - Uploads made there are saved with the next Save, even if no entry uses them yet.
+- **Thumbnails:** they load only as they come near the screen.
+  - **Live site:** they come from `/admin/thumbs.json`, built with the site.
+  - **Everywhere else** (images newer than the last build, local folders, `bun dev`, where that list is empty because dev doesn't resize images): the browser reads the image and shrinks it to 240px itself, a few at a time.
 - **Missing features:** it doesn't create or delete entries; do that in Sveltia (each row's ↗ opens it there).
 
 ## Adding new photos of works

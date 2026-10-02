@@ -33,6 +33,16 @@ interface Upload {
   blob: Blob;
   url: string;
   repoPath: string;
+  /** uploaded from the media browser: saved even if no entry uses it (yet) */
+  keep?: boolean;
+}
+
+interface MediaFolder {
+  label: string;
+  /** repo path, e.g. "src/media/works" */
+  media: string;
+  /** path as stored in content, e.g. "/src/media/works" */
+  pub: string;
 }
 
 const state = {
@@ -49,6 +59,7 @@ const state = {
   thumbs: {} as Record<string, string>,
   rawThumbs: new Map<string, Promise<string>>(),
   relations: new Map<string, Promise<Entry[]>>(),
+  mediaLists: new Map<string, Promise<string[]>>(),
   saving: false,
 };
 
@@ -78,12 +89,16 @@ function status(message: string, kind: "info" | "error" | "ok" = "info", link?: 
 
 const dirtyEntries = () => state.entries.filter((e) => e.dirty.size > 0);
 
+const keptUploads = () => [...state.uploads.values()].filter((u) => u.keep);
+
 function updateToolbar() {
   const n = dirtyEntries().length;
+  const u = keptUploads().length;
   const save = $<HTMLButtonElement>("#save");
-  save.disabled = n === 0 || state.saving;
-  save.textContent = state.saving ? "Saving…" : n ? `Save ${n} change${n === 1 ? "" : "s"}` : "Saved";
-  $<HTMLButtonElement>("#discard").hidden = n === 0 || state.saving;
+  save.disabled = (n === 0 && u === 0) || state.saving;
+  const parts = [n && `${n} change${n === 1 ? "" : "s"}`, u && `${u} image${u === 1 ? "" : "s"}`].filter(Boolean);
+  save.textContent = state.saving ? "Saving…" : parts.length ? `Save ${parts.join(" + ")}` : "Saved";
+  $<HTMLButtonElement>("#discard").hidden = (n === 0 && u === 0) || state.saving;
 }
 
 function setValue(entry: Entry, col: Column, value: unknown) {
@@ -95,15 +110,38 @@ function setValue(entry: Entry, col: Column, value: unknown) {
 
 // ---------------------------------------------------------------- media
 
-function mediaFolders(col: Column) {
-  const c = state.collection!;
-  const media = col.field.field?.media_folder ?? col.field.media_folder ?? c.media_folder ?? state.config.media_folder ?? "src/media";
-  const pub = col.field.field?.public_folder ?? col.field.public_folder ?? c.public_folder ?? state.config.public_folder ?? `/${stripSlash(media)}`;
-  return { media: stripSlash(media), pub: pub.replace(/\/+$/, "") };
+const folderLabel = (media: string) => {
+  const last = media.split("/").pop() || media;
+  return last.charAt(0).toUpperCase() + last.slice(1);
+};
+
+function makeFolder(media: string, pub?: string): MediaFolder {
+  const m = stripSlash(media).replace(/\/+$/, "");
+  return { label: folderLabel(m), media: m, pub: (pub ?? `/${m}`).replace(/\/+$/, "") };
 }
 
-async function stageUploads(col: Column, files: File[]): Promise<string[]> {
-  const { media, pub } = mediaFolders(col);
+/** The media folder a column uploads to (field, then collection, then site default). */
+function mediaFolderFor(col: Column): MediaFolder {
+  const c = state.collection!;
+  const media = col.field.field?.media_folder ?? col.field.media_folder ?? c.media_folder ?? state.config.media_folder ?? "src/media";
+  const pub = col.field.field?.public_folder ?? col.field.public_folder ?? c.public_folder ?? state.config.public_folder;
+  return makeFolder(media, pub);
+}
+
+/** Every media folder in the config (site default and per collection). */
+function allMediaFolders(): MediaFolder[] {
+  const list = [
+    ...(state.config.media_folder ? [makeFolder(state.config.media_folder, state.config.public_folder)] : []),
+    ...state.config.collections.filter((c) => c.media_folder).map((c) => makeFolder(c.media_folder!, c.public_folder)),
+  ];
+  return list.filter((f, i) => list.findIndex((g) => g.media === f.media) === i);
+}
+
+const stageUploads = (col: Column, files: File[]) => stageUploadsTo(mediaFolderFor(col), files);
+
+async function stageUploadsTo(folder: MediaFolder, files: File[], keep = false): Promise<string[]> {
+  const { media, pub } = folder;
+  const existing = new Set(await listMedia(folder).catch(() => [] as string[]));
   const paths: string[] = [];
   for (const file of files) {
     if (!file.type.startsWith("image/")) continue;
@@ -111,13 +149,59 @@ async function stageUploads(col: Column, files: File[]): Promise<string[]> {
     const { blob, ext } = await prepareUpload(file);
     const base = slugifyBase(file.name);
     let name = `${base}.${ext}`;
-    for (let i = 2; state.thumbs[`${pub}/${name}`] || state.uploads.has(`${pub}/${name}`); i++) name = `${base}-${i}.${ext}`;
+    for (let i = 2; existing.has(name) || state.thumbs[`${pub}/${name}`] || state.uploads.has(`${pub}/${name}`); i++) name = `${base}-${i}.${ext}`;
     const publicPath = `${pub}/${name}`;
-    state.uploads.set(publicPath, { blob, url: URL.createObjectURL(blob), repoPath: `${media}/${name}` });
+    state.uploads.set(publicPath, { blob, url: URL.createObjectURL(blob), repoPath: `${media}/${name}`, keep });
     paths.push(publicPath);
   }
   status(paths.length ? `${paths.length} image${paths.length === 1 ? "" : "s"} ready; they're uploaded when you save.` : "No images in that drop.");
+  updateToolbar();
   return paths;
+}
+
+const IMAGE_FILE = /\.(webp|jpe?g|png|gif|avif|svg)$/i;
+
+function listMedia(folder: MediaFolder): Promise<string[]> {
+  let p = state.mediaLists.get(folder.media);
+  if (!p) {
+    p = state.backend.listFolder(folder.media).then((names) => names.filter((n) => IMAGE_FILE.test(n)));
+    state.mediaLists.set(folder.media, p);
+  }
+  return p;
+}
+
+// Small thumbnails made in the browser for images without a built one (dev server,
+// new uploads, local folders): a few at a time, scaled to 240px.
+let active = 0;
+const waiting: (() => void)[] = [];
+async function limited<T>(fn: () => Promise<T>): Promise<T> {
+  if (active >= 4) await new Promise<void>((r) => waiting.push(r));
+  active++;
+  try {
+    return await fn();
+  } finally {
+    active--;
+    waiting.shift()?.();
+  }
+}
+
+async function shrink(blob: Blob): Promise<Blob> {
+  try {
+    const bmp = await createImageBitmap(blob);
+    const scale = Math.min(1, 240 / Math.max(bmp.width, bmp.height));
+    if (scale === 1) {
+      bmp.close();
+      return blob;
+    }
+    const canvas = document.createElement("canvas");
+    canvas.width = Math.round(bmp.width * scale);
+    canvas.height = Math.round(bmp.height * scale);
+    canvas.getContext("2d")!.drawImage(bmp, 0, 0, canvas.width, canvas.height);
+    bmp.close();
+    return await new Promise<Blob>((r) => canvas.toBlob((b) => r(b ?? blob), "image/webp", 0.8));
+  } catch {
+    return blob;
+  }
 }
 
 /** Thumbnail URL for a stored path: a pending upload, the build's thumbnail, or GitHub. */
@@ -128,7 +212,7 @@ function thumbFor(path: string): string | Promise<string> {
   if (built) return built;
   let p = state.rawThumbs.get(path);
   if (!p) {
-    p = state.backend.readBlob(stripSlash(path)).then((b) => URL.createObjectURL(b));
+    p = limited(async () => URL.createObjectURL(await shrink(await state.backend.readBlob(stripSlash(path)))));
     state.rawThumbs.set(path, p);
   }
   return p;
@@ -148,10 +232,11 @@ const lazyImages = new IntersectionObserver(
   { rootMargin: "400px" }
 );
 
+/** Thumbnails load when they come near the screen, never all at once. */
 function thumb(path: string, extra: Attrs = {}) {
   const img = h("img", { class: "thumb", alt: "", title: path.split("/").pop(), "data-path": path, ...extra });
-  const src = state.uploads.get(path)?.url ?? state.thumbs[path];
-  if (src) img.src = src;
+  const up = state.uploads.get(path);
+  if (up) img.src = up.url;
   else lazyImages.observe(img);
   return img;
 }
@@ -180,6 +265,124 @@ function fileDropTarget(el: HTMLElement, onFiles: (files: File[]) => void) {
     e.preventDefault();
     onFiles(files);
   };
+}
+
+// ---------------------------------------------------------------- media browser
+
+/**
+ * Browse, search and upload images in the media folders. With `pick`, clicking images
+ * selects them and the promise resolves with their paths ([] when cancelled).
+ */
+function mediaBrowser(opts: { folder?: MediaFolder; pick?: "one" | "many" } = {}): Promise<string[]> {
+  const folders = allMediaFolders();
+  if (opts.folder && !folders.some((f) => f.media === opts.folder!.media)) folders.unshift(opts.folder);
+  let folder = folders.find((f) => f.media === opts.folder?.media) ?? folders[0];
+  const selected: string[] = [];
+  let resolveResult: (paths: string[]) => void;
+  const result = new Promise<string[]>((r) => (resolveResult = r));
+  let chosen: string[] = [];
+
+  const search = h("input", { type: "search", placeholder: "Search file names…", class: "media-search" }) as HTMLInputElement;
+  const grid = h("div", { class: "media-grid" });
+  const info = h("span", { class: "media-info" });
+  const tabs = h("div", { class: "rt-tabs" });
+  const insert = h("button", { type: "button", class: "primary", hidden: !opts.pick }, "Insert");
+  const upload = h("button", { type: "button" }, "Upload…");
+
+  const render = async () => {
+    tabs.querySelectorAll("button").forEach((b) => b.classList.toggle("on", b.dataset.media === folder.media));
+    grid.replaceChildren(h("p", { class: "media-empty" }, "Loading…"));
+    let names: string[];
+    try {
+      names = await listMedia(folder);
+    } catch (e) {
+      grid.replaceChildren(h("p", { class: "media-empty" }, String((e as Error).message ?? e)));
+      return;
+    }
+    const pending = [...state.uploads.entries()].filter(([, u]) => u.repoPath.startsWith(folder.media + "/")).map(([p]) => p);
+    const paths = [...pending, ...names.map((n) => `${folder.pub}/${n}`).filter((p) => !pending.includes(p)).sort((a, b) => a.localeCompare(b))];
+    const q = search.value.trim().toLowerCase();
+    const shown = q ? paths.filter((p) => p.split("/").pop()!.toLowerCase().includes(q)) : paths;
+    info.textContent = `${shown.length} of ${paths.length} images`;
+    grid.replaceChildren(
+      ...shown.map((path) => {
+        const name = path.split("/").pop()!;
+        const tile = h(
+          "button",
+          { type: "button", class: `media-tile${selected.includes(path) ? " selected" : ""}${state.uploads.has(path) ? " pending" : ""}`, title: name },
+          thumb(path),
+          h("span", {}, name)
+        );
+        tile.addEventListener("click", () => {
+          if (!opts.pick) return;
+          if (opts.pick === "one") {
+            chosen = [path];
+            dialog.close();
+            return;
+          }
+          const i = selected.indexOf(path);
+          if (i >= 0) selected.splice(i, 1);
+          else selected.push(path);
+          tile.classList.toggle("selected", i < 0);
+          insert.textContent = selected.length ? `Insert ${selected.length}` : "Insert";
+        });
+        return tile;
+      })
+    );
+    if (!shown.length) grid.append(h("p", { class: "media-empty" }, q ? "No matches." : "No images yet. Drop some here."));
+  };
+
+  for (const f of folders) {
+    const b = h("button", { type: "button", "data-media": f.media, title: f.media }, f.label);
+    b.addEventListener("click", () => {
+      folder = f;
+      render();
+    });
+    tabs.append(b);
+  }
+  search.addEventListener("input", () => render());
+
+  const addFiles = async (files: File[]) => {
+    const added = await stageUploadsTo(folder, files, true);
+    if (opts.pick === "many") selected.push(...added);
+    if (opts.pick === "one" && added.length) {
+      chosen = [added[0]];
+      dialog.close();
+      return;
+    }
+    if (opts.pick === "many") insert.textContent = selected.length ? `Insert ${selected.length}` : "Insert";
+    render();
+  };
+  upload.addEventListener("click", async () => addFiles(await pickFiles(true)));
+  fileDropTarget(grid, addFiles);
+  insert.addEventListener("click", () => {
+    chosen = [...selected];
+    dialog.close();
+  });
+
+  const dialog = h(
+    "dialog",
+    { class: "modal media-modal" },
+    h("div", { class: "rt-head" }, h("h2", {}, opts.pick ? "Choose image" + (opts.pick === "many" ? "s" : "") : "Media"), tabs),
+    h("div", { class: "media-bar" }, search, info, upload),
+    grid,
+    h(
+      "div",
+      { class: "modal-buttons" },
+      h("span", { class: "media-hint" }, "Drop files anywhere in the grid to upload them. Uploads are saved with your next Save."),
+      h("button", { type: "button", on: { click: () => dialog.close() } }, opts.pick ? "Cancel" : "Close"),
+      insert
+    )
+  ) as HTMLDialogElement;
+  dialog.addEventListener("close", () => {
+    dialog.remove();
+    resolveResult(chosen);
+  });
+  document.body.append(dialog);
+  dialog.showModal();
+  setTimeout(() => search.focus());
+  render();
+  return result;
 }
 
 // ---------------------------------------------------------------- relations
@@ -279,6 +482,7 @@ async function markdownEditor(entry: Entry, col: Column) {
       else src.then((u) => (img.src = u)).catch(() => img.classList.add("broken"));
     },
     uploadImages: (files) => stageUploads(col, files),
+    browseImages: () => mediaBrowser({ folder: mediaFolderFor(col), pick: "many" }),
   });
   if (md !== null && md !== (entry.data[col.key] ?? "")) setValue(entry, col, md);
 }
@@ -418,7 +622,11 @@ function fillCell(td: HTMLTableCellElement, entry: Entry, col: Column) {
         box.append(
           h(
             "span",
-            { class: "tile" },
+            {
+              class: "tile",
+              title: "Click to choose another image",
+              on: { click: async (e: Event) => { if ((e.target as HTMLElement).closest(".x")) return; const [p] = await mediaBrowser({ folder: mediaFolderFor(col), pick: "one" }); if (p) setValue(entry, col, p); } },
+            },
             thumb(String(v)),
             h("button", { type: "button", class: "x", title: "Remove image", on: { click: () => setValue(entry, col, null) } }, "×")
           )
@@ -428,8 +636,8 @@ function fillCell(td: HTMLTableCellElement, entry: Entry, col: Column) {
           h("button", {
             type: "button",
             class: "add-tile",
-            title: "Drop an image or click to choose",
-            on: { click: async () => { const [p] = await stageUploads(col, (await pickFiles(false)).slice(0, 1)); if (p) setValue(entry, col, p); } },
+            title: "Drop an image, or click to choose or upload one",
+            on: { click: async () => { const [p] = await mediaBrowser({ folder: mediaFolderFor(col), pick: "one" }); if (p) setValue(entry, col, p); } },
           }, "+")
         );
       }
@@ -478,8 +686,8 @@ function fillCell(td: HTMLTableCellElement, entry: Entry, col: Column) {
         h("button", {
           type: "button",
           class: "add-tile",
-          title: "Drop images or click to choose",
-          on: { click: async () => { const added = await stageUploads(col, await pickFiles(true)); if (added.length) setValue(entry, col, [...list, ...added]); } },
+          title: "Drop images, or click to choose or upload",
+          on: { click: async () => { const added = await mediaBrowser({ folder: mediaFolderFor(col), pick: "many" }); if (added.length) setValue(entry, col, [...list, ...added]); } },
         }, "+")
       );
       fileDropTarget(td, async (files) => {
@@ -699,7 +907,7 @@ async function loadCollection(name: string) {
 
 async function save() {
   const dirty = dirtyEntries();
-  if (!dirty.length || state.saving) return;
+  if ((!dirty.length && !keptUploads().length) || state.saving) return;
   state.saving = true;
   updateToolbar();
   try {
@@ -707,14 +915,22 @@ async function save() {
     const used = new Set<string>();
     for (const e of dirty) for (const key of e.dirty) JSON.stringify(e.data[key] ?? null).replace(/"([^"]+)"/g, (_, s) => (used.add(s), ""));
     const changes: Change[] = [];
-    for (const [publicPath, up] of state.uploads) if (used.has(publicPath)) changes.push({ path: up.repoPath, blob: up.blob });
+    for (const [publicPath, up] of state.uploads) {
+      if (used.has(publicPath) || up.keep) {
+        used.add(publicPath);
+        changes.push({ path: up.repoPath, blob: up.blob });
+      }
+    }
+    const images = changes.length;
     const texts = new Map(dirty.map((e) => [e, serializeEntry(e)]));
     for (const [e, text] of texts) changes.push({ path: e.path, text, original: e.original });
     const label = state.collection!.label ?? state.collection!.name;
     const message =
-      dirty.length === 1
-        ? `Table view: update ${label} “${dirty[0].data.title ?? dirty[0].slug}”`
-        : `Table view: update ${dirty.length} ${label.toLowerCase()}`;
+      dirty.length === 0
+        ? `Table view: upload ${images} image${images === 1 ? "" : "s"}`
+        : dirty.length === 1
+          ? `Table view: update ${label} “${dirty[0].data.title ?? dirty[0].slug}”`
+          : `Table view: update ${dirty.length} ${label.toLowerCase()}`;
 
     const result = await state.backend.save(changes, message);
 
@@ -729,8 +945,12 @@ async function save() {
         state.uploads.delete(p);
       }
     }
+    state.mediaLists.clear();
     renderTable();
-    const what = `${dirty.length} entr${dirty.length === 1 ? "y" : "ies"}`;
+    const what = [
+      dirty.length && `${dirty.length} entr${dirty.length === 1 ? "y" : "ies"}`,
+      images && `${images} image${images === 1 ? "" : "s"}`,
+    ].filter(Boolean).join(" and ");
     if (state.backend.kind === "local") status(`Saved ${what} to the local folder. Commit and push them when you're ready.`, "ok");
     else status(`Saved ${what}. The site rebuilds in a few minutes. `, "ok", result.url ? { href: result.url, text: "View commit" } : undefined);
   } catch (err) {
@@ -742,6 +962,12 @@ async function save() {
 }
 
 function discard() {
+  if (!dirtyEntries().length && keptUploads().length) {
+    if (!confirm("Discard the images waiting to be uploaded?")) return;
+    state.uploads.clear();
+    updateToolbar();
+    return status("Uploads discarded.");
+  }
   if (!confirm("Discard all unsaved changes?")) return;
   for (const e of dirtyEntries()) {
     const fresh = parseEntry(e.name, e.path, e.original);
@@ -823,6 +1049,10 @@ async function start() {
     renderTable();
   });
   $("#columns").addEventListener("click", (e) => columnsMenu(e.currentTarget as HTMLElement));
+  $("#media").addEventListener("click", () => {
+    const c = state.collection;
+    mediaBrowser({ folder: c?.media_folder ? makeFolder(c.media_folder, c.public_folder) : undefined }).then(() => updateToolbar());
+  });
   $("#save").addEventListener("click", save);
   $("#discard").addEventListener("click", discard);
   addEventListener("beforeunload", (e) => {

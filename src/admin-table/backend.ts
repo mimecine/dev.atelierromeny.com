@@ -8,6 +8,7 @@ import {
   blobToBase64,
   commit,
   fetchRaw,
+  listFolder,
   loadFiles,
   loadFolder,
   utf8ToBase64,
@@ -30,6 +31,8 @@ export interface Backend {
   kind: "github" | "local";
   label: string;
   loadFolder(folder: string): Promise<RepoFile[]>;
+  /** File names in a folder (e.g. a media folder), without reading them. */
+  listFolder(folder: string): Promise<string[]>;
   readBlob(path: string): Promise<Blob>;
   /** Writes everything or nothing; throws if an edited file changed since it was loaded. */
   save(changes: Change[], message: string): Promise<{ url?: string }>;
@@ -66,6 +69,7 @@ export function githubBackend(token: string, repo: Repo): Backend {
       headOid = r.headOid;
       return r.files;
     },
+    listFolder: (folder) => listFolder(token, repo, folder),
     readBlob: (path) => fetchRaw(token, repo, path),
     async save(changes, message) {
       const additions = await Promise.all(
@@ -151,6 +155,18 @@ export function localBackend(root: FileSystemDirectoryHandle): Backend {
         if (handle.kind === "file") files.push({ name, text: await (await (handle as FileSystemFileHandle).getFile()).text() });
       }
       return files;
+    },
+    async listFolder(folder) {
+      const names: string[] = [];
+      try {
+        const dir = await dirAt(root, folder);
+        for await (const [name, handle] of (dir as any).entries() as AsyncIterable<[string, FileSystemHandle]>) {
+          if (handle.kind === "file") names.push(name);
+        }
+      } catch {
+        // folder doesn't exist yet
+      }
+      return names;
     },
     async readBlob(path) {
       return (await fileAt(root, path)).getFile();

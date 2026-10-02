@@ -49,6 +49,8 @@ export interface RichTextOptions {
   showImage: (path: string, img: HTMLImageElement) => void;
   /** Stage dropped/picked image files; resolves to their stored paths. */
   uploadImages: (files: File[]) => Promise<string[]>;
+  /** Choose existing images (or upload) in a media browser; resolves to stored paths. */
+  browseImages?: () => Promise<string[]>;
 }
 
 let options: RichTextOptions;
@@ -245,7 +247,12 @@ export function editMarkdown(initial: string, opts: RichTextOptions): Promise<st
         if (url === null) return;
         editor.dispatchCommand(TOGGLE_LINK_COMMAND, url.trim() && url.trim() !== "https://" ? url.trim() : null);
       }),
-      button("🖼", "Insert image", () => {
+      button("🖼", "Insert image", async () => {
+        if (opts.browseImages) {
+          const paths = await opts.browseImages();
+          if (paths.length) insertImages(editor, paths);
+          return;
+        }
         const input = document.createElement("input");
         input.type = "file";
         input.accept = "image/*";

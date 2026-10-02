@@ -57,6 +57,20 @@ export async function loadFolder(token: string, repo: Repo, folder: string) {
   return { headOid, files };
 }
 
+/** File names in `folder` (no contents; cheap even for image folders). */
+export async function listFolder(token: string, repo: Repo, folder: string): Promise<string[]> {
+  const data = await gql<{ repository: { object: { entries: { name: string; type: string }[] } | null } }>(
+    token,
+    `query($owner: String!, $name: String!, $expr: String!) {
+      repository(owner: $owner, name: $name) {
+        object(expression: $expr) { ... on Tree { entries { name type } } }
+      }
+    }`,
+    { owner: repo.owner, name: repo.name, expr: `${repo.branch}:${folder}` }
+  );
+  return (data.repository.object?.entries ?? []).filter((e) => e.type === "blob").map((e) => e.name);
+}
+
 /** Current text of a few files (for checking what changed elsewhere before a retry). */
 export async function loadFiles(token: string, repo: Repo, paths: string[]) {
   const fields = paths

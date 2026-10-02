@@ -11,6 +11,9 @@ const files = import.meta.glob<{ default: ImageMetadata }>("/src/media/**/*.{web
 });
 
 export const GET: APIRoute = async () => {
+  // The dev server doesn't resize images (every "thumbnail" would be the full-size
+  // original), so in dev the table view makes its own small thumbnails instead.
+  if (import.meta.env.DEV) return new Response("{}", { headers: { "Content-Type": "application/json" } });
   const entries = await Promise.all(
     Object.entries(files).map(async ([path, mod]) => {
       const img = await getImage({ src: mod.default, width: Math.min(mod.default.width, 240), format: "webp" });
