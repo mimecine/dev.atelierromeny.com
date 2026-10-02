@@ -2,7 +2,6 @@
 title: Bio
 published: true
 image: /src/media/assets/PXL_20260930_142607234.webp
-tags: []
 note: Edlef Romeny 1926-2017
 css: ''
 js: ''
