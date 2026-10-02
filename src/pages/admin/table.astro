@@ -22,6 +22,7 @@ export const prerender = true;
       <button id="columns" type="button">Columns</button>
       <span class="spacer"></span>
       <span id="status" class="status"></span>
+      <span id="backend" class="backend"></span>
       <button id="discard" type="button" hidden>Discard</button>
       <button id="save" type="button" class="primary" disabled>Saved</button>
     </header>
@@ -421,7 +422,8 @@ export const prerender = true;
     border-radius: 10px;
     padding: 16px;
   }
-  .modal h2 {
+  .modal > h2,
+  .rt-head h2 {
     margin: 0 0 10px;
     font-size: 15px;
   }
@@ -446,6 +448,156 @@ export const prerender = true;
     border-radius: 6px;
     background: #fff;
     cursor: pointer;
+  }
+  .backend {
+    color: var(--muted);
+    font-size: 11px;
+    padding: 2px 8px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .connect {
+    padding: 48px;
+    text-align: center;
+  }
+  .connect button {
+    height: 34px;
+    padding: 0 16px;
+    border-radius: 6px;
+    border: 1px solid var(--accent);
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  /* rich text dialog */
+  .rt-modal {
+    width: min(960px, 94vw);
+  }
+  .rt-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+  .rt-head h2 {
+    margin: 0;
+  }
+  .rt-tabs {
+    display: flex;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .rt-tabs button {
+    border: 0;
+    background: #fff;
+    padding: 4px 12px;
+    cursor: pointer;
+    color: var(--muted);
+  }
+  .rt-tabs button.on {
+    background: var(--head);
+    color: var(--text);
+    font-weight: 600;
+  }
+  .rt-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    padding: 4px;
+    border: 1px solid var(--border);
+    border-bottom: 0;
+    border-radius: 6px 6px 0 0;
+    background: var(--head);
+  }
+  .rt-toolbar button {
+    min-width: 30px;
+    height: 28px;
+    border: 0;
+    border-radius: 4px;
+    background: none;
+    cursor: pointer;
+  }
+  .rt-toolbar button:hover {
+    background: #e8e5df;
+  }
+  .rt-content {
+    height: 60vh;
+    overflow: auto;
+    border: 1px solid var(--border);
+    border-radius: 0 0 6px 6px;
+    padding: 14px 18px;
+    outline: none;
+    font: 15px/1.6 Georgia, serif;
+  }
+  .rt-content:focus {
+    border-color: #b9c6ec;
+  }
+  .rt-p {
+    margin: 0 0 0.8em;
+  }
+  .rt-h1,
+  .rt-h2,
+  .rt-h3 {
+    font-family: system-ui, sans-serif;
+    margin: 1em 0 0.4em;
+  }
+  .rt-h2 {
+    font-size: 1.35em;
+  }
+  .rt-h3 {
+    font-size: 1.1em;
+  }
+  .rt-quote {
+    margin: 0 0 0.8em;
+    padding-left: 12px;
+    border-left: 3px solid var(--border);
+    color: #555;
+  }
+  .rt-ul,
+  .rt-ol {
+    margin: 0 0 0.8em;
+    padding-left: 1.4em;
+  }
+  .rt-bold {
+    font-weight: 700;
+  }
+  .rt-italic {
+    font-style: italic;
+  }
+  .rt-underline {
+    text-decoration: underline;
+  }
+  .rt-code {
+    font-family: ui-monospace, monospace;
+    background: var(--head);
+    padding: 0 3px;
+  }
+  .rt-link {
+    color: var(--accent);
+  }
+  .rt-image {
+    display: inline-block;
+    max-width: 100%;
+    margin: 4px 0;
+  }
+  .rt-image img {
+    display: block;
+    max-width: 100%;
+    max-height: 280px;
+    background: #f0eee9;
+    min-width: 80px;
+    min-height: 60px;
+  }
+  .rt-caption {
+    display: block;
+    font-size: 12px;
+    font-style: italic;
+    color: var(--muted);
   }
   .modal-buttons .primary {
     background: var(--accent);

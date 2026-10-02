@@ -79,18 +79,22 @@ Only the collections linked from *Settings → Menu* are open to search engines,
 
 `/admin/table/` edits the folder collections (works, collections, pages) as a spreadsheet, next to Sveltia. The "Table view" link is at the bottom left of the CMS. Code is in `src/admin-table/`.
 
-- **Login:** it uses Sveltia's: the GitHub token Sveltia keeps in localStorage (`sveltia-cms.user`). Sign in at `/admin/` first.
+- **Storage:** it works with whatever Sveltia is signed in with (`backend.ts`).
+  - **GitHub:** it uses Sveltia's token (localStorage `sveltia-cms.user`), and each save is one commit.
+  - **Local repository:** it opens the folder Sveltia was given. Sveltia keeps that folder's handle in IndexedDB (`github:<owner>/<repo>` › `file-system-handles` › `root_dir_handle`). Chrome asks for permission once, files are written directly, and you commit them yourself.
 - **Columns:** they come from `public/admin/config.yml`, so new fields show up automatically. Choose which are shown with "Columns" (remembered per collection).
 - **Editing by field type:**
   - text and numbers: click to edit, Enter to save
-  - yes/no fields: checkboxes
+  - yes/no fields: checkboxes, showing the field's default when the file has no value
   - relations: chips with × and a + picker
   - images: drop files on the cell, or click +. Uploads are converted to WebP, at most 3000px, like Sveltia's.
   - lists of images: drag to reorder
-  - the markdown body: opens in a dialog
   - fields it can't edit are shown read-only; edit those in Sveltia
-- **Saving:** "Save" (or Cmd/Ctrl+S) writes all edits and uploads as one commit. If something was committed in the meantime, it retries when none of your edited files changed, and otherwise says which ones did.
-- **Thumbnails:** they come from `/admin/thumbs.json`, built with the site. Images added since the last build are fetched from GitHub.
+- **Rich text:** markdown fields open a WYSIWYG editor in a dialog (`richtext.ts`). It's built on Lexical, the editor Sveltia uses, and has a Markdown tab for the source.
+  - **Images:** they're kept as their own node, so `![alt](src "caption")` survives editing, and images can be dropped in.
+  - **Unchanged text:** it's written back exactly as it was. Italics are written as `_text_`.
+- **Saving:** "Save" (or Cmd/Ctrl+S) writes all edits and uploads together. Edited files are checked first: on GitHub it retries if only unrelated files changed, and otherwise (or locally) it says which entries changed elsewhere.
+- **Thumbnails:** they come from `/admin/thumbs.json`, built with the site. Images added since the last build are read from GitHub or the local folder.
 - **Missing features:** it doesn't create or delete entries; do that in Sveltia (each row's ↗ opens it there).
 
 ## Adding new photos of works

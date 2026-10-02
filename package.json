@@ -34,7 +34,16 @@
     "yaml": "^2.9.1"
   },
   "devDependencies": {
+    "@lexical/code": "^0.52.0",
+    "@lexical/history": "^0.52.0",
+    "@lexical/link": "^0.52.0",
+    "@lexical/list": "^0.52.0",
+    "@lexical/markdown": "^0.52.0",
+    "@lexical/rich-text": "^0.52.0",
+    "@lexical/selection": "^0.52.0",
+    "@lexical/utils": "^0.52.0",
     "gray-matter": "^4.0.3",
+    "lexical": "^0.52.0",
     "wrangler": "^4.143.0"
   }
 }

@@ -1,19 +1,18 @@
 // Spreadsheet-style editor for the folder collections in public/admin/config.yml.
-// Lives next to Sveltia CMS (at /admin/table/), shares its login and config, and saves
-// each batch of edits as one commit, like Sveltia. See README.md ("Table view").
+// Lives next to Sveltia CMS (at /admin/table/), shares its config and whatever it is
+// working with (GitHub, or a local repository folder), and saves each batch of edits
+// together. See README.md ("Table view").
 import { parse as parseYaml } from "yaml";
+import { type Repo } from "./github";
 import {
-  ConflictError,
-  blobToBase64,
-  commit,
-  fetchRaw,
-  getToken,
-  loadFiles,
-  loadFolder,
-  utf8ToBase64,
-  type Addition,
-  type Repo,
-} from "./github";
+  githubBackend,
+  localBackend,
+  sveltiaFolderHandle,
+  sveltiaUser,
+  type Backend,
+  type Change,
+} from "./backend";
+import { editMarkdown } from "./richtext";
 import {
   columnsOf,
   parseEntry,
@@ -37,14 +36,13 @@ interface Upload {
 }
 
 const state = {
-  token: "" as string,
+  backend: undefined as unknown as Backend,
   repo: { owner: "", name: "", branch: "main" } as Repo,
   config: {} as { media_folder?: string; public_folder?: string; collections: CollectionConfig[] },
   collection: undefined as CollectionConfig | undefined,
   columns: [] as Column[],
   hidden: new Set<string>(),
   entries: [] as Entry[],
-  headOid: "",
   filter: "",
   sort: undefined as { key: string; dir: 1 | -1 } | undefined,
   uploads: new Map<string, Upload>(),
@@ -130,7 +128,7 @@ function thumbFor(path: string): string | Promise<string> {
   if (built) return built;
   let p = state.rawThumbs.get(path);
   if (!p) {
-    p = fetchRaw(state.token, state.repo, stripSlash(path)).then((b) => URL.createObjectURL(b));
+    p = state.backend.readBlob(stripSlash(path)).then((b) => URL.createObjectURL(b));
     state.rawThumbs.set(path, p);
   }
   return p;
@@ -192,7 +190,7 @@ function relationOptions(field: FieldConfig): Promise<Entry[]> {
   if (!p) {
     const target = state.config.collections.find((c) => c.name === name);
     if (!target?.folder) return Promise.resolve([]);
-    p = loadFolder(state.token, state.repo, target.folder).then(({ files }) =>
+    p = state.backend.loadFolder(target.folder).then((files) =>
       files.filter((f) => f.name.endsWith(".md")).map((f) => parseEntry(f.name, `${target.folder}/${f.name}`, f.text))
     );
     state.relations.set(name, p);
@@ -272,37 +270,17 @@ async function relationPicker(anchor: HTMLElement, entry: Entry, col: Column) {
   render();
 }
 
-function markdownEditor(entry: Entry, col: Column) {
-  const area = h("textarea", { class: "md-editor" }) as HTMLTextAreaElement;
-  area.value = entry.data[col.key] ?? "";
-  const dialog = h(
-    "dialog",
-    { class: "modal" },
-    h("h2", {}, `${entry.data.title ?? entry.slug}: ${col.label}`),
-    area,
-    h(
-      "div",
-      { class: "modal-buttons" },
-      h("button", { type: "button", on: { click: () => dialog.close() } }, "Cancel"),
-      h(
-        "button",
-        {
-          type: "button",
-          class: "primary",
-          on: {
-            click: () => {
-              if (area.value !== (entry.data[col.key] ?? "")) setValue(entry, col, area.value);
-              dialog.close();
-            },
-          },
-        },
-        "Done"
-      )
-    )
-  );
-  dialog.addEventListener("close", () => dialog.remove());
-  document.body.append(dialog);
-  dialog.showModal();
+async function markdownEditor(entry: Entry, col: Column) {
+  const md = await editMarkdown(entry.data[col.key] ?? "", {
+    title: `${entry.data.title ?? entry.slug}: ${col.label}`,
+    showImage: (path, img) => {
+      const src = thumbFor(path);
+      if (typeof src === "string") img.src = src;
+      else src.then((u) => (img.src = u)).catch(() => img.classList.add("broken"));
+    },
+    uploadImages: (files) => stageUploads(col, files),
+  });
+  if (md !== null && md !== (entry.data[col.key] ?? "")) setValue(entry, col, md);
 }
 
 // ---------------------------------------------------------------- cells
@@ -655,7 +633,7 @@ function loadHidden() {
     const saved = JSON.parse(localStorage.getItem(hiddenKey()) || "null");
     if (Array.isArray(saved)) return new Set<string>(saved);
   } catch {}
-  return new Set(state.columns.filter((c) => c.kind === "markdown" || c.kind === "unsupported").map((c) => c.key));
+  return new Set(state.columns.filter((c) => c.kind === "unsupported").map((c) => c.key));
 }
 
 function columnsMenu(anchor: HTMLElement) {
@@ -706,8 +684,7 @@ async function loadCollection(name: string) {
   state.uploads.clear();
   status(`Loading ${collection.label ?? name}…`);
   $("#grid").replaceChildren();
-  const { headOid, files } = await loadFolder(state.token, state.repo, collection.folder!);
-  state.headOid = headOid;
+  const files = await state.backend.loadFolder(collection.folder!);
   state.entries = files
     .filter((f) => f.name.endsWith(".md"))
     .map((f) => parseEntry(f.name, `${collection.folder}/${f.name}`, f.text))
@@ -726,41 +703,21 @@ async function save() {
   state.saving = true;
   updateToolbar();
   try {
-    // Only uploads still referenced by an edited value are committed.
+    // Only uploads still referenced by an edited value are written.
     const used = new Set<string>();
     for (const e of dirty) for (const key of e.dirty) JSON.stringify(e.data[key] ?? null).replace(/"([^"]+)"/g, (_, s) => (used.add(s), ""));
-    const additions: Addition[] = [];
-    for (const [publicPath, up] of state.uploads) {
-      if (used.has(publicPath)) additions.push({ path: up.repoPath, contents: await blobToBase64(up.blob) });
-    }
+    const changes: Change[] = [];
+    for (const [publicPath, up] of state.uploads) if (used.has(publicPath)) changes.push({ path: up.repoPath, blob: up.blob });
     const texts = new Map(dirty.map((e) => [e, serializeEntry(e)]));
-    for (const [e, text] of texts) additions.push({ path: e.path, contents: utf8ToBase64(text) });
+    for (const [e, text] of texts) changes.push({ path: e.path, text, original: e.original });
     const label = state.collection!.label ?? state.collection!.name;
-    const headline =
+    const message =
       dirty.length === 1
         ? `Table view: update ${label} “${dirty[0].data.title ?? dirty[0].slug}”`
         : `Table view: update ${dirty.length} ${label.toLowerCase()}`;
 
-    let result;
-    try {
-      result = await commit(state.token, state.repo, state.headOid, headline, additions);
-    } catch (err) {
-      if (!(err instanceof ConflictError)) throw err;
-      // Someone committed in the meantime (e.g. in Sveltia). Retry only if none of the
-      // files we're about to write changed.
-      const { headOid, texts: current } = await loadFiles(state.token, state.repo, dirty.map((e) => e.path));
-      const clashes = dirty.filter((e) => current.get(e.path) !== e.original);
-      if (clashes.length) {
-        throw new Error(
-          `${clashes.map((e) => e.data.title ?? e.slug).join(", ")} changed elsewhere since this page loaded. ` +
-            `Copy your edits, reload, and apply them again.`
-        );
-      }
-      state.headOid = headOid;
-      result = await commit(state.token, state.repo, state.headOid, headline, additions);
-    }
+    const result = await state.backend.save(changes, message);
 
-    state.headOid = result.oid;
     for (const [e, text] of texts) {
       const fresh = parseEntry(e.name, e.path, text);
       Object.assign(e, { original: text, doc: fresh.doc, body: fresh.body, data: fresh.data, dirty: new Set() });
@@ -773,10 +730,9 @@ async function save() {
       }
     }
     renderTable();
-    status(`Saved ${dirty.length} entr${dirty.length === 1 ? "y" : "ies"}. The site rebuilds in a few minutes. `, "ok", {
-      href: result.url,
-      text: "View commit",
-    });
+    const what = `${dirty.length} entr${dirty.length === 1 ? "y" : "ies"}`;
+    if (state.backend.kind === "local") status(`Saved ${what} to the local folder. Commit and push them when you're ready.`, "ok");
+    else status(`Saved ${what}. The site rebuilds in a few minutes. `, "ok", result.url ? { href: result.url, text: "View commit" } : undefined);
   } catch (err) {
     status(String((err as Error).message ?? err), "error");
   } finally {
@@ -799,17 +755,55 @@ function discard() {
 
 // ---------------------------------------------------------------- start
 
-async function start() {
-  const token = getToken();
-  if (!token) {
-    status("Sign in to Sveltia first, then come back to this page.", "error", { href: "/admin/", text: "Open the CMS" });
-    return;
+/** Use whatever Sveltia is signed in with: GitHub, or its local repository folder. */
+async function connectBackend(): Promise<Backend | undefined> {
+  const user = sveltiaUser();
+  if (user?.backendName === "github" && user.token) return githubBackend(user.token, state.repo);
+  if (user?.backendName === "local") {
+    if (!("showDirectoryPicker" in window)) {
+      status("Local repositories need Chrome or Edge, like Sveltia's local mode.", "error");
+      return;
+    }
+    const handle = await sveltiaFolderHandle(state.repo);
+    // Reading the folder needs a click (browser rule), unless permission is still active.
+    const ok = async (h: FileSystemDirectoryHandle) =>
+      ((await (h as any).queryPermission({ mode: "readwrite" })) === "granted" ||
+        (await (h as any).requestPermission({ mode: "readwrite" })) === "granted");
+    if (handle && (await (handle as any).queryPermission({ mode: "readwrite" })) === "granted") return localBackend(handle);
+    return new Promise((resolve) => {
+      const allow = h("button", { type: "button", class: "primary" }, handle ? `Open local folder “${handle.name}”` : "Choose the project folder");
+      allow.addEventListener("click", async () => {
+        try {
+          const dir = handle ?? ((await (window as any).showDirectoryPicker({ mode: "readwrite" })) as FileSystemDirectoryHandle);
+          if (await ok(dir)) {
+            $("#grid").replaceChildren();
+            resolve(localBackend(dir));
+          }
+        } catch (e) {
+          status(String((e as Error).message ?? e), "error");
+        }
+      });
+      $("#grid").replaceChildren(
+        h("div", { class: "connect" }, h("p", {}, "Sveltia is working with a local repository. Allow this page to use the same folder:"), allow)
+      );
+      status("Waiting for folder access…");
+    });
   }
-  state.token = token;
+  status("Sign in to Sveltia first (GitHub or a local repository), then come back to this page.", "error", {
+    href: "/admin/",
+    text: "Open the CMS",
+  });
+}
+
+async function start() {
   const config = parseYaml(await (await fetch("/admin/config.yml")).text());
   const [owner, name] = String(config.backend.repo).split("/");
   state.repo = { owner, name, branch: config.backend.branch ?? "main" };
   state.config = config;
+  const backend = await connectBackend();
+  if (!backend) return;
+  state.backend = backend;
+  $("#backend").textContent = backend.label;
   state.thumbs = await fetch("/admin/thumbs.json")
     .then((r) => (r.ok ? r.json() : {}))
     .catch(() => ({}));

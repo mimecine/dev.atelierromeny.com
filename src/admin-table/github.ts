@@ -1,6 +1,5 @@
-// GitHub access for the table view. It reuses the token Sveltia CMS keeps in
-// localStorage ("sveltia-cms.user"), so signing in to /admin/ is all that's needed,
-// and writes the same way Sveltia does: one commit per save on the configured branch.
+// GitHub API calls for the table view (see backend.ts): reading a folder with its
+// files in one request, and saving as a single commit, the way Sveltia CMS does.
 
 export interface Repo {
   owner: string;
@@ -9,15 +8,6 @@ export interface Repo {
 }
 
 export class ConflictError extends Error {}
-
-export function getToken(): string | undefined {
-  try {
-    const user = JSON.parse(localStorage.getItem("sveltia-cms.user") || "null");
-    return user?.backendName === "github" && typeof user.token === "string" ? user.token : undefined;
-  } catch {
-    return undefined;
-  }
-}
 
 async function gql<T>(token: string, query: string, variables: Record<string, unknown>): Promise<T> {
   const res = await fetch("https://api.github.com/graphql", {
