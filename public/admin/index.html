@@ -4,8 +4,30 @@
     <meta charset="utf-8" />
     <meta name="robots" content="noindex" />
     <title>Sveltia CMS</title>
+    <style>
+      /* Link to the spreadsheet view (/admin/table/). Sits outside Sveltia's own
+         markup, so CMS updates can't break it (or be broken by it). */
+      #table-view-link {
+        position: fixed;
+        left: 12px;
+        bottom: 12px;
+        z-index: 2147483000;
+        padding: 6px 12px;
+        border-radius: 999px;
+        background: rgb(30 30 30 / 0.78);
+        color: #fff;
+        font: 600 12px/1 system-ui, sans-serif;
+        text-decoration: none;
+        opacity: 0.6;
+        transition: opacity 0.15s;
+      }
+      #table-view-link:hover {
+        opacity: 1;
+      }
+    </style>
   </head>
   <body>
     <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
+    <a id="table-view-link" href="/admin/table/" title="Edit collections as a spreadsheet">Table view</a>
   </body>
 </html>

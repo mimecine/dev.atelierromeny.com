@@ -1,0 +1,455 @@
+---
+// Spreadsheet view of the CMS collections. A companion to Sveltia CMS (/admin/):
+// same login, same config.yml, saves as commits. Code in src/admin-table/.
+export const prerender = true;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Table view · Atelier Romeny admin</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <header class="bar">
+      <a class="back" href="/admin/" title="Back to Sveltia CMS">← CMS</a>
+      <select id="collection" aria-label="Collection"></select>
+      <input id="search" type="search" placeholder="Filter…" aria-label="Filter rows" />
+      <span id="count" class="count"></span>
+      <button id="columns" type="button">Columns</button>
+      <span class="spacer"></span>
+      <span id="status" class="status"></span>
+      <button id="discard" type="button" hidden>Discard</button>
+      <button id="save" type="button" class="primary" disabled>Saved</button>
+    </header>
+    <main id="grid"></main>
+    <script>
+      import "../../admin-table/main";
+    </script>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --border: #e3e1dc;
+    --head: #f6f5f2;
+    --text: #1f1d1a;
+    --muted: #8a857c;
+    --accent: #2f5bd3;
+    --changed: #fff6d6;
+    --chip: #ece9e3;
+    color-scheme: light;
+    font: 13px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: var(--text);
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+  }
+  button,
+  select,
+  input {
+    font: inherit;
+    color: inherit;
+  }
+  .bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--border);
+    background: var(--head);
+    flex-wrap: wrap;
+  }
+  .bar .back {
+    color: var(--muted);
+    text-decoration: none;
+    margin-right: 4px;
+  }
+  .bar select,
+  .bar input[type="search"],
+  .bar button {
+    height: 30px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: #fff;
+    padding: 0 10px;
+  }
+  .bar input[type="search"] {
+    width: 220px;
+  }
+  .bar button {
+    cursor: pointer;
+  }
+  .bar button.primary {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+    font-weight: 600;
+  }
+  .bar button:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+  .count {
+    color: var(--muted);
+  }
+  .spacer {
+    flex: 1;
+  }
+  .status {
+    color: var(--muted);
+    max-width: 50vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .status.error {
+    color: #b42318;
+    white-space: normal;
+  }
+  .status.ok {
+    color: #1a7f37;
+  }
+  .status a {
+    color: inherit;
+  }
+
+  #grid {
+    flex: 1;
+    overflow: auto;
+  }
+  table {
+    border-collapse: separate;
+    border-spacing: 0;
+    min-width: 100%;
+  }
+  th,
+  td {
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 4px 8px;
+    vertical-align: top;
+    text-align: left;
+    background: #fff;
+  }
+  th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: var(--head);
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+  }
+  /* open-in-Sveltia link + the first column stay put while scrolling sideways */
+  th.open,
+  td.open {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    width: 32px;
+    min-width: 32px;
+    text-align: center;
+  }
+  th.open {
+    z-index: 3;
+  }
+  th:nth-child(2),
+  td:nth-child(2) {
+    position: sticky;
+    left: 32px;
+    z-index: 1;
+    box-shadow: 1px 0 0 var(--border);
+  }
+  th:nth-child(2) {
+    z-index: 3;
+  }
+  td.open a {
+    color: var(--muted);
+    text-decoration: none;
+  }
+  td.open a:hover {
+    color: var(--accent);
+  }
+  tr:hover td {
+    background: #fbfaf8;
+  }
+  tr.dirty td.open {
+    box-shadow: inset 3px 0 0 #e8b400;
+  }
+  td.changed,
+  tr:hover td.changed {
+    background: var(--changed);
+  }
+  td.drop {
+    outline: 2px dashed var(--accent);
+    outline-offset: -3px;
+    background: #eef3ff;
+  }
+
+  .k-text,
+  .k-strings {
+    min-width: 180px;
+  }
+  .k-longtext,
+  .k-markdown {
+    min-width: 240px;
+    max-width: 320px;
+  }
+  .k-number {
+    width: 80px;
+    min-width: 80px;
+  }
+  .k-boolean {
+    width: 60px;
+    text-align: center;
+  }
+  .k-relation {
+    min-width: 220px;
+  }
+  .k-image {
+    width: 76px;
+    min-width: 76px;
+  }
+  .k-images {
+    min-width: 280px;
+  }
+  .text {
+    min-height: 20px;
+    cursor: text;
+    word-break: break-word;
+  }
+  .text.num {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+  .text.longtext,
+  .text.md {
+    max-height: 4.2em;
+    overflow: hidden;
+  }
+  .text.md {
+    cursor: pointer;
+    color: #4a463f;
+  }
+  .text.muted {
+    color: var(--muted);
+    cursor: default;
+    font-family: ui-monospace, monospace;
+    font-size: 11px;
+  }
+  td input[type="text"],
+  td input[type="number"],
+  td textarea,
+  td select {
+    width: 100%;
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    padding: 2px 4px;
+    outline: none;
+    background: #fff;
+  }
+  td select {
+    border-color: var(--border);
+  }
+  td textarea {
+    resize: vertical;
+  }
+
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    align-items: center;
+  }
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    background: var(--chip);
+    border-radius: 999px;
+    padding: 1px 4px 1px 8px;
+    white-space: nowrap;
+  }
+  .chip .x,
+  .tile .x {
+    border: 0;
+    background: none;
+    cursor: pointer;
+    color: var(--muted);
+    padding: 0 3px;
+    line-height: 1;
+    font-size: 14px;
+  }
+  .chip .x:hover {
+    color: #b42318;
+  }
+  .add {
+    border: 1px dashed #c9c4ba;
+    background: none;
+    border-radius: 999px;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    color: var(--muted);
+    line-height: 1;
+  }
+  .add:hover,
+  .add-tile:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  .chip-input {
+    width: 120px !important;
+  }
+
+  .images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .tile {
+    position: relative;
+    display: block;
+    cursor: grab;
+  }
+  .tile.drop {
+    outline: 2px solid var(--accent);
+  }
+  .tile .x {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    background: rgb(255 255 255 / 0.85);
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    padding: 0;
+    display: none;
+  }
+  .tile:hover .x {
+    display: block;
+  }
+  .thumb {
+    display: block;
+    width: 56px;
+    height: 56px;
+    object-fit: cover;
+    border-radius: 3px;
+    background: #f0eee9;
+  }
+  .images:not(.single) .thumb {
+    width: 44px;
+    height: 44px;
+  }
+  .thumb.broken {
+    outline: 1px solid #f3b8b3;
+  }
+  .add-tile {
+    width: 44px;
+    height: 44px;
+    border: 1px dashed #c9c4ba;
+    border-radius: 3px;
+    background: none;
+    color: var(--muted);
+    cursor: pointer;
+    font-size: 18px;
+  }
+  .single .add-tile {
+    width: 56px;
+    height: 56px;
+  }
+
+  .popover {
+    position: fixed;
+    z-index: 50;
+    width: 290px;
+    max-height: 360px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    box-shadow: 0 8px 28px rgb(0 0 0 / 0.14);
+    padding: 6px;
+  }
+  .popover > div {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+  .popover input[type="search"] {
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 5px 8px;
+    margin-bottom: 4px;
+  }
+  .options {
+    overflow: auto;
+  }
+  .option {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 6px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .option:hover {
+    background: var(--head);
+  }
+  .option small {
+    margin-left: auto;
+    color: var(--muted);
+    font-size: 11px;
+  }
+
+  .modal {
+    width: min(900px, 92vw);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+  }
+  .modal h2 {
+    margin: 0 0 10px;
+    font-size: 15px;
+  }
+  .md-editor {
+    width: 100%;
+    height: 60vh;
+    font: 13px/1.5 ui-monospace, monospace;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 10px;
+  }
+  .modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  .modal-buttons button {
+    height: 30px;
+    padding: 0 14px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: #fff;
+    cursor: pointer;
+  }
+  .modal-buttons .primary {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+  }
+</style>

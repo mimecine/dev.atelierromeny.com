@@ -75,6 +75,24 @@ The search page (`src/pages/search.astro`) renders its own results. It lists col
 
 Only the collections linked from *Settings → Menu* are open to search engines, along with the works shown under those collections, the home page and the markdown pages. Every other collection, the `/_works/` and `/works/` duplicates, Search and Saved are marked `noindex` (see `isMenuCollection` in `src/lib/settings.ts`). The collections' own "Shown In Menu" flag isn't used for this. The same pages are listed in `/sitemap.xml` (submitted in Google Search Console), and `robots.txt` points to it.
 
+## Table view
+
+`/admin/table/` edits the folder collections (works, collections, pages) as a spreadsheet, next to Sveltia. The "Table view" link is at the bottom left of the CMS. Code is in `src/admin-table/`.
+
+- **Login:** it uses Sveltia's: the GitHub token Sveltia keeps in localStorage (`sveltia-cms.user`). Sign in at `/admin/` first.
+- **Columns:** they come from `public/admin/config.yml`, so new fields show up automatically. Choose which are shown with "Columns" (remembered per collection).
+- **Editing by field type:**
+  - text and numbers: click to edit, Enter to save
+  - yes/no fields: checkboxes
+  - relations: chips with × and a + picker
+  - images: drop files on the cell, or click +. Uploads are converted to WebP, at most 3000px, like Sveltia's.
+  - lists of images: drag to reorder
+  - the markdown body: opens in a dialog
+  - fields it can't edit are shown read-only; edit those in Sveltia
+- **Saving:** "Save" (or Cmd/Ctrl+S) writes all edits and uploads as one commit. If something was committed in the meantime, it retries when none of your edited files changed, and otherwise says which ones did.
+- **Thumbnails:** they come from `/admin/thumbs.json`, built with the site. Images added since the last build are fetched from GitHub.
+- **Missing features:** it doesn't create or delete entries; do that in Sveltia (each row's ↗ opens it there).
+
 ## Adding new photos of works
 
 For a batch of reshot paintings:
