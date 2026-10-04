@@ -6,6 +6,10 @@ export interface FieldOptions {
   /** Image pickers show only this entry's images (the ones it references, plus files in
    *  the media folder named after it), and uploads are named after the entry. */
   entryImages?: boolean;
+  /** Image lists: the hover preview gets "Hidden" and "Thumbnail" checkboxes, kept in
+   *  these fields (a list of hidden paths, and the 1-based position of the thumbnail). */
+  hideIn?: string;
+  thumbnailIn?: string;
 }
 
 /** A read-only column worked out from other fields; never saved to the files. */
@@ -20,9 +24,9 @@ export interface ComputedColumn {
   format: (n: number) => string;
 }
 
-/** Settings > Pricing in Sveltia (src/content/pricing.yml); these are the defaults
- *  until that file has loaded, or if it's missing. */
-export const PRICING_FILE = "src/content/pricing.yml";
+/** Settings > Parameters > Pricing in Sveltia (the `pricing` group in this file); these
+ *  are the defaults until it has loaded, or if it's missing. */
+export const PRICING_FILE = "src/content/settings/parameters.yml";
 export const pricing = { price_per_m2: 2000, rating_step_percent: 20 };
 
 const areaM2 = (d: Record<string, any>) =>
@@ -87,7 +91,7 @@ export const COLUMN_DEFAULTS: Record<string, { order: string[]; hidden: string[]
 export const FIELD_OPTIONS: Record<string, Record<string, FieldOptions>> = {
   works: {
     thumbnail: { pickFrom: ["images"] },
-    images: { entryImages: true },
+    images: { entryImages: true, hideIn: "hidden_images", thumbnailIn: "thumbnail" },
     old_image: { entryImages: true },
     hidden_images: { entryImages: true },
   },

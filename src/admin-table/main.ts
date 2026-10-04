@@ -242,12 +242,59 @@ function previewFor(path: string): string | Promise<string> {
 }
 
 // Hovering a thumbnail shows a larger version just below it. The preview ignores the
-// mouse (pointer-events: none), so the thumbnail and its buttons stay clickable.
-const preview = h("div", { class: "preview", hidden: true }, h("img", { alt: "" }));
+// mouse (pointer-events: none), so the thumbnail and its buttons stay clickable, except
+// for photos in an image list with hide/thumbnail fields: their preview has checkboxes,
+// and stays open while the pointer moves onto it.
+const previewControls = h("div", { class: "preview-controls" });
+const preview = h("div", { class: "preview", hidden: true }, h("img", { alt: "" }), previewControls);
 let previewTimer: number | undefined;
 let previewFor_: HTMLImageElement | undefined;
+
+/** Image-list photos whose preview offers the Hidden / Thumbnail checkboxes. */
+const tileInfo = new WeakMap<HTMLImageElement, { entry: Entry; col: Column; index: number }>();
+const columnByKey = (key: string) => state.columns.find((c) => c.key === key);
+
+function fillPreviewControls(img: HTMLImageElement) {
+  const info = tileInfo.get(img);
+  const hideKey = info?.col.options.hideIn, thumbKey = info?.col.options.thumbnailIn;
+  preview.classList.toggle("interactive", !!(hideKey || thumbKey));
+  if (!info || !(hideKey || thumbKey)) return previewControls.replaceChildren();
+  const { entry, col, index } = info;
+  const path = img.dataset.path!;
+  const box = (label: string, checked: boolean, title: string, onChange: (on: boolean) => void) => {
+    const input = h("input", { type: "checkbox" }) as HTMLInputElement;
+    input.checked = checked;
+    input.addEventListener("change", () => onChange(input.checked));
+    return h("label", { title }, input, label);
+  };
+  const parts: HTMLElement[] = [];
+  if (hideKey) {
+    const hidden: string[] = (entry.data[hideKey] ?? []).map(String);
+    parts.push(
+      box("Hidden", hidden.includes(path), "Kept in the list, left off the site", (on) => {
+        const next = on ? [...hidden, path] : hidden.filter((p) => p !== path);
+        setValue(entry, columnByKey(hideKey)!, next.length ? next : null);
+        refreshCell(entry, col);
+        fillPreviewControls(img); // re-read the values for the next click
+      })
+    );
+  }
+  if (thumbKey) {
+    const n = Number(entry.data[thumbKey]) || 1;
+    parts.push(
+      box("Thumbnail", n === index + 1, "Shown in grids, search and link previews", (on) => {
+        const k = on ? index + 1 : 1;
+        setValue(entry, columnByKey(thumbKey)!, k === 1 ? null : k);
+        refreshCell(entry, col);
+        fillPreviewControls(img);
+      })
+    );
+  }
+  previewControls.replaceChildren(...parts);
+}
 function showPreview(img: HTMLImageElement) {
   previewFor_ = img;
+  fillPreviewControls(img);
   const target = preview.querySelector("img")!;
   const place = () => {
     if (previewFor_ !== img) return;
@@ -279,8 +326,14 @@ document.addEventListener("mouseover", (e) => {
   previewTimer = window.setTimeout(() => showPreview(img), 250);
 });
 document.addEventListener("mouseout", (e) => {
-  if ((e.target as HTMLElement).closest?.("img.thumb")) hidePreview();
+  if (!(e.target as HTMLElement).closest?.("img.thumb")) return;
+  // An interactive preview stays open if the pointer is on its way to it.
+  if (preview.classList.contains("interactive") && !preview.hidden) {
+    clearTimeout(previewTimer);
+    previewTimer = window.setTimeout(() => !preview.matches(":hover") && hidePreview(), 250);
+  } else hidePreview();
 });
+preview.addEventListener("mouseleave", hidePreview);
 addEventListener("scroll", hidePreview, true);
 
 const lazyImages = new IntersectionObserver(
@@ -784,11 +837,16 @@ function fillCell(td: HTMLTableCellElement, entry: Entry, col: Column) {
     case "images": {
       const list: string[] = Array.isArray(v) ? v.map(String) : [];
       const box = h("div", { class: "images" });
+      const hiddenPaths: string[] = col.options.hideIn ? (entry.data[col.options.hideIn] ?? []).map(String) : [];
+      const thumbAt = col.options.thumbnailIn ? (Number(entry.data[col.options.thumbnailIn]) || 1) - 1 : -1;
       list.forEach((path, i) => {
+        const img = thumb(path) as HTMLImageElement;
+        tileInfo.set(img, { entry, col, index: i });
+        const cls = ["tile", hiddenPaths.includes(path) && "is-hidden", i === thumbAt && list.length > 1 && "is-thumb"].filter(Boolean).join(" ");
         const tile = h(
           "span",
-          { class: "tile", draggable: "true", title: "Drag to reorder" },
-          thumb(path),
+          { class: cls, draggable: "true", title: "Drag to reorder" },
+          img,
           h("button", { type: "button", class: "x", title: "Remove image", on: { click: () => setValue(entry, col, list.filter((_, j) => j !== i)) } }, "×")
         );
         tile.addEventListener("dragstart", (e: DragEvent) => {
@@ -1265,7 +1323,7 @@ function columnsMenu(anchor: HTMLElement) {
 /** Settings > Pricing, for the suggested price columns. Keeps the defaults if it can't be read. */
 async function loadPricing() {
   try {
-    const data = parseYaml(await (await state.backend.readBlob(PRICING_FILE)).text()) ?? {};
+    const data = (parseYaml(await (await state.backend.readBlob(PRICING_FILE)).text()) ?? {}).pricing ?? {};
     for (const key of Object.keys(pricing) as (keyof typeof pricing)[]) {
       if (typeof data[key] === "number") pricing[key] = data[key];
     }
