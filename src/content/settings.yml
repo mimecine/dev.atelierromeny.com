@@ -2,6 +2,8 @@ site_title: Edlef Romeny
 menu:
   - title: Bio
     href: /bio
+  - title: About
+    href: /about
   - title: Paintings
     href: /selected-paintings
   - title: Prints
