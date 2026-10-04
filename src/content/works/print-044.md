@@ -23,5 +23,7 @@ h: 14
 sheet_w: 19.5
 sheet_h: 25.5
 edition: "2/8"
+hidden_images:
+  - /src/media/works/print-044-2.webp
 ---
 

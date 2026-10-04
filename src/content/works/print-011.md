@@ -23,5 +23,8 @@ h: 12.5
 sheet_w: 33.5
 sheet_h: 25.5
 edition: "12/20"
+hidden_images:
+  - /src/media/works/print-011.webp
+thumbnail: 2
 ---
 

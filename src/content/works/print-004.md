@@ -23,5 +23,8 @@ h: 23
 sheet_w: 55
 sheet_h: 37.5
 edition: "4/5"
+hidden_images:
+  - /src/media/works/print-004-2.webp
+  - /src/media/works/print-004-3.webp
 ---
 

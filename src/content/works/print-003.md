@@ -23,5 +23,7 @@ h: 25
 sheet_w: 30.5
 sheet_h: 35.5
 edition: "4/20"
+hidden_images:
+  - /src/media/works/print-003.webp
 ---
 

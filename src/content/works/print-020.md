@@ -22,5 +22,9 @@ h: 24
 sheet_w: 34
 sheet_h: 39.5
 edition: "10/15"
+hidden_images:
+  - /src/media/works/print-020-2.webp
+  - /src/media/works/print-020-3.webp
+  - /src/media/works/print-020-5.webp
 ---
 

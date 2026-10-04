@@ -20,5 +20,7 @@ h: 37
 sheet_w: 30
 sheet_h: 39
 edition: "4/20"
+hidden_images:
+  - /src/media/works/print-002-2.webp
 ---
 

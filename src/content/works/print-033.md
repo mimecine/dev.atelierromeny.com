@@ -22,5 +22,8 @@ w: 24.5
 h: 25
 sheet_w: 48.5
 sheet_h: 58.5
+hidden_images:
+  - /src/media/works/print-033-2.webp
+  - /src/media/works/print-033-3.webp
 ---
 

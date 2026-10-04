@@ -8,7 +8,6 @@ images:
   - '/src/media/works/print-023.webp'
   - '/src/media/works/print-023-2.webp'
   - '/src/media/works/print-023-detail.webp'
-thumbnail: 2
 tags:
   - print
   - etching
@@ -23,5 +22,7 @@ h: 25.5
 sheet_w: 33.5
 sheet_h: 42.5
 edition: "7/15"
+hidden_images:
+  - /src/media/works/print-023-2.webp
 ---
 
