@@ -18,5 +18,8 @@ year_end: null
 file: '/src/media/works/94-forsspel-ressac.webp'
 uuid: 364f98d7-a7c6-406f-901d-6fed9f9ec098
 old_image: '/src/media/works/94-forsspel-ressac.webp'
+tags:
+  - painting
+  - abstract
 ---
 

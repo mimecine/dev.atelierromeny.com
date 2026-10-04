@@ -16,5 +16,9 @@ year_start: 1965
 year_end: null
 file: '/src/media/works/33-cosmos-1.webp'
 uuid: 74849bd4-9d41-4565-aabc-d5d6b3bfd1b7
+tags:
+  - painting
+  - abstract
+  - cosmos
 ---
 

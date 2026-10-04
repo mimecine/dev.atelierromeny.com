@@ -21,5 +21,8 @@ uuid: fb866b52-45f6-4a40-ac92-e583feb6fd0b
 old_image: '/src/media/works/366-cobra.webp'
 images:
   - '/src/media/works/366-cobra-v2-2.webp'
+tags:
+  - painting
+  - abstract
 ---
 

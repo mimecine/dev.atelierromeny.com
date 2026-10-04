@@ -18,5 +18,9 @@ year_end: null
 file: '/src/media/works/97-la-nuit-1.webp'
 uuid: 63998988-ae51-4122-a318-810467bd9919
 old_image: '/src/media/works/97-la-nuit-1.webp'
+tags:
+  - painting
+  - abstract
+  - night
 ---
 

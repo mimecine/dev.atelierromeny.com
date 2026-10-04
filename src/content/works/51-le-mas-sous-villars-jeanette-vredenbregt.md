@@ -14,5 +14,12 @@ image: '/src/media/works/51-le-mas-sous-villars-jeanette-vredenbregt.webp'
 uuid: 0c7ba75f-e335-46f3-a13c-c87c0930cf32
 collections:
   - paysages
+tags:
+  - painting
+  - landscape
+  - house
+  - tree
+  - blossom
+  - Villars
 ---
 

@@ -15,5 +15,10 @@ year_start: 1970
 year_end: null
 file: '/src/media/works/723-sonata-rouge-et-noir.webp'
 uuid: 8b733c3a-e4d9-406b-9ac9-77a86cbf503c
+tags:
+  - painting
+  - still life
+  - music
+  - violin
 ---
 

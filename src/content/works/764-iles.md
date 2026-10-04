@@ -15,5 +15,8 @@ year_start: 2004
 year_end: null
 file: '/src/media/works/764-iles.webp'
 uuid: e50f1613-673b-4da0-999c-bb91d6b7da4f
+tags:
+  - painting
+  - abstract
 ---
 

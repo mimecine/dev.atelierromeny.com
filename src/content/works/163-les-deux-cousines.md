@@ -15,5 +15,9 @@ year_start: 1983
 year_end: null
 file: '/src/media/works/163-les-deux-cousines.webp'
 uuid: 4381c2f1-6cce-4a82-8776-5daa18b6f8dd
+tags:
+  - painting
+  - portrait
+  - child
 ---
 

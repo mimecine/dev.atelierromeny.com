@@ -20,5 +20,10 @@ uuid: 4322fede-a2c2-457f-a570-61307707b0c6
 old_image: '/src/media/works/698-nature-morte-chez-monsieur-alata-souvenir-dorient.webp'
 images:
   - '/src/media/works/698-nature-morte-chez-monsieur-alata-souvenir-d-orient-2.webp'
+tags:
+  - painting
+  - still life
+  - fruit
+  - bottle
 ---
 

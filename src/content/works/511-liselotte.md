@@ -15,5 +15,9 @@ image: '/src/media/works/511-liselotte.webp'
 uuid: 7393919a-2f63-4dff-9404-6aa22abb3bd0
 collections:
   - figures-humaines
+tags:
+  - painting
+  - figure
+  - nude
 ---
 

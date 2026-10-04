@@ -19,5 +19,10 @@ collections:
 old_image: '/src/media/works/663-la-mort.webp'
 images:
   - '/src/media/works/663-la-mort-v2-2.webp'
+tags:
+  - painting
+  - abstract
+  - death
+  - creation series
 ---
 

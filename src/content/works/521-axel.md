@@ -15,5 +15,9 @@ image: '/src/media/works/521-axel.webp'
 uuid: f0ab64fc-4cd4-4ff7-8f3f-5637829450d8
 collections:
   - figures-humaines
+tags:
+  - painting
+  - figure
+  - nude
 ---
 

@@ -17,5 +17,10 @@ year_end: null
 file: '/src/media/works/689-soleil-dorage.webp'
 uuid: ed4573c0-3e19-4591-bc54-0fe3259a5490
 old_image: '/src/media/works/689-soleil-dorage.webp'
+tags:
+  - painting
+  - landscape
+  - field
+  - storm
 ---
 

@@ -15,5 +15,8 @@ year_start: 1965
 year_end: null
 file: '/src/media/works/383-spanskt-natt-nuit-espagnole.webp'
 uuid: 5e5dc1c0-d788-4e23-9e9f-bd9e41ab5a17
+tags:
+  - painting
+  - abstract
 ---
 

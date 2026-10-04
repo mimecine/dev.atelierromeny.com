@@ -14,5 +14,11 @@ image: '/src/media/works/255-paysan-e-iagneau.webp'
 uuid: 2a9fe2e0-bf82-4a5e-b5a6-3ed8fca892df
 collections:
   - figures-humaines
+tags:
+  - painting
+  - figure
+  - portrait
+  - lamb
+  - animal
 ---
 

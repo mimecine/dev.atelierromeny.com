@@ -9,5 +9,10 @@ images:
   - '/src/media/works/print-004-2.webp'
   - '/src/media/works/print-004-3.webp'
   - '/src/media/works/print-004-4.webp'
+tags:
+  - print
+  - relief print
+  - colour print
+  - abstract
 ---
 

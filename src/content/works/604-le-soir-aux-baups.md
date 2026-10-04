@@ -14,5 +14,10 @@ image: '/src/media/works/604-le-soir-aux-baups.webp'
 uuid: d8774716-db0a-40af-af73-7aed735b9cca
 collections:
   - paysages
+tags:
+  - painting
+  - landscape
+  - sunset
+  - tree
 ---
 

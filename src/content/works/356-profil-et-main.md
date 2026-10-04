@@ -14,5 +14,11 @@ image: '/src/media/works/356-profil-et-main.webp'
 uuid: 6aeb7927-d590-4007-b521-776253a676be
 collections:
   - cartes
+tags:
+  - painting
+  - collage
+  - hand
+  - face
+  - insect
 ---
 

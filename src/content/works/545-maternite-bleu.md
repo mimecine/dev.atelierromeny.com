@@ -14,5 +14,9 @@ image: '/src/media/works/545-maternite-bleu.webp'
 uuid: 8607a26c-2e14-403d-beac-eb010708dc2f
 collections:
   - figures-humaines
+tags:
+  - painting
+  - figure
+  - mother and child
 ---
 

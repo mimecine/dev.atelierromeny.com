@@ -15,5 +15,11 @@ image: '/src/media/works/494-interieur-salle-doperation-avec-famille.webp'
 uuid: 75bfee2c-c7e6-44e4-b0b3-06035e1039dc
 collections:
   - accident-dans-la-montagne
+tags:
+  - painting
+  - figure
+  - interior
+  - group
+  - hospital
 ---
 

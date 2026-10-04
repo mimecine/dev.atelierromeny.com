@@ -15,5 +15,10 @@ year_start: 1976
 year_end: null
 file: '/src/media/works/473-oree-du-bois.webp'
 uuid: ffea3a89-8adb-478d-a2b2-aaa5daea0f48
+tags:
+  - painting
+  - landscape
+  - forest
+  - tree
 ---
 

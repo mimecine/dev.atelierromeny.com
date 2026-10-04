@@ -17,5 +17,8 @@ year_start: 1960
 year_end: null
 file: '/src/media/works/447-hommage-a-kandinsky.webp'
 uuid: 51877c69-3dc2-4dcb-994c-8c96df628b6d
+tags:
+  - painting
+  - abstract
 ---
 

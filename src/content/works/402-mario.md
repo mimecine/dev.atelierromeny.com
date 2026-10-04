@@ -14,5 +14,9 @@ image: '/src/media/works/402-mario.webp'
 uuid: af6431f4-b25f-430a-a39f-5ad0868a1034
 collections:
   - figures-humaines
+tags:
+  - painting
+  - portrait
+  - figure
 ---
 

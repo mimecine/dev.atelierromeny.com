@@ -22,5 +22,10 @@ images:
   - '/src/media/works/149-la-table-garnie-1-v2-2.webp'
   - '/src/media/works/149-la-table-garnie-1-v2-3.webp'
   - '/src/media/works/149-la-table-garnie-1-v2-4.webp'
+tags:
+  - painting
+  - still life
+  - flowers
+  - fruit
 ---
 

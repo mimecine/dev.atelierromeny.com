@@ -15,5 +15,9 @@ year_start: 1969
 year_end: null
 file: '/src/media/works/457-reflet-deau.webp'
 uuid: 256d3e77-ad58-4a91-a2be-b1bd3befd9fd
+tags:
+  - painting
+  - abstract
+  - water
 ---
 

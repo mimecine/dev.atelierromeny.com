@@ -16,5 +16,9 @@ uuid: f01f85cc-d2b0-42ab-9bc7-ea627d23d94d
 collections:
   - figures-humaines
   - to-be-disposed-of
+tags:
+  - painting
+  - religious
+  - face
 ---
 

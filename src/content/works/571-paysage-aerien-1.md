@@ -15,5 +15,8 @@ year_start: 1971
 year_end: null
 file: '/src/media/works/571-paysage-aerien-1.webp'
 uuid: ac87d64f-f302-4585-b40f-43a400857b29
+tags:
+  - painting
+  - abstract
 ---
 

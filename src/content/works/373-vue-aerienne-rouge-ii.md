@@ -16,5 +16,8 @@ year_start: 1972
 year_end: null
 file: '/src/media/works/373-vue-aerienne-rouge-ii.webp'
 uuid: ae640caa-8d12-4897-8a01-90858ae1961d
+tags:
+  - painting
+  - abstract
 ---
 

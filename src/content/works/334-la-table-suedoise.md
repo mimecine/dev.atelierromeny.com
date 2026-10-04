@@ -16,5 +16,12 @@ year_start: 1976
 year_end: null
 file: '/src/media/works/334-la-table-suedoise.webp'
 uuid: c1f16ec6-77ac-48fc-b0ee-75ab8a4b19ee
+tags:
+  - painting
+  - still life
+  - interior
+  - bottle
+  - flowers
+  - fruit
 ---
 

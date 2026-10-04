@@ -14,5 +14,11 @@ image: '/src/media/works/247-lettre-a-ma-bien-aimee-viii.webp'
 uuid: 72dbc304-f73e-4de9-9b46-7ec243d1bc30
 collections:
   - la-vie-de-femme
+tags:
+  - painting
+  - collage
+  - figure
+  - mother and child
+  - letter
 ---
 

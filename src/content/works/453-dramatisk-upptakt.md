@@ -16,5 +16,8 @@ year_start: 1960
 year_end: null
 file: '/src/media/works/453-dramatisk-upptakt.webp'
 uuid: c5f5a152-a935-43ea-9602-83485880551a
+tags:
+  - painting
+  - abstract
 ---
 

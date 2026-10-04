@@ -21,5 +21,10 @@ old_image: '/src/media/works/579-table-genereuse.webp'
 images:
   - '/src/media/works/579-table-genereuse-v2-2.webp'
   - '/src/media/works/579-table-genereuse-v2-3.webp'
+tags:
+  - painting
+  - still life
+  - fruit
+  - table
 ---
 

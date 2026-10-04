@@ -15,5 +15,10 @@ year_start: 2006
 year_end: null
 file: '/src/media/works/la-farandole-des-fruits.webp'
 uuid: 3fb9b4f4-8384-4bb8-a898-70e2f8b1cc24
+tags:
+  - painting
+  - still life
+  - fruit
+  - flowers
 ---
 

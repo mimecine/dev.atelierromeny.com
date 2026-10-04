@@ -18,5 +18,9 @@ year_end: null
 file: '/src/media/works/657-le-chaos.webp'
 uuid: 2e838754-0e9f-471c-b53c-4068247a4f77
 old_image: '/src/media/works/657-le-chaos.webp'
+tags:
+  - painting
+  - abstract
+  - creation series
 ---
 

@@ -18,5 +18,8 @@ year_end: null
 file: '/src/media/works/587-efter-regnet-apres-la-pluie.webp'
 uuid: 96ea07f0-61c4-4226-8de5-0eed3874d851
 old_image: '/src/media/works/587-efter-regnet-apres-la-pluie.webp'
+tags:
+  - painting
+  - abstract
 ---
 

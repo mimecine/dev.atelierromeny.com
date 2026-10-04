@@ -18,5 +18,8 @@ year_end: null
 file: '/src/media/works/424-negroide.webp'
 uuid: 676acf5d-ef40-4743-9cc6-7e072f951918
 old_image: '/src/media/works/424-negroide.webp'
+tags:
+  - painting
+  - still life
 ---
 

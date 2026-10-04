@@ -16,5 +16,10 @@ year_start: 1951
 year_end: null
 file: '/src/media/works/400-autoportrait-devant-ies-ruines.webp'
 uuid: 51e9f1f5-4748-488a-8dd6-12d97be7cdc1
+tags:
+  - painting
+  - self-portrait
+  - portrait
+  - ruins
 ---
 

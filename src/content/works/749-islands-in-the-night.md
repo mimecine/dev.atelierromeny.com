@@ -15,5 +15,9 @@ year: '1970'
 year_start: 1970
 year_end: null
 file: '/src/media/works/749-islands-in-the-night.webp'
+tags:
+  - painting
+  - abstract
+  - night
 ---
 

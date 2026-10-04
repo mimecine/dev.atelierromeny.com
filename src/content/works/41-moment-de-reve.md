@@ -14,5 +14,10 @@ image: '/src/media/works/41-moment-de-reve.webp'
 uuid: 3f702f96-9cff-4430-8085-ab336185a42e
 collections:
   - figures-humaines
+tags:
+  - painting
+  - figure
+  - music
+  - guitar
 ---
 

@@ -20,5 +20,10 @@ uuid: d8563709-d8a5-4564-96d3-4bee74edd528
 old_image: '/src/media/works/483-snolandskap.webp'
 images:
   - '/src/media/works/483-snolandskap-v2-2.webp'
+tags:
+  - painting
+  - landscape
+  - snow
+  - winter
 ---
 

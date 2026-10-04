@@ -15,5 +15,9 @@ year_start: 1985
 year_end: null
 file: '/src/media/works/451-ciel-vii.webp'
 uuid: 242dafb5-57d4-4cd4-b58e-5c73666da309
+tags:
+  - painting
+  - abstract
+  - sky
 ---
 

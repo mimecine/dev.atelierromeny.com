@@ -14,5 +14,11 @@ image: '/src/media/works/650-les-3-graces.webp'
 uuid: 10cd25d0-66a3-4192-9938-241cfc01f765
 collections:
   - figures-humaines
+tags:
+  - painting
+  - figure
+  - nude
+  - group
+  - sun
 ---
 

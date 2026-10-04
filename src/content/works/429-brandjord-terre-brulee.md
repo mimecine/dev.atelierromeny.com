@@ -18,5 +18,8 @@ year_end: null
 file: '/src/media/works/429-brandjord-terre-brulee.webp'
 uuid: 3da11a48-c696-4df8-afd7-60256b97eee3
 old_image: '/src/media/works/429-brandjord-terre-brulee.webp'
+tags:
+  - painting
+  - abstract
 ---
 

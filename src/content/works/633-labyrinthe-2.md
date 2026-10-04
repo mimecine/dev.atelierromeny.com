@@ -15,5 +15,8 @@ year_start: 2003
 year_end: null
 file: '/src/media/works/633-labyrinthe-2.webp'
 uuid: c3021a78-b0e2-413b-b1b0-74aa0a36e21f
+tags:
+  - painting
+  - abstract
 ---
 

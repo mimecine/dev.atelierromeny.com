@@ -14,5 +14,12 @@ image: '/src/media/works/109-vendredi.webp'
 uuid: 1b815b6f-c3e4-4f6e-ad30-1dd7f092c68e
 collections:
   - les-jours-de-la-semaine
+tags:
+  - painting
+  - mixed media
+  - collage
+  - figure
+  - nude
+  - couple
 ---
 

@@ -18,5 +18,9 @@ year_end: null
 file: '/src/media/works/150-vent-dans-les-champs-de-ble.webp'
 uuid: d6d0213f-6041-4259-8fdd-df0873c93f31
 old_image: '/src/media/works/150-vent-dans-les-champs-de-ble.webp'
+tags:
+  - painting
+  - landscape
+  - field
 ---
 

@@ -18,5 +18,9 @@ year_end: null
 file: '/src/media/works/206-bouquet-bleu.webp'
 uuid: 89bbae5a-e8b2-4385-8edf-3c8c290eea98
 old_image: '/src/media/works/206-bouquet-bleu.webp'
+tags:
+  - painting
+  - still life
+  - flowers
 ---
 

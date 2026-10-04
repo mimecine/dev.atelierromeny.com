@@ -15,5 +15,8 @@ year_start: 1960
 year_end: null
 file: '/src/media/works/418-spontanitet.webp'
 uuid: 85f7fcf0-4b93-4d62-9fb6-376672551b21
+tags:
+  - painting
+  - abstract
 ---
 

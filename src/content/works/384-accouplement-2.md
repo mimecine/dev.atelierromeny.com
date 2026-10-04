@@ -16,5 +16,10 @@ year_start: 1952
 year_end: null
 file: '/src/media/works/384-accouplement-2.webp'
 uuid: e637c2b1-970d-4e09-b57f-63cec383f762
+tags:
+  - painting
+  - animal
+  - cat
+  - mating
 ---
 

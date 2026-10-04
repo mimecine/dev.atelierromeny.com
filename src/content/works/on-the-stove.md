@@ -15,5 +15,11 @@ year_start: null
 year_end: null
 file: '/src/media/works/on-the-stove.webp'
 uuid: 814882eb-5fa8-431b-866a-2e5b0e99aa2f
+tags:
+  - painting
+  - still life
+  - fruit
+  - jug
+  - stove
 ---
 

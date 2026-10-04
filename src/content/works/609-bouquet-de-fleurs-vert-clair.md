@@ -18,5 +18,9 @@ year_end: null
 file: '/src/media/works/609-bouquet-de-fleurs-vert-clair.webp'
 uuid: ddde1355-0916-4046-b2af-93a5d0915da9
 old_image: '/src/media/works/609-bouquet-de-fleurs-vert-clair.webp'
+tags:
+  - painting
+  - still life
+  - flowers
 ---
 

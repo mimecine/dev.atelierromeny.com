@@ -22,5 +22,8 @@ old_image: '/src/media/works/351-jouve-le-facteur-de-villars.webp'
 images:
   - '/src/media/works/351-jouve-le-facteur-de-villars-v2-2.webp'
   - '/src/media/works/351-jouve-le-facteur-de-villars-v2-3.webp'
+tags:
+  - painting
+  - portrait
 ---
 

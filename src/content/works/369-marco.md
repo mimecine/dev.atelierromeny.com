@@ -15,5 +15,9 @@ year_start: 1983
 year_end: null
 file: '/src/media/works/369-marco.webp'
 uuid: 3308ccfc-6442-4dc5-81c9-09cdf64149f0
+tags:
+  - painting
+  - portrait
+  - figure
 ---
 

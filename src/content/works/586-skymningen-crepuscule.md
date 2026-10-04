@@ -20,5 +20,8 @@ uuid: be5ef05b-72f0-4c53-814e-73094a32799e
 old_image: '/src/media/works/586-skymningen-crepuscule.webp'
 images:
   - '/src/media/works/586-skymningen-crepuscule-v2-2.webp'
+tags:
+  - painting
+  - abstract
 ---
 

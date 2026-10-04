@@ -15,5 +15,9 @@ year_start: 1984
 year_end: null
 file: '/src/media/works/85-ciel-iv.webp'
 uuid: 969a8d4f-c69e-4a5b-a9ab-80db61bc72f2
+tags:
+  - painting
+  - abstract
+  - sky
 ---
 

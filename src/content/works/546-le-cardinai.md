@@ -15,5 +15,10 @@ year_start: 1975
 year_end: null
 file: '/src/media/works/546-le-cardinai.webp'
 uuid: bb86d9bb-4281-4c73-bf74-83c4db2ae2f8
+tags:
+  - painting
+  - still life
+  - music
+  - mandolin
 ---
 

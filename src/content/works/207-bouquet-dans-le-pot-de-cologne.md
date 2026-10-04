@@ -15,5 +15,9 @@ year_start: 1996
 year_end: null
 file: '/src/media/works/207-bouquet-dans-le-pot-de-cologne.webp'
 uuid: 7c559721-ac21-4bc0-916b-5b8cf7c0d7e3
+tags:
+  - painting
+  - still life
+  - flowers
 ---
 

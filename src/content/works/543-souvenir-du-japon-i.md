@@ -14,5 +14,9 @@ image: '/src/media/works/543-souvenir-du-japon-i.webp'
 uuid: 31d71ed5-3fac-4dd1-89c8-a4af4d7b6220
 collections:
   - abstrait
+tags:
+  - painting
+  - abstract
+  - lettering
 ---
 

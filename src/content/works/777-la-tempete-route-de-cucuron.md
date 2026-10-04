@@ -18,5 +18,10 @@ year_end: null
 file: '/src/media/works/777-la-tempete-route-de-cucuron.webp'
 uuid: 401870be-b7f5-4ad3-95dc-8432a31bb06a
 old_image: '/src/media/works/777-la-tempete-route-de-cucuron.webp'
+tags:
+  - painting
+  - landscape
+  - storm
+  - field
 ---
 

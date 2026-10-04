@@ -10,5 +10,10 @@ images:
   - '/src/media/works/print-020-3.webp'
   - '/src/media/works/print-020-4.webp'
   - '/src/media/works/print-020-5.webp'
+tags:
+  - print
+  - etching
+  - aquatint
+  - abstract
 ---
 

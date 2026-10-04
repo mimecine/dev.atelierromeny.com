@@ -15,5 +15,9 @@ year_start: 1976
 year_end: null
 file: '/src/media/works/211-pensees.webp'
 uuid: cd3c9d00-c18e-4562-950c-167463b54a4d
+tags:
+  - painting
+  - flowers
+  - pansies
 ---
 

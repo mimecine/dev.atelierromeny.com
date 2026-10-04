@@ -15,5 +15,10 @@ year_start: 2001
 year_end: null
 file: '/src/media/works/682-chaise-et-plat-de-poissons.webp'
 uuid: ee166c2a-01de-44d7-911f-46a5bf570aa4
+tags:
+  - painting
+  - still life
+  - fish
+  - chair
 ---
 

@@ -15,5 +15,10 @@ collections:
   - natures-mortes
   - selected-paintings
 image: '/src/media/works/119-chaise-poisson-et-rhubarbe.webp'
+tags:
+  - painting
+  - still life
+  - fish
+  - chair
 ---
 

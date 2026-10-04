@@ -16,5 +16,9 @@ year_start: 1989
 year_end: null
 file: '/src/media/works/173-set-von-dardel-mon-petit-fils.webp'
 uuid: 011d2d8b-bc71-4200-b6e1-449dee816777
+tags:
+  - painting
+  - portrait
+  - child
 ---
 

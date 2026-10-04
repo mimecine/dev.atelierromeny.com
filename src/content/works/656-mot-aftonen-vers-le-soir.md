@@ -15,5 +15,10 @@ year_start: 1973
 year_end: null
 file: '/src/media/works/656-mot-aftonen-vers-le-soir.webp'
 uuid: d38b247a-a036-4984-85be-0b9b6456742a
+tags:
+  - painting
+  - abstract
+  - landscape
+  - sun
 ---
 

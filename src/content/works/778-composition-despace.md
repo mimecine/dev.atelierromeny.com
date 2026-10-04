@@ -16,5 +16,8 @@ year_start: 1963
 year_end: null
 file: '/src/media/works/778-composition-despace.webp'
 uuid: e6718ccf-f139-4e28-aed1-924110debe80
+tags:
+  - painting
+  - abstract
 ---
 

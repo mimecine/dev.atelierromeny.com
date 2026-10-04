@@ -14,5 +14,11 @@ image: '/src/media/works/430-stad-en-land.webp'
 uuid: 331e9c96-5aaa-4e51-ac78-a36e0d0dbc90
 collections:
   - le-peintre-et-son-model
+tags:
+  - painting
+  - figure
+  - artist at work
+  - nude
+  - cityscape
 ---
 

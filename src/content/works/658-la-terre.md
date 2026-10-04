@@ -20,5 +20,9 @@ uuid: a46a305f-986e-4051-9e18-b7bab1fc8422
 old_image: '/src/media/works/658-la-terre.webp'
 images:
   - '/src/media/works/658-la-terre-v2-2.webp'
+tags:
+  - painting
+  - abstract
+  - creation series
 ---
 

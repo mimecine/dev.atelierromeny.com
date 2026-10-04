@@ -15,5 +15,10 @@ year_start: 1966
 year_end: null
 file: '/src/media/works/341-crane-de-chien.webp'
 uuid: e15eb93d-33b8-4142-9a0a-3add86fc1b94
+tags:
+  - painting
+  - skull
+  - dog
+  - animal
 ---
 

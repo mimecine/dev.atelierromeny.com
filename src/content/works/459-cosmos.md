@@ -18,5 +18,9 @@ year_end: null
 file: '/src/media/works/459-cosmos.webp'
 uuid: f608cd37-c9d7-4608-a701-6b939cb36930
 old_image: '/src/media/works/459-cosmos.webp'
+tags:
+  - painting
+  - abstract
+  - cosmos
 ---
 

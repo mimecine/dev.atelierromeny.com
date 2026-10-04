@@ -14,5 +14,11 @@ image: '/src/media/works/692-lettre-a-ma-bien-aimee-vi.webp'
 uuid: f32a1c89-4992-426a-8e9f-e893aa922114
 collections:
   - la-vie-de-femme
+tags:
+  - painting
+  - collage
+  - figure
+  - nude
+  - letter
 ---
 

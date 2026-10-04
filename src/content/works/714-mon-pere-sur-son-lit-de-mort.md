@@ -15,5 +15,10 @@ year_start: 1965
 year_end: null
 file: '/src/media/works/714-mon-pere-sur-son-lit-de-mort.webp'
 uuid: 9e6810eb-92b6-49d3-9edc-e50330e2bbbd
+tags:
+  - painting
+  - portrait
+  - father
+  - death
 ---
 

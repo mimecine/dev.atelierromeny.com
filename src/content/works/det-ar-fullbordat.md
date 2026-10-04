@@ -14,5 +14,8 @@ image: '/src/media/works/det-ar-fullbordat.webp'
 uuid: 4ad9670f-3925-4bcc-ae4c-465557832391
 collections:
   - abstrait
+tags:
+  - painting
+  - abstract
 ---
 

@@ -16,5 +16,8 @@ year_start: 1975
 year_end: null
 file: '/src/media/works/491-espania.webp'
 uuid: c05199fd-731e-4934-906e-a897cb531f47
+tags:
+  - painting
+  - abstract
 ---
 

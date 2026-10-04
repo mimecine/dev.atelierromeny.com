@@ -16,5 +16,10 @@ year_start: 1978
 year_end: null
 file: '/src/media/works/492-les-oiseaux-qui-senvolent-lespoir.webp'
 uuid: 61dfbb0e-90d8-4ac2-af3c-b49e30e4930b
+tags:
+  - painting
+  - semi-abstract
+  - bird
+  - landscape
 ---
 

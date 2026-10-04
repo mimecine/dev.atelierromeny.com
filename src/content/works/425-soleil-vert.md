@@ -18,5 +18,10 @@ year_end: null
 file: '/src/media/works/425-soleil-vert.webp'
 uuid: a7a062c2-603e-48d4-abec-08934fcd63aa
 old_image: '/src/media/works/425-soleil-vert.webp'
+tags:
+  - painting
+  - semi-abstract
+  - sun
+  - plant
 ---
 

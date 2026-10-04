@@ -14,5 +14,9 @@ image: '/src/media/works/aurora-6.webp'
 uuid: 522dcce1-8cb2-4da3-b248-b39618a271bb
 collections:
   - paysages
+tags:
+  - painting
+  - landscape
+  - sky
 ---
 

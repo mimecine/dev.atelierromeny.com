@@ -15,5 +15,8 @@ year_start: 2010
 year_end: null
 file: '/src/media/works/petite-improvisation-2.webp'
 uuid: d0d2067f-f82c-44f0-9bce-3798e7ae5dff
+tags:
+  - painting
+  - abstract
 ---
 

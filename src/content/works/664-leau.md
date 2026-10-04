@@ -15,5 +15,10 @@ year_start: 1975
 year_end: null
 file: '/src/media/works/664-leau.webp'
 uuid: 2a7c8696-e7d4-40a4-b14e-93d927be8135
+tags:
+  - painting
+  - abstract
+  - water
+  - sun
 ---
 

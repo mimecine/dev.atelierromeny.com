@@ -15,5 +15,8 @@ year_start: 1970
 year_end: null
 file: '/src/media/works/427-landscape.webp'
 uuid: bc484757-0ba8-40c0-a3a9-f927bafac536
+tags:
+  - painting
+  - abstract
 ---
 

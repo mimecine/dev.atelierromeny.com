@@ -15,5 +15,11 @@ year_start: 1980
 year_end: null
 file: '/src/media/works/poele-lacanche-dor.webp'
 uuid: a65f2881-7d60-4e77-b07a-5683d42c8b9c
+tags:
+  - painting
+  - still life
+  - fruit
+  - vegetables
+  - stove
 ---
 

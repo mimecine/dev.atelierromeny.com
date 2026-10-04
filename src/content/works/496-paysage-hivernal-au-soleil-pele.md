@@ -16,5 +16,12 @@ year_start: 1978
 year_end: null
 file: '/src/media/works/496-paysage-hivernal-au-soleil-pele.webp'
 uuid: 089060d0-0c8a-4d65-b7e2-4666332706bc
+tags:
+  - painting
+  - landscape
+  - snow
+  - winter
+  - sun
+  - mountain
 ---
 

@@ -16,5 +16,8 @@ year_start: 2004
 year_end: null
 file: '/src/media/works/760-spielerei-2.webp'
 uuid: de7f3929-710d-4cf5-8a98-63ddb90a0c1c
+tags:
+  - painting
+  - abstract
 ---
 

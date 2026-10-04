@@ -18,5 +18,11 @@ year_end: null
 file: '/src/media/works/59-la-seine-a-paris.webp'
 uuid: feddd64a-6527-486f-af8e-552fe73060f2
 old_image: '/src/media/works/59-la-seine-a-paris.webp'
+tags:
+  - painting
+  - landscape
+  - cityscape
+  - river
+  - Paris
 ---
 

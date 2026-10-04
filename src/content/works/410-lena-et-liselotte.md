@@ -15,5 +15,10 @@ image: '/src/media/works/410-lena-et-liselotte.webp'
 uuid: ba3130ab-c377-497e-949f-02cb6f4a066f
 collections:
   - figures-humaines
+tags:
+  - painting
+  - portrait
+  - figure
+  - child
 ---
 

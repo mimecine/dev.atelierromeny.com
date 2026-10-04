@@ -14,5 +14,10 @@ image: '/src/media/works/merguerite-la-reveuse.webp'
 uuid: 54ec2cb0-2d0d-4d1b-a91e-be6f454263b0
 collections:
   - portraits
+tags:
+  - painting
+  - collage
+  - figure
+  - sleeping
 ---
 

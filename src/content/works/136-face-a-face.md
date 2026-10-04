@@ -14,5 +14,9 @@ image: '/src/media/works/136-face-a-face.webp'
 uuid: b67a362f-8779-49f4-a998-e46a9b54daaf
 collections:
   - animaux
+tags:
+  - painting
+  - animal
+  - dog
 ---
 

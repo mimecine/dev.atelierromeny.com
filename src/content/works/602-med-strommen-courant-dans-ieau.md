@@ -22,5 +22,9 @@ images:
   - '/src/media/works/602-med-strommen-courant-dans-i-eau-2.webp'
   - '/src/media/works/602-med-strommen-courant-dans-i-eau-3.webp'
   - '/src/media/works/602-med-strommen-courant-dans-i-eau-4.webp'
+tags:
+  - painting
+  - abstract
+  - water
 ---
 

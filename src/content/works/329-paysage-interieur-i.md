@@ -18,5 +18,8 @@ year_end: null
 file: '/src/media/works/329-paysage-interieur-i.webp'
 uuid: 1ad19847-6c1d-4e2d-8219-4f710040b0d6
 old_image: '/src/media/works/329-paysage-interieur-i.webp'
+tags:
+  - painting
+  - abstract
 ---
 

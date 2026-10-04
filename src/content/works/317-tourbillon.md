@@ -15,5 +15,9 @@ year_start: 1985
 year_end: null
 file: '/src/media/works/317-tourbillon.webp'
 uuid: b19a87b3-4847-40e4-97da-c96839fbd3a0
+tags:
+  - painting
+  - mixed media
+  - abstract
 ---
 

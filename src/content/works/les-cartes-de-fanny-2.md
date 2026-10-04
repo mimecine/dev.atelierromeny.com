@@ -14,5 +14,10 @@ image: '/src/media/works/les-cartes-de-fanny-2.webp'
 uuid: e326239c-9fdd-47aa-a435-e0abe56f9b9f
 collections:
   - portraits
+tags:
+  - painting
+  - collage
+  - figure
+  - nude
 ---
 

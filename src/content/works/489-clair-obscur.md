@@ -5,7 +5,9 @@ image: '/src/media/works/489-clair-obscur.webp'
 collections:
   - abstract
   - abstrait
-tags: []
+tags:
+  - painting
+  - abstract
 categories: Abstrait
 w: 150
 h: 110

@@ -21,5 +21,11 @@ old_image: '/src/media/works/773-calanque-de-sormiou.webp'
 images:
   - '/src/media/works/773-calanque-de-sormiou-v2-2.webp'
   - '/src/media/works/773-calanque-de-sormiou-v2-3.webp'
+tags:
+  - painting
+  - seascape
+  - sea
+  - coast
+  - Marseille
 ---
 

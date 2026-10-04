@@ -14,5 +14,12 @@ image: '/src/media/works/110-mercredi.webp'
 uuid: 1d10b02b-0270-4df3-9378-d65c56bedb2e
 collections:
   - les-jours-de-la-semaine
+tags:
+  - painting
+  - mixed media
+  - collage
+  - figure
+  - nude
+  - couple
 ---
 

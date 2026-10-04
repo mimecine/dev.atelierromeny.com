@@ -22,5 +22,10 @@ images:
   - '/src/media/works/661-le-monde-des-animaux-v2-2.webp'
   - '/src/media/works/661-le-monde-des-animaux-v2-3.webp'
   - '/src/media/works/661-le-monde-des-animaux-v2-4.webp'
+tags:
+  - painting
+  - abstract
+  - animal
+  - creation series
 ---
 

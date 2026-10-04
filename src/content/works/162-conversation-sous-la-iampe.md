@@ -16,5 +16,10 @@ year_start: 1996
 year_end: null
 file: '/src/media/works/162-conversation-sous-la-iampe.webp'
 uuid: cbf6fdd9-5c22-4e9c-a560-8bde3dfa1df5
+tags:
+  - painting
+  - figure
+  - interior
+  - conversation
 ---
 

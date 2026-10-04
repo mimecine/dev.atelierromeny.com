@@ -18,5 +18,9 @@ year_start: 1982
 year_end: null
 file: '/src/media/works/310-voce.webp'
 uuid: 16c5f567-9ba6-4735-8476-bbd2def7e34e
+tags:
+  - painting
+  - abstract
+  - lettering
 ---
 

@@ -16,5 +16,11 @@ year_start: 1991
 year_end: null
 file: '/src/media/works/605-la-nichee.webp'
 uuid: 58157694-aaa9-4f32-8689-5d6ea5c38f83
+tags:
+  - painting
+  - bird
+  - nest
+  - tree
+  - animal
 ---
 

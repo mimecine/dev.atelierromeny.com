@@ -14,5 +14,9 @@ year_start: 1973
 year_end: null
 file: '/src/media/works/49-machine-agricole.webp'
 uuid: 4126a5b8-b1e0-4ae6-984a-50908493822b
+tags:
+  - painting
+  - landscape
+  - machine
 ---
 

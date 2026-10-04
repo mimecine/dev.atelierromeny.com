@@ -14,5 +14,9 @@ image: '/src/media/works/559-maternite-en-diagonale.webp'
 uuid: f4ea085d-5c83-4dee-a9fe-116b91387193
 collections:
   - figures-humaines
+tags:
+  - painting
+  - figure
+  - mother and child
 ---
 

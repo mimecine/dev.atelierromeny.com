@@ -15,5 +15,9 @@ year_start: 1985
 year_end: null
 file: '/src/media/works/91-la-nuit.webp'
 uuid: 456899be-a3a4-45d6-a683-b4c08b1b7f44
+tags:
+  - painting
+  - abstract
+  - night
 ---
 

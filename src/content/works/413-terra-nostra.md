@@ -15,5 +15,8 @@ year_start: 1968
 year_end: null
 file: '/src/media/works/413-terra-nostra.webp'
 uuid: dfb620b5-597f-4ee8-af28-b5eb7019bff2
+tags:
+  - painting
+  - abstract
 ---
 

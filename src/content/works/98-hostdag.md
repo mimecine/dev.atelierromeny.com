@@ -17,5 +17,9 @@ year_end: null
 file: '/src/media/works/98-hostdag.webp'
 uuid: 2794db2d-2ddf-44ac-96af-9f94987ea9a3
 old_image: '/src/media/works/98-hostdag.webp'
+tags:
+  - painting
+  - abstract
+  - autumn
 ---
 

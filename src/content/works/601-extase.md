@@ -18,5 +18,8 @@ year_end: null
 file: '/src/media/works/601-extase.webp'
 uuid: 9c4a7982-ffe1-4fbd-95f9-530750aa97b6
 old_image: '/src/media/works/601-extase.webp'
+tags:
+  - painting
+  - abstract
 ---
 

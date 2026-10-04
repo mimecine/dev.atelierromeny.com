@@ -16,5 +16,10 @@ uuid: 8be07ce4-ffc1-497f-a995-2f4edb5ff52d
 collections:
   - figures-humaines
   - to-be-disposed-of
+tags:
+  - painting
+  - portrait
+  - mother and child
+  - figure
 ---
 

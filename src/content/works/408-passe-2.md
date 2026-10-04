@@ -14,5 +14,11 @@ image: '/src/media/works/408-passe-2.webp'
 uuid: 381b1d40-bbae-4317-a5c5-fb6857d1eee2
 collections:
   - tauromachie
+tags:
+  - painting
+  - bullfight
+  - bull
+  - animal
+  - figure
 ---
 

@@ -17,5 +17,10 @@ year_end: null
 file: '/src/media/works/471-camargue-4.webp'
 uuid: 99d4fed1-9b7a-4aa3-ac9c-91e2484ff809
 old_image: '/src/media/works/471-camargue-4.webp'
+tags:
+  - painting
+  - abstract
+  - landscape
+  - Camargue
 ---
 

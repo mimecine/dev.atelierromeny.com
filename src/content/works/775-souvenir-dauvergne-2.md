@@ -15,5 +15,8 @@ year_start: 1985
 year_end: null
 file: '/src/media/works/775-souvenir-dauvergne-2.webp'
 uuid: b8f98064-33a6-40bb-aeb6-423a0ce3c730
+tags:
+  - painting
+  - abstract
 ---
 

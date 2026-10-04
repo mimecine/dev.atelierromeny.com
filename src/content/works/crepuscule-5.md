@@ -15,5 +15,10 @@ year_start: 2005
 year_end: null
 file: '/src/media/works/crepuscule-5.webp'
 uuid: 567e5198-4721-4b66-b387-3f7b8e7b9a3b
+tags:
+  - painting
+  - landscape
+  - night
+  - sky
 ---
 

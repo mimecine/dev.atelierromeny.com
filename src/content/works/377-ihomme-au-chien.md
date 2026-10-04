@@ -15,5 +15,11 @@ year_start: 1972
 year_end: null
 file: '/src/media/works/377-ihomme-au-chien.webp'
 uuid: 4cc685b2-f9bc-49df-86e7-390d400fa9af
+tags:
+  - painting
+  - figure
+  - portrait
+  - dog
+  - animal
 ---
 

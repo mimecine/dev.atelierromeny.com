@@ -15,5 +15,9 @@ year_start: 1989
 year_end: null
 file: '/src/media/works/16-artichauds-en-fleurs.webp'
 uuid: 7d582861-1e7a-4f7a-8739-3ffed694cbb2
+tags:
+  - painting
+  - flowers
+  - artichoke
 ---
 

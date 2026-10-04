@@ -15,5 +15,10 @@ year_start: 2001
 year_end: null
 file: '/src/media/works/275-nid-doiseau-i.webp'
 uuid: 587afea4-765d-42b9-972a-2f976adbdd40
+tags:
+  - painting
+  - semi-abstract
+  - bird
+  - nest
 ---
 

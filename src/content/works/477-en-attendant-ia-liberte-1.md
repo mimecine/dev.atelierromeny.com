@@ -14,5 +14,12 @@ image: '/src/media/works/477-en-attendant-ia-liberte-1.webp'
 uuid: 6d41499c-378c-4403-a975-c9ba1211e04b
 collections:
   - animaux
+tags:
+  - painting
+  - bird
+  - dove
+  - birdcage
+  - tree
+  - animal
 ---
 

@@ -14,5 +14,11 @@ image: '/src/media/works/48-les-fiances.webp'
 uuid: fbb1ff82-a4d4-44d6-9759-1c50bf00b366
 collections:
   - figures-humaines
+tags:
+  - painting
+  - figure
+  - couple
+  - portrait
+  - landscape
 ---
 

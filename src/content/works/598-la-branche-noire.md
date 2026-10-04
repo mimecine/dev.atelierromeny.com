@@ -17,5 +17,8 @@ year_start: 1962
 year_end: null
 file: '/src/media/works/598-la-branche-noire.webp'
 uuid: 8a11629e-61d3-424c-8c05-e0b32620895a
+tags:
+  - painting
+  - abstract
 ---
 

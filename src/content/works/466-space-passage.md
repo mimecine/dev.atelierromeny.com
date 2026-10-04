@@ -15,5 +15,8 @@ year_start: 1968
 year_end: null
 file: '/src/media/works/466-space-passage.webp'
 uuid: 0eb5a38b-cc94-4273-98f0-ed5af9128dd0
+tags:
+  - painting
+  - abstract
 ---
 

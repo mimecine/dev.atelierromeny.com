@@ -14,5 +14,10 @@ image: '/src/media/works/28-devant-la-mer.webp'
 uuid: 9c9dac05-ccb0-4ffd-8352-e53c320dd610
 collections:
   - figures-humaines
+tags:
+  - painting
+  - figure
+  - couple
+  - sea
 ---
 

@@ -17,5 +17,10 @@ year_start: 1988
 year_end: null
 file: '/src/media/works/375-accouplement.webp'
 uuid: 66026de5-e2e6-4a0e-b3cd-bd9e0133a245
+tags:
+  - painting
+  - animal
+  - cat
+  - mating
 ---
 

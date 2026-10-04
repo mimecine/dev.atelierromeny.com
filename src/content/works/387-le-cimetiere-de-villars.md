@@ -16,5 +16,11 @@ year_start: null
 year_end: null
 file: '/src/media/works/387-le-cimetiere-de-villars.webp'
 uuid: 793ac901-4291-4cb7-a651-969d6a83fe65
+tags:
+  - painting
+  - landscape
+  - cemetery
+  - cypress
+  - village
 ---
 

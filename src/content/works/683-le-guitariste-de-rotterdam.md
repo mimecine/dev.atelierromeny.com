@@ -14,5 +14,10 @@ image: '/src/media/works/683-le-guitariste-de-rotterdam.webp'
 uuid: b7ab2177-42da-4cb0-b087-9412a51fc10c
 collections:
   - figures-humaines
+tags:
+  - painting
+  - figure
+  - music
+  - guitar
 ---
 

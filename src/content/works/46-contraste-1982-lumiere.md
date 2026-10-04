@@ -15,5 +15,9 @@ year_start: 1994
 year_end: null
 file: '/src/media/works/46-contraste-1982-lumiere.webp'
 uuid: 2db8ff54-f19f-49f9-ab11-d2a08cf01b92
+tags:
+  - painting
+  - abstract
+  - sun
 ---
 

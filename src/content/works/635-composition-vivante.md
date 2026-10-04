@@ -14,5 +14,8 @@ image: '/src/media/works/635-composition-vivante.webp'
 uuid: ae1a005a-0b39-4496-97f3-37386042e405
 collections:
   - abstrait
+tags:
+  - painting
+  - abstract
 ---
 

@@ -14,5 +14,9 @@ image: '/src/media/works/487-lena-et-liselotte.webp'
 uuid: ed37ba39-cb56-4cbe-a01e-96a76bb1ab92
 collections:
   - figures-humaines
+tags:
+  - painting
+  - figure
+  - nude
 ---
 

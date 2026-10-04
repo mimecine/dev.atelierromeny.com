@@ -18,5 +18,10 @@ year_end: null
 file: '/src/media/works/157-le-mur-aux-tomates.webp'
 uuid: 3a23451d-b2be-48b8-831e-98809ba09b51
 old_image: '/src/media/works/157-le-mur-aux-tomates.webp'
+tags:
+  - painting
+  - still life
+  - tomatoes
+  - fruit
 ---
 

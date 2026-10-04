@@ -14,5 +14,10 @@ year_start: 2005
 year_end: null
 file: '/src/media/works/wo-hin-1.webp'
 uuid: 250e14c8-4f5d-42b5-be2a-f4f7e3091b5e
+tags:
+  - painting
+  - collage
+  - abstract
+  - map
 ---
 

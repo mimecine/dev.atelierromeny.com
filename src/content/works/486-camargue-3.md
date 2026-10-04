@@ -9,7 +9,11 @@ old_image: /src/media/works/486-camargue-3.webp
 collections:
   - abstrait
   - selected-july-2025
-tags: []
+tags:
+  - painting
+  - abstract
+  - landscape
+  - Camargue
 published: true
 categories: Abstrait
 w: 125

@@ -25,5 +25,9 @@ images:
   - '/src/media/works/772-saint-saturnin-d-apt-5.webp'
   - '/src/media/works/772-saint-saturnin-d-apt-6.webp'
   - '/src/media/works/772-saint-saturnin-d-apt-7.webp'
+tags:
+  - painting
+  - landscape
+  - village
 ---
 

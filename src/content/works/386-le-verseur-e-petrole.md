@@ -16,5 +16,8 @@ uuid: d0f09e3a-67ad-41fd-9302-2159db63edcf
 collections:
   - natures-mortes
   - selected-paintings
+tags:
+  - painting
+  - still life
 ---
 

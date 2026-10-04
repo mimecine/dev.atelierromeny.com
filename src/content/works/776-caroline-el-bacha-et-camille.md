@@ -14,5 +14,9 @@ image: '/src/media/works/776-caroline-el-bacha-et-camille.webp'
 uuid: a2313679-7a20-4c54-8909-c6fbe965195c
 collections:
   - figures-humaines
+tags:
+  - painting
+  - figure
+  - mother and child
 ---
 

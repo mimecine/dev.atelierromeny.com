@@ -15,5 +15,8 @@ year_start: 1988
 year_end: null
 file: '/src/media/works/327-composition-bleu-noir.webp'
 uuid: f8f132ae-f3e8-415c-a8d4-3257717913a7
+tags:
+  - painting
+  - abstract
 ---
 

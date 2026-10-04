@@ -18,5 +18,11 @@ year_end: null
 file: '/src/media/works/488-hommage-a-un-musicien-anonyme.webp'
 uuid: 5cc27beb-fc42-4266-a706-17d3fa911f5c
 old_image: '/src/media/works/488-hommage-a-un-musicien-anonyme.webp'
+tags:
+  - painting
+  - still life
+  - music
+  - violin
+  - flowers
 ---
 

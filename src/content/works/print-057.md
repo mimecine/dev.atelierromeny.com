@@ -5,5 +5,12 @@ collections:
   - selected-prints
 uuid: 63a73f60-e613-467b-bd7b-533aefccd84d
 image: '/src/media/works/print-057.webp'
+tags:
+  - watercolour
+  - landscape
+  - storm
+  - field
+  - mountain
+  - Provence
 ---
 

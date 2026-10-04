@@ -14,5 +14,12 @@ image: '/src/media/works/107-samedi.webp'
 uuid: cd5fd97d-3e97-4758-867a-adc5e3f3571f
 collections:
   - les-jours-de-la-semaine
+tags:
+  - painting
+  - mixed media
+  - collage
+  - figure
+  - nude
+  - couple
 ---
 

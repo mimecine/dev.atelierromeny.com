@@ -14,5 +14,9 @@ image: '/src/media/works/124-desert-marin-ii.webp'
 uuid: c8929f0f-f973-4482-ad4f-90e3de610507
 collections:
   - abstrait
+tags:
+  - mixed media
+  - assemblage
+  - abstract
 ---
 

@@ -15,5 +15,11 @@ year_start: 1977
 year_end: null
 file: '/src/media/works/137-le-dejeuner-du-paysan.webp'
 uuid: af42710d-5ee8-4198-9c13-4112ff6ecfd4
+tags:
+  - painting
+  - still life
+  - interior
+  - chair
+  - bottle
 ---
 

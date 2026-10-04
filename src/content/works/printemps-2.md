@@ -15,5 +15,11 @@ year_start: 2005
 year_end: null
 file: '/src/media/works/printemps-2.webp'
 uuid: d4db7758-65ea-4a21-b247-2a9824b7463e
+tags:
+  - painting
+  - flowers
+  - poppies
+  - meadow
+  - spring
 ---
 

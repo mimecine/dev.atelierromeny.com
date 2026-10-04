@@ -16,5 +16,8 @@ year_start: 1982
 year_end: null
 file: '/src/media/works/342-grenverk.webp'
 uuid: a88fb95a-2272-4322-84bf-3dc24c92b4bb
+tags:
+  - painting
+  - abstract
 ---
 

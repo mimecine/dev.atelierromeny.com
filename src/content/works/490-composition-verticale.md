@@ -14,5 +14,8 @@ image: '/src/media/works/490-composition-verticale.webp'
 uuid: 335802c9-f491-49cd-81f8-2189189feca5
 collections:
   - abstrait
+tags:
+  - painting
+  - abstract
 ---
 

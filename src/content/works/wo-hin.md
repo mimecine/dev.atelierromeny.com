@@ -14,5 +14,10 @@ image: '/src/media/works/wo-hin.webp'
 uuid: a522a66f-a289-402c-a0cd-03d698ccb0a7
 collections:
   - abstrait
+tags:
+  - painting
+  - collage
+  - abstract
+  - map
 ---
 

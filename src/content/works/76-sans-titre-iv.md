@@ -14,5 +14,9 @@ image: '/src/media/works/76-sans-titre-iv.webp'
 uuid: b8176db3-5ff6-4160-b671-d6631073cc97
 collections:
   - abstrait
+tags:
+  - painting
+  - mixed media
+  - abstract
 ---
 

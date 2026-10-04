@@ -16,5 +16,11 @@ uuid: eec369b1-3044-4856-9f43-0015aa5d53df
 collections:
   - figures-humaines
   - to-be-disposed-of
+tags:
+  - painting
+  - collage
+  - figure
+  - nude
+  - war
 ---
 

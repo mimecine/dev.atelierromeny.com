@@ -18,5 +18,10 @@ year_end: null
 file: '/src/media/works/652-poisson-sur-poele.webp'
 uuid: 873d6c98-fa32-416c-9917-237cbeee1b0f
 old_image: '/src/media/works/652-poisson-sur-poele.webp'
+tags:
+  - painting
+  - still life
+  - fish
+  - stove
 ---
 

@@ -72,8 +72,7 @@ collections:
         name: "tags"
         widget: list
         required: false
-        fields:
-          - { label: "Tag", name: "tag", widget: "string" }
+        field: { label: "Tag", name: "tag", widget: "string" }
       - { label: "Published", name: "published", widget: "boolean", default: true }
       - { label: "Categories", name: "categories", widget: "string", required: false }
       - { label: "Width (cm)", name: "w", widget: "number", value_type: "float", required: false }
@@ -122,8 +121,7 @@ collections:
         widget: list
         required: false
         preview: false
-        fields:
-          - { label: "Tag", name: "tag", widget: "string" }
+        field: { label: "Tag", name: "tag", widget: "string" }
       - { label: "Notes (Internal)", name: "note", widget: "text", required: false, preview: false }
       - { label: "Extra CSS", name: "css", widget: "text", hint: "Don't forget !important if needed. TailwindCSS @apply works.", required: false, preview: false }
       - { label: "Extra JS", name: "js", widget: "text", required: false, preview: false }

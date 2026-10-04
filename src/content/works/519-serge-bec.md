@@ -14,5 +14,9 @@ year_start: 1994
 year_end: null
 file: '/src/media/works/519-serge-bec.webp'
 uuid: 3f35f223-de73-4f48-9584-0c2386189534
+tags:
+  - painting
+  - portrait
+  - figure
 ---
 

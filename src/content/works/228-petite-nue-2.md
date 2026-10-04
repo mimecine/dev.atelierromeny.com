@@ -14,5 +14,9 @@ image: '/src/media/works/228-petite-nue-2.webp'
 uuid: 011b3039-57de-41f8-a202-a544c0c76d49
 collections:
   - nues
+tags:
+  - painting
+  - figure
+  - nude
 ---
 

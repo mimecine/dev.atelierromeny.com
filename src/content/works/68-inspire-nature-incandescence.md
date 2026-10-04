@@ -14,5 +14,9 @@ image: '/src/media/works/68-inspire-nature-incandescence.webp'
 uuid: c4d1b697-c4bd-4321-809d-da3ab15f7ed6
 collections:
   - abstrait
+tags:
+  - painting
+  - mixed media
+  - abstract
 ---
 

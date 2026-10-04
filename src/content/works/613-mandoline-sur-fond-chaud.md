@@ -18,5 +18,11 @@ year_end: null
 file: '/src/media/works/613-mandoline-sur-fond-chaud.webp'
 uuid: de59a551-f9f2-4ba2-b6a2-e68574e67725
 old_image: '/src/media/works/613-mandoline-sur-fond-chaud.webp'
+tags:
+  - painting
+  - still life
+  - music
+  - mandolin
+  - fruit
 ---
 

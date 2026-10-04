@@ -14,5 +14,11 @@ image: '/src/media/works/647-autoportrait-avec-marco-devant-le-monde.webp'
 uuid: 7da5b4ff-4865-4128-a505-99c072d24d9b
 collections:
   - figures-humaines
+tags:
+  - painting
+  - self-portrait
+  - portrait
+  - figure
+  - child
 ---
 

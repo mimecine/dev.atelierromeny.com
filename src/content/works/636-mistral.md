@@ -17,5 +17,9 @@ year_start: 1965
 year_end: null
 file: '/src/media/works/636-mistral.webp'
 uuid: 13d162f3-d7db-41ea-bbdf-e340104573f3
+tags:
+  - painting
+  - abstract
+  - landscape
 ---
 

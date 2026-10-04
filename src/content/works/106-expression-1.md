@@ -15,5 +15,8 @@ year_start: 1999
 year_end: null
 file: '/src/media/works/106-expression-1.webp'
 uuid: 21000d18-5b8f-4d58-b2c3-d6b04970e8f4
+tags:
+  - painting
+  - abstract
 ---
 

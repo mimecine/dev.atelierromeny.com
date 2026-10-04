@@ -16,5 +16,10 @@ year_start: 1982
 year_end: null
 file: '/src/media/works/441-lola-melancolique.webp'
 uuid: 29958194-0a65-4bf5-8785-02174b9623b8
+tags:
+  - painting
+  - figure
+  - sleeping
+  - hammock
 ---
 

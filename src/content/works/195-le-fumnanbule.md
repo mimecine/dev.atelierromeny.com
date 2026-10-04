@@ -14,5 +14,10 @@ image: '/src/media/works/195-le-fumnanbule.webp'
 uuid: 1bb20ebf-7767-499e-bdbd-587f60d28b96
 collections:
   - figures-humaines
+tags:
+  - painting
+  - figure
+  - circus
+  - tightrope walker
 ---
 

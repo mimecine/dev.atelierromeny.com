@@ -16,5 +16,11 @@ year_start: 2002
 year_end: null
 file: '/src/media/works/538-la-mer-au-rayol-2.webp'
 uuid: 7121a8b3-96b0-4b84-bbe0-974174771e3b
+tags:
+  - painting
+  - seascape
+  - beach
+  - sea
+  - figure
 ---
 

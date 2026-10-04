@@ -14,5 +14,10 @@ image: '/src/media/works/75-inspire-nature-le-cypres.webp'
 uuid: b3519421-3f6f-4b6a-ad99-87b0df8cd597
 collections:
   - abstrait
+tags:
+  - painting
+  - mixed media
+  - abstract
+  - cypress
 ---
 

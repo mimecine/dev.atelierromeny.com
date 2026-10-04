@@ -16,5 +16,12 @@ year_start: 2003
 year_end: null
 file: '/src/media/works/720-le-ventoux-couronn.webp'
 uuid: 43ee9de0-58f1-4c8d-ab53-15ca64603bc7
+tags:
+  - painting
+  - landscape
+  - road
+  - tree
+  - clouds
+  - Mont Ventoux
 ---
 

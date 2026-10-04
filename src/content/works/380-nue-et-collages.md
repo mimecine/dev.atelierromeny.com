@@ -14,5 +14,11 @@ image: '/src/media/works/380-nue-et-collages.webp'
 uuid: ec4c45f4-9a96-4170-a7f1-33a82ca9e95c
 collections:
   - figures-humaines
+tags:
+  - painting
+  - collage
+  - figure
+  - nude
+  - map
 ---
 

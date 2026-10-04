@@ -15,5 +15,9 @@ image: '/src/media/works/470-nocturne.webp'
 uuid: 8e2032ff-ff69-4437-8a97-32f5e69523b7
 collections:
   - abstrait
+tags:
+  - painting
+  - abstract
+  - night
 ---
 

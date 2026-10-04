@@ -8,5 +8,13 @@ image: '/src/media/works/print-033.webp'
 images:
   - '/src/media/works/print-033-2.webp'
   - '/src/media/works/print-033-3.webp'
+tags:
+  - print
+  - etching
+  - aquatint
+  - forest
+  - tree
+  - bird
+  - nest
 ---
 

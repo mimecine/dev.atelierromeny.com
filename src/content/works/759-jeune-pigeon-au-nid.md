@@ -16,5 +16,11 @@ year_start: 1993
 year_end: null
 file: '/src/media/works/759-jeune-pigeon-au-nid.webp'
 uuid: 250dd90c-5317-4600-865d-8d07785c7a7a
+tags:
+  - painting
+  - animal
+  - bird
+  - pigeon
+  - nest
 ---
 

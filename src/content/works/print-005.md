@@ -7,5 +7,12 @@ uuid: 982f1541-17ce-402a-9685-d9ad025513ed
 image: '/src/media/works/print-005.webp'
 images:
   - '/src/media/works/print-005-2.webp'
+tags:
+  - print
+  - relief print
+  - colour print
+  - still life
+  - fruit
+  - pear
 ---
 

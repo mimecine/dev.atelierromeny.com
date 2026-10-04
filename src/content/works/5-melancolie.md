@@ -15,5 +15,9 @@ image: '/src/media/works/5-melancolie.webp'
 uuid: 1a0a016b-875a-4970-96cd-2885ee8dd9a6
 collections:
   - figures-humaines
+tags:
+  - painting
+  - figure
+  - portrait
 ---
 

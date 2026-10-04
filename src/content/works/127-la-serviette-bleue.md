@@ -16,7 +16,10 @@ collections:
   - natures-mortes
   - selected-july-2025
   - selected-paintings
-tags: []
+tags:
+  - painting
+  - still life
+  - bottle
 published: true
 categories: Natures mortes
 w: 81

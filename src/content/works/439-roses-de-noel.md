@@ -20,5 +20,10 @@ uuid: dce2a9a7-da49-4d9a-ac3f-a559ba5b4517
 old_image: '/src/media/works/439-roses-de-noel.webp'
 images:
   - '/src/media/works/439-roses-de-noel-v2-2.webp'
+tags:
+  - painting
+  - flowers
+  - poinsettia
+  - sun
 ---
 

@@ -15,5 +15,8 @@ year_start: 2002
 year_end: null
 file: '/src/media/works/549-fantaisie-2.webp'
 uuid: 0097a993-320a-4403-aaf0-d79cc43a5c4c
+tags:
+  - painting
+  - abstract
 ---
 

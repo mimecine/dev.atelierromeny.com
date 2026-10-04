@@ -20,5 +20,10 @@ uuid: e5a8939e-8acf-4bfe-9dbb-8da0c4840d8f
 old_image: '/src/media/works/422-nature-morte-en-bleu-clair.webp'
 images:
   - '/src/media/works/422-nature-morte-en-bleu-clair-v2-2.webp'
+tags:
+  - painting
+  - still life
+  - bottle
+  - fruit
 ---
 

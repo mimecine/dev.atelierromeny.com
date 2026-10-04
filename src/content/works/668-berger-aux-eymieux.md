@@ -15,5 +15,13 @@ image: '/src/media/works/668-berger-aux-eymieux.webp'
 uuid: b11a775b-ab35-4623-b7dc-e02f4b995baa
 collections:
   - figures-humaines
+tags:
+  - painting
+  - portrait
+  - figure
+  - shepherd
+  - lamb
+  - animal
+  - landscape
 ---
 

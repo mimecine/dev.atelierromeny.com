@@ -15,5 +15,11 @@ year_start: 1967
 year_end: null
 file: '/src/media/works/649-fleur-de-femme.webp'
 uuid: 13ce2c18-a23a-4921-8d98-bdcd8d695f82
+tags:
+  - painting
+  - semi-abstract
+  - figure
+  - nude
+  - flowers
 ---
 

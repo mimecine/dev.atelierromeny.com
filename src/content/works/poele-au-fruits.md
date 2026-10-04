@@ -15,5 +15,10 @@ year_start: 2006
 year_end: null
 file: '/src/media/works/poele-au-fruits.webp'
 uuid: fa412b62-e9a9-4f80-a101-284532ff983a
+tags:
+  - painting
+  - still life
+  - fruit
+  - stove
 ---
 

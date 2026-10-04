@@ -14,5 +14,9 @@ image: '/src/media/works/217-trio.webp'
 uuid: ac56b3e2-985f-4bb5-9085-f91ddb477e01
 collections:
   - figures-humaines
+tags:
+  - painting
+  - figure
+  - music
 ---
 

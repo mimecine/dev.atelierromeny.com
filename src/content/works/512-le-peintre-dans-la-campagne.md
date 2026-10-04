@@ -14,5 +14,11 @@ image: '/src/media/works/512-le-peintre-dans-la-campagne.webp'
 uuid: 4c2d39a6-5000-4df2-a82e-629aac983e72
 collections:
   - figures-humaines
+tags:
+  - painting
+  - portrait
+  - figure
+  - landscape
+  - field
 ---
 

@@ -23,5 +23,10 @@ old_image: '/src/media/works/332-a-la-cruche.webp'
 images:
   - '/src/media/works/332-a-la-cruche-v2-2.webp'
   - '/src/media/works/332-a-la-cruche-v2-3.webp'
+tags:
+  - painting
+  - still life
+  - jug
+  - fruit
 ---
 

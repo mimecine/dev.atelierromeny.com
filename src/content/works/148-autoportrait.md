@@ -15,5 +15,10 @@ image: '/src/media/works/148-autoportrait.webp'
 uuid: 00d00ec1-7986-4651-9bcb-d3a16ebd57ae
 collections:
   - figures-humaines
+tags:
+  - painting
+  - self-portrait
+  - portrait
+  - artist at work
 ---
 

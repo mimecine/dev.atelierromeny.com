@@ -16,5 +16,12 @@ year_start: 1977
 year_end: null
 file: '/src/media/works/513-choux-rouge-aux-deux-bouquets.webp'
 uuid: bca04dc8-f8d1-459c-800d-7be92f2898f3
+tags:
+  - painting
+  - still life
+  - flowers
+  - cabbage
+  - fruit
+  - bottle
 ---
 

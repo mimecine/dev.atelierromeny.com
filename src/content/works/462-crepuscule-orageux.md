@@ -15,5 +15,8 @@ year_start: 1959
 year_end: null
 file: '/src/media/works/462-crepuscule-orageux.webp'
 uuid: 0dac6873-8ea6-4fcc-8156-1b8bc12f94fb
+tags:
+  - painting
+  - abstract
 ---
 

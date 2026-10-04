@@ -18,5 +18,9 @@ year_end: null
 file: '/src/media/works/516-le-grand-soleil.webp'
 uuid: 0ec5141f-7683-407b-aebe-2e2a5e792ae6
 old_image: '/src/media/works/516-le-grand-soleil.webp'
+tags:
+  - painting
+  - abstract
+  - sun
 ---
 

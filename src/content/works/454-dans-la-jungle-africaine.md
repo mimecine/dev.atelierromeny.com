@@ -16,5 +16,8 @@ year_start: 1963
 year_end: null
 file: '/src/media/works/454-dans-la-jungle-africaine.webp'
 uuid: 0dee0635-91b2-4f5f-b9c3-19031cccfd06
+tags:
+  - painting
+  - abstract
 ---
 

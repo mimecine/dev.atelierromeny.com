@@ -18,5 +18,9 @@ year_end: null
 file: '/src/media/works/499-paysage-nordique-5.webp'
 uuid: eaa37eb3-964b-464f-8118-1f344f529a46
 old_image: '/src/media/works/499-paysage-nordique-5.webp'
+tags:
+  - painting
+  - abstract
+  - landscape
 ---
 

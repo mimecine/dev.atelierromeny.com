@@ -15,5 +15,11 @@ year_start: 1976
 year_end: null
 file: '/src/media/works/121-mandoline-fruits-et-pichet.webp'
 uuid: ead1d20d-985c-4162-955c-98b28d5d1554
+tags:
+  - painting
+  - still life
+  - fruit
+  - music
+  - mandolin
 ---
 

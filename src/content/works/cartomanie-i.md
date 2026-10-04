@@ -14,5 +14,10 @@ image: '/src/media/works/cartomanie-i.webp'
 uuid: 059d8b65-5fd4-43e7-9f56-04f80d4a66e9
 collections:
   - abstrait
+tags:
+  - painting
+  - collage
+  - abstract
+  - map
 ---
 

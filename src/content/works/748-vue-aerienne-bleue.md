@@ -15,5 +15,8 @@ year_start: 2003
 year_end: null
 file: '/src/media/works/748-vue-aerienne-bleue.webp'
 uuid: 3d4cd208-c5f8-4bef-a71b-74010bd38afa
+tags:
+  - painting
+  - abstract
 ---
 

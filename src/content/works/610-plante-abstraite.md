@@ -24,5 +24,9 @@ images:
   - '/src/media/works/610-plante-abstraite-v2-5.webp'
   - '/src/media/works/610-plante-abstraite-v2-6.webp'
   - '/src/media/works/610-plante-abstraite-v2-7.webp'
+tags:
+  - painting
+  - abstract
+  - plant
 ---
 

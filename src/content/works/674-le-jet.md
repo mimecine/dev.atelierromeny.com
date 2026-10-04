@@ -15,5 +15,8 @@ year_start: 1986
 year_end: null
 file: '/src/media/works/674-le-jet.webp'
 uuid: 0f7ee3c5-2819-4b52-b16f-ab5441301398
+tags:
+  - painting
+  - abstract
 ---
 

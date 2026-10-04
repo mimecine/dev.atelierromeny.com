@@ -18,5 +18,10 @@ year_end: null
 file: '/src/media/works/660-la-vegetation.webp'
 uuid: 33656b5e-ce07-4e5c-8c2c-ce61a34b64b9
 old_image: '/src/media/works/660-la-vegetation.webp'
+tags:
+  - painting
+  - abstract
+  - plant
+  - creation series
 ---
 

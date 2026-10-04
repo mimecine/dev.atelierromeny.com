@@ -14,5 +14,12 @@ image: '/src/media/works/713-liselotte-et-roland.webp'
 uuid: b45007f7-eec5-4953-976e-646116ae6541
 collections:
   - figures-humaines
+tags:
+  - painting
+  - collage
+  - portrait
+  - couple
+  - music
+  - flowers
 ---
 

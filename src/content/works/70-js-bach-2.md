@@ -15,5 +15,12 @@ year_start: 1998
 year_end: null
 file: '/src/media/works/70-js-bach-2.webp'
 uuid: 6183fbe7-5bc5-492e-87cf-8e4900eb0b6e
+tags:
+  - painting
+  - mixed media
+  - collage
+  - music
+  - Bach
+  - lettering
 ---
 

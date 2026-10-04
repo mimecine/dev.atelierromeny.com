@@ -14,5 +14,13 @@ image: '/src/media/works/580-au-caf.webp'
 uuid: 988da031-4dbb-48ed-ad3d-4058eb52f597
 collections:
   - natures-mortes
+tags:
+  - painting
+  - figure
+  - café
+  - still life
+  - music
+  - mandolin
+  - fruit
 ---
 

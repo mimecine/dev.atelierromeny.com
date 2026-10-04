@@ -14,5 +14,9 @@ image: '/src/media/works/216-nu-accroupi-avec-contour-rouge.webp'
 uuid: b70fcff1-bbe1-4189-b26d-501abc9ae9c3
 collections:
   - figures-humaines
+tags:
+  - painting
+  - figure
+  - nude
 ---
 

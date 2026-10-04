@@ -15,5 +15,12 @@ image: '/src/media/works/768-ingegerd-dans-le-jardin.webp'
 uuid: ec5d2a4d-6555-444e-8235-c39a23539b01
 collections:
   - figures-humaines
+tags:
+  - painting
+  - figure
+  - portrait
+  - garden
+  - fruit
+  - watermelon
 ---
 

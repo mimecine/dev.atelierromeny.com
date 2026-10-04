@@ -16,5 +16,9 @@ year_start: 1996
 year_end: null
 file: '/src/media/works/114-les-chats-de-madrid.webp'
 uuid: bc3adaab-6d3d-4b53-a21f-5758a4bc6719
+tags:
+  - painting
+  - animal
+  - cat
 ---
 

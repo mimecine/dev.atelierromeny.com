@@ -14,5 +14,8 @@ image: '/src/media/works/465-lumiere.webp'
 uuid: 628ee1b3-07ee-4f14-8c8e-0c8f14fbe19f
 collections:
   - abstrait
+tags:
+  - painting
+  - abstract
 ---
 

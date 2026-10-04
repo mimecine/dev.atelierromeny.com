@@ -14,5 +14,11 @@ image: '/src/media/works/ciel-enflamme.webp'
 uuid: d0c79035-f430-49cb-a224-1ccada3be868
 collections:
   - paysages
+tags:
+  - painting
+  - landscape
+  - sunset
+  - tree
+  - sky
 ---
 

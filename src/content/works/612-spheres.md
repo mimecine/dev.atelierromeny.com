@@ -18,5 +18,8 @@ year_end: null
 file: '/src/media/works/612-spheres.webp'
 uuid: 8f988c57-19d4-4e8d-acde-5d6e5c24d9b3
 old_image: '/src/media/works/612-spheres.webp'
+tags:
+  - painting
+  - abstract
 ---
 

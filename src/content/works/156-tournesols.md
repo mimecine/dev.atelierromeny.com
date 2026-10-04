@@ -20,5 +20,9 @@ uuid: 7eb7989b-fcb6-4b50-b165-7286d2d23eaa
 old_image: '/src/media/works/156-tournesols.webp'
 images:
   - '/src/media/works/156-tournesols-v2-2.webp'
+tags:
+  - painting
+  - flowers
+  - sunflower
 ---
 

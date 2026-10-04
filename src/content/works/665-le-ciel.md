@@ -16,5 +16,9 @@ year_start: 1975
 year_end: null
 file: '/src/media/works/665-le-ciel.webp'
 uuid: 1aac3a9c-7690-4fe9-a544-eee6e09e1e37
+tags:
+  - painting
+  - abstract
+  - sky
 ---
 

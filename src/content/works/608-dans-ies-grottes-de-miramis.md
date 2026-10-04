@@ -18,5 +18,9 @@ year_end: null
 file: '/src/media/works/608-dans-ies-grottes-de-miramis.webp'
 uuid: 568bdfec-0335-46b5-9e37-3a0e04018d16
 old_image: '/src/media/works/608-dans-ies-grottes-de-miramis.webp'
+tags:
+  - painting
+  - abstract
+  - cave
 ---
 

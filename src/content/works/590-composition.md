@@ -18,5 +18,8 @@ year_end: null
 file: '/src/media/works/590-composition.webp'
 uuid: 321cffeb-43c7-4f0e-a8a9-ebe5c5b71c40
 old_image: '/src/media/works/590-composition.webp'
+tags:
+  - painting
+  - abstract
 ---
 

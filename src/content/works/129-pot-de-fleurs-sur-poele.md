@@ -15,5 +15,9 @@ year_start: 1973
 year_end: null
 file: '/src/media/works/129-pot-de-fleurs-sur-poele.webp'
 uuid: b473d7a2-5597-4520-8177-9970b5a768b4
+tags:
+  - painting
+  - still life
+  - flowers
 ---
 

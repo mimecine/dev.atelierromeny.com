@@ -15,5 +15,8 @@ year_start: 1971
 year_end: null
 file: '/src/media/works/597-blue-rest.webp'
 uuid: bdd03d36-7665-4972-801d-4e184b50a665
+tags:
+  - painting
+  - abstract
 ---
 

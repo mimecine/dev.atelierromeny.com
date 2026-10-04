@@ -15,5 +15,9 @@ year_start: 1966
 year_end: null
 file: '/src/media/works/472-orage.webp'
 uuid: 62059d37-2c13-4b4a-a202-457f1ea5b957
+tags:
+  - painting
+  - abstract
+  - storm
 ---
 

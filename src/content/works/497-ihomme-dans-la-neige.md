@@ -16,5 +16,10 @@ year_start: 1978
 year_end: null
 file: '/src/media/works/497-ihomme-dans-la-neige.webp'
 uuid: ebeb79a6-4401-49f0-9cb1-44e1fcd46077
+tags:
+  - painting
+  - figure
+  - snow
+  - winter
 ---
 

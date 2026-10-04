@@ -15,5 +15,8 @@ year_start: 1965
 year_end: null
 file: '/src/media/works/666-composition-en-pleine-nature.webp'
 uuid: 13cfd567-7025-4621-86ab-10603c720f56
+tags:
+  - painting
+  - abstract
 ---
 

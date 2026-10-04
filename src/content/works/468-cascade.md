@@ -14,5 +14,9 @@ image: '/src/media/works/468-cascade.webp'
 uuid: 4238e3dc-5030-406c-afd5-5461f70eb7ee
 collections:
   - abstrait
+tags:
+  - painting
+  - abstract
+  - water
 ---
 

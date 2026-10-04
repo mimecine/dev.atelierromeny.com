@@ -15,5 +15,11 @@ year_start: 2004
 year_end: null
 file: '/src/media/works/751-cerisier-en-fleurs-solitaire.webp'
 uuid: 32ce989c-f8cb-4121-bff0-b0b7dbe3265b
+tags:
+  - painting
+  - tree
+  - blossom
+  - cherry
+  - landscape
 ---
 

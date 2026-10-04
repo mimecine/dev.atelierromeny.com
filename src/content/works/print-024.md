@@ -5,5 +5,10 @@ collections:
   - selected-prints
 uuid: d6921daf-831b-4e7d-b64a-9f5959ba3ed4
 image: '/src/media/works/print-024.webp'
+tags:
+  - print
+  - etching
+  - aquatint
+  - abstract
 ---
 

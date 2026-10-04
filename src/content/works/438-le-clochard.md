@@ -14,5 +14,10 @@ image: '/src/media/works/438-le-clochard.webp'
 uuid: 32e01662-255b-4636-834a-195ba724c8fc
 collections:
   - figures-humaines
+tags:
+  - painting
+  - figure
+  - sleeping
+  - street
 ---
 

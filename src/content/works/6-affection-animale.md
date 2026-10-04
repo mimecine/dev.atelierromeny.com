@@ -16,5 +16,9 @@ year_start: 1996
 year_end: null
 file: '/src/media/works/6-affection-animale.webp'
 uuid: b5a94e3c-74df-4384-b399-0ecf09cf293a
+tags:
+  - painting
+  - animal
+  - semi-abstract
 ---
 

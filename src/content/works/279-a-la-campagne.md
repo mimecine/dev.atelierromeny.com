@@ -14,5 +14,9 @@ year_end: null
 file: '/src/media/works/279-a-la-campagne.webp'
 collections:
   - figures-humaines
+tags:
+  - painting
+  - figure
+  - landscape
 ---
 

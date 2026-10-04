@@ -15,5 +15,9 @@ year_start: 1973
 year_end: null
 file: '/src/media/works/336-loiseau-mort.webp'
 uuid: 2da82381-46e4-42f4-a3ce-183129153bcd
+tags:
+  - painting
+  - animal
+  - bird
 ---
 

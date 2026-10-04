@@ -15,5 +15,10 @@ year_start: 2002
 year_end: null
 file: '/src/media/works/535-aux-chandelles-rouges.webp'
 uuid: 2edde7cc-02b6-4ca1-bea0-6c48a2574e7e
+tags:
+  - painting
+  - still life
+  - fruit
+  - candle
 ---
 

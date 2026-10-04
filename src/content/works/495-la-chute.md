@@ -15,5 +15,8 @@ image: '/src/media/works/495-la-chute.webp'
 uuid: 76a1e102-499a-4e38-bbbb-f42c3653cc88
 collections:
   - accident-dans-la-montagne
+tags:
+  - painting
+  - abstract
 ---
 

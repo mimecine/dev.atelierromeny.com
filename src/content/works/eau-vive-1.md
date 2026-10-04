@@ -14,5 +14,9 @@ image: '/src/media/works/eau-vive-1.webp'
 uuid: bf47c401-27c9-4846-be42-fdbfc8c9b7cb
 collections:
   - abstrait
+tags:
+  - painting
+  - abstract
+  - water
 ---
 

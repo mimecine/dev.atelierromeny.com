@@ -15,5 +15,9 @@ image: '/src/media/works/117-solitude-2.webp'
 uuid: 8514ea43-7393-4546-9eaa-a2ff550cbe5e
 collections:
   - figures-humaines
+tags:
+  - painting
+  - figure
+  - nude
 ---
 
