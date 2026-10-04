@@ -24,5 +24,6 @@ sheet_h: 42.5
 edition: "7/15"
 hidden_images:
   - /src/media/works/print-023-2.webp
+cleanest: /src/media/works/print-023-2.webp
 ---
 

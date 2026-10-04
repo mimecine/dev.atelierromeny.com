@@ -2,8 +2,8 @@
 id: 684
 title: Nature Morte au Violon I
 images:
-  - '/src/media/works/684-nature-morte-au-violon-l-v2.webp'
-  - '/src/media/works/684-nature-morte-au-violon-l-v2-2.webp'
+  - /src/media/works/684-nature-morte-au-violon-l-v2-2.webp
+  - /src/media/works/684-nature-morte-au-violon-l-v2.webp
 thumbnail: 2
 collections:
   - selected-paintings
@@ -25,5 +25,8 @@ tags:
   - music
   - violin
   - bottle
+hidden_images:
+  - /src/media/works/684-nature-morte-au-violon-l-v2.webp
+cleanest: /src/media/works/684-nature-morte-au-violon-l-v2-2.webp
 ---
 

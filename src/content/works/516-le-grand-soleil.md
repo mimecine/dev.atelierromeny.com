@@ -2,7 +2,8 @@
 id: 516
 title: Le Grand Soleil
 images:
-  - '/src/media/works/516-le-grand-soleil-v2.webp'
+  - /src/media/works/516-le-grand-soleil-v2.webp
+  - /src/media/works/516-le-grand-soleil.webp
 collections:
   - nfs
   - selected-paintings

@@ -23,5 +23,8 @@ old_image: '/src/media/works/366-cobra.webp'
 tags:
   - painting
   - abstract
+cleanest: /src/media/works/366-cobra-v2.webp
+hidden_images:
+  - /src/media/works/366-cobra-v2-2.webp
 ---
 

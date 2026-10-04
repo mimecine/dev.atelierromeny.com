@@ -26,5 +26,12 @@ old_image: '/src/media/works/365-fleurs-du-mal.webp'
 tags:
   - painting
   - abstract
+hidden_images:
+  - /src/media/works/365-fleurs-du-mal-v2-4.webp
+  - /src/media/works/365-fleurs-du-mal-v2-5.webp
+  - /src/media/works/365-fleurs-du-mal-v2-6.webp
+  - /src/media/works/365-fleurs-du-mal-v2.webp
+cleanest: /src/media/works/365-fleurs-du-mal-v2-7.webp
+thumbnail: 2
 ---
 

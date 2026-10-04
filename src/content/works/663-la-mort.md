@@ -12,8 +12,8 @@ year: '1965'
 year_start: 1965
 year_end: null
 images:
-  - '/src/media/works/663-la-mort-v2.webp'
-  - '/src/media/works/663-la-mort-v2-2.webp'
+  - /src/media/works/663-la-mort-v2-2.webp
+  - /src/media/works/663-la-mort-v2.webp
 uuid: d50fd6db-b6c1-4064-a9c8-a050db39ec6d
 collections:
   - selected-paintings
@@ -23,5 +23,9 @@ tags:
   - abstract
   - death
   - creation series
+hidden_images:
+  - /src/media/works/663-la-mort-v2.webp
+cleanest: /src/media/works/663-la-mort-v2-2.webp
+thumbnail: 2
 ---
 

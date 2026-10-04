@@ -4,7 +4,6 @@ title: Mouvement
 images:
   - '/src/media/works/313-mouvement-v2.webp'
   - '/src/media/works/313-mouvement-v2-2.webp'
-thumbnail: 2
 collections:
   - selected-paintings
 categories: Abstrait
@@ -22,5 +21,6 @@ old_image: '/src/media/works/313-mouvement.webp'
 tags:
   - painting
   - abstract
+cleanest: /src/media/works/313-mouvement-v2-2.webp
 ---
 

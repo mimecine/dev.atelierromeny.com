@@ -24,5 +24,8 @@ tags:
   - landscape
   - snow
   - winter
+hidden_images:
+  - /src/media/works/483-snolandskap-v2-2.webp
+cleanest: /src/media/works/483-snolandskap-v2.webp
 ---
 

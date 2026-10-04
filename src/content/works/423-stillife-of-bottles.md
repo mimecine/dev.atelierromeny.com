@@ -12,7 +12,8 @@ year: '1962'
 year_start: 1962
 year_end: null
 images:
-  - '/src/media/works/423-stillife-of-bottles-detail.webp'
+  - /src/media/works/423-stillife-of-bottles.webp
+  - /src/media/works/423-stillife-of-bottles-detail.webp
 old_image: '/src/media/works/423-stillife-of-bottles.webp'
 uuid: 62961926-e490-4f14-8089-34cd055b5ef8
 collections:
@@ -21,5 +22,6 @@ tags:
   - painting
   - still life
   - bottle
+cleanest: /src/media/works/423-stillife-of-bottles.webp
 ---
 

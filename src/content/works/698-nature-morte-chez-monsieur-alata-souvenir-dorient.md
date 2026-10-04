@@ -25,5 +25,6 @@ tags:
   - still life
   - fruit
   - bottle
+cleanest: /src/media/works/698-nature-morte-chez-monsieur-alata-souvenir-d-orient-2.webp
 ---
 

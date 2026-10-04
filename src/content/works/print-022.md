@@ -23,5 +23,6 @@ sheet_h: 38
 edition: "7/10"
 hidden_images:
   - /src/media/works/print-022-2.webp
+cleanest: /src/media/works/print-022-2.webp
 ---
 

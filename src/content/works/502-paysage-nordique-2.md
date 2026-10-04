@@ -2,7 +2,8 @@
 id: 502
 title: Paysage Nordique 2
 images:
-  - '/src/media/works/502-paysage-nordique-2-v2.webp'
+  - /src/media/works/502-paysage-nordique-2-v2.webp
+  - /src/media/works/502-paysage-nordique-2.webp
 collections:
   - selected-paintings
 categories: Abstrait

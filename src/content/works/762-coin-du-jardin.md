@@ -2,7 +2,8 @@
 id: 762
 title: Coin du Jardin
 images:
-  - '/src/media/works/762-coin-du-jardin-v2.webp'
+  - /src/media/works/762-coin-du-jardin-v2.webp
+  - /src/media/works/762-coin-du-jardin.webp
 collections:
   - selected-paintings
 categories: Fleurs

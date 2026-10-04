@@ -21,5 +21,6 @@ sheet_h: 49
 edition: "e.a."
 hidden_images:
   - /src/media/works/print-021-2.webp
+cleanest: /src/media/works/print-021-2.webp
 ---
 

@@ -2,8 +2,8 @@
 id: 439
 title: Roses de Noél
 images:
-  - '/src/media/works/439-roses-de-noel-v2.webp'
-  - '/src/media/works/439-roses-de-noel-v2-2.webp'
+  - /src/media/works/439-roses-de-noel-v2-2.webp
+  - /src/media/works/439-roses-de-noel-v2.webp
 collections:
   - selected-paintings
 categories: Fleurs
@@ -23,5 +23,9 @@ tags:
   - flowers
   - poinsettia
   - sun
+hidden_images:
+  - /src/media/works/439-roses-de-noel-v2.webp
+thumbnail: 2
+cleanest: /src/media/works/439-roses-de-noel-v2-2.webp
 ---
 

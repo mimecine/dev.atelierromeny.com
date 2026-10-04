@@ -6,7 +6,7 @@ images:
   - '/src/media/works/351-jouve-le-facteur-de-villars-v2-2.webp'
   - '/src/media/works/351-jouve-le-facteur-de-villars-v2-3.webp'
   - '/src/media/works/351-jouve-le-facteur-de-villars-detail.webp'
-thumbnail: 2
+thumbnail: 3
 collections:
   - marco
   - selected-paintings
@@ -25,5 +25,8 @@ old_image: '/src/media/works/351-jouve-le-facteur-de-villars.webp'
 tags:
   - painting
   - portrait
+cleanest: /src/media/works/351-jouve-le-facteur-de-villars-v2-3.webp
+hidden_images:
+  - /src/media/works/351-jouve-le-facteur-de-villars-v2-2.webp
 ---
 

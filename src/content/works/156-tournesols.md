@@ -23,5 +23,6 @@ tags:
   - painting
   - flowers
   - sunflower
+cleanest: /src/media/works/156-tournesols-v2.webp
 ---
 

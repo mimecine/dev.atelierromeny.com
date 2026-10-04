@@ -26,5 +26,6 @@ edition: "12/20"
 hidden_images:
   - /src/media/works/print-011.webp
 thumbnail: 2
+cleanest: /src/media/works/print-011.webp
 ---
 

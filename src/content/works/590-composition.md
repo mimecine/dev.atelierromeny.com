@@ -2,7 +2,8 @@
 id: 590
 title: Composition
 images:
-  - '/src/media/works/590-composition-v2.webp'
+  - /src/media/works/590-composition-v2.webp
+  - /src/media/works/590-composition.webp
 collections:
   - selected-paintings
 categories: Abstrait

@@ -6,7 +6,6 @@ images:
   - '/src/media/works/579-table-genereuse-v2-2.webp'
   - '/src/media/works/579-table-genereuse-v2-3.webp'
   - '/src/media/works/579-table-genereuse-detail.webp'
-thumbnail: 2
 collections:
   - selected-paintings
 categories: Natures mortes
@@ -26,5 +25,6 @@ tags:
   - still life
   - fruit
   - table
+cleanest: /src/media/works/579-table-genereuse-v2-3.webp
 ---
 

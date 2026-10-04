@@ -2,8 +2,8 @@
 id: 586
 title: Skymningen (Crépuscule)
 images:
-  - '/src/media/works/586-skymningen-crepuscule-v2.webp'
-  - '/src/media/works/586-skymningen-crepuscule-v2-2.webp'
+  - /src/media/works/586-skymningen-crepuscule-v2-2.webp
+  - /src/media/works/586-skymningen-crepuscule-v2.webp
 collections:
   - nfs
   - selected-paintings
@@ -22,5 +22,9 @@ old_image: '/src/media/works/586-skymningen-crepuscule.webp'
 tags:
   - painting
   - abstract
+thumbnail: 2
+cleanest: /src/media/works/586-skymningen-crepuscule-v2-2.webp
+hidden_images:
+  - /src/media/works/586-skymningen-crepuscule-v2.webp
 ---
 

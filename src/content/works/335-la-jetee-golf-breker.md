@@ -5,7 +5,6 @@ images:
   - '/src/media/works/335-la-jetee-golf-breker-v2.webp'
   - '/src/media/works/335-la-jetee-golf-breker-v2-2.webp'
   - '/src/media/works/335-la-jetee-golf-breker-detail.webp'
-thumbnail: 2
 collections:
   - selected-paintings
 categories: Paysages
@@ -23,5 +22,6 @@ old_image: '/src/media/works/335-la-jetee-golf-breker.webp'
 tags:
   - painting
   - landscape
+cleanest: /src/media/works/335-la-jetee-golf-breker-v2-2.webp
 ---
 

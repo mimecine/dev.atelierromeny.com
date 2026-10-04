@@ -10,7 +10,7 @@ js: ''
 
 This site gathers the paintings, prints and drawings my father, Edlef Romeny, left behind: the work still with the family, in the atelier and the attic, photographed and catalogued so it can be seen again.
 
-Inquiries
+## Inquiries
 
 If a painting or print catches your eye, or you’d like to know more about one, write to me:
 

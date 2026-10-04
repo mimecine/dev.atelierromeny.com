@@ -10,7 +10,7 @@ images:
   - '/src/media/works/772-saint-saturnin-d-apt-6.webp'
   - '/src/media/works/772-saint-saturnin-d-apt-7.webp'
   - '/src/media/works/772-saint-saturnin-dapt-detail.webp'
-thumbnail: 2
+thumbnail: 7
 collections:
   - selected-paintings
 categories: Paysages
@@ -29,5 +29,10 @@ tags:
   - painting
   - landscape
   - village
+cleanest: /src/media/works/772-saint-saturnin-d-apt-2.webp
+hidden_images:
+  - /src/media/works/772-saint-saturnin-d-apt-3.webp
+  - /src/media/works/772-saint-saturnin-d-apt-5.webp
+  - /src/media/works/772-saint-saturnin-d-apt-6.webp
 ---
 

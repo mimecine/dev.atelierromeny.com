@@ -6,7 +6,6 @@ images:
   - '/src/media/works/773-calanque-de-sormiou-v2-2.webp'
   - '/src/media/works/773-calanque-de-sormiou-v2-3.webp'
   - '/src/media/works/773-calanque-de-sormiou-detail.webp'
-thumbnail: 2
 collections:
   - selected-paintings
 categories: Paysages
@@ -27,5 +26,8 @@ tags:
   - sea
   - coast
   - Marseille
+hidden_images:
+  - /src/media/works/773-calanque-de-sormiou-v2-2.webp
+cleanest: /src/media/works/773-calanque-de-sormiou-v2-3.webp
 ---
 

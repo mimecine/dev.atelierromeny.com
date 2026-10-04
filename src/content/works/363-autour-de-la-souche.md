@@ -23,5 +23,6 @@ old_image: '/src/media/works/363-autour-de-la-souche.webp'
 tags:
   - painting
   - abstract
+cleanest: /src/media/works/363-autour-de-la-souche-v2-3.webp
 ---
 

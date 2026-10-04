@@ -5,7 +5,6 @@ images:
   - '/src/media/works/153-l-automne-autour-de-moi.webp'
   - '/src/media/works/153-l-automne-autour-de-moi-2.webp'
   - '/src/media/works/153-lautomne-autour-de-moi-detail.webp'
-thumbnail: 2
 collections:
   - selected-paintings
 categories: Paysages
@@ -24,5 +23,6 @@ tags:
   - painting
   - landscape
   - autumn
+cleanest: /src/media/works/153-l-automne-autour-de-moi-2.webp
 ---
 

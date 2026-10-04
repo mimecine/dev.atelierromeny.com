@@ -24,5 +24,11 @@ old_image: '/src/media/works/498-convulsion.webp'
 tags:
   - painting
   - abstract
+thumbnail: 2
+cleanest: /src/media/works/498-convulsion-v2-5.webp
+hidden_images:
+  - /src/media/works/498-convulsion-v2.webp
+  - /src/media/works/498-convulsion-v2-3.webp
+  - /src/media/works/498-convulsion-v2-4.webp
 ---
 

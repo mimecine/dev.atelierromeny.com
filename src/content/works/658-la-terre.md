@@ -2,8 +2,8 @@
 id: 658
 title: La Terre
 images:
-  - '/src/media/works/658-la-terre-v2.webp'
-  - '/src/media/works/658-la-terre-v2-2.webp'
+  - /src/media/works/658-la-terre-v2-2.webp
+  - /src/media/works/658-la-terre-v2.webp
 collections:
   - selected-paintings
 categories: La création
@@ -22,5 +22,9 @@ tags:
   - painting
   - abstract
   - creation series
+thumbnail: 2
+hidden_images:
+  - /src/media/works/658-la-terre-v2.webp
+cleanest: /src/media/works/658-la-terre-v2-2.webp
 ---
 

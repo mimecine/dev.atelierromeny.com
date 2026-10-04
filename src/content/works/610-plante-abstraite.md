@@ -10,7 +10,7 @@ images:
   - '/src/media/works/610-plante-abstraite-v2-6.webp'
   - '/src/media/works/610-plante-abstraite-v2-7.webp'
   - '/src/media/works/610-plante-abstraite-detail.webp'
-thumbnail: 2
+thumbnail: 5
 collections:
   - selected-paintings
 categories: Abstrait
@@ -29,5 +29,12 @@ tags:
   - painting
   - abstract
   - plant
+hidden_images:
+  - /src/media/works/610-plante-abstraite-v2.webp
+  - /src/media/works/610-plante-abstraite-v2-3.webp
+  - /src/media/works/610-plante-abstraite-v2-4.webp
+  - /src/media/works/610-plante-abstraite-v2-6.webp
+  - /src/media/works/610-plante-abstraite-v2-7.webp
+cleanest: /src/media/works/610-plante-abstraite-v2-2.webp
 ---
 

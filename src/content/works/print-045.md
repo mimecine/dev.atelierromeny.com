@@ -8,7 +8,6 @@ images:
   - '/src/media/works/print-045.webp'
   - '/src/media/works/print-045-2.webp'
   - '/src/media/works/print-045-detail.webp'
-thumbnail: 2
 tags:
   - print
   - monotype
@@ -20,5 +19,8 @@ year: "1967"
 year_start: 1967
 note: "Inscription (read from photo): 2/10, 1967 -- edition is \"2/10\" written as plain digits"
 edition: "2/10"
+cleanest: /src/media/works/print-045-2.webp
+hidden_images:
+  - /src/media/works/print-045-2.webp
 ---
 

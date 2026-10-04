@@ -2,7 +2,8 @@
 id: 157
 title: Le Mur aux Tomates
 images:
-  - '/src/media/works/157-le-mur-aux-tomates-v2.webp'
+  - /src/media/works/157-le-mur-aux-tomates-v2.webp
+  - /src/media/works/157-le-mur-aux-tomates.webp
 collections:
   - selected-paintings
 categories: Natures mortes

@@ -24,5 +24,9 @@ tags:
   - painting
   - abstract
   - water
+cleanest: /src/media/works/602-med-strommen-courant-dans-i-eau-3.webp
+thumbnail: 2
+hidden_images:
+  - /src/media/works/602-med-strommen-courant-dans-i-eau.webp
 ---
 
