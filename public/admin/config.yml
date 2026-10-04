@@ -133,6 +133,12 @@ collections:
     editor:
       preview: false
     files:
+      - file: "src/content/pricing.yml"
+        label: "Pricing"
+        name: "pricing"
+        fields:
+          - { label: "Price per m² (€)", name: "price_per_m2", widget: "number", value_type: "float", min: 0, default: 2000, hint: "Base price = width × height (m²) × this. Shown in the table view (/admin/table); never on the site." }
+          - { label: "Rating step (%)", name: "rating_step_percent", widget: "number", value_type: "float", min: 0, default: 20, hint: "Each star above or below 3 moves the suggested price by this much: with 20%, rating 5 = base +40%, rating 1 = base −40%. No rating = base price." }
       - file: "src/content/settings.yml"
         label: "Frontpage Settings"
         name: "settings"

@@ -20,28 +20,53 @@ export interface ComputedColumn {
   format: (n: number) => string;
 }
 
-/** Euros per square metre of the work (w × h) for the suggested price. */
-export const PRICE_PER_M2 = 2000;
+/** Settings > Pricing in Sveltia (src/content/pricing.yml); these are the defaults
+ *  until that file has loaded, or if it's missing. */
+export const PRICING_FILE = "src/content/pricing.yml";
+export const pricing = { price_per_m2: 2000, rating_step_percent: 20 };
 
 const areaM2 = (d: Record<string, any>) =>
   typeof d.w === "number" && typeof d.h === "number" && d.w > 0 && d.h > 0 ? (d.w * d.h) / 10000 : null;
 
-export const COMPUTED_COLUMNS: Record<string, ComputedColumn[]> = {
-  works: [
-    { key: "_area", label: "Area (m²)", after: "h", from: ["w", "h"], value: areaM2, format: (n) => n.toFixed(2) },
-    {
-      key: "_price",
-      label: `Suggested price (€${PRICE_PER_M2}/m²)`,
-      after: "_area",
-      from: ["w", "h"],
-      value: (d) => {
-        const a = areaM2(d);
-        return a == null ? null : Math.round((a * PRICE_PER_M2) / 10) * 10;
-      },
-      format: (n) => `€ ${n.toLocaleString("fr-FR")}`,
-    },
-  ],
+const toTen = (n: number) => Math.round(n / 10) * 10;
+const euros = (n: number) => `€ ${n.toLocaleString("fr-FR")}`;
+const basePrice = (d: Record<string, any>) => {
+  const a = areaM2(d);
+  return a == null ? null : a * pricing.price_per_m2;
 };
+
+/** Built when a collection loads, so the labels show the current rate. */
+export const computedColumns = (collection: string): ComputedColumn[] =>
+  collection !== "works"
+    ? []
+    : [
+        { key: "_area", label: "Area (m²)", after: "h", from: ["w", "h"], value: areaM2, format: (n) => n.toFixed(2) },
+        {
+          key: "_base_price",
+          label: `Base price (€${pricing.price_per_m2}/m²)`,
+          after: "_area",
+          from: ["w", "h"],
+          value: (d) => {
+            const b = basePrice(d);
+            return b == null ? null : toTen(b);
+          },
+          format: euros,
+        },
+        {
+          // Rating 3 (or none) = base price; each star either side moves it by the step.
+          key: "_price",
+          label: `Suggested price (±${pricing.rating_step_percent}%/star)`,
+          after: "rating",
+          from: ["w", "h", "rating"],
+          value: (d) => {
+            const b = basePrice(d);
+            if (b == null) return null;
+            const stars = typeof d.rating === "number" ? d.rating - 3 : 0;
+            return toTen(Math.max(0, b * (1 + (stars * pricing.rating_step_percent) / 100)));
+          },
+          format: euros,
+        },
+      ];
 
 export const FIELD_OPTIONS: Record<string, Record<string, FieldOptions>> = {
   works: {

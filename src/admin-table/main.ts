@@ -26,7 +26,7 @@ import {
   type FieldConfig,
 } from "./model";
 import { prepareUpload, slugifyBase } from "./images";
-import { COMPUTED_COLUMNS, FIELD_OPTIONS } from "./settings";
+import { FIELD_OPTIONS, PRICING_FILE, computedColumns, pricing } from "./settings";
 
 // ---------------------------------------------------------------- state
 
@@ -1112,6 +1112,16 @@ function columnsMenu(anchor: HTMLElement) {
 
 // ---------------------------------------------------------------- load & save
 
+/** Settings > Pricing, for the suggested price columns. Keeps the defaults if it can't be read. */
+async function loadPricing() {
+  try {
+    const data = parseYaml(await (await state.backend.readBlob(PRICING_FILE)).text()) ?? {};
+    for (const key of Object.keys(pricing) as (keyof typeof pricing)[]) {
+      if (typeof data[key] === "number") pricing[key] = data[key];
+    }
+  } catch {}
+}
+
 async function loadCollection(name: string) {
   if (dirtyEntries().length && !confirm("Discard unsaved changes?")) {
     $<HTMLSelectElement>("#collection").value = state.collection!.name;
@@ -1123,7 +1133,8 @@ async function loadCollection(name: string) {
   const cols = columnsOf(collection, FIELD_OPTIONS[collection.name]);
   const first = cols.findIndex((c) => c.key === "title");
   if (first > 0) cols.unshift(...cols.splice(first, 1));
-  for (const c of COMPUTED_COLUMNS[collection.name] ?? []) {
+  await loadPricing();
+  for (const c of computedColumns(collection.name)) {
     const col: Column = { field: { name: c.key, label: c.label }, kind: "computed", key: c.key, label: c.label, options: {}, computed: c };
     const at = cols.findIndex((x) => x.key === c.after);
     cols.splice(at < 0 ? cols.length : at + 1, 0, col);
