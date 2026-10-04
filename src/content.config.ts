@@ -14,6 +14,7 @@ const _works = defineCollection({
       images: z.array(image()).optional().nullish(),
       hidden_images: z.array(image()).optional().nullish(), // kept in the files, not shown on the site
       thumbnail: z.number().int().optional().nullish(), // which of `images` is the thumbnail, 1-based
+      cleanest: z.string().optional().nullish(), // path of the photo scripts measure and crop from (may be hidden)
       old_image: image().optional().nullish(), // pre-reshoot photo; shown only when the work has no other image
       description: z.string().optional().nullish(),
       categories: z.string().optional().nullish(),

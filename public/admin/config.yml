@@ -85,6 +85,7 @@ collections:
         hint: "Pick any of the images above to keep them on file but leave them off the site."
         field: { label: "Image", name: "image", widget: "image" }
       - { label: "Thumbnail", name: "thumbnail", widget: "number", value_type: "int", min: 1, required: false, hint: "Which of the images to use in grids and search: 1 = the first, 2 = the second, and so on. Empty means the first." }
+      - { label: "Cleanest photo (for scripts)", name: "cleanest", widget: "string", required: false, hint: "Path of the photo the measuring and detail scripts use, e.g. /src/media/works/127-…-2.webp. It can be a hidden one. Easiest set with the Cleanest checkbox in the table view." }
       - { label: "Old Image (shown only if there are no other images)", name: "old_image", widget: "image", required: false }
       - { label: "Width (cm)", name: "w", widget: "number", value_type: "float", required: false, hint: "The table view (/admin/table) shows the area and a suggested price worked out from width × height." }
       - { label: "Height (cm)", name: "h", widget: "number", value_type: "float", required: false }

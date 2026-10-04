@@ -38,6 +38,7 @@ A few notes on works:
 
 - **Thumbnail:** `thumbnail` picks which image appears in grids, search results and link previews: 1 is the first of `images`, 2 the second, and so on. The work page opens on that image, with the strip below in the saved order.
 - **Addresses:** each work's canonical page is `/works/<slug>/`: search results, the sitemap and saved works link there, and its collection pages point their canonical link at it. `/_works/<slug>/` is the same page for browsing all works and is never indexed. `/works/` itself redirects home.
+- **Cleanest:** `cleanest` is the path of the photo the measuring and detail scripts use (`measure_prints.py`, `make_details.py`), often a hidden one. Set it with the Cleanest checkbox in the table view's image viewer.
 - **Old image:** `old_image` keeps the photo a work had before it was reshot. It's shown only when the work has no `images`.
 - **Images:** the main photo comes first. Hide any of them with `hidden_images`; they stay in the files.
 - **Detail:** the last of `images`, named `<slug>-detail.webp`, is the artwork alone: cut out of its photo, straightened, without frame or mat.

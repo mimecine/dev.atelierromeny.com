@@ -340,7 +340,7 @@ function renderViewer() {
   viewing.index = Math.min(viewing.index, list.length - 1);
   const index = viewing.index;
   const path = list[index];
-  const hideKey = col.options.hideIn, thumbKey = col.options.thumbnailIn;
+  const hideKey = col.options.hideIn, thumbKey = col.options.thumbnailIn, cleanKey = col.options.cleanestIn;
 
   const box = (label: string, checked: boolean, title: string, onChange: (on: boolean) => void) => {
     const input = h("input", { type: "checkbox" }) as HTMLInputElement;
@@ -366,6 +366,22 @@ function renderViewer() {
       box("Thumbnail", n === index + 1, "Shown in grids, search and link previews", (on) => {
         const k = on ? index + 1 : 1;
         setValue(entry, columnByKey(thumbKey)!, k === 1 ? null : k);
+        refreshCell(entry, col);
+        renderViewer();
+      })
+    );
+  }
+  if (cleanKey) {
+    controls.push(
+      box("Cleanest", entry.data[cleanKey] === path, "The photo the measuring and cropping scripts use (even if hidden)", (on) => {
+        const cleanCol = columnByKey(cleanKey);
+        if (cleanCol) setValue(entry, cleanCol, on ? path : null);
+        else {
+          // the column may be absent from older configs: set the value directly
+          entry.data[cleanKey] = on ? path : null;
+          entry.dirty.add(cleanKey);
+          updateToolbar();
+        }
         refreshCell(entry, col);
         renderViewer();
       })
@@ -928,7 +944,8 @@ function fillCell(td: HTMLTableCellElement, entry: Entry, col: Column) {
       list.forEach((path, i) => {
         const img = thumb(path) as HTMLImageElement;
         tileInfo.set(img, { entry, col, index: i });
-        const cls = ["tile", hiddenPaths.includes(path) && "is-hidden", i === thumbAt && list.length > 1 && "is-thumb"].filter(Boolean).join(" ");
+        const cleanest = col.options.cleanestIn && entry.data[col.options.cleanestIn] === path;
+        const cls = ["tile", hiddenPaths.includes(path) && "is-hidden", i === thumbAt && list.length > 1 && "is-thumb", cleanest && "is-cleanest"].filter(Boolean).join(" ");
         const tile = h(
           "span",
           { class: cls, draggable: "true", title: "Drag to reorder" },

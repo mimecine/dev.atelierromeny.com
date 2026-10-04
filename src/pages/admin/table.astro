@@ -303,6 +303,22 @@ export const prerender = true;
     background: #f0eee9;
   }
 
+  /* the photo the scripts use (Cleanest) */
+  .tile.is-cleanest::after {
+    content: "C";
+    position: absolute;
+    left: 2px;
+    bottom: 2px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #1a7f37;
+    color: #fff;
+    font: 700 9px/14px system-ui, sans-serif;
+    text-align: center;
+    pointer-events: none;
+  }
+
   /* image viewer: opened by clicking a photo in an image list */
   .viewer {
     position: fixed;

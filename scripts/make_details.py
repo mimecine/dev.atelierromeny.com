@@ -3,7 +3,7 @@ Make a "detail" image for each work: the artwork alone, cut out of its photo,
 straightened, without frame or mat. Saved as src/media/works/<slug>-detail.webp
 and added as the last of the work's `images` (the last image in the work page's strip).
 
-Source photo: the work's chosen thumbnail (thumbnail: n over its images, not counting
+Source photo: the work's `cleanest` photo if set (even if hidden), else its chosen thumbnail (thumbnail: n over its images, not counting
 the detail), else its first image, else old_image. (A work whose only image is its
 detail uses old_image.)
 
@@ -84,6 +84,10 @@ def listing(fm, key):
 
 
 def source_image(fm):
+    # `cleanest` (set with the table view's Cleanest checkbox) wins, even if hidden.
+    clean = scalar(fm, "cleanest")
+    if clean and not is_detail(clean) and os.path.exists(os.path.join(ROOT, clean.lstrip("/"))):
+        return clean
     # The detail (last of `images`) is never a source. Works that only had an old photo
     # have just their detail: make it from the old photo, not from itself.
     images = [p for p in listing(fm, "images") if not is_detail(p)]

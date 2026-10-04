@@ -75,6 +75,11 @@ def image_for(md_path):
     if not m:
         return None
     fm = m.group(1)
+    # `cleanest` (the table view's Cleanest checkbox) wins, even if that photo is hidden
+    clean = re.search(r"^cleanest:[ \t]*(.+)$", fm, re.M)
+    clean = clean.group(1).strip().strip("'\"") if clean else None
+    if clean and clean not in ("null", "~") and os.path.exists(os.path.join(ROOT, clean.lstrip("/"))):
+        return os.path.join(ROOT, clean.lstrip("/"))
     # the main photo: the first of `images` (the detail, if any, is last)
     lst = re.search(r"^images:\s*\n\s*-\s*(.+)$", fm, re.M)
     img = lst.group(1).strip().strip("'\"") if lst else None

@@ -10,6 +10,9 @@ export interface FieldOptions {
    *  these fields (a list of hidden paths, and the 1-based position of the thumbnail). */
   hideIn?: string;
   thumbnailIn?: string;
+  /** …and a "Cleanest" checkbox: the path of the photo the measuring/cropping scripts
+   *  should use (it may well be hidden on the site). */
+  cleanestIn?: string;
 }
 
 /** A read-only column worked out from other fields; never saved to the files. */
@@ -86,17 +89,18 @@ export const COLUMN_DEFAULTS: Record<string, { order: string[]; hidden: string[]
       "body", "location", "new_location", "note", "id",
       // set from the image preview's Thumbnail checkbox now; the field itself stays
       "thumbnail",
+      "cleanest",
     ],
     // Columns newly hidden by default: also hidden once in layouts people already
     // saved (they can show them again from Columns).
-    hideOnce: ["thumbnail"],
+    hideOnce: ["thumbnail", "cleanest"],
   },
 };
 
 export const FIELD_OPTIONS: Record<string, Record<string, FieldOptions>> = {
   works: {
     thumbnail: { pickFrom: ["images"] },
-    images: { entryImages: true, hideIn: "hidden_images", thumbnailIn: "thumbnail" },
+    images: { entryImages: true, hideIn: "hidden_images", thumbnailIn: "thumbnail", cleanestIn: "cleanest" },
     old_image: { entryImages: true },
     hidden_images: { entryImages: true },
   },
