@@ -26,7 +26,7 @@ const layeredCss = `html, html#slug-${page.id}.slug-${page.id} {
 }`;
 ---
 
-<Layout title={title} slug={page.id} bodyclasses={`slug-${page.id}`} description={note} image={image} frontmatter={page.data} searchable={page.data.published}>
+<Layout title={title} slug={page.id} cmsPath={`pages/entries/${page.id}`} bodyclasses={`slug-${page.id}`} description={note} image={image} frontmatter={page.data} searchable={page.data.published}>
   <section class="grid max-w-4xl mx-auto py-4 font-serif">
     <SearchMeta type="page" title={title} />
     <div class="prose prose-lg w-full lg:w-4xl mx-auto [&>:first-child+*]:mt-0 [&>:first-child+*]:!pt-0 [&_:is(h1,h2,h3,h4)+p]:!pt-0">

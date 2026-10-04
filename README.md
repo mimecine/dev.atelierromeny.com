@@ -81,6 +81,16 @@ The search page (`src/pages/search.astro`) renders its own results. It lists col
 
 Only the collections linked from *Settings → Menu* are open to search engines, along with the works shown under those collections, the home page and the markdown pages. Every other collection, the `/_works/` and `/works/` duplicates, Search and Saved are marked `noindex` (see `isMenuCollection` in `src/lib/settings.ts`). The collections' own "Shown In Menu" flag isn't used for this. The same pages are listed in `/sitemap.xml` (submitted in Google Search Console), and `robots.txt` points to it.
 
+## Edit links
+
+When this browser is signed in to Sveltia (GitHub or local folder), every page shows a small "Edit" link at the top right, straight to its entry in the CMS:
+- **work pages:** the work
+- **markdown pages:** the page
+- **home page:** Settings
+- **collection pages:** the collection
+
+Pages without an entry link to the CMS itself. Visitors never see it (`src/lib/cms-link.ts`; pages pass `cmsPath` to the layout), and it's left out when printing.
+
 ## Table view
 
 `/admin/table/` edits the folder collections (works, collections, pages) as a spreadsheet, next to Sveltia. The "Table view" link is at the bottom left of the CMS. Code is in `src/admin-table/`.

@@ -36,6 +36,9 @@ interface Props {
   noindex?: boolean;
   /** Text printed at the top right of every sheet, beside the logo */
   printInfo?: string;
+  /** This page's entry in Sveltia CMS, e.g. "works/entries/127-la-serviette-bleue";
+   *  shown as an "Edit" link to whoever is signed in to the CMS in this browser */
+  cmsPath?: string;
   [key: string]: unknown;
 }
 
@@ -49,6 +52,7 @@ const {
   noindex = false,
   canonical = Astro.url.pathname,
   printInfo,
+  cmsPath,
   title = frontmatter?.title,
   ...props
 } = Astro.props;
@@ -189,6 +193,16 @@ const isHome = Astro.url.pathname === "/";
     {...props}
   >
     <SavedStore />
+    {/* Revealed by cms-link.ts when this browser is signed in to Sveltia (/admin/) */}
+    <a
+      id="cms-link"
+      class="cms-link"
+      href={cmsPath ? `/admin/#/collections/${cmsPath}` : "/admin/"}
+      title={cmsPath ? "Edit this in the CMS" : "Open the CMS"}
+      hidden
+    >
+      {cmsPath ? "Edit" : "CMS"}
+    </a>
     {
       barrier?.enabled && barrier.password && (
         <Barrier password={barrier.password} days={barrier.days || 7} text={barrierText} />
@@ -253,6 +267,7 @@ const isHome = Astro.url.pathname === "/";
 
 <script>
   import "@src/lib/thumb-loading";
+  import "@src/lib/cms-link";
 </script>
 
 <style is:global>
@@ -295,6 +310,24 @@ const isHome = Astro.url.pathname === "/";
   }
   .site-footer.is-home .signature {
     @apply justify-self-end;
+  }
+  /* "Edit" link for whoever is signed in to the CMS (see cms-link.ts) */
+  .cms-link {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 60;
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: rgb(30 30 30 / 0.75);
+    color: #fff;
+    font: 600 12px/1.4 system-ui, sans-serif;
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.15s;
+  }
+  .cms-link:hover {
+    opacity: 1;
   }
   /* Pencil grey, like a signature on paper (neutral: Tailwind's gray is bluish) */
   .signature {
@@ -377,6 +410,7 @@ const isHome = Astro.url.pathname === "/";
     /* (their own display rules would otherwise win over Tailwind's print:hidden) */
     #logout-link,
     #password-overlay,
+    #cms-link,
     .site-header,
     .site-footer,
     .icon-btn {

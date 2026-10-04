@@ -54,6 +54,7 @@ collection.data.title === "Works")))
 
 <Layout
   title={collection.data.title || undefined}
+  cmsPath={collection.id === "_works" || collection.id === "works" ? "works" : `collections/entries/${collection.id}`}
   image={works[0] && thumbnailOf(works[0])}
   description={`${collection.data.title || "Works"}: ${works.length} works by Edlef Romeny`}
   searchable
