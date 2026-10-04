@@ -14,6 +14,7 @@ import { shortHash, getNavDigest } from "@src/lib/cache-key";
 import { workTransitionName } from "@src/lib/view-transition";
 import { isMenuCollection } from "@src/lib/settings";
 import { hasImage, thumbnailOf } from "@src/lib/works";
+import { tagPath, tagSlug } from "@src/lib/tags";
 
 
 export async function getStaticPaths() {
@@ -170,6 +171,12 @@ const { count, index } = works.reduce(
         </button>
       </span>
     </div>
+
+    {work.data.tags?.length ? (
+      <ul class="tag-cloud justify-center pb-3 text-sm shrink-0 print:hidden" data-pagefind-ignore aria-label="Tags">
+        {work.data.tags.map((tag) => <li><a class="tag-chip" href={tagPath([tagSlug(tag)])}>{tag}</a></li>)}
+      </ul>
+    ) : null}
 
     <ul class="grid grid-cols-3 w-full place-items-center uppercase shrink-0 print:hidden" data-pagefind-ignore x-data>
       <li>

@@ -10,3 +10,12 @@ import Layout from "@layouts/Layout.astro";
     <p><a href="/">Back to the homepage</a></p>
   </section>
 </Layout>
+
+<script is:inline>
+  // Tag combinations without a page of their own (three or more tags, or tags no work
+  // shares) are filtered in the browser on /tags/?t=…
+  (() => {
+    const m = location.pathname.match(/^\/tags\/([^/]+)\/?$/);
+    if (m) location.replace(`/tags/?t=${m[1]}`);
+  })();
+</script>

@@ -3,6 +3,7 @@ import type { APIRoute } from "astro";
 import { getCollection } from "astro:content";
 import { getImage } from "astro:assets";
 import { hasImage, thumbnailOf } from "@src/lib/works";
+import { tagSlugsOf } from "@src/lib/tags";
 
 export const GET: APIRoute = async () => {
   const works = (await getCollection("works")).filter(hasImage);
@@ -17,6 +18,7 @@ export const GET: APIRoute = async () => {
         id: work.id,
         title: work.data.title ?? null,
         year_start: work.data.year_start ?? null,
+        tags: tagSlugsOf(work),
         image: optimized.src,
         width: optimized.attributes.width,
         height: optimized.attributes.height,

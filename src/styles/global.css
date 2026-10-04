@@ -45,6 +45,34 @@
   h1 {
     @apply text-2xl font-bold py-4;
   }
+  /* Tag pages and the tags under a work */
+  .tag-cloud, .tag-trail, .tag-narrow ul {
+    @apply flex flex-wrap gap-1.5 items-center;
+  }
+  .tag-trail > a {
+    @apply underline underline-offset-4;
+  }
+  .tag-count, .tag-chip > span {
+    @apply text-gray-500 tabular-nums;
+  }
+  .tag-chip {
+    @apply inline-flex gap-1.5 items-baseline px-2.5 py-0.5 border border-gray-300 rounded-full whitespace-nowrap hover:border-gray-500;
+  }
+  .tag-chip-active {
+    @apply bg-gray-900 text-white border-gray-900 hover:border-gray-900;
+  }
+  .tag-chip-active > span {
+    @apply text-white;
+  }
+  .tag-chip-active a {
+    @apply opacity-70 hover:opacity-100;
+  }
+  .tag-narrow summary {
+    @apply cursor-pointer w-fit;
+  }
+  .tag-narrow ul {
+    @apply mt-2;
+  }
   .works-grid {
     /* Two columns on phones, as many 300px columns as fit from sm up */
     grid-template-columns: repeat(2, minmax(0, 1fr));

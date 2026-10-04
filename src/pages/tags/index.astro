@@ -1,0 +1,83 @@
+---
+export const prerender = true;
+import Layout from "@layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import { hasImage } from "@src/lib/works";
+import { tagIndex, tagPath } from "@src/lib/tags";
+
+const tags = tagIndex(await getCollection("works", hasImage));
+const labels = Object.fromEntries(tags.map((t) => [t.slug, t.label]));
+---
+
+<Layout title="Tags" description="Every tag on Edlef Romeny's works" noindex>
+  <section class="grid max-w-6xl mx-auto py-4 gap-4" x-data="tagFilter()" x-init="init()">
+    <!-- No ?t=…: the list of every tag. -->
+    <template x-if="!selected.length">
+      <div class="grid gap-4">
+        <h1>Tags</h1>
+        <p class="text-gray-500">Pick a tag, then narrow it down with a second one. Tags can be combined in the address too: <code>/tags/etching,bird/</code>.</p>
+      </div>
+    </template>
+    <ul class="tag-cloud" x-show="!selected.length">
+      {tags.map((t) => (
+        <li><a class="tag-chip" href={tagPath([t.slug])}>{t.label} <span>{t.count}</span></a></li>
+      ))}
+    </ul>
+
+    <!-- ?t=a,b,c: combinations without a page of their own, filtered here. -->
+    <template x-if="selected.length">
+      <div class="grid gap-4">
+        <nav class="tag-trail" aria-label="Selected tags">
+          <a href="/tags/">All tags</a>
+          <template x-for="s in selected" :key="s">
+            <span class="tag-chip tag-chip-active">
+              <span x-text="label(s)"></span>
+              <a :href="href(selected.filter((x) => x !== s))" :aria-label="'Remove ' + label(s)" :title="'Remove ' + label(s)">×</a>
+            </span>
+          </template>
+          <span class="tag-count" x-show="!loading" x-text="items.length + (items.length === 1 ? ' work' : ' works')"></span>
+        </nav>
+        <p x-cloak x-show="!loading && !items.length" class="text-gray-500">No works have all of these tags. Remove one to widen the selection.</p>
+        <div class="works-grid">
+          <template x-for="item in items" :key="item.id">
+            <a :href="`/_works/${item.id}`" :title="[item.title || 'Untitled', item.year_start].filter(Boolean).join(', ')">
+              <div class="work-item">
+                <div class="work-thumbnail-container">
+                  <img :src="item.image" :alt="item.title || ''" :width="item.width" :height="item.height" class="work-thumbnail" loading="lazy" />
+                </div>
+              </div>
+            </a>
+          </template>
+        </div>
+      </div>
+    </template>
+  </section>
+</Layout>
+
+<script define:vars={{ labels }}>
+  document.addEventListener("alpine:init", () => {
+    Alpine.data("tagFilter", () => ({
+      selected: [],
+      items: [],
+      loading: true,
+      label: (s) => labels[s] ?? s,
+      // Single tags and pairs some work shares have their own page; anything else stays here.
+      href(slugs) {
+        const key = [...new Set(slugs)].sort().join(",");
+        return key ? `/tags/?t=${encodeURIComponent(key)}` : "/tags/";
+      },
+      async init() {
+        const t = new URLSearchParams(location.search).get("t") ?? "";
+        this.selected = [...new Set(t.split(",").map((s) => s.trim()).filter(Boolean))].sort();
+        if (!this.selected.length) return;
+        const all = await (await fetch("/works-index.json")).json();
+        this.items = all
+          .filter((w) => this.selected.every((s) => w.tags?.includes(s)))
+          .sort((a, b) => (a.title ?? "Untitled").localeCompare(b.title ?? "Untitled"));
+        this.loading = false;
+        if (this.items.length && this.selected.length <= 2) location.replace(`/tags/${this.selected.join(",")}/`);
+      },
+    }));
+  });
+</script>
+
