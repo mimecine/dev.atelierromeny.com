@@ -1,12 +1,12 @@
 # Settings > Navigation in the CMS: the site menu.
 menu:
+  - title: On Canvas
+    href: /selected-paintings
+  - title: On Paper
+    href: /works-on-paper
   - title: Bio
     href: /bio
-  - title: About
+  - title: Contact
     href: /about
-  - title: Canvas
-    href: /selected-paintings
-  - title: Paper
-    href: /works-on-paper
-  - title: SEARCH
+  - title: Search
     href: /search
