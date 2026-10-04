@@ -10,7 +10,8 @@ file: '/src/media/works/693-lettre-e-ma-bien-aimee-iv.webp'
 year: '1992'
 year_start: 1992
 year_end: null
-image: '/src/media/works/693-lettre-e-ma-bien-aimee-iv.webp'
+image: '/src/media/works/693-lettre-e-ma-bien-aimee-iv-detail.webp'
+old_image: '/src/media/works/693-lettre-e-ma-bien-aimee-iv.webp'
 uuid: 6e5dc3e1-a159-40ab-ac95-fbd69986c7cf
 collections:
   - la-vie-de-femme

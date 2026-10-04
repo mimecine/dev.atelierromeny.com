@@ -10,7 +10,8 @@ file: '/src/media/works/243-lettre-a-ma-bien-aimee-ix.webp'
 year: '1993'
 year_start: 1993
 year_end: null
-image: '/src/media/works/243-lettre-a-ma-bien-aimee-ix.webp'
+image: '/src/media/works/243-lettre-a-ma-bien-aimee-ix-detail.webp'
+old_image: '/src/media/works/243-lettre-a-ma-bien-aimee-ix.webp'
 uuid: 1efa3194-7297-40d1-867b-424f1ed8ddb5
 collections:
   - la-vie-de-femme

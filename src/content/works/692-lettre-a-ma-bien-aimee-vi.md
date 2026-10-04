@@ -10,7 +10,8 @@ file: '/src/media/works/692-lettre-a-ma-bien-aimee-vi.webp'
 year: '1992'
 year_start: 1992
 year_end: null
-image: '/src/media/works/692-lettre-a-ma-bien-aimee-vi.webp'
+image: '/src/media/works/692-lettre-a-ma-bien-aimee-vi-detail.webp'
+old_image: '/src/media/works/692-lettre-a-ma-bien-aimee-vi.webp'
 uuid: f32a1c89-4992-426a-8e9f-e893aa922114
 collections:
   - la-vie-de-femme

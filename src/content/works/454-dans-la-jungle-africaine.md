@@ -1,7 +1,8 @@
 ---
 id: 454
 title: Dans la jungle africaine
-image: '/src/media/works/454-dans-la-jungle-africaine.webp'
+image: '/src/media/works/454-dans-la-jungle-africaine-detail.webp'
+old_image: '/src/media/works/454-dans-la-jungle-africaine.webp'
 collections:
   - abstrait
   - selected-july-2025

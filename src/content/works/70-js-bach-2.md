@@ -1,7 +1,8 @@
 ---
 id: 70
 title: JS BACH 2
-image: '/src/media/works/70-js-bach-2.webp'
+image: '/src/media/works/70-js-bach-2-detail.webp'
+old_image: '/src/media/works/70-js-bach-2.webp'
 collections:
   - musique
   - selected-july-2025

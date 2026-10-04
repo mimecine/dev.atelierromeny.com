@@ -1,7 +1,8 @@
 ---
 id: 400
 title: Autoportrait devant Ies ruines
-image: '/src/media/works/400-autoportrait-devant-ies-ruines.webp'
+image: '/src/media/works/400-autoportrait-devant-ies-ruines-detail.webp'
+old_image: '/src/media/works/400-autoportrait-devant-ies-ruines.webp'
 collections:
   - portraits
   - figures-humaines

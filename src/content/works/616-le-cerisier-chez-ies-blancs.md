@@ -1,7 +1,8 @@
 ---
 id: 616
 title: Le cerisier chez Ies Blancs
-image: '/src/media/works/616-le-cerisier-chez-ies-blancs.webp'
+image: '/src/media/works/616-le-cerisier-chez-ies-blancs-detail.webp'
+old_image: '/src/media/works/616-le-cerisier-chez-ies-blancs.webp'
 collections:
   - automne
 categories: Automne

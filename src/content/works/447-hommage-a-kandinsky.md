@@ -1,7 +1,8 @@
 ---
 id: 447
 title: Hommage à Kandinsky
-image: '/src/media/works/447-hommage-a-kandinsky.webp'
+image: '/src/media/works/447-hommage-a-kandinsky-detail.webp'
+old_image: '/src/media/works/447-hommage-a-kandinsky.webp'
 collections:
   - abstrait
   - nfs

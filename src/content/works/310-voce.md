@@ -1,7 +1,8 @@
 ---
 id: 310
 title: Voce
-image: '/src/media/works/310-voce.webp'
+image: '/src/media/works/310-voce-detail.webp'
+old_image: '/src/media/works/310-voce.webp'
 collections:
   - marco
   - alisa

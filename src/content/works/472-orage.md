@@ -1,7 +1,8 @@
 ---
 id: 472
 title: Orage
-image: '/src/media/works/472-orage.webp'
+image: '/src/media/works/472-orage-detail.webp'
+old_image: '/src/media/works/472-orage.webp'
 collections:
   - abstrait
   - nfs

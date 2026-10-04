@@ -1,7 +1,8 @@
 ---
 id: 620
 title: 'La musique I: apparition=prélude'
-image: '/src/media/works/620-la-musique-i-apparitionprelude.webp'
+image: '/src/media/works/620-la-musique-i-apparitionprelude-detail.webp'
+old_image: '/src/media/works/620-la-musique-i-apparitionprelude.webp'
 collections:
   - abstrait
   - selected-july-2025

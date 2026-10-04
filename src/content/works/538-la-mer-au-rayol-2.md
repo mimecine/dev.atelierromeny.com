@@ -1,7 +1,8 @@
 ---
 id: 538
 title: La mer au Rayol 2
-image: '/src/media/works/538-la-mer-au-rayol-2.webp'
+image: '/src/media/works/538-la-mer-au-rayol-2-detail.webp'
+old_image: '/src/media/works/538-la-mer-au-rayol-2.webp'
 collections:
   - paysages
   - selected-july-2025

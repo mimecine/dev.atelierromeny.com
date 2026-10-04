@@ -11,7 +11,8 @@ file: '/src/media/works/495-la-chute.webp'
 year: '1978'
 year_start: 1978
 year_end: null
-image: '/src/media/works/495-la-chute.webp'
+image: '/src/media/works/495-la-chute-detail.webp'
+old_image: '/src/media/works/495-la-chute.webp'
 uuid: 76a1e102-499a-4e38-bbbb-f42c3653cc88
 collections:
   - accident-dans-la-montagne

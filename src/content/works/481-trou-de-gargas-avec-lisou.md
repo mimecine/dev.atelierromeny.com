@@ -1,7 +1,8 @@
 ---
 id: 481
 title: Trou de Gargas avec Lisou
-image: '/src/media/works/481-trou-de-gargas-avec-lisou.webp'
+image: '/src/media/works/481-trou-de-gargas-avec-lisou-detail.webp'
+old_image: '/src/media/works/481-trou-de-gargas-avec-lisou.webp'
 collections:
   - paysages
   - selected-july-2025

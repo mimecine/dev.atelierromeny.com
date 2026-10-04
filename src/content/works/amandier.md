@@ -1,7 +1,8 @@
 ---
 id: null
 title: Amandier
-image: '/src/media/works/amandier.webp'
+image: '/src/media/works/amandier-detail.webp'
+old_image: '/src/media/works/amandier.webp'
 collections:
   - marco
   - arbres

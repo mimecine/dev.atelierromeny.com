@@ -10,7 +10,8 @@ file: '/src/media/works/wo-hin.webp'
 year: '2005'
 year_start: 2005
 year_end: null
-image: '/src/media/works/wo-hin.webp'
+image: '/src/media/works/wo-hin-detail.webp'
+old_image: '/src/media/works/wo-hin.webp'
 uuid: a522a66f-a289-402c-a0cd-03d698ccb0a7
 collections:
   - abstrait

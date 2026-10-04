@@ -1,7 +1,8 @@
 ---
 id: 687
 title: Lngegerd et Marco
-image: '/src/media/works/687-lngegerd-et-marco.webp'
+image: '/src/media/works/687-lngegerd-et-marco-detail.webp'
+old_image: '/src/media/works/687-lngegerd-et-marco.webp'
 collections:
   - figures-humaines
   - nfs

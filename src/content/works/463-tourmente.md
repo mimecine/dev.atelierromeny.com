@@ -1,7 +1,8 @@
 ---
 id: 463
 title: Tourmente
-image: '/src/media/works/463-tourmente.webp'
+image: '/src/media/works/463-tourmente-detail.webp'
+old_image: '/src/media/works/463-tourmente.webp'
 collections:
   - marco
   - abstrait

@@ -1,7 +1,8 @@
 ---
 id: 564
 title: Bouquet å I‘ancien
-image: '/src/media/works/564-bouquet-a-iancien.webp'
+image: '/src/media/works/564-bouquet-a-iancien-detail.webp'
+old_image: '/src/media/works/564-bouquet-a-iancien.webp'
 collections:
   - fleurs
   - selected-july-2025

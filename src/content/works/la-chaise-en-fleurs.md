@@ -1,7 +1,8 @@
 ---
 id: 20001
 title: La chaise en fleurs
-image: '/src/media/works/la-chaise-en-fleurs.webp'
+image: '/src/media/works/la-chaise-en-fleurs-detail.webp'
+old_image: '/src/media/works/la-chaise-en-fleurs.webp'
 collections:
   - marco
   - alisa

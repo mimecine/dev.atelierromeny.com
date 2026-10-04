@@ -1,7 +1,8 @@
 ---
 id: null
 title: Crépuscule 2
-image: '/src/media/works/crepuscule-2.webp'
+image: '/src/media/works/crepuscule-2-detail.webp'
+old_image: '/src/media/works/crepuscule-2.webp'
 collections:
   - abstrait
   - selected-july-2025

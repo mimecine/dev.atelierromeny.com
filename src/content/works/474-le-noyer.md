@@ -1,7 +1,8 @@
 ---
 id: 474
 title: Le noyer
-image: '/src/media/works/474-le-noyer.webp'
+image: '/src/media/works/474-le-noyer-detail.webp'
+old_image: '/src/media/works/474-le-noyer.webp'
 collections:
   - arbres
   - selected-july-2025

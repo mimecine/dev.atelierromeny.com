@@ -1,7 +1,8 @@
 ---
 id: null
 title: Crépuscule 5
-image: '/src/media/works/crepuscule-5.webp'
+image: '/src/media/works/crepuscule-5-detail.webp'
+old_image: '/src/media/works/crepuscule-5.webp'
 collections:
   - abstrait
   - selected-july-2025

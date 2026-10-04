@@ -1,7 +1,8 @@
 ---
 id: 115
 title: Le nid
-image: '/src/media/works/115-le-nid.webp'
+image: '/src/media/works/115-le-nid-detail.webp'
+old_image: '/src/media/works/115-le-nid.webp'
 collections:
   - observations
 categories: Observations

@@ -1,7 +1,8 @@
 ---
 id: 336
 title: L'oiseau mort
-image: '/src/media/works/336-loiseau-mort.webp'
+image: '/src/media/works/336-loiseau-mort-detail.webp'
+old_image: '/src/media/works/336-loiseau-mort.webp'
 collections:
   - animaux
   - selected-july-2025

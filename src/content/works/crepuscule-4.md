@@ -1,7 +1,8 @@
 ---
 id: null
 title: Crépuscule 4
-image: '/src/media/works/crepuscule-4.webp'
+image: '/src/media/works/crepuscule-4-detail.webp'
+old_image: '/src/media/works/crepuscule-4.webp'
 collections:
   - paysages
   - selected-july-2025

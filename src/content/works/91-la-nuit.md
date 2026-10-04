@@ -1,7 +1,8 @@
 ---
 id: 91
 title: La nuit
-image: '/src/media/works/91-la-nuit.webp'
+image: '/src/media/works/91-la-nuit-detail.webp'
+old_image: '/src/media/works/91-la-nuit.webp'
 collections:
   - abstrait
   - selected-july-2025

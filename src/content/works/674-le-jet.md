@@ -1,7 +1,8 @@
 ---
 id: 674
 title: Le jet
-image: '/src/media/works/674-le-jet.webp'
+image: '/src/media/works/674-le-jet-detail.webp'
+old_image: '/src/media/works/674-le-jet.webp'
 collections:
   - abstrait
   - selected-july-2025

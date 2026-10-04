@@ -10,7 +10,8 @@ file: '/src/media/works/229-petite-nue-3.webp'
 year: '1997'
 year_start: 1997
 year_end: null
-image: '/src/media/works/229-petite-nue-3.webp'
+image: '/src/media/works/229-petite-nue-3-detail.webp'
+old_image: '/src/media/works/229-petite-nue-3.webp'
 uuid: 4afe1837-373c-4131-8abb-d5678df066bf
 collections:
   - nues

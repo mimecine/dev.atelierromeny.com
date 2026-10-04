@@ -1,7 +1,8 @@
 ---
 id: 101
 title: La nuit 2 / Royeaumont
-image: '/src/media/works/101-la-nuit-2-royeaumont.webp'
+image: '/src/media/works/101-la-nuit-2-royeaumont-detail.webp'
+old_image: '/src/media/works/101-la-nuit-2-royeaumont.webp'
 collections:
   - abstrait
   - selected-july-2025

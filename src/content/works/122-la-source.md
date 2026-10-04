@@ -1,7 +1,8 @@
 ---
 id: 122
 title: La source
-image: '/src/media/works/122-la-source.webp'
+image: '/src/media/works/122-la-source-detail.webp'
+old_image: '/src/media/works/122-la-source.webp'
 collections:
   - abstrait
   - selected-july-2025

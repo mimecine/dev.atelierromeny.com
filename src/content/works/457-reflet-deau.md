@@ -1,7 +1,8 @@
 ---
 id: 457
 title: Reflet d'eau
-image: '/src/media/works/457-reflet-deau.webp'
+image: '/src/media/works/457-reflet-deau-detail.webp'
+old_image: '/src/media/works/457-reflet-deau.webp'
 collections:
   - abstrait
   - selected-july-2025

@@ -1,7 +1,8 @@
 ---
 id: 448
 title: Terre de lave
-image: '/src/media/works/448-terre-de-lave.webp'
+image: '/src/media/works/448-terre-de-lave-detail.webp'
+old_image: '/src/media/works/448-terre-de-lave.webp'
 collections:
   - marco
   - alisa

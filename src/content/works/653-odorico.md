@@ -1,7 +1,8 @@
 ---
 id: 653
 title: Odorico
-image: '/src/media/works/653-odorico.webp'
+image: '/src/media/works/653-odorico-detail.webp'
+old_image: '/src/media/works/653-odorico.webp'
 collections:
   - figures-humaines
   - nfs

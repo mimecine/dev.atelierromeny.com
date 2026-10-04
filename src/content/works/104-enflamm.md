@@ -1,7 +1,8 @@
 ---
 id: 104
 title: Enflamm
-image: '/src/media/works/104-enflamm.webp'
+image: '/src/media/works/104-enflamm-detail.webp'
+old_image: '/src/media/works/104-enflamm.webp'
 collections:
   - abstrait
   - selected-july-2025

@@ -1,7 +1,8 @@
 ---
 id: 34
 title: 2 modéles dans mon atelier
-image: '/src/media/works/34-2-modeles-dans-mon-atelier.webp'
+image: '/src/media/works/34-2-modeles-dans-mon-atelier-detail.webp'
+old_image: '/src/media/works/34-2-modeles-dans-mon-atelier.webp'
 collections:
   - marco
   - figures-humaines

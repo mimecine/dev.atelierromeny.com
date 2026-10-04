@@ -1,7 +1,8 @@
 ---
 id: 588
 title: Paysage aérien 2
-image: '/src/media/works/588-paysage-aerien-2.webp'
+image: '/src/media/works/588-paysage-aerien-2-detail.webp'
+old_image: '/src/media/works/588-paysage-aerien-2.webp'
 collections:
   - abstrait
   - selected-july-2025

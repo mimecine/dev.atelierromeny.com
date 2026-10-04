@@ -11,7 +11,8 @@ file: '/src/media/works/769-sarfatie-straat.webp'
 year: '1953'
 year_start: 1953
 year_end: null
-image: '/src/media/works/769-sarfatie-straat.webp'
+image: '/src/media/works/769-sarfatie-straat-detail.webp'
+old_image: '/src/media/works/769-sarfatie-straat.webp'
 uuid: 07d507b9-1472-4c07-976f-aaaa82e0a1d5
 collections:
   - paysages

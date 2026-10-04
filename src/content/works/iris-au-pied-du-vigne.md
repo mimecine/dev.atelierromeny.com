@@ -1,7 +1,8 @@
 ---
 id: null
 title: Iris au pied du vigne
-image: '/src/media/works/iris-au-pied-du-vigne.webp'
+image: '/src/media/works/iris-au-pied-du-vigne-detail.webp'
+old_image: '/src/media/works/iris-au-pied-du-vigne.webp'
 collections:
   - fleurs
   - selected-july-2025

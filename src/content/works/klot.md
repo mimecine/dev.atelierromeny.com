@@ -1,7 +1,8 @@
 ---
 id: null
 title: Klot
-image: '/src/media/works/klot.webp'
+image: '/src/media/works/klot-detail.webp'
+old_image: '/src/media/works/klot.webp'
 collections:
   - abstrait
   - selected-july-2025

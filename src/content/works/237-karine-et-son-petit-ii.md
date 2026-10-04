@@ -11,7 +11,8 @@ file: '/src/media/works/237-karine-et-son-petit-ii.webp'
 year: '1989'
 year_start: 1989
 year_end: null
-image: '/src/media/works/237-karine-et-son-petit-ii.webp'
+image: '/src/media/works/237-karine-et-son-petit-ii-detail.webp'
+old_image: '/src/media/works/237-karine-et-son-petit-ii.webp'
 uuid: 2029acf3-65c5-48c1-9489-744da76e40ad
 collections:
   - figures-humaines

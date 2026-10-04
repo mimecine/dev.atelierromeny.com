@@ -10,7 +10,8 @@ file: '/src/media/works/la-flutiste.webp'
 year: 2000?
 year_start: null
 year_end: null
-image: '/src/media/works/la-flutiste.webp'
+image: '/src/media/works/la-flutiste-detail.webp'
+old_image: '/src/media/works/la-flutiste.webp'
 uuid: 07781cfa-66aa-44dd-8951-5450bfc93b80
 collections:
   - portraits

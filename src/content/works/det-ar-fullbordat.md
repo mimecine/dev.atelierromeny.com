@@ -10,7 +10,8 @@ file: '/src/media/works/det-ar-fullbordat.webp'
 year: '1957'
 year_start: 1957
 year_end: null
-image: '/src/media/works/det-ar-fullbordat.webp'
+image: '/src/media/works/det-ar-fullbordat-detail.webp'
+old_image: '/src/media/works/det-ar-fullbordat.webp'
 uuid: 4ad9670f-3925-4bcc-ae4c-465557832391
 collections:
   - abstrait

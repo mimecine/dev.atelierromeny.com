@@ -1,7 +1,8 @@
 ---
 id: 455
 title: Mélancolie
-image: '/src/media/works/455-melancolie.webp'
+image: '/src/media/works/455-melancolie-detail.webp'
+old_image: '/src/media/works/455-melancolie.webp'
 collections:
   - abstrait
   - selected-july-2025

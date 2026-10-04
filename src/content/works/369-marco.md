@@ -1,7 +1,8 @@
 ---
 id: 369
 title: Marco
-image: '/src/media/works/369-marco.webp'
+image: '/src/media/works/369-marco-detail.webp'
+old_image: '/src/media/works/369-marco.webp'
 collections:
   - figures-humaines
   - nfs

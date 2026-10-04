@@ -1,7 +1,8 @@
 ---
 id: 375
 title: Accouplement
-image: '/src/media/works/375-accouplement.webp'
+image: '/src/media/works/375-accouplement-detail.webp'
+old_image: '/src/media/works/375-accouplement.webp'
 collections:
   - alisa
   - animaux

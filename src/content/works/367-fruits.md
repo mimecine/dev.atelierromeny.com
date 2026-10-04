@@ -1,7 +1,8 @@
 ---
 id: 367
 title: Fruits
-image: '/src/media/works/367-fruits.webp'
+image: '/src/media/works/367-fruits-detail.webp'
+old_image: '/src/media/works/367-fruits.webp'
 collections:
   - abstract
   - abstrait

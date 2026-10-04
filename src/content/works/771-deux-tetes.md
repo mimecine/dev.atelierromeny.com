@@ -1,7 +1,8 @@
 ---
 id: 771
 title: Deux tétes
-image: '/src/media/works/771-deux-tetes.webp'
+image: '/src/media/works/771-deux-tetes-detail.webp'
+old_image: '/src/media/works/771-deux-tetes.webp'
 collections:
   - cartes
   - selected-july-2025

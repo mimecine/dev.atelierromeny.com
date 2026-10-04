@@ -1,7 +1,8 @@
 ---
 id: 427
 title: Landscape
-image: '/src/media/works/427-landscape.webp'
+image: '/src/media/works/427-landscape-detail.webp'
+old_image: '/src/media/works/427-landscape.webp'
 collections:
   - abstrait
   - selected-july-2025

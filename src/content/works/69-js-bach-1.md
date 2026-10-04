@@ -1,7 +1,8 @@
 ---
 id: 69
 title: JS BACH 1
-image: '/src/media/works/69-js-bach-1.webp'
+image: '/src/media/works/69-js-bach-1-detail.webp'
+old_image: '/src/media/works/69-js-bach-1.webp'
 collections:
   - musique
   - nfs

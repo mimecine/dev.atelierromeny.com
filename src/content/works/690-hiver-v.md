@@ -1,7 +1,8 @@
 ---
 id: 690
 title: Hiver V
-image: '/src/media/works/690-hiver-v.webp'
+image: '/src/media/works/690-hiver-v-detail.webp'
+old_image: '/src/media/works/690-hiver-v.webp'
 collections:
   - abstrait
   - selected-july-2025

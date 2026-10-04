@@ -1,7 +1,8 @@
 ---
 id: 636
 title: Mistral
-image: '/src/media/works/636-mistral.webp'
+image: '/src/media/works/636-mistral-detail.webp'
+old_image: '/src/media/works/636-mistral.webp'
 collections:
   - paysages
   - nfs

@@ -1,7 +1,8 @@
 ---
 id: 152
 title: Branche d'amandier
-image: '/src/media/works/152-branche-damandier.webp'
+image: '/src/media/works/152-branche-damandier-detail.webp'
+old_image: '/src/media/works/152-branche-damandier.webp'
 collections:
   - marco
   - arbres-en-fleurs

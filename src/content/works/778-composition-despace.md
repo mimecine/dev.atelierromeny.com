@@ -1,7 +1,8 @@
 ---
 id: 778
 title: Composition d'espace
-image: '/src/media/works/778-composition-despace.webp'
+image: '/src/media/works/778-composition-despace-detail.webp'
+old_image: '/src/media/works/778-composition-despace.webp'
 collections:
   - abstrait
   - selected-july-2025

@@ -1,7 +1,8 @@
 ---
 id: 598
 title: La branche noire
-image: '/src/media/works/598-la-branche-noire.webp'
+image: '/src/media/works/598-la-branche-noire-detail.webp'
+old_image: '/src/media/works/598-la-branche-noire.webp'
 collections:
   - abstrait
   - selected-july-2025

@@ -11,7 +11,8 @@ file: '/src/media/works/196-han-lammers.webp'
 year: '1952'
 year_start: 1952
 year_end: null
-image: '/src/media/works/196-han-lammers.webp'
+image: '/src/media/works/196-han-lammers-detail.webp'
+old_image: '/src/media/works/196-han-lammers.webp'
 uuid: a6767bd8-e36b-4ff3-99c6-17ff7ce9fbdf
 collections:
   - figures-humaines

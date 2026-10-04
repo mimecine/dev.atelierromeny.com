@@ -1,7 +1,8 @@
 ---
 id: 571
 title: Paysage aérien 1
-image: '/src/media/works/571-paysage-aerien-1.webp'
+image: '/src/media/works/571-paysage-aerien-1-detail.webp'
+old_image: '/src/media/works/571-paysage-aerien-1.webp'
 collections:
   - abstrait
   - selected-july-2025

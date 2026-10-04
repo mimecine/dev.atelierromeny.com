@@ -1,7 +1,8 @@
 ---
 id: null
 title: Poële 'Lacanche d'Or'
-image: '/src/media/works/poele-lacanche-dor.webp'
+image: '/src/media/works/poele-lacanche-dor-detail.webp'
+old_image: '/src/media/works/poele-lacanche-dor.webp'
 collections:
   - natures-mortes
   - selected-july-2025

@@ -1,7 +1,8 @@
 ---
 id: 162
 title: Conversation sous la Iampe
-image: '/src/media/works/162-conversation-sous-la-iampe.webp'
+image: '/src/media/works/162-conversation-sous-la-iampe-detail.webp'
+old_image: '/src/media/works/162-conversation-sous-la-iampe.webp'
 collections:
   - figures-humaines
   - nfs

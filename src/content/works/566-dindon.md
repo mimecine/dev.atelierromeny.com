@@ -1,7 +1,8 @@
 ---
 id: 566
 title: Dindon
-image: '/src/media/works/566-dindon.webp'
+image: '/src/media/works/566-dindon-detail.webp'
+old_image: '/src/media/works/566-dindon.webp'
 collections:
   - animaux
 categories: Animaux

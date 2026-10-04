@@ -1,7 +1,8 @@
 ---
 id: null
 title: (Untitled)
-image: '/src/media/works/ic0.webp'
+image: '/src/media/works/ic0-detail.webp'
+old_image: '/src/media/works/ic0.webp'
 collections:
   - marco
   - abstrait

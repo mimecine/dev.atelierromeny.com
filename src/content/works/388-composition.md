@@ -1,7 +1,8 @@
 ---
 id: 388
 title: Composition
-image: '/src/media/works/388-composition.webp'
+image: '/src/media/works/388-composition-detail.webp'
+old_image: '/src/media/works/388-composition.webp'
 collections:
   - abstrait
   - selected-july-2025

@@ -1,7 +1,8 @@
 ---
 id: 344
 title: Vers Apt
-image: '/src/media/works/344-vers-apt.webp'
+image: '/src/media/works/344-vers-apt-detail.webp'
+old_image: '/src/media/works/344-vers-apt.webp'
 collections:
   - paysages
   - selected-july-2025

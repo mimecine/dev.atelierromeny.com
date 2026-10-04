@@ -11,7 +11,8 @@ file: '/src/media/works/456-mor-och-barn.webp'
 year: '1965'
 year_start: 1965
 year_end: null
-image: '/src/media/works/456-mor-och-barn.webp'
+image: '/src/media/works/456-mor-och-barn-detail.webp'
+old_image: '/src/media/works/456-mor-och-barn.webp'
 uuid: f56693d6-70e6-4dd7-8b10-22ef2357cc4f
 collections:
   - abstrait

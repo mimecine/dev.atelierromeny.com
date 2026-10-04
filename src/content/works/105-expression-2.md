@@ -1,7 +1,8 @@
 ---
 id: 105
 title: Expression 2
-image: '/src/media/works/105-expression-2.webp'
+image: '/src/media/works/105-expression-2-detail.webp'
+old_image: '/src/media/works/105-expression-2.webp'
 collections:
   - abstrait
   - selected-july-2025

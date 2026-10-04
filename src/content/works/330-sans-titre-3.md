@@ -1,7 +1,8 @@
 ---
 id: 330
 title: Sans titre 3
-image: '/src/media/works/330-sans-titre-3.webp'
+image: '/src/media/works/330-sans-titre-3-detail.webp'
+old_image: '/src/media/works/330-sans-titre-3.webp'
 collections:
   - abstrait
   - nfs
