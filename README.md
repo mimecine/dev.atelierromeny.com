@@ -42,7 +42,7 @@ A few notes on works:
 - **Old image:** `old_image` keeps the photo a work had before it was reshot. It's shown only when the work has no `images`.
 - **Images:** the main photo comes first. Hide any of them with `hidden_images`; they stay in the files.
 - **Detail:** the last of `images`, named `<slug>-detail.webp`, is the artwork alone: cut out of its photo, straightened, without frame or mat.
-  - `scripts/make-details` (`make_details.py`) makes it from the work's chosen thumbnail photo.
+  - `scripts/make-details` (`make_details.py`) makes it from the work's `cleanest` photo if set (even a hidden one), otherwise from the chosen thumbnail photo.
   - **Outlines:** prints use `measure_prints.py`'s sheet and image detection; paintings use rembg, or the backdrop colour for close-ups on a plain background.
   - **Frames:** they're trimmed at the deepest straight line found on at least three sides.
   - **Review first:** run with `--review <folder>` for contact sheets. Doubtful results (CHECK) aren't written unless `--include-flagged`.
