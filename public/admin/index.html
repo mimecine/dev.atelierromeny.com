@@ -27,7 +27,10 @@
     </style>
   </head>
   <body>
-    <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
+    <!-- Pinned to a minor version (patch fixes still arrive). To get new Sveltia
+         features, bump it here, in src/pages/_admin.astro and __admin.astro, and
+         @sveltia/cms in package.json, then check the admin still loads. -->
+    <script src="https://unpkg.com/@sveltia/cms@0.227/dist/sveltia-cms.js"></script>
     <a id="table-view-link" href="/admin/table/" title="Edit collections as a spreadsheet">Table view</a>
   </body>
 </html>

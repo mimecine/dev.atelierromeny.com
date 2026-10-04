@@ -21,6 +21,8 @@ media_libraries:
           quality: 90
           width: 3000
           height: 3000
+      # Camera names (PXL_2026…) become URL-friendly
+      slugify_filename: true
 
 collections:
   - name: "works"
@@ -29,41 +31,58 @@ collections:
     folder: "src/content/works"
     media_folder: "/src/media/works"
     public_folder: "/src/media/works"
+    description: "Each work's page is /works/<slug>/ (\"View on live site\" in the editor). Area and suggested prices are in the [table view](/admin/table/)."
     create: true
     slug: "{{title}}"
-    summary: "{{title}}, {{year}}, {{location}}, #{{id}}"  
-    search_fields: ["title", "year", "location", "new_location", "tags", "categories", "note"]
-    # filter:
-    #   field: "image"
-    #   pattern: ".{5,}"
+    # "View on live site" in the editor. Renaming a work doesn't need redirects here, so
+    # don't record old slugs in an `aliases` field.
+    preview_path: "/works/{{slug}}/"
+    aliases_field: false
+    summary: "{{title | default('No title recorded')}} · {{year_start | default('undated')}} · {{w | default('?')}} × {{h | default('?')}} cm · {{rating | default('–')}}★"
+    # The list shows the first of these that a work has (Sveltia can't follow `thumbnail`)
+    thumbnail: [image, images.*, old_image]
+    sortable_fields:
+      fields: [title, year_start, w, rating, categories, commit_date]
+      default:
+        field: commit_date
+        direction: descending
     view_groups:
+      - { label: "Category", field: categories }
+      - { label: "Rating", field: rating }
       - { label: "Years", field: year_start, pattern: "^[0-9]{4}$" }
       - { label: "Decades", field: year_start, pattern: "^[0-9]{3}" }
       - { label: "Location", field: location }
       - { label: "New Location", field: new_location }
     view_filters:
-      - { label: "Untitled", field: title, pattern: "(U|n)titled|null" }
-      - { label: "Undated", field: year_start, pattern: "^null$" }
-      - { label: "Unlocated", field: location, pattern: "^null$" }
-      - { label: "Missing ID", field: id, pattern: "^null$" }
-      - { label: "With Image", field: image, pattern: ".{5,}" }
-      - { label: "Without Image", field: image, pattern: "^.{0,5}$" }
+      - { label: "Rated 4 or 5", field: rating, gte: 4 }
+      - { label: "Not rated", field: rating, empty: true }
+      - { label: "Missing size", field: w, empty: true }
+      - { label: "Works on Paper", field: categories, eq: "Works on Paper" }
+      - { label: "Not in any collection", field: collections, empty: true }
+      - { label: "No title recorded", field: title, empty: true }
+      - { label: "Undated", field: year_start, empty: true }
+      - { label: "Unlocated", field: location, empty: true }
+      - { label: "Without image", field: image, empty: true }
+      - { label: "Has hidden images", field: hidden_images, empty: false }
     editor:
       preview: false
-    # # sortable fields won"t work until all fields are filled  on each item
-    # sortable_fields: 
-    #   - "title"
-    #   - "year_start"
-    #   - "location"
     fields:
       - { label: "Work ID", name: "id", widget: "number", value_type: "int", required: false }
       - { label: "Title", name: "title", widget: "string", required: true }
-      - { label: "Image", name: "image", widget: "image", required: false }
+      - label: "Image"
+        name: "image"
+        widget: "image"
+        required: false
+        media_libraries: { default: { config: { filename_template: "{{slug}}-{{uuid_short}}" } } }
       - label: "More Images"
         name: "images"
         widget: list
         required: false
-        field: { label: "Image", name: "image", widget: "image" }
+        field:
+          label: "Image"
+          name: "image"
+          widget: "image"
+          media_libraries: { default: { config: { filename_template: "{{slug}}-{{uuid_short}}" } } }
       - label: "Hidden Images"
         name: "hidden_images"
         widget: list
@@ -72,7 +91,12 @@ collections:
         field: { label: "Image", name: "image", widget: "image" }
       - { label: "Thumbnail", name: "thumbnail", widget: "number", value_type: "int", min: 1, required: false, hint: "Which image to use in grids and search: 1 = Image, 2 = the first of More Images, and so on. Empty means Image." }
       - { label: "Old Image (shown only if there are no other images)", name: "old_image", widget: "image", required: false }
-      - { label: "Detail", name: "detail", widget: "image", required: false, hint: "The artwork alone: cut out, straightened, no frame or mat. Shown last on the work page. Made by scripts/make_details.py" }
+      - label: "Detail"
+        name: "detail"
+        widget: "image"
+        required: false
+        hint: "The artwork alone: cut out, straightened, no frame or mat. Shown last on the work page. Made by scripts/make-details"
+        media_libraries: { default: { config: { filename_template: "{{slug}}-detail" } } }
       - { label: "Description", name: "body", widget: "markdown", required: false }
       - { label: "Collections", name: "collections", widget: "relation", collection: "collections",  multiple: true, required: false }
       - label: "Tags"
@@ -97,6 +121,7 @@ collections:
 
   - name: "collections"
     label: "Collections"
+    description: "Groups of works. Published ones get a page at /<slug>/; add them to Settings > Site Menu to show them in the menu."
     folder: "src/content/collections"
     create: true
     slug: "{{title}}"
@@ -117,6 +142,9 @@ collections:
     create: true
     slug: "{{title}}"
     identifier_field: "title"
+    description: "Text pages such as Bio and About, at /<slug>/."
+    preview_path: "/{{slug}}/"
+    aliases_field: false
     editor:
       preview: true
     fields:
@@ -144,8 +172,15 @@ collections:
     create: true
     slug: "{{title}}"
     identifier_field: "title"
-    summary: "{{title}}"
-    sortable_fields: ["title", "date"]
+    description: "Shown on /photos/, newest first."
+    summary: "{{title}} · {{date | date('D MMM YYYY')}}"
+    preview_path: "/photos/{{slug}}/"
+    aliases_field: false
+    sortable_fields:
+      fields: [title, date, commit_date]
+      default:
+        field: date
+        direction: descending
     fields:
       - { label: "Title", name: "title", widget: "string", required: true }
       - { label: "Photo", name: "image", widget: "image", required: true }
