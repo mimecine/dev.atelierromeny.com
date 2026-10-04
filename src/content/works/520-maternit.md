@@ -1,6 +1,6 @@
 ---
 id: 520
-title: Maternit
+title: Maternité
 categories: Figures humaines
 w: 130
 h: 90

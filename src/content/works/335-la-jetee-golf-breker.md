@@ -1,6 +1,6 @@
 ---
 id: 335
-title: La jetée (Golf breker)
+title: La Jetée (Golf Breker)
 images:
   - '/src/media/works/335-la-jetee-golf-breker-v2.webp'
   - '/src/media/works/335-la-jetee-golf-breker-v2-2.webp'

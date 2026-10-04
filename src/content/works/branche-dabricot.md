@@ -1,6 +1,6 @@
 ---
 id: null
-title: Branche d'abricot
+title: "Branche d'Abricot"
 images:
   - '/src/media/works/branche-dabricot.webp'
 categories: Nature morte

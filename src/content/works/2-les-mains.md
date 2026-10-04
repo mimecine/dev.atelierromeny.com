@@ -1,6 +1,6 @@
 ---
 id: 2
-title: Les mains
+title: Les Mains
 categories: Figures humaines
 w: 45
 h: 45

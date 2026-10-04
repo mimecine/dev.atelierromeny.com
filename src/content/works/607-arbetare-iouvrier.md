@@ -1,6 +1,6 @@
 ---
 id: 607
-title: Arbetare (I'ouvrier)
+title: "Arbetare (L'Ouvrier)"
 images:
   - '/src/media/works/607-arbetare-iouvrier-detail.webp'
 old_image: '/src/media/works/607-arbetare-iouvrier.webp'

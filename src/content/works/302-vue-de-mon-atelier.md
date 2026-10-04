@@ -1,6 +1,6 @@
 ---
 id: 302
-title: Vue de mon atelier
+title: Vue de mon Atelier
 categories: Paysages
 w: 100
 h: 50

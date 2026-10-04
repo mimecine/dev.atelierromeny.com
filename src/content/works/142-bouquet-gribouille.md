@@ -1,6 +1,6 @@
 ---
 id: 142
-title: Bouquet gribouille
+title: Bouquet Gribouille
 categories: Natures mortes
 w: 33
 h: 40

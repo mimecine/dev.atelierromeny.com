@@ -1,6 +1,6 @@
 ---
 id: 441
-title: Lola, mélancolique
+title: Lola, Mélancolique
 images:
   - '/src/media/works/441-lola-melancolique-detail.webp'
 old_image: '/src/media/works/441-lola-melancolique.webp'

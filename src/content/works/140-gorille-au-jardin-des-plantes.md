@@ -1,6 +1,6 @@
 ---
 id: 140
-title: Gorille au jardin des plantes
+title: Gorille au Jardin des Plantes
 categories: Animaux
 w: 70
 h: 81

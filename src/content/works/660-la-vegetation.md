@@ -1,6 +1,6 @@
 ---
 id: 660
-title: La végétation
+title: La Végétation
 images:
   - '/src/media/works/660-la-vegetation-v2.webp'
 collections:

@@ -1,6 +1,6 @@
 ---
 id: 57
-title: 3 musiciens
+title: 3 Musiciens
 images:
   - '/src/media/works/57-3-musiciens-detail.webp'
 old_image: '/src/media/works/57-3-musiciens.webp'

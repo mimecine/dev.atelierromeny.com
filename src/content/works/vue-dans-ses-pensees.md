@@ -1,6 +1,6 @@
 ---
 id: null
-title: Vue dans ses pensées
+title: Vue dans ses Pensées
 categories: Portrait
 w: 33
 h: 41

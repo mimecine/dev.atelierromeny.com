@@ -1,6 +1,6 @@
 ---
 id: 244
-title: Lettre é ma bien aimée II
+title: Lettre à ma Bien Aimée II
 categories: La vie de femme
 w: 100
 h: 73

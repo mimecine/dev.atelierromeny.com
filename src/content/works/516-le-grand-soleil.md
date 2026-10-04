@@ -1,6 +1,6 @@
 ---
 id: 516
-title: Le grand soleil
+title: Le Grand Soleil
 images:
   - '/src/media/works/516-le-grand-soleil-v2.webp'
 collections:

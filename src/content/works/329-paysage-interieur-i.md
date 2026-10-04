@@ -1,6 +1,6 @@
 ---
 id: 329
-title: Paysage intérieur I
+title: Paysage Intérieur I
 images:
   - '/src/media/works/329-paysage-interieur-i-v2.webp'
   - '/src/media/works/329-paysage-interieur-i-detail.webp'

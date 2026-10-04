@@ -1,6 +1,6 @@
 ---
 id: 328
-title: Paysage intérieur 3
+title: Paysage Intérieur 3
 categories: Abstrait
 w: 41
 h: 27

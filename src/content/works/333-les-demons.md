@@ -1,6 +1,6 @@
 ---
 id: 333
-title: Les démons
+title: Les Démons
 categories: Figures humaines
 w: 50
 h: 60

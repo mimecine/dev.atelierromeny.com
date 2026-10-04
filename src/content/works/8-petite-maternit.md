@@ -1,6 +1,6 @@
 ---
 id: 8
-title: Petite maternit
+title: Petite Maternit
 categories: Figures humaines
 w: 33
 h: 24

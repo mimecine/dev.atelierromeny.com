@@ -1,6 +1,6 @@
 ---
 id: 430
-title: Stad en land
+title: Stad en Land
 categories: Le peintre et son model
 w: 60
 h: 55

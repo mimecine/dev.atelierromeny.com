@@ -1,6 +1,6 @@
 ---
 id: 195
-title: Le fumnanbule
+title: Le Fumnanbule
 categories: Figures humaines
 w: 46
 h: 38

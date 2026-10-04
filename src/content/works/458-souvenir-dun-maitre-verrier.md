@@ -1,6 +1,6 @@
 ---
 id: 458
-title: Souvenir d'un maitre verrier
+title: "Souvenir d'un Maitre Verrier"
 images:
   - '/src/media/works/458-souvenir-dun-maitre-verrier-detail.webp'
 old_image: '/src/media/works/458-souvenir-dun-maitre-verrier.webp'

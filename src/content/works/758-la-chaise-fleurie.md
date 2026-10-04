@@ -1,6 +1,6 @@
 ---
 id: 758
-title: La chaise fleurie
+title: La Chaise Fleurie
 categories: Natures mortes
 w: 54
 h: 73

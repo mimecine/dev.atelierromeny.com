@@ -1,6 +1,6 @@
 ---
 id: 125
-title: Désert marin III
+title: Désert Marin III
 categories: Abstrait
 w: 100
 h: 81

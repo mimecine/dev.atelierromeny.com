@@ -1,6 +1,6 @@
 ---
 id: 250
-title: Corrida (abstrait)
+title: Corrida (Abstrait)
 categories: Tauromachie
 w: 81
 h: 100

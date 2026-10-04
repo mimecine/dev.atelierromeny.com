@@ -1,6 +1,6 @@
 ---
 id: 350
-title: Quartite mouvement dans la nature
+title: Quartite Mouvement dans la Nature
 categories: Abstrait
 w: 145
 h: 27

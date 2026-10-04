@@ -1,6 +1,6 @@
 ---
 id: 479
-title: Nue allongée (tonalité orange)
+title: Nue Allongée (Tonalité Orange)
 categories: Figures humaines
 w: 94
 h: 75

@@ -1,6 +1,6 @@
 ---
 id: 449
-title: Inspiration d'un caillou de Provence recto
+title: "Inspiration d'un Caillou de Provence Recto"
 categories: Abstrait
 w: 100
 h: 100

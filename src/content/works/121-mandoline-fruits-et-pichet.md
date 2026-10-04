@@ -1,6 +1,6 @@
 ---
 id: 121
-title: Mandoline fruits et pichet
+title: Mandoline Fruits et Pichet
 images:
   - '/src/media/works/121-mandoline-fruits-et-pichet.webp'
 categories: Natures mortes

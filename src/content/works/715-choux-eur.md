@@ -1,6 +1,6 @@
 ---
 id: 715
-title: Choux ﬂeur
+title: Choux Fleur
 categories: Natures mortes
 w: 46
 h: 61

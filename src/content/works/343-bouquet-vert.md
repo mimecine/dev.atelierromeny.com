@@ -1,6 +1,6 @@
 ---
 id: 343
-title: Bouquet vert
+title: Bouquet Vert
 categories: Natures mortes
 w: 80
 h: 70

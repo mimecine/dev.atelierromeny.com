@@ -1,6 +1,6 @@
 ---
 id: 114
-title: Les chats de Madrid
+title: Les Chats de Madrid
 images:
   - '/src/media/works/114-les-chats-de-madrid-detail.webp'
 old_image: '/src/media/works/114-les-chats-de-madrid.webp'

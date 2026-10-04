@@ -1,6 +1,6 @@
 ---
 id: 290
-title: Table aux fruits et feuilles de ﬁguiers
+title: Table aux Fruits et Feuilles de Figuiers
 categories: Natures mortes
 w: 61
 h: 46

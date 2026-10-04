@@ -1,6 +1,6 @@
 ---
 id: 320
-title: Au café 2
+title: Au Café 2
 categories: Figures humaines
 w: 61
 h: 50

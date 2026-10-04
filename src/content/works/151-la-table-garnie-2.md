@@ -1,6 +1,6 @@
 ---
 id: 151
-title: La table garnie 2
+title: La Table Garnie 2
 categories: Natures mortes
 w: 50
 h: 45

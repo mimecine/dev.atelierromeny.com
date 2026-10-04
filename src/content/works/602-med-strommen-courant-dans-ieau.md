@@ -1,6 +1,6 @@
 ---
 id: 602
-title: Med Strömmen (courant dans I'eau)
+title: "Med Strömmen (Courant dans l'Eau)"
 images:
   - '/src/media/works/602-med-strommen-courant-dans-i-eau.webp'
   - '/src/media/works/602-med-strommen-courant-dans-i-eau-2.webp'

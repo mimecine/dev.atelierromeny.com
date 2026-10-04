@@ -1,6 +1,6 @@
 ---
 id: 41
-title: Moment de réve
+title: Moment de Rêve
 categories: Figures humaines
 w: 97
 h: 148

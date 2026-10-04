@@ -1,6 +1,6 @@
 ---
 id: 220
-title: Les petites voisines
+title: Les Petites Voisines
 categories: Figures humaines
 w: 80
 h: 60

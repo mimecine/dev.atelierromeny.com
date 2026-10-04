@@ -1,6 +1,6 @@
 ---
 id: 544
-title: Les deux Madeleine
+title: Les Deux Madeleine
 categories: Figures humaines
 w: 100
 h: 150

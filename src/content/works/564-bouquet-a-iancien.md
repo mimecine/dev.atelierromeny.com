@@ -1,6 +1,6 @@
 ---
 id: 564
-title: Bouquet å I‘ancien
+title: "Bouquet Å l'Ancien"
 images:
   - '/src/media/works/564-bouquet-a-iancien-detail.webp'
 old_image: '/src/media/works/564-bouquet-a-iancien.webp'

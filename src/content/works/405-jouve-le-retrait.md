@@ -1,6 +1,6 @@
 ---
 id: 405
-title: 'Jouve, le retrait'
+title: Jouve, le Retrait
 categories: Figures humaines
 w: 73
 h: 61

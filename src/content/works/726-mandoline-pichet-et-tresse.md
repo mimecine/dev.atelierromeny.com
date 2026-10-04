@@ -1,6 +1,6 @@
 ---
 id: 726
-title: 'Mandoline, pichet et tresse'
+title: Mandoline, Pichet et Tresse
 categories: Natures mortes
 w: 120
 h: 75

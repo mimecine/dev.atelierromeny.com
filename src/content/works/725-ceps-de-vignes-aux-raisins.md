@@ -1,6 +1,6 @@
 ---
 id: 725
-title: Ceps de vignes aux raisins
+title: Ceps de Vignes aux Raisins
 categories: Figures humaines
 w: 65
 h: 81

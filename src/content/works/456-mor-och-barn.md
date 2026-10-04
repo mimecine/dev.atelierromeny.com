@@ -1,6 +1,6 @@
 ---
 id: 456
-title: Mor och barn
+title: Mor och Barn
 categories: Abstrait
 w: 80
 h: 130

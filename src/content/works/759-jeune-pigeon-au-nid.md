@@ -1,6 +1,6 @@
 ---
 id: 759
-title: Jeune pigeon au nid
+title: Jeune Pigeon au Nid
 images:
   - '/src/media/works/759-jeune-pigeon-au-nid-detail.webp'
 old_image: '/src/media/works/759-jeune-pigeon-au-nid.webp'

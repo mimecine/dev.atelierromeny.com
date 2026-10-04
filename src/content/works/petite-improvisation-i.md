@@ -1,6 +1,6 @@
 ---
 id: null
-title: Petite improvisation I
+title: Petite Improvisation I
 images:
   - '/src/media/works/petite-improvisation-i.webp'
 categories: Abstract

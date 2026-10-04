@@ -1,6 +1,6 @@
 ---
 id: 254
-title: Le violon dans la cour
+title: Le Violon dans la Cour
 categories: Natures mortes
 w: 100
 h: 120

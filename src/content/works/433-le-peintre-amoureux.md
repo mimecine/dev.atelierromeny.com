@@ -1,6 +1,6 @@
 ---
 id: 433
-title: Le peintre amoureux
+title: Le Peintre Amoureux
 categories: Le peintre et son model
 w: 75
 h: 65

@@ -1,6 +1,6 @@
 ---
 id: 650
-title: Les 3 graces
+title: Les 3 Graces
 categories: Figures humaines
 w: 250
 h: 150

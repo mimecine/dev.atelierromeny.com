@@ -1,6 +1,6 @@
 ---
 id: 698
-title: Nature morte chez Monsieur ALATA / Souvenir d'Orient
+title: "Nature Morte chez Monsieur ALATA / Souvenir d'Orient"
 images:
   - '/src/media/works/698-nature-morte-chez-monsieur-alata-souvenir-d-orient.webp'
   - '/src/media/works/698-nature-morte-chez-monsieur-alata-souvenir-d-orient-2.webp'

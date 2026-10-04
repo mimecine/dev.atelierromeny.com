@@ -1,6 +1,6 @@
 ---
 id: 68
-title: Inspiré nature Incandescence
+title: Inspiré Nature Incandescence
 categories: Abstrait
 w: 40
 h: 27

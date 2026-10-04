@@ -1,6 +1,6 @@
 ---
 id: 118
-title: Le coq et sa compagne
+title: Le Coq et sa Compagne
 categories: Animaux
 w: 92
 h: 73

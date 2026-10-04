@@ -157,7 +157,7 @@ const { count, index } = works.reduce(
     <WorkImages work={work} transitionName={workTransitionName(collection.id, work.id)} />
     <!-- When printing, this line is printed beside the logo instead (printInfo above) -->
     <div class="work-info py-3 w-full text-center font-bold shrink-0 print:hidden">
-      <span class="capitalize">{titleOf(work)}</span>{work.data.year_start && `, ${work.data.year_start}`}{work.data.year_start && work.data.year_end && `–${work.data.year_end}`}{work.data.w && work.data.h && ` (${work.data.w} × ${work.data.h} cm)`}
+      {titleOf(work)}{work.data.year_start && `, ${work.data.year_start}`}{work.data.year_start && work.data.year_end && `–${work.data.year_end}`}{work.data.w && work.data.h && ` (${work.data.w} × ${work.data.h} cm)`}
       <span class="print:hidden" data-pagefind-ignore x-data={`{ id: ${JSON.stringify(work.id)} }`}>
         <button
           type="button"

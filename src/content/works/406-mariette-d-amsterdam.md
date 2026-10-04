@@ -1,6 +1,6 @@
 ---
 id: 406
-title: Mariette d' Amsterdam
+title: "Mariette d'Amsterdam"
 categories: Figures humaines
 w: 80
 h: 60

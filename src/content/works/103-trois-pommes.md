@@ -1,6 +1,6 @@
 ---
 id: 103
-title: Trois pommes
+title: Trois Pommes
 categories: Natures mortes
 w: 55
 h: 33

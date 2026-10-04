@@ -1,6 +1,6 @@
 ---
 id: 246
-title: Lettre é ma bien aimée X
+title: Lettre à ma Bien Aimée X
 categories: La vie de femme
 w: 100
 h: 73

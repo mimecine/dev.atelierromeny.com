@@ -1,6 +1,6 @@
 ---
 id: 387
-title: Le cimetiére de Villars
+title: Le Cimetière de Villars
 images:
   - '/src/media/works/387-le-cimetiere-de-villars.webp'
   - '/src/media/works/387-le-cimetiere-de-villars-detail.webp'

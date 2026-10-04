@@ -1,6 +1,6 @@
 ---
 id: 565
-title: Petite nue 5
+title: Petite Nue 5
 categories: Nues
 w: 38
 h: 55

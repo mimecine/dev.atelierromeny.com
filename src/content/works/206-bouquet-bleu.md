@@ -1,6 +1,6 @@
 ---
 id: 206
-title: Bouquet bleu
+title: Bouquet Bleu
 images:
   - '/src/media/works/206-bouquet-bleu-v2.webp'
   - '/src/media/works/206-bouquet-bleu-detail.webp'

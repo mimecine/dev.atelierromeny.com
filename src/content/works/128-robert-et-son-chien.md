@@ -1,6 +1,6 @@
 ---
 id: 128
-title: Robert et son chien
+title: Robert et son Chien
 images:
   - '/src/media/works/128-robert-et-son-chien-detail.webp'
 old_image: '/src/media/works/128-robert-et-son-chien.webp'

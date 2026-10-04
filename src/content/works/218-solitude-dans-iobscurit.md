@@ -1,6 +1,6 @@
 ---
 id: 218
-title: Solitude dans I'obscurit
+title: "Solitude dans l'Obscurité"
 categories: Figures humaines
 w: 64
 h: 72

@@ -1,6 +1,6 @@
 ---
 id: 550
-title: Fantaisie colorée II
+title: Fantaisie Colorée II
 categories: Abstrait
 w: 60
 h: 60

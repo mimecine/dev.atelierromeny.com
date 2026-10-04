@@ -1,6 +1,6 @@
 ---
 id: 593
-title: Bouquet vert
+title: Bouquet Vert
 images:
   - '/src/media/works/593-bouquet-vert.webp'
 collections:

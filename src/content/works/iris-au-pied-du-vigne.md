@@ -1,6 +1,6 @@
 ---
 id: null
-title: Iris au pied du vigne
+title: Iris au Pied du Vigne
 images:
   - '/src/media/works/iris-au-pied-du-vigne-detail.webp'
 old_image: '/src/media/works/iris-au-pied-du-vigne.webp'

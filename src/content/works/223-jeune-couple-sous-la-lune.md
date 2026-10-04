@@ -1,6 +1,6 @@
 ---
 id: 223
-title: Jeune couple sous la lune
+title: Jeune Couple sous la Lune
 categories: Figures humaines
 w: 65
 h: 92

@@ -1,6 +1,6 @@
 ---
 id: 597
-title: Blue rest
+title: Blue Rest
 images:
   - '/src/media/works/597-blue-rest-detail.webp'
 old_image: '/src/media/works/597-blue-rest.webp'

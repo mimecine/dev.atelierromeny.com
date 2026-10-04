@@ -1,6 +1,6 @@
 ---
 id: 281
-title: La plage
+title: La Plage
 categories: Figures humaines
 w: 22
 h: 16

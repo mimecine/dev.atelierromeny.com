@@ -1,6 +1,6 @@
 ---
 id: 762
-title: Coin du jardin
+title: Coin du Jardin
 images:
   - '/src/media/works/762-coin-du-jardin-v2.webp'
 collections:

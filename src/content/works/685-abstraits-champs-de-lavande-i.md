@@ -1,6 +1,6 @@
 ---
 id: 685
-title: Abstraits Champs de lavande I
+title: Abstraits Champs de Lavande I
 categories: Paysages
 w: 65
 h: 57

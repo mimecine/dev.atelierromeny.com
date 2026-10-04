@@ -1,6 +1,6 @@
 ---
 id: 622
-title: Ciel nordique
+title: Ciel Nordique
 categories: Abstrait
 w: 55
 h: 46

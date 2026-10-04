@@ -1,6 +1,6 @@
 ---
 id: 19
-title: La calanque de Sormiou
+title: La Calanque de Sormiou
 categories: Paysages
 w: 100
 h: 73

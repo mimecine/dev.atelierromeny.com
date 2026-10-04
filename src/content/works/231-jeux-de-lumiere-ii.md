@@ -1,6 +1,6 @@
 ---
 id: 231
-title: Jeux de lumiére II
+title: Jeux de Lumière II
 categories: Abstrait
 w: 80
 h: 80

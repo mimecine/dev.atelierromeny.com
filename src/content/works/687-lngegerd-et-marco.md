@@ -1,6 +1,6 @@
 ---
 id: 687
-title: Lngegerd et Marco
+title: Ingegerd et Marco
 images:
   - '/src/media/works/687-lngegerd-et-marco-detail.webp'
 old_image: '/src/media/works/687-lngegerd-et-marco.webp'

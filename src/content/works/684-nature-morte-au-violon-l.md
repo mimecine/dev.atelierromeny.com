@@ -1,6 +1,6 @@
 ---
 id: 684
-title: Nature morte au violon l
+title: Nature Morte au Violon I
 images:
   - '/src/media/works/684-nature-morte-au-violon-l-v2.webp'
   - '/src/media/works/684-nature-morte-au-violon-l-v2-2.webp'

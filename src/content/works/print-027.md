@@ -1,5 +1,5 @@
 ---
-title: "Le bouquet"
+title: Le Bouquet
 categories: Works on Paper
 collections:
   - works-on-paper

@@ -1,6 +1,6 @@
 ---
 id: 613
-title: Mandoline sur fond Chaud
+title: Mandoline sur Fond Chaud
 images:
   - '/src/media/works/613-mandoline-sur-fond-chaud-v2.webp'
   - '/src/media/works/613-mandoline-sur-fond-chaud-detail.webp'

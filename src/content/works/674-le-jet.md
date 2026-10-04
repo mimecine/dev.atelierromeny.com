@@ -1,6 +1,6 @@
 ---
 id: 674
-title: Le jet
+title: Le Jet
 images:
   - '/src/media/works/674-le-jet-detail.webp'
 old_image: '/src/media/works/674-le-jet.webp'

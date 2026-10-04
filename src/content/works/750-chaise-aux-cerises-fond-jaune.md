@@ -1,6 +1,6 @@
 ---
 id: 750
-title: Chaise aux cerises fond jaune
+title: Chaise aux Cerises Fond Jaune
 categories: Natures mortes
 w: 60
 h: 75

@@ -1,6 +1,6 @@
 ---
 id: 493
-title: La montagne en fleur
+title: La Montagne en Fleur
 images:
   - '/src/media/works/493-la-montagne-en-fleur.webp'
 collections:

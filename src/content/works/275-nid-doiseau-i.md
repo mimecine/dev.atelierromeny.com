@@ -1,6 +1,6 @@
 ---
 id: 275
-title: Nid d'oiseau I
+title: "Nid d'Oiseau I"
 images:
   - '/src/media/works/275-nid-doiseau-i-detail.webp'
 old_image: '/src/media/works/275-nid-doiseau-i.webp'

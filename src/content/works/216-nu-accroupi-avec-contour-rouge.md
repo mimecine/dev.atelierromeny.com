@@ -1,6 +1,6 @@
 ---
 id: 216
-title: Nu accroupi avec contour rouge
+title: Nu Accroupi avec Contour Rouge
 categories: Figures humaines
 w: 65
 h: 81

@@ -1,6 +1,6 @@
 ---
 id: 497
-title: I'homme dans la neige
+title: "L'Homme dans la Neige"
 images:
   - '/src/media/works/497-ihomme-dans-la-neige.webp'
 categories: Accident dans la montagne

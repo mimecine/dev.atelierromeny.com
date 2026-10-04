@@ -1,6 +1,6 @@
 ---
 id: 376
-title: Macrocosme I (bleu)
+title: Macrocosme I (Bleu)
 categories: Abstrait
 w: 100
 h: 100

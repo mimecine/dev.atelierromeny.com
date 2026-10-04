@@ -1,6 +1,6 @@
 ---
 id: 716
-title: Composition florale
+title: Composition Florale
 categories: Fleurs
 w: 55
 h: 50

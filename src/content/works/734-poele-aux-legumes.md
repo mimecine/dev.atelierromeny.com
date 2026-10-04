@@ -1,6 +1,6 @@
 ---
 id: 734
-title: Poéle aux légumes
+title: Poêle aux Légumes
 categories: Natures mortes
 w: 55
 h: 38

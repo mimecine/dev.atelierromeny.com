@@ -1,6 +1,6 @@
 ---
 id: 306
-title: Au coeur du bois
+title: Au Coeur du Bois
 categories: Abstrait
 w: 38
 h: 46

@@ -1,6 +1,6 @@
 ---
 id: 272
-title: Le mur 3
+title: Le Mur 3
 categories: Abstrait
 w: 27
 h: 19

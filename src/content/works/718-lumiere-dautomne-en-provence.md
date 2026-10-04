@@ -1,6 +1,6 @@
 ---
 id: 718
-title: Lumiére d'automne en Provence
+title: "Lumière d'Automne en Provence"
 categories: Paysages
 w: 80
 h: 40

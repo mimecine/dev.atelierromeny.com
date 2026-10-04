@@ -1,6 +1,6 @@
 ---
 id: 720
-title: Le Ventoux couronn
+title: Le Ventoux Couronné
 images:
   - '/src/media/works/720-le-ventoux-couronn-detail.webp'
 old_image: '/src/media/works/720-le-ventoux-couronn.webp'

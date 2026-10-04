@@ -1,6 +1,6 @@
 ---
 id: 576
-title: Poéle au bouquet de fleurs
+title: Poêle au Bouquet de Fleurs
 categories: Natures mortes
 w: 60
 h: 81

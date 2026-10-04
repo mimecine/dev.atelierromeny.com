@@ -1,6 +1,6 @@
 ---
 id: 253
-title: La table de pierre aux aubergines
+title: La Table de Pierre aux Aubergines
 categories: Natures mortes
 w: 33
 h: 41

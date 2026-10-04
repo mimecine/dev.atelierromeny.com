@@ -1,6 +1,6 @@
 ---
 id: 60
-title: Moment de réve (esquisse)
+title: Moment de Rêve (Esquisse)
 categories: Figures humaines
 w: 33
 h: 46

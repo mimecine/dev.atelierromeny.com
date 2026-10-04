@@ -1,6 +1,6 @@
 ---
 id: 286
-title: Le tournesol
+title: Le Tournesol
 categories: Fleurs
 w: 50
 h: 100

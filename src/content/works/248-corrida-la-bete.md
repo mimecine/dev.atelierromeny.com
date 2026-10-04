@@ -1,6 +1,6 @@
 ---
 id: 248
-title: Corrida (la béte)
+title: Corrida (La Bête)
 categories: Tauromachie
 w: 81
 h: 100

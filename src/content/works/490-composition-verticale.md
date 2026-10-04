@@ -1,6 +1,6 @@
 ---
 id: 490
-title: Composition verticale
+title: Composition Verticale
 categories: Abstrait
 w: 95
 h: 145

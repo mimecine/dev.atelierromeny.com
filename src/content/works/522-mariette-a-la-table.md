@@ -1,6 +1,6 @@
 ---
 id: 522
-title: Mariette a la table
+title: Mariette à la Table
 categories: Figures humaines
 w: 92
 h: 120

@@ -1,6 +1,6 @@
 ---
 id: 744
-title: Cruche at fruits sur fond noir
+title: Cruche et Fruits sur Fond Noir
 categories: Natures mortes
 w: 59
 h: 44

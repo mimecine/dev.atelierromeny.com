@@ -1,6 +1,6 @@
 ---
 id: 721
-title: Le grand cerisier du studio
+title: Le Grand Cerisier du Studio
 categories: Arbres
 w: 120
 h: 140

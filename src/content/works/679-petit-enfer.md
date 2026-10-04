@@ -1,6 +1,6 @@
 ---
 id: 679
-title: Petit enfer
+title: Petit Enfer
 images:
   - '/src/media/works/679-petit-enfer-detail.webp'
 old_image: '/src/media/works/679-petit-enfer.webp'

@@ -1,6 +1,6 @@
 ---
 id: 598
-title: La branche noire
+title: La Branche Noire
 images:
   - '/src/media/works/598-la-branche-noire-detail.webp'
 old_image: '/src/media/works/598-la-branche-noire.webp'

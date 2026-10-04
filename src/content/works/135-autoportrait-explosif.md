@@ -1,6 +1,6 @@
 ---
 id: 135
-title: Autoportrait - explosif
+title: Autoportrait - Explosif
 categories: Figures humaines
 w: 73
 h: 92

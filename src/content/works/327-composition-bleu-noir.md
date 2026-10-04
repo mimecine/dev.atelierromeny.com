@@ -1,6 +1,6 @@
 ---
 id: 327
-title: Composition bleu noir
+title: Composition Bleu Noir
 images:
   - '/src/media/works/327-composition-bleu-noir-detail.webp'
 old_image: '/src/media/works/327-composition-bleu-noir.webp'

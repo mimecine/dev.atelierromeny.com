@@ -1,6 +1,6 @@
 ---
 id: 604
-title: Le soir aux Baups
+title: Le Soir aux Baups
 categories: Paysages
 w: 64
 h: 80

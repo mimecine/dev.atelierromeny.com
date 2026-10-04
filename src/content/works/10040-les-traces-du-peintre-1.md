@@ -1,6 +1,6 @@
 ---
 id: 10040
-title: Les traces du peintre 1
+title: Les Traces du Peintre 1
 categories: Abstrait
 w: 120
 h: 100

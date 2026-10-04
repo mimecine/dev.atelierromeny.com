@@ -1,6 +1,6 @@
 ---
 id: null
-title: La farandole des fruits
+title: La Farandole des Fruits
 images:
   - '/src/media/works/la-farandole-des-fruits-detail.webp'
 old_image: '/src/media/works/la-farandole-des-fruits.webp'

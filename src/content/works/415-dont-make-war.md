@@ -1,6 +1,6 @@
 ---
 id: 415
-title: Don't make war
+title: "Don't Make War"
 categories: Métro
 w: 120
 h: 140

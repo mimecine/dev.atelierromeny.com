@@ -1,6 +1,6 @@
 ---
 id: 646
-title: Composition lunaire
+title: Composition Lunaire
 images:
   - '/src/media/works/646-composition-lunaire.webp'
 categories: Abstrait

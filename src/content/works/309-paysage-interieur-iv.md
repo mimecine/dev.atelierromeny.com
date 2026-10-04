@@ -1,6 +1,6 @@
 ---
 id: 309
-title: Paysage intérieur IV
+title: Paysage Intérieur IV
 categories: Abstrait
 w: 40
 h: 33

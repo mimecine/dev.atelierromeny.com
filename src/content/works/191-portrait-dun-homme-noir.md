@@ -1,6 +1,6 @@
 ---
 id: 191
-title: Portrait d'un homme noir
+title: "Portrait d'un Homme Noir"
 categories: Figures humaines
 w: 20
 h: 26

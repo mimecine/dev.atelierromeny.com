@@ -1,6 +1,6 @@
 ---
 id: 276
-title: Nid d'oiseau II
+title: "Nid d'Oiseau II"
 images:
   - '/src/media/works/276-nid-doiseau-ii-detail.webp'
 old_image: '/src/media/works/276-nid-doiseau-ii.webp'

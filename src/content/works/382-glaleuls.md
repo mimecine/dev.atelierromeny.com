@@ -1,6 +1,6 @@
 ---
 id: 382
-title: Gla'l'euls
+title: Glaïeuls
 images:
   - '/src/media/works/382-glaleuls-detail.webp'
 old_image: '/src/media/works/382-glaleuls.webp'

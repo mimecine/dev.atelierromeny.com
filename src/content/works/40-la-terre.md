@@ -1,6 +1,6 @@
 ---
 id: 40
-title: La terre
+title: La Terre
 categories: Abstrait
 w: 160
 h: 125

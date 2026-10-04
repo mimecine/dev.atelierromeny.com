@@ -1,6 +1,6 @@
 ---
 id: 373
-title: Vue aerienne rouge II
+title: Vue Aerienne Rouge II
 images:
   - '/src/media/works/373-vue-aerienne-rouge-ii.webp'
 categories: Abstrait

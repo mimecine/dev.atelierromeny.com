@@ -1,6 +1,6 @@
 ---
 id: 122
-title: La source
+title: La Source
 images:
   - '/src/media/works/122-la-source-detail.webp'
 old_image: '/src/media/works/122-la-source.webp'

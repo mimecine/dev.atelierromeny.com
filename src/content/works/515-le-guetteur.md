@@ -1,6 +1,6 @@
 ---
 id: 515
-title: Le guetteur
+title: Le Guetteur
 categories: Figures humaines
 w: 72
 h: 80

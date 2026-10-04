@@ -1,6 +1,6 @@
 ---
 id: 503
-title: De operate Van prof Boerema Amsterdam
+title: De Operate Van Prof Boerema Amsterdam
 categories: Figures humaines
 w: 165
 h: 120

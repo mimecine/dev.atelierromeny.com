@@ -1,6 +1,6 @@
 ---
 id: 134
-title: Autoportrait - A Lisou
+title: Autoportrait - À Lisou
 categories: Figures humaines
 w: 73
 h: 92

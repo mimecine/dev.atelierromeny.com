@@ -1,6 +1,6 @@
 ---
 id: null
-title: Bird by the sea with mountains
+title: Bird by the Sea with Mountains
 categories: Birds
 w: 55
 h: 38

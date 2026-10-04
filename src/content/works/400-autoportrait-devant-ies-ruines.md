@@ -1,6 +1,6 @@
 ---
 id: 400
-title: Autoportrait devant Ies ruines
+title: Autoportrait Devant les Ruines
 images:
   - '/src/media/works/400-autoportrait-devant-ies-ruines-detail.webp'
 old_image: '/src/media/works/400-autoportrait-devant-ies-ruines.webp'

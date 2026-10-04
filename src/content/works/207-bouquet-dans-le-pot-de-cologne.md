@@ -1,6 +1,6 @@
 ---
 id: 207
-title: Bouquet dans le pot de Cologne
+title: Bouquet dans le Pot de Cologne
 images:
   - '/src/media/works/207-bouquet-dans-le-pot-de-cologne-detail.webp'
 old_image: '/src/media/works/207-bouquet-dans-le-pot-de-cologne.webp'

@@ -1,6 +1,6 @@
 ---
 id: 347
-title: Composition aérienne
+title: Composition Aérienne
 categories: Abstrait
 w: 81
 h: 64

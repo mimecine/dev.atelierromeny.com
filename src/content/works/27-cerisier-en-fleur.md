@@ -1,6 +1,6 @@
 ---
 id: 27
-title: Cerisier en fleur
+title: Cerisier en Fleur
 categories: Arbres en fleurs
 w: 80
 h: 100

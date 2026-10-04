@@ -1,6 +1,6 @@
 ---
 id: 658
-title: La terre
+title: La Terre
 images:
   - '/src/media/works/658-la-terre-v2.webp'
   - '/src/media/works/658-la-terre-v2-2.webp'

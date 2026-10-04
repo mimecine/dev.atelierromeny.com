@@ -1,6 +1,6 @@
 ---
 id: 359
-title: Ecorce Ill
+title: Ecorce III
 categories: Abstrait
 w: 35
 h: 27

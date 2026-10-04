@@ -1,6 +1,6 @@
 ---
 id: 324
-title: Baby boom
+title: Baby Boom
 categories: Figures humaines
 w: 22
 h: 27

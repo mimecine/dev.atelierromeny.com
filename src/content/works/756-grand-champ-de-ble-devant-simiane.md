@@ -1,6 +1,6 @@
 ---
 id: 756
-title: Grand champ de blé devant Simiane
+title: Grand Champ de Blé Devant Simiane
 categories: Paysages
 w: 100
 h: 65

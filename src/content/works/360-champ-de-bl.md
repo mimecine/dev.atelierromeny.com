@@ -1,6 +1,6 @@
 ---
 id: 360
-title: Champ de bl
+title: Champ de Blé
 categories: Paysages
 w: 120
 h: 100

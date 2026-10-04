@@ -1,6 +1,6 @@
 ---
 id: 243
-title: Lettre a ma bien aimée IX
+title: Lettre à ma Bien Aimée IX
 categories: La vie de femme
 w: 100
 h: 73

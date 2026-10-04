@@ -1,6 +1,6 @@
 ---
 id: 499
-title: Paysage nordique 5
+title: Paysage Nordique 5
 images:
   - '/src/media/works/499-paysage-nordique-5-v2.webp'
 collections:

@@ -1,6 +1,6 @@
 ---
 id: 708
-title: Branche de prunes
+title: Branche de Prunes
 categories: Natures mortes
 w: 100
 h: 50

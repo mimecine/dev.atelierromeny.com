@@ -1,6 +1,6 @@
 ---
 id: 494
-title: 'Intérieur, salle d‘opération avec famille'
+title: "Intérieur, Salle d'Opération avec Famille"
 categories: Accident dans la montagne
 w: 140
 h: 120

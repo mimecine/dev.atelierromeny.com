@@ -1,6 +1,6 @@
 ---
 id: 172
-title: Bouquet mauve
+title: Bouquet Mauve
 categories: Natures mortes
 w: 50
 h: 60

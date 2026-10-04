@@ -1,6 +1,6 @@
 ---
 id: 363
-title: Autour de la souche
+title: Autour de la Souche
 images:
   - '/src/media/works/363-autour-de-la-souche-v2.webp'
   - '/src/media/works/363-autour-de-la-souche-v2-2.webp'

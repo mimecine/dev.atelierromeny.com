@@ -1,6 +1,6 @@
 ---
 id: 14
-title: La brouette de Beccari
+title: La Brouette de Beccari
 images:
   - '/src/media/works/14-la-brouette-de-beccari.webp'
 categories: Paysages

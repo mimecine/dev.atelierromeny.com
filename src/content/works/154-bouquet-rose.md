@@ -1,6 +1,6 @@
 ---
 id: 154
-title: Bouquet rose
+title: Bouquet Rose
 categories: Natures mortes
 w: 65
 h: 81

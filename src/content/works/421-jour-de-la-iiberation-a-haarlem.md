@@ -1,6 +1,6 @@
 ---
 id: 421
-title: Jour de la Iibération a Haarlem
+title: Jour de la Libération à Haarlem
 images:
   - '/src/media/works/421-jour-de-la-iiberation-a-haarlem.webp'
 categories: Paysages

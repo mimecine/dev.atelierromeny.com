@@ -1,6 +1,6 @@
 ---
 id: 383
-title: Spanskt natt (nuit espagnole)
+title: Spanskt Natt (Nuit Espagnole)
 images:
   - '/src/media/works/383-spanskt-natt-nuit-espagnole-detail.webp'
 old_image: '/src/media/works/383-spanskt-natt-nuit-espagnole.webp'

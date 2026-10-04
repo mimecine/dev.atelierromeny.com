@@ -1,6 +1,6 @@
 ---
 id: 444
-title: Recherche freudienne 2
+title: Recherche Freudienne 2
 categories: Figures humaines
 w: 130
 h: 97

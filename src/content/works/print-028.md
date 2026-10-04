@@ -1,5 +1,5 @@
 ---
-title: "Nature morte"
+title: Nature Morte
 categories: Works on Paper
 collections:
   - works-on-paper

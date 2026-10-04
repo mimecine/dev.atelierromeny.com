@@ -1,6 +1,6 @@
 ---
 id: 23
-title: Amandier en fleurs 1
+title: Amandier en Fleurs 1
 categories: Arbres en fleurs
 w: 65
 h: 100

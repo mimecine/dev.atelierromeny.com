@@ -1,6 +1,6 @@
 ---
 id: 20001
-title: La chaise en fleurs
+title: La Chaise en Fleurs
 images:
   - '/src/media/works/la-chaise-en-fleurs-detail.webp'
 old_image: '/src/media/works/la-chaise-en-fleurs.webp'

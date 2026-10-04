@@ -1,6 +1,6 @@
 ---
 id: null
-title: Le cerisier
+title: Le Cerisier
 images:
   - '/src/media/works/le-cerisier.webp'
 categories: Landscape

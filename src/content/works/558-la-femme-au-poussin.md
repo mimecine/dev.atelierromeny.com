@@ -1,6 +1,6 @@
 ---
 id: 558
-title: La femme au poussin
+title: La Femme au Poussin
 categories: Figures humaines
 w: 33
 h: 46

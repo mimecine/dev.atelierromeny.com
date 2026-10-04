@@ -1,6 +1,6 @@
 ---
 id: 779
-title: Feuilles d‘automne
+title: "Feuilles d'Automne"
 categories: Natures mortes
 w: 55
 h: 38

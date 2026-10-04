@@ -1,6 +1,6 @@
 ---
 id: 426
-title: Les grances feuilles
+title: Les Grances Feuilles
 categories: Plantes
 w: 97
 h: 77

@@ -1,6 +1,6 @@
 ---
 id: 663
-title: La mort
+title: La Mort
 categories: La création
 w: 180
 h: 130

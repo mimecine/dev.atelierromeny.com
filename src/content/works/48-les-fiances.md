@@ -1,6 +1,6 @@
 ---
 id: 48
-title: Les fiancés
+title: Les Fiancés
 categories: Figures humaines
 w: 130
 h: 130

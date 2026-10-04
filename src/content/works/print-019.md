@@ -1,5 +1,5 @@
 ---
-title: "Ur djungeln"
+title: Ur Djungeln
 categories: Works on Paper
 collections:
   - works-on-paper

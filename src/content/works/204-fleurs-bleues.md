@@ -1,6 +1,6 @@
 ---
 id: 204
-title: Fleurs bleues
+title: Fleurs Bleues
 categories: Fleurs
 w: 50
 h: 60

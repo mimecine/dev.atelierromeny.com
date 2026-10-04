@@ -1,6 +1,6 @@
 ---
 id: 738
-title: Le broc fleuri
+title: Le Broc Fleuri
 categories: Natures mortes
 w: 54
 h: 65

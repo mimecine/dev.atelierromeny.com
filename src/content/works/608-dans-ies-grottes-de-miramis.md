@@ -1,6 +1,6 @@
 ---
 id: 608
-title: Dans Ies grottes de Miramis
+title: Dans les Grottes de Miramis
 images:
   - '/src/media/works/608-dans-ies-grottes-de-miramis-v2.webp'
   - '/src/media/works/608-dans-ies-grottes-de-miramis-detail.webp'

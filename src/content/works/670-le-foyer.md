@@ -1,6 +1,6 @@
 ---
 id: 670
-title: Le foyer
+title: Le Foyer
 categories: Animaux
 w: 70
 h: 60

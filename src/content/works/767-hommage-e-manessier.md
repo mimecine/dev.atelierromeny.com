@@ -1,6 +1,6 @@
 ---
 id: 767
-title: Hommage é Manessier
+title: Hommage à Manessier
 categories: Abstrait
 w: 120
 h: 75

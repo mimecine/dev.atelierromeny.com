@@ -1,6 +1,6 @@
 ---
 id: null
-title: On the stove
+title: On the Stove
 images:
   - '/src/media/works/on-the-stove.webp'
   - '/src/media/works/on-the-stove-detail.webp'

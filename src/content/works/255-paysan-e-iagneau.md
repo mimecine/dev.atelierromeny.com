@@ -1,6 +1,6 @@
 ---
 id: 255
-title: Paysan é I'agneau
+title: "Paysan à l'Agneau"
 categories: Figures humaines
 w: 60
 h: 81

@@ -1,6 +1,6 @@
 ---
 id: 119
-title: Chaise poisson et rhubarbe
+title: Chaise Poisson et Rhubarbe
 categories: Natures mortes
 w: 60
 h: 90

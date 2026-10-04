@@ -1,6 +1,6 @@
 ---
 id: 241
-title: Lettre é ma bien aimée III
+title: Lettre à ma Bien Aimée III
 categories: La vie de femme
 w: 100
 h: 73

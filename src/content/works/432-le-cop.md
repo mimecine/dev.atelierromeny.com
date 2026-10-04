@@ -1,6 +1,6 @@
 ---
 id: 432
-title: Le cop
+title: Le Cop
 categories: Le peintre et son model
 w: 65
 h: 54

@@ -1,6 +1,6 @@
 ---
 id: 403
-title: 'Joseph, Ie postier d‘Amsterdam'
+title: "Joseph, le Postier d'Amsterdam"
 categories: Figures humaines
 w: 80
 h: 55

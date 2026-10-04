@@ -1,6 +1,6 @@
 ---
 id: 562
-title: La belle Héléne
+title: La Belle Héléne
 categories: Nues
 w: 46
 h: 65

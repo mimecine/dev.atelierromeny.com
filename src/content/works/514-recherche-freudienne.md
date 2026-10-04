@@ -1,6 +1,6 @@
 ---
 id: 514
-title: Recherche freudienne
+title: Recherche Freudienne
 categories: Figures humaines
 w: 98
 h: 71

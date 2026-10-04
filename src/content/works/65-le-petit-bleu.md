@@ -1,6 +1,6 @@
 ---
 id: 65
-title: Le petit bleu
+title: Le Petit Bleu
 categories: Abstrait
 w: 30
 h: 30

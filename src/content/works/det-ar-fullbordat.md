@@ -1,6 +1,6 @@
 ---
 id: null
-title: Det är fullbordat
+title: Det Är Fullbordat
 categories: Abstract
 w: 130
 h: 80

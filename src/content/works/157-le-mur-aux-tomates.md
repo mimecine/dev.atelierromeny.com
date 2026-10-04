@@ -1,6 +1,6 @@
 ---
 id: 157
-title: Le mur aux tomates
+title: Le Mur aux Tomates
 images:
   - '/src/media/works/157-le-mur-aux-tomates-v2.webp'
 collections:

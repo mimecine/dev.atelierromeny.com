@@ -1,6 +1,6 @@
 ---
 id: 741
-title: Tournesol butin
+title: Tournesol Butin
 categories: Fleurs
 w: 54
 h: 100

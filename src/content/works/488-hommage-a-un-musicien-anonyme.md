@@ -1,6 +1,6 @@
 ---
 id: 488
-title: Hommage a un musicien anonyme
+title: Hommage à un Musicien Anonyme
 images:
   - '/src/media/works/488-hommage-a-un-musicien-anonyme-v2.webp'
   - '/src/media/works/488-hommage-a-un-musicien-anonyme-detail.webp'

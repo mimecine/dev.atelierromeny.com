@@ -1,6 +1,6 @@
 ---
 id: 54
-title: L'oublié (tristesse n°2)
+title: "L'Oublié (Tristesse n°2)"
 categories: Métro
 w: 65
 h: 81

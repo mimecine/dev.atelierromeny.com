@@ -1,6 +1,6 @@
 ---
 id: 666
-title: Composition en pleine nature
+title: Composition en Pleine Nature
 images:
   - '/src/media/works/666-composition-en-pleine-nature.webp'
 categories: Abstrait

@@ -1,6 +1,6 @@
 ---
 id: 305
-title: La gitane
+title: La Gitane
 categories: Figures humaines
 w: 33
 h: 46

@@ -1,6 +1,6 @@
 ---
 id: 179
-title: Le repas du chat
+title: Le Repas du Chat
 categories: Animaux
 w: 40
 h: 30

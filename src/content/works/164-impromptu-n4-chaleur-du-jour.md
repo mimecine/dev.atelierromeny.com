@@ -1,6 +1,6 @@
 ---
 id: 164
-title: Impromptu n°4 (chaleur du jour)
+title: Impromptu n°4 (Chaleur du Jour)
 categories: Abstrait
 w: 46
 h: 38

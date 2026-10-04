@@ -1,6 +1,6 @@
 ---
 id: 232
-title: Jeux de Iumiére HI
+title: Jeux de Lumière III
 categories: Abstrait
 w: 80
 h: 80

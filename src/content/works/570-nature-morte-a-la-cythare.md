@@ -1,6 +1,6 @@
 ---
 id: 570
-title: Nature morte a la Cythare
+title: Nature Morte à la Cythare
 images:
   - '/src/media/works/570-nature-morte-a-la-cythare-v2.webp'
   - '/src/media/works/570-nature-morte-a-la-cythare-v2-2.webp'

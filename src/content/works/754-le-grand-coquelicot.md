@@ -1,6 +1,6 @@
 ---
 id: 754
-title: Le grand coquelicot
+title: Le Grand Coquelicot
 categories: Paysages
 w: 100
 h: 73

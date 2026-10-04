@@ -1,6 +1,6 @@
 ---
 id: 380
-title: Nue et collages
+title: Nue et Collages
 categories: Figures humaines
 w: 50
 h: 60

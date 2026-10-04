@@ -1,6 +1,6 @@
 ---
 id: 208
-title: Iris et papillon
+title: Iris et Papillon
 categories: Fleurs
 w: 33
 h: 41

@@ -1,6 +1,6 @@
 ---
 id: 401
-title: Hens ter haar Romeny
+title: Hens ter Haar Romeny
 categories: Figures humaines
 w: 90
 h: 60

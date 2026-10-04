@@ -1,6 +1,6 @@
 ---
 id: 695
-title: Villars sous la neige
+title: Villars sous la Neige
 categories: Paysages
 w: 81
 h: 60

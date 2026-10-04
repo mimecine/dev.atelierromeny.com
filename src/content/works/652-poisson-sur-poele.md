@@ -1,6 +1,6 @@
 ---
 id: 652
-title: Poisson sur poéle
+title: Poisson sur Poêle
 images:
   - '/src/media/works/652-poisson-sur-poele-v2.webp'
   - '/src/media/works/652-poisson-sur-poele-detail.webp'

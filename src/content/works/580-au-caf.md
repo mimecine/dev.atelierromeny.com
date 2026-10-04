@@ -1,6 +1,6 @@
 ---
 id: 580
-title: Au caf
+title: Au Café
 categories: Natures mortes
 w: 100
 h: 65

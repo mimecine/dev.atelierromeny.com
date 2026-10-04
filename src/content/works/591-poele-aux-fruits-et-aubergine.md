@@ -1,6 +1,6 @@
 ---
 id: 591
-title: Poéle aux fruits et aubergine
+title: Poêle aux Fruits et Aubergine
 images:
   - '/src/media/works/591-poele-aux-fruits-et-aubergine-v2.webp'
   - '/src/media/works/591-poele-aux-fruits-et-aubergine-detail.webp'

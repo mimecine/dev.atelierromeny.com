@@ -1,6 +1,6 @@
 ---
 id: 230
-title: Jeux de lumiére I
+title: Jeux de Lumière I
 categories: Abstrait
 w: 80
 h: 80

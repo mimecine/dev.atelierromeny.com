@@ -1,6 +1,6 @@
 ---
 id: 146
-title: Bouquet orange
+title: Bouquet Orange
 images:
   - '/src/media/works/146-bouquet-orange.webp'
 categories: Natures mortes

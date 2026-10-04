@@ -1,6 +1,6 @@
 ---
 id: 123
-title: Désert marin I
+title: Désert Marin I
 categories: Abstrait
 w: 100
 h: 81

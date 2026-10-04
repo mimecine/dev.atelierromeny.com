@@ -1,6 +1,6 @@
 ---
 id: 163
-title: Les deux cousines
+title: Les Deux Cousines
 images:
   - '/src/media/works/163-les-deux-cousines.webp'
 collections:

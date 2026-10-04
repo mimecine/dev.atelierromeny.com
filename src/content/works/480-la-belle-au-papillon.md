@@ -1,6 +1,6 @@
 ---
 id: 480
-title: La belle au papillon
+title: La Belle au Papillon
 categories: Figures humaines
 w: 100
 h: 65

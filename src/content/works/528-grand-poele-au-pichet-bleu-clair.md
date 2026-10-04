@@ -1,6 +1,6 @@
 ---
 id: 528
-title: Grand poéle au pichet bleu Clair
+title: Grand Poêle au Pichet Bleu Clair
 images:
   - '/src/media/works/528-grand-poele-au-pichet-bleu-clair.webp'
 collections:

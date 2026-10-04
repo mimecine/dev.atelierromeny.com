@@ -1,6 +1,6 @@
 ---
 id: 453
-title: Dramatisk upptakt
+title: Dramatisk Upptakt
 images:
   - '/src/media/works/453-dramatisk-upptakt-detail.webp'
 old_image: '/src/media/works/453-dramatisk-upptakt.webp'

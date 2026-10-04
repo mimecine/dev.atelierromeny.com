@@ -1,6 +1,6 @@
 ---
 id: 428
-title: FART (vitesse)
+title: FART (Vitesse)
 categories: abstrait
 w: 85
 h: 65

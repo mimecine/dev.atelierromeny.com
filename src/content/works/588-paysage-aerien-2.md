@@ -1,6 +1,6 @@
 ---
 id: 588
-title: Paysage aérien 2
+title: Paysage Aérien 2
 images:
   - '/src/media/works/588-paysage-aerien-2-detail.webp'
 old_image: '/src/media/works/588-paysage-aerien-2.webp'

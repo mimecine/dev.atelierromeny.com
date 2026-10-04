@@ -1,6 +1,6 @@
 ---
 id: 523
-title: Champ lumineux
+title: Champ Lumineux
 categories: Paysages
 w: 70
 h: 85

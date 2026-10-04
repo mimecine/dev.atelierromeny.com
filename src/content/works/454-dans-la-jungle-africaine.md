@@ -1,6 +1,6 @@
 ---
 id: 454
-title: Dans la jungle africaine
+title: Dans la Jungle Africaine
 images:
   - '/src/media/works/454-dans-la-jungle-africaine-detail.webp'
 old_image: '/src/media/works/454-dans-la-jungle-africaine.webp'

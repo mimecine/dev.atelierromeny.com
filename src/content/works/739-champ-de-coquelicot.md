@@ -1,6 +1,6 @@
 ---
 id: 739
-title: Champ de coquelicot
+title: Champ de Coquelicot
 categories: Paysages
 w: 81
 h: 54

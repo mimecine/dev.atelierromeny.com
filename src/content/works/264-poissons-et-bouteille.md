@@ -1,6 +1,6 @@
 ---
 id: 264
-title: Poissons et bouteille
+title: Poissons et Bouteille
 categories: Natures mortes
 w: 54
 h: 38

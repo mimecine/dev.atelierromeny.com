@@ -1,6 +1,6 @@
 ---
 id: null
-title: Quartet des saxophones / Loïc Robin
+title: Quartet des Saxophones / Loïc Robin
 images:
   - '/src/media/works/quartet-des-saxophones-loic-robin.webp'
 categories: Musique

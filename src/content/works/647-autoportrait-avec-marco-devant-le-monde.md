@@ -1,6 +1,6 @@
 ---
 id: 647
-title: Autoportrait avec Marco devant le monde
+title: Autoportrait avec Marco Devant le Monde
 categories: Figures humaines
 w: 170
 h: 175

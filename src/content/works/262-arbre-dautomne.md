@@ -1,6 +1,6 @@
 ---
 id: 262
-title: Arbre d'automne
+title: "Arbre d'Automne"
 categories: Automne
 w: 54
 h: 73

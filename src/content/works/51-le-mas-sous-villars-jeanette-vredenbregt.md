@@ -1,6 +1,6 @@
 ---
 id: 51
-title: Le mas sous Villars (Jeanette Vredenbregt)
+title: Le Mas sous Villars (Jeanette Vredenbregt)
 categories: Paysages
 w: 100
 h: 81

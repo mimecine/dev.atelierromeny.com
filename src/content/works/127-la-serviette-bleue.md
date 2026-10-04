@@ -1,6 +1,6 @@
 ---
 id: 127
-title: La serviette bleue
+title: La Serviette Bleue
 images:
   - '/src/media/works/127-la-serviette-bleue-v2.webp'
   - '/src/media/works/127-la-serviette-bleue-v2-2.webp'

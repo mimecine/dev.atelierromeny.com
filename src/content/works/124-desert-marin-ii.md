@@ -1,6 +1,6 @@
 ---
 id: 124
-title: Désert marin II
+title: Désert Marin II
 categories: Abstrait
 w: 100
 h: 81

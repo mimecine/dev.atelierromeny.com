@@ -1,6 +1,6 @@
 ---
 id: 345
-title: Chaleur provencale
+title: Chaleur Provencale
 categories: Abstrait
 w: 85
 h: 65

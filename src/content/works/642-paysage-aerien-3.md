@@ -1,6 +1,6 @@
 ---
 id: 642
-title: Paysage aérien 3
+title: Paysage Aérien 3
 images:
   - '/src/media/works/642-paysage-aerien-3-detail.webp'
 old_image: '/src/media/works/642-paysage-aerien-3.webp'

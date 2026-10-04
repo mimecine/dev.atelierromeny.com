@@ -1,6 +1,6 @@
 ---
 id: 247
-title: Lettre à ma bien aimée VIII
+title: Lettre à ma Bien Aimée VIII
 categories: La vie de femme
 w: 100
 h: 73

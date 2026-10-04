@@ -1,6 +1,6 @@
 ---
 id: 627
-title: L'étreinte au monde 4
+title: "L'Étreinte au Monde 4"
 categories: L'étreinte au monde
 w: 160
 h: 205

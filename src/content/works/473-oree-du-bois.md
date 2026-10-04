@@ -1,6 +1,6 @@
 ---
 id: 473
-title: Orée du bois
+title: Orée du Bois
 images:
   - '/src/media/works/473-oree-du-bois-detail.webp'
 old_image: '/src/media/works/473-oree-du-bois.webp'

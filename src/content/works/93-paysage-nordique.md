@@ -1,6 +1,6 @@
 ---
 id: 93
-title: Paysage nordique
+title: Paysage Nordique
 images:
   - '/src/media/works/93-paysage-nordique-detail.webp'
 old_image: '/src/media/works/93-paysage-nordique.webp'

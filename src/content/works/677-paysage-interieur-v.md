@@ -1,6 +1,6 @@
 ---
 id: 677
-title: Paysage intérieur V
+title: Paysage Intérieur V
 categories: Abstrait
 w: 41
 h: 27

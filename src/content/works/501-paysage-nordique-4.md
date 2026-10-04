@@ -1,6 +1,6 @@
 ---
 id: 501
-title: Paysage nordique 4
+title: Paysage Nordique 4
 images:
   - '/src/media/works/501-paysage-nordique-4-v2.webp'
   - '/src/media/works/501-paysage-nordique-4-detail.webp'

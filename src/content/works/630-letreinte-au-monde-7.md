@@ -1,6 +1,6 @@
 ---
 id: 630
-title: L'étreinte au monde 7
+title: "L'Étreinte au Monde 7"
 categories: L'étreinte au monde
 w: 160
 h: 205

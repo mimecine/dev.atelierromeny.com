@@ -1,6 +1,6 @@
 ---
 id: 625
-title: L'étreinte au monde 2
+title: "L'Étreinte au Monde 2"
 categories: L'étreinte au monde
 w: 160
 h: 205

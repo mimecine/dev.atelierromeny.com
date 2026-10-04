@@ -1,6 +1,6 @@
 ---
 id: 132
-title: 'Ingegerd, ma femme'
+title: Ingegerd, ma Femme
 categories: Figures humaines
 w: 100
 h: 80

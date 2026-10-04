@@ -1,6 +1,6 @@
 ---
 id: 238
-title: Karine et son petit I
+title: Karine et son Petit I
 categories: Figures humaines
 w: 60
 h: 72

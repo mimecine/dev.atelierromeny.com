@@ -1,6 +1,6 @@
 ---
 id: 466
-title: Space-passage
+title: Space-Passage
 images:
   - '/src/media/works/466-space-passage-detail.webp'
 old_image: '/src/media/works/466-space-passage.webp'

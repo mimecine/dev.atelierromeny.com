@@ -1,6 +1,6 @@
 ---
 id: 618
-title: A la plage
+title: À la Plage
 categories: Figures humaines
 w: 33
 h: 41

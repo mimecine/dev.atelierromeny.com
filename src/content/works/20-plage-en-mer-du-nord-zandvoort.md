@@ -1,6 +1,6 @@
 ---
 id: 20
-title: Plage en mer du Nord (Zandvoort)
+title: Plage en Mer du Nord (Zandvoort)
 categories: Paysages
 w: 92
 h: 73

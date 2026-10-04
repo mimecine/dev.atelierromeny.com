@@ -1,6 +1,6 @@
 ---
 id: 6
-title: Affection animale
+title: Affection Animale
 images:
   - '/src/media/works/6-affection-animale-detail.webp'
 old_image: '/src/media/works/6-affection-animale.webp'

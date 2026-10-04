@@ -1,6 +1,6 @@
 ---
 id: 258
-title: Impromptu n°3 Anamnése
+title: Impromptu n°3 Anamnèse
 categories: Abstrait
 w: 46
 h: 38

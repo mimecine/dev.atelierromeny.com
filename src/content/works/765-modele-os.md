@@ -1,6 +1,6 @@
 ---
 id: 765
-title: Modéle os
+title: Modéle Os
 categories: Figures humaines
 w: 50
 h: 61

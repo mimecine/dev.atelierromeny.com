@@ -1,6 +1,6 @@
 ---
 id: null
-title: Ciel enflamme
+title: Ciel Enflamme
 categories: Paysage
 w: 60
 h: 92

@@ -1,6 +1,6 @@
 ---
 id: 365
-title: Fleurs du mal
+title: Fleurs du Mal
 images:
   - '/src/media/works/365-fleurs-du-mal-v2.webp'
   - '/src/media/works/365-fleurs-du-mal-v2-2.webp'

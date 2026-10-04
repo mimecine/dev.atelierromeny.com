@@ -1,6 +1,6 @@
 ---
 id: 691
-title: Lettre a ma bien aimée VII
+title: Lettre à ma Bien Aimée VII
 categories: La vie de femme
 w: 100
 h: 73

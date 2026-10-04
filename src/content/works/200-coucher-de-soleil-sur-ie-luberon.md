@@ -1,6 +1,6 @@
 ---
 id: 200
-title: Coucher de soleil sur Ie Luberon
+title: Coucher de Soleil sur le Luberon
 images:
   - '/src/media/works/200-coucher-de-soleil-sur-ie-luberon-v2.webp'
   - '/src/media/works/200-coucher-de-soleil-sur-ie-luberon-detail.webp'

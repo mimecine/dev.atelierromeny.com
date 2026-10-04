@@ -1,6 +1,6 @@
 ---
 id: 475
-title: Le chenil
+title: Le Chenil
 categories: Animaux
 w: 125
 h: 95

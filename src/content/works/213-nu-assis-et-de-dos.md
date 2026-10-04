@@ -1,6 +1,6 @@
 ---
 id: 213
-title: Nu assis et de dos
+title: Nu Assis et de Dos
 categories: Figures humaines
 w: 54
 h: 73

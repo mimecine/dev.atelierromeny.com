@@ -1,6 +1,6 @@
 ---
 id: 778
-title: Composition d'espace
+title: "Composition d'Espace"
 images:
   - '/src/media/works/778-composition-despace-detail.webp'
 old_image: '/src/media/works/778-composition-despace.webp'

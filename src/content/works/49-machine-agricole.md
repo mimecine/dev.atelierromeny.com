@@ -1,6 +1,6 @@
 ---
 id: 49
-title: Machine agricole
+title: Machine Agricole
 images:
   - '/src/media/works/49-machine-agricole-detail.webp'
 old_image: '/src/media/works/49-machine-agricole.webp'

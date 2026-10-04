@@ -1,6 +1,6 @@
 ---
 id: 91
-title: La nuit
+title: La Nuit
 images:
   - '/src/media/works/91-la-nuit-detail.webp'
 old_image: '/src/media/works/91-la-nuit.webp'

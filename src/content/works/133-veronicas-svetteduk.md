@@ -1,6 +1,6 @@
 ---
 id: 133
-title: Véronicas svetteduk
+title: Véronicas Svetteduk
 categories: Figures humaines
 w: 73
 h: 80

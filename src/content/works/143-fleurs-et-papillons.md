@@ -1,6 +1,6 @@
 ---
 id: 143
-title: Fleurs et papillons
+title: Fleurs et Papillons
 categories: Fleurs
 w: 75
 h: 60

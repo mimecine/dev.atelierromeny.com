@@ -1,6 +1,6 @@
 ---
 id: 411
-title: Les traces du peintre 2
+title: Les Traces du Peintre 2
 categories: Abstrait
 w: 120
 h: 100

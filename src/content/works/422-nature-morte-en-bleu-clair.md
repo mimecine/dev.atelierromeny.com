@@ -1,6 +1,6 @@
 ---
 id: 422
-title: Nature morte en bleu Clair
+title: Nature Morte en Bleu Clair
 images:
   - '/src/media/works/422-nature-morte-en-bleu-clair-v2.webp'
   - '/src/media/works/422-nature-morte-en-bleu-clair-v2-2.webp'

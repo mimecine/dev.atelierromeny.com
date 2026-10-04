@@ -1,6 +1,6 @@
 ---
 id: 596
-title: La ville
+title: La Ville
 categories: Abstrait
 w: 81
 h: 72

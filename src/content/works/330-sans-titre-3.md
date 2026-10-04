@@ -1,6 +1,6 @@
 ---
 id: 330
-title: Sans titre 3
+title: Sans Titre 3
 images:
   - '/src/media/works/330-sans-titre-3-detail.webp'
 old_image: '/src/media/works/330-sans-titre-3.webp'

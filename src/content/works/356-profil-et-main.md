@@ -1,6 +1,6 @@
 ---
 id: 356
-title: Profil et main
+title: Profil et Main
 categories: Cartes
 w: 50
 h: 40

@@ -1,6 +1,6 @@
 ---
 id: 619
-title: Tournesol sur fond rouge
+title: Tournesol sur Fond Rouge
 images:
   - '/src/media/works/619-tournesol-sur-fond-rouge-detail.webp'
 old_image: '/src/media/works/619-tournesol-sur-fond-rouge.webp'

@@ -1,6 +1,6 @@
 ---
 id: 76
-title: Sans titre IV
+title: Sans Titre IV
 categories: Abstrait
 w: 40
 h: 30

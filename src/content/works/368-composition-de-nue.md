@@ -1,6 +1,6 @@
 ---
 id: 368
-title: Composition de nue
+title: Composition de Nue
 categories: Figures humaines
 w: 61
 h: 74

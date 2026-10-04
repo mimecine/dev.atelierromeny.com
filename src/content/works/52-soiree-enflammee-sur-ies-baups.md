@@ -1,6 +1,6 @@
 ---
 id: 52
-title: Soirée enflammée sur Ies Baups
+title: Soirée Enflammée sur les Baups
 categories: Paysages
 w: 100
 h: 100

@@ -1,6 +1,6 @@
 ---
 id: 234
-title: Maternité vert Clair
+title: Maternité Vert Clair
 categories: Figures humaines
 w: 46
 h: 65

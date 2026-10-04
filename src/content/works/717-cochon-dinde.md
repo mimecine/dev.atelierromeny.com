@@ -1,6 +1,6 @@
 ---
 id: 717
-title: Cochon d'inde
+title: "Cochon d'Inde"
 categories: Animaux
 w: 50
 h: 60

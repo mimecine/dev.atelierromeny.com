@@ -1,6 +1,6 @@
 ---
 id: 152
-title: Branche d'amandier
+title: "Branche d'Amandier"
 images:
   - '/src/media/works/152-branche-damandier-detail.webp'
 old_image: '/src/media/works/152-branche-damandier.webp'

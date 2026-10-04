@@ -1,5 +1,5 @@
 ---
-title: "Röd rörelse"
+title: Röd Rörelse
 categories: Works on Paper
 collections:
   - works-on-paper

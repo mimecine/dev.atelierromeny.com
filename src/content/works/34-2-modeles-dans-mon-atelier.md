@@ -1,6 +1,6 @@
 ---
 id: 34
-title: 2 modéles dans mon atelier
+title: 2 Modèles dans mon Atelier
 images:
   - '/src/media/works/34-2-modeles-dans-mon-atelier-detail.webp'
 old_image: '/src/media/works/34-2-modeles-dans-mon-atelier.webp'

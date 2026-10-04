@@ -1,6 +1,6 @@
 ---
 id: 341
-title: Crane de chien
+title: Crane de Chien
 images:
   - '/src/media/works/341-crane-de-chien-detail.webp'
 old_image: '/src/media/works/341-crane-de-chien.webp'

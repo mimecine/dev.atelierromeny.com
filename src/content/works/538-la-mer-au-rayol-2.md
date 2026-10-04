@@ -1,6 +1,6 @@
 ---
 id: 538
-title: La mer au Rayol 2
+title: La Mer au Rayol 2
 images:
   - '/src/media/works/538-la-mer-au-rayol-2-detail.webp'
 old_image: '/src/media/works/538-la-mer-au-rayol-2.webp'

@@ -1,6 +1,6 @@
 ---
 id: 62
-title: Lettre a ma bien aimée XII
+title: Lettre à ma Bien Aimée XII
 categories: La vie de femme
 w: 65
 h: 54

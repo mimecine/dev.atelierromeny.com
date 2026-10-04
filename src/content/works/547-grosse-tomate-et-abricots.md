@@ -1,6 +1,6 @@
 ---
 id: 547
-title: Grosse tomate et abricots
+title: Grosse Tomate et Abricots
 categories: Natures mortes
 w: 41
 h: 24

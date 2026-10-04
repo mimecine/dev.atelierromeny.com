@@ -1,6 +1,6 @@
 ---
 id: 661
-title: Le monde des animaux
+title: Le Monde des Animaux
 images:
   - '/src/media/works/661-le-monde-des-animaux-v2.webp'
   - '/src/media/works/661-le-monde-des-animaux-v2-2.webp'

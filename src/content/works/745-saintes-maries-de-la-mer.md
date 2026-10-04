@@ -1,6 +1,6 @@
 ---
 id: 745
-title: Saintes Maries de la mer
+title: Saintes Maries de la Mer
 categories: Paysages
 w: 60
 h: 30

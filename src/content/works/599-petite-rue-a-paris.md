@@ -1,6 +1,6 @@
 ---
 id: 599
-title: Petite rue a Paris
+title: Petite Rue à Paris
 categories: Rues
 w: 45
 h: 70

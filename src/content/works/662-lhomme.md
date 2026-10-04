@@ -1,6 +1,6 @@
 ---
 id: 662
-title: L'homme
+title: "L'Homme"
 categories: La création
 w: 180
 h: 130

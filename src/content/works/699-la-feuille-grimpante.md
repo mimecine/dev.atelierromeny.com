@@ -1,6 +1,6 @@
 ---
 id: 699
-title: La feuille grimpante
+title: La Feuille Grimpante
 images:
   - '/src/media/works/699-la-feuille-grimpante-detail.webp'
 old_image: '/src/media/works/699-la-feuille-grimpante.webp'

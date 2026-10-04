@@ -1,6 +1,6 @@
 ---
 id: 546
-title: Le cardinai
+title: Le Cardinal
 images:
   - '/src/media/works/546-le-cardinai-detail.webp'
 old_image: '/src/media/works/546-le-cardinai.webp'

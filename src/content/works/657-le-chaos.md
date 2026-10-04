@@ -1,6 +1,6 @@
 ---
 id: 657
-title: Le chaos
+title: Le Chaos
 images:
   - '/src/media/works/657-le-chaos-v2.webp'
 collections:

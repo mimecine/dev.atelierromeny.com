@@ -1,6 +1,6 @@
 ---
 id: 222
-title: Lisou et la tulipe
+title: Lisou et la Tulipe
 categories: Figures humaines
 w: 60
 h: 40

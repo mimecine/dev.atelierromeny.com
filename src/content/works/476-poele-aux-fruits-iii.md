@@ -1,6 +1,6 @@
 ---
 id: 476
-title: Poéle aux fruits III
+title: Poêle aux Fruits III
 images:
   - '/src/media/works/476-poele-aux-fruits-iii-v2.webp'
   - '/src/media/works/476-poele-aux-fruits-iii-detail.webp'

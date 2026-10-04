@@ -1,6 +1,6 @@
 ---
 id: 73
-title: Inspiré nature La lagune
+title: Inspiré Nature La Lagune
 categories: Abstrait
 w: 40
 h: 27

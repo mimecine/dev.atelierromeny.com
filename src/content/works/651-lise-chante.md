@@ -1,6 +1,6 @@
 ---
 id: 651
-title: Lise chante
+title: Lise Chante
 categories: Figures humaines
 w: 73
 h: 54

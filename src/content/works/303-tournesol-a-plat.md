@@ -1,6 +1,6 @@
 ---
 id: 303
-title: Tournesol a plat
+title: Tournesol à Plat
 images:
   - '/src/media/works/303-tournesol-a-plat.webp'
 collections:

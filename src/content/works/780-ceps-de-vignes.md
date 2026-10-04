@@ -1,6 +1,6 @@
 ---
 id: 780
-title: Ceps de vignes
+title: Ceps de Vignes
 categories: Paysages
 w: 65
 h: 81

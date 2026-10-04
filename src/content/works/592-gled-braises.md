@@ -1,6 +1,6 @@
 ---
 id: 592
-title: Gléd (braises)
+title: Glöd (Braises)
 categories: Abstrait
 w: 60
 h: 50

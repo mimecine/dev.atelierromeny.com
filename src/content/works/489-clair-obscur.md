@@ -1,6 +1,6 @@
 ---
 id: 489
-title: Clair obscur
+title: Clair Obscur
 images:
   - '/src/media/works/489-clair-obscur-detail.webp'
 old_image: '/src/media/works/489-clair-obscur.webp'

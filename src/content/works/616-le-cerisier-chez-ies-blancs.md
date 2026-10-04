@@ -1,6 +1,6 @@
 ---
 id: 616
-title: Le cerisier chez Ies Blancs
+title: Le Cerisier chez les Blancs
 images:
   - '/src/media/works/616-le-cerisier-chez-ies-blancs-detail.webp'
 old_image: '/src/media/works/616-le-cerisier-chez-ies-blancs.webp'

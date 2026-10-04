@@ -1,6 +1,6 @@
 ---
 id: 559
-title: Maternité en diagonale
+title: Maternité en Diagonale
 categories: Figures humaines
 w: 50
 h: 65

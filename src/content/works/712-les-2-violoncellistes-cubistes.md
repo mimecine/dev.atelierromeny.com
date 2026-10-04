@@ -1,6 +1,6 @@
 ---
 id: 712
-title: Les 2 violoncellistes cubistes
+title: Les 2 Violoncellistes Cubistes
 categories: Figures humaines
 w: 54
 h: 65

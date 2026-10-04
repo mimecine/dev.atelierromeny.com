@@ -1,6 +1,6 @@
 ---
 id: 737
-title: Michel Picquemal en concert
+title: Michel Picquemal en Concert
 categories: Figures humaines
 w: 46
 h: 65

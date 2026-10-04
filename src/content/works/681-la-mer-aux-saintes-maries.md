@@ -1,6 +1,6 @@
 ---
 id: 681
-title: La mer aux Saintes Maries
+title: La Mer aux Saintes Maries
 categories: Paysages
 w: 54
 h: 73

@@ -1,6 +1,6 @@
 ---
 id: 75
-title: Inspiré nature Le cyprés
+title: Inspiré Nature Le Cyprès
 categories: Abstrait
 w: 40
 h: 27

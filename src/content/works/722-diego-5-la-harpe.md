@@ -1,6 +1,6 @@
 ---
 id: 722
-title: Diégo 5 la harpe
+title: Diégo 5 la Harpe
 categories: Figures humaines
 w: 46
 h: 65

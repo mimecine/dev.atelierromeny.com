@@ -1,6 +1,6 @@
 ---
 id: 242
-title: Lettre é ma bien aimée XIV
+title: Lettre à ma Bien Aimée XIV
 categories: La vie de femme
 w: 100
 h: 73

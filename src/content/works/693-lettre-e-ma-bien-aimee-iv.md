@@ -1,6 +1,6 @@
 ---
 id: 693
-title: Lettre é ma bien aimée IV
+title: Lettre à ma Bien Aimée IV
 categories: La vie de femme
 w: 100
 h: 73

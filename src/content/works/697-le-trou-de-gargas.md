@@ -1,6 +1,6 @@
 ---
 id: 697
-title: Le trou de Gargas
+title: Le Trou de Gargas
 categories: Paysages
 w: 65
 h: 46

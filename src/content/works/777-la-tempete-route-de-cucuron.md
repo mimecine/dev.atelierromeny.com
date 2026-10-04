@@ -1,6 +1,6 @@
 ---
 id: 777
-title: La tempéte route de Cucuron
+title: La Tempéte Route de Cucuron
 images:
   - '/src/media/works/777-la-tempete-route-de-cucuron-v2.webp'
   - '/src/media/works/777-la-tempete-route-de-cucuron-detail.webp'

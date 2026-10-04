@@ -1,6 +1,6 @@
 ---
 id: 610
-title: Plante abstraite
+title: Plante Abstraite
 images:
   - '/src/media/works/610-plante-abstraite-v2.webp'
   - '/src/media/works/610-plante-abstraite-v2-2.webp'

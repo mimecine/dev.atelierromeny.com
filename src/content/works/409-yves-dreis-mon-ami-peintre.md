@@ -1,6 +1,6 @@
 ---
 id: 409
-title: 'Yves DREIS, mon ami peintre'
+title: Yves DREIS, mon Ami Peintre
 categories: Figures humaines
 w: 80
 h: 120

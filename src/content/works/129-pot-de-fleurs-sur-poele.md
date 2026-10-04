@@ -1,6 +1,6 @@
 ---
 id: 129
-title: Pot de fleurs sur poéle
+title: Pot de Fleurs sur Poêle
 images:
   - '/src/media/works/129-pot-de-fleurs-sur-poele-detail.webp'
 old_image: '/src/media/works/129-pot-de-fleurs-sur-poele.webp'

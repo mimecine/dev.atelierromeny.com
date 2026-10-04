@@ -1,6 +1,6 @@
 ---
 id: 240
-title: Lettre é ma bien aimée V
+title: Lettre à ma Bien Aimée V
 categories: La vie de femme
 w: 100
 h: 73

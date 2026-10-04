@@ -1,6 +1,6 @@
 ---
 id: 656
-title: Mot Aftonen (vers le soir)
+title: Mot Aftonen (Vers le Soir)
 images:
   - '/src/media/works/656-mot-aftonen-vers-le-soir-detail.webp'
 old_image: '/src/media/works/656-mot-aftonen-vers-le-soir.webp'

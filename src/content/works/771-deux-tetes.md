@@ -1,6 +1,6 @@
 ---
 id: 771
-title: Deux tétes
+title: Deux Tétes
 images:
   - '/src/media/works/771-deux-tetes-detail.webp'
 old_image: '/src/media/works/771-deux-tetes.webp'

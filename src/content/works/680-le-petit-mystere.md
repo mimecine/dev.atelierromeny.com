@@ -1,6 +1,6 @@
 ---
 id: 680
-title: Le petit mystére
+title: Le Petit Mystére
 categories: Abstrait
 w: 41
 h: 33

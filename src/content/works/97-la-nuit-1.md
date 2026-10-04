@@ -1,6 +1,6 @@
 ---
 id: 97
-title: La nuit 1
+title: La Nuit 1
 images:
   - '/src/media/works/97-la-nuit-1-v2.webp'
   - '/src/media/works/97-la-nuit-1-detail.webp'

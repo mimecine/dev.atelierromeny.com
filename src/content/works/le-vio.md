@@ -1,6 +1,6 @@
 ---
 id: null
-title: Le vio
+title: Le Vio
 categories: Nature Mortes
 w: 50
 h: 73

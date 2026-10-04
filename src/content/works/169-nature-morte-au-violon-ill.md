@@ -1,6 +1,6 @@
 ---
 id: 169
-title: Nature morte au violon Ill
+title: Nature Morte au Violon III
 images:
   - '/src/media/works/169-nature-morte-au-violon-ill.webp'
 collections:

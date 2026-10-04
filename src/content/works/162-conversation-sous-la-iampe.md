@@ -1,6 +1,6 @@
 ---
 id: 162
-title: Conversation sous la Iampe
+title: Conversation sous la Lampe
 images:
   - '/src/media/works/162-conversation-sous-la-iampe-detail.webp'
 old_image: '/src/media/works/162-conversation-sous-la-iampe.webp'

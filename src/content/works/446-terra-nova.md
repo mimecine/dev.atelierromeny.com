@@ -1,6 +1,6 @@
 ---
 id: 446
-title: Terra nova
+title: Terra Nova
 images:
   - '/src/media/works/446-terra-nova.webp'
 categories: Abstrait

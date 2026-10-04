@@ -1,6 +1,6 @@
 ---
 id: 63
-title: Inspiré nature Le taureau
+title: Inspiré Nature Le Taureau
 categories: Abstrait
 w: 33
 h: 24

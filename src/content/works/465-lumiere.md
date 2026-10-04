@@ -1,6 +1,6 @@
 ---
 id: 465
-title: Lumiére
+title: Lumière
 categories: Abstrait
 w: 105
 h: 94

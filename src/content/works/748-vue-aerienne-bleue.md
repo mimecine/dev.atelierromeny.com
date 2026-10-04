@@ -1,6 +1,6 @@
 ---
 id: 748
-title: Vue aerienne bleue
+title: Vue Aerienne Bleue
 images:
   - '/src/media/works/748-vue-aerienne-bleue-detail.webp'
 old_image: '/src/media/works/748-vue-aerienne-bleue.webp'

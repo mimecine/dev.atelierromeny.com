@@ -1,6 +1,6 @@
 ---
 id: null
-title: Roland, gouache
+title: Roland, Gouache
 images:
   - '/src/media/works/roland-gouache-detail.webp'
 old_image: '/src/media/works/roland-gouache.webp'

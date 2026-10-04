@@ -1,6 +1,6 @@
 ---
 id: 512
-title: Le peintre dans la campagne
+title: Le Peintre dans la Campagne
 categories: Figures humaines
 w: 88
 h: 120

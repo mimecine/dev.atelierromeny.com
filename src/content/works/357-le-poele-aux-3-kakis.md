@@ -1,6 +1,6 @@
 ---
 id: 357
-title: Le poéle aux 3 kakis
+title: Le Poêle aux 3 Kakis
 categories: Natures mortes
 w: 41
 h: 33

@@ -1,6 +1,6 @@
 ---
 id: 321
-title: Le four
+title: Le Four
 categories: Abstrait
 w: 50
 h: 46

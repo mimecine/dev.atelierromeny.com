@@ -1,6 +1,6 @@
 ---
 id: 496
-title: Paysage hivernal au soleil péle
+title: Paysage Hivernal au Soleil Péle
 images:
   - '/src/media/works/496-paysage-hivernal-au-soleil-pele.webp'
 categories: Accident dans la montagne

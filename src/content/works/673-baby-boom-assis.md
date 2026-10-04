@@ -1,6 +1,6 @@
 ---
 id: 673
-title: Baby boom assis
+title: Baby Boom Assis
 categories: Figures humaines
 w: 46
 h: 33

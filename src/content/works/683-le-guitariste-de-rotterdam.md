@@ -1,6 +1,6 @@
 ---
 id: 683
-title: Le guitariste de Rotterdam
+title: Le Guitariste de Rotterdam
 categories: Figures humaines
 w: 38
 h: 55

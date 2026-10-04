@@ -1,6 +1,6 @@
 ---
 id: 723
-title: Sonata rouge et noir
+title: Sonata Rouge et Noir
 images:
   - '/src/media/works/723-sonata-rouge-et-noir.webp'
 categories: Natures mortes

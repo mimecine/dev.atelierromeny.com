@@ -1,6 +1,6 @@
 ---
 id: 438
-title: Le clochard
+title: Le Clochard
 categories: Figures humaines
 w: 100
 h: 120

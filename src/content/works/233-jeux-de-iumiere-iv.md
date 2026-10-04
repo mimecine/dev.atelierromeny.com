@@ -1,6 +1,6 @@
 ---
 id: 233
-title: Jeux de Iumiére IV
+title: Jeux de Lumière IV
 images:
   - '/src/media/works/233-jeux-de-iumiere-iv.webp'
 categories: Abstrait

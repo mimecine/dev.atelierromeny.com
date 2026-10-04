@@ -1,6 +1,6 @@
 ---
 id: 385
-title: Mon pére
+title: Mon Père
 categories: Figures humaines
 w: 30
 h: 23

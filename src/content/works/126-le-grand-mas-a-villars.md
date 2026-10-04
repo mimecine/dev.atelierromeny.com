@@ -1,6 +1,6 @@
 ---
 id: 126
-title: Le grand mas à Villars
+title: Le Grand Mas à Villars
 images:
   - '/src/media/works/126-le-grand-mas-a-villars-detail.webp'
 old_image: '/src/media/works/126-le-grand-mas-a-villars.webp'

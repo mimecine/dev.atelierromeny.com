@@ -1,5 +1,5 @@
 ---
-title: "Död skata"
+title: Död Skata
 categories: Works on Paper
 collections:
   - works-on-paper

@@ -1,6 +1,6 @@
 ---
 id: 425
-title: Soleil vert
+title: Soleil Vert
 images:
   - '/src/media/works/425-soleil-vert-v2.webp'
   - '/src/media/works/425-soleil-vert-detail.webp'

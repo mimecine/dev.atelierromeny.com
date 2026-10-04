@@ -1,6 +1,6 @@
 ---
 id: 714
-title: Mon pére sur son lit de mort
+title: Mon Père sur son Lit de Mort
 images:
   - '/src/media/works/714-mon-pere-sur-son-lit-de-mort-detail.webp'
 old_image: '/src/media/works/714-mon-pere-sur-son-lit-de-mort.webp'

@@ -1,6 +1,6 @@
 ---
 id: 621
-title: La musique II
+title: La Musique II
 categories: Abstrait
 w: 116
 h: 81

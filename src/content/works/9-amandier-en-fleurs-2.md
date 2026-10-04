@@ -1,6 +1,6 @@
 ---
 id: 9
-title: Amandier en fleurs 2
+title: Amandier en Fleurs 2
 images:
   - '/src/media/works/9-amandier-en-fleurs-2-detail.webp'
 old_image: '/src/media/works/9-amandier-en-fleurs-2.webp'

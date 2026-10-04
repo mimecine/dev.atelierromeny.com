@@ -1,6 +1,6 @@
 ---
 id: 274
-title: Le mur 5
+title: Le Mur 5
 categories: Abstrait
 w: 27
 h: 19

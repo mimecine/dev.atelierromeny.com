@@ -1,6 +1,6 @@
 ---
 id: null
-title: Poële au fruits
+title: Poële au Fruits
 images:
   - '/src/media/works/poele-au-fruits.webp'
 collections:

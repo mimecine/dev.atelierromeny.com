@@ -1,6 +1,6 @@
 ---
 id: 168
-title: Nature morte au violon IV (abstrait et cubiste)
+title: Nature Morte au Violon IV (Abstrait et Cubiste)
 categories: Natures mortes
 w: 60
 h: 81

@@ -1,6 +1,6 @@
 ---
 id: 153
-title: L'automne autour de moi
+title: "L'Automne Autour de Moi"
 images:
   - '/src/media/works/153-l-automne-autour-de-moi.webp'
   - '/src/media/works/153-l-automne-autour-de-moi-2.webp'

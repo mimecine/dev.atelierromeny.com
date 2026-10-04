@@ -1,6 +1,6 @@
 ---
 id: 173
-title: Set von Dardel (mon petit fils)
+title: Set von Dardel (Mon Petit Fils)
 images:
   - '/src/media/works/173-set-von-dardel-mon-petit-fils-detail.webp'
 old_image: '/src/media/works/173-set-von-dardel-mon-petit-fils.webp'

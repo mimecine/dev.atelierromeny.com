@@ -1,6 +1,6 @@
 ---
 id: 462
-title: Crépuscule orageux
+title: Crépuscule Orageux
 images:
   - '/src/media/works/462-crepuscule-orageux-detail.webp'
 old_image: '/src/media/works/462-crepuscule-orageux.webp'

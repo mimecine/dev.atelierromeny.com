@@ -1,6 +1,6 @@
 ---
 id: 229
-title: Petite nue 3
+title: Petite Nue 3
 categories: Nues
 w: 50
 h: 61

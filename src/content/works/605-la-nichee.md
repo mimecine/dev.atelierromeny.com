@@ -1,6 +1,6 @@
 ---
 id: 605
-title: La nichée
+title: La Nichée
 images:
   - '/src/media/works/605-la-nichee-detail.webp'
 old_image: '/src/media/works/605-la-nichee.webp'

@@ -1,6 +1,6 @@
 ---
 id: 506
-title: Lisou et sa partition
+title: Lisou et sa Partition
 categories: Figures humaines
 w: 80
 h: 120

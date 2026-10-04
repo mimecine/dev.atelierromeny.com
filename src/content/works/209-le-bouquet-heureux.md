@@ -1,6 +1,6 @@
 ---
 id: 209
-title: Le bouquet heureux
+title: Le Bouquet Heureux
 categories: Natures mortes
 w: 38
 h: 46

@@ -1,5 +1,5 @@
 ---
-title: "Elle joue"
+title: Elle Joue
 categories: Works on Paper
 collections:
   - works-on-paper

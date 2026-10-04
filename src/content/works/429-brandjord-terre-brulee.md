@@ -1,6 +1,6 @@
 ---
 id: 429
-title: Brand..Jord (terre brulée)
+title: Brand..Jord (Terre Brulée)
 images:
   - '/src/media/works/429-brand-jord-terre-brulee.webp'
   - '/src/media/works/429-brandjord-terre-brulee-detail.webp'

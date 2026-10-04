@@ -1,5 +1,5 @@
 ---
-title: "Mina iris"
+title: Mina Iris
 categories: Works on Paper
 collections:
   - works-on-paper

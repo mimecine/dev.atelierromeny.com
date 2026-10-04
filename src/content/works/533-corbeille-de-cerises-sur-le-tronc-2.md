@@ -1,6 +1,6 @@
 ---
 id: 533
-title: Corbeille de cerises sur le tronc 2
+title: Corbeille de Cerises sur le Tronc 2
 categories: Natures mortes
 w: 65
 h: 81

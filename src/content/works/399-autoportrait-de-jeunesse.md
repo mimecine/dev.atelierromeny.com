@@ -1,6 +1,6 @@
 ---
 id: 399
-title: Autoportrait de jeunesse
+title: Autoportrait de Jeunesse
 categories: Figures humaines
 w: 40
 h: 75

@@ -1,6 +1,6 @@
 ---
 id: 474
-title: Le noyer
+title: Le Noyer
 images:
   - '/src/media/works/474-le-noyer-detail.webp'
 old_image: '/src/media/works/474-le-noyer.webp'

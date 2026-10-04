@@ -1,6 +1,6 @@
 ---
 id: 769
-title: Sarfatie straat
+title: Sarfatie Straat
 categories: Paysages
 w: 100
 h: 79

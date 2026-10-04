@@ -1,6 +1,6 @@
 ---
 id: 32
-title: Le grand cosmos
+title: Le Grand Cosmos
 images:
   - '/src/media/works/32-le-grand-cosmos.webp'
 categories: Abstrait

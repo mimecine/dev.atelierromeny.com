@@ -1,6 +1,6 @@
 ---
 id: 351
-title: 'Jouve, le facteur de Villars'
+title: Jouve, le Facteur de Villars
 images:
   - '/src/media/works/351-jouve-le-facteur-de-villars-v2.webp'
   - '/src/media/works/351-jouve-le-facteur-de-villars-v2-2.webp'

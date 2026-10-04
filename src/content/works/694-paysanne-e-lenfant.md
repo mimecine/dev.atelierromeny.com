@@ -1,6 +1,6 @@
 ---
 id: 694
-title: Paysanne é l'enfant
+title: "Paysanne à l'Enfant"
 categories: Figures humaines
 w: 60
 h: 81

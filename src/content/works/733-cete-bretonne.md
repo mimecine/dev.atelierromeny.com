@@ -1,6 +1,6 @@
 ---
 id: 733
-title: Céte bretonne
+title: Côte Bretonne
 categories: Paysages
 w: 54
 h: 39

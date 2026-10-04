@@ -1,6 +1,6 @@
 ---
 id: 719
-title: Le chemin jaune
+title: Le Chemin Jaune
 categories: Paysages
 w: 100
 h: 65

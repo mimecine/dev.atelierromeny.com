@@ -1,6 +1,6 @@
 ---
 id: 710
-title: Fenétre rue des grandes degrées
+title: Fenêtre Rue des Grandes Degrées
 categories: Paysages
 w: 65
 h: 81

@@ -1,6 +1,6 @@
 ---
 id: 55
-title: Arlequin flutiste
+title: Arlequin Flutiste
 images:
   - '/src/media/works/55-arlequin-flutiste-detail.webp'
 old_image: '/src/media/works/55-arlequin-flutiste.webp'

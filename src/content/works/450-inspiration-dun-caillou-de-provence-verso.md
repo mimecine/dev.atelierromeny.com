@@ -1,6 +1,6 @@
 ---
 id: 450
-title: Inspiration d'un caillou de Provence verso
+title: "Inspiration d'un Caillou de Provence Verso"
 categories: Abstrait
 w: 100
 h: 100

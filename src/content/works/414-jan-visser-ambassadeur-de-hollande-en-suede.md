@@ -1,6 +1,6 @@
 ---
 id: 414
-title: Jan Visser (ambassadeur de Hollande en Suéde)
+title: Jan Visser (Ambassadeur de Hollande en Suède)
 categories: figures humaines
 w: 90
 h: 124

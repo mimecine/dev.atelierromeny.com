@@ -1,6 +1,6 @@
 ---
 id: 696
-title: Branche de coings
+title: Branche de Coings
 categories: Automne
 w: 38
 h: 55

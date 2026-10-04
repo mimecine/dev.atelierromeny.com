@@ -1,6 +1,6 @@
 ---
 id: 298
-title: Le Mont Ventoux vu de Sivergues
+title: Le Mont Ventoux Vu de Sivergues
 categories: Paysages
 w: 65
 h: 46

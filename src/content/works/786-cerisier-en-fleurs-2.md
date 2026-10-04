@@ -1,6 +1,6 @@
 ---
 id: 786
-title: Cerisier en fleurs 2
+title: Cerisier en Fleurs 2
 categories: Arbres
 w: 90
 h: 115

@@ -1,6 +1,6 @@
 ---
 id: 689
-title: Soleil d'orage
+title: "Soleil d'Orage"
 images:
   - '/src/media/works/689-soleil-d-orage.webp'
   - '/src/media/works/689-soleil-dorage-detail.webp'

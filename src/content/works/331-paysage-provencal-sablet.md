@@ -1,6 +1,6 @@
 ---
 id: 331
-title: Paysage provencal - Sablet
+title: Paysage Provencal - Sablet
 images:
   - '/src/media/works/331-paysage-provencal-sablet-detail.webp'
 old_image: '/src/media/works/331-paysage-provencal-sablet.webp'

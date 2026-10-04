@@ -1,6 +1,6 @@
 ---
 id: 7
-title: Composition exotique ou le secret
+title: Composition Exotique ou le Secret
 categories: Abstrait
 w: 33
 h: 40

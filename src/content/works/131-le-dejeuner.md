@@ -1,6 +1,6 @@
 ---
 id: 131
-title: Le déjeuner
+title: Le Déjeuner
 categories: Natures mortes
 w: 73
 h: 92

@@ -1,6 +1,6 @@
 ---
 id: 3
-title: Fleurs et papillon
+title: Fleurs et Papillon
 categories: Fleurs
 w: 27
 h: 27

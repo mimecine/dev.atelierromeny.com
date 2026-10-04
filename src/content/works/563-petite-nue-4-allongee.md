@@ -1,6 +1,6 @@
 ---
 id: 563
-title: Petite nue 4 (allongée)
+title: Petite Nue 4 (Allongée)
 categories: Nues
 w: 65
 h: 46

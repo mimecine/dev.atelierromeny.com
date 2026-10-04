@@ -1,6 +1,6 @@
 ---
 id: 378
-title: Marianka Schep (danseuse)
+title: Marianka Schep (Danseuse)
 categories: Figures humaines
 w: 127
 h: 108

@@ -1,6 +1,6 @@
 ---
 id: 334
-title: La table suédoise
+title: La Table Suédoise
 images:
   - '/src/media/works/334-la-table-suedoise.webp'
 categories: Natures mortes

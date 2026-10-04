@@ -1,6 +1,6 @@
 ---
 id: 763
-title: La rose, contraste
+title: La Rose, Contraste
 images:
   - '/src/media/works/763-la-rose-contraste-detail.webp'
 old_image: '/src/media/works/763-la-rose-contraste.webp'

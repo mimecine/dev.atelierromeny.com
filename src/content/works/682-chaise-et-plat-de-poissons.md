@@ -1,6 +1,6 @@
 ---
 id: 682
-title: Chaise et plat de poissons
+title: Chaise et Plat de Poissons
 images:
   - '/src/media/works/682-chaise-et-plat-de-poissons-detail.webp'
 old_image: '/src/media/works/682-chaise-et-plat-de-poissons.webp'

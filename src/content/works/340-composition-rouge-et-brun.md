@@ -1,6 +1,6 @@
 ---
 id: 340
-title: Composition rouge et brun
+title: Composition Rouge et Brun
 categories: Abstrait
 w: 65
 h: 54

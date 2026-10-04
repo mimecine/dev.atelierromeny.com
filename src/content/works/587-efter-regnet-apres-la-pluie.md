@@ -1,6 +1,6 @@
 ---
 id: 587
-title: Efter regnet (aprés la pluie)
+title: Efter Regnet (Aprés la Pluie)
 images:
   - '/src/media/works/587-efter-regnet-apres-la-pluie-v2.webp'
   - '/src/media/works/587-efter-regnet-apres-la-pluie-detail.webp'

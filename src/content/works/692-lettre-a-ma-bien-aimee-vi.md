@@ -1,6 +1,6 @@
 ---
 id: 692
-title: Lettre a ma bien aimée VI
+title: Lettre à ma Bien Aimée VI
 categories: La vie de femme
 w: 100
 h: 73

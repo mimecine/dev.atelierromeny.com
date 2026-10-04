@@ -1,6 +1,6 @@
 ---
 id: 478
-title: En attendant Ia liberté 2
+title: En Attendant la Liberté 2
 categories: Animaux
 w: 120
 h: 100

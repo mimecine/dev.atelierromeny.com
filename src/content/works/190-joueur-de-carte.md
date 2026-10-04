@@ -1,6 +1,6 @@
 ---
 id: 190
-title: Joueur de carte
+title: Joueur de Carte
 categories: Figures humaines
 w: 27
 h: 35

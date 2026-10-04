@@ -1,6 +1,6 @@
 ---
 id: 634
-title: Corbeille et mandoline
+title: Corbeille et Mandoline
 categories: Natures mortes
 w: 100
 h: 73

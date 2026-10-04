@@ -1,6 +1,6 @@
 ---
 id: 219
-title: La fille au masque négre
+title: La Fille au Masque Négre
 categories: Figures humaines
 w: 81
 h: 65

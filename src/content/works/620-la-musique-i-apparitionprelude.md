@@ -1,6 +1,6 @@
 ---
 id: 620
-title: 'La musique I: apparition=prélude'
+title: "La Musique I: Apparition=prélude"
 images:
   - '/src/media/works/620-la-musique-i-apparitionprelude-detail.webp'
 old_image: '/src/media/works/620-la-musique-i-apparitionprelude.webp'

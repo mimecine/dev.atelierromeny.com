@@ -1,6 +1,6 @@
 ---
 id: 59
-title: La Seine a Paris
+title: La Seine à Paris
 images:
   - '/src/media/works/59-la-seine-a-paris-v2.webp'
   - '/src/media/works/59-la-seine-a-paris-detail.webp'

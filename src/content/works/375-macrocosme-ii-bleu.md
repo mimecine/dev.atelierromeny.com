@@ -1,6 +1,6 @@
 ---
 id: 375
-title: Macrocosme II (bleu)
+title: Macrocosme II (Bleu)
 categories: Abstrait
 w: 100
 h: 100

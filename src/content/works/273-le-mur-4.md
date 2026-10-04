@@ -1,6 +1,6 @@
 ---
 id: 273
-title: Le mur 4
+title: Le Mur 4
 categories: Abstrait
 w: 27
 h: 19

@@ -1,6 +1,6 @@
 ---
 id: 226
-title: Nu entre fleurs et ponpon
+title: Nu entre Fleurs et Ponpon
 categories: Figures humaines
 w: 73
 h: 45

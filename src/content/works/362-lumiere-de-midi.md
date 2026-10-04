@@ -1,6 +1,6 @@
 ---
 id: 362
-title: Lumiére de midi
+title: Lumière de Midi
 categories: Abstrait
 w: 60
 h: 50

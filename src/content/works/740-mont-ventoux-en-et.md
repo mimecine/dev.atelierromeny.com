@@ -1,6 +1,6 @@
 ---
 id: 740
-title: Mont Ventoux en ét
+title: Mont Ventoux en Été
 categories: Paysages
 w: 65
 h: 50

@@ -1,6 +1,6 @@
 ---
 id: 464
-title: Hommage é Lars Petersson's 7e symphonie
+title: "Hommage à Lars Petersson's 7e Symphonie"
 images:
   - '/src/media/works/464-hommage-e-lars-peterssons-7e-symphonie-detail.webp'
 old_image: '/src/media/works/464-hommage-e-lars-peterssons-7e-symphonie.webp'

@@ -1,6 +1,6 @@
 ---
 id: 149
-title: La table garnie 1
+title: La Table Garnie 1
 images:
   - '/src/media/works/149-la-table-garnie-1-v2.webp'
   - '/src/media/works/149-la-table-garnie-1-v2-2.webp'

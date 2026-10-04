@@ -1,6 +1,6 @@
 ---
 id: 467
-title: Temps printannier
+title: Temps Printannier
 images:
   - '/src/media/works/467-temps-printannier.webp'
 categories: Abstrait

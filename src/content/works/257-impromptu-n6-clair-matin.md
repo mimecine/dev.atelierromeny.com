@@ -1,6 +1,6 @@
 ---
 id: 257
-title: Impromptu n°6 (Clair matin)
+title: Impromptu n°6 (Clair Matin)
 categories: Abstrait
 w: 46
 h: 38

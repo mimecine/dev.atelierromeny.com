@@ -1,6 +1,6 @@
 ---
 id: 768
-title: Ingegerd dans le jardin
+title: Ingegerd dans le Jardin
 categories: Figures humaines
 w: 120
 h: 90

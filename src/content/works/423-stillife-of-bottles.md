@@ -1,6 +1,6 @@
 ---
 id: 423
-title: Stillife of bottles
+title: Stillife of Bottles
 categories: Natures mortes
 w: 82
 h: 65

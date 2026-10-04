@@ -1,6 +1,6 @@
 ---
 id: 635
-title: Composition vivante
+title: Composition Vivante
 categories: Abstrait
 w: 80
 h: 60

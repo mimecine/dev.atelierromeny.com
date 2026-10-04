@@ -1,6 +1,6 @@
 ---
 id: 532
-title: Amour maternel II
+title: Amour Maternel II
 categories: Animaux
 w: 61
 h: 55

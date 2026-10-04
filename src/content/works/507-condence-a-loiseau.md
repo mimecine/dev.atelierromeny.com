@@ -1,6 +1,6 @@
 ---
 id: 507
-title: Conﬁdence à l'oiseau
+title: "Confidence à l'Oiseau"
 categories: Figures humaines
 w: 90
 h: 125

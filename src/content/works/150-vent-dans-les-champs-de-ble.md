@@ -1,6 +1,6 @@
 ---
 id: 150
-title: Vent dans les champs de blé
+title: Vent dans les Champs de Blé
 images:
   - '/src/media/works/150-vent-dans-les-champs-de-ble-v2.webp'
   - '/src/media/works/150-vent-dans-les-champs-de-ble-detail.webp'

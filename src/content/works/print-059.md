@@ -1,5 +1,5 @@
 ---
-title: "Le bouquet bleu"
+title: Le Bouquet Bleu
 categories: Works on Paper
 collections:
   - works-on-paper

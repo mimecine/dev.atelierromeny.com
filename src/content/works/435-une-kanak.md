@@ -1,6 +1,6 @@
 ---
 id: 435
-title: Une kanak
+title: Une Kanak
 categories: Figures humaines
 w: 13
 h: 97

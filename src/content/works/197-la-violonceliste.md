@@ -1,6 +1,6 @@
 ---
 id: 197
-title: La violonceliste
+title: La Violonceliste
 categories: Figures humaines
 w: 33
 h: 41

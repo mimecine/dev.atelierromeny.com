@@ -1,6 +1,6 @@
 ---
 id: 28
-title: Devant la mer
+title: Devant la Mer
 categories: Figures humaines
 w: 90
 h: 120

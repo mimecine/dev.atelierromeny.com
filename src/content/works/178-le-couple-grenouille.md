@@ -1,6 +1,6 @@
 ---
 id: 178
-title: Le couple grenouille
+title: Le Couple Grenouille
 categories: Animaux
 w: 41
 h: 33

@@ -1,6 +1,6 @@
 ---
 id: 552
-title: Cep Ill
+title: Cep III
 categories: Automne
 w: 81
 h: 60

@@ -1,6 +1,6 @@
 ---
 id: 270
-title: Le mur 1
+title: Le Mur 1
 categories: Abstrait
 w: 45
 h: 33

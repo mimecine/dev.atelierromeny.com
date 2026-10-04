@@ -1,6 +1,6 @@
 ---
 id: 753
-title: Champ de coquelicot par grand vent
+title: Champ de Coquelicot par Grand Vent
 categories: Paysages
 w: 81
 h: 54

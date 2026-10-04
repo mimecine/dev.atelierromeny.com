@@ -1,6 +1,6 @@
 ---
 id: 332
-title: A la Cruche
+title: À la Cruche
 images:
   - '/src/media/works/332-a-la-cruche-v2.webp'
   - '/src/media/works/332-a-la-cruche-v2-2.webp'

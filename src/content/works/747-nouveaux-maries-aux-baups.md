@@ -1,6 +1,6 @@
 ---
 id: 747
-title: Nouveaux mariés aux Baups
+title: Nouveaux Mariés aux Baups
 categories: Figures humaines
 w: 130
 h: 81

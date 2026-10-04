@@ -1,6 +1,6 @@
 ---
 id: 42
-title: Mes parents
+title: Mes Parents
 categories: Figures humaines
 w: 130
 h: 160

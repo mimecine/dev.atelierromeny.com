@@ -1,6 +1,6 @@
 ---
 id: 271
-title: Le mur 2
+title: Le Mur 2
 categories: Abstrait
 w: 27
 h: 19

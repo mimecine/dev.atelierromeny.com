@@ -1,6 +1,6 @@
 ---
 id: 645
-title: Composition lumineuse
+title: Composition Lumineuse
 images:
   - '/src/media/works/645-composition-lumineuse.webp'
 categories: Abstrait

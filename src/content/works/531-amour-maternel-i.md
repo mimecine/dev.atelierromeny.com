@@ -1,6 +1,6 @@
 ---
 id: 531
-title: Amour maternel I
+title: Amour Maternel I
 categories: Animaux
 w: 65
 h: 55

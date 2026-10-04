@@ -1,6 +1,6 @@
 ---
 id: 555
-title: Le couple aux Saintes Maries de la mer
+title: Le Couple aux Saintes Maries de la Mer
 categories: Figures humaines
 w: 55
 h: 38

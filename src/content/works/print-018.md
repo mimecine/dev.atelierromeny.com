@@ -1,5 +1,5 @@
 ---
-title: "Rêves de femme III"
+title: Rêves de Femme III
 categories: Works on Paper
 collections:
   - works-on-paper

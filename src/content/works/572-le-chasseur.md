@@ -1,6 +1,6 @@
 ---
 id: 572
-title: Le chasseur
+title: Le Chasseur
 categories: Animaux
 w: 50
 h: 40

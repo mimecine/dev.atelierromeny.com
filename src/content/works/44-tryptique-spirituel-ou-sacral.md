@@ -1,6 +1,6 @@
 ---
 id: 44
-title: Tryptique spirituel (ou sacral)
+title: Tryptique Spirituel (Ou Sacral)
 categories: Abstrait
 w: 230
 h: 100

@@ -1,6 +1,6 @@
 ---
 id: 579
-title: Table généreuse
+title: Table Généreuse
 images:
   - '/src/media/works/579-table-genereuse-v2.webp'
   - '/src/media/works/579-table-genereuse-v2-2.webp'

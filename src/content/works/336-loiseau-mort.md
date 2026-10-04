@@ -1,6 +1,6 @@
 ---
 id: 336
-title: L'oiseau mort
+title: "L'Oiseau Mort"
 images:
   - '/src/media/works/336-loiseau-mort-detail.webp'
 old_image: '/src/media/works/336-loiseau-mort.webp'

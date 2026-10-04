@@ -1,6 +1,6 @@
 ---
 id: 535
-title: Aux chandelles rouges
+title: Aux Chandelles Rouges
 images:
   - '/src/media/works/535-aux-chandelles-rouges-detail.webp'
 old_image: '/src/media/works/535-aux-chandelles-rouges.webp'
