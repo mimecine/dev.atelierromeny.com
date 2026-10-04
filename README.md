@@ -35,9 +35,9 @@ Everything is in `src/content/`, and each part can be edited in the CMS:
 
 A few notes on works:
 
-- **Thumbnail:** `thumbnail` picks which image appears in grids and search results: 1 is `image`, 2 is the first of `images`, and so on. The work page always shows the images in their saved order.
+- **Thumbnail:** `thumbnail` picks which image appears in grids, search results and link previews: 1 is `image`, 2 is the first of `images`, and so on. The work page opens on that image, with the strip below in the saved order.
 - **All works:** every work with an image also appears in `/_works`, the collection of all works. That's also the address search results link to.
-- **Old image:** `old_image` keeps the photo a work had before it was reshot. It isn't shown on the site.
+- **Old image:** `old_image` keeps the photo a work had before it was reshot. It's shown only when the work has no `image` or `images`.
 
 ### Front page sections
 

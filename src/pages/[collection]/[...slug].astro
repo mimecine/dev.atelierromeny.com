@@ -13,7 +13,7 @@ import Star from "@components/Star.astro";
 import { shortHash, getNavDigest } from "@src/lib/cache-key";
 import { workTransitionName } from "@src/lib/view-transition";
 import { isMenuCollection } from "@src/lib/settings";
-import { thumbnailOf } from "@src/lib/works";
+import { hasImage, thumbnailOf } from "@src/lib/works";
 
 
 export async function getStaticPaths() {
@@ -30,7 +30,7 @@ export async function getStaticPaths() {
 
   return collections.flatMap((collection) => {
     const collectionWorks = works
-      .filter((work) => work.data.image)
+      .filter(hasImage)
       .filter((work) =>
         work.data.collections?.includes(collection.id) ||
         collection.id === "_works"
@@ -75,7 +75,7 @@ const { work, collection } = Astro.props;
 const { Content } = await render(work);
 
 const works = (await getCollection("works"))
-  .filter((work) => work.data.image)
+  .filter(hasImage)
   .filter(
     (work) =>
       work.data.collections?.includes(collection.id || "") ||
@@ -88,7 +88,7 @@ const works = (await getCollection("works"))
 console.log(
   "len",
   (await getCollection("works"))
-    .filter((work) => work.data.image)
+    .filter(hasImage)
     .filter(
       (work) =>
         work.data.collections?.includes(collection.id || "") ||

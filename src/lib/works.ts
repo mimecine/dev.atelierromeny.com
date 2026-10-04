@@ -1,13 +1,23 @@
 import type { CollectionEntry } from "astro:content";
 
-/** All of a work's images in order: `image`, then `images`. */
-export const imagesOf = (work: CollectionEntry<"works">) =>
-  [work.data.image, ...(work.data.images ?? [])].filter((img) => !!img);
+type Work = CollectionEntry<"works">;
 
-/** The image used for grids and search results: `thumbnail` picks one by position
- *  (1 = main image, 2 = first extra image, …), falling back to the main image. */
-export function thumbnailOf(work: CollectionEntry<"works">) {
-  const all = imagesOf(work);
-  const n = work.data.thumbnail;
-  return all[n && n >= 1 && n <= all.length ? n - 1 : 0];
+/** The images a work shows, in order: `image`, then `images`. A work with neither
+ *  falls back to its old (pre-reshoot) photo. */
+export function imagesOf(work: Work) {
+  const current = [work.data.image, ...(work.data.images ?? [])].filter((img) => !!img);
+  return current.length ? current : [work.data.old_image].filter((img) => !!img);
 }
+
+/** Whether the work has any picture to show (it's left out of grids otherwise). */
+export const hasImage = (work: Work) => imagesOf(work).length > 0;
+
+/** Position (0-based) of the image used for grids, search and link previews, which is
+ *  also the one the work page opens on: `thumbnail` picks it (1 = Image, 2 = the first
+ *  of More Images, …), otherwise the first image. */
+export function thumbnailIndex(work: Work) {
+  const n = work.data.thumbnail;
+  return n && n >= 1 && n <= imagesOf(work).length ? n - 1 : 0;
+}
+
+export const thumbnailOf = (work: Work) => imagesOf(work)[thumbnailIndex(work)];

@@ -2,6 +2,7 @@
 import { getCollection, getEntry } from "astro:content";
 import WorkCard from "@components/WorkCard.astro";
 import SectionHeader from "./SectionHeader.astro";
+import { hasImage } from "@src/lib/works";
 import type { Section } from "@src/lib/settings";
 
 interface Props {
@@ -12,7 +13,7 @@ const id = String(section.collection);
 const collection = await getEntry("collections", id);
 
 const works = collection?.data.published
-  ? (await getCollection("works", (w) => w.data.image && w.data.collections?.includes(id))).sort(
+  ? (await getCollection("works", (w) => hasImage(w) && !!w.data.collections?.includes(id))).sort(
       // by title, untitled works last
       (a, b) => (a.data.title ? 0 : 1) - (b.data.title ? 0 : 1) || (a.data.title ?? "").localeCompare(b.data.title ?? "")
     )

@@ -1,7 +1,7 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import { Image, getImage } from "astro:assets";
-import { imagesOf, thumbnailOf } from "@src/lib/works";
+import { imagesOf, thumbnailIndex } from "@src/lib/works";
 
 interface Props {
   work: CollectionEntry<"works">;
@@ -13,7 +13,10 @@ const { work, transitionName } = Astro.props;
 const alt = work.data.title || "";
 const gallery = imagesOf(work);
 // The chosen thumbnail is also the image shown for this page in search results.
-const searchIndex = Math.max(gallery.indexOf(thumbnailOf(work)!), 0);
+// The page opens on the chosen thumbnail (the image shown for this work in grids and
+// search results); the strip below keeps the saved order.
+const start = thumbnailIndex(work);
+const searchIndex = start;
 // Larger versions for the zoom viewer; only downloaded when it's opened.
 const zoomSrcs = await Promise.all(
   gallery.map(
@@ -27,7 +30,7 @@ const zoomSrcs = await Promise.all(
   flexible box), and the thumbnail band keeps its height on desktop even when there's only
   one image, so paging between works never shifts the layout.
 -->
-<div class="flex flex-col flex-1 min-h-0" x-data="{ active: 0 }">
+<div class="flex flex-col flex-1 min-h-0" x-data={`{ active: ${start} }`}>
   <div class="relative flex-1 min-h-0">
     {
       (gallery.length > 0 &&
@@ -42,7 +45,7 @@ const zoomSrcs = await Promise.all(
             title="Click to zoom"
             x-show={`active === ${i}`}
             style={
-              i > 0
+              i !== start
                 ? "display: none"
                 : transitionName && `view-transition-name: ${transitionName}`
             }

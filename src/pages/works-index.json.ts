@@ -2,10 +2,10 @@ export const prerender = true;
 import type { APIRoute } from "astro";
 import { getCollection } from "astro:content";
 import { getImage } from "astro:assets";
-import { thumbnailOf } from "@src/lib/works";
+import { hasImage, thumbnailOf } from "@src/lib/works";
 
 export const GET: APIRoute = async () => {
-  const works = (await getCollection("works")).filter((work) => work.data.image);
+  const works = (await getCollection("works")).filter(hasImage);
 
   const items = await Promise.all(
     works.map(async (work) => {
