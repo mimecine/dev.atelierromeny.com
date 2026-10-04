@@ -77,3 +77,9 @@ export const FIELD_OPTIONS: Record<string, Record<string, FieldOptions>> = {
     hidden_images: { entryImages: true },
   },
 };
+
+/** Toolbar filters (dropdowns with counts) per collection. Without an entry here, every
+ *  tag-like, select and relation column gets one. */
+export const FACETS: Record<string, string[]> = {
+  works: ["tags", "categories", "collections"],
+};

@@ -18,6 +18,7 @@ export const prerender = true;
       <a class="back" href="/admin/" title="Back to Sveltia CMS">← CMS</a>
       <select id="collection" aria-label="Collection"></select>
       <input id="search" type="search" placeholder="Filter… (commas: all terms)" title="Comma-separated terms must all match, e.g. bird, etching" aria-label="Filter rows" />
+      <span id="facets" class="facets"></span>
       <span id="count" class="count"></span>
       <button id="columns" type="button">Columns</button>
       <button id="media" type="button">Media</button>
@@ -87,7 +88,7 @@ export const prerender = true;
     padding: 0 10px;
   }
   .bar input[type="search"] {
-    width: 220px;
+    width: 190px;
   }
   .bar button {
     cursor: pointer;
@@ -240,6 +241,47 @@ export const prerender = true;
     cursor: pointer;
     text-align: left;
     padding: 4px 6px;
+  }
+
+  /* toolbar filters (tags, category, collections) */
+  .facets {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .bar button.facet {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    max-width: 260px;
+  }
+  .bar button.facet span:first-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .bar button.facet::after {
+    content: "▾";
+    color: var(--muted);
+    font-size: 10px;
+  }
+  .bar button.facet.on {
+    border-color: var(--accent);
+    background: #eef3ff;
+    color: var(--accent);
+  }
+  .facet-x {
+    font-size: 14px;
+    line-height: 1;
+    color: var(--muted);
+  }
+  .facet-x:hover {
+    color: #b42318;
+  }
+  .facet-hint {
+    margin: 0 0 4px;
+    color: var(--muted);
+    font-size: 11px;
   }
 
   /* hover preview: below the thumbnail, ignores the mouse so clicks go through */

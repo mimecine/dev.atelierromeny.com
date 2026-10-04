@@ -26,7 +26,7 @@ import {
   type FieldConfig,
 } from "./model";
 import { prepareUpload, slugifyBase } from "./images";
-import { FIELD_OPTIONS, PRICING_FILE, computedColumns, pricing } from "./settings";
+import { FACETS, FIELD_OPTIONS, PRICING_FILE, computedColumns, pricing } from "./settings";
 
 // ---------------------------------------------------------------- state
 
@@ -55,6 +55,8 @@ const state = {
   hidden: new Set<string>(),
   entries: [] as Entry[],
   filter: "",
+  /** toolbar filters: column key -> chosen values ("" = entries with no value) */
+  facets: {} as Record<string, Set<string>>,
   sort: undefined as { key: string; dir: 1 | -1 } | undefined,
   uploads: new Map<string, Upload>(),
   thumbs: {} as Record<string, string>,
@@ -995,10 +997,154 @@ function sortValue(entry: Entry, col: Column): string | number {
   return String(v).toLowerCase();
 }
 
+// ---------------------------------------------------------------- facet filters
+
+const NONE = "";
+
+function facetColumns(): Column[] {
+  const keys = FACETS[state.collection?.name ?? ""];
+  if (keys) return keys.map((k) => state.columns.find((c) => c.key === k)).filter((c): c is Column => !!c);
+  return state.columns.filter((c) => c.kind === "strings" || c.kind === "select" || c.kind === "relation");
+}
+
+/** Several values per entry (tags, relations): an entry must have all chosen values.
+ *  One value per entry (category, select): it must have any of them. */
+const isMulti = (col: Column) => col.kind === "strings" || (col.kind === "relation" && col.field.multiple !== false);
+
+function facetValues(entry: Entry, col: Column): string[] {
+  const v = entry.data[col.key];
+  if (col.kind === "strings") return readStrings(col, v);
+  if (Array.isArray(v)) return v.filter((x) => x != null && x !== "").map(String);
+  return v == null || v === "" ? [] : [String(v)];
+}
+
+function matchesFacets(entry: Entry, except?: string) {
+  for (const col of facetColumns()) {
+    const chosen = state.facets[col.key];
+    if (!chosen?.size || col.key === except) continue;
+    const vals = facetValues(entry, col);
+    const test = (c: string) => (c === NONE ? vals.length === 0 : vals.includes(c));
+    if (isMulti(col) ? ![...chosen].every(test) : ![...chosen].some(test)) return false;
+  }
+  return true;
+}
+
+const facetsKey = () => `atelier-table.facets.${state.collection?.name}`;
+function loadFacets() {
+  state.facets = {};
+  try {
+    const saved = JSON.parse(localStorage.getItem(facetsKey()) || "{}");
+    for (const [k, v] of Object.entries(saved)) if (Array.isArray(v) && v.length) state.facets[k] = new Set(v as string[]);
+  } catch {}
+}
+function saveFacets() {
+  try {
+    localStorage.setItem(facetsKey(), JSON.stringify(Object.fromEntries(Object.entries(state.facets).map(([k, v]) => [k, [...v]]))));
+  } catch {}
+}
+
+/** Display labels for a column's values (relation values show the related title). */
+async function facetLabels(col: Column): Promise<Map<string, string>> {
+  const labels = new Map<string, string>();
+  if (col.kind === "relation") {
+    for (const o of await relationOptions(col.field)) labels.set(templateValue(o, col.field.value_field), relationLabel(col.field, o));
+  }
+  return labels;
+}
+
+function renderFacets() {
+  const bar = $("#facets");
+  bar.replaceChildren(
+    ...facetColumns().map((col) => {
+      const chosen = state.facets[col.key];
+      const btn = h("button", { type: "button", class: `facet${chosen?.size ? " on" : ""}`, title: `Filter by ${col.label.toLowerCase()}` });
+      const label = h("span", {}, col.label);
+      btn.append(label);
+      if (chosen?.size) {
+        facetLabels(col).then((labels) => {
+          const names = [...chosen].map((v) => (v === NONE ? "(none)" : labels.get(v) ?? v));
+          label.textContent = `${col.label}: ${names.length > 2 ? `${names.slice(0, 2).join(", ")} +${names.length - 2}` : names.join(", ")}`;
+        });
+        btn.append(
+          h("span", {
+            class: "facet-x",
+            title: "Clear",
+            on: {
+              click: (e: Event) => {
+                e.stopPropagation();
+                delete state.facets[col.key];
+                saveFacets();
+                renderFacets();
+                renderTable();
+              },
+            },
+          }, "×")
+        );
+      }
+      btn.addEventListener("click", () => facetMenu(btn, col));
+      return btn;
+    })
+  );
+}
+
+async function facetMenu(anchor: HTMLElement, col: Column) {
+  const search = h("input", { type: "search", placeholder: `Search ${col.label.toLowerCase()}…` }) as HTMLInputElement;
+  const list = h("div", { class: "options" }, "Loading…");
+  const hint = h("p", { class: "facet-hint" }, isMulti(col) ? "Rows must have all the ticked values." : "Rows can have any of the ticked values.");
+  popover(anchor, h("div", {}, search, hint, list));
+  const labels = await facetLabels(col);
+  const render = () => {
+    // Counts among rows that pass the other filters.
+    const counts = new Map<string, number>();
+    for (const e of state.entries) {
+      if (!matchesFacets(e, col.key)) continue;
+      const vals = facetValues(e, col);
+      if (!vals.length) counts.set(NONE, (counts.get(NONE) ?? 0) + 1);
+      for (const v of new Set(vals)) counts.set(v, (counts.get(v) ?? 0) + 1);
+    }
+    const chosen = state.facets[col.key] ?? new Set<string>();
+    for (const c of chosen) if (!counts.has(c)) counts.set(c, 0);
+    const q = search.value.trim().toLowerCase();
+    const nameOf = (v: string) => (v === NONE ? "(none)" : labels.get(v) ?? v);
+    const items = [...counts.entries()]
+      .filter(([v]) => !q || nameOf(v).toLowerCase().includes(q) || v.toLowerCase().includes(q))
+      .sort(([a, x], [b, y]) => Number(chosen.has(b)) - Number(chosen.has(a)) || Number(a === NONE) - Number(b === NONE) || y - x || nameOf(a).localeCompare(nameOf(b)));
+    list.replaceChildren(
+      ...items.map(([v, n]) =>
+        h(
+          "label",
+          { class: "option" },
+          h("input", {
+            type: "checkbox",
+            checked: chosen.has(v),
+            on: {
+              change: (e: Event) => {
+                const set = (state.facets[col.key] ??= new Set());
+                if ((e.target as HTMLInputElement).checked) set.add(v);
+                else set.delete(v);
+                if (!set.size) delete state.facets[col.key];
+                saveFacets();
+                renderFacets();
+                renderTable();
+                render();
+              },
+            },
+          }),
+          h("span", {}, nameOf(v)),
+          h("small", {}, String(n))
+        )
+      )
+    );
+    if (!items.length) list.append(h("p", { class: "facet-hint" }, "No matches."));
+  };
+  search.addEventListener("input", render);
+  render();
+}
+
 function rowsToShow() {
   // Comma-separated terms must all match, each anywhere in the row: "bird, etching"
   const terms = state.filter.toLowerCase().split(",").map((t) => t.trim()).filter(Boolean);
-  let rows = state.entries;
+  let rows = state.entries.filter((e) => matchesFacets(e));
   if (terms.length) {
     rows = rows.filter((e) => {
       const values = [e.slug, ...state.columns.map((c) => e.data[c.key])]
@@ -1142,6 +1288,8 @@ async function loadCollection(name: string) {
   state.columns = cols;
   state.hidden = loadHidden();
   loadLayout();
+  loadFacets();
+  renderFacets();
   state.sort = undefined;
   state.uploads.clear();
   try {

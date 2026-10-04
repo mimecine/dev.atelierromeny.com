@@ -101,6 +101,10 @@ Only the collections linked from *Settings → Menu* are open to search engines,
 - **Media browser:** the "Media" button, or + on an image cell, opens the media folders from the config.
   - It searches by file name, shows a thumbnail grid, and uploads files dropped on it.
   - Uploads made there are saved with the next Save, even if no entry uses them yet.
+- **Filters:** Tags, Categories and Collections dropdowns sit next to the search box (`FACETS` in `settings.ts`).
+  - They list every value with a count, plus "(none)".
+  - Several tags or collections must all match; several categories match any of them.
+  - Active filters are remembered per collection; × clears one.
 - **Hover preview:** hovering an image shows a larger version below it. It ignores the mouse, so clicks still go through.
 - **Caching:** loaded collections are kept in this browser (IndexedDB `atelier-table`), so the table opens instantly from the cached copy, then refreshes.
   - **On GitHub:** a refresh compares Git object ids and downloads only files that changed.
