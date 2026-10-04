@@ -1,6 +1,6 @@
 ---
 id: 332
-title: A la cruche
+title: A la Cruche
 image: '/src/media/works/332-a-la-cruche-v2.webp'
 collections:
   - marco
