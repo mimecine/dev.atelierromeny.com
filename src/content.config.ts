@@ -17,6 +17,7 @@ const _works = defineCollection({
       categories: z.string().optional().nullish(),
       w: z.number().optional().nullish(),
       h: z.number().optional().nullish(),
+      rating: z.number().int().min(1).max(5).optional().nullish(), // 1–5, admin only
       sheet_w: z.number().optional().nullish(), // prints: paper size; w/h is the image (plate)
       sheet_h: z.number().optional().nullish(),
       location: z.string().optional().nullish(),

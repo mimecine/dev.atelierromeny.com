@@ -26,7 +26,7 @@ import {
   type FieldConfig,
 } from "./model";
 import { prepareUpload, slugifyBase } from "./images";
-import { FIELD_OPTIONS } from "./settings";
+import { COMPUTED_COLUMNS, FIELD_OPTIONS } from "./settings";
 
 // ---------------------------------------------------------------- state
 
@@ -111,6 +111,7 @@ function setValue(entry: Entry, col: Column, value: unknown) {
   entry.dirty.add(col.key);
   updateToolbar();
   refreshCell(entry, col);
+  for (const c of state.columns) if (c.computed?.from.includes(col.key)) refreshCell(entry, c);
 }
 
 // ---------------------------------------------------------------- media
@@ -654,6 +655,11 @@ function fillCell(td: HTMLTableCellElement, entry: Entry, col: Column) {
   td.classList.toggle("changed", entry.dirty.has(col.key));
   td.onclick = td.ondragover = td.ondragleave = td.ondrop = null;
   switch (col.kind) {
+    case "computed": {
+      const n = col.computed!.value(entry.data);
+      td.replaceChildren(h("div", { class: "text num computed", title: "Worked out from other fields" }, n == null ? "" : col.computed!.format(n)));
+      break;
+    }
     case "text":
     case "longtext": {
       td.replaceChildren(h("div", { class: `text ${col.kind}` }, v == null ? "" : String(v)));
@@ -981,7 +987,7 @@ function headerCell(col: Column, colEl: HTMLTableColElement, table: HTMLTableEle
 }
 
 function sortValue(entry: Entry, col: Column): string | number {
-  const v = entry.data[col.key];
+  const v = col.computed ? col.computed.value(entry.data) : entry.data[col.key];
   if (v == null || v === "") return "";
   if (typeof v === "number") return v;
   if (typeof v === "boolean") return v ? 1 : 0;
@@ -1117,6 +1123,11 @@ async function loadCollection(name: string) {
   const cols = columnsOf(collection, FIELD_OPTIONS[collection.name]);
   const first = cols.findIndex((c) => c.key === "title");
   if (first > 0) cols.unshift(...cols.splice(first, 1));
+  for (const c of COMPUTED_COLUMNS[collection.name] ?? []) {
+    const col: Column = { field: { name: c.key, label: c.label }, kind: "computed", key: c.key, label: c.label, options: {}, computed: c };
+    const at = cols.findIndex((x) => x.key === c.after);
+    cols.splice(at < 0 ? cols.length : at + 1, 0, col);
+  }
   state.columns = cols;
   state.hidden = loadHidden();
   loadLayout();

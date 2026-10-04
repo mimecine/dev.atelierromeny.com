@@ -2,7 +2,7 @@
 // Edits only touch the keys that changed, through the YAML document, so the rest of
 // each file keeps its formatting and comments.
 import { parseDocument, type Document } from "yaml";
-import type { FieldOptions } from "./settings";
+import type { ComputedColumn, FieldOptions } from "./settings";
 
 export interface FieldConfig {
   name: string;
@@ -45,6 +45,7 @@ export type Kind =
   | "strings"
   | "markdown"
   | "imagechoice"
+  | "computed"
   | "unsupported";
 
 export interface Column {
@@ -53,6 +54,8 @@ export interface Column {
   key: string;
   label: string;
   options: FieldOptions;
+  /** set on read-only columns worked out from other fields (kind "computed") */
+  computed?: ComputedColumn;
 }
 
 export function kindOf(f: FieldConfig): Kind | null {

@@ -75,8 +75,9 @@ collections:
         field: { label: "Tag", name: "tag", widget: "string" }
       - { label: "Published", name: "published", widget: "boolean", default: true }
       - { label: "Categories", name: "categories", widget: "string", required: false }
-      - { label: "Width (cm)", name: "w", widget: "number", value_type: "float", required: false }
+      - { label: "Width (cm)", name: "w", widget: "number", value_type: "float", required: false, hint: "The table view (/admin/table) shows the area and a suggested price worked out from width × height." }
       - { label: "Height (cm)", name: "h", widget: "number", value_type: "float", required: false }
+      - { label: "Rating", name: "rating", widget: "number", value_type: "int", min: 1, max: 5, required: false, hint: "1 to 5, for pricing and selection. Not shown on the site." }
       - { label: "Sheet Width (cm)", name: "sheet_w", widget: "number", value_type: "float", required: false, hint: "Works on paper: the sheet. Width/Height is the image (plate)." }
       - { label: "Sheet Height (cm)", name: "sheet_h", widget: "number", value_type: "float", required: false }
       - { label: "Location", name: "location", widget: "string", required: false }
