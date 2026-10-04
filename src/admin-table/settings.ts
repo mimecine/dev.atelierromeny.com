@@ -74,6 +74,7 @@ export const FIELD_OPTIONS: Record<string, Record<string, FieldOptions>> = {
     image: { entryImages: true },
     images: { entryImages: true },
     old_image: { entryImages: true },
+    detail: { entryImages: true },
     hidden_images: { entryImages: true },
   },
 };

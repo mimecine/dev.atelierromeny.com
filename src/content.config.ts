@@ -14,6 +14,7 @@ const _works = defineCollection({
       hidden_images: z.array(image()).optional().nullish(), // kept in the files, not shown on the site
       thumbnail: z.number().int().optional().nullish(), // which image is the thumbnail: 1 = image, 2 = images[0], …
       old_image: image().optional().nullish(), // pre-reshoot photo; shown only when the work has no other image
+      detail: image().optional().nullish(), // the artwork alone, cut out and straightened (scripts/make_details.py); shown last on the work page
       description: z.string().optional().nullish(),
       categories: z.string().optional().nullish(),
       w: z.number().optional().nullish(),
