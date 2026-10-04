@@ -5,7 +5,7 @@ import { isMenuCollection } from "@src/lib/settings";
 import { hasImage } from "@src/lib/works";
 
 // Lists exactly the pages open to search engines (the same rule as the noindex tags):
-// home, published markdown pages, collections linked from Settings > Menu, and the
+// home, published markdown pages, collections linked from Settings > Navigation, and the
 // canonical /works/<slug>/ page of each work shown under them. Submit https://atelierromeny.com/sitemap.xml in Google Search Console.
 export const GET: APIRoute = async ({ site }) => {
   const base = site ?? new URL("https://atelierromeny.com");

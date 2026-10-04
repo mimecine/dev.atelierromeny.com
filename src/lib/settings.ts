@@ -3,7 +3,11 @@ import { parse } from "yaml";
 // Astro's module dependency graph — required for the Cloudflare Workers
 // runtime (no source-tree filesystem access at runtime) and so that
 // experimental.incrementalBuild's dependency-graph hash picks up edits here.
-import settingsRaw from "../content/settings.yml?raw";
+// Settings are split over four files, one per entry under Settings in the CMS.
+import homeRaw from "../content/settings/home.yml?raw";
+import navigationRaw from "../content/settings/navigation.yml?raw";
+import footerRaw from "../content/settings/footer.yml?raw";
+import parametersRaw from "../content/settings/parameters.yml?raw";
 
 export interface Settings {
   site_title: string;
@@ -14,7 +18,6 @@ export interface Settings {
   ga: string;
   css: string;
   js: string;
-  collections: string[];
   description: string;
   author: string;
   email: string;
@@ -23,7 +26,7 @@ export interface Settings {
   barrier?: Barrier;
 }
 
-/** Settings > Password Protection */
+/** Settings > Parameters > Password */
 export interface Barrier {
   enabled?: boolean;
   password?: string;
@@ -62,11 +65,23 @@ export interface Section {
   text?: string;
 }
 
+/** All settings in one object, whichever file they live in. */
 export function loadSettings(): Settings {
-  return parse(settingsRaw);
+  const home = parse(homeRaw) ?? {};
+  const navigation = parse(navigationRaw) ?? {};
+  const footer = parse(footerRaw) ?? {};
+  const parameters = parse(parametersRaw) ?? {};
+  return {
+    ...home,
+    ...navigation,
+    ...footer,
+    ...(parameters.seo ?? {}),
+    ...(parameters.advanced ?? {}),
+    barrier: parameters.password,
+  };
 }
 
-/** A collection is "in the menu" if a link in Settings > Menu points to it. Only those
+/** A collection is "in the menu" if a link in Settings > Navigation points to it. Only those
  *  collections, and works shown under them, are open to search engines.
  *  (The collections' own "Shown In Menu" flag isn't used; the menu comes from Settings.) */
 export function isMenuCollection(id: string) {

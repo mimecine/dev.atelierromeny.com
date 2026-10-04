@@ -1,0 +1,9 @@
+# Settings > Home Sections in the CMS: the front page, top to bottom.
+sections:
+  - type: image
+    title: Image
+    show_title: false
+    hidden: false
+    image: /src/media/assets/Edlef While Painting.webp
+    caption: ""
+    href: ""

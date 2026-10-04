@@ -1320,7 +1320,7 @@ function columnsMenu(anchor: HTMLElement) {
 
 // ---------------------------------------------------------------- load & save
 
-/** Settings > Pricing, for the suggested price columns. Keeps the defaults if it can't be read. */
+/** Settings > Parameters > Pricing, for the suggested price columns. Keeps the defaults if it can't be read. */
 async function loadPricing() {
   try {
     const data = (parseYaml(await (await state.backend.readBlob(PRICING_FILE)).text()) ?? {}).pricing ?? {};

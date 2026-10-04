@@ -1,6 +1,6 @@
 import type { ImageMetadata } from "astro";
 
-// Every image under src/media, so paths stored as plain strings (settings.yml, markdown
+// Every image under src/media, so paths stored as plain strings (settings files, markdown
 // written by Sveltia) can be turned into optimisable images like content-collection ones.
 const files = import.meta.glob<{ default: ImageMetadata }>(
   "/src/media/**/*.{webp,jpg,jpeg,png,gif,avif}",

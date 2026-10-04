@@ -185,58 +185,15 @@ collections:
     editor:
       preview: false
     files:
-      - file: "src/content/pricing.yml"
-        label: "Pricing"
-        name: "pricing"
+      - file: "src/content/settings/home.yml"
+        label: "Home Sections"
+        name: "home"
         fields:
-          - { label: "Price per m² (€)", name: "price_per_m2", widget: "number", value_type: "float", min: 0, default: 2000, hint: "Base price = width × height (m²) × this. Shown in the table view (/admin/table); never on the site." }
-          - { label: "Rating step (%)", name: "rating_step_percent", widget: "number", value_type: "float", min: 0, default: 20, hint: "Each star above or below 3 moves the suggested price by this much: with 20%, rating 5 = base +40%, rating 1 = base −40%. No rating = base price." }
-      - file: "src/content/settings.yml"
-        label: "Frontpage Settings"
-        name: "settings"
-        fields:
-          - { label: "Site Title", name: "site_title", widget: "string", required: true }
-          - label: "Site Menu"
-            label_singular: "Menu Item"
-            name: "menu"
-            widget: list
-            fields:
-              - label: "Title"
-                name: "title"
-                widget: string
-                required: true
-              - label: "Url"
-                name: "href"
-                widget: string
-                required: true
-            # types:
-            #   - label: "Collection"
-            #     name: "collection"
-            #     widget: relation
-            #     collection: "collections"
-            #     search_fields: ["title"]
-            #     value_field: "uuid"
-            #     display_fields: ["title"]
-            #     required: false
-            #   - label: "Page"
-            #     name: "page"
-            #     widget: relation
-            #     collection: "pages"
-            #     search_fields: ["title"]
-            #     value_field: "uuid"
-            #     display_fields: ["title"]
-            #     required: false
-            #   - label: "External Link"
-            #     name: "external"
-            #     widget: object
-            #     summary: "{{fields.name}}"
-            #     fields:
-            #       - { label: "Name (e.g. Twitter)", name: "name", widget: string }
-            #       - { label: "URL (e.g. https://twitter.com/username)", name: "url", widget: string }
-          - label: "Frontpage Sections"
+          - label: "Sections"
             label_singular: "Section"
             name: "sections"
             widget: "list"
+            hint: "The front page, top to bottom"
             types:
               - label: "Collection"
                 name: "collection"
@@ -287,16 +244,23 @@ collections:
                   - { label: Columns, name: columns, widget: select, options: [1, 2, 3], default: 1, hint: "Text flows into this many columns on wide screens" }
                   - { label: "Hide Section", name: hidden, widget: boolean, default: false }
 
-          - label: "Password Protection"
-            name: "barrier"
-            widget: object
-            collapsed: true
-            hint: "Keeps casual visitors out while the site is being built. Not real security: the password is in the page source."
+      - file: "src/content/settings/navigation.yml"
+        label: "Navigation"
+        name: "navigation"
+        fields:
+          - label: "Menu"
+            label_singular: "Menu Item"
+            name: "menu"
+            widget: list
+            hint: "Links in the header, left to right. Collections linked here are the ones open to search engines."
             fields:
-              - { label: "Require password", name: enabled, widget: boolean, default: true }
-              - { label: Password, name: password, widget: string, required: false, hint: "Changing it logs everyone out" }
-              - { label: "Remember for (days)", name: days, widget: number, value_type: int, min: 1, default: 7 }
-              - { label: "Text under the password field", name: text, widget: markdown, required: false }
+              - { label: "Title", name: "title", widget: string, required: true }
+              - { label: "Url", name: "href", widget: string, required: true, hint: "e.g. /selected-paintings or /bio" }
+
+      - file: "src/content/settings/footer.yml"
+        label: "Footer"
+        name: "footer"
+        fields:
           - label: "Footer Links"
             label_singular: "Footer Link"
             hint: "Shown in a row just above the copyright"
@@ -304,21 +268,47 @@ collections:
             widget: list
             required: false
             fields:
-            - label: "Name (e.g. Twitter)"
-              name: "title"
-              widget: string
-            - label: "URL (e.g. https://twitter.com/username)"
-              name: "href"
-              widget: string
-          - { label: "Copyright", name: "copyright", widget: "string", required: false }
-          - { label: "Google Analytics", name: "ga", widget: "string", required: false, hint: "Measurement ID (G-XXXXXXXXXX). Leave empty to turn tracking off.", pattern: ["^(G-[A-Z0-9]+)?$", "Should look like G-XXXXXXXXXX"] }
-          - { label: "Extra CSS", name: "css", widget: "text", hint: "Don't forget !important if needed. TailwindCSS @apply works.", required: false, preview: false }
-          - { label: "Extra JS", name: "js", widget: "text", required: false, preview: false }
-          - { label: "Collections", name: "collections", widget: "relation", collection: "collections", search_fields: ["title"], display_fields: ["title"], multiple: true, required: false }
-          - { label: "Description", name: "description", widget: "text", required: false, hint: "Used by search engines and link previews when a page has no text of its own" }
-          - { label: "Sharing Image", name: "share_image", widget: "image", required: false, hint: "Shown when a link to the site is shared (Facebook, X, messages). Work, collection and page links use their own image." }
-          - { label: "Author", name: "author", widget: "string", required: false }
-          - { label: "Email", name: "email", widget: "string", required: false }
+              - { label: "Name (e.g. Instagram)", name: "title", widget: string }
+              - { label: "URL", name: "href", widget: string, hint: "https://… or mailto:…" }
+          - { label: "Copyright", name: "copyright", widget: "string", required: false, hint: "Not shown yet: the footer reads “© <year> Atelier Romeny”" }
 
-
-  
+      - file: "src/content/settings/parameters.yml"
+        label: "Parameters"
+        name: "parameters"
+        fields:
+          - label: "Password"
+            name: "password"
+            widget: object
+            collapsed: true
+            hint: "Keeps casual visitors out while the site is being built. Not real security: the password is in the page source."
+            fields:
+              - { label: "Require password", name: enabled, widget: boolean, default: false }
+              - { label: Password, name: password, widget: string, required: false, hint: "Changing it logs everyone out" }
+              - { label: "Remember for (days)", name: days, widget: number, value_type: int, min: 1, default: 7 }
+              - { label: "Text under the password field", name: text, widget: markdown, required: false }
+          - label: "Pricing"
+            name: "pricing"
+            widget: object
+            collapsed: true
+            hint: "Suggested prices in the table view (/admin/table); never shown on the site."
+            fields:
+              - { label: "Price per m² (€)", name: "price_per_m2", widget: "number", value_type: "float", min: 0, default: 2000, hint: "Base price = width × height (m²) × this." }
+              - { label: "Rating step (%)", name: "rating_step_percent", widget: "number", value_type: "float", min: 0, default: 20, hint: "Each star above or below 3 moves the suggested price by this much: with 20%, rating 5 = base +40%, rating 1 = base −40%. No rating = base price." }
+          - label: "SEO & Analytics"
+            name: "seo"
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Description", name: "description", widget: "text", required: false, hint: "Used by search engines and link previews when a page has no text of its own" }
+              - { label: "Sharing Image", name: "share_image", widget: "image", required: false, hint: "Shown when a link to the site is shared (Facebook, X, messages). Work, collection and page links use their own image." }
+              - { label: "Google Analytics", name: "ga", widget: "string", required: false, hint: "Measurement ID (G-XXXXXXXXXX). Leave empty to turn tracking off.", pattern: ["^(G-[A-Z0-9]+)?$", "Should look like G-XXXXXXXXXX"] }
+              - { label: "Site Title", name: "site_title", widget: "string", required: false, hint: "Not used yet" }
+              - { label: "Author", name: "author", widget: "string", required: false, hint: "Not used yet" }
+              - { label: "Email", name: "email", widget: "string", required: false, hint: "Not used yet" }
+          - label: "Advanced"
+            name: "advanced"
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Extra CSS (site-wide)", name: "css", widget: "text", required: false, hint: "Not used yet. Pages have their own Extra CSS." }
+              - { label: "Extra JS (site-wide)", name: "js", widget: "text", required: false, hint: "Not used yet. Pages have their own Extra JS." }

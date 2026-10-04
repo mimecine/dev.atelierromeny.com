@@ -19,9 +19,9 @@ import { getCollection } from "astro:content";
 
 interface Props {
   title?: string;
-  /** meta description and sharing text; defaults to Settings > Description */
+  /** meta description and sharing text; defaults to Settings > Parameters > SEO > Description */
   description?: string;
-  /** image for link previews (Facebook, X, iMessage…); defaults to Settings > Sharing Image */
+  /** image for link previews (Facebook, X, iMessage…); defaults to Settings > Parameters > SEO > Sharing Image */
   image?: ImageMetadata | null;
   frontmatter?: Record<string, unknown>;
   bodyclasses?: string | string[];
@@ -127,7 +127,7 @@ const printCss = `@media print {
     }
   }
 }`;
-// Google Analytics (Settings > Google Analytics). Only a well-formed ID is used, since it
+// Google Analytics (Settings > Parameters > SEO > Google Analytics). Only a well-formed ID is used, since it
 // ends up inside a script. Soft navigations (ClientRouter) are counted by GA4's enhanced
 // measurement ("page changes based on browser history events", on by default).
 const gaId = /^G-[A-Z0-9]+$/.test(ga ?? "") ? ga : undefined;

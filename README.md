@@ -32,7 +32,7 @@ Everything is in `src/content/`, and each part can be edited in the CMS:
 | `collections/*.md` | Named groups of works. Each has its own page at `/<collection>` and its works at `/<collection>/<work>` |
 | `pages/*.md` | Free pages such as `bio.md`, served at `/<page>`. A page's `image` floats to the right of its text |
 | `photos/*.md` | Photos with a title, caption, optional date and a description (the text), at `/photos/` and `/photos/<slug>/`, newest first. Images go in `src/media/photos`. Not in the menu yet |
-| `settings.yml` | Site title, menu, front page sections, footer links, password protection |
+| `settings/*.yml` | One file per entry under Settings in the CMS: `home.yml` (Home Sections), `navigation.yml` (the menu), `footer.yml` (footer links, copyright), `parameters.yml` (password, pricing, SEO & analytics) |
 
 A few notes on works:
 
@@ -49,7 +49,7 @@ A few notes on works:
 
 ### Front page sections
 
-Set in *Settings → Frontpage Settings → Frontpage Sections*. Each type has its own component in `src/components/sections/`:
+Set in *Settings → Home Sections*. Each type has its own component in `src/components/sections/`:
 
 - **Free Content:** markdown text in 1–3 columns. Images inside the text are optimised.
 - **Large Image:** a left-aligned image with an optional caption and link.
@@ -81,7 +81,7 @@ The search page (`src/pages/search.astro`) renders its own results. It lists col
 
 ### Search engines
 
-Only the collections linked from *Settings → Menu* are open to search engines, along with the works shown under those collections, the home page and the markdown pages. Every other collection, the `/_works/` and `/works/` duplicates, Search and Saved are marked `noindex` (see `isMenuCollection` in `src/lib/settings.ts`). The collections' own "Shown In Menu" flag isn't used for this. The same pages are listed in `/sitemap.xml` (submitted in Google Search Console), and `robots.txt` points to it.
+Only the collections linked from *Settings → Navigation* are open to search engines, along with the works shown under those collections, the home page and the markdown pages. Every other collection, the `/_works/` and `/works/` duplicates, Search and Saved are marked `noindex` (see `isMenuCollection` in `src/lib/settings.ts`). The collections' own "Shown In Menu" flag isn't used for this. The same pages are listed in `/sitemap.xml` (submitted in Google Search Console), and `robots.txt` points to it.
 
 ## Edit links
 
@@ -154,7 +154,7 @@ If the camera files are large, `bun scripts/photo-matcher/to-webp.ts <folder>` r
 
 ## Password protection
 
-A simple password screen is set in *Settings → Password Protection*: on or off, the password, how many days it's remembered, and optional text. Changing the password logs everyone out.
+A simple password screen is set in *Settings → Parameters → Password*: on or off, the password, how many days it's remembered, and optional text. Changing the password logs everyone out.
 
 It keeps casual visitors out while the site is being built. It is not real security, because the password is in the page source.
 
