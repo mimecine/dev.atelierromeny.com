@@ -4,7 +4,7 @@ straightened, without frame or mat. Saved as src/media/works/<slug>-detail.webp
 and recorded in the work's `detail` field (shown last in the work page's strip).
 
 Source photo: the work's chosen thumbnail (thumbnail: n over image + images),
-else its image, else old_image.
+else its image, else old_image. (A work whose image is its detail uses old_image.)
 
 Outline of the artwork:
   - prints (on the burlap backdrop): the paper sheet, found like measure_prints.py
@@ -83,7 +83,10 @@ def listing(fm, key):
 
 
 def source_image(fm):
-    images = [p for p in [scalar(fm, "image"), *listing(fm, "images")] if p]
+    # Works that only had an old photo use their detail as `image` (old photo moved to
+    # old_image): make the detail from the photo, not from itself.
+    detail = scalar(fm, "detail")
+    images = [p for p in [scalar(fm, "image"), *listing(fm, "images")] if p and p != detail]
     if not images:
         old = scalar(fm, "old_image")
         return old

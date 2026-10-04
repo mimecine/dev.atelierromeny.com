@@ -43,6 +43,7 @@ A few notes on works:
   - **Outlines:** prints use `measure_prints.py`'s sheet and image detection; paintings use rembg, or the backdrop colour for close-ups on a plain background.
   - **Frames:** they're trimmed at the deepest straight line found on at least three sides.
   - **Review first:** run with `--review <folder>` for contact sheets. Doubtful results (CHECK) aren't written unless `--include-flagged`.
+  - **Works never reshot:** where a work only had an old photo, its detail is used as `image` and the photo moved to `old_image`, so old photos stay out of sight.
 
 ### Front page sections
 
