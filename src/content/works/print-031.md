@@ -11,5 +11,8 @@ tags:
   - colour print
   - abstract
   - butterfly
+year: "1975"
+year_start: 1975
+note: "Inscription (read from photo): 23/25, \"Dagen\"?, 1975 -- title uncertain"
 ---
 

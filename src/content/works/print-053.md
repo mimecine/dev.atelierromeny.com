@@ -12,5 +12,6 @@ tags:
   - field
   - tree
   - Provence
+note: "Inscription (read from photo): not legible -- signature off the bottom of the crop"
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: No title recorded
+title: "Morgonstrålar"
 categories: Print
 collections:
   - selected-prints
@@ -13,5 +13,8 @@ tags:
   - colour print
   - bird
   - tree
+year: "1968"
+year_start: 1968
+note: "Inscription (read from photo): 4/20, \"Morgonstrålar\", 1968"
 ---
 

@@ -13,5 +13,8 @@ tags:
   - orchard
   - spring
   - mountain
+year: "1980"
+year_start: 1980
+note: "Inscription (read from photo): 1980 -- identical to print-055 (same watercolour)"
 ---
 

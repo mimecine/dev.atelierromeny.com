@@ -12,5 +12,8 @@ tags:
   - still life
   - teapot
   - jug
+year: "1981"
+year_start: 1981
+note: "Inscription (read from photo): 1981"
 ---
 

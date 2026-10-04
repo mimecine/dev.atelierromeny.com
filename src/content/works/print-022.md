@@ -14,5 +14,8 @@ tags:
   - colour print
   - abstract
   - eye
+year: "1970"
+year_start: 1970
+note: "Inscription (read from photo): 7/10, \"Natten\"?, 1970 -- title uncertain"
 ---
 

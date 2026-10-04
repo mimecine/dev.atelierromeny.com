@@ -10,5 +10,8 @@ tags:
   - relief print
   - colour print
   - abstract
+year: "1968"
+year_start: 1968
+note: "Inscription (read from photo): 8/10, \"Fåglar söker bo\"?, 1968 -- title fairly sure"
 ---
 

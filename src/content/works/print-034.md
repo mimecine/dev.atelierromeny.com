@@ -1,5 +1,5 @@
 ---
-title: No title recorded
+title: "Morning"
 categories: Print
 collections:
   - selected-prints
@@ -12,5 +12,8 @@ tags:
   - leaves
   - butterfly
   - insect
+year: "1973"
+year_start: 1973
+note: "Inscription (read from photo): 36/55, \"Morning\", 1973 -- has a chop/seal stamp"
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: No title recorded
+title: "Ur djungeln"
 categories: Print
 collections:
   - selected-prints
@@ -13,5 +13,6 @@ tags:
   - butterfly
   - insect
   - foliage
+note: "Inscription (read from photo): 16/35, \"Ur djungeln\", 197?? -- year unclear ('74 or '79?)"
 ---
 

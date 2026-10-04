@@ -1,5 +1,5 @@
 ---
-title: No title recorded
+title: "Printemps"
 categories: Print
 collections:
   - selected-prints
@@ -12,5 +12,8 @@ tags:
   - colour print
   - abstract
   - eye
+year: "1970"
+year_start: 1970
+note: "Inscription (read from photo): 14/25, \"Printemps\", 1970 -- also marked e.a."
 ---
 

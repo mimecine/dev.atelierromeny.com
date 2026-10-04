@@ -12,5 +12,6 @@ tags:
   - field
   - house
   - Provence
+note: "Inscription (read from photo): not legible -- signed, no year visible"
 ---
 

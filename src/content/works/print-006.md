@@ -11,5 +11,8 @@ tags:
   - colour print
   - fruit
   - branch
+year: "1971"
+year_start: 1971
+note: "Inscription (read from photo): 6/15, 1971 -- title smudged/illegible"
 ---
 

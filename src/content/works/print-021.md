@@ -1,5 +1,5 @@
 ---
-title: No title recorded
+title: "Holland"
 categories: Print
 collections:
   - selected-prints
@@ -12,5 +12,6 @@ tags:
   - etching
   - colour print
   - abstract
+note: "Inscription (read from photo): e.a., \"Holland\" -- read from detail crop; year unclear"
 ---
 

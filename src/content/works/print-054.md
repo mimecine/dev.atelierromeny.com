@@ -12,5 +12,8 @@ tags:
   - poppies
   - flowers
   - tree
+year: "1993"
+year_start: 1993
+note: "Inscription (read from photo): 1993"
 ---
 

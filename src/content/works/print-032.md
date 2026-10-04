@@ -1,5 +1,5 @@
 ---
-title: No title recorded
+title: "Silverskog"
 categories: Print
 collections:
   - selected-prints
@@ -10,5 +10,8 @@ tags:
   - screen print
   - colour print
   - abstract
+year: "1973"
+year_start: 1973
+note: "Inscription (read from photo): 20/55, \"Silverskog\", 1973 -- has a chop/seal stamp"
 ---
 

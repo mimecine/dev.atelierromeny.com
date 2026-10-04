@@ -1,5 +1,5 @@
 ---
-title: No title recorded
+title: "Fantasia"
 categories: Print
 collections:
   - selected-prints
@@ -10,5 +10,8 @@ tags:
   - screen print
   - colour print
   - abstract
+year: "1970"
+year_start: 1970
+note: "Inscription (read from photo): 10/23, \"Fantasia\", 1970"
 ---
 

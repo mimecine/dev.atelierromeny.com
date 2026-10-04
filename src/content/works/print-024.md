@@ -10,5 +10,8 @@ tags:
   - etching
   - aquatint
   - abstract
+year: "1971"
+year_start: 1971
+note: "Inscription (read from photo): I/X, \"Rubiner\"?, 1971 -- title uncertain"
 ---
 

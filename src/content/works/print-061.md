@@ -1,5 +1,5 @@
 ---
-title: No title recorded
+title: "Mina iris"
 categories: Print
 collections:
   - selected-prints
@@ -13,5 +13,8 @@ tags:
   - flowers
   - iris
   - insect
+year: "1988"
+year_start: 1988
+note: "Inscription (read from photo): 7/25, \"Mina iris\", 1988"
 ---
 

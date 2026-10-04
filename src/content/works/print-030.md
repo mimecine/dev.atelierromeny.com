@@ -10,5 +10,8 @@ tags:
   - screen print
   - colour print
   - abstract
+year: "1973"
+year_start: 1973
+note: "Inscription (read from photo): 29/35, \"Bonheur\"?, 1973 -- title uncertain"
 ---
 

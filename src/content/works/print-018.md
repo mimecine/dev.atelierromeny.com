@@ -1,5 +1,5 @@
 ---
-title: No title recorded
+title: "Rêves de femme III"
 categories: Print
 collections:
   - selected-prints
@@ -14,5 +14,6 @@ tags:
   - nude
   - butterfly
   - insect
+note: "Inscription (read from photo): 7/25, \"Rêves de femme III\" -- no year"
 ---
 

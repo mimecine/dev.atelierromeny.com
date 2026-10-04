@@ -12,5 +12,6 @@ tags:
   - colour print
   - leaves
   - still life
+note: "Inscription (read from photo): 33/80, \"Rymdblad\"?, 1971 -- title and year fairly sure"
 ---
 

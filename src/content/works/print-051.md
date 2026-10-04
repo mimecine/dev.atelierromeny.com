@@ -12,5 +12,6 @@ tags:
   - field
   - village
   - Provence
+note: "Inscription (read from photo): not legible -- signature too small to read"
 ---
 

@@ -12,5 +12,8 @@ tags:
   - landscape
   - tree
   - semi-abstract
+year: "1973"
+year_start: 1973
+note: "Inscription (read from photo): 17/55, \"Saven stiger\"?, 1973 -- title uncertain (Swedish \"the sap rises\"?); marked e.a. too"
 ---
 

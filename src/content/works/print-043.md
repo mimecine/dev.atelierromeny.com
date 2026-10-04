@@ -1,5 +1,5 @@
 ---
-title: No title recorded
+title: "Död skata"
 categories: Print
 collections:
   - selected-prints
@@ -12,5 +12,8 @@ tags:
   - black and white
   - bird
   - magpie
+year: "1971"
+year_start: 1971
+note: "Inscription (read from photo): 6/10, \"Död skata\", 1971"
 ---
 

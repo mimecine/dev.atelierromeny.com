@@ -13,5 +13,8 @@ tags:
   - field
   - mountain
   - leaves
+year: "1975"
+year_start: 1975
+note: "Inscription (read from photo): \"Villars\"?, 1975 -- place name written in the lower left, probably not a title"
 ---
 

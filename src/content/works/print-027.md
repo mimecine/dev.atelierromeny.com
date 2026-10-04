@@ -1,5 +1,5 @@
 ---
-title: No title recorded
+title: "Le bouquet"
 categories: Print
 collections:
   - selected-prints
@@ -11,5 +11,8 @@ tags:
   - colour print
   - still life
   - flowers
+year: "1970"
+year_start: 1970
+note: "Inscription (read from photo): 17/40, \"Le bouquet\", 1970 -- faint handwritten dedication below, unreadable"
 ---
 

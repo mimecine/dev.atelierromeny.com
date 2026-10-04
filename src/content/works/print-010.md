@@ -1,5 +1,5 @@
 ---
-title: No title recorded
+title: "Morgon"
 categories: Print
 collections:
   - selected-prints
@@ -13,5 +13,8 @@ tags:
   - nude
   - sun
   - tree
+year: "1971"
+year_start: 1971
+note: "Inscription (read from photo): 6/25, \"Morgon\", 1971"
 ---
 

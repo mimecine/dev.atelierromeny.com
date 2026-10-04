@@ -1,5 +1,5 @@
 ---
-title: No title recorded
+title: "Månsken"
 categories: Print
 collections:
   - selected-prints
@@ -14,5 +14,8 @@ tags:
   - colour print
   - moon
   - plant
+year: "1975"
+year_start: 1975
+note: "Inscription (read from photo): 12/20, \"Månsken\", 1975"
 ---
 

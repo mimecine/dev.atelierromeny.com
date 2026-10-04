@@ -12,5 +12,8 @@ tags:
   - landscape
   - tree
   - orchard
+year: "1984"
+year_start: 1984
+note: "Inscription (read from photo): 8/15, 1984 -- read from detail crop; plate also marked \"R\""
 ---
 

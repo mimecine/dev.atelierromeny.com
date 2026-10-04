@@ -12,5 +12,8 @@ tags:
   - animal
   - toad
   - frog
+year: "1968"
+year_start: 1968
+note: "Inscription (read from photo): 1/24, 1968"
 ---
 

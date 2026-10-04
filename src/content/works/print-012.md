@@ -1,5 +1,5 @@
 ---
-title: No title recorded
+title: "Tournesol II"
 categories: Print
 collections:
   - selected-prints
@@ -11,5 +11,8 @@ tags:
   - flowers
   - butterfly
   - insect
+year: "1986"
+year_start: 1986
+note: "Inscription (read from photo): 5/15, \"Tournesol II\", 1986"
 ---
 

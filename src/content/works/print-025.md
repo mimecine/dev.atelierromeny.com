@@ -1,5 +1,5 @@
 ---
-title: No title recorded
+title: "Röd rörelse"
 categories: Print
 collections:
   - selected-prints
@@ -11,5 +11,8 @@ tags:
   - aquatint
   - colour print
   - abstract
+year: "1970"
+year_start: 1970
+note: "Inscription (read from photo): 2/15, \"Röd rörelse\", 1970"
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: No title recorded
+title: "Aan de Middellandse Zee"
 categories: Print
 collections:
   - selected-prints
@@ -13,5 +13,8 @@ tags:
   - aquatint
   - colour print
   - abstract
+year: "1970"
+year_start: 1970
+note: "Inscription (read from photo): 7/15, \"Aan de Middellandse Zee\", 1970 -- written abbreviated \"aan de Middell. Zee\""
 ---
 

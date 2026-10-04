@@ -13,5 +13,6 @@ tags:
   - black and white
   - still life
   - garlic
+note: "Inscription (read from photo): 4/20, 197?? -- year unclear ('71 or '73?)"
 ---
 

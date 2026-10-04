@@ -1,5 +1,5 @@
 ---
-title: No title recorded
+title: "Elle joue"
 categories: Print
 collections:
   - selected-prints
@@ -14,5 +14,8 @@ tags:
   - black and white
   - figure
   - music
+year: "2005"
+year_start: 2005
+note: "Inscription (read from photo): 2/8, \"Elle joue\", 2005 -- edition 2 or 8?"
 ---
 

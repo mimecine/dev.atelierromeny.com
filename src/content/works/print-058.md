@@ -1,5 +1,5 @@
 ---
-title: No title recorded
+title: "Vigne IV"
 categories: Print
 collections:
   - selected-prints
@@ -12,5 +12,8 @@ tags:
   - grapes
   - vine
   - leaves
+year: "1989"
+year_start: 1989
+note: "Inscription (read from photo): 6/30, \"Vigne IV\", 1989"
 ---
 

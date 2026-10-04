@@ -1,5 +1,5 @@
 ---
-title: No title recorded
+title: "Savojkål"
 categories: Print
 collections:
   - selected-prints
@@ -13,5 +13,8 @@ tags:
   - onion
   - cabbage
   - vegetables
+year: "1977"
+year_start: 1977
+note: "Inscription (read from photo): 4/15, \"Savojkål\", 1977"
 ---
 

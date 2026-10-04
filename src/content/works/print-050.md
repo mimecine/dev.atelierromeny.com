@@ -12,5 +12,6 @@ tags:
   - tree
   - cypress
   - Provence
+note: "Inscription (read from photo): 19??? -- signature tiny, year unreadable"
 ---
 

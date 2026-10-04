@@ -15,5 +15,6 @@ tags:
   - etching
   - aquatint
   - abstract
+note: "Inscription (read from photo): 10/15, \"Passionaria\"? -- title spelled \"Passionaba\"? no year"
 ---
 

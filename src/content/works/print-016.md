@@ -11,5 +11,8 @@ tags:
   - colour print
   - butterfly
   - insect
+year: "1977"
+year_start: 1977
+note: "Inscription (read from photo): 13/35, 1977"
 ---
 

@@ -12,5 +12,8 @@ tags:
   - grapes
   - vine
   - leaves
+year: "1985"
+year_start: 1985
+note: "Inscription (read from photo): 1985"
 ---
 

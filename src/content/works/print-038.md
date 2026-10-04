@@ -1,5 +1,5 @@
 ---
-title: No title recorded
+title: "Lönn"
 categories: Print
 collections:
   - selected-prints
@@ -12,5 +12,8 @@ tags:
   - black and white
   - plant
   - flowers
+year: "1971"
+year_start: 1971
+note: "Inscription (read from photo): 5/15, \"Lönn\", 1971 -- also marked e.a."
 ---
 

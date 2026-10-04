@@ -14,5 +14,8 @@ tags:
   - relief print
   - colour print
   - abstract
+year: "1968"
+year_start: 1968
+note: "Inscription (read from photo): 4/5, 1968 -- (seen in earlier crop)"
 ---
 

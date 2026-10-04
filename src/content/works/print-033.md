@@ -16,5 +16,6 @@ tags:
   - tree
   - bird
   - nest
+note: "Inscription (read from photo): not legible -- inscription above crop, too small to read"
 ---
 

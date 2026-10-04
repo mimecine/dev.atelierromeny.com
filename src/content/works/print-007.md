@@ -1,5 +1,5 @@
 ---
-title: No title recorded
+title: "Omfamning"
 categories: Print
 collections:
   - selected-prints
@@ -12,5 +12,8 @@ tags:
   - figure
   - nude
   - couple
+year: "1971"
+year_start: 1971
+note: "Inscription (read from photo): 10/15, \"Omfamning\", 1971"
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: No title recorded
+title: "Le bouquet bleu"
 categories: Print
 collections:
   - selected-prints
@@ -13,5 +13,6 @@ tags:
   - still life
   - flowers
   - vase
+note: "Inscription (read from photo): III/XV, \"Le bouquet bleu\" -- no year"
 ---
 

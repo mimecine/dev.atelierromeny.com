@@ -12,5 +12,8 @@ tags:
   - fruit
   - pomegranate
   - branch
+year: "1983"
+year_start: 1983
+note: "Inscription (read from photo): 1983"
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: No title recorded
+title: "Trädet"
 categories: Print
 collections:
   - selected-prints
@@ -11,5 +11,8 @@ tags:
   - black and white
   - tree
   - winter
+year: "1972"
+year_start: 1972
+note: "Inscription (read from photo): 5/20, \"Trädet\", 1972"
 ---
 

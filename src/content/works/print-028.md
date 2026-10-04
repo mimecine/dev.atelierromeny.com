@@ -1,5 +1,5 @@
 ---
-title: No title recorded
+title: "Nature morte"
 categories: Print
 collections:
   - selected-prints
@@ -13,5 +13,8 @@ tags:
   - fruit
   - grapes
   - jug
+year: "1976"
+year_start: 1976
+note: "Inscription (read from photo): 37/45, \"Nature morte\", 1976? -- edition number unclear (37 or 32?)"
 ---
 

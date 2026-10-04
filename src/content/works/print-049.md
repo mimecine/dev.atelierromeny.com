@@ -12,5 +12,6 @@ tags:
   - grapes
   - vine
   - leaves
+note: "Inscription (read from photo): 1989? -- year '89 or '83?"
 ---
 

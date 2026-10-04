@@ -1,5 +1,5 @@
 ---
-title: No title recorded
+title: "Solspegling II"
 categories: Print
 collections:
   - selected-prints
@@ -11,5 +11,8 @@ tags:
   - colour print
   - abstract
   - sun
+year: "1974"
+year_start: 1974
+note: "Inscription (read from photo): 9/15, \"Solspegling II\", 1974"
 ---
 
