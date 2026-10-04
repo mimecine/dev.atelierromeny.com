@@ -1,26 +1,31 @@
 """
-Measure prints photographed on the burlap backdrop and write w/h (cm) into
-their markdown frontmatter.
+Measure prints photographed on the burlap backdrop and write their sizes (cm)
+into the markdown frontmatter: w/h = the image (plate / printed area) and
+sheet_w/sheet_h = the paper sheet.
 
 The camera, lens and backdrop are fixed for the whole print shoot, so one
-pixels-per-cm scale applies to every photo. Calibrate it once from a print
-whose sheet you have measured by hand:
+pixels-per-cm scale applies to every photo. Calibrate it from one or more
+things you measured by hand -- a plate ("image") or a whole sheet -- with W
+being the side that's horizontal in the photo. More samples average out
+measuring errors:
 
-    scripts/venv/bin/python scripts/measure_prints.py --calibrate print-038 50 65
+    scripts/venv/bin/python scripts/measure_prints.py \
+        --calibrate print-038 image 25.5 31 --calibrate print-012 sheet 38 28
 
 That prints a px/cm value. Then measure everything (dry run first):
 
-    scripts/venv/bin/python scripts/measure_prints.py --px-per-cm 14.2 --debug /tmp/measure
-    scripts/venv/bin/python scripts/measure_prints.py --px-per-cm 14.2 --write
+    scripts/venv/bin/python scripts/measure_prints.py --px-per-cm 28.9 --debug /tmp/measure
+    scripts/venv/bin/python scripts/measure_prints.py --px-per-cm 28.9 --write
 
 For each work it detects
   - the sheet: the large bright, low-saturation quad on the brown burlap
   - the image: the printed area inside the sheet (ink differs from the paper)
-and writes w/h for the one chosen with --measure (default: image).
 
 Every work is printed with what was measured, and anything that looks doubtful
-is marked CHECK with the reasons, then listed again at the end. Flagged works
-aren't written unless you pass --include-flagged (or name them and use it).
+is marked CHECK with the reasons, then listed again at the end. A doubtful
+sheet or image isn't written unless you pass --include-flagged (best used with
+the works named). For a work painted/printed to the edge, --image-is-sheet
+writes the sheet size as w/h too.
 """
 
 import argparse
@@ -154,33 +159,35 @@ def find_image(sheet):
 
 
 def sanity_checks(img, quad, clean, box, edges, fill):
-    """Reasons a measurement looks doubtful (empty list = looks fine)."""
+    """Reasons a measurement looks doubtful, as (affects, reason) where affects
+    is "sheet" or "image". Image checks build on the sheet, so a doubtful sheet
+    makes the image doubtful too."""
     out = []
     H, W = img.shape[:2]
     if not clean:
-        out.append("sheet outline isn't a clean rectangle")
+        out.append(("sheet", "sheet outline isn't a clean rectangle"))
     x0, y0 = quad.min(0)
     x1, y1 = quad.max(0)
     if x0 < 5 or y0 < 5 or x1 > W - 5 or y1 > H - 5:
-        out.append("sheet runs off the photo")
+        out.append(("sheet", "sheet runs off the photo"))
     side = lambda a, b: float(np.linalg.norm(quad[a] - quad[b]))
     if (abs(side(0, 1) - side(3, 2)) > 0.04 * max(side(0, 1), side(3, 2))
             or abs(side(0, 3) - side(1, 2)) > 0.04 * max(side(0, 3), side(1, 2))):
-        out.append("sheet edges uneven (curled or lifted?)")
+        out.append(("sheet", "sheet edges uneven (curled or lifted?)"))
 
     sw, sh = quad_size(quad)
     if box is None:
-        out.append("no image area found (printed to the edge? try --measure sheet)")
+        out.append(("image", "no image area found (printed to the edge? see --image-is-sheet)"))
         return out
     x, y, bw, bh = box
     # All four sides at the margin is a narrow-margin print; only some of them
     # means shading/a stain got included, or part of the image was missed
     if 0 < edges < 4:
-        out.append(f"image reaches the sheet margin on {edges} side(s) only")
+        out.append(("image", f"image reaches the sheet margin on {edges} side(s) only"))
     if abs(x + bw / 2 - sw / 2) > 0.06 * sw:
-        out.append("image off-centre on the sheet (only partly detected?)")
+        out.append(("image", "image off-centre on the sheet (only partly detected?)"))
     if fill < FILL_MIN:
-        out.append(f"image area only {fill:.0%} ink (pale print, partly detected?)")
+        out.append(("image", f"image area only {fill:.0%} ink (pale print, partly detected?)"))
     return out
 
 
@@ -221,17 +228,21 @@ def measure(path, debug_dir=None):
     return result
 
 
-def set_dims(md_path, w, h):
+def set_fields(md_path, values):
+    """Set frontmatter keys in place, adding missing ones after the last of
+    them that exists (or at the end)."""
     text, m = read_frontmatter(md_path)
-    fm = m.group(1)
-    for key, val in (("w", w), ("h", h)):
+    lines = m.group(1).split("\n")
+    for key, val in values.items():
         line = f"{key}: {val:g}"
-        if re.search(rf"^{key}:.*$", fm, re.M):
-            fm = re.sub(rf"^{key}:.*$", line, fm, count=1, flags=re.M)
-        else:
-            fm += "\n" + line
+        idx = next((i for i, l in enumerate(lines) if re.match(rf"{key}:", l)), None)
+        if idx is not None:
+            lines[idx] = line
+            continue
+        prev = [i for i, l in enumerate(lines) for k in values if re.match(rf"{k}:", l)]
+        lines.insert(max(prev) + 1 if prev else len(lines), line)
     with open(md_path, "w", encoding="utf-8") as f:
-        f.write(f"---\n{fm}\n---\n" + text[m.end():])
+        f.write("---\n" + "\n".join(lines) + "\n---\n" + text[m.end():])
 
 
 def round_to(x, step):
@@ -250,49 +261,70 @@ def resolve(names):
     return out
 
 
+def calibrate(samples, debug_dir):
+    """px/cm from hand-measured sheets or plates, averaged over the samples."""
+    off = lambda a, b: abs(a - b) / max(a, b)
+    scales = []
+    for work, kind, wcm, hcm in samples:
+        if kind not in ("sheet", "image"):
+            sys.exit(f"--calibrate {work}: kind must be 'sheet' or 'image', not '{kind}'")
+        wcm, hcm = float(wcm), float(hcm)
+        r = measure(image_for(resolve([work])[0]), debug_dir)
+        print(f"\n{work} ({kind}), you entered {wcm:g} x {hcm:g} cm (ratio {wcm / hcm:.3f})")
+        if not r or not r[kind]:
+            print(f"  no {kind} detected -- sample skipped")
+            continue
+        pw_px, ph_px = r[kind]
+        print(f"  in the photo: {pw_px:.0f} x {ph_px:.0f} px (ratio {pw_px / ph_px:.3f}, "
+              f"{'landscape' if pw_px > ph_px else 'portrait'})")
+        doubts = [why for what, why in r["checks"] if what == "sheet" or what == kind]
+        if doubts:
+            print(f"  detection is doubtful ({'; '.join(doubts)}) -- sample skipped,"
+                  f" check the overlay with --debug")
+            continue
+        if off(pw_px / wcm, ph_px / hcm) > off(pw_px / hcm, ph_px / wcm):
+            print(f"  W/H look swapped -- W is the side that's horizontal in the photo. "
+                  f"Using {hcm:g} x {wcm:g}.")
+            wcm, hcm = hcm, wcm
+        pw, ph = pw_px / wcm, ph_px / hcm
+        print(f"  scale: {pw:.2f} px/cm across, {ph:.2f} down")
+        if off(pw, ph) > 0.04:
+            print(f"  warning: these disagree by {off(pw, ph):.0%}, so the proportions don't match. "
+                  f"With W = {wcm:g} the photo says H = {ph_px / pw:.1f}; with H = {hcm:g} it says "
+                  f"W = {pw_px / ph:.1f}. Did you measure the {kind}? Sample skipped.")
+            continue
+        scales += [pw, ph]
+
+    if not scales:
+        sys.exit("\nno usable samples")
+    mean = sum(scales) / len(scales)
+    print(f"\n{len(scales) // 2} usable sample(s); spread {off(min(scales), max(scales)):.1%}")
+    if len(scales) > 2 and off(min(scales), max(scales)) > 0.03:
+        print("warning: samples disagree by >3% -- one of the hand measurements is probably off")
+    print(f"--px-per-cm {mean:.2f}")
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("works", nargs="*", help="work slugs or .md paths (default: all print-*.md)")
-    ap.add_argument("--calibrate", nargs=3, metavar=("WORK", "W_CM", "H_CM"),
-                    help="derive px/cm from a work whose SHEET (paper edge to paper edge) you measured; W = side that is horizontal in the photo")
+    ap.add_argument("--calibrate", nargs=4, action="append", metavar=("WORK", "KIND", "W_CM", "H_CM"),
+                    help="derive px/cm from a hand-measured 'sheet' (paper edge to edge) or 'image' "
+                         "(plate); W = side that is horizontal in the photo. Repeat to average samples")
     ap.add_argument("--px-per-cm", type=float, help="scale from --calibrate")
-    ap.add_argument("--measure", choices=["image", "sheet"], default="image",
-                    help="which rectangle goes into w/h (default: image)")
     ap.add_argument("--round", type=float, default=0.5, help="round cm to this step (default 0.5)")
     ap.add_argument("--write", action="store_true", help="update the markdown files (default: dry run)")
-    ap.add_argument("--force", action="store_true", help="overwrite existing w/h values")
+    ap.add_argument("--force", action="store_true", help="overwrite existing values")
     ap.add_argument("--include-flagged", action="store_true",
-                    help="also write works whose measurement needs checking")
+                    help="also write measurements that need checking")
+    ap.add_argument("--image-is-sheet", action="store_true",
+                    help="write the sheet size as w/h too (works printed/painted to the edge)")
     ap.add_argument("--csv", metavar="FILE", help="also save all measurements and checks as CSV")
     ap.add_argument("--debug", metavar="DIR", help="write overlay images (green=sheet, red=image)")
     args = ap.parse_args()
 
     if args.calibrate:
-        work, wcm, hcm = args.calibrate
-        md = resolve([work])[0]
-        r = measure(image_for(md), args.debug)
-        if not r:
-            sys.exit(f"no sheet found in {work}")
-        sw, sh = r["sheet"]
-        wcm, hcm = float(wcm), float(hcm)
-        off = lambda a, b: abs(a - b) / max(a, b)
-        print(f"sheet in photo: {sw:.0f} x {sh:.0f} px (ratio {sw / sh:.3f}, "
-              f"{'landscape' if sw > sh else 'portrait'})")
-        print(f"you entered:    {wcm:g} x {hcm:g} cm (ratio {wcm / hcm:.3f})")
-        if off(sw / wcm, sh / hcm) > off(sw / hcm, sh / wcm):
-            print(f"note: W/H look swapped -- W is the side that's horizontal in the photo. "
-                  f"Using {hcm:g} x {wcm:g}.")
-            wcm, hcm = hcm, wcm
-        pw, ph = sw / wcm, sh / hcm
-        print(f"scale: {pw:.2f} px/cm across, {ph:.2f} px/cm down")
-        if off(pw, ph) > 0.04:
-            print(f"warning: the two disagree by {off(pw, ph):.0%}. The sheet's proportions in the "
-                  f"photo don't match what you entered; with W = {wcm:g} the photo says "
-                  f"H = {sh / pw:.1f}, with H = {hcm:g} it says W = {sw / ph:.1f}. "
-                  f"Re-measure, or calibrate from a squarer-cut sheet.")
-        print(f"--px-per-cm {(pw + ph) / 2:.2f}")
+        calibrate(args.calibrate, args.debug)
         return
-
     if not args.px_per_cm:
         ap.error("--px-per-cm is required (get it with --calibrate)")
 
@@ -305,7 +337,7 @@ def main():
             print(f"{slug:<16} skip: no image")
             continue
         _, m = read_frontmatter(md)
-        has = frontmatter_value(m.group(1), "w") or frontmatter_value(m.group(1), "h")
+        fm = m.group(1)
 
         r = measure(img_path, args.debug)
         if not r:
@@ -315,46 +347,57 @@ def main():
         checks = r["checks"]
         ref_shape = ref_shape or r["shape"]
         if r["shape"] != ref_shape:
-            checks.append("different photo size, scale may not apply")
+            checks.append(("sheet", "different photo size, scale may not apply"))
 
         cm = lambda wh: tuple(round_to(v / args.px_per_cm, args.round) for v in wh)
         sheet = cm(r["sheet"])
-        image = cm(r["image"]) if r["image"] else None
+        image = sheet if args.image_is_sheet else cm(r["image"]) if r["image"] else None
+        if args.image_is_sheet:
+            checks = [c for c in checks if c[0] == "sheet"]
         sheet_s = f"{sheet[0]:g} x {sheet[1]:g}"
         img_s = f"{image[0]:g} x {image[1]:g}" if image else "-"
         mark = "CHECK" if checks else "ok"
         print(f"{slug:<16} sheet {sheet_s:<13} image {img_s:<13} {mark}")
-        for c in checks:
-            print(f"{'':<18}- {c}")
+        for _, why in checks:
+            print(f"{'':<18}- {why}")
         rows.append((slug, sheet, image, checks))
         if checks:
-            flagged.append((slug, checks))
+            flagged.append((slug, [why for _, why in checks]))
 
-        chosen = image if args.measure == "image" else sheet
         if not args.write:
             continue
-        if not chosen:
-            print(f"{'':<18}not written: no {args.measure} detected")
-        elif checks and not args.include_flagged:
-            print(f"{'':<18}not written: needs checking (use --include-flagged)")
-        elif has and not args.force:
-            print(f"{'':<18}not written: has w/h (use --force)")
-        else:
-            set_dims(md, *chosen)
+        sheet_ok = not any(what == "sheet" for what, _ in checks)
+        image_ok = sheet_ok and not checks
+        values, notes = {}, []
+        for label, (kw, kh), size, ok in (("image", ("w", "h"), image, image_ok),
+                                           ("sheet", ("sheet_w", "sheet_h"), sheet, sheet_ok)):
+            if not size:
+                notes.append(f"{label} not written: none detected")
+            elif not ok and not args.include_flagged:
+                notes.append(f"{label} not written: needs checking (--include-flagged)")
+            elif (frontmatter_value(fm, kw) or frontmatter_value(fm, kh)) and not args.force:
+                notes.append(f"{label} not written: already set (--force)")
+            else:
+                values.update({kw: size[0], kh: size[1]})
+        if values:
+            set_fields(md, values)
+        for n in notes:
+            print(f"{'':<18}{n}")
 
     if args.csv:
         with open(args.csv, "w", newline="", encoding="utf-8") as f:
             out = csv.writer(f)
             out.writerow(["work", "sheet_w", "sheet_h", "image_w", "image_h", "check"])
             for slug, sheet, image, checks in rows:
-                out.writerow([slug, *sheet, *(image or ("", "")), "; ".join(checks)])
+                out.writerow([slug, *sheet, *(image or ("", "")), "; ".join(why for _, why in checks)])
         print(f"\nwrote {args.csv}")
 
     if flagged:
         print(f"\n{len(flagged)} to check by hand"
               + (f" (overlays in {args.debug})" if args.debug else " (add --debug DIR for overlays)") + ":")
-        for slug, checks in flagged:
-            print(f"  {slug:<16} {checks[0]}" + (f" (+{len(checks) - 1} more)" if len(checks) > 1 else ""))
+        for slug, whys in flagged:
+            print(f"  {slug:<16} {whys[0]}" + (f" (+{len(whys) - 1} more)" if len(whys) > 1 else ""))
+
 
 if __name__ == "__main__":
     main()

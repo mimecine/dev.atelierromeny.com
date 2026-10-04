@@ -76,8 +76,10 @@ collections:
           - { label: "Tag", name: "tag", widget: "string" }
       - { label: "Published", name: "published", widget: "boolean", default: true }
       - { label: "Categories", name: "categories", widget: "string", required: false }
-      - { label: "Width (cm)", name: "w", widget: "number", required: false }
-      - { label: "Height (cm)", name: "h", widget: "number", required: false }
+      - { label: "Width (cm)", name: "w", widget: "number", value_type: "float", required: false }
+      - { label: "Height (cm)", name: "h", widget: "number", value_type: "float", required: false }
+      - { label: "Sheet Width (cm)", name: "sheet_w", widget: "number", value_type: "float", required: false, hint: "Prints: the paper. Width/Height is the printed image (plate)." }
+      - { label: "Sheet Height (cm)", name: "sheet_h", widget: "number", value_type: "float", required: false }
       - { label: "Location", name: "location", widget: "string", required: false }
       - { label: "New Location", name: "new_location", widget: "string", required: false }
       - { label: "Notes", name: "note", widget: "text", required: false }
