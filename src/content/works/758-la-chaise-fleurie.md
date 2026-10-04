@@ -12,7 +12,5 @@ year_start: 1997
 year_end: null
 image: null
 uuid: c856e422-f84d-4983-9b5a-cf84daf5dbbe
-collections:
-  - natures-mortes
 ---
 

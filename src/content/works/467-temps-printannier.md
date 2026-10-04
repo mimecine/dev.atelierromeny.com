@@ -2,9 +2,6 @@
 id: 467
 title: Temps printannier
 image: '/src/media/works/467-temps-printannier.webp'
-collections:
-  - abstrait
-  - selected-july-2025
 categories: Abstrait
 w: 125
 h: 90

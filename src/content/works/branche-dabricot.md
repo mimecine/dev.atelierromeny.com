@@ -2,9 +2,6 @@
 id: null
 title: Branche d'abricot
 image: '/src/media/works/branche-dabricot.webp'
-collections:
-  - natures-mortes
-  - selected-july-2025
 categories: Nature morte
 w: 46
 h: 27

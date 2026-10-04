@@ -2,7 +2,7 @@
 title: "Ur djungeln"
 categories: Works on Paper
 collections:
-  - selected-prints
+  - works-on-paper
 uuid: 555f54c0-4b49-4254-871c-211438e2e1c9
 image: '/src/media/works/print-019.webp'
 tags:
@@ -19,5 +19,6 @@ h: 24.5
 sheet_w: 59.5
 sheet_h: 48
 detail: '/src/media/works/print-019-detail.webp'
+edition: "16/35"
 ---
 

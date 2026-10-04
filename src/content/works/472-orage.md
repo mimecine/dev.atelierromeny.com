@@ -4,7 +4,6 @@ title: Orage
 image: '/src/media/works/472-orage-detail.webp'
 old_image: '/src/media/works/472-orage.webp'
 collections:
-  - abstrait
   - nfs
 categories: Abstrait
 w: 67

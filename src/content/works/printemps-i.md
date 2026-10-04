@@ -3,9 +3,6 @@ id: null
 title: Printemps I
 image: '/src/media/works/printemps-i-detail.webp'
 old_image: '/src/media/works/printemps-i.webp'
-collections:
-  - fleurs
-  - selected-july-2025
 categories: Fleurs
 w: 80
 h: 60

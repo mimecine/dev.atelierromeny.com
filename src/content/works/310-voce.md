@@ -6,7 +6,6 @@ old_image: '/src/media/works/310-voce.webp'
 collections:
   - marco
   - alisa
-  - abstrait
   - nfs
 categories: Abstrait
 w: 30

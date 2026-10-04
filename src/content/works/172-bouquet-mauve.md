@@ -15,7 +15,6 @@ image: '/src/media/works/172-bouquet-mauve-detail.webp'
 old_image: '/src/media/works/172-bouquet-mauve.webp'
 uuid: 2cfd8216-e719-429c-a1c2-62006c8433e9
 collections:
-  - natures-mortes
   - selected-paintings
 tags:
   - painting

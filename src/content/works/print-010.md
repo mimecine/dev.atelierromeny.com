@@ -2,7 +2,7 @@
 title: "Morgon"
 categories: Works on Paper
 collections:
-  - selected-prints
+  - works-on-paper
 uuid: ecfc97ec-4f09-47b9-b314-a645d41ba8e8
 image: '/src/media/works/print-010.webp'
 tags:
@@ -17,5 +17,6 @@ year: "1971"
 year_start: 1971
 note: "Inscription (read from photo): 6/25, \"Morgon\", 1971"
 detail: '/src/media/works/print-010-detail.webp'
+edition: "6/25"
 ---
 

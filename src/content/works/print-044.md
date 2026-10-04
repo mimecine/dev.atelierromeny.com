@@ -2,7 +2,7 @@
 title: "Elle joue"
 categories: Works on Paper
 collections:
-  - selected-prints
+  - works-on-paper
 uuid: df621349-6346-4f1f-ba0e-320e06495a31
 image: '/src/media/works/print-044.webp'
 images:
@@ -22,5 +22,6 @@ h: 14
 sheet_w: 19.5
 sheet_h: 25.5
 detail: '/src/media/works/print-044-detail.webp'
+edition: "2/8"
 ---
 

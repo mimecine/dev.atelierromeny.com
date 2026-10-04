@@ -3,7 +3,6 @@ id: 163
 title: Les deux cousines
 image: '/src/media/works/163-les-deux-cousines.webp'
 collections:
-  - figures-humaines
   - nfs
 categories: Figures humaines
 w: 61

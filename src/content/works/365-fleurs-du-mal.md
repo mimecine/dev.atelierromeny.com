@@ -3,8 +3,6 @@ id: 365
 title: Fleurs du mal
 image: '/src/media/works/365-fleurs-du-mal-v2.webp'
 collections:
-  - abstrait
-  - selected-july-2025
   - selected-paintings
 categories: Abstrait
 w: 75

@@ -5,7 +5,6 @@ image: '/src/media/works/ic0-detail.webp'
 old_image: '/src/media/works/ic0.webp'
 collections:
   - marco
-  - abstrait
 categories: Abstract
 w: 27
 h: 35

@@ -3,9 +3,6 @@ id: 453
 title: Dramatisk upptakt
 image: '/src/media/works/453-dramatisk-upptakt-detail.webp'
 old_image: '/src/media/works/453-dramatisk-upptakt.webp'
-collections:
-  - abstrait
-  - selected-july-2025
 categories: Abstrait
 w: 100
 h: 60

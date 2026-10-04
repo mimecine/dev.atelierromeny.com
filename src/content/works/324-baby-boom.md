@@ -13,8 +13,6 @@ year_end: null
 image: '/src/media/works/324-baby-boom-detail.webp'
 old_image: '/src/media/works/324-baby-boom.webp'
 uuid: 27b89b80-fd9b-4188-aa03-dc2598a58cb0
-collections:
-  - figures-humaines
 tags:
   - painting
   - collage

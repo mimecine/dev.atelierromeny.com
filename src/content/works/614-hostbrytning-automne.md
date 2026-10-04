@@ -3,7 +3,6 @@ id: 614
 title: Höstbrytning (Automne)
 image: '/src/media/works/614-hostbrytning-automne.webp'
 collections:
-  - abstrait
   - nfs
   - reserved-am
 categories: Abstrait

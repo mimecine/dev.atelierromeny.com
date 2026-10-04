@@ -3,9 +3,6 @@ id: 679
 title: Petit enfer
 image: '/src/media/works/679-petit-enfer-detail.webp'
 old_image: '/src/media/works/679-petit-enfer.webp'
-collections:
-  - abstrait
-  - selected-july-2025
 categories: Abstrait
 w: 45
 h: 45

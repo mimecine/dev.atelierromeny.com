@@ -4,7 +4,6 @@ title: Pot de fleurs sur poéle
 image: '/src/media/works/129-pot-de-fleurs-sur-poele-detail.webp'
 old_image: '/src/media/works/129-pot-de-fleurs-sur-poele.webp'
 collections:
-  - fleurs
   - nfs
 categories: Fleurs
 w: 75

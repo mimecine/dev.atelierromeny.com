@@ -4,7 +4,6 @@ title: Marco
 image: '/src/media/works/369-marco-detail.webp'
 old_image: '/src/media/works/369-marco.webp'
 collections:
-  - figures-humaines
   - nfs
 categories: Figures humaines
 w: 60

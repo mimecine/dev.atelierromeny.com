@@ -3,8 +3,6 @@ id: 94
 title: Forsspel (Ressac)
 image: '/src/media/works/94-forsspel-ressac-v2.webp'
 collections:
-  - abstrait
-  - selected-july-2025
   - selected-paintings
 categories: Abstrait
 w: 65

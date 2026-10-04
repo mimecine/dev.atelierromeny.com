@@ -3,7 +3,6 @@ id: 528
 title: Grand poéle au pichet bleu Clair
 image: '/src/media/works/528-grand-poele-au-pichet-bleu-clair.webp'
 collections:
-  - natures-mortes
   - nfs
 categories: Natures mortes
 w: 73

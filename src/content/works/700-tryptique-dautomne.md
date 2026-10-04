@@ -2,9 +2,6 @@
 id: 700
 title: Tryptique d‘automne
 image: '/src/media/works/700-tryptique-dautomne.webp'
-collections:
-  - abstrait
-  - selected-july-2025
 categories: Abstrait
 w: 195
 h: 100

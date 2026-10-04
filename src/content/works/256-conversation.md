@@ -12,7 +12,5 @@ year_start: 1980
 year_end: null
 image: null
 uuid: eb94e321-abff-453b-a593-fbb7918bf06b
-collections:
-  - figures-humaines
 ---
 

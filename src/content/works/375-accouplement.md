@@ -5,8 +5,7 @@ image: '/src/media/works/375-accouplement-detail.webp'
 old_image: '/src/media/works/375-accouplement.webp'
 collections:
   - alisa
-  - animaux
-  - to-be-disposed-of
+  - to-dispose
 categories: Animaux
 w: 66
 h: 55

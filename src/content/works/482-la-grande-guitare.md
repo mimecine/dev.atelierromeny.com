@@ -2,9 +2,6 @@
 id: 482
 title: La grande guitare
 image: '/src/media/works/482-la-grande-guitare.webp'
-collections:
-  - natures-mortes
-  - selected-july-2025
 categories: Natures mortes
 w: 115
 h: 89

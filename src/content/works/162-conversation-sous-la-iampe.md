@@ -4,7 +4,6 @@ title: Conversation sous la Iampe
 image: '/src/media/works/162-conversation-sous-la-iampe-detail.webp'
 old_image: '/src/media/works/162-conversation-sous-la-iampe.webp'
 collections:
-  - figures-humaines
   - nfs
 categories: Figures humaines
 w: 33

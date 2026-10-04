@@ -3,8 +3,6 @@ id: 772
 title: Saint Saturnin d'Apt
 image: '/src/media/works/772-saint-saturnin-d-apt.webp'
 collections:
-  - paysages
-  - selected-july-2025
   - selected-paintings
 categories: Paysages
 w: 92

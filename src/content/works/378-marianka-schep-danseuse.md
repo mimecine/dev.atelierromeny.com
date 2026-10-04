@@ -14,8 +14,6 @@ year_end: null
 image: '/src/media/works/378-marianka-schep-danseuse-detail.webp'
 old_image: '/src/media/works/378-marianka-schep-danseuse.webp'
 uuid: 3ee79b4a-8ed4-4abc-a839-ca281988b1e7
-collections:
-  - figures-humaines
 tags:
   - painting
   - portrait

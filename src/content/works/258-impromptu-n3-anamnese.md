@@ -13,8 +13,6 @@ year_end: null
 image: '/src/media/works/258-impromptu-n3-anamnese-detail.webp'
 old_image: '/src/media/works/258-impromptu-n3-anamnese.webp'
 uuid: 764d78dd-7377-4819-8c04-df844486605b
-collections:
-  - abstrait
 tags:
   - painting
   - mixed media

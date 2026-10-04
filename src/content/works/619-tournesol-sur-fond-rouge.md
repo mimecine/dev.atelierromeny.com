@@ -4,7 +4,6 @@ title: Tournesol sur fond rouge
 image: '/src/media/works/619-tournesol-sur-fond-rouge-detail.webp'
 old_image: '/src/media/works/619-tournesol-sur-fond-rouge.webp'
 collections:
-  - natures-mortes
   - nfs
 categories: Natures mortes
 w: 37

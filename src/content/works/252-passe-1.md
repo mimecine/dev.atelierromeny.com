@@ -12,8 +12,6 @@ year_start: 1996
 year_end: null
 image: '/src/media/works/252-passe-1.webp'
 uuid: b8ddc198-6ce8-4497-b221-553356a2a593
-collections:
-  - tauromachie
 tags:
   - painting
   - bullfight

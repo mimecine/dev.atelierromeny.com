@@ -2,9 +2,6 @@
 id: 730
 title: Dynamique
 image: '/src/media/works/730-dynamique.webp'
-collections:
-  - abstrait
-  - selected-july-2025
 categories: Abstrait
 w: 130
 h: 81

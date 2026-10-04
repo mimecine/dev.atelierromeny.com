@@ -3,8 +3,6 @@ id: 422
 title: Nature morte en bleu Clair
 image: '/src/media/works/422-nature-morte-en-bleu-clair-v2.webp'
 collections:
-  - natures-mortes
-  - selected-july-2025
   - selected-paintings
 categories: Natures mortes
 w: 81

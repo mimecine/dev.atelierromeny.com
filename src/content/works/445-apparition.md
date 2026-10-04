@@ -14,8 +14,6 @@ year_end: null
 image: '/src/media/works/445-apparition-detail.webp'
 old_image: '/src/media/works/445-apparition.webp'
 uuid: 99d4b333-d987-4629-a139-70d5ad9dc228
-collections:
-  - figures-humaines
 tags:
   - painting
   - figure

@@ -3,9 +3,6 @@ id: 489
 title: Clair obscur
 image: '/src/media/works/489-clair-obscur-detail.webp'
 old_image: '/src/media/works/489-clair-obscur.webp'
-collections:
-  - abstract
-  - abstrait
 tags:
   - painting
   - abstract

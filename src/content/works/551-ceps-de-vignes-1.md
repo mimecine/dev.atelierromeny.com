@@ -12,7 +12,5 @@ year_start: 2002
 year_end: null
 image: null
 uuid: 63f4ee1c-30a8-41a4-a49c-8677a15e2224
-collections:
-  - la-vigne
 ---
 

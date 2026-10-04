@@ -15,8 +15,7 @@ image: '/src/media/works/746-lrak-detail.webp'
 old_image: '/src/media/works/746-lrak.webp'
 uuid: eec369b1-3044-4856-9f43-0015aa5d53df
 collections:
-  - figures-humaines
-  - to-be-disposed-of
+  - to-dispose
 tags:
   - painting
   - collage

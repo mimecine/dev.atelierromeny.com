@@ -3,8 +3,6 @@ id: 657
 title: Le chaos
 image: '/src/media/works/657-le-chaos-v2.webp'
 collections:
-  - la-creation
-  - selected-july-2025
   - selected-paintings
 categories: La création
 w: 180

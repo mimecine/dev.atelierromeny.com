@@ -13,8 +13,6 @@ year_end: null
 image: '/src/media/works/235-noel-detail.webp'
 old_image: '/src/media/works/235-noel.webp'
 uuid: 3f9bb813-4414-4dc6-9276-a315d48755c8
-collections:
-  - figures-humaines
 tags:
   - painting
   - figure

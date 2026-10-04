@@ -4,7 +4,6 @@ title: Mistral
 image: '/src/media/works/636-mistral-detail.webp'
 old_image: '/src/media/works/636-mistral.webp'
 collections:
-  - paysages
   - nfs
   - reserved-am
 categories: Paysages

@@ -3,8 +3,6 @@ id: 608
 title: Dans Ies grottes de Miramis
 image: '/src/media/works/608-dans-ies-grottes-de-miramis-v2.webp'
 collections:
-  - abstrait
-  - selected-july-2025
   - selected-paintings
 categories: Abstrait
 w: 92

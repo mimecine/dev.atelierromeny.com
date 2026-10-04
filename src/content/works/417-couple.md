@@ -13,8 +13,6 @@ year_end: null
 image: '/src/media/works/417-couple-detail.webp'
 old_image: '/src/media/works/417-couple.webp'
 uuid: 65bd19be-d8b5-4b18-adfb-a32d78a8e57f
-collections:
-  - metro
 tags:
   - painting
   - collage

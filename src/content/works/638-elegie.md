@@ -2,9 +2,6 @@
 id: 638
 title: Elégie
 image: '/src/media/works/638-elegie.webp'
-collections:
-  - abstrait
-  - selected-july-2025
 categories: Abstrait
 w: 75
 h: 60

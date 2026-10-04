@@ -2,10 +2,6 @@
 id: 513
 title: Choux rouge aux deux bouquets
 image: '/src/media/works/513-choux-rouge-aux-deux-bouquets.webp'
-collections:
-  - still-life
-  - natures-mortes
-  - selected-july-2025
 categories: Natures mortes
 w: 100
 h: 80

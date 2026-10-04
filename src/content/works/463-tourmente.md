@@ -5,8 +5,6 @@ image: '/src/media/works/463-tourmente-detail.webp'
 old_image: '/src/media/works/463-tourmente.webp'
 collections:
   - marco
-  - abstrait
-  - selected-july-2025
 categories: Abstrait
 w: 115
 h: 80

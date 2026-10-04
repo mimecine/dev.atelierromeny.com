@@ -2,9 +2,6 @@
 id: 645
 title: Composition lumineuse
 image: '/src/media/works/645-composition-lumineuse.webp'
-collections:
-  - abstrait
-  - selected-july-2025
 categories: Abstrait
 w: 185
 h: 130

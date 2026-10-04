@@ -2,7 +2,7 @@
 title: "Aan de Middellandse Zee"
 categories: Works on Paper
 collections:
-  - selected-prints
+  - works-on-paper
 uuid: ebc6f19c-8fd4-4105-acc5-f61f6ea69b57
 image: '/src/media/works/print-023.webp'
 images:
@@ -22,5 +22,6 @@ sheet_w: 33.5
 sheet_h: 42.5
 thumbnail: 2
 detail: '/src/media/works/print-023-detail.webp'
+edition: "7/15"
 ---
 

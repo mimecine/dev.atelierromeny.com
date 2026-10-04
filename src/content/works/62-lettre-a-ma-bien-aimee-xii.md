@@ -12,7 +12,5 @@ year_start: 1993
 year_end: null
 image: null
 uuid: 220cd7c9-a70d-4c87-9512-b2361cc6cda5
-collections:
-  - la-vie-de-femme
 ---
 

@@ -2,7 +2,7 @@
 title: "Nocturne"
 categories: Works on Paper
 collections:
-  - selected-prints
+  - works-on-paper
 uuid: 0c369557-6a87-450d-9f8d-b0c72574da8d
 image: '/src/media/works/print-060.webp'
 tags:
@@ -19,5 +19,6 @@ h: 24.5
 sheet_w: 34.5
 sheet_h: 39
 detail: '/src/media/works/print-060-detail.webp'
+edition: "7/20, e.a."
 ---
 

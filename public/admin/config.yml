@@ -67,7 +67,6 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: "Work ID", name: "id", widget: "number", value_type: "int", required: false }
       - { label: "Title", name: "title", widget: "string", required: true }
       - label: "Image"
         name: "image"
@@ -83,6 +82,12 @@ collections:
           name: "image"
           widget: "image"
           media_libraries: { default: { config: { filename_template: "{{slug}}-{{uuid_short}}" } } }
+      - label: "Detail"
+        name: "detail"
+        widget: "image"
+        required: false
+        hint: "The artwork alone: cut out, straightened, no frame or mat. Shown last on the work page. Made by scripts/make-details"
+        media_libraries: { default: { config: { filename_template: "{{slug}}-detail" } } }
       - label: "Hidden Images"
         name: "hidden_images"
         widget: list
@@ -91,33 +96,29 @@ collections:
         field: { label: "Image", name: "image", widget: "image" }
       - { label: "Thumbnail", name: "thumbnail", widget: "number", value_type: "int", min: 1, required: false, hint: "Which image to use in grids and search: 1 = Image, 2 = the first of More Images, and so on. Empty means Image." }
       - { label: "Old Image (shown only if there are no other images)", name: "old_image", widget: "image", required: false }
-      - label: "Detail"
-        name: "detail"
-        widget: "image"
-        required: false
-        hint: "The artwork alone: cut out, straightened, no frame or mat. Shown last on the work page. Made by scripts/make-details"
-        media_libraries: { default: { config: { filename_template: "{{slug}}-detail" } } }
-      - { label: "Description", name: "body", widget: "markdown", required: false }
+      - { label: "Width (cm)", name: "w", widget: "number", value_type: "float", required: false, hint: "The table view (/admin/table) shows the area and a suggested price worked out from width × height." }
+      - { label: "Height (cm)", name: "h", widget: "number", value_type: "float", required: false }
+      - { label: "Rating", name: "rating", widget: "number", value_type: "int", min: 1, max: 5, required: false, hint: "1 to 5, for pricing and selection. Not shown on the site." }
+      - { label: "Sheet Width (cm)", name: "sheet_w", widget: "number", value_type: "float", required: false, hint: "Works on paper: the sheet. Width/Height is the image (plate)." }
+      - { label: "Sheet Height (cm)", name: "sheet_h", widget: "number", value_type: "float", required: false }
+      - { label: "Year", name: "year", widget: "string", required: false }
+      - { label: "Year Start", name: "year_start", widget: "number", required: false }
+      - { label: "Year End", name: "year_end", widget: "number", required: false }
+
+      - { label: "Edition", name: "edition", widget: "string", required: false, hint: "As pencilled on a print, e.g. 4/20, III/XV or e.a. (artist's proof)" }
       - { label: "Collections", name: "collections", widget: "relation", collection: "collections",  multiple: true, required: false }
+      - { label: "Categories", name: "categories", widget: "string", required: false }
       - label: "Tags"
         name: "tags"
         widget: list
         required: false
         field: { label: "Tag", name: "tag", widget: "string" }
       - { label: "Published", name: "published", widget: "boolean", default: true }
-      - { label: "Categories", name: "categories", widget: "string", required: false }
-      - { label: "Width (cm)", name: "w", widget: "number", value_type: "float", required: false, hint: "The table view (/admin/table) shows the area and a suggested price worked out from width × height." }
-      - { label: "Height (cm)", name: "h", widget: "number", value_type: "float", required: false }
-      - { label: "Rating", name: "rating", widget: "number", value_type: "int", min: 1, max: 5, required: false, hint: "1 to 5, for pricing and selection. Not shown on the site." }
-      - { label: "Sheet Width (cm)", name: "sheet_w", widget: "number", value_type: "float", required: false, hint: "Works on paper: the sheet. Width/Height is the image (plate)." }
-      - { label: "Sheet Height (cm)", name: "sheet_h", widget: "number", value_type: "float", required: false }
+      - { label: "Description", name: "body", widget: "markdown", required: false }
       - { label: "Location", name: "location", widget: "string", required: false }
       - { label: "New Location", name: "new_location", widget: "string", required: false }
       - { label: "Notes", name: "note", widget: "text", required: false }
-      - { label: "Year", name: "year", widget: "string", required: false }
-      - { label: "Year Start", name: "year_start", widget: "number", required: false }
-      - { label: "Year End", name: "year_end", widget: "number", required: false }
-
+      - { label: "Work ID", name: "id", widget: "number", value_type: "int", required: false }
 
   - name: "collections"
     label: "Collections"

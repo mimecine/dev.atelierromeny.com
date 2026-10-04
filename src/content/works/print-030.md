@@ -2,7 +2,7 @@
 title: null
 categories: Works on Paper
 collections:
-  - selected-prints
+  - works-on-paper
 uuid: a5a1da67-f44c-4598-ac1a-fcbbca13c691
 image: '/src/media/works/print-030.webp'
 tags:
@@ -18,5 +18,6 @@ h: 29.5
 sheet_w: 62
 sheet_h: 47
 detail: '/src/media/works/print-030-detail.webp'
+edition: "29/35"
 ---
 

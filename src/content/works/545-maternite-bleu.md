@@ -12,8 +12,6 @@ year_start: 1978
 year_end: null
 image: '/src/media/works/545-maternite-bleu.webp'
 uuid: 8607a26c-2e14-403d-beac-eb010708dc2f
-collections:
-  - figures-humaines
 tags:
   - painting
   - figure

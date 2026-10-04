@@ -3,9 +3,6 @@ id: 299
 title: Les Baups 2
 image: '/src/media/works/299-les-baups-2-detail.webp'
 old_image: '/src/media/works/299-les-baups-2.webp'
-collections:
-  - paysages
-  - selected-july-2025
 categories: Paysages
 w: 50
 h: 73

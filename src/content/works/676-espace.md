@@ -3,9 +3,6 @@ id: 676
 title: Espace
 image: '/src/media/works/676-espace-detail.webp'
 old_image: '/src/media/works/676-espace.webp'
-collections:
-  - abstrait
-  - selected-july-2025
 categories: Abstrait
 w: 40
 h: 27

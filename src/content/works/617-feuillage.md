@@ -13,8 +13,6 @@ year_end: null
 image: '/src/media/works/617-feuillage-detail.webp'
 old_image: '/src/media/works/617-feuillage.webp'
 uuid: 12f88233-74ec-4801-91bb-cb4b48389252
-collections:
-  - abstrait
 tags:
   - painting
   - abstract

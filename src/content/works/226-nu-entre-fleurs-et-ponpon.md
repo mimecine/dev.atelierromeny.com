@@ -13,8 +13,6 @@ year_end: null
 image: '/src/media/works/226-nu-entre-fleurs-et-ponpon-detail.webp'
 old_image: '/src/media/works/226-nu-entre-fleurs-et-ponpon.webp'
 uuid: 6ebfef5e-762b-41b8-921d-94cb30951270
-collections:
-  - figures-humaines
 tags:
   - painting
   - figure

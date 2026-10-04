@@ -3,9 +3,6 @@ id: null
 title: Crépuscule 2
 image: '/src/media/works/crepuscule-2-detail.webp'
 old_image: '/src/media/works/crepuscule-2.webp'
-collections:
-  - abstrait
-  - selected-july-2025
 categories: Abstract
 w: 33
 h: 41

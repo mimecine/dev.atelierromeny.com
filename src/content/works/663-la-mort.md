@@ -14,7 +14,6 @@ year_end: null
 image: '/src/media/works/663-la-mort-v2.webp'
 uuid: d50fd6db-b6c1-4064-a9c8-a050db39ec6d
 collections:
-  - la-creation
   - selected-paintings
 old_image: '/src/media/works/663-la-mort.webp'
 images:

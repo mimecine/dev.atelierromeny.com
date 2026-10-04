@@ -3,9 +3,6 @@ id: 342
 title: Grenverk
 image: '/src/media/works/342-grenverk-detail.webp'
 old_image: '/src/media/works/342-grenverk.webp'
-collections:
-  - abstrait
-  - selected-july-2025
 categories: Abstrait
 w: 80
 h: 60

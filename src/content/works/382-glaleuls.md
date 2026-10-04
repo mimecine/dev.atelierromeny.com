@@ -3,9 +3,6 @@ id: 382
 title: Gla'l'euls
 image: '/src/media/works/382-glaleuls-detail.webp'
 old_image: '/src/media/works/382-glaleuls.webp'
-collections:
-  - fleurs
-  - selected-july-2025
 categories: Fleurs
 w: 46
 h: 54

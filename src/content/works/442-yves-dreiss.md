@@ -14,8 +14,6 @@ year_end: null
 image: '/src/media/works/442-yves-dreiss-detail.webp'
 old_image: '/src/media/works/442-yves-dreiss.webp'
 uuid: 8fddebb9-3a77-4691-ac7f-01127d375fbd
-collections:
-  - figures-humaines
 tags:
   - painting
   - portrait

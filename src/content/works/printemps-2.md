@@ -2,9 +2,6 @@
 id: null
 title: Printemps 2
 image: '/src/media/works/printemps-2.webp'
-collections:
-  - fleurs
-  - selected-july-2025
 categories: Fleurs
 w: 50
 h: 73

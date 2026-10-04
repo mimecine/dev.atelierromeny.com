@@ -3,9 +3,6 @@ id: 318
 title: Eruption
 image: '/src/media/works/318-eruption-detail.webp'
 old_image: '/src/media/works/318-eruption.webp'
-collections:
-  - abstrait
-  - selected-july-2025
 categories: Abstrait
 w: 40
 h: 30

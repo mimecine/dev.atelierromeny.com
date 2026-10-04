@@ -2,9 +2,6 @@
 id: 492
 title: Les oiseaux qui s'envolent (l'espoir)
 image: '/src/media/works/492-les-oiseaux-qui-senvolent-lespoir.webp'
-collections:
-  - accident-dans-la-montagne
-  - selected-july-2025
 categories: Accident dans la montagne
 w: 140
 h: 120

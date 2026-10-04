@@ -2,7 +2,7 @@
 title: "Morgonstrålar"
 categories: Works on Paper
 collections:
-  - selected-prints
+  - works-on-paper
 uuid: 6f007c00-0c02-443f-9313-a0276e3c3a30
 image: '/src/media/works/print-003.webp'
 images:
@@ -22,5 +22,6 @@ sheet_w: 30.5
 sheet_h: 35.5
 thumbnail: 2
 detail: '/src/media/works/print-003-detail.webp'
+edition: "4/20"
 ---
 

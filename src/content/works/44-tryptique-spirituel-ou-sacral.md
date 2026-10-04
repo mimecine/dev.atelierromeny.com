@@ -12,8 +12,6 @@ year_start: 1983
 year_end: null
 image: '/src/media/works/44-tryptique-spirituel-ou-sacral.webp'
 uuid: 2fdeab37-c57e-4a09-af63-5169b3bbdfef
-collections:
-  - abstrait
 tags:
   - painting
   - abstract

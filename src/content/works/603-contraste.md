@@ -13,8 +13,6 @@ year_end: null
 image: '/src/media/works/603-contraste-detail.webp'
 old_image: '/src/media/works/603-contraste.webp'
 uuid: ccae5769-429f-4c3a-b7b9-3e7200d4be91
-collections:
-  - abstrait
 tags:
   - painting
   - abstract

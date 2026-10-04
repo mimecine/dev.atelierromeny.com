@@ -14,8 +14,6 @@ year_end: 1996
 image: '/src/media/works/411-les-traces-du-peintre-2-detail.webp'
 old_image: '/src/media/works/411-les-traces-du-peintre-2.webp'
 uuid: 10f8ba41-ed2c-40cc-b0c1-4b1703ecb95d
-collections:
-  - abstrait
 tags:
   - painting
   - abstract

@@ -13,7 +13,5 @@ year_start: 1999
 year_end: null
 image: '/src/media/works/219-la-fille-au-masque-negre.jpg'
 uuid: 1a23414f-8b2d-4292-a7e4-5856e49874f1
-collections:
-  - figures-humaines
 ---
 

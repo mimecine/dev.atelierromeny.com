@@ -3,8 +3,6 @@ id: null
 title: Wo Hin 1
 image: '/src/media/works/wo-hin-1-detail.webp'
 old_image: '/src/media/works/wo-hin-1.webp'
-collections:
-  - abstrait
 categories: Abstract
 w: 38
 h: 46

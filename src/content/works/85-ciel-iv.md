@@ -3,9 +3,6 @@ id: 85
 title: Ciel IV
 image: '/src/media/works/85-ciel-iv-detail.webp'
 old_image: '/src/media/works/85-ciel-iv.webp'
-collections:
-  - abstrait
-  - selected-july-2025
 categories: Abstrait
 w: 54
 h: 45

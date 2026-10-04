@@ -3,9 +3,6 @@ id: 388
 title: Composition
 image: '/src/media/works/388-composition-detail.webp'
 old_image: '/src/media/works/388-composition.webp'
-collections:
-  - abstrait
-  - selected-july-2025
 categories: Abstrait
 w: 60
 h: 50

@@ -3,9 +3,6 @@ id: null
 title: Klot
 image: '/src/media/works/klot-detail.webp'
 old_image: '/src/media/works/klot.webp'
-collections:
-  - abstrait
-  - selected-july-2025
 categories: Abstract
 w: 46
 h: 38

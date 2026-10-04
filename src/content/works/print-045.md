@@ -2,7 +2,7 @@
 title: null
 categories: Works on Paper
 collections:
-  - selected-prints
+  - works-on-paper
 uuid: da2d7cbf-1515-45e4-b20f-97771608e649
 image: '/src/media/works/print-045.webp'
 images:
@@ -19,5 +19,6 @@ year_start: 1967
 note: "Inscription (read from photo): 2/10, 1967 -- edition is \"2/10\" written as plain digits"
 thumbnail: 2
 detail: '/src/media/works/print-045-detail.webp'
+edition: "2/10"
 ---
 

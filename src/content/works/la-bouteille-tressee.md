@@ -2,9 +2,6 @@
 id: null
 title: La Bouteille Tressée
 image: '/src/media/works/la-bouteille-tressee.webp'
-collections:
-  - natures-mortes
-  - selected-july-2025
 categories: Nature Morte
 w: 46
 h: 55

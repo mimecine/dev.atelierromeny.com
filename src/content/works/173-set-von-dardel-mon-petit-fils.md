@@ -4,7 +4,6 @@ title: Set von Dardel (mon petit fils)
 image: '/src/media/works/173-set-von-dardel-mon-petit-fils-detail.webp'
 old_image: '/src/media/works/173-set-von-dardel-mon-petit-fils.webp'
 collections:
-  - figures-humaines
   - nfs
 categories: Figures humaines
 w: 33

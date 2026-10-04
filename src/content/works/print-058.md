@@ -2,7 +2,7 @@
 title: "Vigne IV"
 categories: Works on Paper
 collections:
-  - selected-prints
+  - works-on-paper
 uuid: b173b9a8-88d3-4284-af0e-97bd3b010f3d
 image: '/src/media/works/print-058.webp'
 tags:
@@ -20,5 +20,6 @@ h: 24
 sheet_w: 59.5
 sheet_h: 46
 detail: '/src/media/works/print-058-detail.webp'
+edition: "6/30"
 ---
 

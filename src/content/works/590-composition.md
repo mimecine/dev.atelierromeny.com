@@ -3,8 +3,6 @@ id: 590
 title: Composition
 image: '/src/media/works/590-composition-v2.webp'
 collections:
-  - abstrait
-  - selected-july-2025
   - selected-paintings
 categories: Abstrait
 w: 75

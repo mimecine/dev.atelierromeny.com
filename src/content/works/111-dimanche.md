@@ -13,8 +13,6 @@ year_end: null
 image: '/src/media/works/111-dimanche-detail.webp'
 old_image: '/src/media/works/111-dimanche.webp'
 uuid: e8df7d51-d59f-4942-a3e6-5833209c9af0
-collections:
-  - les-jours-de-la-semaine
 tags:
   - painting
   - mixed media

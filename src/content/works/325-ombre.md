@@ -3,9 +3,6 @@ id: 325
 title: Ombre
 image: '/src/media/works/325-ombre-detail.webp'
 old_image: '/src/media/works/325-ombre.webp'
-collections:
-  - abstrait
-  - selected-july-2025
 categories: Abstrait
 w: 40
 h: 30

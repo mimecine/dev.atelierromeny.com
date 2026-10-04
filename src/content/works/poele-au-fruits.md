@@ -3,7 +3,6 @@ id: null
 title: Poële au fruits
 image: '/src/media/works/poele-au-fruits.webp'
 collections:
-  - natures-mortes
   - nfs
 categories: Nature Morte
 w: 61

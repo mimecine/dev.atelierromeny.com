@@ -14,8 +14,6 @@ year_end: null
 image: '/src/media/works/372-macrocosme-iii-detail.webp'
 old_image: '/src/media/works/372-macrocosme-iii.webp'
 uuid: 10e6343e-f627-4341-83dc-b935c0b188ab
-collections:
-  - abstrait
 tags:
   - painting
   - abstract

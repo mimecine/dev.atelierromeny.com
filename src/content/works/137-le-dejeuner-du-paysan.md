@@ -2,9 +2,6 @@
 id: 137
 title: Le déjeuner du paysan
 image: '/src/media/works/137-le-dejeuner-du-paysan.webp'
-collections:
-  - natures-mortes
-  - selected-july-2025
 categories: Natures mortes
 w: 100
 h: 81

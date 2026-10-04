@@ -12,7 +12,5 @@ year_start: 1987
 year_end: null
 image: null
 uuid: 4020e728-65ee-43aa-a936-515160301981
-collections:
-  - abstrait
 ---
 

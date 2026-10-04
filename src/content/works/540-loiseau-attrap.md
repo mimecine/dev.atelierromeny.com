@@ -13,8 +13,6 @@ year_end: null
 image: '/src/media/works/540-loiseau-attrap-detail.webp'
 old_image: '/src/media/works/540-loiseau-attrap.webp'
 uuid: 002bc9b2-7efb-4c97-9dc6-cf6592702b2e
-collections:
-  - animaux
 tags:
   - painting
   - bird

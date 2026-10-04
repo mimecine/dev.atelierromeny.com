@@ -3,8 +3,6 @@ id: 483
 title: Snölandskap
 image: '/src/media/works/483-snolandskap-v2.webp'
 collections:
-  - paysages
-  - selected-july-2025
   - selected-paintings
 categories: Paysages
 w: 130

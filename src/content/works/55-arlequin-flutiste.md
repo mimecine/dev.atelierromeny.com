@@ -3,9 +3,6 @@ id: 55
 title: Arlequin flutiste
 image: '/src/media/works/55-arlequin-flutiste-detail.webp'
 old_image: '/src/media/works/55-arlequin-flutiste.webp'
-collections:
-  - metro
-  - selected-july-2025
 categories: Métro
 w: 81
 h: 100

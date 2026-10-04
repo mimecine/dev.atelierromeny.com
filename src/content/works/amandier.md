@@ -5,7 +5,6 @@ image: '/src/media/works/amandier-detail.webp'
 old_image: '/src/media/works/amandier.webp'
 collections:
   - marco
-  - arbres
 categories: Arbres
 w: 116
 h: 81

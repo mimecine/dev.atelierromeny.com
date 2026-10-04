@@ -2,9 +2,6 @@
 id: 24
 title: Eclat de mer é Menton
 image: '/src/media/works/24-eclat-de-mer-e-menton.webp'
-collections:
-  - paysages
-  - selected-july-2025
 categories: Paysages
 w: 100
 h: 100

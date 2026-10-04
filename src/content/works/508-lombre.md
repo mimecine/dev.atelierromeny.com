@@ -14,8 +14,6 @@ year_end: null
 image: '/src/media/works/508-lombre-detail.webp'
 old_image: '/src/media/works/508-lombre.webp'
 uuid: 531f97b2-eb12-4884-8f8b-3473c111b17b
-collections:
-  - figures-humaines
 tags:
   - painting
   - figure

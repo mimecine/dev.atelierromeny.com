@@ -13,7 +13,5 @@ year_start: 1985
 year_end: null
 image: '/src/media/works/86-ciel-x.jpg'
 uuid: 68e2a9f8-b1b7-458b-a02c-d2cd84ce9769
-collections:
-  - abstrait
 ---
 

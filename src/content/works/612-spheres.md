@@ -3,8 +3,6 @@ id: 612
 title: Sphéres
 image: '/src/media/works/612-spheres-v2.webp'
 collections:
-  - abstrait
-  - selected-july-2025
   - selected-paintings
 categories: Abstrait
 w: 81

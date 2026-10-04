@@ -3,8 +3,6 @@ id: 150
 title: Vent dans les champs de blé
 image: '/src/media/works/150-vent-dans-les-champs-de-ble-v2.webp'
 collections:
-  - paysages
-  - selected-july-2025
   - selected-paintings
 categories: Paysages
 w: 81

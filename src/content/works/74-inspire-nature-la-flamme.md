@@ -12,8 +12,6 @@ year_start: 1998
 year_end: null
 image: '/src/media/works/74-inspire-nature-la-flamme.webp'
 uuid: 04dbb4f6-f9f8-4812-a172-c42774ec9ff0
-collections:
-  - abstrait
 tags:
   - painting
   - mixed media

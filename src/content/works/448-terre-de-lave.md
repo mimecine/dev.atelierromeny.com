@@ -6,8 +6,6 @@ old_image: '/src/media/works/448-terre-de-lave.webp'
 collections:
   - marco
   - alisa
-  - abstrait
-  - selected-july-2025
 categories: Abstrait
 w: 110
 h: 90

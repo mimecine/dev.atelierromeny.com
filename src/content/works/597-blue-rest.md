@@ -4,7 +4,6 @@ title: Blue rest
 image: '/src/media/works/597-blue-rest-detail.webp'
 old_image: '/src/media/works/597-blue-rest.webp'
 collections:
-  - abstrait
   - nfs
 categories: Abstrait
 w: 50

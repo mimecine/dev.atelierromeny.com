@@ -12,7 +12,5 @@ year_start: 1981
 year_end: null
 image: null
 uuid: d5d76544-31f9-4c63-9765-20911eb0dad4
-collections:
-  - animaux
 ---
 

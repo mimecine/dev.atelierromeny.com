@@ -4,7 +4,6 @@ title: Bouquet bleu
 image: '/src/media/works/206-bouquet-bleu-v2.webp'
 collections:
   - marco
-  - natures-mortes
   - nfs
   - selected-paintings
 categories: Natures mortes

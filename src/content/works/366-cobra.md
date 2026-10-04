@@ -4,8 +4,6 @@ title: Cobra
 image: '/src/media/works/366-cobra-v2.webp'
 collections:
   - marco
-  - abstrait
-  - selected-july-2025
   - selected-paintings
 categories: Abstrait
 w: 64

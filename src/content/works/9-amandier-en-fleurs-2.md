@@ -3,9 +3,6 @@ id: 9
 title: Amandier en fleurs 2
 image: '/src/media/works/9-amandier-en-fleurs-2-detail.webp'
 old_image: '/src/media/works/9-amandier-en-fleurs-2.webp'
-collections:
-  - arbres-en-fleurs
-  - selected-july-2025
 categories: Arbres en fleurs
 w: 89
 h: 116

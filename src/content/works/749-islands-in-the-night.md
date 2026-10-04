@@ -4,8 +4,6 @@ id: 749
 title: Islands in the night
 image: '/src/media/works/749-islands-in-the-night-detail.webp'
 old_image: '/src/media/works/749-islands-in-the-night.webp'
-collections:
-  - abstrait
 categories: Abstrait
 w: 80
 h: 65

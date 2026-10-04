@@ -3,8 +3,6 @@ id: 602
 title: Med Strömmen (courant dans I'eau)
 image: '/src/media/works/602-med-strommen-courant-dans-i-eau.webp'
 collections:
-  - abstrait
-  - selected-july-2025
   - selected-paintings
 categories: Abstrait
 w: 95

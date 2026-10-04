@@ -2,9 +2,6 @@
 id: 632
 title: Labyrinthe 1 (le petit bleu)
 image: '/src/media/works/632-labyrinthe-1-le-petit-bleu.webp'
-collections:
-  - abstrait
-  - selected-july-2025
 categories: Abstrait
 w: 80
 h: 80

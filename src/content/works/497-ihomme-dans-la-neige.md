@@ -2,9 +2,6 @@
 id: 497
 title: I'homme dans la neige
 image: '/src/media/works/497-ihomme-dans-la-neige.webp'
-collections:
-  - accident-dans-la-montagne
-  - selected-july-2025
 categories: Accident dans la montagne
 w: 140
 h: 120

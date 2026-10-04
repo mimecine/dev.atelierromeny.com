@@ -2,7 +2,7 @@
 title: "Morning"
 categories: Works on Paper
 collections:
-  - selected-prints
+  - works-on-paper
 uuid: 7b4a8c6d-626c-4cd6-940f-09af318c91e3
 image: '/src/media/works/print-034.webp'
 tags:
@@ -20,5 +20,6 @@ h: 29
 sheet_w: 57
 sheet_h: 45.5
 detail: '/src/media/works/print-034-detail.webp'
+edition: "36/55"
 ---
 

@@ -3,9 +3,6 @@ id: 549
 title: Fantaisie 2
 image: '/src/media/works/549-fantaisie-2-detail.webp'
 old_image: '/src/media/works/549-fantaisie-2.webp'
-collections:
-  - abstrait
-  - selected-july-2025
 categories: Abstrait
 w: 54
 h: 65

@@ -3,8 +3,6 @@ id: 660
 title: La végétation
 image: '/src/media/works/660-la-vegetation-v2.webp'
 collections:
-  - la-creation
-  - selected-july-2025
   - selected-paintings
 categories: La création
 w: 180

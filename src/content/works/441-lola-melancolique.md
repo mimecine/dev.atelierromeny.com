@@ -4,7 +4,6 @@ title: Lola, mélancolique
 image: '/src/media/works/441-lola-melancolique-detail.webp'
 old_image: '/src/media/works/441-lola-melancolique.webp'
 collections:
-  - figures-humaines
   - nfs
 categories: Figures humaines
 w: 80

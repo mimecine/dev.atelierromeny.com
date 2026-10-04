@@ -3,9 +3,6 @@ id: 682
 title: Chaise et plat de poissons
 image: '/src/media/works/682-chaise-et-plat-de-poissons-detail.webp'
 old_image: '/src/media/works/682-chaise-et-plat-de-poissons.webp'
-collections:
-  - natures-mortes
-  - selected-july-2025
 categories: Natures mortes
 w: 33
 h: 41

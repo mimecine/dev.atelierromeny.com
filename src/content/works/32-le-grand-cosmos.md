@@ -2,9 +2,6 @@
 id: 32
 title: Le grand cosmos
 image: '/src/media/works/32-le-grand-cosmos.webp'
-collections:
-  - abstrait
-  - selected-july-2025
 categories: Abstrait
 w: 275
 h: 145

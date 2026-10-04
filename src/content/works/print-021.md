@@ -2,7 +2,7 @@
 title: "Holland"
 categories: Works on Paper
 collections:
-  - selected-prints
+  - works-on-paper
 uuid: b9aa207e-c27f-4cab-8545-bca9bc83b277
 image: '/src/media/works/print-021.webp'
 images:
@@ -19,5 +19,6 @@ sheet_w: 34.5
 sheet_h: 49
 thumbnail: 2
 detail: '/src/media/works/print-021-detail.webp'
+edition: "e.a."
 ---
 

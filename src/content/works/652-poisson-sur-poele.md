@@ -3,8 +3,6 @@ id: 652
 title: Poisson sur poéle
 image: '/src/media/works/652-poisson-sur-poele-v2.webp'
 collections:
-  - natures-mortes
-  - selected-july-2025
   - selected-paintings
 categories: Natures mortes
 w: 55

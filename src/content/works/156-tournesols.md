@@ -3,8 +3,6 @@ id: 156
 title: Tournesols
 image: '/src/media/works/156-tournesols-v2.webp'
 collections:
-  - fleurs
-  - selected-july-2025
   - selected-paintings
 categories: Fleurs
 w: 65

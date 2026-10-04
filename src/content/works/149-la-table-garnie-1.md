@@ -3,8 +3,6 @@ id: 149
 title: La table garnie 1
 image: '/src/media/works/149-la-table-garnie-1-v2.webp'
 collections:
-  - natures-mortes
-  - selected-july-2025
   - selected-paintings
 categories: Natures mortes
 w: 54

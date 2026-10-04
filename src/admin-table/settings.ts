@@ -68,6 +68,22 @@ export const computedColumns = (collection: string): ComputedColumn[] =>
         },
       ];
 
+/** Starting column order and hidden columns, until you drag or hide columns yourself
+ *  (that layout is remembered per browser). Columns not listed follow, in config order. */
+export const COLUMN_DEFAULTS: Record<string, { order: string[]; hidden: string[] }> = {
+  works: {
+    order: [
+      "title", "image", "images", "detail", "thumbnail",
+      "w", "h", "_area", "_base_price", "rating", "_price",
+      "year", "edition", "collections", "categories", "sheet_w", "sheet_h",
+    ],
+    hidden: [
+      "hidden_images", "old_image", "year_start", "year_end", "tags", "published",
+      "body", "location", "new_location", "note", "id",
+    ],
+  },
+};
+
 export const FIELD_OPTIONS: Record<string, Record<string, FieldOptions>> = {
   works: {
     thumbnail: { pickFrom: ["image", "images"] },

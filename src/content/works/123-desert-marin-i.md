@@ -12,8 +12,6 @@ year_start: 1984
 year_end: null
 image: '/src/media/works/123-desert-marin-i.webp'
 uuid: e82ac6dc-264a-4ead-b05c-ef82e1e13f25
-collections:
-  - abstrait
 tags:
   - mixed media
   - assemblage

@@ -2,9 +2,6 @@
 id: 421
 title: Jour de la Iibération a Haarlem
 image: '/src/media/works/421-jour-de-la-iiberation-a-haarlem.webp'
-collections:
-  - paysages
-  - selected-july-2025
 categories: Paysages
 w: 60
 h: 75

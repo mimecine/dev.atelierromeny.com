@@ -14,8 +14,6 @@ year_end: null
 image: '/src/media/works/435-une-kanak-detail.webp'
 old_image: '/src/media/works/435-une-kanak.webp'
 uuid: 2530755a-2deb-48e8-88c2-c11bcbf85d0f
-collections:
-  - figures-humaines
 tags:
   - painting
   - portrait

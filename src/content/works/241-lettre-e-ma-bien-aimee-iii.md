@@ -12,8 +12,6 @@ year_start: 1992
 year_end: null
 image: '/src/media/works/241-lettre-e-ma-bien-aimee-iii.webp'
 uuid: 37d79892-1c0f-4683-856d-1a7a4cd16121
-collections:
-  - la-vie-de-femme
 tags:
   - painting
   - collage

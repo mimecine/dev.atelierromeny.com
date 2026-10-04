@@ -2,9 +2,6 @@
 id: 446
 title: Terra nova
 image: '/src/media/works/446-terra-nova.webp'
-collections:
-  - abstrait
-  - selected-july-2025
 categories: Abstrait
 w: 120
 h: 80

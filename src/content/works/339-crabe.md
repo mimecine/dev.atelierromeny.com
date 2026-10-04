@@ -3,9 +3,6 @@ id: 339
 title: Crabe
 image: '/src/media/works/339-crabe-v2.webp'
 collections:
-  - nature
-  - animals
-  - animaux
   - nfs
   - selected-paintings
 categories: Animaux

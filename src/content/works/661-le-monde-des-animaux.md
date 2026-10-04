@@ -3,8 +3,6 @@ id: 661
 title: Le monde des animaux
 image: '/src/media/works/661-le-monde-des-animaux-v2.webp'
 collections:
-  - la-creation
-  - selected-july-2025
   - selected-paintings
 categories: La création
 w: 180

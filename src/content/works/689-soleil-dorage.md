@@ -3,7 +3,6 @@ id: 689
 title: Soleil d'orage
 image: '/src/media/works/689-soleil-d-orage.webp'
 collections:
-  - paysages
   - selected-paintings
 categories: Paysages
 w: 73

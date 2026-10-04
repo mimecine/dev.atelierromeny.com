@@ -12,8 +12,6 @@ year_start: 2006
 year_end: null
 image: '/src/media/works/eau-vive-2.webp'
 uuid: 81ff5955-975f-44fc-8e02-381840a6a3fb
-collections:
-  - abstrait
 tags:
   - painting
   - abstract

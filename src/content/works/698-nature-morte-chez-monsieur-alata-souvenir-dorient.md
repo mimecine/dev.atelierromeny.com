@@ -3,8 +3,6 @@ id: 698
 title: Nature morte chez Monsieur ALATA / Souvenir d'Orient
 image: '/src/media/works/698-nature-morte-chez-monsieur-alata-souvenir-d-orient.webp'
 collections:
-  - natures-mortes
-  - selected-july-2025
   - selected-paintings
 categories: Natures mortes
 w: 65

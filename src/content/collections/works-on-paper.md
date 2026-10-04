@@ -1,5 +1,5 @@
 ---
-title: Selected Prints
+title: Works on Paper
 published: true
 inmenu: false
 image: ''

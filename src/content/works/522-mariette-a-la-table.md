@@ -14,8 +14,6 @@ year_end: null
 image: '/src/media/works/522-mariette-a-la-table-detail.webp'
 old_image: '/src/media/works/522-mariette-a-la-table.webp'
 uuid: 21558d09-dbf8-47d0-b6ec-39de1aa75917
-collections:
-  - figures-humaines
 tags:
   - painting
   - figure

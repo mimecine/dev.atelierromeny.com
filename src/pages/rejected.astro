@@ -5,17 +5,9 @@ import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
 import { thumbnailOf, titleOf } from "@src/lib/works";
 
-// List of collection slugs to consider as "accepted", i.e. not rejected
-const acceptedCollections = [
-  "destroyed","selected-july-2025","nfs"
-];
-
+// Works not in any collection yet
 const works = await getCollection("works");
-const rejectedWorks = works.filter(
-  (work) =>
-    !work.data.collections ||
-    !work.data.collections.some((col) => acceptedCollections.includes(col))
-);
+const rejectedWorks = works.filter((work) => !work.data.collections?.length);
 ---
 <Layout title="Unclassed Works" noindex>
   <section class="grid max-w-6xl mx-auto py-4">

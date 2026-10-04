@@ -13,8 +13,6 @@ year_end: null
 image: '/src/media/works/reverie-detail.webp'
 old_image: '/src/media/works/reverie.webp'
 uuid: 32885a3d-b7db-4ab2-b435-dccb6e6772b9
-collections:
-  - la-vie-de-femme
 tags:
   - painting
   - collage

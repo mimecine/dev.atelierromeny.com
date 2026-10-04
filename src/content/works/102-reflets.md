@@ -3,9 +3,6 @@ id: 102
 title: Reflets
 image: '/src/media/works/102-reflets-detail.webp'
 old_image: '/src/media/works/102-reflets.webp'
-collections:
-  - abstrait
-  - selected-july-2025
 categories: Abstrait
 w: 55
 h: 38

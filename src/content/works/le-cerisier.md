@@ -2,9 +2,6 @@
 id: null
 title: Le cerisier
 image: '/src/media/works/le-cerisier.webp'
-collections:
-  - paysages
-  - selected-july-2025
 categories: Landscape
 w: 73
 h: 50

@@ -3,9 +3,6 @@ id: 348
 title: Divergences
 image: '/src/media/works/348-divergences-detail.webp'
 old_image: '/src/media/works/348-divergences.webp'
-collections:
-  - abstrait
-  - selected-july-2025
 categories: Abstrait
 w: 85
 h: 64

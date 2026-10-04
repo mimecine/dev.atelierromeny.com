@@ -2,7 +2,7 @@
 title: "Månsken"
 categories: Works on Paper
 collections:
-  - selected-prints
+  - works-on-paper
 uuid: d0842eb3-5850-43a0-bbbd-b98c7d764e24
 image: '/src/media/works/print-011.webp'
 images:
@@ -22,5 +22,6 @@ h: 12.5
 sheet_w: 33.5
 sheet_h: 25.5
 detail: '/src/media/works/print-011-detail.webp'
+edition: "12/20"
 ---
 

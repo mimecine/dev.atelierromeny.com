@@ -4,8 +4,6 @@ title: 'Jouve, le facteur de Villars'
 image: '/src/media/works/351-jouve-le-facteur-de-villars-v2.webp'
 collections:
   - marco
-  - figures-humaines
-  - selected-july-2025
   - selected-paintings
 categories: Figures humaines
 w: 65

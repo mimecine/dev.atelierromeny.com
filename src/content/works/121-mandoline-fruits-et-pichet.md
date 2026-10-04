@@ -2,9 +2,6 @@
 id: 121
 title: Mandoline fruits et pichet
 image: '/src/media/works/121-mandoline-fruits-et-pichet.webp'
-collections:
-  - natures-mortes
-  - selected-july-2025
 categories: Natures mortes
 w: 120
 h: 100

@@ -14,7 +14,6 @@ year_end: null
 image: '/src/media/works/40-la-terre-v2.webp'
 uuid: a44ef0f7-2939-4c66-ac02-baac88a87015
 collections:
-  - abstrait
   - selected-paintings
 old_image: '/src/media/works/40-la-terre.webp'
 tags:

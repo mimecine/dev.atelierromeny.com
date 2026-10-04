@@ -4,7 +4,6 @@ title: Vue sur Stockholm
 image: '/src/media/works/504-vue-sur-stockholm-detail.webp'
 old_image: '/src/media/works/504-vue-sur-stockholm.webp'
 collections:
-  - paysages
   - nfs
 categories: Paysages
 w: 180

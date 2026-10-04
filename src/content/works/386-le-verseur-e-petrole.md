@@ -14,7 +14,6 @@ year_end: null
 image: '/src/media/works/386-le-verseur-e-pe-trole.webp'
 uuid: d0f09e3a-67ad-41fd-9302-2159db63edcf
 collections:
-  - natures-mortes
   - selected-paintings
 tags:
   - painting

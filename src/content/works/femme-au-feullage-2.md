@@ -13,8 +13,6 @@ year_end: null
 image: '/src/media/works/femme-au-feullage-2-detail.webp'
 old_image: '/src/media/works/femme-au-feullage-2.webp'
 uuid: e9b8b3b4-2fa9-4eb0-a2a3-3d2d8c16f827
-collections:
-  - portraits
 tags:
   - painting
   - figure

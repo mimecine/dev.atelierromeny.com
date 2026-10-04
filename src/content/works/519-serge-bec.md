@@ -3,8 +3,6 @@ id: 519
 title: Serge Bec
 image: '/src/media/works/519-serge-bec-detail.webp'
 old_image: '/src/media/works/519-serge-bec.webp'
-collections:
-  - figures-humaines
 categories: Figures humaines
 w: 73
 h: 116

@@ -2,9 +2,6 @@
 id: 146
 title: Bouquet orange
 image: '/src/media/works/146-bouquet-orange.webp'
-collections:
-  - natures-mortes
-  - selected-july-2025
 categories: Natures mortes
 w: 60
 h: 81

@@ -3,7 +3,6 @@ id: 169
 title: Nature morte au violon Ill
 image: '/src/media/works/169-nature-morte-au-violon-ill.webp'
 collections:
-  - natures-mortes
   - nfs
 categories: Natures mortes
 w: 60

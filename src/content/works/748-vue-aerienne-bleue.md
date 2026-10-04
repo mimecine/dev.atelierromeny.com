@@ -3,9 +3,6 @@ id: 748
 title: Vue aerienne bleue
 image: '/src/media/works/748-vue-aerienne-bleue-detail.webp'
 old_image: '/src/media/works/748-vue-aerienne-bleue.webp'
-collections:
-  - abstrait
-  - selected-july-2025
 categories: Abstrait
 w: 116
 h: 81

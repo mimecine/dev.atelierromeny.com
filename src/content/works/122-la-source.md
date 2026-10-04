@@ -3,9 +3,6 @@ id: 122
 title: La source
 image: '/src/media/works/122-la-source-detail.webp'
 old_image: '/src/media/works/122-la-source.webp'
-collections:
-  - abstrait
-  - selected-july-2025
 categories: Abstrait
 w: 81
 h: 65

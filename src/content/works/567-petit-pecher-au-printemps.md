@@ -3,9 +3,6 @@ id: 567
 title: Petit pécher au Printemps
 image: '/src/media/works/567-petit-pecher-au-printemps-detail.webp'
 old_image: '/src/media/works/567-petit-pecher-au-printemps.webp'
-collections:
-  - arbres-en-fleurs
-  - selected-july-2025
 categories: Arbres en fleurs
 w: 65
 h: 92

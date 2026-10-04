@@ -3,8 +3,6 @@ id: 777
 title: La tempéte route de Cucuron
 image: '/src/media/works/777-la-tempete-route-de-cucuron-v2.webp'
 collections:
-  - paysages
-  - selected-july-2025
   - selected-paintings
 categories: Paysages
 w: 92

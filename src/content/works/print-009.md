@@ -2,7 +2,7 @@
 title: "Solspegling III"
 categories: Works on Paper
 collections:
-  - selected-prints
+  - works-on-paper
 uuid: 546702a8-c652-429b-b6f7-297ebde507e4
 image: '/src/media/works/print-009.webp'
 tags:
@@ -19,5 +19,6 @@ h: 58
 sheet_w: 72.5
 sheet_h: 61.5
 detail: '/src/media/works/print-009-detail.webp'
+edition: "9/15"
 ---
 

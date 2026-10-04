@@ -3,9 +3,6 @@ id: 491
 title: Espania
 image: '/src/media/works/491-espania-detail.webp'
 old_image: '/src/media/works/491-espania.webp'
-collections:
-  - abstrait
-  - selected-july-2025
 categories: Abstrait
 w: 130
 h: 97

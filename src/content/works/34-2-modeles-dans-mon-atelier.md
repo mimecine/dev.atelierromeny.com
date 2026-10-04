@@ -5,7 +5,6 @@ image: '/src/media/works/34-2-modeles-dans-mon-atelier-detail.webp'
 old_image: '/src/media/works/34-2-modeles-dans-mon-atelier.webp'
 collections:
   - marco
-  - figures-humaines
 categories: Figures humaines
 w: 220
 h: 130

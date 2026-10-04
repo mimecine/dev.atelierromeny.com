@@ -3,9 +3,6 @@ id: 462
 title: Crépuscule orageux
 image: '/src/media/works/462-crepuscule-orageux-detail.webp'
 old_image: '/src/media/works/462-crepuscule-orageux.webp'
-collections:
-  - abstrait
-  - selected-july-2025
 categories: Abstrait
 w: 120
 h: 80

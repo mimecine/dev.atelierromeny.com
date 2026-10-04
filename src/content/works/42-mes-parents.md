@@ -13,8 +13,6 @@ year_end: null
 image: '/src/media/works/42-mes-parents-detail.webp'
 old_image: '/src/media/works/42-mes-parents.webp'
 uuid: 2d3544e4-8aa4-451f-9a93-572773db9ec5
-collections:
-  - figures-humaines
 tags:
   - painting
   - figure

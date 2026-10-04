@@ -3,7 +3,6 @@ id: null
 title: Petite Improvisation 2
 image: '/src/media/works/petite-improvisation-2.webp'
 collections:
-  - abstrait
   - nfs
 categories: Abstract
 w: 38

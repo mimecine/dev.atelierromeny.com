@@ -3,9 +3,6 @@ id: 589
 title: Blue extase
 image: '/src/media/works/589-blue-extase-detail.webp'
 old_image: '/src/media/works/589-blue-extase.webp'
-collections:
-  - abstrait
-  - selected-july-2025
 categories: Abstrait
 w: 100
 h: 81

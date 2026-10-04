@@ -3,9 +3,6 @@ id: 207
 title: Bouquet dans le pot de Cologne
 image: '/src/media/works/207-bouquet-dans-le-pot-de-cologne-detail.webp'
 old_image: '/src/media/works/207-bouquet-dans-le-pot-de-cologne.webp'
-collections:
-  - natures-mortes
-  - selected-july-2025
 categories: Natures mortes
 w: 50
 h: 60

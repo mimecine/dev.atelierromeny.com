@@ -3,9 +3,6 @@ id: 642
 title: Paysage aérien 3
 image: '/src/media/works/642-paysage-aerien-3-detail.webp'
 old_image: '/src/media/works/642-paysage-aerien-3.webp'
-collections:
-  - abstrait
-  - selected-july-2025
 categories: Abstrait
 w: 95
 h: 75

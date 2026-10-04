@@ -3,10 +3,6 @@ id: 367
 title: Fruits
 image: '/src/media/works/367-fruits-detail.webp'
 old_image: '/src/media/works/367-fruits.webp'
-collections:
-  - abstract
-  - abstrait
-  - selected-july-2025
 categories: Abstrait
 w: 70
 h: 60

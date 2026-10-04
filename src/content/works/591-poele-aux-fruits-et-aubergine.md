@@ -3,8 +3,6 @@ id: 591
 title: Poéle aux fruits et aubergine
 image: '/src/media/works/591-poele-aux-fruits-et-aubergine-v2.webp'
 collections:
-  - natures-mortes
-  - selected-july-2025
   - selected-paintings
 categories: Natures mortes
 w: 90

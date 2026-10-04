@@ -2,9 +2,6 @@
 id: 751
 title: Cerisier en fleurs solitaire
 image: '/src/media/works/751-cerisier-en-fleurs-solitaire.webp'
-collections:
-  - arbres-en-fleurs
-  - selected-july-2025
 categories: Arbres en fleurs
 w: 80
 h: 80

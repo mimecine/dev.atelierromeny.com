@@ -13,7 +13,5 @@ year_start: 1984
 year_end: null
 image: '/src/media/works/639-sand-och-brate-ill-sable-et-pignes.jpg'
 uuid: 580403d3-2303-4844-b34b-5d28d742bf62
-collections:
-  - abstrait
 ---
 

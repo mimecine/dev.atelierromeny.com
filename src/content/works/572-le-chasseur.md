@@ -12,8 +12,6 @@ year_start: 1981
 year_end: null
 image: '/src/media/works/572-le-chasseur.webp'
 uuid: 310a176d-1457-4944-b6a3-e21287d8eb9a
-collections:
-  - animaux
 tags:
   - painting
   - mixed media

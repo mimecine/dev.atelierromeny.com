@@ -12,8 +12,6 @@ year_start: 2008
 year_end: null
 image: '/src/media/works/francine.webp'
 uuid: e84eb530-2f77-4575-b73e-341a6e64aaaa
-collections:
-  - portraits
 tags:
   - painting
   - collage

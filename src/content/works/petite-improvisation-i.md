@@ -2,9 +2,6 @@
 id: null
 title: Petite improvisation I
 image: '/src/media/works/petite-improvisation-i.webp'
-collections:
-  - abstrait
-  - selected-july-2025
 categories: Abstract
 w: 46
 h: 38

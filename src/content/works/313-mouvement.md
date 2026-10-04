@@ -3,8 +3,6 @@ id: 313
 title: Mouvement
 image: '/src/media/works/313-mouvement-v2.webp'
 collections:
-  - abstrait
-  - selected-july-2025
   - selected-paintings
 categories: Abstrait
 w: 46

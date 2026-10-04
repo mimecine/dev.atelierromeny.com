@@ -27,6 +27,7 @@ const _works = defineCollection({
       note: z.string().optional().nullish(),
       file: z.string().optional().nullish(),
       year: z.string().optional().nullish(),
+      edition: z.string().optional().nullish(), // prints: as pencilled, e.g. "4/20", "e.a."
       year_start: z.number().optional().nullish(),
       year_end: z.number().optional().nullish(),
       collections: z.array(z.string()).optional().nullish(),

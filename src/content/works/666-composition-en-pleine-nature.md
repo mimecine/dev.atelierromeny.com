@@ -2,9 +2,6 @@
 id: 666
 title: Composition en pleine nature
 image: '/src/media/works/666-composition-en-pleine-nature.webp'
-collections:
-  - abstrait
-  - selected-july-2025
 categories: Abstrait
 w: 150
 h: 120

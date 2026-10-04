@@ -3,9 +3,6 @@ id: 466
 title: Space-passage
 image: '/src/media/works/466-space-passage-detail.webp'
 old_image: '/src/media/works/466-space-passage.webp'
-collections:
-  - abstrait
-  - selected-july-2025
 categories: Abstrait
 w: 115
 h: 90

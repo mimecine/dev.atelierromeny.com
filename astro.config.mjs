@@ -33,7 +33,12 @@ export default defineConfig({
   output: 'server',
 
   // /works/<slug>/ is each work's canonical page; the folder itself has no index.
-  redirects: { '/works': '/' },
+  redirects: {
+    '/works': '/',
+    // the collection was renamed
+    '/selected-prints': '/works-on-paper',
+    '/selected-prints/[...slug]': '/works/[...slug]',
+  },
 
   image: isDev ? { service: passthroughImageService() } : undefined,
 

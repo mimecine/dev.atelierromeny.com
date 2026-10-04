@@ -13,8 +13,6 @@ year_end: null
 image: '/src/media/works/aurora-1-detail.webp'
 old_image: '/src/media/works/aurora-1.webp'
 uuid: b6f06f1c-0541-4369-9753-a6aa2e9c3ba8
-collections:
-  - paysages
 tags:
   - painting
   - landscape

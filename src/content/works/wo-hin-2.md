@@ -12,8 +12,6 @@ year_start: 2005
 year_end: null
 image: '/src/media/works/wo-hin-2.webp'
 uuid: c729fa20-d7e3-4274-bf05-176c45ead259
-collections:
-  - abstrait
 tags:
   - painting
   - collage

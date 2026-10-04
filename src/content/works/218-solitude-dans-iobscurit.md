@@ -14,8 +14,6 @@ year_end: null
 image: '/src/media/works/218-solitude-dans-iobscurit-detail.webp'
 old_image: '/src/media/works/218-solitude-dans-iobscurit.webp'
 uuid: 0f72c988-cd31-4a65-8cf7-0209735d37cb
-collections:
-  - figures-humaines
 tags:
   - painting
   - figure

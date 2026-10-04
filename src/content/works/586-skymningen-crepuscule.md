@@ -3,7 +3,6 @@ id: 586
 title: Skymningen (Crépuscule)
 image: '/src/media/works/586-skymningen-crepuscule-v2.webp'
 collections:
-  - abstrait
   - nfs
   - selected-paintings
 categories: Abstrait

@@ -3,7 +3,6 @@ id: 429
 title: Brand..Jord (terre brulée)
 image: '/src/media/works/429-brand-jord-terre-brulee.webp'
 collections:
-  - abstrait
   - nfs
   - selected-paintings
 categories: Abstrait

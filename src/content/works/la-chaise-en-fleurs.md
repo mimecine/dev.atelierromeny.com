@@ -6,8 +6,6 @@ old_image: '/src/media/works/la-chaise-en-fleurs.webp'
 collections:
   - marco
   - alisa
-  - natures-mortes
-  - selected-july-2025
 categories: Nature morte
 w: 80
 h: 60

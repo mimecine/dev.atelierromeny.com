@@ -12,7 +12,5 @@ year_start: 2004
 year_end: null
 image: null
 uuid: 60496cff-f83c-42e1-b244-63b49413727f
-collections:
-  - ete
 ---
 

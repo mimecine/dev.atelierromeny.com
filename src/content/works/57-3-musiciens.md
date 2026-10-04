@@ -5,7 +5,6 @@ image: '/src/media/works/57-3-musiciens-detail.webp'
 old_image: '/src/media/works/57-3-musiciens.webp'
 collections:
   - marco
-  - metro
 categories: Métro
 w: 92
 h: 73

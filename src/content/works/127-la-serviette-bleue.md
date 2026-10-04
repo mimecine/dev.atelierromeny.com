@@ -13,8 +13,6 @@ images:
   - '/src/media/works/127-la-serviette-bleue-v2-9.webp'
 old_image: '/src/media/works/127-la-serviette-bleue.webp'
 collections:
-  - natures-mortes
-  - selected-july-2025
   - selected-paintings
 tags:
   - painting

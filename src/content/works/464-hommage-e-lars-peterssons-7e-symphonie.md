@@ -3,9 +3,6 @@ id: 464
 title: Hommage é Lars Petersson's 7e symphonie
 image: '/src/media/works/464-hommage-e-lars-peterssons-7e-symphonie-detail.webp'
 old_image: '/src/media/works/464-hommage-e-lars-peterssons-7e-symphonie.webp'
-collections:
-  - abstrait
-  - selected-july-2025
 categories: Abstrait
 w: 92
 h: 92

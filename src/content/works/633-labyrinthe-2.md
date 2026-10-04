@@ -2,9 +2,6 @@
 id: 633
 title: Labyrinthe 2
 image: '/src/media/works/633-labyrinthe-2.webp'
-collections:
-  - abstrait
-  - selected-july-2025
 categories: Abstrait
 w: 80
 h: 80

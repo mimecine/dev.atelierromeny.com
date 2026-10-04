@@ -3,8 +3,6 @@ id: 498
 title: Convulsion
 image: '/src/media/works/498-convulsion-v2.webp'
 collections:
-  - abstrait
-  - selected-july-2025
   - selected-paintings
 categories: Abstrait
 w: 130

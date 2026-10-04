@@ -12,8 +12,6 @@ year_start: null
 year_end: null
 image: '/src/media/works/bird-by-the-sea-with-mountains.webp'
 uuid: dd235dbf-b615-4305-a474-56b2fd8fa1ba
-collections:
-  - animaux
 tags:
   - painting
   - landscape

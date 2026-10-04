@@ -13,8 +13,6 @@ year_end: null
 image: '/src/media/works/vue-dans-ses-pensees-detail.webp'
 old_image: '/src/media/works/vue-dans-ses-pensees.webp'
 uuid: b2016121-9d9e-452e-b03c-cf129b263df6
-collections:
-  - portraits
 tags:
   - painting
   - figure

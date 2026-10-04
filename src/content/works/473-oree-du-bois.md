@@ -4,7 +4,6 @@ title: Orée du bois
 image: '/src/media/works/473-oree-du-bois-detail.webp'
 old_image: '/src/media/works/473-oree-du-bois.webp'
 collections:
-  - paysages
   - nfs
 categories: Paysages
 w: 80

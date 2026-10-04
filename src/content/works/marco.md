@@ -3,7 +3,6 @@ id: null
 title: Marco
 image: '/src/media/works/marco.webp'
 collections:
-  - portraits
   - nfs
 categories: Portrait
 w: 99

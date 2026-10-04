@@ -6,9 +6,6 @@ images:
   - /src/media/works/486-camargue-3-v2-2.webp
 thumbnail: null
 old_image: /src/media/works/486-camargue-3.webp
-collections:
-  - abstrait
-  - selected-july-2025
 tags:
   - painting
   - abstract

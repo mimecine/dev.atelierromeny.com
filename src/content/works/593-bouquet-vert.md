@@ -3,7 +3,6 @@ id: 593
 title: Bouquet vert
 image: '/src/media/works/593-bouquet-vert.webp'
 collections:
-  - fleurs
   - nfs
 categories: Fleurs
 w: 52

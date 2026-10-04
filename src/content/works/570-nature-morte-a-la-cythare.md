@@ -3,8 +3,6 @@ id: 570
 title: Nature morte a la Cythare
 image: '/src/media/works/570-nature-morte-a-la-cythare-v2.webp'
 collections:
-  - natures-mortes
-  - selected-july-2025
   - selected-paintings
 categories: Natures mortes
 w: 100

@@ -5,7 +5,6 @@ image: '/src/media/works/6-affection-animale-detail.webp'
 old_image: '/src/media/works/6-affection-animale.webp'
 collections:
   - alisa
-  - animaux
   - nfs
 categories: Animaux
 w: 33

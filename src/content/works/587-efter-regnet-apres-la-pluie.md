@@ -3,8 +3,6 @@ id: 587
 title: Efter regnet (aprés la pluie)
 image: '/src/media/works/587-efter-regnet-apres-la-pluie-v2.webp'
 collections:
-  - abstrait
-  - selected-july-2025
   - selected-paintings
 categories: Abstrait
 w: 55

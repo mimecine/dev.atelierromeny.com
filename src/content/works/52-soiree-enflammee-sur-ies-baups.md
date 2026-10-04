@@ -12,8 +12,6 @@ year_start: 1981
 year_end: null
 image: '/src/media/works/52-soiree-enflammee-sur-ies-baups.webp'
 uuid: e1985ccc-ea9a-4397-a697-ab2a60700ea1
-collections:
-  - paysages
 tags:
   - painting
   - landscape

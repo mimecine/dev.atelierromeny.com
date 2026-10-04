@@ -13,8 +13,6 @@ year_end: null
 image: '/src/media/works/582-les-martinets-detail.webp'
 old_image: '/src/media/works/582-les-martinets.webp'
 uuid: 97aac1de-dbc6-4de7-bff1-afc405475021
-collections:
-  - animaux
 tags:
   - painting
   - animal

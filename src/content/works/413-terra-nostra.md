@@ -2,9 +2,6 @@
 id: 413
 title: Terra nostra
 image: '/src/media/works/413-terra-nostra.webp'
-collections:
-  - abstrait
-  - selected-july-2025
 categories: Abstrait
 w: 90
 h: 130

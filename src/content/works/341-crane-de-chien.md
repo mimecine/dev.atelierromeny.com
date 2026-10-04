@@ -3,9 +3,6 @@ id: 341
 title: Crane de chien
 image: '/src/media/works/341-crane-de-chien-detail.webp'
 old_image: '/src/media/works/341-crane-de-chien.webp'
-collections:
-  - observations
-  - selected-july-2025
 categories: Observations
 w: 50
 h: 61

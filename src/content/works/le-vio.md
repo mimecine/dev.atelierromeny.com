@@ -13,8 +13,6 @@ year_end: null
 image: '/src/media/works/le-vio-detail.webp'
 old_image: '/src/media/works/le-vio.webp'
 uuid: 8b56cb06-0fda-447e-a9fc-376d26febec3
-collections:
-  - natures-mortes
 tags:
   - painting
   - music

@@ -3,8 +3,6 @@ id: 762
 title: Coin du jardin
 image: '/src/media/works/762-coin-du-jardin-v2.webp'
 collections:
-  - fleurs
-  - selected-july-2025
   - selected-paintings
 categories: Fleurs
 w: 60

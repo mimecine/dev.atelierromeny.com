@@ -13,8 +13,6 @@ year_end: null
 image: '/src/media/works/108-mardi-detail.webp'
 old_image: '/src/media/works/108-mardi.webp'
 uuid: a4a9930d-181b-4d12-9c07-ff82a7eaf9f5
-collections:
-  - les-jours-de-la-semaine
 tags:
   - painting
   - mixed media

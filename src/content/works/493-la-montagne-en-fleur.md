@@ -3,7 +3,6 @@ id: 493
 title: La montagne en fleur
 image: '/src/media/works/493-la-montagne-en-fleur.webp'
 collections:
-  - accident-dans-la-montagne
   - nfs
 categories: Accident dans la montagne
 w: 140

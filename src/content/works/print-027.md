@@ -2,7 +2,7 @@
 title: "Le bouquet"
 categories: Works on Paper
 collections:
-  - selected-prints
+  - works-on-paper
 uuid: 09062a96-c31c-4854-85ee-c9c82ea6dcaa
 image: '/src/media/works/print-027.webp'
 tags:
@@ -17,5 +17,6 @@ note: "Inscription (read from photo): 17/40, \"Le bouquet\", 1970 -- faint handw
 sheet_w: 44
 sheet_h: 61
 detail: '/src/media/works/print-027-detail.webp'
+edition: "17/40"
 ---
 

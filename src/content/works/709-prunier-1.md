@@ -12,7 +12,5 @@ year_start: 2003
 year_end: null
 image: null
 uuid: 1575f469-dbda-41b3-8a0e-09791aad6231
-collections:
-  - arbres
 ---
 

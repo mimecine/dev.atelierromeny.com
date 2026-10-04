@@ -13,8 +13,6 @@ year_start: 1997
 year_end: null
 image: '/src/media/works/234-maternite-vert-clair.webp'
 uuid: d105478b-74fb-4b2e-bff3-c54b22c7b1b4
-collections:
-  - figures-humaines
 tags:
   - painting
   - figure

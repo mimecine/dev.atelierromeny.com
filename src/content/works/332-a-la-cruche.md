@@ -5,8 +5,6 @@ image: '/src/media/works/332-a-la-cruche-v2.webp'
 collections:
   - marco
   - alisa
-  - natures-mortes
-  - selected-july-2025
   - selected-paintings
 categories: Natures mortes
 w: 70

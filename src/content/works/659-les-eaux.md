@@ -2,9 +2,6 @@
 id: 659
 title: Les eaux
 image: '/src/media/works/659-les-eaux.webp'
-collections:
-  - la-creation
-  - selected-july-2025
 categories: La création
 w: 180
 h: 130

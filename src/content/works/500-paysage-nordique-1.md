@@ -3,8 +3,6 @@ id: 500
 title: Paysage nordique 1
 image: '/src/media/works/500-paysage-nordique-1-v2.webp'
 collections:
-  - abstrait
-  - selected-july-2025
   - selected-paintings
 categories: Abstrait
 w: 120

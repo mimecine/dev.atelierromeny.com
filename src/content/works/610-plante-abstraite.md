@@ -3,7 +3,6 @@ id: 610
 title: Plante abstraite
 image: '/src/media/works/610-plante-abstraite-v2.webp'
 collections:
-  - abstrait
   - selected-paintings
 categories: Abstrait
 w: 65

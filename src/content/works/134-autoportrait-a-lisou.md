@@ -13,8 +13,6 @@ year_end: null
 image: '/src/media/works/134-autoportrait-a-lisou-detail.webp'
 old_image: '/src/media/works/134-autoportrait-a-lisou.webp'
 uuid: bbe317f1-3991-4429-a779-7835767d9c46
-collections:
-  - figures-humaines
 tags:
   - painting
   - self-portrait

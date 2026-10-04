@@ -13,8 +13,6 @@ year_start: 1952
 year_end: null
 image: '/src/media/works/399-autoportrait-de-jeunesse.webp'
 uuid: ea1a1363-fe5d-4692-8d2c-886fff7183c2
-collections:
-  - figures-humaines
 tags:
   - painting
   - self-portrait

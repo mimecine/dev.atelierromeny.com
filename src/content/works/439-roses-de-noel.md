@@ -3,8 +3,6 @@ id: 439
 title: Roses de Noél
 image: '/src/media/works/439-roses-de-noel-v2.webp'
 collections:
-  - fleurs
-  - selected-july-2025
   - selected-paintings
 categories: Fleurs
 w: 130

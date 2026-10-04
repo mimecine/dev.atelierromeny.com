@@ -3,9 +3,6 @@ id: 327
 title: Composition bleu noir
 image: '/src/media/works/327-composition-bleu-noir-detail.webp'
 old_image: '/src/media/works/327-composition-bleu-noir.webp'
-collections:
-  - abstrait
-  - selected-july-2025
 categories: Abstrait
 w: 41
 h: 26

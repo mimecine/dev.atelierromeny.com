@@ -12,7 +12,5 @@ year_start: 1982
 year_end: null
 image: null
 uuid: af32ec6a-9aab-442c-b53f-bd9757d6b4d6
-collections:
-  - abstrait
 ---
 

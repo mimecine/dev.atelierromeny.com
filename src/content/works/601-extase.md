@@ -3,8 +3,6 @@ id: 601
 title: Extase
 image: '/src/media/works/601-extase-v2.webp'
 collections:
-  - abstrait
-  - selected-july-2025
   - selected-paintings
 categories: Abstrait
 w: 80

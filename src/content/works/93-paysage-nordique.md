@@ -4,7 +4,6 @@ title: Paysage nordique
 image: '/src/media/works/93-paysage-nordique-detail.webp'
 old_image: '/src/media/works/93-paysage-nordique.webp'
 collections:
-  - abstrait
   - nfs
 categories: Abstrait
 w: 60

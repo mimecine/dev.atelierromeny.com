@@ -3,8 +3,6 @@ id: 153
 title: L'automne autour de moi
 image: '/src/media/works/153-l-automne-autour-de-moi.webp'
 collections:
-  - paysages
-  - selected-july-2025
   - selected-paintings
 categories: Paysages
 w: 73

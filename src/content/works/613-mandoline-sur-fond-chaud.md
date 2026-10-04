@@ -3,8 +3,6 @@ id: 613
 title: Mandoline sur fond Chaud
 image: '/src/media/works/613-mandoline-sur-fond-chaud-v2.webp'
 collections:
-  - natures-mortes
-  - selected-july-2025
   - selected-paintings
 categories: Natures mortes
 w: 87

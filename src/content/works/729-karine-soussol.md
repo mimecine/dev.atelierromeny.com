@@ -13,8 +13,6 @@ year_end: null
 image: '/src/media/works/729-karine-soussol-detail.webp'
 old_image: '/src/media/works/729-karine-soussol.webp'
 uuid: fa80b116-9ad4-4bea-8196-1b8b20136421
-collections:
-  - figures-humaines
 tags:
   - painting
   - portrait

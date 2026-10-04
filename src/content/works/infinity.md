@@ -13,8 +13,6 @@ year_end: null
 image: '/src/media/works/infinity-detail.webp'
 old_image: '/src/media/works/infinity.webp'
 uuid: ac2531ab-d7de-4008-8d84-2ec67d4926ef
-collections:
-  - abstrait
 tags:
   - painting
   - abstract

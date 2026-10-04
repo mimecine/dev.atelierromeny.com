@@ -4,7 +4,6 @@ title: Iles
 image: '/src/media/works/764-iles.webp'
 collections:
   - marco
-  - abstrait
 categories: Abstrait
 w: 59
 h: 45

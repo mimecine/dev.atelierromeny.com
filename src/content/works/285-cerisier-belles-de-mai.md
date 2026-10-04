@@ -3,7 +3,6 @@ id: 285
 title: Cerisier 'Belles de mai'
 image: '/src/media/works/285-cerisier-belles-de-mai.webp'
 collections:
-  - arbres-en-fleurs
   - nfs
 categories: Arbres en fleurs
 w: 81

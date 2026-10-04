@@ -13,8 +13,6 @@ year_end: null
 image: '/src/media/works/433-le-peintre-amoureux-detail.webp'
 old_image: '/src/media/works/433-le-peintre-amoureux.webp'
 uuid: 64b5fc8a-8831-4925-b8b7-50f310b46c99
-collections:
-  - le-peintre-et-son-model
 tags:
   - painting
   - figure

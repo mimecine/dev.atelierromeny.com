@@ -3,9 +3,6 @@ id: 331
 title: Paysage provencal - Sablet
 image: '/src/media/works/331-paysage-provencal-sablet-detail.webp'
 old_image: '/src/media/works/331-paysage-provencal-sablet.webp'
-collections:
-  - paysages
-  - selected-july-2025
 categories: Paysages
 w: 40
 h: 33

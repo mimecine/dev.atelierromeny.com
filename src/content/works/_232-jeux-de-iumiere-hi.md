@@ -12,7 +12,5 @@ year_start: 1994
 year_end: null
 image: '/src/media/works/232-jeux-de-iumiere-hi.jpg'
 uuid: 6bbfd116-4a5b-427e-af03-b19cf2f08a13
-collections:
-  - abstrait
 ---
 

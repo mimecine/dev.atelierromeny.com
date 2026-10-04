@@ -3,8 +3,6 @@ id: 412
 title: Nature morte verte
 image: '/src/media/works/412-nature-morte-verte-detail.webp'
 old_image: '/src/media/works/412-nature-morte-verte.webp'
-collections:
-  - natures-mortes
 categories: Natures mortes
 w: 120
 h: 100

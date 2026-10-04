@@ -3,8 +3,6 @@ id: 363
 title: Autour de la souche
 image: '/src/media/works/363-autour-de-la-souche-v2.webp'
 collections:
-  - abstrait
-  - selected-july-2025
   - selected-paintings
 categories: Abstrait
 w: 73

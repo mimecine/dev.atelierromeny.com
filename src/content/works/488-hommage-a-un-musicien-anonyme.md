@@ -3,8 +3,6 @@ id: 488
 title: Hommage a un musicien anonyme
 image: '/src/media/works/488-hommage-a-un-musicien-anonyme-v2.webp'
 collections:
-  - natures-mortes
-  - selected-july-2025
   - selected-paintings
 categories: Natures mortes
 w: 100

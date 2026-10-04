@@ -2,9 +2,6 @@
 id: 71
 title: JS BACH 3
 image: '/src/media/works/71-js-bach-3.webp'
-collections:
-  - musique
-  - selected-july-2025
 categories: Musique
 w: 20
 h: 20

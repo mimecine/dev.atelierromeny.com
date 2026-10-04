@@ -2,9 +2,6 @@
 id: null
 title: Nature Morte au violin II
 image: '/src/media/works/nature-morte-au-violin-ii.webp'
-collections:
-  - natures-mortes
-  - selected-july-2025
 categories: Nature Morte
 w: 81
 h: 60

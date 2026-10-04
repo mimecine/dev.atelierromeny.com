@@ -3,7 +3,6 @@ id: 177
 title: Nid d'oiseau dans le feuillage
 image: '/src/media/works/177-nid-doiseau-dans-le-feuillage.webp'
 collections:
-  - animaux
   - nfs
 categories: Animaux
 w: 32

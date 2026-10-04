@@ -2,9 +2,6 @@
 id: 496
 title: Paysage hivernal au soleil péle
 image: '/src/media/works/496-paysage-hivernal-au-soleil-pele.webp'
-collections:
-  - accident-dans-la-montagne
-  - selected-july-2025
 categories: Accident dans la montagne
 w: 140
 h: 120

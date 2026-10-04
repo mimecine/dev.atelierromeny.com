@@ -2,7 +2,7 @@
 title: null
 categories: Works on Paper
 collections:
-  - selected-prints
+  - works-on-paper
 uuid: c1093d19-f27e-4186-8feb-8cced463836d
 image: '/src/media/works/print-049.webp'
 tags:

@@ -3,8 +3,6 @@ id: 684
 title: Nature morte au violon l
 image: '/src/media/works/684-nature-morte-au-violon-l-v2.webp'
 collections:
-  - natures-mortes
-  - selected-july-2025
   - selected-paintings
 categories: Natures mortes
 w: 60

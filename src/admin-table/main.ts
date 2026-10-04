@@ -26,7 +26,7 @@ import {
   type FieldConfig,
 } from "./model";
 import { prepareUpload, slugifyBase } from "./images";
-import { FACETS, FIELD_OPTIONS, PRICING_FILE, computedColumns, pricing } from "./settings";
+import { COLUMN_DEFAULTS, FACETS, FIELD_OPTIONS, PRICING_FILE, computedColumns, pricing } from "./settings";
 
 // ---------------------------------------------------------------- state
 
@@ -911,14 +911,15 @@ const DEFAULT_WIDTH: Record<string, number> = {
 };
 const widthOf = (col: Column) => state.widths[col.key] ?? Math.max(DEFAULT_WIDTH[col.kind] ?? 160, col.label.length * 8 + 28);
 
-const layoutKey = () => `atelier-table.layout.${state.collection?.name}`;
+// ".v2": layouts saved before COLUMN_DEFAULTS existed start over once
+const layoutKey = () => `atelier-table.layout.v2.${state.collection?.name}`;
 function loadLayout() {
   try {
     const saved = JSON.parse(localStorage.getItem(layoutKey()) || "null");
-    state.order = Array.isArray(saved?.order) ? saved.order : [];
+    state.order = Array.isArray(saved?.order) ? saved.order : [...(COLUMN_DEFAULTS[state.collection!.name]?.order ?? [])];
     state.widths = saved?.widths && typeof saved.widths === "object" ? saved.widths : {};
   } catch {
-    state.order = [];
+    state.order = [...(COLUMN_DEFAULTS[state.collection!.name]?.order ?? [])];
     state.widths = {};
   }
 }
@@ -1209,14 +1210,17 @@ function renderTable() {
 
 // ---------------------------------------------------------------- columns menu
 
-const hiddenKey = () => `atelier-table.hidden.${state.collection?.name}`;
+const hiddenKey = () => `atelier-table.hidden.v2.${state.collection?.name}`;
 
 function loadHidden() {
   try {
     const saved = JSON.parse(localStorage.getItem(hiddenKey()) || "null");
     if (Array.isArray(saved)) return new Set<string>(saved);
   } catch {}
-  return new Set(state.columns.filter((c) => c.kind === "unsupported").map((c) => c.key));
+  return new Set([
+    ...state.columns.filter((c) => c.kind === "unsupported").map((c) => c.key),
+    ...(COLUMN_DEFAULTS[state.collection!.name]?.hidden ?? []),
+  ]);
 }
 
 function columnsMenu(anchor: HTMLElement) {

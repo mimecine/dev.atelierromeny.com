@@ -3,7 +3,6 @@ id: 211
 title: Pensées
 image: '/src/media/works/211-pensees.webp'
 collections:
-  - fleurs
   - nfs
 categories: Fleurs
 w: 60

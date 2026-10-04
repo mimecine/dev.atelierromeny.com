@@ -4,9 +4,8 @@ title: Lngegerd et Marco
 image: '/src/media/works/687-lngegerd-et-marco-detail.webp'
 old_image: '/src/media/works/687-lngegerd-et-marco.webp'
 collections:
-  - figures-humaines
   - nfs
-  - to-be-disposed-of
+  - to-dispose
 categories: Figures humaines
 w: 48
 h: 64

@@ -3,8 +3,6 @@ id: 658
 title: La terre
 image: '/src/media/works/658-la-terre-v2.webp'
 collections:
-  - la-creation
-  - selected-july-2025
   - selected-paintings
 categories: La création
 w: 180

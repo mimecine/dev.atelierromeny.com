@@ -2,9 +2,6 @@
 id: 646
 title: Composition lunaire
 image: '/src/media/works/646-composition-lunaire.webp'
-collections:
-  - abstrait
-  - selected-july-2025
 categories: Abstrait
 w: 160
 h: 125

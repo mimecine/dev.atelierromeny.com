@@ -2,9 +2,6 @@
 id: null
 title: Quartet des saxophones / Loïc Robin
 image: '/src/media/works/quartet-des-saxophones-loic-robin.webp'
-collections:
-  - musique
-  - selected-july-2025
 categories: Musique
 w: 50
 h: 85

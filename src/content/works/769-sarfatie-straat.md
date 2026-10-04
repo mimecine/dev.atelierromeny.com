@@ -14,8 +14,6 @@ year_end: null
 image: '/src/media/works/769-sarfatie-straat-detail.webp'
 old_image: '/src/media/works/769-sarfatie-straat.webp'
 uuid: 07d507b9-1472-4c07-976f-aaaa82e0a1d5
-collections:
-  - paysages
 tags:
   - painting
   - cityscape

@@ -3,8 +3,6 @@ id: 579
 title: Table généreuse
 image: '/src/media/works/579-table-genereuse-v2.webp'
 collections:
-  - natures-mortes
-  - selected-july-2025
   - selected-paintings
 categories: Natures mortes
 w: 120

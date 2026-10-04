@@ -2,9 +2,6 @@
 id: null
 title: On the stove
 image: '/src/media/works/on-the-stove.webp'
-collections:
-  - natures-mortes
-  - selected-july-2025
 categories: Nature Morte
 w: 73
 h: 60

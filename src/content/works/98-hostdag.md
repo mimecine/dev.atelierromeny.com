@@ -3,8 +3,6 @@ id: 98
 title: Höstdag
 image: '/src/media/works/98-hostdag-v2.webp'
 collections:
-  - abstrait
-  - selected-july-2025
   - selected-paintings
 categories: Abstrait
 w: 54

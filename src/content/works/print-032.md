@@ -2,7 +2,7 @@
 title: "Silverskog"
 categories: Works on Paper
 collections:
-  - selected-prints
+  - works-on-paper
 uuid: 50e25dee-071c-466b-8fb2-44eb42fc5fe6
 image: '/src/media/works/print-032.webp'
 tags:
@@ -18,5 +18,6 @@ h: 31
 sheet_w: 67
 sheet_h: 57
 detail: '/src/media/works/print-032-detail.webp'
+edition: "20/55"
 ---
 

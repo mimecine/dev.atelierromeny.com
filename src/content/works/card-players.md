@@ -3,7 +3,6 @@ id: null
 title: Card Players
 image: '/src/media/works/card-players.webp'
 collections:
-  - figures-humaines
   - nfs
 categories: Figures
 w: 42

@@ -4,7 +4,6 @@ title: Mon pére sur son lit de mort
 image: '/src/media/works/714-mon-pere-sur-son-lit-de-mort-detail.webp'
 old_image: '/src/media/works/714-mon-pere-sur-son-lit-de-mort.webp'
 collections:
-  - figures-humaines
   - nfs
 categories: Figures humaines
 w: 33

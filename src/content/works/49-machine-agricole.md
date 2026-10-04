@@ -3,8 +3,6 @@ id: 49
 title: Machine agricole
 image: '/src/media/works/49-machine-agricole-detail.webp'
 old_image: '/src/media/works/49-machine-agricole.webp'
-collections:
-  - paysages
 categories: Paysages
 w: 85
 h: 82

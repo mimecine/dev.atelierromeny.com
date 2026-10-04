@@ -3,9 +3,6 @@ id: 546
 title: Le cardinai
 image: '/src/media/works/546-le-cardinai-detail.webp'
 old_image: '/src/media/works/546-le-cardinai.webp'
-collections:
-  - natures-mortes
-  - selected-july-2025
 categories: Natures mortes
 w: 89
 h: 115

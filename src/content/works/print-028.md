@@ -2,7 +2,7 @@
 title: "Nature morte"
 categories: Works on Paper
 collections:
-  - selected-prints
+  - works-on-paper
 uuid: 5f36de0d-2d31-4f0f-be21-ebf6e8d4dc00
 image: '/src/media/works/print-028.webp'
 tags:
@@ -21,5 +21,6 @@ h: 36.5
 sheet_w: 61.5
 sheet_h: 49.5
 detail: '/src/media/works/print-028-detail.webp'
+edition: "37/45"
 ---
 

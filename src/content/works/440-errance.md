@@ -14,8 +14,6 @@ year_end: null
 image: '/src/media/works/440-errance-detail.webp'
 old_image: '/src/media/works/440-errance.webp'
 uuid: 4f717f7c-c270-49cb-837f-bc0661a66f1f
-collections:
-  - metro
 tags:
   - painting
   - collage

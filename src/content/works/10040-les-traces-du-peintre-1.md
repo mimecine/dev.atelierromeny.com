@@ -14,8 +14,6 @@ year_end: null
 image: '/src/media/works/10040-les-traces-du-peintre-1-detail.webp'
 old_image: '/src/media/works/10040-les-traces-du-peintre-1.webp'
 uuid: 77db0db6-ddae-466d-882f-0ee416e2ffef
-collections:
-  - abstrait
 tags:
   - painting
   - abstract

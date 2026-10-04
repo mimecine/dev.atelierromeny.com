@@ -3,8 +3,6 @@ id: 424
 title: Négroide
 image: '/src/media/works/424-negroide-v2.webp'
 collections:
-  - natures-mortes
-  - selected-july-2025
   - selected-paintings
 categories: natures mortes
 w: 60

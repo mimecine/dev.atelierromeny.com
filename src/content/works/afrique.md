@@ -13,8 +13,6 @@ year_end: null
 image: '/src/media/works/afrique-detail.webp'
 old_image: '/src/media/works/afrique.webp'
 uuid: aef1eaea-b544-4d04-b9f0-91a2640c24db
-collections:
-  - la-vie-de-femme
 tags:
   - painting
   - figure

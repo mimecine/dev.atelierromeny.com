@@ -3,8 +3,6 @@ id: 59
 title: La Seine a Paris
 image: '/src/media/works/59-la-seine-a-paris-v2.webp'
 collections:
-  - paysages
-  - selected-july-2025
   - selected-paintings
 categories: Paysages
 w: 30

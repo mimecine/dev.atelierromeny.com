@@ -3,7 +3,6 @@ id: 53
 title: Jour d'Automne
 image: '/src/media/works/53-jour-dautomne.webp'
 collections:
-  - abstrait
   - nfs
 categories: Abstrait
 w: 135

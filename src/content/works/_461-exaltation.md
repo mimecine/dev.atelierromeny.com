@@ -13,7 +13,5 @@ year_start: 1973
 year_end: null
 image: '/src/media/works/461-exaltation.jpg'
 uuid: 28f61fc7-f74e-41d3-923b-c39b5404ad78
-collections:
-  - abstrait
 ---
 

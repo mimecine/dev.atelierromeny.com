@@ -2,9 +2,6 @@
 id: 664
 title: L'eau
 image: '/src/media/works/664-leau.webp'
-collections:
-  - abstrait
-  - selected-july-2025
 categories: Abstrait
 w: 160
 h: 125

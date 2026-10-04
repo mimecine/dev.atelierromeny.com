@@ -3,8 +3,6 @@ id: 476
 title: Poéle aux fruits III
 image: '/src/media/works/476-poele-aux-fruits-iii-v2.webp'
 collections:
-  - natures-mortes
-  - selected-july-2025
   - selected-paintings
 categories: Natures mortes
 w: 81

@@ -2,9 +2,6 @@
 id: 665
 title: Le Ciel
 image: '/src/media/works/665-le-ciel.webp'
-collections:
-  - abstrait
-  - selected-july-2025
 categories: Abstrait
 w: 160
 h: 125

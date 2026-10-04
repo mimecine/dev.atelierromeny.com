@@ -2,7 +2,7 @@
 title: "Le bouquet bleu"
 categories: Works on Paper
 collections:
-  - selected-prints
+  - works-on-paper
 uuid: 9fa611e3-99e5-4b35-b73f-5e244e96c342
 image: '/src/media/works/print-059.webp'
 tags:
@@ -17,5 +17,6 @@ note: "Inscription (read from photo): III/XV, \"Le bouquet bleu\" -- no year"
 sheet_w: 49
 sheet_h: 64.5
 detail: '/src/media/works/print-059-detail.webp'
+edition: "III/XV"
 ---
 

@@ -3,9 +3,6 @@ id: 275
 title: Nid d'oiseau I
 image: '/src/media/works/275-nid-doiseau-i-detail.webp'
 old_image: '/src/media/works/275-nid-doiseau-i.webp'
-collections:
-  - animaux
-  - selected-july-2025
 categories: Animaux
 w: 33
 h: 46

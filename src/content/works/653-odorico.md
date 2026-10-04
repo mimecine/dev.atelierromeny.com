@@ -4,7 +4,6 @@ title: Odorico
 image: '/src/media/works/653-odorico-detail.webp'
 old_image: '/src/media/works/653-odorico.webp'
 collections:
-  - figures-humaines
   - nfs
 categories: Figures humaines
 w: 46

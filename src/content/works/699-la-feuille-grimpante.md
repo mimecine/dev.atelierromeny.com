@@ -4,7 +4,6 @@ title: La feuille grimpante
 image: '/src/media/works/699-la-feuille-grimpante-detail.webp'
 old_image: '/src/media/works/699-la-feuille-grimpante.webp'
 collections:
-  - fleurs
   - nfs
 categories: Fleurs
 w: 44

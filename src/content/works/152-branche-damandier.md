@@ -5,8 +5,6 @@ image: '/src/media/works/152-branche-damandier-detail.webp'
 old_image: '/src/media/works/152-branche-damandier.webp'
 collections:
   - marco
-  - arbres-en-fleurs
-  - selected-july-2025
 categories: Arbres en fleurs
 w: 100
 h: 54

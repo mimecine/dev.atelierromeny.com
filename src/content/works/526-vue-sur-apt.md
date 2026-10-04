@@ -3,9 +3,6 @@ id: 526
 title: Vue sur Apt
 image: '/src/media/works/526-vue-sur-apt-detail.webp'
 old_image: '/src/media/works/526-vue-sur-apt.webp'
-collections:
-  - paysages
-  - selected-july-2025
 categories: Paysages
 w: 100
 h: 73

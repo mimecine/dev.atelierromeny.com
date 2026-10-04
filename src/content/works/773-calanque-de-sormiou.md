@@ -3,8 +3,6 @@ id: 773
 title: Calanque de Sormiou
 image: '/src/media/works/773-calanque-de-sormiou-v2.webp'
 collections:
-  - paysages
-  - selected-july-2025
   - selected-paintings
 categories: Paysages
 w: 100

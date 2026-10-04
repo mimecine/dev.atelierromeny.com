@@ -2,7 +2,7 @@
 title: "Mina iris"
 categories: Works on Paper
 collections:
-  - selected-prints
+  - works-on-paper
 uuid: b0de8a69-523b-4a5d-a24f-e48d911ef178
 image: '/src/media/works/print-061.webp'
 tags:
@@ -21,5 +21,6 @@ h: 36.5
 sheet_w: 52
 sheet_h: 38.5
 detail: '/src/media/works/print-061-detail.webp'
+edition: "7/25"
 ---
 

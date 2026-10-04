@@ -13,8 +13,6 @@ year_end: null
 image: '/src/media/works/694-paysanne-e-lenfant-detail.webp'
 old_image: '/src/media/works/694-paysanne-e-lenfant.webp'
 uuid: fb0b026d-63ff-40af-bf2d-af082844ef68
-collections:
-  - figures-humaines
 tags:
   - painting
   - figure

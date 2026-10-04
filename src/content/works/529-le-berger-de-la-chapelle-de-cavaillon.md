@@ -3,8 +3,6 @@ id: 529
 title: Le berger de la chapelle de Cavaillon
 image: '/src/media/works/529-le-berger-de-la-chapelle-de-cavaillon-detail.webp'
 old_image: '/src/media/works/529-le-berger-de-la-chapelle-de-cavaillon.webp'
-collections:
-  - figures-humaines
 categories: Figures humaines
 w: 50
 h: 63

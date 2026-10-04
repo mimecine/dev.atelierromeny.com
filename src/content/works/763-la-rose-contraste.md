@@ -4,7 +4,6 @@ title: La rose, contraste
 image: '/src/media/works/763-la-rose-contraste-detail.webp'
 old_image: '/src/media/works/763-la-rose-contraste.webp'
 collections:
-  - fleurs
   - nfs
 categories: Fleurs
 w: 40
