@@ -19,5 +19,6 @@ uuid: 0dee0635-91b2-4f5f-b9c3-19031cccfd06
 tags:
   - painting
   - abstract
+detail: '/src/media/works/454-dans-la-jungle-africaine-detail.webp'
 ---
 

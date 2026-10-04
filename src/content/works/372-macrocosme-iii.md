@@ -19,5 +19,6 @@ tags:
   - painting
   - abstract
   - cosmos
+detail: '/src/media/works/372-macrocosme-iii-detail.webp'
 ---
 

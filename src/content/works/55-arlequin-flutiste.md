@@ -23,5 +23,6 @@ tags:
   - flute
   - harlequin
   - metro
+detail: '/src/media/works/55-arlequin-flutiste-detail.webp'
 ---
 

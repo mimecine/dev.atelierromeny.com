@@ -22,5 +22,6 @@ tags:
   - beach
   - sea
   - figure
+detail: '/src/media/works/538-la-mer-au-rayol-2-detail.webp'
 ---
 

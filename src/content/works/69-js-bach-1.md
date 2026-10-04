@@ -23,5 +23,6 @@ tags:
   - music
   - Bach
   - lettering
+detail: '/src/media/works/69-js-bach-1-detail.webp'
 ---
 

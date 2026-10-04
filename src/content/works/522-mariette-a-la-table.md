@@ -20,5 +20,6 @@ tags:
   - figure
   - nude
   - interior
+detail: '/src/media/works/522-mariette-a-la-table-detail.webp'
 ---
 

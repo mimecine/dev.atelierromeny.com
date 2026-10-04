@@ -19,5 +19,6 @@ tags:
   - self-portrait
   - portrait
   - artist at work
+detail: '/src/media/works/134-autoportrait-a-lisou-detail.webp'
 ---
 

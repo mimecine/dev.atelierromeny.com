@@ -18,5 +18,6 @@ tags:
   - painting
   - abstract
   - stained glass
+detail: '/src/media/works/quasi-vitrail-1-detail.webp'
 ---
 

@@ -21,5 +21,6 @@ tags:
   - portrait
   - figure
   - worker
+detail: '/src/media/works/607-arbetare-iouvrier-detail.webp'
 ---
 

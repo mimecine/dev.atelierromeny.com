@@ -20,5 +20,6 @@ uuid: 6c175668-f6de-4381-958c-353d83809223
 tags:
   - painting
   - abstract
+detail: '/src/media/works/463-tourmente-detail.webp'
 ---
 

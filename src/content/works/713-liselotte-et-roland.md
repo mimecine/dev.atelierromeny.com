@@ -21,5 +21,6 @@ tags:
   - couple
   - music
   - flowers
+detail: '/src/media/works/713-liselotte-et-roland-detail.webp'
 ---
 

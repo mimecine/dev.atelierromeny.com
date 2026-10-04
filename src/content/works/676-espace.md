@@ -19,5 +19,6 @@ uuid: a98e7709-b6fd-4cfb-8b4c-4fbf6dcfc46b
 tags:
   - painting
   - abstract
+detail: '/src/media/works/676-espace-detail.webp'
 ---
 

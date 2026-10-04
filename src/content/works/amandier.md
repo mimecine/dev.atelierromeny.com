@@ -20,5 +20,6 @@ tags:
   - tree
   - blossom
   - almond
+detail: '/src/media/works/amandier-detail.webp'
 ---
 

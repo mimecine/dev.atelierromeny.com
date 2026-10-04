@@ -25,5 +25,6 @@ tags:
   - landscape
   - snow
   - winter
+detail: '/src/media/works/483-snolandskap-detail.webp'
 ---
 

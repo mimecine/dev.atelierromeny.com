@@ -17,5 +17,6 @@ year_start: 1971
 note: "Inscription (read from photo): 6/10, \"Död skata\", 1971"
 w: 49
 h: 34
+detail: '/src/media/works/print-043-detail.webp'
 ---
 

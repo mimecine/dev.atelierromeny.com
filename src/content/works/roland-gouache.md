@@ -18,5 +18,6 @@ tags:
   - gouache
   - portrait
   - figure
+detail: '/src/media/works/roland-gouache-detail.webp'
 ---
 

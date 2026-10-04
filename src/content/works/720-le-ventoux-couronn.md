@@ -23,5 +23,6 @@ tags:
   - tree
   - clouds
   - Mont Ventoux
+detail: '/src/media/works/720-le-ventoux-couronn-detail.webp'
 ---
 

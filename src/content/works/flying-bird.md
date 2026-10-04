@@ -19,5 +19,6 @@ tags:
   - animal
   - bird
   - landscape
+detail: '/src/media/works/flying-bird-detail.webp'
 ---
 

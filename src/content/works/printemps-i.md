@@ -20,5 +20,6 @@ tags:
   - flowers
   - meadow
   - spring
+detail: '/src/media/works/printemps-i-detail.webp'
 ---
 

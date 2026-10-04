@@ -23,5 +23,6 @@ tags:
   - chair
   - flowers
   - fruit
+detail: '/src/media/works/la-chaise-en-fleurs-detail.webp'
 ---
 

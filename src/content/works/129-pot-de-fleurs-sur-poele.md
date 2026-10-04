@@ -19,5 +19,6 @@ tags:
   - painting
   - still life
   - flowers
+detail: '/src/media/works/129-pot-de-fleurs-sur-poele-detail.webp'
 ---
 

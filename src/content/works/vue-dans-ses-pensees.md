@@ -18,5 +18,6 @@ tags:
   - painting
   - figure
   - nude
+detail: '/src/media/works/vue-dans-ses-pensees-detail.webp'
 ---
 

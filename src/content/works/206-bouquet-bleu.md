@@ -22,5 +22,6 @@ tags:
   - painting
   - still life
   - flowers
+detail: '/src/media/works/206-bouquet-bleu-detail.webp'
 ---
 

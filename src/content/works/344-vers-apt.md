@@ -21,5 +21,6 @@ tags:
   - street
   - village
   - car
+detail: '/src/media/works/344-vers-apt-detail.webp'
 ---
 

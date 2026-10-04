@@ -20,5 +20,6 @@ tags:
   - still life
   - fish
   - chair
+detail: '/src/media/works/119-chaise-poisson-et-rhubarbe-detail.webp'
 ---
 

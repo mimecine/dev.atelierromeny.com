@@ -19,5 +19,6 @@ tags:
   - painting
   - figure
   - interior
+detail: '/src/media/works/218-solitude-dans-iobscurit-detail.webp'
 ---
 

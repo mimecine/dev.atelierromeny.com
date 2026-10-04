@@ -28,5 +28,6 @@ tags:
   - coast
   - Marseille
 thumbnail: 2
+detail: '/src/media/works/773-calanque-de-sormiou-detail.webp'
 ---
 

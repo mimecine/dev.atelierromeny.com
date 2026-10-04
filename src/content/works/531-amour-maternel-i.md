@@ -19,5 +19,6 @@ tags:
   - painting
   - animal
   - dog
+detail: '/src/media/works/531-amour-maternel-i-detail.webp'
 ---
 

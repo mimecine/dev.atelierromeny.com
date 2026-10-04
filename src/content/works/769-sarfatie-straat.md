@@ -21,5 +21,6 @@ tags:
   - street
   - tree
   - Amsterdam
+detail: '/src/media/works/769-sarfatie-straat-detail.webp'
 ---
 

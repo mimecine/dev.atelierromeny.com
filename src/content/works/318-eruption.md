@@ -19,5 +19,6 @@ tags:
   - painting
   - mixed media
   - abstract
+detail: '/src/media/works/318-eruption-detail.webp'
 ---
 

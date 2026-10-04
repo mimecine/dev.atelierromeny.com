@@ -18,5 +18,6 @@ uuid: 53ce9ab2-c5be-4b0b-bb53-0fbf85647688
 tags:
   - painting
   - abstract
+detail: '/src/media/works/9-amandier-en-fleurs-2-detail.webp'
 ---
 

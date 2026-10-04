@@ -24,5 +24,6 @@ tags:
   - painting
   - flowers
   - sunflower
+detail: '/src/media/works/156-tournesols-detail.webp'
 ---
 

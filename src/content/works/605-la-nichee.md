@@ -22,5 +22,6 @@ tags:
   - nest
   - tree
   - animal
+detail: '/src/media/works/605-la-nichee-detail.webp'
 ---
 

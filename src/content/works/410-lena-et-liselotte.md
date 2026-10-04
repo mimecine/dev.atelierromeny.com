@@ -20,5 +20,6 @@ tags:
   - portrait
   - figure
   - child
+detail: '/src/media/works/410-lena-et-liselotte-detail.webp'
 ---
 

@@ -19,5 +19,6 @@ tags:
   - bird
   - hand
   - animal
+detail: '/src/media/works/540-loiseau-attrap-detail.webp'
 ---
 

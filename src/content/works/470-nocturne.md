@@ -19,5 +19,6 @@ tags:
   - painting
   - abstract
   - night
+detail: '/src/media/works/470-nocturne-detail.webp'
 ---
 

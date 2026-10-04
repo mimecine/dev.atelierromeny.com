@@ -19,5 +19,6 @@ tags:
   - painting
   - portrait
   - figure
+detail: '/src/media/works/435-une-kanak-detail.webp'
 ---
 

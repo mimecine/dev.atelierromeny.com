@@ -19,5 +19,6 @@ tags:
   - painting
   - abstract
   - night
+detail: '/src/media/works/749-islands-in-the-night-detail.webp'
 ---
 

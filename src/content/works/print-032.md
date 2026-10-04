@@ -17,5 +17,6 @@ w: 39
 h: 31
 sheet_w: 67
 sheet_h: 57
+detail: '/src/media/works/print-032-detail.webp'
 ---
 

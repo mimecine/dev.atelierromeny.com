@@ -20,5 +20,6 @@ tags:
   - painting
   - still life
   - bottle
+detail: '/src/media/works/423-stillife-of-bottles-detail.webp'
 ---
 

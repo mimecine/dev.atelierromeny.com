@@ -25,5 +25,6 @@ tags:
   - still life
   - music
   - fruit
+detail: '/src/media/works/570-nature-morte-a-la-cythare-detail.webp'
 ---
 

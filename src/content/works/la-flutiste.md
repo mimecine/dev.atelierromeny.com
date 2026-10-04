@@ -20,5 +20,6 @@ tags:
   - nude
   - music
   - flute
+detail: '/src/media/works/la-flutiste-detail.webp'
 ---
 

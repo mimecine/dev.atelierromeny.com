@@ -20,5 +20,6 @@ tags:
   - couple
   - moon
   - night
+detail: '/src/media/works/223-jeune-couple-sous-la-lune-detail.webp'
 ---
 

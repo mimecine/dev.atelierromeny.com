@@ -21,5 +21,6 @@ tags:
   - nude
   - interior
   - studio
+detail: '/src/media/works/34-2-modeles-dans-mon-atelier-detail.webp'
 ---
 

@@ -24,5 +24,6 @@ images:
 tags:
   - painting
   - abstract
+detail: '/src/media/works/366-cobra-detail.webp'
 ---
 

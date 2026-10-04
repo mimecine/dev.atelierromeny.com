@@ -29,5 +29,6 @@ tags:
   - abstract
   - plant
 thumbnail: 2
+detail: '/src/media/works/610-plante-abstraite-detail.webp'
 ---
 

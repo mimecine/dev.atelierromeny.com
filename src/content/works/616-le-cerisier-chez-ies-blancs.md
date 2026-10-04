@@ -18,5 +18,6 @@ tags:
   - painting
   - tree
   - cherry
+detail: '/src/media/works/616-le-cerisier-chez-ies-blancs-detail.webp'
 ---
 

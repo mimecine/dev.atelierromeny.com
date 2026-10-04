@@ -22,5 +22,6 @@ tags:
   - painting
   - still life
   - flowers
+detail: '/src/media/works/609-bouquet-de-fleurs-vert-clair-detail.webp'
 ---
 

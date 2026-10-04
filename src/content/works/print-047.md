@@ -17,5 +17,6 @@ year_start: 1981
 note: "Inscription (read from photo): 1981"
 sheet_w: 32.5
 sheet_h: 25
+detail: '/src/media/works/print-047-detail.webp'
 ---
 

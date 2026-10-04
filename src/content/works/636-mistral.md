@@ -21,5 +21,6 @@ tags:
   - painting
   - abstract
   - landscape
+detail: '/src/media/works/636-mistral-detail.webp'
 ---
 

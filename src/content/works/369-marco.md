@@ -19,5 +19,6 @@ tags:
   - painting
   - portrait
   - figure
+detail: '/src/media/works/369-marco-detail.webp'
 ---
 

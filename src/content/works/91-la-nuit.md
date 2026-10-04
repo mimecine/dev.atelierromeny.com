@@ -19,5 +19,6 @@ tags:
   - painting
   - abstract
   - night
+detail: '/src/media/works/91-la-nuit-detail.webp'
 ---
 

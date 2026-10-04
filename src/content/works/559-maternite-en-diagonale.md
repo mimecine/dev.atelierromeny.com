@@ -18,5 +18,6 @@ tags:
   - painting
   - figure
   - mother and child
+detail: '/src/media/works/559-maternite-en-diagonale-detail.webp'
 ---
 

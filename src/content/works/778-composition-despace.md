@@ -19,5 +19,6 @@ uuid: e6718ccf-f139-4e28-aed1-924110debe80
 tags:
   - painting
   - abstract
+detail: '/src/media/works/778-composition-despace-detail.webp'
 ---
 

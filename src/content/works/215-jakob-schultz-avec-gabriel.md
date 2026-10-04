@@ -21,5 +21,6 @@ tags:
   - portrait
   - mother and child
   - figure
+detail: '/src/media/works/215-jakob-schultz-avec-gabriel-detail.webp'
 ---
 

@@ -18,5 +18,6 @@ year_start: 1977
 note: "Inscription (read from photo): 4/15, \"Savojkål\", 1977"
 sheet_w: 61.5
 sheet_h: 50.5
+detail: '/src/media/works/print-039-detail.webp'
 ---
 

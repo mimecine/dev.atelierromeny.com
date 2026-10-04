@@ -22,5 +22,6 @@ tags:
   - cat
   - animal
   - letter
+detail: '/src/media/works/243-lettre-a-ma-bien-aimee-ix-detail.webp'
 ---
 

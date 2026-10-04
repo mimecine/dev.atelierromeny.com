@@ -22,5 +22,6 @@ tags:
   - painting
   - landscape
   - field
+detail: '/src/media/works/150-vent-dans-les-champs-de-ble-detail.webp'
 ---
 

@@ -20,5 +20,6 @@ tags:
   - figure
   - couple
   - nude
+detail: '/src/media/works/417-couple-detail.webp'
 ---
 

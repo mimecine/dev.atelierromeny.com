@@ -20,5 +20,6 @@ tags:
   - music
   - mandolin
   - fruit
+detail: '/src/media/works/412-nature-morte-verte-detail.webp'
 ---
 

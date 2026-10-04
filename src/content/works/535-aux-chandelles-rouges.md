@@ -20,5 +20,6 @@ tags:
   - still life
   - fruit
   - candle
+detail: '/src/media/works/535-aux-chandelles-rouges-detail.webp'
 ---
 

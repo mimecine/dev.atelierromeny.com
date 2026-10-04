@@ -20,5 +20,6 @@ uuid: f4ab6329-fcbc-4a3e-badb-c73b74976de3
 tags:
   - painting
   - abstract
+detail: '/src/media/works/448-terre-de-lave-detail.webp'
 ---
 

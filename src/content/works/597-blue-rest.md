@@ -18,5 +18,6 @@ uuid: bdd03d36-7665-4972-801d-4e184b50a665
 tags:
   - painting
   - abstract
+detail: '/src/media/works/597-blue-rest-detail.webp'
 ---
 

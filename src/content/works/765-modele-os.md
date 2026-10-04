@@ -18,5 +18,6 @@ tags:
   - painting
   - figure
   - nude
+detail: '/src/media/works/765-modele-os-detail.webp'
 ---
 

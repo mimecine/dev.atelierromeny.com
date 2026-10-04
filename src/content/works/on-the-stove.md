@@ -21,5 +21,6 @@ tags:
   - fruit
   - jug
   - stove
+detail: '/src/media/works/on-the-stove-detail.webp'
 ---
 

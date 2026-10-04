@@ -18,5 +18,6 @@ year_start: 1975
 note: "Inscription (read from photo): \"Villars\"?, 1975 -- place name written in the lower left, probably not a title"
 sheet_w: 58.5
 sheet_h: 40.5
+detail: '/src/media/works/print-046-detail.webp'
 ---
 

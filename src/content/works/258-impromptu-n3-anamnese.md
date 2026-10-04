@@ -19,5 +19,6 @@ tags:
   - mixed media
   - collage
   - abstract
+detail: '/src/media/works/258-impromptu-n3-anamnese-detail.webp'
 ---
 

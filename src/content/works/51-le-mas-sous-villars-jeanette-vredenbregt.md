@@ -21,5 +21,6 @@ tags:
   - tree
   - blossom
   - Villars
+detail: '/src/media/works/51-le-mas-sous-villars-jeanette-vredenbregt-detail.webp'
 ---
 

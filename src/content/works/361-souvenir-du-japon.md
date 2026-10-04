@@ -17,5 +17,6 @@ collections:
 tags:
   - painting
   - abstract
+detail: '/src/media/works/361-souvenir-du-japon-detail.webp'
 ---
 

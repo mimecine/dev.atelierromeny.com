@@ -22,5 +22,6 @@ tags:
   - figure
   - music
   - metro
+detail: '/src/media/works/57-3-musiciens-detail.webp'
 ---
 

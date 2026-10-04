@@ -19,5 +19,6 @@ tags:
   - painting
   - landscape
   - sky
+detail: '/src/media/works/crepuscule-4-detail.webp'
 ---
 

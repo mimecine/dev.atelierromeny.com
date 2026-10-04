@@ -19,5 +19,6 @@ tags:
   - collage
   - abstract
   - map
+detail: '/src/media/works/wo-hin-detail.webp'
 ---
 

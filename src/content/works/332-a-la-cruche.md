@@ -28,5 +28,6 @@ tags:
   - still life
   - jug
   - fruit
+detail: '/src/media/works/332-a-la-cruche-detail.webp'
 ---
 

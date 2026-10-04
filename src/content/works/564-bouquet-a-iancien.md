@@ -20,5 +20,6 @@ tags:
   - painting
   - still life
   - flowers
+detail: '/src/media/works/564-bouquet-a-iancien-detail.webp'
 ---
 

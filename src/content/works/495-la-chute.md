@@ -18,5 +18,6 @@ collections:
 tags:
   - painting
   - abstract
+detail: '/src/media/works/495-la-chute-detail.webp'
 ---
 

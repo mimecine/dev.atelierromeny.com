@@ -21,5 +21,6 @@ tags:
   - fruit
   - vegetables
   - stove
+detail: '/src/media/works/poele-lacanche-dor-detail.webp'
 ---
 

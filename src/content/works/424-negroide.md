@@ -21,5 +21,6 @@ old_image: '/src/media/works/424-negroide.webp'
 tags:
   - painting
   - still life
+detail: '/src/media/works/424-negroide-detail.webp'
 ---
 

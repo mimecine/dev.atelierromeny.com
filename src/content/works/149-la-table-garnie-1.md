@@ -28,5 +28,6 @@ tags:
   - flowers
   - fruit
 thumbnail: 2
+detail: '/src/media/works/149-la-table-garnie-1-detail.webp'
 ---
 

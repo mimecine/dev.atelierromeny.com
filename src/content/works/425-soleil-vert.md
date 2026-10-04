@@ -23,5 +23,6 @@ tags:
   - semi-abstract
   - sun
   - plant
+detail: '/src/media/works/425-soleil-vert-detail.webp'
 ---
 

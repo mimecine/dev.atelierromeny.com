@@ -22,5 +22,6 @@ tags:
   - dog
   - animal
   - metro
+detail: '/src/media/works/440-errance-detail.webp'
 ---
 

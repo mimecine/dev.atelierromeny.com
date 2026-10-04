@@ -19,5 +19,6 @@ tags:
   - music
   - violin
   - hand
+detail: '/src/media/works/le-vio-detail.webp'
 ---
 

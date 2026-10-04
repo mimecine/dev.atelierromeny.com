@@ -19,5 +19,6 @@ tags:
   - figure
   - café
   - group
+detail: '/src/media/works/320-au-cafe-2-detail.webp'
 ---
 

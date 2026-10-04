@@ -20,5 +20,6 @@ tags:
   - landscape
   - night
   - sky
+detail: '/src/media/works/crepuscule-5-detail.webp'
 ---
 

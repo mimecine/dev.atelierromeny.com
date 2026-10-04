@@ -21,5 +21,6 @@ tags:
   - self-portrait
   - portrait
   - ruins
+detail: '/src/media/works/400-autoportrait-devant-ies-ruines-detail.webp'
 ---
 

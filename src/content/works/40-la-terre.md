@@ -20,5 +20,6 @@ old_image: '/src/media/works/40-la-terre.webp'
 tags:
   - painting
   - abstract
+detail: '/src/media/works/40-la-terre-detail.webp'
 ---
 

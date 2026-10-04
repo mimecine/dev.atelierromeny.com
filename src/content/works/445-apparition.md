@@ -21,5 +21,6 @@ tags:
   - group
   - religious
   - café
+detail: '/src/media/works/445-apparition-detail.webp'
 ---
 

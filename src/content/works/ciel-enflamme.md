@@ -20,5 +20,6 @@ tags:
   - sunset
   - tree
   - sky
+detail: '/src/media/works/ciel-enflamme-detail.webp'
 ---
 

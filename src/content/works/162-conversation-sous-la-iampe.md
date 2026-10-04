@@ -21,5 +21,6 @@ tags:
   - figure
   - interior
   - conversation
+detail: '/src/media/works/162-conversation-sous-la-iampe-detail.webp'
 ---
 

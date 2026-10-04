@@ -19,5 +19,6 @@ tags:
   - painting
   - figure
   - sleeping
+detail: '/src/media/works/508-lombre-detail.webp'
 ---
 

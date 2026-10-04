@@ -22,5 +22,6 @@ tags:
   - figure
   - nude
   - map
+detail: '/src/media/works/reverie-detail.webp'
 ---
 

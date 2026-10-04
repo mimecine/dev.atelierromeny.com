@@ -18,5 +18,6 @@ collections:
 tags:
   - painting
   - abstract
+detail: '/src/media/works/411-les-traces-du-peintre-2-detail.webp'
 ---
 

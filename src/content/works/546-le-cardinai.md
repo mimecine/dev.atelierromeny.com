@@ -20,5 +20,6 @@ tags:
   - still life
   - music
   - mandolin
+detail: '/src/media/works/546-le-cardinai-detail.webp'
 ---
 

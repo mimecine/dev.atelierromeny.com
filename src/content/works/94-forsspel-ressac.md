@@ -21,5 +21,6 @@ old_image: '/src/media/works/94-forsspel-ressac.webp'
 tags:
   - painting
   - abstract
+detail: '/src/media/works/94-forsspel-ressac-detail.webp'
 ---
 

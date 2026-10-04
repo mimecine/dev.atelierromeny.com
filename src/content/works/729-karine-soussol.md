@@ -18,5 +18,6 @@ tags:
   - painting
   - portrait
   - figure
+detail: '/src/media/works/729-karine-soussol-detail.webp'
 ---
 

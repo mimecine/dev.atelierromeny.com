@@ -21,5 +21,6 @@ old_image: '/src/media/works/601-extase.webp'
 tags:
   - painting
   - abstract
+detail: '/src/media/works/601-extase-detail.webp'
 ---
 

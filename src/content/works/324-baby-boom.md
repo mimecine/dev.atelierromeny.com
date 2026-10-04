@@ -19,5 +19,6 @@ tags:
   - collage
   - figure
   - child
+detail: '/src/media/works/324-baby-boom-detail.webp'
 ---
 

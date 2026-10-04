@@ -20,5 +20,6 @@ uuid: 8a11629e-61d3-424c-8c05-e0b32620895a
 tags:
   - painting
   - abstract
+detail: '/src/media/works/598-la-branche-noire-detail.webp'
 ---
 

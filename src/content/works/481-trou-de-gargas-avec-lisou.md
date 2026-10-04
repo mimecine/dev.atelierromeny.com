@@ -19,5 +19,6 @@ tags:
   - painting
   - landscape
   - tree
+detail: '/src/media/works/481-trou-de-gargas-avec-lisou-detail.webp'
 ---
 

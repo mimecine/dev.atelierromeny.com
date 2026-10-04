@@ -19,5 +19,6 @@ uuid: fced13c0-be04-41a4-a871-01fa17a555ba
 tags:
   - painting
   - abstract
+detail: '/src/media/works/101-la-nuit-2-royeaumont-detail.webp'
 ---
 

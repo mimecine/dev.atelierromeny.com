@@ -23,5 +23,6 @@ tags:
   - landscape
   - storm
   - field
+detail: '/src/media/works/777-la-tempete-route-de-cucuron-detail.webp'
 ---
 

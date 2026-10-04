@@ -21,5 +21,6 @@ old_image: '/src/media/works/587-efter-regnet-apres-la-pluie.webp'
 tags:
   - painting
   - abstract
+detail: '/src/media/works/587-efter-regnet-apres-la-pluie-detail.webp'
 ---
 

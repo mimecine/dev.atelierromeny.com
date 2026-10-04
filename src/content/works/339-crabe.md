@@ -24,5 +24,6 @@ tags:
   - painting
   - animal
   - crab
+detail: '/src/media/works/339-crabe-detail.webp'
 ---
 

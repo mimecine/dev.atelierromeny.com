@@ -20,5 +20,6 @@ tags:
   - collage
   - child
   - sun
+detail: '/src/media/works/673-baby-boom-assis-detail.webp'
 ---
 

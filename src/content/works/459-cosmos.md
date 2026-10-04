@@ -22,5 +22,6 @@ tags:
   - painting
   - abstract
   - cosmos
+detail: '/src/media/works/459-cosmos-detail.webp'
 ---
 

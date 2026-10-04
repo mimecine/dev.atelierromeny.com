@@ -19,5 +19,6 @@ tags:
   - painting
   - abstract
   - water
+detail: '/src/media/works/457-reflet-deau-detail.webp'
 ---
 

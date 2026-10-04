@@ -19,5 +19,6 @@ tags:
   - collage
   - figure
   - sleeping
+detail: '/src/media/works/merguerite-la-reveuse-detail.webp'
 ---
 

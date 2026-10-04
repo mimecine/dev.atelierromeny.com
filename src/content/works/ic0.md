@@ -19,5 +19,6 @@ tags:
   - painting
   - mixed media
   - abstract
+detail: '/src/media/works/ic0-detail.webp'
 ---
 

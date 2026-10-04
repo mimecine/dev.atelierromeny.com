@@ -18,5 +18,6 @@ uuid: f9b8dfa5-c6e2-42e7-ab98-bb8e78e018e4
 tags:
   - painting
   - abstract
+detail: '/src/media/works/330-sans-titre-3-detail.webp'
 ---
 

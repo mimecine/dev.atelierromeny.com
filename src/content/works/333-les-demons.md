@@ -20,5 +20,6 @@ tags:
   - portrait
   - black and white
   - candle
+detail: '/src/media/works/333-les-demons-detail.webp'
 ---
 

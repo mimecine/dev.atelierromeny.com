@@ -20,5 +20,6 @@ tags:
   - sky
   - sun
   - village
+detail: '/src/media/works/aurora-1-detail.webp'
 ---
 

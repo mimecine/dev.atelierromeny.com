@@ -20,5 +20,6 @@ tags:
   - still life
   - fruit
   - flowers
+detail: '/src/media/works/la-farandole-des-fruits-detail.webp'
 ---
 

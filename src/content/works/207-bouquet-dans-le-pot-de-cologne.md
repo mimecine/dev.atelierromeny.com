@@ -19,5 +19,6 @@ tags:
   - painting
   - still life
   - flowers
+detail: '/src/media/works/207-bouquet-dans-le-pot-de-cologne-detail.webp'
 ---
 

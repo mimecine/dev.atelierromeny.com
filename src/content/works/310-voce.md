@@ -22,5 +22,6 @@ tags:
   - painting
   - abstract
   - lettering
+detail: '/src/media/works/310-voce-detail.webp'
 ---
 

@@ -18,5 +18,6 @@ tags:
   - painting
   - figure
   - mother and child
+detail: '/src/media/works/694-paysanne-e-lenfant-detail.webp'
 ---
 

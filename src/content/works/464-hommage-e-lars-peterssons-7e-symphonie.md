@@ -19,5 +19,6 @@ tags:
   - painting
   - abstract
   - music
+detail: '/src/media/works/464-hommage-e-lars-peterssons-7e-symphonie-detail.webp'
 ---
 

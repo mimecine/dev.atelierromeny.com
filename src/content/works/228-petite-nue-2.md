@@ -18,5 +18,6 @@ tags:
   - painting
   - figure
   - nude
+detail: '/src/media/works/228-petite-nue-2-detail.webp'
 ---
 

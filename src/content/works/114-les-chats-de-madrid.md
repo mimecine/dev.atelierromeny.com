@@ -20,5 +20,6 @@ tags:
   - painting
   - animal
   - cat
+detail: '/src/media/works/114-les-chats-de-madrid-detail.webp'
 ---
 

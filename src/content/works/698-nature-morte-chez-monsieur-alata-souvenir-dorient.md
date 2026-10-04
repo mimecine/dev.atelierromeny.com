@@ -26,5 +26,6 @@ tags:
   - fruit
   - bottle
 thumbnail: 2
+detail: '/src/media/works/698-nature-morte-chez-monsieur-alata-souvenir-dorient-detail.webp'
 ---
 

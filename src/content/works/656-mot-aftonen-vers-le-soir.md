@@ -20,5 +20,6 @@ tags:
   - abstract
   - landscape
   - sun
+detail: '/src/media/works/656-mot-aftonen-vers-le-soir-detail.webp'
 ---
 

@@ -19,5 +19,6 @@ tags:
   - animal
   - bird
   - turkey
+detail: '/src/media/works/566-dindon-detail.webp'
 ---
 

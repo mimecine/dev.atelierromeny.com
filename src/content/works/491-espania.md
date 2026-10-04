@@ -19,5 +19,6 @@ uuid: c05199fd-731e-4934-906e-a897cb531f47
 tags:
   - painting
   - abstract
+detail: '/src/media/works/491-espania-detail.webp'
 ---
 

@@ -18,5 +18,6 @@ tags:
   - painting
   - landscape
   - machine
+detail: '/src/media/works/49-machine-agricole-detail.webp'
 ---
 

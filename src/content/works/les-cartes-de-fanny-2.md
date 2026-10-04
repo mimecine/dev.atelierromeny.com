@@ -19,5 +19,6 @@ tags:
   - collage
   - figure
   - nude
+detail: '/src/media/works/les-cartes-de-fanny-2-detail.webp'
 ---
 

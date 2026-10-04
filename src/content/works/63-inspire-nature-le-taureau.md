@@ -19,5 +19,6 @@ tags:
   - abstract
   - bull
   - animal
+detail: '/src/media/works/63-inspire-nature-le-taureau-detail.webp'
 ---
 

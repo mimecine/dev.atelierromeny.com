@@ -21,5 +21,6 @@ tags:
   - animal
   - cat
   - mating
+detail: '/src/media/works/384-accouplement-2-detail.webp'
 ---
 

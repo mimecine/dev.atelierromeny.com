@@ -19,5 +19,6 @@ tags:
   - animal
   - bird
   - swift
+detail: '/src/media/works/582-les-martinets-detail.webp'
 ---
 

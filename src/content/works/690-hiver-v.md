@@ -21,5 +21,6 @@ tags:
   - winter
   - moon
   - tree
+detail: '/src/media/works/690-hiver-v-detail.webp'
 ---
 

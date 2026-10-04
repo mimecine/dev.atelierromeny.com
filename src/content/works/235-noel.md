@@ -19,5 +19,6 @@ tags:
   - figure
   - mother and child
   - Christmas
+detail: '/src/media/works/235-noel-detail.webp'
 ---
 

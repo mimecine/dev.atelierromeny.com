@@ -26,4 +26,5 @@ year_start: 1972
 year_end: null
 file: /src/media/works/486-camargue-3.webp
 uuid: d96a31e0-bff0-44b7-8d95-44d804f51308
+detail: '/src/media/works/486-camargue-3-detail.webp'
 ---

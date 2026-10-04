@@ -21,5 +21,6 @@ tags:
   - figure
   - nude
   - couple
+detail: '/src/media/works/108-mardi-detail.webp'
 ---
 

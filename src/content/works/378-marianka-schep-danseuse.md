@@ -20,5 +20,6 @@ tags:
   - portrait
   - figure
   - dancer
+detail: '/src/media/works/378-marianka-schep-danseuse-detail.webp'
 ---
 

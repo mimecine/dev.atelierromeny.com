@@ -20,5 +20,6 @@ tags:
   - semi-abstract
   - bird
   - nest
+detail: '/src/media/works/276-nid-doiseau-ii-detail.webp'
 ---
 

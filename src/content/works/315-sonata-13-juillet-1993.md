@@ -20,5 +20,6 @@ tags:
   - painting
   - abstract
   - music
+detail: '/src/media/works/315-sonata-13-juillet-1993-detail.webp'
 ---
 

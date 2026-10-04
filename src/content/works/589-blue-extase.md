@@ -18,5 +18,6 @@ uuid: a83e3ad7-b25f-4300-943d-bb1cfd4efebd
 tags:
   - painting
   - abstract
+detail: '/src/media/works/589-blue-extase-detail.webp'
 ---
 

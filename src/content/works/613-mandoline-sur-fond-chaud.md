@@ -24,5 +24,6 @@ tags:
   - music
   - mandolin
   - fruit
+detail: '/src/media/works/613-mandoline-sur-fond-chaud-detail.webp'
 ---
 

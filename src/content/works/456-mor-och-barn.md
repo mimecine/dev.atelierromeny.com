@@ -18,5 +18,6 @@ collections:
 tags:
   - painting
   - abstract
+detail: '/src/media/works/456-mor-och-barn-detail.webp'
 ---
 

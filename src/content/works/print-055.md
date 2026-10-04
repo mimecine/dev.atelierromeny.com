@@ -14,5 +14,6 @@ tags:
   - spring
   - mountain
 note: "Inscription (read from photo): 1980? -- year '80 or '90?"
+detail: '/src/media/works/print-055-detail.webp'
 ---
 

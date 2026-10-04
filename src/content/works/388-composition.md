@@ -18,5 +18,6 @@ uuid: 9c2fa890-26db-4c1f-84fe-316677b1f1bc
 tags:
   - painting
   - abstract
+detail: '/src/media/works/388-composition-detail.webp'
 ---
 

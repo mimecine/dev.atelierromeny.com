@@ -18,5 +18,6 @@ tags:
   - painting
   - abstract
   - foliage
+detail: '/src/media/works/617-feuillage-detail.webp'
 ---
 

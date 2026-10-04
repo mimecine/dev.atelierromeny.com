@@ -20,5 +20,6 @@ tags:
   - painting
   - flowers
   - sunflower
+detail: '/src/media/works/619-tournesol-sur-fond-rouge-detail.webp'
 ---
 

@@ -18,5 +18,6 @@ uuid: 5e5dc1c0-d788-4e23-9e9f-bd9e41ab5a17
 tags:
   - painting
   - abstract
+detail: '/src/media/works/383-spanskt-natt-nuit-espagnole-detail.webp'
 ---
 

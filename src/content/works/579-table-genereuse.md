@@ -27,5 +27,6 @@ tags:
   - fruit
   - table
 thumbnail: 2
+detail: '/src/media/works/579-table-genereuse-detail.webp'
 ---
 

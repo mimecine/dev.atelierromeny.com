@@ -19,5 +19,6 @@ tags:
   - figure
   - semi-abstract
   - foliage
+detail: '/src/media/works/femme-au-feullage-2-detail.webp'
 ---
 

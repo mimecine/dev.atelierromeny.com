@@ -20,5 +20,6 @@ tags:
   - artist at work
   - nude
   - cityscape
+detail: '/src/media/works/430-stad-en-land-detail.webp'
 ---
 

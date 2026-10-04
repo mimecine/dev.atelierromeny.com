@@ -18,5 +18,6 @@ tags:
   - painting
   - figure
   - nude
+detail: '/src/media/works/213-nu-assis-et-de-dos-detail.webp'
 ---
 

@@ -19,5 +19,6 @@ tags:
   - painting
   - abstract
   - music
+detail: '/src/media/works/620-la-musique-i-apparitionprelude-detail.webp'
 ---
 

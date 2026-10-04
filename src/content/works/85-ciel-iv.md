@@ -19,5 +19,6 @@ tags:
   - painting
   - abstract
   - sky
+detail: '/src/media/works/85-ciel-iv-detail.webp'
 ---
 

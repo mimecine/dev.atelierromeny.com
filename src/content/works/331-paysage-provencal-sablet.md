@@ -21,5 +21,6 @@ tags:
   - mountain
   - field
   - Provence
+detail: '/src/media/works/331-paysage-provencal-sablet-detail.webp'
 ---
 

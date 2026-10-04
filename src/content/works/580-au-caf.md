@@ -22,5 +22,6 @@ tags:
   - music
   - mandolin
   - fruit
+detail: '/src/media/works/580-au-caf-detail.webp'
 ---
 

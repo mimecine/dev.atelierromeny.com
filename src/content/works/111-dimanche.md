@@ -21,5 +21,6 @@ tags:
   - figure
   - nude
   - couple
+detail: '/src/media/works/111-dimanche-detail.webp'
 ---
 

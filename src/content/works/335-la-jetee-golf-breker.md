@@ -24,5 +24,6 @@ tags:
   - painting
   - landscape
 thumbnail: 2
+detail: '/src/media/works/335-la-jetee-golf-breker-detail.webp'
 ---
 

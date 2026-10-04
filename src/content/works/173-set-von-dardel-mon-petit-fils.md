@@ -20,5 +20,6 @@ tags:
   - painting
   - portrait
   - child
+detail: '/src/media/works/173-set-von-dardel-mon-petit-fils-detail.webp'
 ---
 

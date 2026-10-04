@@ -18,5 +18,6 @@ uuid: 20294991-0836-490d-8fab-259b8fa2fe2a
 tags:
   - painting
   - abstract
+detail: '/src/media/works/klot-detail.webp'
 ---
 

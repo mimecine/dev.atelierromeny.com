@@ -20,5 +20,6 @@ tags:
   - painting
   - abstract
   - fruit
+detail: '/src/media/works/367-fruits-detail.webp'
 ---
 

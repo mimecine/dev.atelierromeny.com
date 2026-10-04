@@ -22,5 +22,6 @@ tags:
   - painting
   - still life
   - fruit
+detail: '/src/media/works/476-poele-aux-fruits-iii-detail.webp'
 ---
 

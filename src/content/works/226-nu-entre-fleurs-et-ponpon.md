@@ -20,5 +20,6 @@ tags:
   - nude
   - flowers
   - pumpkin
+detail: '/src/media/works/226-nu-entre-fleurs-et-ponpon-detail.webp'
 ---
 

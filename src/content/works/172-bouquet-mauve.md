@@ -20,5 +20,6 @@ tags:
   - painting
   - still life
   - flowers
+detail: '/src/media/works/172-bouquet-mauve-detail.webp'
 ---
 

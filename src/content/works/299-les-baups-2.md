@@ -20,5 +20,6 @@ tags:
   - landscape
   - village
   - tree
+detail: '/src/media/works/299-les-baups-2-detail.webp'
 ---
 

@@ -19,5 +19,6 @@ tags:
   - painting
   - figure
   - nude
+detail: '/src/media/works/511-liselotte-detail.webp'
 ---
 

@@ -20,5 +20,6 @@ tags:
   - hand
   - face
   - insect
+detail: '/src/media/works/356-profil-et-main-detail.webp'
 ---
 

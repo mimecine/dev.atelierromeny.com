@@ -18,5 +18,6 @@ uuid: 5febad2f-567e-4674-b955-b9c327fcd82d
 tags:
   - painting
   - abstract
+detail: '/src/media/works/588-paysage-aerien-2-detail.webp'
 ---
 

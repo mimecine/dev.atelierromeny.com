@@ -20,5 +20,6 @@ tags:
   - figure
   - nude
   - letter
+detail: '/src/media/works/693-lettre-e-ma-bien-aimee-iv-detail.webp'
 ---
 

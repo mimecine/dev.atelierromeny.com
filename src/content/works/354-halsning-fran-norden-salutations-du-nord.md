@@ -22,5 +22,6 @@ tags:
   - map
   - landscape
   - forest
+detail: '/src/media/works/354-halsning-fran-norden-salutations-du-nord-detail.webp'
 ---
 

@@ -21,5 +21,6 @@ tags:
   - painting
   - abstract
   - autumn
+detail: '/src/media/works/98-hostdag-detail.webp'
 ---
 

@@ -24,5 +24,6 @@ tags:
   - music
   - violin
   - flowers
+detail: '/src/media/works/488-hommage-a-un-musicien-anonyme-detail.webp'
 ---
 

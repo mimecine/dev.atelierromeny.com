@@ -18,5 +18,6 @@ uuid: 12f72632-a347-4c01-adce-0d36cc9a616a
 tags:
   - painting
   - abstract
+detail: '/src/media/works/122-la-source-detail.webp'
 ---
 

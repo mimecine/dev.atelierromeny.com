@@ -18,5 +18,6 @@ uuid: f8f132ae-f3e8-415c-a8d4-3257717913a7
 tags:
   - painting
   - abstract
+detail: '/src/media/works/327-composition-bleu-noir-detail.webp'
 ---
 

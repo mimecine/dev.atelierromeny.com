@@ -21,5 +21,6 @@ tags:
   - figure
   - sleeping
   - hammock
+detail: '/src/media/works/441-lola-melancolique-detail.webp'
 ---
 

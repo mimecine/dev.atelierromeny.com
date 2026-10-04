@@ -22,5 +22,6 @@ tags:
   - painting
   - abstract
   - landscape
+detail: '/src/media/works/500-paysage-nordique-1-detail.webp'
 ---
 

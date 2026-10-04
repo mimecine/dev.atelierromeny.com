@@ -18,5 +18,6 @@ uuid: ddb7511f-b630-46a3-a812-9947849bbab7
 tags:
   - painting
   - abstract
+detail: '/src/media/works/104-enflamm-detail.webp'
 ---
 

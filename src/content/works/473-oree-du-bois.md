@@ -20,5 +20,6 @@ tags:
   - landscape
   - forest
   - tree
+detail: '/src/media/works/473-oree-du-bois-detail.webp'
 ---
 

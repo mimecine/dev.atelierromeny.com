@@ -19,5 +19,6 @@ tags:
   - painting
   - portrait
   - figure
+detail: '/src/media/works/442-yves-dreiss-detail.webp'
 ---
 

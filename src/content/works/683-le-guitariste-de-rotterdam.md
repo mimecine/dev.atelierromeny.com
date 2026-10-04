@@ -19,5 +19,6 @@ tags:
   - figure
   - music
   - guitar
+detail: '/src/media/works/683-le-guitariste-de-rotterdam-detail.webp'
 ---
 

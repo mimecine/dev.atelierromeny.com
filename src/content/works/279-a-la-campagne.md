@@ -18,5 +18,6 @@ tags:
   - painting
   - figure
   - landscape
+detail: '/src/media/works/279-a-la-campagne-detail.webp'
 ---
 

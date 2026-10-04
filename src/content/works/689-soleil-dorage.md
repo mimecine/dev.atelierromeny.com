@@ -22,5 +22,6 @@ tags:
   - landscape
   - field
   - storm
+detail: '/src/media/works/689-soleil-dorage-detail.webp'
 ---
 

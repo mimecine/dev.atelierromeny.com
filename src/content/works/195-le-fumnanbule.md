@@ -19,5 +19,6 @@ tags:
   - figure
   - circus
   - tightrope walker
+detail: '/src/media/works/195-le-fumnanbule-detail.webp'
 ---
 

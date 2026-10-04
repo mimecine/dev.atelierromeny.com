@@ -20,5 +20,6 @@ tags:
   - figure
   - nude
   - map
+detail: '/src/media/works/380-nue-et-collages-detail.webp'
 ---
 

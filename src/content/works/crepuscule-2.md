@@ -20,5 +20,6 @@ tags:
   - abstract
   - landscape
   - sunset
+detail: '/src/media/works/crepuscule-2-detail.webp'
 ---
 

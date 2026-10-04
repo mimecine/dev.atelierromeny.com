@@ -20,5 +20,6 @@ tags:
   - painting
   - religious
   - face
+detail: '/src/media/works/133-veronicas-svetteduk-detail.webp'
 ---
 

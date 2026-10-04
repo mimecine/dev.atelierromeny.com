@@ -21,5 +21,6 @@ tags:
   - shepherd
   - lamb
   - animal
+detail: '/src/media/works/529-le-berger-de-la-chapelle-de-cavaillon-detail.webp'
 ---
 

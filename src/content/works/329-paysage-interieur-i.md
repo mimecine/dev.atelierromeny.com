@@ -21,5 +21,6 @@ old_image: '/src/media/works/329-paysage-interieur-i.webp'
 tags:
   - painting
   - abstract
+detail: '/src/media/works/329-paysage-interieur-i-detail.webp'
 ---
 

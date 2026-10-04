@@ -17,5 +17,6 @@ collections:
 tags:
   - painting
   - abstract
+detail: '/src/media/works/340-composition-rouge-et-brun-detail.webp'
 ---
 

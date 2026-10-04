@@ -19,5 +19,6 @@ tags:
   - painting
   - abstract
   - landscape
+detail: '/src/media/works/93-paysage-nordique-detail.webp'
 ---
 

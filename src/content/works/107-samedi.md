@@ -21,5 +21,6 @@ tags:
   - figure
   - nude
   - couple
+detail: '/src/media/works/107-samedi-detail.webp'
 ---
 

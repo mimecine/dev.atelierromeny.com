@@ -17,5 +17,6 @@ collections:
 tags:
   - painting
   - abstract
+detail: '/src/media/works/490-composition-verticale-detail.webp'
 ---
 

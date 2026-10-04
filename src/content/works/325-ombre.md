@@ -18,5 +18,6 @@ uuid: 41e497c8-617a-42e3-acb6-ddd138e31867
 tags:
   - painting
   - abstract
+detail: '/src/media/works/325-ombre-detail.webp'
 ---
 

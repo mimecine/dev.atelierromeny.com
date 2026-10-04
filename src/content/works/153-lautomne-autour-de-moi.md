@@ -25,5 +25,6 @@ tags:
   - landscape
   - autumn
 thumbnail: 2
+detail: '/src/media/works/153-lautomne-autour-de-moi-detail.webp'
 ---
 

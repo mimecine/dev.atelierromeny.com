@@ -19,5 +19,6 @@ uuid: c5f5a152-a935-43ea-9602-83485880551a
 tags:
   - painting
   - abstract
+detail: '/src/media/works/453-dramatisk-upptakt-detail.webp'
 ---
 

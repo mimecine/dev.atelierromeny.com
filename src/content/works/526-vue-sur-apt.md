@@ -21,5 +21,6 @@ tags:
   - tree
   - mountain
   - tractor
+detail: '/src/media/works/526-vue-sur-apt-detail.webp'
 ---
 

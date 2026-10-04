@@ -18,5 +18,6 @@ tags:
   - painting
   - landscape
   - sky
+detail: '/src/media/works/aurora-6-detail.webp'
 ---
 

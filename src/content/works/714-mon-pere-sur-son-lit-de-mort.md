@@ -20,5 +20,6 @@ tags:
   - portrait
   - father
   - death
+detail: '/src/media/works/714-mon-pere-sur-son-lit-de-mort-detail.webp'
 ---
 

@@ -23,5 +23,6 @@ tags:
   - landscape
   - sunset
   - Luberon
+detail: '/src/media/works/200-coucher-de-soleil-sur-ie-luberon-detail.webp'
 ---
 

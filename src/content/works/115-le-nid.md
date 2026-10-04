@@ -19,5 +19,6 @@ tags:
   - tree
   - bird
   - nest
+detail: '/src/media/works/115-le-nid-detail.webp'
 ---
 

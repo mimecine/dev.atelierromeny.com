@@ -18,5 +18,6 @@ uuid: 0eb5a38b-cc94-4273-98f0-ed5af9128dd0
 tags:
   - painting
   - abstract
+detail: '/src/media/works/466-space-passage-detail.webp'
 ---
 

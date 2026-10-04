@@ -19,5 +19,6 @@ tags:
   - painting
   - animal
   - bird
+detail: '/src/media/works/336-loiseau-mort-detail.webp'
 ---
 

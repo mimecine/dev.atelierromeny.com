@@ -19,5 +19,6 @@ uuid: a88fb95a-2272-4322-84bf-3dc24c92b4bb
 tags:
   - painting
   - abstract
+detail: '/src/media/works/342-grenverk-detail.webp'
 ---
 

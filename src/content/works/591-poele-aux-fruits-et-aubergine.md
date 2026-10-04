@@ -24,5 +24,6 @@ tags:
   - fruit
   - aubergine
   - stove
+detail: '/src/media/works/591-poele-aux-fruits-et-aubergine-detail.webp'
 ---
 

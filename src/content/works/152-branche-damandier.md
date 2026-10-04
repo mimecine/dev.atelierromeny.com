@@ -21,5 +21,6 @@ tags:
   - tree
   - blossom
   - almond
+detail: '/src/media/works/152-branche-damandier-detail.webp'
 ---
 

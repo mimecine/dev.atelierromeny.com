@@ -20,5 +20,6 @@ tags:
   - still life
   - fish
   - chair
+detail: '/src/media/works/682-chaise-et-plat-de-poissons-detail.webp'
 ---
 

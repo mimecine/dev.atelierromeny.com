@@ -21,5 +21,6 @@ old_image: '/src/media/works/612-spheres.webp'
 tags:
   - painting
   - abstract
+detail: '/src/media/works/612-spheres-detail.webp'
 ---
 

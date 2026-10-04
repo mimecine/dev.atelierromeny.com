@@ -19,5 +19,6 @@ tags:
   - figure
   - couple
   - sea
+detail: '/src/media/works/28-devant-la-mer-detail.webp'
 ---
 

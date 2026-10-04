@@ -20,5 +20,6 @@ tags:
   - landscape
   - field
   - house
+detail: '/src/media/works/126-le-grand-mas-a-villars-detail.webp'
 ---
 

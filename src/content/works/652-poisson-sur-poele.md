@@ -23,5 +23,6 @@ tags:
   - still life
   - fish
   - stove
+detail: '/src/media/works/652-poisson-sur-poele-detail.webp'
 ---
 

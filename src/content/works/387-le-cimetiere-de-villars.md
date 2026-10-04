@@ -22,5 +22,6 @@ tags:
   - cemetery
   - cypress
   - village
+detail: '/src/media/works/387-le-cimetiere-de-villars-detail.webp'
 ---
 

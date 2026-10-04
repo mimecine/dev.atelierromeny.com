@@ -23,5 +23,6 @@ tags:
   - abstract
   - landscape
   - sun
+detail: '/src/media/works/501-paysage-nordique-4-detail.webp'
 ---
 

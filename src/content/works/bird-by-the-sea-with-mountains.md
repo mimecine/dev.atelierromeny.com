@@ -22,5 +22,6 @@ tags:
   - sea
   - sun
   - animal
+detail: '/src/media/works/bird-by-the-sea-with-mountains-detail.webp'
 ---
 

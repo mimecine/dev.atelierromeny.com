@@ -20,5 +20,6 @@ tags:
   - figure
   - animal
   - dog
+detail: '/src/media/works/128-robert-et-son-chien-detail.webp'
 ---
 

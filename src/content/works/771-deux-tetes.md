@@ -21,5 +21,6 @@ tags:
   - collage
   - face
   - portrait
+detail: '/src/media/works/771-deux-tetes-detail.webp'
 ---
 

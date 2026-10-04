@@ -20,5 +20,6 @@ tags:
   - painting
   - figure
   - mother and child
+detail: '/src/media/works/237-karine-et-son-petit-ii-detail.webp'
 ---
 

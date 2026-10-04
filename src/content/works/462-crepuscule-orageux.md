@@ -18,5 +18,6 @@ uuid: 0dac6873-8ea6-4fcc-8156-1b8bc12f94fb
 tags:
   - painting
   - abstract
+detail: '/src/media/works/462-crepuscule-orageux-detail.webp'
 ---
 

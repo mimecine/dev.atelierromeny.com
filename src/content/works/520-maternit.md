@@ -19,5 +19,6 @@ tags:
   - painting
   - figure
   - mother and child
+detail: '/src/media/works/520-maternit-detail.webp'
 ---
 

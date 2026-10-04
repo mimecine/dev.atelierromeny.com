@@ -32,4 +32,5 @@ year_start: 1972
 year_end: null
 file: '/src/media/works/127-la-serviette-bleue.webp'
 uuid: 13470fa9-5eb9-40c6-ab67-51b941314997
+detail: '/src/media/works/127-la-serviette-bleue-detail.webp'
 ---

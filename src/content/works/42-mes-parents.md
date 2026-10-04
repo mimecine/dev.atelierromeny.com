@@ -21,5 +21,6 @@ tags:
   - wedding
   - parents
   - bird
+detail: '/src/media/works/42-mes-parents-detail.webp'
 ---
 

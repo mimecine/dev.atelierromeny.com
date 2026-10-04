@@ -20,5 +20,6 @@ tags:
   - flowers
   - iris
   - vine
+detail: '/src/media/works/iris-au-pied-du-vigne-detail.webp'
 ---
 

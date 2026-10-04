@@ -20,5 +20,6 @@ tags:
   - portrait
   - lamb
   - animal
+detail: '/src/media/works/255-paysan-e-iagneau-detail.webp'
 ---
 

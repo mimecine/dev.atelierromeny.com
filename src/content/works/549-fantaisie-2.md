@@ -18,5 +18,6 @@ uuid: 0097a993-320a-4403-aaf0-d79cc43a5c4c
 tags:
   - painting
   - abstract
+detail: '/src/media/works/549-fantaisie-2-detail.webp'
 ---
 

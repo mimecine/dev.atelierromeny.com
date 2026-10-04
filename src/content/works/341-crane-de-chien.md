@@ -20,5 +20,6 @@ tags:
   - skull
   - dog
   - animal
+detail: '/src/media/works/341-crane-de-chien-detail.webp'
 ---
 

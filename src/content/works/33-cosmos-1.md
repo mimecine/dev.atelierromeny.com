@@ -20,5 +20,6 @@ tags:
   - painting
   - abstract
   - cosmos
+detail: '/src/media/works/33-cosmos-1-detail.webp'
 ---
 

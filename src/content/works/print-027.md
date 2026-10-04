@@ -16,5 +16,6 @@ year_start: 1970
 note: "Inscription (read from photo): 17/40, \"Le bouquet\", 1970 -- faint handwritten dedication below, unreadable"
 sheet_w: 44
 sheet_h: 61
+detail: '/src/media/works/print-027-detail.webp'
 ---
 

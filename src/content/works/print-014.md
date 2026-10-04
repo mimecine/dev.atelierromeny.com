@@ -19,5 +19,6 @@ w: 19
 h: 25.5
 sheet_w: 29.5
 sheet_h: 39.5
+detail: '/src/media/works/print-014-detail.webp'
 ---
 

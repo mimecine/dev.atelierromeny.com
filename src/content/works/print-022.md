@@ -20,5 +20,6 @@ note: "Inscription (read from photo): 7/10, \"Natten\"?, 1970 -- title uncertain
 sheet_w: 52
 sheet_h: 38
 thumbnail: 2
+detail: '/src/media/works/print-022-detail.webp'
 ---
 

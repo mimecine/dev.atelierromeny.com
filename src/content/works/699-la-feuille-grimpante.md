@@ -20,5 +20,6 @@ tags:
   - plant
   - leaves
   - flowers
+detail: '/src/media/works/699-la-feuille-grimpante-detail.webp'
 ---
 

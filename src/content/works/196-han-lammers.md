@@ -18,5 +18,6 @@ collections:
 tags:
   - painting
   - portrait
+detail: '/src/media/works/196-han-lammers-detail.webp'
 ---
 

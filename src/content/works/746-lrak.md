@@ -22,5 +22,6 @@ tags:
   - figure
   - nude
   - war
+detail: '/src/media/works/746-lrak-detail.webp'
 ---
 

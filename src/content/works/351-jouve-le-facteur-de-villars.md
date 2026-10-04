@@ -26,5 +26,6 @@ tags:
   - painting
   - portrait
 thumbnail: 2
+detail: '/src/media/works/351-jouve-le-facteur-de-villars-detail.webp'
 ---
 

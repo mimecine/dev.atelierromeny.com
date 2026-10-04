@@ -21,5 +21,6 @@ tags:
   - still life
   - flowers
   - rose
+detail: '/src/media/works/763-la-rose-contraste-detail.webp'
 ---
 

@@ -20,5 +20,6 @@ tags:
   - painting
   - flowers
   - gladioli
+detail: '/src/media/works/382-glaleuls-detail.webp'
 ---
 

@@ -22,5 +22,6 @@ tags:
   - painting
   - abstract
   - cave
+detail: '/src/media/works/608-dans-ies-grottes-de-miramis-detail.webp'
 ---
 

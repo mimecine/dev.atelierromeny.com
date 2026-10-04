@@ -21,5 +21,6 @@ tags:
   - blossom
   - peach
   - spring
+detail: '/src/media/works/567-petit-pecher-au-printemps-detail.webp'
 ---
 

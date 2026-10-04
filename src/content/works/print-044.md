@@ -21,5 +21,6 @@ w: 10
 h: 14
 sheet_w: 19.5
 sheet_h: 25.5
+detail: '/src/media/works/print-044-detail.webp'
 ---
 

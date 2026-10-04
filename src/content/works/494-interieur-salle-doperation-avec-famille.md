@@ -21,5 +21,6 @@ tags:
   - interior
   - group
   - hospital
+detail: '/src/media/works/494-interieur-salle-doperation-avec-famille-detail.webp'
 ---
 

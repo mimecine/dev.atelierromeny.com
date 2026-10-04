@@ -22,5 +22,6 @@ tags:
   - abstract
   - landscape
   - Camargue
+detail: '/src/media/works/471-camargue-4-detail.webp'
 ---
 

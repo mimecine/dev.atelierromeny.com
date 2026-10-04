@@ -20,5 +20,6 @@ tags:
   - painting
   - hand
   - figure
+detail: '/src/media/works/2-les-mains-detail.webp'
 ---
 

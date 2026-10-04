@@ -18,5 +18,6 @@ tags:
   - painting
   - abstract
   - water
+detail: '/src/media/works/468-cascade-detail.webp'
 ---
 

@@ -19,5 +19,6 @@ tags:
   - painting
   - abstract
   - storm
+detail: '/src/media/works/472-orage-detail.webp'
 ---
 

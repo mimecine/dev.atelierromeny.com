@@ -20,5 +20,6 @@ tags:
   - painting
   - tree
   - walnut
+detail: '/src/media/works/474-le-noyer-detail.webp'
 ---
 

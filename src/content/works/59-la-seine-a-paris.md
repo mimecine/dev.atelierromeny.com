@@ -24,5 +24,6 @@ tags:
   - cityscape
   - river
   - Paris
+detail: '/src/media/works/59-la-seine-a-paris-detail.webp'
 ---
 

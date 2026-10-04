@@ -21,5 +21,6 @@ tags:
   - painting
   - figure
   - mother and child
+detail: '/src/media/works/687-lngegerd-et-marco-detail.webp'
 ---
 

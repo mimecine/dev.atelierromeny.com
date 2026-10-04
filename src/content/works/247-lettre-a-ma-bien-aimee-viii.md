@@ -20,5 +20,6 @@ tags:
   - figure
   - mother and child
   - letter
+detail: '/src/media/works/247-lettre-a-ma-bien-aimee-viii-detail.webp'
 ---
 

@@ -15,5 +15,6 @@ tags:
 year: "1983"
 year_start: 1983
 note: "Inscription (read from photo): 1983"
+detail: '/src/media/works/print-048-detail.webp'
 ---
 

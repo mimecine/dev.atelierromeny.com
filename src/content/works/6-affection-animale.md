@@ -20,5 +20,6 @@ tags:
   - painting
   - animal
   - semi-abstract
+detail: '/src/media/works/6-affection-animale-detail.webp'
 ---
 

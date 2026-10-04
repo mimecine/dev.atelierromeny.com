@@ -19,5 +19,6 @@ tags:
   - figure
   - artist at work
   - nude
+detail: '/src/media/works/433-le-peintre-amoureux-detail.webp'
 ---
 

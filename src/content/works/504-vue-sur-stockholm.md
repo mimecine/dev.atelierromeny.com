@@ -20,5 +20,6 @@ tags:
   - cityscape
   - harbour
   - Stockholm
+detail: '/src/media/works/504-vue-sur-stockholm-detail.webp'
 ---
 
