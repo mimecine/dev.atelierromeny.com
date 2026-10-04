@@ -1,0 +1,7 @@
+# Cloudflare redirect rules, merged with the ones Astro generates from astro.config.mjs.
+# Wildcard redirects live here (Astro writes [...slug] redirects as a looping rule).
+# First match wins: the specific rules come before the wildcard.
+# The Selected Prints collection was renamed Works on Paper.
+/selected-prints    /works-on-paper  301
+/selected-prints/   /works-on-paper  301
+/selected-prints/*  /works/:splat    301

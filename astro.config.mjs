@@ -35,9 +35,8 @@ export default defineConfig({
   // /works/<slug>/ is each work's canonical page; the folder itself has no index.
   redirects: {
     '/works': '/',
-    // the collection was renamed
-    '/selected-prints': '/works-on-paper',
-    '/selected-prints/[...slug]': '/works/[...slug]',
+    // /selected-prints (renamed to /works-on-paper) is redirected in public/_redirects:
+    // Astro turns a [...slug] redirect into a rule Cloudflare rejects as an infinite loop.
   },
 
   image: isDev ? { service: passthroughImageService() } : undefined,
