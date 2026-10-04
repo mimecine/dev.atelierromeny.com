@@ -16,6 +16,6 @@ import Layout from "@layouts/Layout.astro";
   // shares) are filtered in the browser on /tags/?t=…
   (() => {
     const m = location.pathname.match(/^\/tags\/([^/]+)\/?$/);
-    if (m) location.replace(`/tags/?t=${decodeURIComponent(m[1]).split(/[,+ ]/).join(",")}`);
+    if (m) location.replace(`/tags/?t=${decodeURIComponent(m[1]).split(/[_,+ ]/).join(",")}`);
   })();
 </script>

@@ -15,7 +15,7 @@ const labels = Object.fromEntries(tags.map((t) => [t.slug, t.label]));
     <template x-if="!selected.length">
       <div class="grid gap-4">
         <h1>Tags</h1>
-        <p class="text-gray-500">Pick a tag, then narrow it down with a second one. Tags can be combined in the address too: <code>/tags/bird+etching/</code>.</p>
+        <p class="text-gray-500">Pick a tag, then narrow it down with a second one. Tags can be combined in the address too: <code>/tags/bird_etching/</code>.</p>
       </div>
     </template>
     <ul class="tag-cloud" x-show="!selected.length">
@@ -68,15 +68,15 @@ const labels = Object.fromEntries(tags.map((t) => [t.slug, t.label]));
       },
       async init() {
         const t = new URLSearchParams(location.search).get("t") ?? "";
-        // Accepts "a,b" and "a+b" (a + in a query string arrives as a space)
-        this.selected = [...new Set(t.split(/[,+ ]/).map((s) => s.trim()).filter(Boolean))].sort();
+        // Accepts "a_b", "a,b" and "a+b" (a + in a query string arrives as a space), so older links keep working
+        this.selected = [...new Set(t.split(/[_,+ ]/).map((s) => s.trim()).filter(Boolean))].sort();
         if (!this.selected.length) return;
         const all = await (await fetch("/works-index.json")).json();
         this.items = all
           .filter((w) => this.selected.every((s) => w.tags?.includes(s)))
           .sort((a, b) => (a.title ?? "Untitled").localeCompare(b.title ?? "Untitled"));
         this.loading = false;
-        if (this.items.length && this.selected.length <= 2) location.replace(`/tags/${this.selected.join("+")}/`);
+        if (this.items.length && this.selected.length <= 2) location.replace(`/tags/${this.selected.join("_")}/`);
       },
     }));
   });

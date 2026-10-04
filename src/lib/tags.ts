@@ -14,10 +14,10 @@ export const tagSlug = (tag: string) =>
 /** A work's tags as slugs, without duplicates. */
 export const tagSlugsOf = (work: Work) => [...new Set((work.data.tags ?? []).map(tagSlug).filter(Boolean))];
 
-/** Joins tags in a tag page address: /tags/bird+etching/. */
-export const TAG_SEPARATOR = "+";
+/** Joins tags in a tag page address: /tags/bird_etching/. */
+export const TAG_SEPARATOR = "_";
 
-/** Path of a tag page. Slugs are sorted so "a+b" and "b+a" share one page. */
+/** Path of a tag page. Slugs are sorted so "a_b" and "b_a" share one page. */
 export const tagPath = (slugs: string[]) => `/tags/${[...new Set(slugs)].sort().join(TAG_SEPARATOR)}/`;
 
 /** Every tag in use: its slug, the label to show (most common spelling) and how many works carry it. */
