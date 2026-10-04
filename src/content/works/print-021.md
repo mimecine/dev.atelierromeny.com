@@ -13,5 +13,9 @@ tags:
   - colour print
   - abstract
 note: "Inscription (read from photo): e.a., \"Holland\" -- read from detail crop; year unclear"
+w: 12.5
+h: 10.5
+sheet_w: 34.5
+sheet_h: 49
 ---
 

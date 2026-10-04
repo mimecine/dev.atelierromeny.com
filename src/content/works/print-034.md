@@ -15,5 +15,9 @@ tags:
 year: "1973"
 year_start: 1973
 note: "Inscription (read from photo): 36/55, \"Morning\", 1973 -- has a chop/seal stamp"
+w: 39.5
+h: 29
+sheet_w: 57
+sheet_h: 45.5
 ---
 

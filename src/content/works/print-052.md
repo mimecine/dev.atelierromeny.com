@@ -13,5 +13,9 @@ tags:
   - house
   - Provence
 note: "Inscription (read from photo): not legible -- signed, no year visible"
+w: 31.5
+h: 23
+sheet_w: 54.5
+sheet_h: 42.5
 ---
 

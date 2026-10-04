@@ -15,5 +15,9 @@ tags:
 year: "1968"
 year_start: 1968
 note: "Inscription (read from photo): 1/24, 1968"
+w: 58.5
+h: 41.5
+sheet_w: 61
+sheet_h: 44.5
 ---
 

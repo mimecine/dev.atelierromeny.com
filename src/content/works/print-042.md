@@ -15,5 +15,7 @@ tags:
 year: "1984"
 year_start: 1984
 note: "Inscription (read from photo): 8/15, 1984 -- read from detail crop; plate also marked \"R\""
+sheet_w: 34.5
+sheet_h: 49.5
 ---
 

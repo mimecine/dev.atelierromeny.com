@@ -16,5 +16,9 @@ tags:
   - aquatint
   - abstract
 note: "Inscription (read from photo): 10/15, \"Passionaria\"? -- title spelled \"Passionaba\"? no year"
+w: 18
+h: 24
+sheet_w: 34
+sheet_h: 39.5
 ---
 

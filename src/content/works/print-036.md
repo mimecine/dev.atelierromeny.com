@@ -13,5 +13,7 @@ tags:
 year: "1971"
 year_start: 1971
 note: "Inscription (read from photo): 13/26, \"Signum\"?, 1971 -- title uncertain"
+sheet_w: 72
+sheet_h: 51
 ---
 

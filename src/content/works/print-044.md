@@ -17,5 +17,9 @@ tags:
 year: "2005"
 year_start: 2005
 note: "Inscription (read from photo): 2/8, \"Elle joue\", 2005 -- edition 2 or 8?"
+w: 10
+h: 14
+sheet_w: 19.5
+sheet_h: 25.5
 ---
 

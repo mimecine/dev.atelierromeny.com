@@ -13,5 +13,9 @@ tags:
   - village
   - Provence
 note: "Inscription (read from photo): not legible -- signature too small to read"
+w: 31.5
+h: 23.5
+sheet_w: 54.5
+sheet_h: 42.5
 ---
 

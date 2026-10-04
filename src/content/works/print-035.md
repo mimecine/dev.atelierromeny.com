@@ -16,5 +16,9 @@ tags:
 year: "1973"
 year_start: 1973
 note: "Inscription (read from photo): 20/25, 1973 -- blind-stamp in the lower-left corner"
+w: 39
+h: 29.5
+sheet_w: 62
+sheet_h: 46.5
 ---
 

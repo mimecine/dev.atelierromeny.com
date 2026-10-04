@@ -14,5 +14,9 @@ tags:
 year: "1977"
 year_start: 1977
 note: "Inscription (read from photo): 13/35, 1977"
+w: 16.5
+h: 21
+sheet_w: 31.5
+sheet_h: 40.5
 ---
 

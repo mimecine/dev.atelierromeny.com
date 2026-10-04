@@ -16,5 +16,9 @@ tags:
 year: "1968"
 year_start: 1968
 note: "Inscription (read from photo): 4/20, \"Morgonstrålar\", 1968"
+w: 23.5
+h: 25
+sheet_w: 30.5
+sheet_h: 35.5
 ---
 

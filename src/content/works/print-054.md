@@ -15,5 +15,9 @@ tags:
 year: "1993"
 year_start: 1993
 note: "Inscription (read from photo): 1993"
+w: 69.5
+h: 49.5
+sheet_w: 69.5
+sheet_h: 49.5
 ---
 

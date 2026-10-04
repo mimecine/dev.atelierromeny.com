@@ -14,5 +14,9 @@ tags:
 year: "1986"
 year_start: 1986
 note: "Inscription (read from photo): 5/15, \"Tournesol II\", 1986"
+w: 25
+h: 18.5
+sheet_w: 38.5
+sheet_h: 26
 ---
 

@@ -15,5 +15,9 @@ tags:
 year: "1971"
 year_start: 1971
 note: "Inscription (read from photo): 5/15, \"Lönn\", 1971 -- also marked e.a."
+w: 21.5
+h: 25
+sheet_w: 35
+sheet_h: 49
 ---
 

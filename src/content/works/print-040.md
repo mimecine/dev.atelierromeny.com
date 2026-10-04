@@ -14,5 +14,7 @@ tags:
 year: "1972"
 year_start: 1972
 note: "Inscription (read from photo): 5/20, \"Trädet\", 1972"
+sheet_w: 39
+sheet_h: 52
 ---
 

@@ -15,5 +15,9 @@ tags:
 year: "1989"
 year_start: 1989
 note: "Inscription (read from photo): 6/30, \"Vigne IV\", 1989"
+w: 30
+h: 24
+sheet_w: 59.5
+sheet_h: 46
 ---
 

@@ -15,5 +15,9 @@ tags:
 year: "1983"
 year_start: 1983
 note: "Inscription (read from photo): \"Provence\"?, 1983 -- place name written after the signature"
+w: 23.5
+h: 20.5
+sheet_w: 58
+sheet_h: 46
 ---
 

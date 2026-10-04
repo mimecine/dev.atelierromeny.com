@@ -13,5 +13,9 @@ tags:
   - vine
   - leaves
 note: "Inscription (read from photo): 1989? -- year '89 or '83?"
+w: 55.5
+h: 37.5
+sheet_w: 55.5
+sheet_h: 37.5
 ---
 

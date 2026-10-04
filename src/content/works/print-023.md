@@ -16,5 +16,9 @@ tags:
 year: "1970"
 year_start: 1970
 note: "Inscription (read from photo): 7/15, \"Aan de Middellandse Zee\", 1970 -- written abbreviated \"aan de Middell. Zee\""
+w: 25
+h: 25.5
+sheet_w: 33.5
+sheet_h: 42.5
 ---
 

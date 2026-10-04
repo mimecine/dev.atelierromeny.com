@@ -13,5 +13,7 @@ tags:
   - tree
   - river
 note: "Inscription (read from photo): 1977? -- title written but not legible in the photo; year probably 77"
+sheet_w: 33.5
+sheet_h: 49
 ---
 

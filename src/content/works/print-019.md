@@ -14,5 +14,9 @@ tags:
   - insect
   - foliage
 note: "Inscription (read from photo): 16/35, \"Ur djungeln\", 197?? -- year unclear ('74 or '79?)"
+w: 34
+h: 24.5
+sheet_w: 59.5
+sheet_h: 48
 ---
 

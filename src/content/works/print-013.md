@@ -13,5 +13,9 @@ tags:
   - leaves
   - still life
 note: "Inscription (read from photo): 33/80, \"Rymdblad\"?, 1971 -- title and year fairly sure"
+w: 34.5
+h: 29.5
+sheet_w: 59.5
+sheet_h: 49.5
 ---
 

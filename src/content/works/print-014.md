@@ -15,5 +15,9 @@ tags:
 year: "1985"
 year_start: 1985
 note: "Inscription (read from photo): e.a., 1985"
+w: 19
+h: 25.5
+sheet_w: 29.5
+sheet_h: 39.5
 ---
 

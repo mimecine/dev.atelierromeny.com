@@ -13,5 +13,9 @@ tags:
 year: "1970"
 year_start: 1970
 note: "Inscription (read from photo): 10/23, \"Fantasia\", 1970"
+w: 59
+h: 42
+sheet_w: 61.5
+sheet_h: 44.5
 ---
 

@@ -15,5 +15,7 @@ tags:
 year: "1971"
 year_start: 1971
 note: "Inscription (read from photo): 10/15, \"Omfamning\", 1971"
+sheet_w: 44.5
+sheet_h: 61
 ---
 

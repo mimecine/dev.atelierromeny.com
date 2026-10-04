@@ -15,5 +15,9 @@ tags:
 year: "1973"
 year_start: 1973
 note: "Inscription (read from photo): 17/55, \"Saven stiger\"?, 1973 -- title uncertain (Swedish \"the sap rises\"?); marked e.a. too"
+w: 46.5
+h: 32.5
+sheet_w: 64
+sheet_h: 48.5
 ---
 

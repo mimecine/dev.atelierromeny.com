@@ -14,5 +14,9 @@ tags:
 year: "1974"
 year_start: 1974
 note: "Inscription (read from photo): 9/15, \"Solspegling III\", 1974"
+w: 69
+h: 58
+sheet_w: 72.5
+sheet_h: 61.5
 ---
 

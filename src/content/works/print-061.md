@@ -16,5 +16,9 @@ tags:
 year: "1988"
 year_start: 1988
 note: "Inscription (read from photo): 7/25, \"Mina iris\", 1988"
+w: 50
+h: 36.5
+sheet_w: 52
+sheet_h: 38.5
 ---
 

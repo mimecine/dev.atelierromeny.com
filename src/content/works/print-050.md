@@ -13,5 +13,9 @@ tags:
   - cypress
   - Provence
 note: "Inscription (read from photo): 19??? -- signature tiny, year unreadable"
+w: 48.5
+h: 31
+sheet_w: 60
+sheet_h: 44.5
 ---
 

@@ -16,5 +16,9 @@ tags:
 year: "1976"
 year_start: 1976
 note: "Inscription (read from photo): 37/45, \"Nature morte\", 1976? -- edition number unclear (37 or 32?)"
+w: 51
+h: 36.5
+sheet_w: 61.5
+sheet_h: 49.5
 ---
 

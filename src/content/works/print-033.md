@@ -17,5 +17,9 @@ tags:
   - bird
   - nest
 note: "Inscription (read from photo): not legible -- inscription above crop, too small to read"
+w: 24.5
+h: 25
+sheet_w: 48.5
+sheet_h: 58.5
 ---
 

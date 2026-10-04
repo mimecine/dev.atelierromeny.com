@@ -14,5 +14,7 @@ tags:
   - flowers
   - vase
 note: "Inscription (read from photo): III/XV, \"Le bouquet bleu\" -- no year"
+sheet_w: 49
+sheet_h: 64.5
 ---
 

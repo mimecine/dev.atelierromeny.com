@@ -13,5 +13,9 @@ tags:
 year: "1968"
 year_start: 1968
 note: "Inscription (read from photo): 8/10, \"Fåglar söker bo\"?, 1968 -- title fairly sure"
+w: 72.5
+h: 52
+sheet_w: 76
+sheet_h: 55
 ---
 

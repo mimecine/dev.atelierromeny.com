@@ -15,5 +15,9 @@ tags:
   - butterfly
   - insect
 note: "Inscription (read from photo): 7/25, \"Rêves de femme III\" -- no year"
+w: 28
+h: 24.5
+sheet_w: 49
+sheet_h: 32.5
 ---
 

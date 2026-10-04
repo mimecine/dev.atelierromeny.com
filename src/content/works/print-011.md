@@ -17,5 +17,9 @@ tags:
 year: "1975"
 year_start: 1975
 note: "Inscription (read from photo): 12/20, \"Månsken\", 1975"
+w: 13
+h: 12.5
+sheet_w: 33.5
+sheet_h: 25.5
 ---
 
