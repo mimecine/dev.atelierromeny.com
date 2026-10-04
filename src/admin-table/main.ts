@@ -291,45 +291,29 @@ addEventListener("scroll", hidePreview, true);
 
 // ---------------------------------------------------------------- image viewer
 
-// Clicking a photo in an image list opens this viewer next to it and keeps it open:
-// Hidden / Thumbnail checkboxes on top (where the image list has those fields), the
-// image, and ‹ › (or ← →) to flip through the entry's images. × / Esc / a click
-// elsewhere closes it.
-const viewer = h("div", { class: "viewer", hidden: true, role: "dialog", "aria-label": "Image" });
+// Clicking a photo in an image list opens this full-window viewer: every image of the
+// entry in a grid, each with its own Hidden / Thumbnail / Cleanest checkboxes (where
+// the image list has those fields). The clicked photo is highlighted. × or Esc closes.
+const viewer = h("div", { class: "viewer", hidden: true, role: "dialog", "aria-modal": "true", "aria-label": "Images" });
 let viewing: { entry: Entry; col: Column; index: number } | undefined;
 
 function viewerList() {
   return viewing ? ((viewing.entry.data[viewing.col.key] ?? []) as unknown[]).map(String) : [];
 }
 
-function openViewer(entry: Entry, col: Column, index: number, anchor: HTMLElement) {
+function openViewer(entry: Entry, col: Column, index: number) {
   hidePreview();
   viewing = { entry, col, index };
   renderViewer();
   viewer.hidden = false;
-  // Below the photo (or above it when there's no room), kept on screen
-  const r = anchor.getBoundingClientRect();
-  const place = () => {
-    const w = viewer.offsetWidth, vh = viewer.offsetHeight;
-    viewer.style.left = `${Math.max(8, Math.min(r.left, innerWidth - w - 8))}px`;
-    const below = r.bottom + 6;
-    viewer.style.top = `${below + vh > innerHeight - 8 ? Math.max(8, Math.min(r.top - vh - 6, innerHeight - vh - 8)) : below}px`;
-  };
-  place();
-  viewer.querySelector("img")?.addEventListener("load", place, { once: true });
+  document.body.classList.add("viewer-open");
+  viewer.querySelector(".viewer-tile.current")?.scrollIntoView({ block: "center" });
 }
 
 function closeViewer() {
   viewing = undefined;
   viewer.hidden = true;
-}
-
-function flip(step: number) {
-  if (!viewing) return;
-  const n = viewerList().length;
-  if (n < 2) return;
-  viewing.index = (viewing.index + step + n) % n;
-  renderViewer();
+  document.body.classList.remove("viewer-open");
 }
 
 function renderViewer() {
@@ -337,10 +321,8 @@ function renderViewer() {
   const { entry, col } = viewing;
   const list = viewerList();
   if (!list.length) return closeViewer();
-  viewing.index = Math.min(viewing.index, list.length - 1);
-  const index = viewing.index;
-  const path = list[index];
   const hideKey = col.options.hideIn, thumbKey = col.options.thumbnailIn, cleanKey = col.options.cleanestIn;
+  const scrollTop = viewer.querySelector(".viewer-grid")?.scrollTop ?? 0;
 
   const box = (label: string, checked: boolean, title: string, onChange: (on: boolean) => void) => {
     const input = h("input", { type: "checkbox" }) as HTMLInputElement;
@@ -348,69 +330,74 @@ function renderViewer() {
     input.addEventListener("change", () => onChange(input.checked));
     return h("label", { title }, input, label);
   };
-  const controls: HTMLElement[] = [];
-  if (hideKey) {
-    const hidden: string[] = (entry.data[hideKey] ?? []).map(String);
-    controls.push(
-      box("Hidden", hidden.includes(path), "Kept in the list, left off the site", (on) => {
-        const next = on ? [...hidden, path] : hidden.filter((p) => p !== path);
-        setValue(entry, columnByKey(hideKey)!, next.length ? next : null);
-        refreshCell(entry, col);
-        renderViewer();
-      })
-    );
-  }
-  if (thumbKey) {
-    const n = Number(entry.data[thumbKey]) || 1;
-    controls.push(
-      box("Thumbnail", n === index + 1, "Shown in grids, search and link previews", (on) => {
-        const k = on ? index + 1 : 1;
-        setValue(entry, columnByKey(thumbKey)!, k === 1 ? null : k);
-        refreshCell(entry, col);
-        renderViewer();
-      })
-    );
-  }
-  if (cleanKey) {
-    controls.push(
-      box("Cleanest", entry.data[cleanKey] === path, "The photo the measuring and cropping scripts use (even if hidden)", (on) => {
-        const cleanCol = columnByKey(cleanKey);
-        if (cleanCol) setValue(entry, cleanCol, on ? path : null);
-        else {
-          // the column may be absent from older configs: set the value directly
-          entry.data[cleanKey] = on ? path : null;
-          entry.dirty.add(cleanKey);
-          updateToolbar();
-        }
-        refreshCell(entry, col);
-        renderViewer();
-      })
-    );
-  }
+  const changed = () => {
+    refreshCell(entry, col);
+    renderViewer();
+  };
 
-  const img = h("img", { alt: "", title: path.split("/").pop() }) as HTMLImageElement;
-  const src = previewFor(path);
-  if (typeof src === "string") img.src = src;
-  else src.then((u) => viewing && viewerList()[viewing.index] === path && (img.src = u)).catch(() => img.classList.add("broken"));
+  const tiles = list.map((path, index) => {
+    const controls: HTMLElement[] = [];
+    if (hideKey) {
+      const hidden: string[] = (entry.data[hideKey] ?? []).map(String);
+      controls.push(
+        box("Hidden", hidden.includes(path), "Kept in the list, left off the site", (on) => {
+          const next = on ? [...hidden, path] : hidden.filter((p) => p !== path);
+          setValue(entry, columnByKey(hideKey)!, next.length ? next : null);
+          changed();
+        })
+      );
+    }
+    if (thumbKey) {
+      const n = Number(entry.data[thumbKey]) || 1;
+      controls.push(
+        box("Thumbnail", n === index + 1, "Shown in grids, search and link previews", (on) => {
+          const k = on ? index + 1 : 1;
+          setValue(entry, columnByKey(thumbKey)!, k === 1 ? null : k);
+          changed();
+        })
+      );
+    }
+    if (cleanKey) {
+      controls.push(
+        box("Cleanest", entry.data[cleanKey] === path, "The photo the measuring and cropping scripts use (even if hidden)", (on) => {
+          const cleanCol = columnByKey(cleanKey);
+          if (cleanCol) setValue(entry, cleanCol, on ? path : null);
+          else {
+            // the column may be absent from older configs: set the value directly
+            entry.data[cleanKey] = on ? path : null;
+            entry.dirty.add(cleanKey);
+            updateToolbar();
+          }
+          changed();
+        })
+      );
+    }
+    const img = h("img", { alt: "", title: path.split("/").pop(), loading: "lazy" }) as HTMLImageElement;
+    const src = previewFor(path);
+    if (typeof src === "string") img.src = src;
+    else src.then((u) => (img.src = u)).catch(() => img.classList.add("broken"));
+    const hiddenNow = hideKey && (entry.data[hideKey] ?? []).map(String).includes(path);
+    return h(
+      "figure",
+      { class: `viewer-tile${index === viewing!.index ? " current" : ""}${hiddenNow ? " is-hidden" : ""}` },
+      h("div", { class: "viewer-controls" }, h("span", { class: "viewer-num" }, String(index + 1)), ...controls),
+      h("div", { class: "viewer-img" }, img),
+      h("figcaption", {}, path.split("/").pop()!)
+    );
+  });
 
-  const many = list.length > 1;
   viewer.replaceChildren(
     h(
       "div",
-      { class: "viewer-top" },
-      ...controls,
-      h("span", { class: "viewer-count" }, many ? `${index + 1} / ${list.length}` : ""),
+      { class: "viewer-head" },
+      h("h2", {}, `${entry.data.title ?? entry.slug}`),
+      h("span", { class: "viewer-count" }, `${list.length} image${list.length === 1 ? "" : "s"}`),
       h("button", { type: "button", class: "viewer-close", title: "Close (Esc)", on: { click: closeViewer } }, "×")
     ),
-    h(
-      "div",
-      { class: "viewer-stage" },
-      many ? h("button", { type: "button", class: "viewer-nav prev", title: "Previous (←)", on: { click: () => flip(-1) } }, "‹") : "",
-      img,
-      many ? h("button", { type: "button", class: "viewer-nav next", title: "Next (→)", on: { click: () => flip(1) } }, "›") : ""
-    ),
-    h("div", { class: "viewer-name" }, path.split("/").pop()!)
+    h("div", { class: "viewer-grid" }, ...tiles)
   );
+  const grid = viewer.querySelector(".viewer-grid");
+  if (grid) grid.scrollTop = scrollTop;
 }
 
 document.addEventListener("click", (e) => {
@@ -418,24 +405,14 @@ document.addEventListener("click", (e) => {
   const info = img && tileInfo.get(img);
   if (info) {
     e.stopPropagation();
-    hidePreview();
-    return openViewer(info.entry, info.col, info.index, img!);
+    return openViewer(info.entry, info.col, info.index);
   }
 });
-document.addEventListener("mousedown", (e) => {
-  if (!viewing) return;
-  const t = e.target as HTMLElement;
-  if (viewer.contains(t)) return;
-  const img = t.closest?.("img.thumb") as HTMLImageElement | null;
-  if (img && tileInfo.has(img)) return; // opening another photo
-  closeViewer();
-});
 document.addEventListener("keydown", (e) => {
-  if (!viewing) return;
-  if ((e.target as HTMLElement).matches?.("input[type=text], input[type=number], input[type=search], textarea")) return;
-  if (e.key === "Escape") closeViewer();
-  else if (e.key === "ArrowLeft") (e.preventDefault(), flip(-1));
-  else if (e.key === "ArrowRight") (e.preventDefault(), flip(1));
+  if (viewing && e.key === "Escape") {
+    e.preventDefault();
+    closeViewer();
+  }
 });
 
 const lazyImages = new IntersectionObserver(
