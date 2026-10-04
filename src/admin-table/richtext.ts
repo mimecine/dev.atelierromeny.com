@@ -180,8 +180,8 @@ export function editMarkdown(initial: string, opts: RichTextOptions): Promise<st
       // (registerLink is tied to Lexical's extension system; the link button only needs this)
       editor.registerCommand(
         TOGGLE_LINK_COMMAND,
-        (url: string | null) => {
-          $toggleLink(url);
+        (payload) => {
+          $toggleLink(payload);
           return true;
         },
         COMMAND_PRIORITY_LOW

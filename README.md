@@ -82,7 +82,11 @@ Only the collections linked from *Settings → Menu* are open to search engines,
 - **Storage:** it works with whatever Sveltia is signed in with (`backend.ts`).
   - **GitHub:** it uses Sveltia's token (localStorage `sveltia-cms.user`), and each save is one commit.
   - **Local repository:** it opens the folder Sveltia was given. Sveltia keeps that folder's handle in IndexedDB (`github:<owner>/<repo>` › `file-system-handles` › `root_dir_handle`). Chrome asks for permission once, files are written directly, and you commit them yourself.
-- **Columns:** they come from `public/admin/config.yml`, so new fields show up automatically. Choose which are shown with "Columns" (remembered per collection).
+- **Columns:** they come from `public/admin/config.yml`, so new fields show up automatically.
+  - Choose which are shown with "Columns", drag a header to reorder, and drag its right edge to resize. All three are remembered per collection; "Columns" also has a reset.
+  - Settings that only the table view uses (Sveltia never sees them) are in `src/admin-table/settings.ts`. For works:
+    - the image fields only offer that work's own images (the ones it references, plus media files named after it), and uploads from there are named after the work
+    - `thumbnail` is shown as a chooser over the work's images, still stored as a number
 - **Editing by field type:**
   - text and numbers: click to edit, Enter to save
   - yes/no fields: checkboxes, showing the field's default when the file has no value
@@ -97,8 +101,12 @@ Only the collections linked from *Settings → Menu* are open to search engines,
 - **Media browser:** the "Media" button, or + on an image cell, opens the media folders from the config.
   - It searches by file name, shows a thumbnail grid, and uploads files dropped on it.
   - Uploads made there are saved with the next Save, even if no entry uses them yet.
+- **Hover preview:** hovering an image shows a larger version below it. It ignores the mouse, so clicks still go through.
+- **Caching:** loaded collections are kept in this browser (IndexedDB `atelier-table`), so the table opens instantly from the cached copy, then refreshes.
+  - **On GitHub:** a refresh compares Git object ids and downloads only files that changed.
+  - **Your edits:** entries you've already edited aren't replaced by a refresh; saving reports any clash.
 - **Thumbnails:** they load only as they come near the screen.
-  - **Live site:** they come from `/admin/thumbs.json`, built with the site.
+  - **Live site:** they come from `/admin/thumbs.json`, built with the site (240px thumbnails and 720px previews).
   - **Everywhere else** (images newer than the last build, local folders, `bun dev`, where that list is empty because dev doesn't resize images): the browser reads the image and shrinks it to 240px itself, a few at a time.
 - **Missing features:** it doesn't create or delete entries; do that in Sveltia (each row's ↗ opens it there).
 

@@ -7,7 +7,9 @@ import {
   ConflictError,
   blobToBase64,
   commit,
+  blobTexts,
   fetchRaw,
+  folderIndex,
   listFolder,
   loadFiles,
   loadFolder,
@@ -30,7 +32,12 @@ export interface Change {
 export interface Backend {
   kind: "github" | "local";
   label: string;
+  /** The folder's files as last loaded (from this browser's cache), if any; instant. */
+  cachedFolder(folder: string): Promise<RepoFile[] | undefined>;
+  /** The folder's current files. Only files that changed since the cached copy are downloaded. */
   loadFolder(folder: string): Promise<RepoFile[]>;
+  /** Tell the cache about files just written. */
+  remember(folder: string, files: RepoFile[]): Promise<void>;
   /** File names in a folder (e.g. a media folder), without reading them. */
   listFolder(folder: string): Promise<string[]>;
   readBlob(path: string): Promise<Blob>;
@@ -57,6 +64,53 @@ const clashError = (paths: string[]) =>
       `Copy your edits, reload, and apply them again.`
   );
 
+// ---------------------------------------------------------------- cache
+
+// Loaded folders are kept in IndexedDB (per backend), so the table opens instantly and
+// later loads only fetch what changed. Entries carry the Git object id where known.
+interface CachedFile extends RepoFile {
+  oid?: string;
+}
+
+function cacheDB(): Promise<IDBDatabase> {
+  return new Promise((resolve, reject) => {
+    const open = indexedDB.open("atelier-table", 1);
+    open.onupgradeneeded = () => open.result.createObjectStore("folders");
+    open.onsuccess = () => resolve(open.result);
+    open.onerror = () => reject(open.error);
+  });
+}
+
+async function cacheGet(key: string): Promise<CachedFile[] | undefined> {
+  try {
+    const db = await cacheDB();
+    return await new Promise((resolve) => {
+      const req = db.transaction("folders").objectStore("folders").get(key);
+      req.onsuccess = () => resolve(req.result ?? undefined);
+      req.onerror = () => resolve(undefined);
+    });
+  } catch {
+    return undefined;
+  }
+}
+
+async function cacheSet(key: string, files: CachedFile[]) {
+  try {
+    const db = await cacheDB();
+    db.transaction("folders", "readwrite").objectStore("folders").put(files, key);
+  } catch {
+    // caching is best-effort
+  }
+}
+
+async function cacheMerge(key: string, files: RepoFile[]) {
+  const cached = (await cacheGet(key)) ?? [];
+  const byName = new Map(cached.map((f) => [f.name, f]));
+  // No object id for files we wrote ourselves: the next load re-fetches just those.
+  for (const f of files) byName.set(f.name, { name: f.name, text: f.text });
+  await cacheSet(key, [...byName.values()]);
+}
+
 // ---------------------------------------------------------------- GitHub
 
 export function githubBackend(token: string, repo: Repo): Backend {
@@ -64,11 +118,29 @@ export function githubBackend(token: string, repo: Repo): Backend {
   return {
     kind: "github",
     label: `GitHub · ${repo.owner}/${repo.name}`,
+    cachedFolder: (folder) => cacheGet(`github:${repo.owner}/${repo.name}@${repo.branch}:${folder}`),
     async loadFolder(folder) {
-      const r = await loadFolder(token, repo, folder);
-      headOid = r.headOid;
-      return r.files;
+      const key = `github:${repo.owner}/${repo.name}@${repo.branch}:${folder}`;
+      const cached = new Map(((await cacheGet(key)) ?? []).filter((f) => f.oid).map((f) => [f.oid!, f.text]));
+      if (!cached.size) {
+        // First visit: one request with every file's text.
+        const r = await loadFolder(token, repo, folder);
+        headOid = r.headOid;
+        await cacheSet(key, r.files);
+        return r.files;
+      }
+      const index = await folderIndex(token, repo, folder);
+      headOid = index.headOid;
+      const missing = index.entries.filter((e) => !cached.has(e.oid)).map((e) => e.oid);
+      const fetched = missing.length ? await blobTexts(token, repo, missing) : new Map<string, string>();
+      const files: CachedFile[] = index.entries.flatMap((e) => {
+        const text = cached.get(e.oid) ?? fetched.get(e.oid);
+        return text == null ? [] : [{ name: e.name, oid: e.oid, text }];
+      });
+      await cacheSet(key, files);
+      return files.map(({ name, text }) => ({ name, text }));
     },
+    remember: (folder, files) => cacheMerge(`github:${repo.owner}/${repo.name}@${repo.branch}:${folder}`, files),
     listFolder: (folder) => listFolder(token, repo, folder),
     readBlob: (path) => fetchRaw(token, repo, path),
     async save(changes, message) {
@@ -148,14 +220,17 @@ export function localBackend(root: FileSystemDirectoryHandle): Backend {
   return {
     kind: "local",
     label: `Local folder · ${root.name}`,
+    cachedFolder: (folder) => cacheGet(`local:${root.name}:${folder}`),
     async loadFolder(folder) {
       const dir = await dirAt(root, folder);
       const files: RepoFile[] = [];
       for await (const [name, handle] of (dir as any).entries() as AsyncIterable<[string, FileSystemHandle]>) {
         if (handle.kind === "file") files.push({ name, text: await (await (handle as FileSystemFileHandle).getFile()).text() });
       }
+      await cacheSet(`local:${root.name}:${folder}`, files);
       return files;
     },
+    remember: (folder, files) => cacheMerge(`local:${root.name}:${folder}`, files),
     async listFolder(folder) {
       const names: string[] = [];
       try {

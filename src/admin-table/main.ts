@@ -26,6 +26,7 @@ import {
   type FieldConfig,
 } from "./model";
 import { prepareUpload, slugifyBase } from "./images";
+import { FIELD_OPTIONS } from "./settings";
 
 // ---------------------------------------------------------------- state
 
@@ -57,7 +58,11 @@ const state = {
   sort: undefined as { key: string; dir: 1 | -1 } | undefined,
   uploads: new Map<string, Upload>(),
   thumbs: {} as Record<string, string>,
+  previews: {} as Record<string, string>,
   rawThumbs: new Map<string, Promise<string>>(),
+  rawPreviews: new Map<string, Promise<string>>(),
+  order: [] as string[],
+  widths: {} as Record<string, number>,
   relations: new Map<string, Promise<Entry[]>>(),
   mediaLists: new Map<string, Promise<string[]>>(),
   saving: false,
@@ -139,7 +144,8 @@ function allMediaFolders(): MediaFolder[] {
 
 const stageUploads = (col: Column, files: File[]) => stageUploadsTo(mediaFolderFor(col), files);
 
-async function stageUploadsTo(folder: MediaFolder, files: File[], keep = false): Promise<string[]> {
+/** `baseName` names uploads after an entry ("<slug>-2.webp") instead of the file. */
+async function stageUploadsTo(folder: MediaFolder, files: File[], keep = false, baseName?: string): Promise<string[]> {
   const { media, pub } = folder;
   const existing = new Set(await listMedia(folder).catch(() => [] as string[]));
   const paths: string[] = [];
@@ -147,7 +153,7 @@ async function stageUploadsTo(folder: MediaFolder, files: File[], keep = false):
     if (!file.type.startsWith("image/")) continue;
     status(`Preparing ${file.name}…`);
     const { blob, ext } = await prepareUpload(file);
-    const base = slugifyBase(file.name);
+    const base = baseName ? slugifyBase(baseName) : slugifyBase(file.name);
     let name = `${base}.${ext}`;
     for (let i = 2; existing.has(name) || state.thumbs[`${pub}/${name}`] || state.uploads.has(`${pub}/${name}`); i++) name = `${base}-${i}.${ext}`;
     const publicPath = `${pub}/${name}`;
@@ -185,10 +191,10 @@ async function limited<T>(fn: () => Promise<T>): Promise<T> {
   }
 }
 
-async function shrink(blob: Blob): Promise<Blob> {
+async function shrink(blob: Blob, size = 240): Promise<Blob> {
   try {
     const bmp = await createImageBitmap(blob);
-    const scale = Math.min(1, 240 / Math.max(bmp.width, bmp.height));
+    const scale = Math.min(1, size / Math.max(bmp.width, bmp.height));
     if (scale === 1) {
       bmp.close();
       return blob;
@@ -217,6 +223,62 @@ function thumbFor(path: string): string | Promise<string> {
   }
   return p;
 }
+
+/** A larger version for the hover preview: the build's preview size, or shrunk to 720px. */
+function previewFor(path: string): string | Promise<string> {
+  const up = state.uploads.get(path);
+  if (up) return up.url;
+  const built = state.previews[path];
+  if (built) return built;
+  let p = state.rawPreviews.get(path);
+  if (!p) {
+    p = limited(async () => URL.createObjectURL(await shrink(await state.backend.readBlob(stripSlash(path)), 720)));
+    state.rawPreviews.set(path, p);
+  }
+  return p;
+}
+
+// Hovering a thumbnail shows a larger version just below it. The preview ignores the
+// mouse (pointer-events: none), so the thumbnail and its buttons stay clickable.
+const preview = h("div", { class: "preview", hidden: true }, h("img", { alt: "" }));
+let previewTimer: number | undefined;
+let previewFor_: HTMLImageElement | undefined;
+function showPreview(img: HTMLImageElement) {
+  previewFor_ = img;
+  const target = preview.querySelector("img")!;
+  const place = () => {
+    if (previewFor_ !== img) return;
+    const r = img.getBoundingClientRect();
+    preview.hidden = false;
+    const w = preview.offsetWidth, ph = preview.offsetHeight;
+    preview.style.left = `${Math.max(8, Math.min(r.left, innerWidth - w - 8))}px`;
+    const below = r.bottom + 6;
+    preview.style.top = `${below + ph > innerHeight - 8 ? Math.max(8, r.top - ph - 6) : below}px`;
+  };
+  target.onload = place;
+  const src = previewFor(img.dataset.path!);
+  if (typeof src === "string") target.src = src;
+  else {
+    target.removeAttribute("src");
+    src.then((u) => previewFor_ === img && (target.src = u)).catch(() => {});
+  }
+  if (target.complete && target.naturalWidth) place();
+}
+function hidePreview() {
+  clearTimeout(previewTimer);
+  previewFor_ = undefined;
+  preview.hidden = true;
+}
+document.addEventListener("mouseover", (e) => {
+  const img = (e.target as HTMLElement).closest?.("img.thumb") as HTMLImageElement | null;
+  if (!img || img === previewFor_) return;
+  clearTimeout(previewTimer);
+  previewTimer = window.setTimeout(() => showPreview(img), 250);
+});
+document.addEventListener("mouseout", (e) => {
+  if ((e.target as HTMLElement).closest?.("img.thumb")) hidePreview();
+});
+addEventListener("scroll", hidePreview, true);
 
 const lazyImages = new IntersectionObserver(
   (items) => {
@@ -267,16 +329,46 @@ function fileDropTarget(el: HTMLElement, onFiles: (files: File[]) => void) {
   };
 }
 
+// ---------------------------------------------------------------- entry images
+
+/** Image paths an entry references in its image fields, in field order. */
+function referencedImages(entry: Entry): string[] {
+  const out: string[] = [];
+  for (const col of state.columns) {
+    const v = entry.data[col.key];
+    if (col.kind === "image" && v) out.push(String(v));
+    if (col.kind === "images" && Array.isArray(v)) out.push(...v.map(String));
+  }
+  return [...new Set(out)];
+}
+
+/** An entry's images: the ones it references plus media files named after it
+ *  ("<slug>…" or "<id>-…"), including uploads waiting to be saved. */
+async function entryImages(entry: Entry, folder: MediaFolder): Promise<string[]> {
+  const names = await listMedia(folder).catch(() => [] as string[]);
+  const prefixes = [entry.slug, entry.data.id != null && entry.data.id !== "" ? `${entry.data.id}-` : ""].filter(Boolean).map((p) => p.toLowerCase());
+  const own = (name: string) => prefixes.some((p) => name.toLowerCase().startsWith(p));
+  const pending = [...state.uploads.keys()].filter((p) => p.startsWith(folder.pub + "/") && own(p.split("/").pop()!));
+  const files = names.filter(own).map((n) => `${folder.pub}/${n}`).sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
+  return [...new Set([...referencedImages(entry), ...pending, ...files])];
+}
+
 // ---------------------------------------------------------------- media browser
 
 /**
  * Browse, search and upload images in the media folders. With `pick`, clicking images
  * selects them and the promise resolves with their paths ([] when cancelled).
  */
-function mediaBrowser(opts: { folder?: MediaFolder; pick?: "one" | "many" } = {}): Promise<string[]> {
-  const folders = allMediaFolders();
-  if (opts.folder && !folders.some((f) => f.media === opts.folder!.media)) folders.unshift(opts.folder);
-  let folder = folders.find((f) => f.media === opts.folder?.media) ?? folders[0];
+function mediaBrowser(opts: { folder?: MediaFolder; pick?: "one" | "many"; entry?: Entry } = {}): Promise<string[]> {
+  // With `entry`, only that entry's images are shown (one "This work" tab) and uploads
+  // are named after it.
+  const ENTRY = "\u0000entry";
+  const folders: MediaFolder[] = opts.entry
+    ? [{ label: `This ${(state.collection?.label_singular ?? "entry").toLowerCase()}`, media: ENTRY, pub: opts.folder!.pub }]
+    : allMediaFolders();
+  if (!opts.entry && opts.folder && !folders.some((f) => f.media === opts.folder!.media)) folders.unshift(opts.folder);
+  let folder = opts.entry ? folders[0] : folders.find((f) => f.media === opts.folder?.media) ?? folders[0];
+  const uploadFolder = () => (opts.entry ? opts.folder! : folder);
   const selected: string[] = [];
   let resolveResult: (paths: string[]) => void;
   const result = new Promise<string[]>((r) => (resolveResult = r));
@@ -292,15 +384,18 @@ function mediaBrowser(opts: { folder?: MediaFolder; pick?: "one" | "many" } = {}
   const render = async () => {
     tabs.querySelectorAll("button").forEach((b) => b.classList.toggle("on", b.dataset.media === folder.media));
     grid.replaceChildren(h("p", { class: "media-empty" }, "Loading…"));
-    let names: string[];
+    let paths: string[];
     try {
-      names = await listMedia(folder);
+      if (opts.entry) paths = await entryImages(opts.entry, opts.folder!);
+      else {
+        const names = await listMedia(folder);
+        const pending = [...state.uploads.entries()].filter(([, u]) => u.repoPath.startsWith(folder.media + "/")).map(([p]) => p);
+        paths = [...pending, ...names.map((n) => `${folder.pub}/${n}`).filter((p) => !pending.includes(p)).sort((a, b) => a.localeCompare(b))];
+      }
     } catch (e) {
       grid.replaceChildren(h("p", { class: "media-empty" }, String((e as Error).message ?? e)));
       return;
     }
-    const pending = [...state.uploads.entries()].filter(([, u]) => u.repoPath.startsWith(folder.media + "/")).map(([p]) => p);
-    const paths = [...pending, ...names.map((n) => `${folder.pub}/${n}`).filter((p) => !pending.includes(p)).sort((a, b) => a.localeCompare(b))];
     const q = search.value.trim().toLowerCase();
     const shown = q ? paths.filter((p) => p.split("/").pop()!.toLowerCase().includes(q)) : paths;
     info.textContent = `${shown.length} of ${paths.length} images`;
@@ -330,6 +425,7 @@ function mediaBrowser(opts: { folder?: MediaFolder; pick?: "one" | "many" } = {}
       })
     );
     if (!shown.length) grid.append(h("p", { class: "media-empty" }, q ? "No matches." : "No images yet. Drop some here."));
+    if (opts.entry) info.textContent += " (its own: referenced, or named after it)";
   };
 
   for (const f of folders) {
@@ -343,7 +439,7 @@ function mediaBrowser(opts: { folder?: MediaFolder; pick?: "one" | "many" } = {}
   search.addEventListener("input", () => render());
 
   const addFiles = async (files: File[]) => {
-    const added = await stageUploadsTo(folder, files, true);
+    const added = await stageUploadsTo(uploadFolder(), files, true, opts.entry?.slug);
     if (opts.pick === "many") selected.push(...added);
     if (opts.pick === "one" && added.length) {
       chosen = [added[0]];
@@ -487,6 +583,34 @@ async function markdownEditor(entry: Entry, col: Column) {
   if (md !== null && md !== (entry.data[col.key] ?? "")) setValue(entry, col, md);
 }
 
+const pickerFor = (entry: Entry, col: Column, pick: "one" | "many") => ({
+  folder: mediaFolderFor(col),
+  pick,
+  entry: col.options.entryImages ? entry : undefined,
+});
+
+/** Choose one of `paths` (the images a thumbnail number can point at). */
+function imageChoicePicker(anchor: HTMLElement, paths: string[], current: number, onPick: (n: number) => void) {
+  const grid = h(
+    "div",
+    { class: "choice-grid" },
+    ...paths.map((p, i) =>
+      h(
+        "button",
+        {
+          type: "button",
+          class: `choice${i + 1 === current ? " selected" : ""}`,
+          title: `${i + 1}: ${p.split("/").pop()}`,
+          on: { click: () => (onPick(i + 1), closePopover()) },
+        },
+        thumb(p),
+        h("span", {}, String(i + 1))
+      )
+    )
+  );
+  popover(anchor, h("div", {}, h("p", { class: "choice-title" }, "Thumbnail"), grid));
+}
+
 // ---------------------------------------------------------------- cells
 
 const cells = new Map<string, HTMLTableCellElement>();
@@ -512,7 +636,8 @@ function inlineEditor(td: HTMLElement, entry: Entry, col: Column, make: () => HT
     fillCell(td as HTMLTableCellElement, entry, col);
   };
   el.addEventListener("blur", () => finish(true));
-  el.addEventListener("keydown", (e: KeyboardEvent) => {
+  el.addEventListener("keydown", (ev: Event) => {
+    const e = ev as KeyboardEvent;
     if (e.key === "Escape") finish(false);
     if (e.key === "Enter" && (el.tagName === "INPUT" || e.metaKey || e.ctrlKey)) {
       e.preventDefault();
@@ -625,7 +750,7 @@ function fillCell(td: HTMLTableCellElement, entry: Entry, col: Column) {
             {
               class: "tile",
               title: "Click to choose another image",
-              on: { click: async (e: Event) => { if ((e.target as HTMLElement).closest(".x")) return; const [p] = await mediaBrowser({ folder: mediaFolderFor(col), pick: "one" }); if (p) setValue(entry, col, p); } },
+              on: { click: async (e: Event) => { if ((e.target as HTMLElement).closest(".x")) return; const [p] = await mediaBrowser(pickerFor(entry, col, "one")); if (p) setValue(entry, col, p); } },
             },
             thumb(String(v)),
             h("button", { type: "button", class: "x", title: "Remove image", on: { click: () => setValue(entry, col, null) } }, "×")
@@ -637,12 +762,12 @@ function fillCell(td: HTMLTableCellElement, entry: Entry, col: Column) {
             type: "button",
             class: "add-tile",
             title: "Drop an image, or click to choose or upload one",
-            on: { click: async () => { const [p] = await mediaBrowser({ folder: mediaFolderFor(col), pick: "one" }); if (p) setValue(entry, col, p); } },
+            on: { click: async () => { const [p] = await mediaBrowser(pickerFor(entry, col, "one")); if (p) setValue(entry, col, p); } },
           }, "+")
         );
       }
       fileDropTarget(td, async (files) => {
-        const [p] = await stageUploads(col, files.slice(0, 1));
+        const [p] = await stageUploadsTo(mediaFolderFor(col), files.slice(0, 1), false, col.options.entryImages ? entry.slug : undefined);
         if (p) setValue(entry, col, p);
       });
       td.replaceChildren(box);
@@ -687,13 +812,34 @@ function fillCell(td: HTMLTableCellElement, entry: Entry, col: Column) {
           type: "button",
           class: "add-tile",
           title: "Drop images, or click to choose or upload",
-          on: { click: async () => { const added = await mediaBrowser({ folder: mediaFolderFor(col), pick: "many" }); if (added.length) setValue(entry, col, [...list, ...added]); } },
+          on: { click: async () => { const added = await mediaBrowser(pickerFor(entry, col, "many")); if (added.length) setValue(entry, col, [...list, ...added.filter((p) => !list.includes(p))]); } },
         }, "+")
       );
       fileDropTarget(td, async (files) => {
-        const added = await stageUploads(col, files);
+        const added = await stageUploadsTo(mediaFolderFor(col), files, false, col.options.entryImages ? entry.slug : undefined);
         if (added.length) setValue(entry, col, [...list, ...added]);
       });
+      td.replaceChildren(box);
+      break;
+    }
+    case "imagechoice": {
+      // Stored as a position in the listed image fields (1 = the first image).
+      const paths = col.options.pickFrom!.flatMap((k) => {
+        const x = entry.data[k];
+        return Array.isArray(x) ? x.map(String) : x ? [String(x)] : [];
+      });
+      const n = Number(v) >= 1 && Number(v) <= paths.length ? Number(v) : 1;
+      if (!paths.length) {
+        td.replaceChildren(h("div", { class: "text muted", title: "No images yet" }, ""));
+        break;
+      }
+      const box = h(
+        "span",
+        { class: "tile choice-cell", title: paths.length > 1 ? "Click to choose the thumbnail" : "Only one image" },
+        thumb(paths[n - 1]),
+        h("span", { class: "badge" }, v == null ? "1" : String(n))
+      );
+      if (paths.length > 1) box.addEventListener("click", () => imageChoicePicker(box, paths, n, (k) => setValue(entry, col, k === 1 ? null : k)));
       td.replaceChildren(box);
       break;
     }
@@ -744,7 +890,94 @@ function fillCell(td: HTMLTableCellElement, entry: Entry, col: Column) {
 // ---------------------------------------------------------------- table
 
 function visibleColumns() {
-  return state.columns.filter((c) => !state.hidden.has(c.key));
+  const rank = (k: string) => {
+    const i = state.order.indexOf(k);
+    return i < 0 ? state.order.length + state.columns.findIndex((c) => c.key === k) : i;
+  };
+  return state.columns.filter((c) => !state.hidden.has(c.key)).sort((a, b) => rank(a.key) - rank(b.key));
+}
+
+const DEFAULT_WIDTH: Record<string, number> = {
+  text: 200, longtext: 260, number: 84, boolean: 76, select: 140, relation: 240, image: 84,
+  images: 280, imagechoice: 84, strings: 190, markdown: 280, unsupported: 160,
+};
+const widthOf = (col: Column) => state.widths[col.key] ?? Math.max(DEFAULT_WIDTH[col.kind] ?? 160, col.label.length * 8 + 28);
+
+const layoutKey = () => `atelier-table.layout.${state.collection?.name}`;
+function loadLayout() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(layoutKey()) || "null");
+    state.order = Array.isArray(saved?.order) ? saved.order : [];
+    state.widths = saved?.widths && typeof saved.widths === "object" ? saved.widths : {};
+  } catch {
+    state.order = [];
+    state.widths = {};
+  }
+}
+function saveLayout() {
+  try {
+    localStorage.setItem(layoutKey(), JSON.stringify({ order: state.order, widths: state.widths }));
+  } catch {}
+}
+
+/** Header cell: click to sort, drag to reorder, drag the right edge to resize. */
+function headerCell(col: Column, colEl: HTMLTableColElement, table: HTMLTableElement) {
+  const sorted = state.sort?.key === col.key ? (state.sort.dir === 1 ? " ▲" : " ▼") : "";
+  const th = h("th", { class: `k-${col.kind}`, title: col.field.hint ?? col.key, draggable: "true" }, h("span", { class: "th-label" }, col.label + sorted));
+  let resized = false;
+  th.addEventListener("click", () => {
+    if (resized) return void (resized = false);
+    state.sort = state.sort?.key === col.key ? (state.sort.dir === 1 ? { key: col.key, dir: -1 } : undefined) : { key: col.key, dir: 1 };
+    renderTable();
+  });
+  th.addEventListener("dragstart", (e: DragEvent) => {
+    e.dataTransfer!.setData("text/x-column", col.key);
+    e.dataTransfer!.effectAllowed = "move";
+  });
+  th.addEventListener("dragover", (e: DragEvent) => {
+    if (!e.dataTransfer?.types.includes("text/x-column")) return;
+    e.preventDefault();
+    th.classList.add("drop-col");
+  });
+  th.addEventListener("dragleave", () => th.classList.remove("drop-col"));
+  th.addEventListener("drop", (e: DragEvent) => {
+    th.classList.remove("drop-col");
+    const from = e.dataTransfer?.getData("text/x-column");
+    if (!from || from === col.key) return;
+    e.preventDefault();
+    const keys = visibleColumns().map((c) => c.key).filter((k) => k !== from);
+    keys.splice(keys.indexOf(col.key), 0, from);
+    const hiddenKeys = state.columns.map((c) => c.key).filter((k) => !keys.includes(k));
+    state.order = [...keys, ...hiddenKeys];
+    saveLayout();
+    renderTable();
+  });
+  const grip = h("span", { class: "resizer", title: "Drag to resize" });
+  grip.addEventListener("dragstart", (e) => e.preventDefault());
+  grip.addEventListener("mousedown", (e: MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    th.draggable = false;
+    const startX = e.clientX, startW = widthOf(col), startTable = table.offsetWidth;
+    const move = (ev: MouseEvent) => {
+      const w = Math.max(50, Math.round(startW + ev.clientX - startX));
+      state.widths[col.key] = w;
+      colEl.style.width = `${w}px`;
+      table.style.width = `${startTable + w - startW}px`;
+    };
+    const up = () => {
+      removeEventListener("mousemove", move);
+      removeEventListener("mouseup", up);
+      th.draggable = true;
+      resized = true;
+      setTimeout(() => (resized = false), 0);
+      saveLayout();
+    };
+    addEventListener("mousemove", move);
+    addEventListener("mouseup", up);
+  });
+  th.append(grip);
+  return th;
 }
 
 function sortValue(entry: Entry, col: Column): string | number {
@@ -783,32 +1016,17 @@ function renderTable() {
   cells.clear();
   const cols = visibleColumns();
   const rows = rowsToShow();
-  const thead = h(
-    "thead",
-    {},
-    h(
-      "tr",
-      {},
-      h("th", { class: "open" }, ""),
-      ...cols.map((col) => {
-        const sorted = state.sort?.key === col.key ? (state.sort.dir === 1 ? " ▲" : " ▼") : "";
-        return h(
-          "th",
-          {
-            class: `k-${col.kind}`,
-            title: col.field.hint ?? col.key,
-            on: {
-              click: () => {
-                state.sort = state.sort?.key === col.key ? (state.sort.dir === 1 ? { key: col.key, dir: -1 } : undefined) : { key: col.key, dir: 1 };
-                renderTable();
-              },
-            },
-          },
-          col.label + sorted
-        );
-      })
-    )
-  );
+  // Fixed layout with a <colgroup>, so widths are exact and resizing is cheap.
+  const table = h("table", { class: "grid-table" });
+  const colEls = cols.map((col) => {
+    const c = h("col") as HTMLTableColElement;
+    c.style.width = `${widthOf(col)}px`;
+    return c;
+  });
+  const openCol = h("col") as HTMLTableColElement;
+  openCol.style.width = "32px";
+  table.style.width = `${32 + cols.reduce((sum, c) => sum + widthOf(c), 0)}px`;
+  const thead = h("thead", {}, h("tr", {}, h("th", { class: "open" }, ""), ...cols.map((col, i) => headerCell(col, colEls[i], table))));
   const tbody = h("tbody");
   for (const entry of rows) {
     const tr = h(
@@ -828,7 +1046,8 @@ function renderTable() {
     }
     tbody.append(tr);
   }
-  $("#grid").replaceChildren(h("table", {}, thead, tbody));
+  table.append(h("colgroup", {}, openCol, ...colEls), thead, tbody);
+  $("#grid").replaceChildren(table);
   $("#count").textContent = `${rows.length} of ${state.entries.length}`;
 }
 
@@ -870,7 +1089,15 @@ function columnsMenu(anchor: HTMLElement) {
       )
     )
   );
-  popover(anchor, box);
+  const reset = h("button", { type: "button", class: "reset-layout" }, "Reset column order and widths");
+  reset.addEventListener("click", () => {
+    state.order = [];
+    state.widths = {};
+    saveLayout();
+    renderTable();
+    closePopover();
+  });
+  popover(anchor, h("div", {}, box, reset));
 }
 
 // ---------------------------------------------------------------- load & save
@@ -883,26 +1110,63 @@ async function loadCollection(name: string) {
   const collection = state.config.collections.find((c) => c.name === name)!;
   state.collection = collection;
   // The title-like column comes first, next to the open-in-Sveltia link.
-  const cols = columnsOf(collection);
+  const cols = columnsOf(collection, FIELD_OPTIONS[collection.name]);
   const first = cols.findIndex((c) => c.key === "title");
   if (first > 0) cols.unshift(...cols.splice(first, 1));
   state.columns = cols;
   state.hidden = loadHidden();
+  loadLayout();
   state.sort = undefined;
   state.uploads.clear();
-  status(`Loading ${collection.label ?? name}…`);
-  $("#grid").replaceChildren();
-  const files = await state.backend.loadFolder(collection.folder!);
-  state.entries = files
-    .filter((f) => f.name.endsWith(".md"))
-    .map((f) => parseEntry(f.name, `${collection.folder}/${f.name}`, f.text))
-    .sort((a, b) => String(a.data.title ?? a.slug).localeCompare(String(b.data.title ?? b.slug)));
   try {
     localStorage.setItem("atelier-table.collection", name);
   } catch {}
-  renderTable();
-  updateToolbar();
-  status(`${state.entries.length} entries loaded.`);
+  const toEntries = (files: { name: string; text: string }[]) =>
+    files
+      .filter((f) => f.name.endsWith(".md"))
+      .map((f) => parseEntry(f.name, `${collection.folder}/${f.name}`, f.text))
+      .sort((a, b) => String(a.data.title ?? a.slug).localeCompare(String(b.data.title ?? b.slug)));
+
+  // Show the cached copy straight away, then bring it up to date.
+  const cached = await state.backend.cachedFolder(collection.folder!);
+  if (cached?.length) {
+    state.entries = toEntries(cached);
+    renderTable();
+    updateToolbar();
+    status(`${state.entries.length} entries (cached). Checking for changes…`);
+  } else {
+    $("#grid").replaceChildren();
+    status(`Loading ${collection.label ?? name}…`);
+  }
+  const fresh = await state.backend.loadFolder(collection.folder!);
+  if (state.collection !== collection) return; // switched away meanwhile
+  if (!cached?.length) {
+    state.entries = toEntries(fresh);
+    renderTable();
+    updateToolbar();
+    return status(`${state.entries.length} entries loaded.`);
+  }
+  // Merge: replace entries that changed elsewhere, unless you've already edited them
+  // (saving those reports the clash rather than overwriting).
+  const before = new Map(state.entries.map((e) => [e.name, e]));
+  const freshNames = new Set(fresh.map((f) => f.name));
+  let changed = 0;
+  const merged = toEntries(fresh).map((e) => {
+    const old = before.get(e.name);
+    if (!old) return changed++, e;
+    if (old.original === e.original) return old;
+    if (old.dirty.size) return old;
+    changed++;
+    return e;
+  });
+  for (const [n, e] of before) if (!freshNames.has(n) && e.dirty.size) merged.push(e);
+  const removed = [...before.keys()].filter((n) => !freshNames.has(n)).length;
+  if (changed || removed) {
+    state.entries = merged.sort((a, b) => String(a.data.title ?? a.slug).localeCompare(String(b.data.title ?? b.slug)));
+    renderTable();
+    updateToolbar();
+  }
+  status(changed || removed ? `${state.entries.length} entries; ${changed + removed} updated from ${state.backend.kind === "local" ? "the folder" : "GitHub"}.` : `${state.entries.length} entries, up to date.`);
 }
 
 async function save() {
@@ -933,6 +1197,10 @@ async function save() {
           : `Table view: update ${dirty.length} ${label.toLowerCase()}`;
 
     const result = await state.backend.save(changes, message);
+    await state.backend.remember(
+      state.collection!.folder!,
+      [...texts].map(([e, text]) => ({ name: e.name, text }))
+    );
 
     for (const [e, text] of texts) {
       const fresh = parseEntry(e.name, e.path, text);
@@ -1030,9 +1298,15 @@ async function start() {
   if (!backend) return;
   state.backend = backend;
   $("#backend").textContent = backend.label;
-  state.thumbs = await fetch("/admin/thumbs.json")
+  // { path: [thumbnail, preview] } (older builds: { path: thumbnail })
+  const manifest: Record<string, string | [string, string]> = await fetch("/admin/thumbs.json")
     .then((r) => (r.ok ? r.json() : {}))
     .catch(() => ({}));
+  for (const [path, v] of Object.entries(manifest)) {
+    state.thumbs[path] = Array.isArray(v) ? v[0] : v;
+    if (Array.isArray(v)) state.previews[path] = v[1];
+  }
+  document.body.append(preview);
 
   const folders = (config.collections as CollectionConfig[]).filter((c) => c.folder);
   const select = $<HTMLSelectElement>("#collection");

@@ -28,6 +28,8 @@ async function gql<T>(token: string, query: string, variables: Record<string, un
 export interface RepoFile {
   name: string;
   text: string;
+  /** Git object id, when read from GitHub */
+  oid?: string;
 }
 
 /** Every file in `folder` (not recursive) with its text, plus the branch head. */
@@ -35,7 +37,7 @@ export async function loadFolder(token: string, repo: Repo, folder: string) {
   const data = await gql<{
     repository: {
       ref: { target: { oid: string } } | null;
-      object: { entries: { name: string; type: string; object: { text: string | null } | null }[] } | null;
+      object: { entries: { name: string; type: string; oid: string; object: { text: string | null } | null }[] } | null;
     };
   }>(
     token,
@@ -43,7 +45,7 @@ export async function loadFolder(token: string, repo: Repo, folder: string) {
       repository(owner: $owner, name: $name) {
         ref(qualifiedName: $ref) { target { oid } }
         object(expression: $expr) {
-          ... on Tree { entries { name type object { ... on Blob { text } } } }
+          ... on Tree { entries { name type oid object { ... on Blob { text } } } }
         }
       }
     }`,
@@ -53,8 +55,49 @@ export async function loadFolder(token: string, repo: Repo, folder: string) {
   if (!headOid) throw new Error(`Branch ${repo.branch} not found`);
   const files: RepoFile[] = (data.repository.object?.entries ?? [])
     .filter((e) => e.type === "blob" && e.object?.text != null)
-    .map((e) => ({ name: e.name, text: e.object!.text! }));
+    .map((e) => ({ name: e.name, text: e.object!.text!, oid: e.oid }));
   return { headOid, files };
+}
+
+/** Names and Git object ids of the files in `folder`, plus the branch head. */
+export async function folderIndex(token: string, repo: Repo, folder: string) {
+  const data = await gql<{
+    repository: {
+      ref: { target: { oid: string } } | null;
+      object: { entries: { name: string; type: string; oid: string }[] } | null;
+    };
+  }>(
+    token,
+    `query($owner: String!, $name: String!, $ref: String!, $expr: String!) {
+      repository(owner: $owner, name: $name) {
+        ref(qualifiedName: $ref) { target { oid } }
+        object(expression: $expr) { ... on Tree { entries { name type oid } } }
+      }
+    }`,
+    { owner: repo.owner, name: repo.name, ref: `refs/heads/${repo.branch}`, expr: `${repo.branch}:${folder}` }
+  );
+  const headOid = data.repository.ref?.target.oid;
+  if (!headOid) throw new Error(`Branch ${repo.branch} not found`);
+  return { headOid, entries: (data.repository.object?.entries ?? []).filter((e) => e.type === "blob") };
+}
+
+/** Texts of blobs by object id, 100 per request. */
+export async function blobTexts(token: string, repo: Repo, oids: string[]): Promise<Map<string, string>> {
+  const out = new Map<string, string>();
+  for (let i = 0; i < oids.length; i += 100) {
+    const batch = oids.slice(i, i + 100);
+    const fields = batch.map((oid, j) => `b${j}: object(oid: "${oid}") { ... on Blob { text } }`).join("\n");
+    const data = await gql<{ repository: Record<string, { text: string | null } | null> }>(
+      token,
+      `query($owner: String!, $name: String!) { repository(owner: $owner, name: $name) { ${fields} } }`,
+      { owner: repo.owner, name: repo.name }
+    );
+    batch.forEach((oid, j) => {
+      const text = data.repository[`b${j}`]?.text;
+      if (text != null) out.set(oid, text);
+    });
+  }
+  return out;
 }
 
 /** File names in `folder` (no contents; cheap even for image folders). */

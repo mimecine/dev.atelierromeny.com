@@ -2,6 +2,7 @@
 // Edits only touch the keys that changed, through the YAML document, so the rest of
 // each file keeps its formatting and comments.
 import { parseDocument, type Document } from "yaml";
+import type { FieldOptions } from "./settings";
 
 export interface FieldConfig {
   name: string;
@@ -25,6 +26,7 @@ export interface FieldConfig {
 export interface CollectionConfig {
   name: string;
   label?: string;
+  label_singular?: string;
   folder?: string;
   media_folder?: string;
   public_folder?: string;
@@ -42,6 +44,7 @@ export type Kind =
   | "images"
   | "strings"
   | "markdown"
+  | "imagechoice"
   | "unsupported";
 
 export interface Column {
@@ -49,6 +52,7 @@ export interface Column {
   kind: Kind;
   key: string;
   label: string;
+  options: FieldOptions;
 }
 
 export function kindOf(f: FieldConfig): Kind | null {
@@ -84,10 +88,11 @@ export function kindOf(f: FieldConfig): Kind | null {
   }
 }
 
-export function columnsOf(collection: CollectionConfig): Column[] {
+export function columnsOf(collection: CollectionConfig, options: Record<string, FieldOptions> = {}): Column[] {
   return collection.fields.flatMap((field) => {
-    const kind = kindOf(field);
-    return kind ? [{ field, kind, key: field.name, label: field.label ?? field.name }] : [];
+    const opts = options[field.name] ?? {};
+    const kind = opts.pickFrom ? "imagechoice" : kindOf(field);
+    return kind ? [{ field, kind, key: field.name, label: field.label ?? field.name, options: opts }] : [];
   });
 }
 
