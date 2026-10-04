@@ -254,7 +254,7 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("works", nargs="*", help="work slugs or .md paths (default: all print-*.md)")
     ap.add_argument("--calibrate", nargs=3, metavar=("WORK", "W_CM", "H_CM"),
-                    help="derive px/cm from a work whose sheet size you measured")
+                    help="derive px/cm from a work whose SHEET (paper edge to paper edge) you measured; W = side that is horizontal in the photo")
     ap.add_argument("--px-per-cm", type=float, help="scale from --calibrate")
     ap.add_argument("--measure", choices=["image", "sheet"], default="image",
                     help="which rectangle goes into w/h (default: image)")
@@ -274,10 +274,22 @@ def main():
         if not r:
             sys.exit(f"no sheet found in {work}")
         sw, sh = r["sheet"]
-        pw, ph = sw / float(wcm), sh / float(hcm)
-        print(f"sheet {sw:.0f} x {sh:.0f} px -> {pw:.2f} / {ph:.2f} px/cm (w / h)")
-        if abs(pw - ph) / max(pw, ph) > 0.04:
-            print("warning: w and h disagree by >4% (W/H swapped, or the photo has perspective)")
+        wcm, hcm = float(wcm), float(hcm)
+        off = lambda a, b: abs(a - b) / max(a, b)
+        print(f"sheet in photo: {sw:.0f} x {sh:.0f} px (ratio {sw / sh:.3f}, "
+              f"{'landscape' if sw > sh else 'portrait'})")
+        print(f"you entered:    {wcm:g} x {hcm:g} cm (ratio {wcm / hcm:.3f})")
+        if off(sw / wcm, sh / hcm) > off(sw / hcm, sh / wcm):
+            print(f"note: W/H look swapped -- W is the side that's horizontal in the photo. "
+                  f"Using {hcm:g} x {wcm:g}.")
+            wcm, hcm = hcm, wcm
+        pw, ph = sw / wcm, sh / hcm
+        print(f"scale: {pw:.2f} px/cm across, {ph:.2f} px/cm down")
+        if off(pw, ph) > 0.04:
+            print(f"warning: the two disagree by {off(pw, ph):.0%}. The sheet's proportions in the "
+                  f"photo don't match what you entered; with W = {wcm:g} the photo says "
+                  f"H = {sh / pw:.1f}, with H = {hcm:g} it says W = {sw / ph:.1f}. "
+                  f"Re-measure, or calibrate from a squarer-cut sheet.")
         print(f"--px-per-cm {(pw + ph) / 2:.2f}")
         return
 
