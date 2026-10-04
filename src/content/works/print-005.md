@@ -19,5 +19,6 @@ year_start: 1968
 note: "Inscription (read from photo): 3/15, 1968"
 sheet_w: 61
 sheet_h: 42.5
+thumbnail: 2
 ---
 

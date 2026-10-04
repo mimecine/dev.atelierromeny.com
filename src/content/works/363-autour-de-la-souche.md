@@ -24,5 +24,6 @@ images:
 tags:
   - painting
   - abstract
+thumbnail: 2
 ---
 

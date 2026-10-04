@@ -26,5 +26,6 @@ tags:
   - still life
   - fruit
   - table
+thumbnail: 2
 ---
 

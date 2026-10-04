@@ -25,5 +25,6 @@ images:
 tags:
   - painting
   - portrait
+thumbnail: 2
 ---
 

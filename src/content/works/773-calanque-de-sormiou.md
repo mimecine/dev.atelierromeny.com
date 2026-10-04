@@ -27,5 +27,6 @@ tags:
   - sea
   - coast
   - Marseille
+thumbnail: 2
 ---
 

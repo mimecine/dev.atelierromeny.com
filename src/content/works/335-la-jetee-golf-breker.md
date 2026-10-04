@@ -23,5 +23,6 @@ images:
 tags:
   - painting
   - landscape
+thumbnail: 2
 ---
 

@@ -28,5 +28,6 @@ tags:
   - painting
   - abstract
   - plant
+thumbnail: 2
 ---
 

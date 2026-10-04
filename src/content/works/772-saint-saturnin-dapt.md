@@ -29,5 +29,6 @@ tags:
   - painting
   - landscape
   - village
+thumbnail: 2
 ---
 

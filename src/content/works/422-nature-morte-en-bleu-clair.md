@@ -25,5 +25,6 @@ tags:
   - still life
   - bottle
   - fruit
+thumbnail: 2
 ---
 

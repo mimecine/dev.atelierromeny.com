@@ -24,5 +24,6 @@ tags:
   - painting
   - landscape
   - autumn
+thumbnail: 2
 ---
 

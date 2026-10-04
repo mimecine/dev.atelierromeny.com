@@ -20,5 +20,6 @@ w: 25
 h: 25.5
 sheet_w: 33.5
 sheet_h: 42.5
+thumbnail: 2
 ---
 

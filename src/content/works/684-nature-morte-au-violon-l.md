@@ -26,5 +26,6 @@ tags:
   - music
   - violin
   - bottle
+thumbnail: 2
 ---
 

@@ -17,5 +17,6 @@ tags:
 year: "1967"
 year_start: 1967
 note: "Inscription (read from photo): 2/10, 1967 -- edition is \"2/10\" written as plain digits"
+thumbnail: 2
 ---
 
