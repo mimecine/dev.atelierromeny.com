@@ -135,6 +135,25 @@ collections:
       - { label: "Extra JS", name: "js", widget: "text", required: false, preview: false }
 
 
+  - name: "photos"
+    label: "Photos"
+    label_singular: "Photo"
+    folder: "src/content/photos"
+    media_folder: "/src/media/photos"
+    public_folder: "/src/media/photos"
+    create: true
+    slug: "{{title}}"
+    identifier_field: "title"
+    summary: "{{title}}"
+    sortable_fields: ["title", "date"]
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Photo", name: "image", widget: "image", required: true }
+      - { label: "Caption", name: "caption", widget: "string", required: false, hint: "One line, shown under the photo" }
+      - { label: "Date", name: "date", widget: "datetime", required: false, date_format: "YYYY-MM-DD", time_format: false, hint: "Newest first on /photos/" }
+      - { label: "Published", name: "published", widget: "boolean", default: true }
+      - { label: "Description", name: "body", widget: "markdown", required: false }
+
   - name: "settings"
     label: "Settings"
     editor:

@@ -31,6 +31,7 @@ Everything is in `src/content/`, and each part can be edited in the CMS:
 | `works/*.md` | One file per work: `id` (inventory number), title, year, size, location, `image`, extra `images`, `thumbnail`, `collections` |
 | `collections/*.md` | Named groups of works. Each has its own page at `/<collection>` and its works at `/<collection>/<work>` |
 | `pages/*.md` | Free pages such as `bio.md`, served at `/<page>`. A page's `image` floats to the right of its text |
+| `photos/*.md` | Photos with a title, caption, optional date and a description (the text), at `/photos/` and `/photos/<slug>/`, newest first. Images go in `src/media/photos`. Not in the menu yet |
 | `settings.yml` | Site title, menu, front page sections, footer links, password protection |
 
 A few notes on works:

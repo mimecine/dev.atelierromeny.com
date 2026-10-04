@@ -67,8 +67,22 @@ const _pages = defineCollection({
     }),
 });
 
+// Photos with a caption and description (/photos/). Media in src/media/photos.
+const _photos = defineCollection({
+  loader: glob({ pattern: ["**/*.md", "!_*"], base: "./src/content/photos" }),
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      image: image(),
+      caption: z.string().optional().nullish(),
+      date: z.coerce.date().optional().nullish(),
+      published: z.boolean().default(true),
+    }),
+});
+
 export const collections = {
   works: _works,
   collections: _collections,
   pages: _pages,
+  photos: _photos,
 };

@@ -1,0 +1,58 @@
+---
+// All photos (/photos/), from src/content/photos. Not in the menu yet.
+export const prerender = true;
+import Layout from "@layouts/Layout.astro";
+import { Image } from "astro:assets";
+import { publishedPhotos } from "@src/lib/photos";
+
+const photos = await publishedPhotos();
+---
+
+<Layout title="Photos" cmsPath="photos" image={photos[0]?.data.image} description="Photographs">
+  <section class="w-full max-w-6xl mx-auto p-4">
+    <h1 class="text-3xl font-bold font-sans uppercase pb-6">Photos</h1>
+    {photos.length === 0 && <p class="font-serif text-gray-600">No photos yet.</p>}
+    <ul class="photo-grid">
+      {
+        photos.map((photo) => (
+          <li>
+            <a href={`/photos/${photo.id}/`} class="group block">
+              <Image
+                src={photo.data.image}
+                alt={photo.data.caption || photo.data.title}
+                width={800}
+                class="w-full h-auto transition-opacity group-hover:opacity-90"
+                style={`view-transition-name: photo-${photo.id.replace(/[^a-zA-Z0-9_-]/g, "_")}`}
+              />
+              <p class="pt-2 font-sans">{photo.data.title}</p>
+              {photo.data.caption && <p class="text-sm italic text-gray-600 font-serif">{photo.data.caption}</p>}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</Layout>
+
+<style>
+  @reference "../../styles/global.css";
+  /* Columns, so photos keep their own proportions */
+  .photo-grid {
+    columns: 1;
+    column-gap: 1.5rem;
+  }
+  @media (min-width: 40rem) {
+    .photo-grid {
+      columns: 2;
+    }
+  }
+  @media (min-width: 64rem) {
+    .photo-grid {
+      columns: 3;
+    }
+  }
+  .photo-grid li {
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+  }
+</style>
