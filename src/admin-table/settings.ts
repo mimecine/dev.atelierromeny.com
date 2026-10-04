@@ -74,7 +74,7 @@ export const computedColumns = (collection: string): ComputedColumn[] =>
 
 /** Starting column order and hidden columns, until you drag or hide columns yourself
  *  (that layout is remembered per browser). Columns not listed follow, in config order. */
-export const COLUMN_DEFAULTS: Record<string, { order: string[]; hidden: string[] }> = {
+export const COLUMN_DEFAULTS: Record<string, { order: string[]; hidden: string[]; hideOnce?: string[] }> = {
   works: {
     order: [
       "title", "images", "thumbnail",
@@ -84,7 +84,12 @@ export const COLUMN_DEFAULTS: Record<string, { order: string[]; hidden: string[]
     hidden: [
       "hidden_images", "old_image", "year_start", "year_end", "tags", "published",
       "body", "location", "new_location", "note", "id",
+      // set from the image preview's Thumbnail checkbox now; the field itself stays
+      "thumbnail",
     ],
+    // Columns newly hidden by default: also hidden once in layouts people already
+    // saved (they can show them again from Columns).
+    hideOnce: ["thumbnail"],
   },
 };
 

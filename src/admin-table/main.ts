@@ -1273,7 +1273,22 @@ const hiddenKey = () => `atelier-table.hidden.v2.${state.collection?.name}`;
 function loadHidden() {
   try {
     const saved = JSON.parse(localStorage.getItem(hiddenKey()) || "null");
-    if (Array.isArray(saved)) return new Set<string>(saved);
+    if (Array.isArray(saved)) {
+      const hidden = new Set<string>(saved);
+      // Apply each hideOnce column a single time, so it can be shown again afterwards.
+      const doneKey = `${hiddenKey()}.hidden-once`;
+      const done = new Set<string>(JSON.parse(localStorage.getItem(doneKey) || "[]"));
+      const pending = (COLUMN_DEFAULTS[state.collection!.name]?.hideOnce ?? []).filter((k) => !done.has(k));
+      if (pending.length) {
+        for (const k of pending) {
+          hidden.add(k);
+          done.add(k);
+        }
+        localStorage.setItem(hiddenKey(), JSON.stringify([...hidden]));
+        localStorage.setItem(doneKey, JSON.stringify([...done]));
+      }
+      return hidden;
+    }
   } catch {}
   return new Set([
     ...state.columns.filter((c) => c.kind === "unsupported").map((c) => c.key),
