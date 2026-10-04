@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Measure prints in their photos and write image/sheet sizes (cm) to the work files. --help for options.
+exec "$(dirname "${BASH_SOURCE[0]}")/py" measure_prints.py "$@"

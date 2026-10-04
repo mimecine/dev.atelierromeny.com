@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+# Runs a Python script from this folder in scripts/venv, creating the venv and
+# installing requirements.txt first if needed (and again when that file changes).
+#
+#   scripts/py measure_prints.py --px-per-cm 28.86
+#   scripts/py                      # just set up / update the environment
+set -euo pipefail
+
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+VENV="$DIR/venv"
+REQS="$DIR/requirements.txt"
+STAMP="$VENV/.requirements.sha"
+
+find_python() {
+  for py in python3.14 python3.13 python3.12 python3.11 python3.10 python3; do
+    if command -v "$py" >/dev/null 2>&1 &&
+      "$py" -c 'import sys; sys.exit(sys.version_info < (3, 10))' 2>/dev/null; then
+      echo "$py"
+      return
+    fi
+  done
+  echo "Python 3.10 or newer is needed (e.g. 'brew install python')." >&2
+  exit 1
+}
+
+if [ ! -x "$VENV/bin/python" ]; then
+  echo "Creating Python environment in scripts/venv…" >&2
+  "$(find_python)" -m venv "$VENV"
+fi
+
+want="$(shasum "$REQS" | cut -d' ' -f1)"
+if [ "$(cat "$STAMP" 2>/dev/null)" != "$want" ]; then
+  echo "Installing Python packages (scripts/requirements.txt)…" >&2
+  "$VENV/bin/python" -m pip install --quiet --upgrade pip
+  "$VENV/bin/python" -m pip install --quiet -r "$REQS"
+  echo "$want" > "$STAMP"
+fi
+
+[ $# -eq 0 ] && { echo "Python environment ready: $VENV" >&2; exit 0; }
+
+script="$1"
+shift
+[ -f "$script" ] || script="$DIR/$script"
+exec "$VENV/bin/python" "$script" "$@"

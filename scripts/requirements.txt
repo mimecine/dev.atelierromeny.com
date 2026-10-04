@@ -1,0 +1,7 @@
+# Python packages for the image scripts in this folder (measure-prints, make-details,
+# straighten-paintings, …). scripts/py installs them into scripts/venv on first use,
+# and again whenever this file changes.
+numpy>=2
+opencv-python-headless>=4.10
+pillow>=10
+rembg[cpu]>=2.0.60

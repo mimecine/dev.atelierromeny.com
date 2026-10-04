@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Make the detail (close-up) image for works. --help for options.
+exec "$(dirname "${BASH_SOURCE[0]}")/py" make_details.py "$@"

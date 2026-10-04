@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Deskew and crop a single painting photo. --help for options.
+exec "$(dirname "${BASH_SOURCE[0]}")/py" deskewandcrop.py "$@"

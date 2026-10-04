@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Remove the background from painting photos and warp them flat. --help for options.
+exec "$(dirname "${BASH_SOURCE[0]}")/py" straighten_paintings.py "$@"

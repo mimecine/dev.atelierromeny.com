@@ -36,10 +36,10 @@ Everything is in `src/content/`, and each part can be edited in the CMS:
 A few notes on works:
 
 - **Thumbnail:** `thumbnail` picks which image appears in grids, search results and link previews: 1 is `image`, 2 is the first of `images`, and so on. The work page opens on that image, with the strip below in the saved order.
-- **All works:** every work with an image also appears in `/_works`, the collection of all works. That's also the address search results link to.
+- **Addresses:** each work's canonical page is `/works/<slug>/`: search results, the sitemap and saved works link there, and its collection pages point their canonical link at it. `/_works/<slug>/` is the same page for browsing all works and is never indexed. `/works/` itself redirects home.
 - **Old image:** `old_image` keeps the photo a work had before it was reshot. It's shown only when the work has no `image` or `images`.
 - **Detail:** `detail` is the artwork alone: cut out of its photo, straightened, without frame or mat. It's shown last on the work page.
-  - `scripts/make_details.py` makes it from the work's chosen thumbnail photo.
+  - `scripts/make-details` (`make_details.py`) makes it from the work's chosen thumbnail photo.
   - **Outlines:** prints use `measure_prints.py`'s sheet and image detection; paintings use rembg, or the backdrop colour for close-ups on a plain background.
   - **Frames:** they're trimmed at the deepest straight line found on at least three sides.
   - **Review first:** run with `--review <folder>` for contact sheets. Doubtful results (CHECK) aren't written unless `--include-flagged`.
@@ -146,10 +146,23 @@ A simple password screen is set in *Settings → Password Protection*: on or off
 
 It keeps casual visitors out while the site is being built. It is not real security, because the password is in the page source.
 
+## Image scripts
+
+The Python scripts in `scripts/` each have a launcher you can run directly. On first use, `scripts/py` creates `scripts/venv` and installs `scripts/requirements.txt` (about a minute); it reinstalls when that file changes. Pass `--help` for options.
+
+| Launcher | Does |
+|---|---|
+| `scripts/measure-prints` | Measures prints in their photos and writes image and sheet sizes (cm). Calibrate first with `--calibrate`. |
+| `scripts/make-details` | Makes each work's `detail` image. |
+| `scripts/straighten-paintings` | Removes the background from painting photos and warps them flat. |
+| `scripts/process-paintings`, `scripts/deskew-and-crop`, `scripts/straighten-painting` | Older crop and straighten experiments. |
+
+Any other script runs the same way: `scripts/py some_script.py --flag`. Running `scripts/py` on its own just sets up or updates the environment.
+
 ## Gotchas
 
 - **Every page must be prerendered** (`export const prerender = true`). Pages using `Layout.astro` render markdown with satteri, and sharp optimises the images. Neither can run inside the Cloudflare Worker, so a server-rendered page using the layout breaks the build.
 - **`bun dev` doesn't optimise images.** sharp can't run in the dev server's Worker sandbox, so it uses a passthrough image service. The real build uses sharp.
 - **Incremental builds** (`experimental.incrementalBuild`) reuse pages whose `cacheKey` hasn't changed. If built pages look stale, delete `dist`, `node_modules/.astro` and `node_modules/.vite` and build again.
 - **Some elements survive page changes.** The password overlay and logout link use `transition:persist`, so they carry over when the ClientRouter swaps pages instead of flashing on every navigation.
-- **Old scripts:** the Python scripts and the older `.js` files in `scripts/` are leftovers from earlier image clean-ups and aren't part of any current workflow.
+- **Old scripts:** the older `.js` files and the Python scripts without a launcher in `scripts/` are leftovers from earlier image clean-ups and aren't part of any current workflow.

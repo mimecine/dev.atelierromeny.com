@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Detect and crop paintings in src/media/works into src/media/_processed.
+exec "$(dirname "${BASH_SOURCE[0]}")/py" process_paintings.py "$@"
