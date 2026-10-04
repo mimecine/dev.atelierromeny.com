@@ -6,14 +6,28 @@ import CollectionSection from "@components/sections/CollectionSection.astro";
 import CarouselSection from "@components/sections/CarouselSection.astro";
 import ImageSection from "@components/sections/ImageSection.astro";
 import ContentSection from "@components/sections/ContentSection.astro";
+import TagSection from "@components/sections/TagSection.astro";
+import SelectedWorksSection from "@components/sections/SelectedWorksSection.astro";
+import FeaturedWorkSection from "@components/sections/FeaturedWorkSection.astro";
+import TextImageSection from "@components/sections/TextImageSection.astro";
+import QuoteSection from "@components/sections/QuoteSection.astro";
+import CallToActionSection from "@components/sections/CallToActionSection.astro";
+import DividerSection from "@components/sections/DividerSection.astro";
 
 // Sections are edited in the CMS: Settings > Home Sections
 const { sections = [] } = loadSettings();
 const components = {
+  works: SelectedWorksSection,
   collection: CollectionSection,
+  tag: TagSection,
+  featured: FeaturedWorkSection,
   carousel: CarouselSection,
   image: ImageSection,
+  textimage: TextImageSection,
   content: ContentSection,
+  quote: QuoteSection,
+  cta: CallToActionSection,
+  divider: DividerSection,
 } as const;
 ---
 

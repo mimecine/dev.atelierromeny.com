@@ -1,0 +1,42 @@
+---
+// Shared grid for the front page's work sections (Selected Works, Collection, Tag):
+// a fixed number of columns, optionally only the first `limit` works, and a
+// "see more" link when some are left out.
+import type { CollectionEntry } from "astro:content";
+import WorkCard from "@components/WorkCard.astro";
+import SectionHeader from "./SectionHeader.astro";
+
+interface Props {
+  title?: string | null;
+  showTitle?: boolean;
+  works: CollectionEntry<"works">[];
+  columns?: number | string;
+  /** show at most this many works (0 = all) */
+  limit?: number;
+  /** collection the cards link into ("works" = each work's own page) */
+  linkCollection?: string;
+  more?: { href: string; label?: string | null };
+}
+const { title, showTitle, works, linkCollection = "works", more } = Astro.props;
+const columns = Math.min(Math.max(Number(Astro.props.columns) || 3, 1), 6);
+const limit = Number(Astro.props.limit) || 0;
+const shown = limit ? works.slice(0, limit) : works;
+---
+
+{
+  shown.length > 0 && (
+    <section class="w-full max-w-6xl mx-auto p-4">
+      <SectionHeader title={title} show={showTitle} />
+      <div class="works-grid fixed-cols" style={`--cols: ${columns}; --cols-sm: ${Math.min(columns, 2)}`}>
+        {shown.map((work) => <WorkCard work={work} collection={linkCollection} />)}
+      </div>
+      {more && shown.length < works.length && (
+        <p class="text-right uppercase">
+          <a href={more.href} class="hover:text-gray-500">
+            {more.label || `See all ${works.length}`} &rarr;
+          </a>
+        </p>
+      )}
+    </section>
+  )
+}

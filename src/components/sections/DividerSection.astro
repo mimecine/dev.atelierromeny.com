@@ -1,0 +1,14 @@
+---
+// A line or extra space between sections.
+import type { Section } from "@src/lib/settings";
+
+interface Props {
+  section: Section;
+}
+const { section } = Astro.props;
+const space = { small: "py-2", medium: "py-6", large: "py-12" }[String(section.size ?? "medium")] ?? "py-6";
+---
+
+<div class:list={["w-full max-w-6xl mx-auto px-4", space]} aria-hidden="true">
+  {section.style !== "space" && <hr class="border-gray-300" />}
+</div>

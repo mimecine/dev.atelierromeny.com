@@ -41,28 +41,60 @@ export interface Link {
 }
 
 /** One front page section; which fields apply depends on `type` (see public/admin/config.yml). */
+/** One front page section; which fields apply depends on `type` (see public/admin/config.yml). */
 export interface Section {
-  type: "collection" | "carousel" | "image" | "content" | string;
+  type:
+    | "collection"
+    | "tag"
+    | "works"
+    | "featured"
+    | "carousel"
+    | "image"
+    | "textimage"
+    | "content"
+    | "quote"
+    | "cta"
+    | "divider"
+    | string;
   title?: string;
   hidden?: boolean;
   show_title?: boolean;
-  // collection
+  // work grids (collection, tag, works)
   collection?: string;
+  tag?: string;
+  works?: string[];
   columns?: number | string;
+  /** number of works shown (0 = all) */
+  limit?: number;
+  /** older collection sections: rows instead of a number of works */
   max_rows?: number;
+  sort?: "title" | "newest" | "oldest" | string;
+  more_label?: string;
+  // featured work
+  work?: string;
   // carousel
   images?: string[];
   visible?: number | string;
   height?: number;
   autoplay?: boolean;
   interval?: number;
-  // image
+  // image, text & image
   image?: string;
+  image_side?: "left" | "right" | string;
   caption?: string;
   href?: string;
-  // content
+  // content, text & image, call to action
   header?: string;
   text?: string;
+  // quote
+  quote?: string;
+  attribution?: string;
+  // call to action
+  button_label?: string;
+  button_href?: string;
+  // divider
+  style?: "line" | "space" | string;
+  size?: "small" | "medium" | "large" | string;
 }
 
 /** All settings in one object, whichever file they live in. */

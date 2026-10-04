@@ -1,0 +1,35 @@
+---
+// An image beside a block of text; the image on the left or the right.
+import { Image } from "astro:assets";
+import SectionHeader from "./SectionHeader.astro";
+import { resolveMedia } from "@src/lib/media";
+import { renderMarkdown } from "@src/lib/markdown";
+import type { Section } from "@src/lib/settings";
+
+interface Props {
+  section: Section;
+}
+const { section } = Astro.props;
+const image = resolveMedia(section.image);
+const html = await renderMarkdown(section.text);
+const imageRight = section.image_side === "right";
+---
+
+{
+  (image || html) && (
+    <section class="w-full max-w-6xl mx-auto p-4">
+      <div class:list={["grid gap-6 md:gap-10 items-center", image && html ? "md:grid-cols-2" : "", { "md:[&>figure]:order-2": imageRight }]}>
+        {image && (
+          <figure>
+            <Image src={image} alt={section.caption || section.header || ""} width={Math.min(image.width, 1400)} class="w-full h-auto" />
+            {section.caption && <figcaption class="pt-1 text-sm italic text-gray-600 font-serif">{section.caption}</figcaption>}
+          </figure>
+        )}
+        <div>
+          <SectionHeader title={section.header} show={section.show_title} />
+          {html && <div class="prose prose-lg font-serif" set:html={html} />}
+        </div>
+      </div>
+    </section>
+  )
+}

@@ -51,10 +51,22 @@ A few notes on works:
 
 Set in *Settings → Home Sections*. Each type has its own component in `src/components/sections/`:
 
-- **Free Content:** markdown text in 1–3 columns. Images inside the text are optimised.
+- **Selected Works:** hand-picked works, in the order chosen, in 2–6 columns.
+- **Collection:** a collection's works in 2–6 columns, ordered by title, newest or oldest.
+  - "Number of works" limits how many are shown, with a "See all" link (its text can be changed).
+  - Older sections may use "Max rows" instead.
+- **Tag:** the works with a tag, with the same options as Collection. "See all" goes to the tag's page.
+- **Featured Work:** one work shown large, with title, year and size and an optional text, image on the left or right.
+- **Carousel:** 1–3 images visible at a time, with a height and optional autoplay.
+  - **Autoplay:** pauses on hover, stops once a visitor uses the arrows, and stays off for visitors whose device is set to reduce motion.
 - **Large Image:** a left-aligned image with an optional caption and link.
-- **Carousel:** 1–3 images visible at a time, with a height and optional autoplay. Autoplay pauses on hover, stops once a visitor uses the arrows, and stays off for visitors whose device is set to reduce motion.
-- **Collection:** a grid of 2–6 columns with a maximum number of rows, plus a "View all" link when works are left out.
+- **Text & Image:** an image beside text, on the left or right.
+- **Free Content:** markdown text in 1–3 columns. Images inside the text are optimised.
+- **Quote:** a large quotation with who said it.
+- **Call to Action:** a heading, text and a button (e.g. "Write to Marco").
+- **Divider:** a line or extra space (small, medium or large).
+
+The work grids share `WorksGrid.astro`; cards link to each work's `/works/<slug>/` page, or the collection's own pages for Collection sections.
 
 ### Media
 

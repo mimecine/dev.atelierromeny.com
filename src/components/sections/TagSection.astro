@@ -1,0 +1,24 @@
+---
+import { getCollection } from "astro:content";
+import WorksGrid from "./WorksGrid.astro";
+import { hasImage } from "@src/lib/works";
+import { tagPath, tagSlug, tagSlugsOf } from "@src/lib/tags";
+import { sortWorks } from "@src/lib/sections";
+import type { Section } from "@src/lib/settings";
+
+interface Props {
+  section: Section;
+}
+const { section } = Astro.props;
+const slug = tagSlug(String(section.tag ?? ""));
+const works = slug ? sortWorks(await getCollection("works", (w) => hasImage(w) && tagSlugsOf(w).includes(slug)), section.sort) : [];
+---
+
+<WorksGrid
+  title={section.title || section.tag}
+  showTitle={section.show_title}
+  works={works}
+  columns={section.columns}
+  limit={Number(section.limit) || 0}
+  more={{ href: tagPath([slug]), label: section.more_label }}
+/>

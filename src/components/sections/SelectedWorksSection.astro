@@ -1,0 +1,16 @@
+---
+// Hand-picked works, in the order chosen in the CMS.
+import { getEntry } from "astro:content";
+import WorksGrid from "./WorksGrid.astro";
+import { hasImage } from "@src/lib/works";
+import type { Section } from "@src/lib/settings";
+
+interface Props {
+  section: Section;
+}
+const { section } = Astro.props;
+const ids = (Array.isArray(section.works) ? section.works : []).map(String);
+const works = (await Promise.all(ids.map((id) => getEntry("works", id)))).filter((w) => !!w && hasImage(w));
+---
+
+<WorksGrid title={section.title} showTitle={section.show_title} works={works} columns={section.columns} />

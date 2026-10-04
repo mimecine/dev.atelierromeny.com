@@ -1,0 +1,28 @@
+---
+// A short heading and text with a button, e.g. for inquiries.
+import { renderMarkdown } from "@src/lib/markdown";
+import type { Section } from "@src/lib/settings";
+
+interface Props {
+  section: Section;
+}
+const { section } = Astro.props;
+const html = await renderMarkdown(section.text);
+---
+
+<section class="w-full max-w-3xl mx-auto px-4 py-8 text-center">
+  {section.header && <h2 class="text-3xl font-bold font-sans uppercase pb-3">{section.header}</h2>}
+  {html && <div class="prose prose-lg font-serif mx-auto" set:html={html} />}
+  {
+    section.button_label && section.button_href && (
+      <p class="pt-5">
+        <a
+          href={section.button_href}
+          class="inline-block border border-gray-900 px-6 py-2 uppercase tracking-wide hover:bg-gray-900 hover:text-white transition-colors"
+        >
+          {section.button_label}
+        </a>
+      </p>
+    )
+  }
+</section>

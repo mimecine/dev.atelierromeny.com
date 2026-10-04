@@ -1,0 +1,21 @@
+---
+import type { Section } from "@src/lib/settings";
+
+interface Props {
+  section: Section;
+}
+const { section } = Astro.props;
+---
+
+{
+  section.quote && (
+    <section class="w-full max-w-4xl mx-auto px-4 py-6">
+      <figure class="text-center">
+        <blockquote class="font-serif italic text-2xl md:text-3xl leading-snug text-balance">
+          “{section.quote}”
+        </blockquote>
+        {section.attribution && <figcaption class="pt-3 uppercase tracking-wide text-sm text-gray-600">— {section.attribution}</figcaption>}
+      </figure>
+    </section>
+  )
+}

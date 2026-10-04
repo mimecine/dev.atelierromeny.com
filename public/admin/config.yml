@@ -195,6 +195,16 @@ collections:
             widget: "list"
             hint: "The front page, top to bottom"
             types:
+              - label: "Selected Works"
+                name: "works"
+                widget: object
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: Title, name: title, widget: string, default: "Selected Works" }
+                  - { label: "Show Header", name: show_title, widget: boolean, default: true }
+                  - { label: "Works", name: works, widget: relation, collection: "works", multiple: true, search_fields: ["title", "id"], display_fields: ["title", "year_start"], value_field: "{{slug}}", hint: "Shown in this order" }
+                  - { label: "Columns", name: columns, widget: select, options: [2, 3, 4, 5, 6], default: 3, hint: "On phones at most 2" }
+                  - { label: "Hide?", name: hidden, widget: boolean, default: false }
               - label: "Collection"
                 name: "collection"
                 widget: object
@@ -204,7 +214,35 @@ collections:
                   - { label: "Collection", name: collection, widget: relation, collection: "collections", required: true }
                   - { label: "Show Header", name: show_title, widget: boolean, default: true }
                   - { label: "Columns", name: columns, widget: select, options: [2, 3, 4, 5, 6], default: 3, hint: "On phones at most 2" }
-                  - { label: "Max Rows", name: max_rows, widget: number, value_type: int, min: 0, default: 0, required: false, hint: "0 shows every work. When some are left out, a 'View all' link is added." }
+                  - { label: "Number of works", name: limit, widget: number, value_type: int, min: 0, default: 0, required: false, hint: "0 shows them all. When some are left out, a 'See all' link is added." }
+                  - { label: "Order", name: sort, widget: select, default: "title", options: [{ label: "By title", value: "title" }, { label: "Newest first", value: "newest" }, { label: "Oldest first", value: "oldest" }] }
+                  - { label: "'See all' link text", name: more_label, widget: string, required: false, hint: "Default: See all <number>" }
+                  - { label: "Max Rows (old)", name: max_rows, widget: number, value_type: int, min: 0, required: false, hint: "Used only when Number of works is 0" }
+                  - { label: "Hide?", name: hidden, widget: boolean, default: false }
+              - label: "Tag"
+                name: "tag"
+                widget: object
+                summary: "{{fields.title}} ({{fields.tag}})"
+                fields:
+                  - { label: Title, name: title, widget: string, required: false, hint: "Default: the tag" }
+                  - { label: "Tag", name: tag, widget: string, required: true, hint: "As used on works, e.g. landscape" }
+                  - { label: "Show Header", name: show_title, widget: boolean, default: true }
+                  - { label: "Columns", name: columns, widget: select, options: [2, 3, 4, 5, 6], default: 3, hint: "On phones at most 2" }
+                  - { label: "Number of works", name: limit, widget: number, value_type: int, min: 0, default: 0, required: false, hint: "0 shows them all. When some are left out, a 'See all' link is added." }
+                  - { label: "Order", name: sort, widget: select, default: "title", options: [{ label: "By title", value: "title" }, { label: "Newest first", value: "newest" }, { label: "Oldest first", value: "oldest" }] }
+                  - { label: "'See all' link text", name: more_label, widget: string, required: false, hint: "Default: See all <number>" }
+                  - { label: "Hide?", name: hidden, widget: boolean, default: false }
+              - label: "Featured Work"
+                name: "featured"
+                widget: object
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: Title, name: title, widget: string, required: false, hint: "Only shown if Show Header is on" }
+                  - { label: "Show Header", name: show_title, widget: boolean, default: false }
+                  - { label: "Work", name: work, widget: relation, collection: "works", search_fields: ["title", "id"], display_fields: ["title", "year_start"], value_field: "{{slug}}" }
+                  - { label: Text, name: text, widget: markdown, required: false }
+                  - { label: "Image side", name: image_side, widget: select, default: "left", options: ["left", "right"] }
+                  - { label: "Link text", name: more_label, widget: string, required: false, hint: "Default: View the work" }
                   - { label: "Hide?", name: hidden, widget: boolean, default: false }
               - label: "Carousel"
                 name: "carousel"
@@ -232,6 +270,44 @@ collections:
                   - { label: Image, name: image, widget: image }
                   - { label: Caption, name: caption, widget: text, required: false }
                   - { label: "Link (optional)", name: href, widget: string, required: false }
+                  - { label: "Hide?", name: hidden, widget: boolean, default: false }
+              - label: "Text & Image"
+                name: "textimage"
+                widget: object
+                summary: "{{fields.header}}"
+                fields:
+                  - { label: Header, name: header, widget: string, required: false }
+                  - { label: "Show Header", name: show_title, widget: boolean, default: true }
+                  - { label: Image, name: image, widget: image, required: false }
+                  - { label: Caption, name: caption, widget: string, required: false }
+                  - { label: "Image side", name: image_side, widget: select, default: "left", options: ["left", "right"] }
+                  - { label: Text, name: text, widget: markdown, required: false }
+                  - { label: "Hide?", name: hidden, widget: boolean, default: false }
+              - label: "Quote"
+                name: "quote"
+                widget: object
+                summary: "{{fields.attribution}}"
+                fields:
+                  - { label: Quote, name: quote, widget: text }
+                  - { label: "Who said it", name: attribution, widget: string, required: false }
+                  - { label: "Hide?", name: hidden, widget: boolean, default: false }
+              - label: "Call to Action"
+                name: "cta"
+                widget: object
+                summary: "{{fields.header}}"
+                fields:
+                  - { label: Header, name: header, widget: string, required: false }
+                  - { label: Text, name: text, widget: markdown, required: false }
+                  - { label: "Button text", name: button_label, widget: string, required: false, hint: "e.g. Get in touch" }
+                  - { label: "Button link", name: button_href, widget: string, required: false, hint: "/bio, https://… or mailto:…" }
+                  - { label: "Hide?", name: hidden, widget: boolean, default: false }
+              - label: "Divider"
+                name: "divider"
+                widget: object
+                summary: "{{fields.style}}, {{fields.size}}"
+                fields:
+                  - { label: Style, name: style, widget: select, default: "line", options: [{ label: "Line", value: "line" }, { label: "Space only", value: "space" }] }
+                  - { label: Size, name: size, widget: select, default: "medium", options: ["small", "medium", "large"] }
                   - { label: "Hide?", name: hidden, widget: boolean, default: false }
               - label: "Free Content Section"
                 name: "content"

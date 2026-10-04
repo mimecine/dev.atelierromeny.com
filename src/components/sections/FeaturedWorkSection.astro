@@ -1,0 +1,42 @@
+---
+// One work shown large, with its details and an optional text.
+import { getEntry } from "astro:content";
+import { Image } from "astro:assets";
+import SectionHeader from "./SectionHeader.astro";
+import { thumbnailOf, titleOf } from "@src/lib/works";
+import { renderMarkdown } from "@src/lib/markdown";
+import type { Section } from "@src/lib/settings";
+
+interface Props {
+  section: Section;
+}
+const { section } = Astro.props;
+const work = section.work ? await getEntry("works", String(section.work)) : undefined;
+const image = work && thumbnailOf(work);
+const html = await renderMarkdown(section.text);
+const imageRight = section.image_side === "right";
+const details = work && [work.data.year_start, work.data.w && work.data.h && `${work.data.w} × ${work.data.h} cm`].filter(Boolean).join(", ");
+---
+
+{
+  work && image && (
+    <section class="w-full max-w-6xl mx-auto p-4">
+      <SectionHeader title={section.title} show={section.show_title} />
+      <div class:list={["grid gap-6 md:gap-10 md:grid-cols-[3fr_2fr] items-center", { "md:[&>a]:order-2": imageRight }]}>
+        <a href={`/works/${work.id}/`} class="block">
+          <Image src={image} alt={titleOf(work)} width={1600} class="w-full h-auto max-h-[80vh] object-contain" />
+        </a>
+        <div>
+          <h3 class="text-2xl font-bold font-sans">
+            <a href={`/works/${work.id}/`} class="hover:text-gray-600">{titleOf(work)}</a>
+          </h3>
+          {details && <p class="text-gray-600">{details}</p>}
+          {html && <div class="prose font-serif pt-2" set:html={html} />}
+          <p class="pt-3 uppercase text-sm">
+            <a href={`/works/${work.id}/`} class="hover:text-gray-500">{section.more_label || "View the work"} &rarr;</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  )
+}
