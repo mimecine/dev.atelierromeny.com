@@ -14,8 +14,8 @@ uuid: fd79a44a-09e0-496e-9695-283b7e55cf17
 collections:
   - selected-paintings
 images:
-  - /src/media/works/119-chaise-poisson-et-rhubarbe.webp
-  - /src/media/works/119-chaise-poisson-et-rhubarbe-detail.webp
+  - '/src/media/works/119-chaise-poisson-et-rhubarbe.webp'
+  - '/src/media/works/119-chaise-poisson-et-rhubarbe-detail.webp'
 old_image: '/src/media/works/119-chaise-poisson-et-rhubarbe.webp'
 tags:
   - painting

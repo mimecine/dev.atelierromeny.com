@@ -1,0 +1,161 @@
+  CHECK 106-expression-1: outline not a clean 4-corner shape
+  CHECK 109-vendredi: outline not a clean 4-corner shape
+  CHECK 110-mercredi: outline not a clean 4-corner shape
+  CHECK 112-jeudi: outline not a clean 4-corner shape
+  CHECK 117-solitude-2: outline not a clean 4-corner shape
+  CHECK 121-mandoline-fruits-et-pichet: outline not a clean 4-corner shape
+  CHECK 123-desert-marin-i: outline not a clean 4-corner shape
+  CHECK 124-desert-marin-ii: outline not a clean 4-corner shape
+  CHECK 125-desert-marin-iii: no artwork found
+  CHECK 136-face-a-face: outline not a clean 4-corner shape
+  CHECK 137-le-dejeuner-du-paysan: outline not a clean 4-corner shape
+  CHECK 14-la-brouette-de-beccari: outline not a clean 4-corner shape
+  CHECK 140-gorille-au-jardin-des-plantes: outline not a clean 4-corner shape
+  CHECK 146-bouquet-orange: outline not a clean 4-corner shape
+  CHECK 148-autoportrait: outline not a clean 4-corner shape
+  CHECK 155-poele-aux-fruits-4: outline not a clean 4-corner shape
+  CHECK 157-le-mur-aux-tomates: outline not a clean 4-corner shape; odd proportions (3.1:1)
+  CHECK 16-artichauds-en-fleurs: outline not a clean 4-corner shape
+  CHECK 163-les-deux-cousines: outline not a clean 4-corner shape
+  CHECK 166-impromptu-n2-eden: outline not a clean 4-corner shape
+  CHECK 169-nature-morte-au-violon-ill: outline not a clean 4-corner shape
+  CHECK 177-nid-doiseau-dans-le-feuillage: outline not a clean 4-corner shape
+  CHECK 18-villlars-au-printemps: no artwork found
+  CHECK 194-impromptu-n7-point-dorgue: outline not a clean 4-corner shape
+  CHECK 211-pensees: outline not a clean 4-corner shape
+  CHECK 217-trio: outline not a clean 4-corner shape; result small (1161x88); odd proportions (13.2:1); trimmed to almost nothing
+  CHECK 233-jeux-de-iumiere-iv: outline not a clean 4-corner shape
+  CHECK 234-maternite-vert-clair: outline not a clean 4-corner shape
+  CHECK 24-eclat-de-mer-e-menton: outline not a clean 4-corner shape
+  CHECK 240-lettre-e-ma-bien-aimee-v: outline not a clean 4-corner shape
+  CHECK 241-lettre-e-ma-bien-aimee-iii: outline not a clean 4-corner shape
+  CHECK 252-passe-1: outline not a clean 4-corner shape
+  CHECK 257-impromptu-n6-clair-matin: outline not a clean 4-corner shape
+  CHECK 285-cerisier-belles-de-mai: outline not a clean 4-corner shape
+  CHECK 303-tournesol-a-plat: outline not a clean 4-corner shape
+  CHECK 31-cosmos-2-1960-1964: artwork tiny (0.6% of photo); outline not a clean 4-corner shape; result small (193x125)
+  CHECK 313-mouvement: outline not a clean 4-corner shape
+  CHECK 316-paysage-interieur-ii: outline not a clean 4-corner shape
+  CHECK 317-tourbillon: outline not a clean 4-corner shape
+  CHECK 32-le-grand-cosmos: artwork tiny (0.8% of photo); outline not a clean 4-corner shape; result small (254x109)
+  CHECK 334-la-table-suedoise: outline not a clean 4-corner shape
+  CHECK 363-autour-de-la-souche: outline not a clean 4-corner shape
+  CHECK 373-vue-aerienne-rouge-ii: no artwork found
+  CHECK 374-vue-aerienne-rouge-i: outline not a clean 4-corner shape
+  CHECK 375-macrocosme-ii-bleu: outline not a clean 4-corner shape
+  CHECK 377-ihomme-au-chien: outline not a clean 4-corner shape
+  CHECK 379-nature-morte-au-melon-fruits-et-pichet: outline not a clean 4-corner shape
+  CHECK 385-mon-pere: outline not a clean 4-corner shape
+  CHECK 386-le-verseur-e-petrole: artwork tiny (0.5% of photo); outline not a clean 4-corner shape; result small (410x134); odd proportions (3.1:1)
+  CHECK 399-autoportrait-de-jeunesse: outline not a clean 4-corner shape
+  CHECK 402-mario: outline not a clean 4-corner shape
+  CHECK 407-passe-3: outline not a clean 4-corner shape
+  CHECK 408-passe-2: outline not a clean 4-corner shape
+  CHECK 41-moment-de-reve: outline not a clean 4-corner shape
+  CHECK 413-terra-nostra: outline not a clean 4-corner shape
+  CHECK 418-spontanitet: outline not a clean 4-corner shape
+  CHECK 421-jour-de-la-iiberation-a-haarlem: odd proportions (4.6:1)
+  CHECK 422-nature-morte-en-bleu-clair: outline not a clean 4-corner shape
+  CHECK 438-le-clochard: outline not a clean 4-corner shape
+  CHECK 439-roses-de-noel: artwork tiny (0.8% of photo); outline not a clean 4-corner shape
+  CHECK 44-tryptique-spirituel-ou-sacral: no artwork found
+  CHECK 446-terra-nova: outline not a clean 4-corner shape
+  CHECK 451-ciel-vii: outline not a clean 4-corner shape; odd proportions (11.2:1)
+  CHECK 46-contraste-1982-lumiere: outline not a clean 4-corner shape
+  CHECK 467-temps-printannier: outline not a clean 4-corner shape
+  CHECK 477-en-attendant-ia-liberte-1: outline not a clean 4-corner shape
+  CHECK 479-nue-allongee-tonalite-orange: outline not a clean 4-corner shape
+  CHECK 48-les-fiances: outline not a clean 4-corner shape
+  CHECK 482-la-grande-guitare: outline not a clean 4-corner shape
+  CHECK 487-lena-et-liselotte: outline not a clean 4-corner shape
+  CHECK 492-les-oiseaux-qui-senvolent-lespoir: outline not a clean 4-corner shape
+  CHECK 493-la-montagne-en-fleur: outline not a clean 4-corner shape
+  CHECK 496-paysage-hivernal-au-soleil-pele: outline not a clean 4-corner shape
+  CHECK 497-ihomme-dans-la-neige: no artwork found
+  CHECK 499-paysage-nordique-5: outline not a clean 4-corner shape
+  CHECK 5-melancolie: outline not a clean 4-corner shape
+  CHECK 502-paysage-nordique-2: outline not a clean 4-corner shape
+  CHECK 509-stormdriven: outline not a clean 4-corner shape
+  CHECK 512-le-peintre-dans-la-campagne: outline not a clean 4-corner shape
+  CHECK 513-choux-rouge-aux-deux-bouquets: artwork tiny (1.0% of photo); outline not a clean 4-corner shape; result small (104x320); odd proportions (3.1:1)
+  CHECK 516-le-grand-soleil: outline not a clean 4-corner shape
+  CHECK 518-observation-de-natacha: outline not a clean 4-corner shape
+  CHECK 52-soiree-enflammee-sur-ies-baups: outline not a clean 4-corner shape
+  CHECK 528-grand-poele-au-pichet-bleu-clair: outline not a clean 4-corner shape
+  CHECK 53-jour-dautomne: no artwork found
+  CHECK 530-chevre: outline not a clean 4-corner shape
+  CHECK 543-souvenir-du-japon-i: outline not a clean 4-corner shape
+  CHECK 544-les-deux-madeleine: outline not a clean 4-corner shape
+  CHECK 545-maternite-bleu: outline not a clean 4-corner shape
+  CHECK 572-le-chasseur: outline not a clean 4-corner shape
+  CHECK 586-skymningen-crepuscule: outline not a clean 4-corner shape
+  CHECK 590-composition: artwork tiny (0.9% of photo); outline not a clean 4-corner shape
+  CHECK 593-bouquet-vert: no artwork found
+  CHECK 600-skanegard: outline not a clean 4-corner shape
+  CHECK 604-le-soir-aux-baups: outline not a clean 4-corner shape
+  CHECK 614-hostbrytning-automne: outline not a clean 4-corner shape
+  CHECK 632-labyrinthe-1-le-petit-bleu: outline not a clean 4-corner shape
+  CHECK 633-labyrinthe-2: outline not a clean 4-corner shape
+  CHECK 638-elegie: outline not a clean 4-corner shape
+  CHECK 643-le-mont-ventoux-2: outline not a clean 4-corner shape
+  CHECK 644-souvenirs-du-japon-2: outline not a clean 4-corner shape
+  CHECK 645-composition-lumineuse: outline not a clean 4-corner shape
+  CHECK 646-composition-lunaire: outline not a clean 4-corner shape
+  CHECK 647-autoportrait-avec-marco-devant-le-monde: outline not a clean 4-corner shape
+  CHECK 649-fleur-de-femme: outline not a clean 4-corner shape
+  CHECK 650-les-3-graces: outline not a clean 4-corner shape
+  CHECK 657-le-chaos: outline not a clean 4-corner shape
+  CHECK 658-la-terre: outline not a clean 4-corner shape
+  CHECK 659-les-eaux: outline not a clean 4-corner shape
+  CHECK 660-la-vegetation: outline not a clean 4-corner shape
+  CHECK 661-le-monde-des-animaux: outline not a clean 4-corner shape
+  CHECK 662-lhomme: outline not a clean 4-corner shape
+  CHECK 663-la-mort: artwork tiny (0.7% of photo); result small (640x95); odd proportions (6.7:1); trimmed to almost nothing
+  CHECK 664-leau: outline not a clean 4-corner shape
+  CHECK 665-le-ciel: outline not a clean 4-corner shape
+  CHECK 666-composition-en-pleine-nature: outline not a clean 4-corner shape
+  CHECK 667-ils-sembrassent: outline not a clean 4-corner shape
+  CHECK 668-berger-aux-eymieux: outline not a clean 4-corner shape
+  CHECK 68-inspire-nature-incandescence: outline not a clean 4-corner shape
+  CHECK 684-nature-morte-au-violon-l: outline not a clean 4-corner shape
+  CHECK 700-tryptique-dautomne: outline not a clean 4-corner shape
+  CHECK 701-blue-current: outline not a clean 4-corner shape
+  CHECK 71-js-bach-3: outline not a clean 4-corner shape
+  CHECK 72-inspire-nature-les-rochers: artwork tiny (0.9% of photo); outline not a clean 4-corner shape
+  CHECK 723-sonata-rouge-et-noir: outline not a clean 4-corner shape
+  CHECK 73-inspire-nature-la-lagune: outline not a clean 4-corner shape; result small (527x142); odd proportions (3.7:1)
+  CHECK 730-dynamique: no artwork found
+  CHECK 731-espoir: outline not a clean 4-corner shape
+  CHECK 74-inspire-nature-la-flamme: outline not a clean 4-corner shape
+  CHECK 75-inspire-nature-le-cypres: outline not a clean 4-corner shape
+  CHECK 751-cerisier-en-fleurs-solitaire: outline not a clean 4-corner shape
+  CHECK 76-sans-titre-iv: outline not a clean 4-corner shape
+  CHECK 760-spielerei-2: outline not a clean 4-corner shape
+  CHECK 762-coin-du-jardin: outline not a clean 4-corner shape
+  CHECK 764-iles: outline not a clean 4-corner shape
+  CHECK 768-ingegerd-dans-le-jardin: outline not a clean 4-corner shape
+  CHECK 776-caroline-el-bacha-et-camille: outline not a clean 4-corner shape
+  CHECK branche-dabricot: outline not a clean 4-corner shape
+  CHECK card-players: outline not a clean 4-corner shape
+  CHECK carthomanie-3: outline not a clean 4-corner shape
+  CHECK cartomanie-i: outline not a clean 4-corner shape
+  CHECK cartomanie-ii: outline not a clean 4-corner shape
+  CHECK cherry-tree: outline not a clean 4-corner shape
+  CHECK eau-vive-1: outline not a clean 4-corner shape
+  CHECK eau-vive-2: outline not a clean 4-corner shape
+  CHECK francine: outline not a clean 4-corner shape
+  CHECK la-bouteille-tressee: outline not a clean 4-corner shape
+  CHECK le-cerisier: outline not a clean 4-corner shape
+  CHECK mademoiselle-isabelle-daban: outline not a clean 4-corner shape
+  CHECK marco: outline not a clean 4-corner shape
+  CHECK nature-morte-au-violin-ii: outline not a clean 4-corner shape
+  CHECK orage-furieux: outline not a clean 4-corner shape
+  CHECK petite-improvisation-2: outline not a clean 4-corner shape
+  CHECK petite-improvisation-i: outline not a clean 4-corner shape
+  CHECK poele-au-fruits: outline not a clean 4-corner shape
+  CHECK print-053: outline not a clean 4-corner shape
+  CHECK print-062: outline not a clean 4-corner shape
+  CHECK printemps-2: outline not a clean 4-corner shape
+  CHECK quartet-des-saxophones-loic-robin: outline not a clean 4-corner shape
+  CHECK tension-2: outline not a clean 4-corner shape
+  CHECK wo-hin-2: outline not a clean 4-corner shape

@@ -1,0 +1,7 @@
+- Make a collection of the flagged works (Fklagged after detail.txt)
+- Make an alternate grid view (maybe just a query string flag) to have the detail view first
+- Move the detail image into it's own field
+- Above and beyond: Is there, or can we make, an image editor that can point out corners (with zoom, like how a scan is made on pixel phones) and crop/straighten into a detail view? 
+- Check if there's a way to use those huge originals to take the detail from and if so, regenerate with those. 
+- Can the identification script run on the published site in any way, under admin? Does it even make sense?
+

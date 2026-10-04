@@ -6,6 +6,7 @@ images:
   - '/src/media/works/602-med-strommen-courant-dans-i-eau-2.webp'
   - '/src/media/works/602-med-strommen-courant-dans-i-eau-3.webp'
   - '/src/media/works/602-med-strommen-courant-dans-i-eau-4.webp'
+  - '/src/media/works/602-med-strommen-courant-dans-ieau-detail.webp'
 collections:
   - selected-paintings
 categories: Abstrait

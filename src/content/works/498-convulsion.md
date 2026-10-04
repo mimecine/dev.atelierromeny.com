@@ -7,6 +7,7 @@ images:
   - '/src/media/works/498-convulsion-v2-3.webp'
   - '/src/media/works/498-convulsion-v2-4.webp'
   - '/src/media/works/498-convulsion-v2-5.webp'
+  - '/src/media/works/498-convulsion-detail.webp'
 collections:
   - selected-paintings
 categories: Abstrait

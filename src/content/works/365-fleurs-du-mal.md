@@ -9,6 +9,7 @@ images:
   - '/src/media/works/365-fleurs-du-mal-v2-5.webp'
   - '/src/media/works/365-fleurs-du-mal-v2-6.webp'
   - '/src/media/works/365-fleurs-du-mal-v2-7.webp'
+  - '/src/media/works/365-fleurs-du-mal-detail.webp'
 collections:
   - selected-paintings
 categories: Abstrait
