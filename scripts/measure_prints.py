@@ -17,9 +17,14 @@ For each work it detects
   - the sheet: the large bright, low-saturation quad on the brown burlap
   - the image: the printed area inside the sheet (ink differs from the paper)
 and writes w/h for the one chosen with --measure (default: image).
+
+Every work is printed with what was measured, and anything that looks doubtful
+is marked CHECK with the reasons, then listed again at the end. Flagged works
+aren't written unless you pass --include-flagged (or name them and use it).
 """
 
 import argparse
+import csv
 import glob
 import os
 import re
@@ -33,6 +38,9 @@ WORKS = os.path.join(ROOT, "src", "content", "works")
 
 # Detection runs on a downscaled copy; results are scaled back to full res.
 WORK_WIDTH = 1500
+
+# Below this share of ink inside the image box, the detection is suspect
+FILL_MIN = 0.4
 
 
 def read_frontmatter(path):
@@ -81,7 +89,7 @@ def quad_size(q):
 
 
 def find_sheet(img):
-    """Return the sheet's four corners (working-resolution px), or None."""
+    """Return (four corners in working-resolution px, found a clean quad), or None."""
     hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV).astype(np.float32)
     s, v = hsv[..., 1], hsv[..., 2]
     # Burlap colour, sampled from a band along the photo's edges
@@ -103,13 +111,16 @@ def find_sheet(img):
     pts = np.vstack([c for c in contours if cv2.contourArea(c) > 0.1 * biggest])
     hull = cv2.convexHull(pts)
     quad = cv2.approxPolyDP(hull, 0.02 * cv2.arcLength(hull, True), True)
-    if len(quad) != 4:
+    clean = len(quad) == 4
+    if not clean:
         quad = cv2.boxPoints(cv2.minAreaRect(hull))
-    return order_corners(quad)
+    return order_corners(quad), clean
 
 
 def find_image(sheet):
-    """Bounding box (x, y, w, h) of the printed area in the rectified sheet."""
+    """Bounding box (x, y, w, h) of the printed area in the rectified sheet, plus
+    how many sides of the box reach the sheet margin and how much of the box is
+    actually ink."""
     h, w = sheet.shape[:2]
     m = int(0.03 * min(w, h))  # ignore the sheet edge: shadows, fingers, deckle
     inner = np.zeros((h, w), np.uint8)
@@ -124,7 +135,7 @@ def find_image(sheet):
     ink = cv2.morphologyEx(ink, cv2.MORPH_CLOSE, np.ones((9, 9), np.uint8))
     contours, _ = cv2.findContours(ink, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     if not contours:
-        return None
+        return None, 0, 0
     # Pale etchings and watercolours break up into several patches: take the
     # union of every patch that isn't a speck. Patches running into the margin
     # are paper shading, unless that's all there is (image printed to the edge).
@@ -134,9 +145,43 @@ def find_image(sheet):
 
     keep = [c for c in contours if cv2.contourArea(c) > 0.001 * w * h]
     keep = [c for c in keep if inside(c)] or [max(contours, key=cv2.contourArea)]
-    if not keep or sum(cv2.contourArea(c) for c in keep) < 0.01 * w * h:
-        return None
-    return cv2.boundingRect(np.vstack(keep))
+    area = sum(cv2.contourArea(c) for c in keep)
+    if area < 0.01 * w * h:
+        return None, 0, 0
+    x, y, bw, bh = box = cv2.boundingRect(np.vstack(keep))
+    edges = (x <= m + 1) + (y <= m + 1) + (x + bw >= w - m - 1) + (y + bh >= h - m - 1)
+    return box, edges, area / (bw * bh)
+
+
+def sanity_checks(img, quad, clean, box, edges, fill):
+    """Reasons a measurement looks doubtful (empty list = looks fine)."""
+    out = []
+    H, W = img.shape[:2]
+    if not clean:
+        out.append("sheet outline isn't a clean rectangle")
+    x0, y0 = quad.min(0)
+    x1, y1 = quad.max(0)
+    if x0 < 5 or y0 < 5 or x1 > W - 5 or y1 > H - 5:
+        out.append("sheet runs off the photo")
+    side = lambda a, b: float(np.linalg.norm(quad[a] - quad[b]))
+    if (abs(side(0, 1) - side(3, 2)) > 0.04 * max(side(0, 1), side(3, 2))
+            or abs(side(0, 3) - side(1, 2)) > 0.04 * max(side(0, 3), side(1, 2))):
+        out.append("sheet edges uneven (curled or lifted?)")
+
+    sw, sh = quad_size(quad)
+    if box is None:
+        out.append("no image area found (printed to the edge? try --measure sheet)")
+        return out
+    x, y, bw, bh = box
+    # All four sides at the margin is a narrow-margin print; only some of them
+    # means shading/a stain got included, or part of the image was missed
+    if 0 < edges < 4:
+        out.append(f"image reaches the sheet margin on {edges} side(s) only")
+    if abs(x + bw / 2 - sw / 2) > 0.06 * sw:
+        out.append("image off-centre on the sheet (only partly detected?)")
+    if fill < FILL_MIN:
+        out.append(f"image area only {fill:.0%} ink (pale print, partly detected?)")
+    return out
 
 
 def measure(path, debug_dir=None):
@@ -146,17 +191,19 @@ def measure(path, debug_dir=None):
     scale = full.shape[1] / WORK_WIDTH
     img = cv2.resize(full, (WORK_WIDTH, round(full.shape[0] / scale)), interpolation=cv2.INTER_AREA)
 
-    quad = find_sheet(img)
-    if quad is None:
+    found = find_sheet(img)
+    if found is None:
         return None
+    quad, clean = found
     sw, sh = quad_size(quad)
     # Warp the sheet upright so the image box is axis-aligned and keystone-free
     dst = np.array([[0, 0], [sw, 0], [sw, sh], [0, sh]], np.float32)
     M = cv2.getPerspectiveTransform(quad, dst)
     sheet = cv2.warpPerspective(img, M, (round(sw), round(sh)))
-    box = find_image(sheet)
+    box, edges, fill = find_image(sheet)
 
-    result = {"sheet": (sw * scale, sh * scale), "image": None, "shape": full.shape[:2]}
+    result = {"sheet": (sw * scale, sh * scale), "image": None, "shape": full.shape[:2],
+              "checks": sanity_checks(img, quad, clean, box, edges, fill)}
     if box:
         result["image"] = (box[2] * scale, box[3] * scale)
 
@@ -214,6 +261,9 @@ def main():
     ap.add_argument("--round", type=float, default=0.5, help="round cm to this step (default 0.5)")
     ap.add_argument("--write", action="store_true", help="update the markdown files (default: dry run)")
     ap.add_argument("--force", action="store_true", help="overwrite existing w/h values")
+    ap.add_argument("--include-flagged", action="store_true",
+                    help="also write works whose measurement needs checking")
+    ap.add_argument("--csv", metavar="FILE", help="also save all measurements and checks as CSV")
     ap.add_argument("--debug", metavar="DIR", help="write overlay images (green=sheet, red=image)")
     args = ap.parse_args()
 
@@ -234,6 +284,7 @@ def main():
     if not args.px_per_cm:
         ap.error("--px-per-cm is required (get it with --calibrate)")
 
+    rows, flagged = [], []
     ref_shape = None
     for md in resolve(args.works):
         slug = os.path.splitext(os.path.basename(md))[0]
@@ -247,26 +298,51 @@ def main():
         r = measure(img_path, args.debug)
         if not r:
             print(f"{slug:<16} skip: no sheet detected")
+            flagged.append((slug, ["no sheet detected"]))
             continue
+        checks = r["checks"]
         ref_shape = ref_shape or r["shape"]
-        flag = "  (!) different photo size, scale may not apply" if r["shape"] != ref_shape else ""
+        if r["shape"] != ref_shape:
+            checks.append("different photo size, scale may not apply")
 
         cm = lambda wh: tuple(round_to(v / args.px_per_cm, args.round) for v in wh)
         sheet = cm(r["sheet"])
         image = cm(r["image"]) if r["image"] else None
-        img_s = f"{image[0]:g} x {image[1]:g}" if image else "?"
-        print(f"{slug:<16} sheet {sheet[0]:g} x {sheet[1]:g}   image {img_s} cm{flag}")
+        sheet_s = f"{sheet[0]:g} x {sheet[1]:g}"
+        img_s = f"{image[0]:g} x {image[1]:g}" if image else "-"
+        mark = "CHECK" if checks else "ok"
+        print(f"{slug:<16} sheet {sheet_s:<13} image {img_s:<13} {mark}")
+        for c in checks:
+            print(f"{'':<18}- {c}")
+        rows.append((slug, sheet, image, checks))
+        if checks:
+            flagged.append((slug, checks))
 
         chosen = image if args.measure == "image" else sheet
         if not args.write:
             continue
         if not chosen:
-            print(f"{'':<16} not written: no {args.measure} detected")
+            print(f"{'':<18}not written: no {args.measure} detected")
+        elif checks and not args.include_flagged:
+            print(f"{'':<18}not written: needs checking (use --include-flagged)")
         elif has and not args.force:
-            print(f"{'':<16} not written: has w/h (use --force)")
+            print(f"{'':<18}not written: has w/h (use --force)")
         else:
             set_dims(md, *chosen)
 
+    if args.csv:
+        with open(args.csv, "w", newline="", encoding="utf-8") as f:
+            out = csv.writer(f)
+            out.writerow(["work", "sheet_w", "sheet_h", "image_w", "image_h", "check"])
+            for slug, sheet, image, checks in rows:
+                out.writerow([slug, *sheet, *(image or ("", "")), "; ".join(checks)])
+        print(f"\nwrote {args.csv}")
+
+    if flagged:
+        print(f"\n{len(flagged)} to check by hand"
+              + (f" (overlays in {args.debug})" if args.debug else " (add --debug DIR for overlays)") + ":")
+        for slug, checks in flagged:
+            print(f"  {slug:<16} {checks[0]}" + (f" (+{len(checks) - 1} more)" if len(checks) > 1 else ""))
 
 if __name__ == "__main__":
     main()
