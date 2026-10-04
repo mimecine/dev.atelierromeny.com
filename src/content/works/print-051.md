@@ -1,5 +1,5 @@
 ---
-title: null
+title: No title recorded
 categories: Print
 collections:
   - selected-prints
