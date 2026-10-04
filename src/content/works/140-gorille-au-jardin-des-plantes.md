@@ -10,7 +10,8 @@ file: '/src/media/works/140-gorille-au-jardin-des-plantes.webp'
 year: '1980'
 year_start: 1980
 year_end: null
-image: '/src/media/works/140-gorille-au-jardin-des-plantes.webp'
+images:
+  - '/src/media/works/140-gorille-au-jardin-des-plantes.webp'
 uuid: da60b7c1-03c3-40e3-9e22-9819539cb3d8
 tags:
   - painting

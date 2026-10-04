@@ -1,7 +1,8 @@
 ---
 id: null
 title: Printemps I
-image: '/src/media/works/printemps-i-detail.webp'
+images:
+  - '/src/media/works/printemps-i-detail.webp'
 old_image: '/src/media/works/printemps-i.webp'
 categories: Fleurs
 w: 80
@@ -18,6 +19,5 @@ tags:
   - flowers
   - meadow
   - spring
-detail: '/src/media/works/printemps-i-detail.webp'
 ---
 

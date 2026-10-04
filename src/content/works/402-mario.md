@@ -10,7 +10,8 @@ file: '/src/media/works/402-mario.webp'
 year: '1974'
 year_start: 1974
 year_end: null
-image: '/src/media/works/402-mario.webp'
+images:
+  - '/src/media/works/402-mario.webp'
 uuid: af6431f4-b25f-430a-a39f-5ad0868a1034
 tags:
   - painting

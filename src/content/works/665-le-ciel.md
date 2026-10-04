@@ -1,7 +1,8 @@
 ---
 id: 665
 title: Le Ciel
-image: '/src/media/works/665-le-ciel.webp'
+images:
+  - '/src/media/works/665-le-ciel.webp'
 categories: Abstrait
 w: 160
 h: 125

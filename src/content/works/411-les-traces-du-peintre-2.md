@@ -11,12 +11,12 @@ file: '/src/media/works/411-les-traces-du-peintre-2.webp'
 year: 1979-96
 year_start: 1979
 year_end: 1996
-image: '/src/media/works/411-les-traces-du-peintre-2-detail.webp'
+images:
+  - '/src/media/works/411-les-traces-du-peintre-2-detail.webp'
 old_image: '/src/media/works/411-les-traces-du-peintre-2.webp'
 uuid: 10f8ba41-ed2c-40cc-b0c1-4b1703ecb95d
 tags:
   - painting
   - abstract
-detail: '/src/media/works/411-les-traces-du-peintre-2-detail.webp'
 ---
 

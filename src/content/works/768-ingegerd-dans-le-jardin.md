@@ -11,7 +11,8 @@ file: '/src/media/works/768-ingegerd-dans-le-jardin.webp'
 year: '1975'
 year_start: 1975
 year_end: null
-image: '/src/media/works/768-ingegerd-dans-le-jardin.webp'
+images:
+  - '/src/media/works/768-ingegerd-dans-le-jardin.webp'
 uuid: ec5d2a4d-6555-444e-8235-c39a23539b01
 tags:
   - painting

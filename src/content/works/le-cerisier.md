@@ -1,7 +1,8 @@
 ---
 id: null
 title: Le cerisier
-image: '/src/media/works/le-cerisier.webp'
+images:
+  - '/src/media/works/le-cerisier.webp'
 categories: Landscape
 w: 73
 h: 50

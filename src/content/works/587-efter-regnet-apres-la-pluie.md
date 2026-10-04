@@ -1,7 +1,9 @@
 ---
 id: 587
 title: Efter regnet (aprés la pluie)
-image: '/src/media/works/587-efter-regnet-apres-la-pluie-v2.webp'
+images:
+  - '/src/media/works/587-efter-regnet-apres-la-pluie-v2.webp'
+  - '/src/media/works/587-efter-regnet-apres-la-pluie-detail.webp'
 collections:
   - selected-paintings
 categories: Abstrait
@@ -19,6 +21,5 @@ old_image: '/src/media/works/587-efter-regnet-apres-la-pluie.webp'
 tags:
   - painting
   - abstract
-detail: '/src/media/works/587-efter-regnet-apres-la-pluie-detail.webp'
 ---
 

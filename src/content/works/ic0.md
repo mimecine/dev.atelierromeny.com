@@ -1,7 +1,8 @@
 ---
 id: null
 title: (Untitled)
-image: '/src/media/works/ic0-detail.webp'
+images:
+  - '/src/media/works/ic0-detail.webp'
 old_image: '/src/media/works/ic0.webp'
 collections:
   - marco
@@ -19,6 +20,5 @@ tags:
   - painting
   - mixed media
   - abstract
-detail: '/src/media/works/ic0-detail.webp'
 ---
 

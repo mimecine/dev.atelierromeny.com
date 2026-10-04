@@ -1,7 +1,8 @@
 ---
 id: 760
 title: Spielerei 2
-image: '/src/media/works/760-spielerei-2.webp'
+images:
+  - '/src/media/works/760-spielerei-2.webp'
 categories: Abstrait
 w: 46
 h: 38

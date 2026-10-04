@@ -1,7 +1,8 @@
 ---
 id: 466
 title: Space-passage
-image: '/src/media/works/466-space-passage-detail.webp'
+images:
+  - '/src/media/works/466-space-passage-detail.webp'
 old_image: '/src/media/works/466-space-passage.webp'
 categories: Abstrait
 w: 115
@@ -16,6 +17,5 @@ uuid: 0eb5a38b-cc94-4273-98f0-ed5af9128dd0
 tags:
   - painting
   - abstract
-detail: '/src/media/works/466-space-passage-detail.webp'
 ---
 

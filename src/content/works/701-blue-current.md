@@ -1,7 +1,8 @@
 ---
 id: 701
 title: Blue current
-image: '/src/media/works/701-blue-current.webp'
+images:
+  - '/src/media/works/701-blue-current.webp'
 categories: Abstrait
 w: 81
 h: 60

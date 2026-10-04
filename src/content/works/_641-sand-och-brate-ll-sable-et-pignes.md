@@ -11,7 +11,8 @@ file: '/src/media/works/641-sand-och-brate-ll-sable-et-pignes.jpg'
 year: '1984'
 year_start: 1984
 year_end: null
-image: '/src/media/works/641-sand-och-brate-ll-sable-et-pignes.jpg'
+images:
+  - '/src/media/works/641-sand-och-brate-ll-sable-et-pignes.jpg'
 uuid: 64b04f6c-de4e-406d-b9a6-604b7a45afc2
 ---
 

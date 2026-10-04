@@ -1,7 +1,8 @@
 ---
 id: null
 title: Nature Morte au violin II
-image: '/src/media/works/nature-morte-au-violin-ii.webp'
+images:
+  - '/src/media/works/nature-morte-au-violin-ii.webp'
 categories: Nature Morte
 w: 81
 h: 60

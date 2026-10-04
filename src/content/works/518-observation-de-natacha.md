@@ -1,7 +1,8 @@
 ---
 id: 518
 title: Observation de Natacha
-image: '/src/media/works/518-observation-de-natacha.webp'
+images:
+  - '/src/media/works/518-observation-de-natacha.webp'
 categories: Figures humaines
 w: 125
 h: 85

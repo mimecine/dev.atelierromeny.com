@@ -10,13 +10,13 @@ file: '/src/media/works/afrique.webp'
 year: '2007'
 year_start: 2007
 year_end: null
-image: '/src/media/works/afrique-detail.webp'
+images:
+  - '/src/media/works/afrique-detail.webp'
 old_image: '/src/media/works/afrique.webp'
 uuid: aef1eaea-b544-4d04-b9f0-91a2640c24db
 tags:
   - painting
   - figure
   - nude
-detail: '/src/media/works/afrique-detail.webp'
 ---
 

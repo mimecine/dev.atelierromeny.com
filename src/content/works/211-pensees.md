@@ -1,7 +1,8 @@
 ---
 id: 211
 title: Pensées
-image: '/src/media/works/211-pensees.webp'
+images:
+  - '/src/media/works/211-pensees.webp'
 collections:
   - nfs
 categories: Fleurs

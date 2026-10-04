@@ -1,7 +1,16 @@
 ---
 id: 610
 title: Plante abstraite
-image: '/src/media/works/610-plante-abstraite-v2.webp'
+images:
+  - '/src/media/works/610-plante-abstraite-v2.webp'
+  - '/src/media/works/610-plante-abstraite-v2-2.webp'
+  - '/src/media/works/610-plante-abstraite-v2-3.webp'
+  - '/src/media/works/610-plante-abstraite-v2-4.webp'
+  - '/src/media/works/610-plante-abstraite-v2-5.webp'
+  - '/src/media/works/610-plante-abstraite-v2-6.webp'
+  - '/src/media/works/610-plante-abstraite-v2-7.webp'
+  - '/src/media/works/610-plante-abstraite-detail.webp'
+thumbnail: 2
 collections:
   - selected-paintings
 categories: Abstrait
@@ -16,18 +25,9 @@ year_end: null
 file: '/src/media/works/610-plante-abstraite.webp'
 uuid: d8ec9468-9a3d-4c11-93dd-72d26c479326
 old_image: '/src/media/works/610-plante-abstraite.webp'
-images:
-  - '/src/media/works/610-plante-abstraite-v2-2.webp'
-  - '/src/media/works/610-plante-abstraite-v2-3.webp'
-  - '/src/media/works/610-plante-abstraite-v2-4.webp'
-  - '/src/media/works/610-plante-abstraite-v2-5.webp'
-  - '/src/media/works/610-plante-abstraite-v2-6.webp'
-  - '/src/media/works/610-plante-abstraite-v2-7.webp'
 tags:
   - painting
   - abstract
   - plant
-thumbnail: 2
-detail: '/src/media/works/610-plante-abstraite-detail.webp'
 ---
 

@@ -1,7 +1,8 @@
 ---
 id: 474
 title: Le noyer
-image: '/src/media/works/474-le-noyer-detail.webp'
+images:
+  - '/src/media/works/474-le-noyer-detail.webp'
 old_image: '/src/media/works/474-le-noyer.webp'
 categories: Arbres
 w: 130
@@ -18,6 +19,5 @@ tags:
   - painting
   - tree
   - walnut
-detail: '/src/media/works/474-le-noyer-detail.webp'
 ---
 

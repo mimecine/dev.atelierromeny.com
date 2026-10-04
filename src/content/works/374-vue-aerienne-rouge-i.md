@@ -1,7 +1,8 @@
 ---
 id: 374
 title: Vue aerienne rouge I
-image: '/src/media/works/374-vue-aerienne-rouge-i.webp'
+images:
+  - '/src/media/works/374-vue-aerienne-rouge-i.webp'
 categories: Abstrait
 w: 130
 h: 95

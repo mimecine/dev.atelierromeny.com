@@ -10,7 +10,8 @@ file: '/src/media/works/les-cartes-de-fanny.webp'
 year: '2008'
 year_start: 2008
 year_end: null
-image: '/src/media/works/les-cartes-de-fanny-detail.webp'
+images:
+  - '/src/media/works/les-cartes-de-fanny-detail.webp'
 old_image: '/src/media/works/les-cartes-de-fanny.webp'
 uuid: d9865be2-2479-41e6-ad8c-de43b060f82f
 tags:
@@ -18,6 +19,5 @@ tags:
   - collage
   - figure
   - nude
-detail: '/src/media/works/les-cartes-de-fanny-detail.webp'
 ---
 

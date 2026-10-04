@@ -1,7 +1,8 @@
 ---
 id: null
 title: Printemps 2
-image: '/src/media/works/printemps-2.webp'
+images:
+  - '/src/media/works/printemps-2.webp'
 categories: Fleurs
 w: 50
 h: 73

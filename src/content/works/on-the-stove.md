@@ -1,7 +1,9 @@
 ---
 id: null
 title: On the stove
-image: '/src/media/works/on-the-stove.webp'
+images:
+  - '/src/media/works/on-the-stove.webp'
+  - '/src/media/works/on-the-stove-detail.webp'
 categories: Nature Morte
 w: 73
 h: 60
@@ -18,6 +20,5 @@ tags:
   - fruit
   - jug
   - stove
-detail: '/src/media/works/on-the-stove-detail.webp'
 ---
 

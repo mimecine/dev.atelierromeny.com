@@ -10,12 +10,12 @@ file: '/src/media/works/361-souvenir-du-japon.webp'
 year: '1973'
 year_start: 1973
 year_end: null
-image: '/src/media/works/361-souvenir-du-japon-detail.webp'
+images:
+  - '/src/media/works/361-souvenir-du-japon-detail.webp'
 old_image: '/src/media/works/361-souvenir-du-japon.webp'
 uuid: f0a82f91-2659-4b35-94d1-7f45c96e98a4
 tags:
   - painting
   - abstract
-detail: '/src/media/works/361-souvenir-du-japon-detail.webp'
 ---
 

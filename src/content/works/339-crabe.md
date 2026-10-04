@@ -1,7 +1,9 @@
 ---
 id: 339
 title: Crabe
-image: '/src/media/works/339-crabe-v2.webp'
+images:
+  - '/src/media/works/339-crabe-v2.webp'
+  - '/src/media/works/339-crabe-detail.webp'
 collections:
   - nfs
   - selected-paintings
@@ -21,6 +23,5 @@ tags:
   - painting
   - animal
   - crab
-detail: '/src/media/works/339-crabe-detail.webp'
 ---
 

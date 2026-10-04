@@ -1,7 +1,9 @@
 ---
 id: 459
 title: Cosmos
-image: '/src/media/works/459-cosmos-v2.webp'
+images:
+  - '/src/media/works/459-cosmos-v2.webp'
+  - '/src/media/works/459-cosmos-detail.webp'
 collections:
   - selected-paintings
 categories: Abstrait
@@ -20,6 +22,5 @@ tags:
   - painting
   - abstract
   - cosmos
-detail: '/src/media/works/459-cosmos-detail.webp'
 ---
 

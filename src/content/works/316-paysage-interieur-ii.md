@@ -1,7 +1,8 @@
 ---
 id: 316
 title: Paysage intérieur II
-image: '/src/media/works/316-paysage-interieur-ii.webp'
+images:
+  - '/src/media/works/316-paysage-interieur-ii.webp'
 categories: Abstrait
 w: 41
 h: 26

@@ -11,7 +11,8 @@ file: '/src/media/works/79-colorado-i.jpg'
 year: '1981'
 year_start: 1981
 year_end: null
-image: '/src/media/works/79-colorado-i.jpg'
+images:
+  - '/src/media/works/79-colorado-i.jpg'
 uuid: d3dc0f3a-b4b2-4d9e-b10b-b4655433855e
 ---
 

@@ -10,7 +10,8 @@ file: '/src/media/works/75-inspire-nature-le-cypres.webp'
 year: '1997'
 year_start: 1997
 year_end: null
-image: '/src/media/works/75-inspire-nature-le-cypres.webp'
+images:
+  - '/src/media/works/75-inspire-nature-le-cypres.webp'
 uuid: b3519421-3f6f-4b6a-ad99-87b0df8cd597
 tags:
   - painting

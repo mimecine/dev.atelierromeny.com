@@ -1,7 +1,8 @@
 ---
 id: 549
 title: Fantaisie 2
-image: '/src/media/works/549-fantaisie-2-detail.webp'
+images:
+  - '/src/media/works/549-fantaisie-2-detail.webp'
 old_image: '/src/media/works/549-fantaisie-2.webp'
 categories: Abstrait
 w: 54
@@ -16,6 +17,5 @@ uuid: 0097a993-320a-4403-aaf0-d79cc43a5c4c
 tags:
   - painting
   - abstract
-detail: '/src/media/works/549-fantaisie-2-detail.webp'
 ---
 

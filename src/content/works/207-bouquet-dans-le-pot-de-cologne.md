@@ -1,7 +1,8 @@
 ---
 id: 207
 title: Bouquet dans le pot de Cologne
-image: '/src/media/works/207-bouquet-dans-le-pot-de-cologne-detail.webp'
+images:
+  - '/src/media/works/207-bouquet-dans-le-pot-de-cologne-detail.webp'
 old_image: '/src/media/works/207-bouquet-dans-le-pot-de-cologne.webp'
 categories: Natures mortes
 w: 50
@@ -17,6 +18,5 @@ tags:
   - painting
   - still life
   - flowers
-detail: '/src/media/works/207-bouquet-dans-le-pot-de-cologne-detail.webp'
 ---
 

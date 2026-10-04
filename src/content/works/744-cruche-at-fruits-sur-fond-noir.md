@@ -10,7 +10,6 @@ file: null
 year: '2004'
 year_start: 2004
 year_end: null
-image: null
 uuid: 60e4e4c8-59e8-498a-acce-aa22ffd58d2a
 ---
 

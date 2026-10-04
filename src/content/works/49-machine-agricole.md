@@ -1,7 +1,8 @@
 ---
 id: 49
 title: Machine agricole
-image: '/src/media/works/49-machine-agricole-detail.webp'
+images:
+  - '/src/media/works/49-machine-agricole-detail.webp'
 old_image: '/src/media/works/49-machine-agricole.webp'
 categories: Paysages
 w: 85
@@ -17,6 +18,5 @@ tags:
   - painting
   - landscape
   - machine
-detail: '/src/media/works/49-machine-agricole-detail.webp'
 ---
 

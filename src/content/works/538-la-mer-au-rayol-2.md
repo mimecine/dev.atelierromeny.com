@@ -1,7 +1,8 @@
 ---
 id: 538
 title: La mer au Rayol 2
-image: '/src/media/works/538-la-mer-au-rayol-2-detail.webp'
+images:
+  - '/src/media/works/538-la-mer-au-rayol-2-detail.webp'
 old_image: '/src/media/works/538-la-mer-au-rayol-2.webp'
 categories: Paysages
 w: 38
@@ -20,6 +21,5 @@ tags:
   - beach
   - sea
   - figure
-detail: '/src/media/works/538-la-mer-au-rayol-2-detail.webp'
 ---
 

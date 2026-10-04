@@ -1,7 +1,8 @@
 ---
 id: 619
 title: Tournesol sur fond rouge
-image: '/src/media/works/619-tournesol-sur-fond-rouge-detail.webp'
+images:
+  - '/src/media/works/619-tournesol-sur-fond-rouge-detail.webp'
 old_image: '/src/media/works/619-tournesol-sur-fond-rouge.webp'
 collections:
   - nfs
@@ -20,6 +21,5 @@ tags:
   - painting
   - flowers
   - sunflower
-detail: '/src/media/works/619-tournesol-sur-fond-rouge-detail.webp'
 ---
 

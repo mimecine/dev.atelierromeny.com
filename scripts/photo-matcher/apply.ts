@@ -139,14 +139,19 @@ for (const [target, photos] of groups) {
     if (!collections.includes(paintingsCollection)) work.data.collections = [...collections, paintingsCollection];
   }
 
-  // Keep the pre-reshoot image. On a re-run `old_image` is already set and `image` is
-  // one of ours from the previous run, which may be overwritten.
-  if (!work.data.old_image && work.data.image && !written.has(stem(work.data.image))) {
-    work.data.old_image = work.data.image;
+  // Keep the pre-reshoot image. On a re-run `old_image` is already set and the first of
+  // `images` is one of ours from the previous run, which may be overwritten. The detail
+  // (…-detail.webp, last of `images`) is kept as it is.
+  const isDetail = (r: string) => r.endsWith("-detail.webp");
+  const current: string[] = (work.data.images ?? []).filter(Boolean);
+  const main = current.find((r) => !isDetail(r));
+  if (!work.data.old_image && main && !written.has(stem(main))) {
+    work.data.old_image = main;
   }
   const keep = work.data.old_image ? path.basename(work.data.old_image) : null;
   const own = new Set(
-    [work.data.image, ...(work.data.images ?? [])]
+    current
+      .filter((r) => !isDetail(r))
       .filter(Boolean)
       .map((r: string) => path.basename(r))
       .filter((f) => f !== keep)
@@ -162,9 +167,8 @@ for (const [target, photos] of groups) {
 
   for (const old of own) if (!names.includes(old)) orphaned.push(old);
 
-  work.data.image = `/src/media/works/${names[0]}`;
-  if (names.length > 1) work.data.images = names.slice(1).map((n) => `/src/media/works/${n}`);
-  else delete work.data.images;
+  work.data.images = [...names.map((n) => `/src/media/works/${n}`), ...current.filter(isDetail)];
+  delete work.data.image;
   touched.add(work.file);
 
   if (write) fs.writeFileSync(work.file, matter.stringify(work.content, work.data));
@@ -190,7 +194,7 @@ if (write) fs.writeFileSync(appliedPath, JSON.stringify({ created, written: [...
 const stillUsed = new Set(
   allWorks
     .filter((w) => !touched.has(w.file))
-    .flatMap((w) => [w.data.image, w.data.old_image, w.data.file, ...(w.data.images ?? [])])
+    .flatMap((w) => [w.data.old_image, w.data.file, ...(w.data.images ?? [])])
     .filter(Boolean)
     .map((r: string) => path.basename(r))
 );

@@ -1,7 +1,8 @@
 ---
 id: 16
 title: Artichauds en fleurs
-image: '/src/media/works/16-artichauds-en-fleurs.webp'
+images:
+  - '/src/media/works/16-artichauds-en-fleurs.webp'
 categories: Fleurs
 w: 81
 h: 100

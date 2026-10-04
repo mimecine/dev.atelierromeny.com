@@ -1,7 +1,8 @@
 ---
 id: null
 title: Iris au pied du vigne
-image: '/src/media/works/iris-au-pied-du-vigne-detail.webp'
+images:
+  - '/src/media/works/iris-au-pied-du-vigne-detail.webp'
 old_image: '/src/media/works/iris-au-pied-du-vigne.webp'
 categories: Fleurs
 w: 92
@@ -18,6 +19,5 @@ tags:
   - flowers
   - iris
   - vine
-detail: '/src/media/works/iris-au-pied-du-vigne-detail.webp'
 ---
 

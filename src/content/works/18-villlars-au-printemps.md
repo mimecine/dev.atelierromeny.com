@@ -1,7 +1,8 @@
 ---
 id: 18
 title: Villlars au Printemps
-image: '/src/media/works/18-villlars-au-printemps.webp'
+images:
+  - '/src/media/works/18-villlars-au-printemps.webp'
 categories: Paysages
 w: 100
 h: 100

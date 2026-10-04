@@ -1,7 +1,8 @@
 ---
 id: null
 title: Roland, gouache
-image: '/src/media/works/roland-gouache-detail.webp'
+images:
+  - '/src/media/works/roland-gouache-detail.webp'
 old_image: '/src/media/works/roland-gouache.webp'
 categories: Portrait
 w: 62
@@ -17,6 +18,5 @@ tags:
   - gouache
   - portrait
   - figure
-detail: '/src/media/works/roland-gouache-detail.webp'
 ---
 

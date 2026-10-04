@@ -1,7 +1,9 @@
 ---
 id: 424
 title: Négroide
-image: '/src/media/works/424-negroide-v2.webp'
+images:
+  - '/src/media/works/424-negroide-v2.webp'
+  - '/src/media/works/424-negroide-detail.webp'
 collections:
   - selected-paintings
 categories: natures mortes
@@ -19,6 +21,5 @@ old_image: '/src/media/works/424-negroide.webp'
 tags:
   - painting
   - still life
-detail: '/src/media/works/424-negroide-detail.webp'
 ---
 

@@ -1,7 +1,8 @@
 ---
 id: 155
 title: Poéle aux fruits 4
-image: '/src/media/works/155-poele-aux-fruits-4.webp'
+images:
+  - '/src/media/works/155-poele-aux-fruits-4.webp'
 categories: Natures mortes
 w: 60
 h: 73

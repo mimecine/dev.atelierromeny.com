@@ -1,7 +1,8 @@
 ---
 id: 642
 title: Paysage aérien 3
-image: '/src/media/works/642-paysage-aerien-3-detail.webp'
+images:
+  - '/src/media/works/642-paysage-aerien-3-detail.webp'
 old_image: '/src/media/works/642-paysage-aerien-3.webp'
 categories: Abstrait
 w: 95
@@ -17,6 +18,5 @@ uuid: 4e87edcb-5900-4ab7-892b-bd6d6dd09171
 tags:
   - painting
   - abstract
-detail: '/src/media/works/642-paysage-aerien-3-detail.webp'
 ---
 

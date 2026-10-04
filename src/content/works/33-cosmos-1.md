@@ -1,7 +1,8 @@
 ---
 id: 33
 title: Cosmos 1
-image: '/src/media/works/33-cosmos-1-detail.webp'
+images:
+  - '/src/media/works/33-cosmos-1-detail.webp'
 old_image: '/src/media/works/33-cosmos-1.webp'
 categories: Abstrait
 w: 210
@@ -18,6 +19,5 @@ tags:
   - painting
   - abstract
   - cosmos
-detail: '/src/media/works/33-cosmos-1-detail.webp'
 ---
 

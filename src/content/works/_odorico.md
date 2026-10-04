@@ -10,7 +10,8 @@ file: '/src/media/works/odorico.jpg'
 year: '2002'
 year_start: 2002
 year_end: null
-image: '/src/media/works/odorico.jpg'
+images:
+  - '/src/media/works/odorico.jpg'
 uuid: b56f6eec-cf5e-46b7-88b6-a98084d0fb02
 ---
 

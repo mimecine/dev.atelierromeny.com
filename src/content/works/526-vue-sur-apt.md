@@ -1,7 +1,8 @@
 ---
 id: 526
 title: Vue sur Apt
-image: '/src/media/works/526-vue-sur-apt-detail.webp'
+images:
+  - '/src/media/works/526-vue-sur-apt-detail.webp'
 old_image: '/src/media/works/526-vue-sur-apt.webp'
 categories: Paysages
 w: 100
@@ -19,6 +20,5 @@ tags:
   - tree
   - mountain
   - tractor
-detail: '/src/media/works/526-vue-sur-apt-detail.webp'
 ---
 

@@ -10,13 +10,13 @@ file: '/src/media/works/228-petite-nue-2.webp'
 year: '1997'
 year_start: 1997
 year_end: null
-image: '/src/media/works/228-petite-nue-2-detail.webp'
+images:
+  - '/src/media/works/228-petite-nue-2-detail.webp'
 old_image: '/src/media/works/228-petite-nue-2.webp'
 uuid: 011b3039-57de-41f8-a202-a544c0c76d49
 tags:
   - painting
   - figure
   - nude
-detail: '/src/media/works/228-petite-nue-2-detail.webp'
 ---
 

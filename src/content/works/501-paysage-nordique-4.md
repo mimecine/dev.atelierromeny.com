@@ -1,7 +1,9 @@
 ---
 id: 501
 title: Paysage nordique 4
-image: '/src/media/works/501-paysage-nordique-4-v2.webp'
+images:
+  - '/src/media/works/501-paysage-nordique-4-v2.webp'
+  - '/src/media/works/501-paysage-nordique-4-detail.webp'
 collections:
   - selected-paintings
 categories: Abstrait
@@ -21,6 +23,5 @@ tags:
   - abstract
   - landscape
   - sun
-detail: '/src/media/works/501-paysage-nordique-4-detail.webp'
 ---
 

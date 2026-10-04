@@ -1,7 +1,9 @@
 ---
 id: 591
 title: Poéle aux fruits et aubergine
-image: '/src/media/works/591-poele-aux-fruits-et-aubergine-v2.webp'
+images:
+  - '/src/media/works/591-poele-aux-fruits-et-aubergine-v2.webp'
+  - '/src/media/works/591-poele-aux-fruits-et-aubergine-detail.webp'
 collections:
   - selected-paintings
 categories: Natures mortes
@@ -22,6 +24,5 @@ tags:
   - fruit
   - aubergine
   - stove
-detail: '/src/media/works/591-poele-aux-fruits-et-aubergine-detail.webp'
 ---
 

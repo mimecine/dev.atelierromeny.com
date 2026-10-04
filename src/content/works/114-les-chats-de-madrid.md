@@ -1,7 +1,8 @@
 ---
 id: 114
 title: Les chats de Madrid
-image: '/src/media/works/114-les-chats-de-madrid-detail.webp'
+images:
+  - '/src/media/works/114-les-chats-de-madrid-detail.webp'
 old_image: '/src/media/works/114-les-chats-de-madrid.webp'
 collections:
   - nfs
@@ -20,6 +21,5 @@ tags:
   - painting
   - animal
   - cat
-detail: '/src/media/works/114-les-chats-de-madrid-detail.webp'
 ---
 

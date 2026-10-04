@@ -1,7 +1,11 @@
 ---
 id: 332
 title: A la Cruche
-image: '/src/media/works/332-a-la-cruche-v2.webp'
+images:
+  - '/src/media/works/332-a-la-cruche-v2.webp'
+  - '/src/media/works/332-a-la-cruche-v2-2.webp'
+  - '/src/media/works/332-a-la-cruche-v2-3.webp'
+  - '/src/media/works/332-a-la-cruche-detail.webp'
 collections:
   - marco
   - alisa
@@ -18,14 +22,10 @@ year_end: null
 file: '/src/media/works/332-a-la-cruche.webp'
 uuid: 65c5fff0-9440-4503-80f8-4b382fc3cf76
 old_image: '/src/media/works/332-a-la-cruche.webp'
-images:
-  - '/src/media/works/332-a-la-cruche-v2-2.webp'
-  - '/src/media/works/332-a-la-cruche-v2-3.webp'
 tags:
   - painting
   - still life
   - jug
   - fruit
-detail: '/src/media/works/332-a-la-cruche-detail.webp'
 ---
 

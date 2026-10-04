@@ -1,7 +1,8 @@
 ---
 id: null
 title: Klot
-image: '/src/media/works/klot-detail.webp'
+images:
+  - '/src/media/works/klot-detail.webp'
 old_image: '/src/media/works/klot.webp'
 categories: Abstract
 w: 46
@@ -16,6 +17,5 @@ uuid: 20294991-0836-490d-8fab-259b8fa2fe2a
 tags:
   - painting
   - abstract
-detail: '/src/media/works/klot-detail.webp'
 ---
 

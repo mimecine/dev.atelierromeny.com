@@ -11,6 +11,5 @@ file: null
 year: null
 year_start: null
 year_end: null
-image: null
 uuid: 0e2728eb-c6eb-4f0f-80d5-5c40ec44c182
 ---

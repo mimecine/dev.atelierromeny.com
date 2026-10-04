@@ -1,7 +1,8 @@
 ---
 id: 377
 title: I‘Homme au chien
-image: '/src/media/works/377-ihomme-au-chien.webp'
+images:
+  - '/src/media/works/377-ihomme-au-chien.webp'
 categories: Figures humaines
 w: 96
 h: 130

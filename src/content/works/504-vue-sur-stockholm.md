@@ -1,7 +1,8 @@
 ---
 id: 504
 title: Vue sur Stockholm
-image: '/src/media/works/504-vue-sur-stockholm-detail.webp'
+images:
+  - '/src/media/works/504-vue-sur-stockholm-detail.webp'
 old_image: '/src/media/works/504-vue-sur-stockholm.webp'
 collections:
   - nfs
@@ -20,6 +21,5 @@ tags:
   - cityscape
   - harbour
   - Stockholm
-detail: '/src/media/works/504-vue-sur-stockholm-detail.webp'
 ---
 

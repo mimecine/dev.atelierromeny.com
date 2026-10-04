@@ -1,7 +1,8 @@
 ---
 id: 499
 title: Paysage nordique 5
-image: '/src/media/works/499-paysage-nordique-5-v2.webp'
+images:
+  - '/src/media/works/499-paysage-nordique-5-v2.webp'
 collections:
   - nfs
   - selected-paintings

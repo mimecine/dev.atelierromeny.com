@@ -1,7 +1,8 @@
 ---
 id: 173
 title: Set von Dardel (mon petit fils)
-image: '/src/media/works/173-set-von-dardel-mon-petit-fils-detail.webp'
+images:
+  - '/src/media/works/173-set-von-dardel-mon-petit-fils-detail.webp'
 old_image: '/src/media/works/173-set-von-dardel-mon-petit-fils.webp'
 collections:
   - nfs
@@ -20,6 +21,5 @@ tags:
   - painting
   - portrait
   - child
-detail: '/src/media/works/173-set-von-dardel-mon-petit-fils-detail.webp'
 ---
 

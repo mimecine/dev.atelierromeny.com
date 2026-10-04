@@ -11,12 +11,8 @@ interface Props {
 
 const { work, transitionName } = Astro.props;
 const alt = work.data.title || "";
-// The detail (artwork alone, straightened) comes last in the strip; it isn't one of the
-// images grids and the thumbnail choice pick from. Works that only had an old photo
-// use their detail as the image, so it isn't added twice.
-const images = imagesOf(work);
-const detail = work.data.detail;
-const gallery = detail && !images.some((img) => img.src === detail.src) ? [...images, detail] : images;
+// In the saved order: the main photo first, the detail (artwork alone, straightened) last.
+const gallery = imagesOf(work);
 // The chosen thumbnail is also the image shown for this page in search results.
 // The page opens on the chosen thumbnail (the image shown for this work in grids and
 // search results); the strip below keeps the saved order.

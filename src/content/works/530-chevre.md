@@ -1,7 +1,8 @@
 ---
 id: 530
 title: Chévre
-image: '/src/media/works/530-chevre.webp'
+images:
+  - '/src/media/works/530-chevre.webp'
 collections:
   - nfs
 categories: Animaux

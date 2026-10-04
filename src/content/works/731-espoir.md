@@ -1,7 +1,8 @@
 ---
 id: 731
 title: Espoir
-image: '/src/media/works/731-espoir.webp'
+images:
+  - '/src/media/works/731-espoir.webp'
 categories: Abstrait
 w: 130
 h: 81

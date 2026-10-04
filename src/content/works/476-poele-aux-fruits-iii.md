@@ -1,7 +1,9 @@
 ---
 id: 476
 title: Poéle aux fruits III
-image: '/src/media/works/476-poele-aux-fruits-iii-v2.webp'
+images:
+  - '/src/media/works/476-poele-aux-fruits-iii-v2.webp'
+  - '/src/media/works/476-poele-aux-fruits-iii-detail.webp'
 collections:
   - selected-paintings
 categories: Natures mortes
@@ -20,6 +22,5 @@ tags:
   - painting
   - still life
   - fruit
-detail: '/src/media/works/476-poele-aux-fruits-iii-detail.webp'
 ---
 

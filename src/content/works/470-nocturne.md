@@ -11,13 +11,13 @@ file: '/src/media/works/470-nocturne.webp'
 year: '1972'
 year_start: 1972
 year_end: null
-image: '/src/media/works/470-nocturne-detail.webp'
+images:
+  - '/src/media/works/470-nocturne-detail.webp'
 old_image: '/src/media/works/470-nocturne.webp'
 uuid: 8e2032ff-ff69-4437-8a97-32f5e69523b7
 tags:
   - painting
   - abstract
   - night
-detail: '/src/media/works/470-nocturne-detail.webp'
 ---
 

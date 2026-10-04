@@ -1,7 +1,8 @@
 ---
 id: 614
 title: Höstbrytning (Automne)
-image: '/src/media/works/614-hostbrytning-automne.webp'
+images:
+  - '/src/media/works/614-hostbrytning-automne.webp'
 collections:
   - nfs
   - reserved-am

@@ -10,7 +10,8 @@ file: '/src/media/works/76-sans-titre-iv.webp'
 year: '1985'
 year_start: 1985
 year_end: null
-image: '/src/media/works/76-sans-titre-iv.webp'
+images:
+  - '/src/media/works/76-sans-titre-iv.webp'
 uuid: b8176db3-5ff6-4160-b671-d6631073cc97
 tags:
   - painting

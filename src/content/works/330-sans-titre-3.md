@@ -1,7 +1,8 @@
 ---
 id: 330
 title: Sans titre 3
-image: '/src/media/works/330-sans-titre-3-detail.webp'
+images:
+  - '/src/media/works/330-sans-titre-3-detail.webp'
 old_image: '/src/media/works/330-sans-titre-3.webp'
 collections:
   - nfs
@@ -18,6 +19,5 @@ uuid: f9b8dfa5-c6e2-42e7-ab98-bb8e78e018e4
 tags:
   - painting
   - abstract
-detail: '/src/media/works/330-sans-titre-3-detail.webp'
 ---
 

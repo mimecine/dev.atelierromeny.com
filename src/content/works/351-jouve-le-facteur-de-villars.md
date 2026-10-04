@@ -1,7 +1,12 @@
 ---
 id: 351
 title: 'Jouve, le facteur de Villars'
-image: '/src/media/works/351-jouve-le-facteur-de-villars-v2.webp'
+images:
+  - '/src/media/works/351-jouve-le-facteur-de-villars-v2.webp'
+  - '/src/media/works/351-jouve-le-facteur-de-villars-v2-2.webp'
+  - '/src/media/works/351-jouve-le-facteur-de-villars-v2-3.webp'
+  - '/src/media/works/351-jouve-le-facteur-de-villars-detail.webp'
+thumbnail: 2
 collections:
   - marco
   - selected-paintings
@@ -17,13 +22,8 @@ year_end: null
 file: '/src/media/works/351-jouve-le-facteur-de-villars.webp'
 uuid: 8523e5d2-18ee-4ad2-8835-5370e3bfd2e3
 old_image: '/src/media/works/351-jouve-le-facteur-de-villars.webp'
-images:
-  - '/src/media/works/351-jouve-le-facteur-de-villars-v2-2.webp'
-  - '/src/media/works/351-jouve-le-facteur-de-villars-v2-3.webp'
 tags:
   - painting
   - portrait
-thumbnail: 2
-detail: '/src/media/works/351-jouve-le-facteur-de-villars-detail.webp'
 ---
 

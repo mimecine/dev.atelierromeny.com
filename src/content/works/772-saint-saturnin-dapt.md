@@ -1,7 +1,16 @@
 ---
 id: 772
 title: Saint Saturnin d'Apt
-image: '/src/media/works/772-saint-saturnin-d-apt.webp'
+images:
+  - '/src/media/works/772-saint-saturnin-d-apt.webp'
+  - '/src/media/works/772-saint-saturnin-d-apt-2.webp'
+  - '/src/media/works/772-saint-saturnin-d-apt-3.webp'
+  - '/src/media/works/772-saint-saturnin-d-apt-4.webp'
+  - '/src/media/works/772-saint-saturnin-d-apt-5.webp'
+  - '/src/media/works/772-saint-saturnin-d-apt-6.webp'
+  - '/src/media/works/772-saint-saturnin-d-apt-7.webp'
+  - '/src/media/works/772-saint-saturnin-dapt-detail.webp'
+thumbnail: 2
 collections:
   - selected-paintings
 categories: Paysages
@@ -16,18 +25,9 @@ year_end: null
 file: '/src/media/works/772-saint-saturnin-dapt.webp'
 uuid: e3454661-6044-4d62-a8ef-148bf7c5eee8
 old_image: '/src/media/works/772-saint-saturnin-dapt.webp'
-images:
-  - '/src/media/works/772-saint-saturnin-d-apt-2.webp'
-  - '/src/media/works/772-saint-saturnin-d-apt-3.webp'
-  - '/src/media/works/772-saint-saturnin-d-apt-4.webp'
-  - '/src/media/works/772-saint-saturnin-d-apt-5.webp'
-  - '/src/media/works/772-saint-saturnin-d-apt-6.webp'
-  - '/src/media/works/772-saint-saturnin-d-apt-7.webp'
 tags:
   - painting
   - landscape
   - village
-thumbnail: 2
-detail: '/src/media/works/772-saint-saturnin-dapt-detail.webp'
 ---
 

@@ -1,7 +1,8 @@
 ---
 id: 676
 title: Espace
-image: '/src/media/works/676-espace-detail.webp'
+images:
+  - '/src/media/works/676-espace-detail.webp'
 old_image: '/src/media/works/676-espace.webp'
 categories: Abstrait
 w: 40
@@ -17,6 +18,5 @@ uuid: a98e7709-b6fd-4cfb-8b4c-4fbf6dcfc46b
 tags:
   - painting
   - abstract
-detail: '/src/media/works/676-espace-detail.webp'
 ---
 

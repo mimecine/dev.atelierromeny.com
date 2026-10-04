@@ -1,7 +1,11 @@
 ---
 id: 698
 title: Nature morte chez Monsieur ALATA / Souvenir d'Orient
-image: '/src/media/works/698-nature-morte-chez-monsieur-alata-souvenir-d-orient.webp'
+images:
+  - '/src/media/works/698-nature-morte-chez-monsieur-alata-souvenir-d-orient.webp'
+  - '/src/media/works/698-nature-morte-chez-monsieur-alata-souvenir-d-orient-2.webp'
+  - '/src/media/works/698-nature-morte-chez-monsieur-alata-souvenir-dorient-detail.webp'
+thumbnail: 2
 collections:
   - selected-paintings
 categories: Natures mortes
@@ -16,14 +20,10 @@ year_end: null
 file: '/src/media/works/698-nature-morte-chez-monsieur-alata-souvenir-dorient.webp'
 uuid: 4322fede-a2c2-457f-a570-61307707b0c6
 old_image: '/src/media/works/698-nature-morte-chez-monsieur-alata-souvenir-dorient.webp'
-images:
-  - '/src/media/works/698-nature-morte-chez-monsieur-alata-souvenir-d-orient-2.webp'
 tags:
   - painting
   - still life
   - fruit
   - bottle
-thumbnail: 2
-detail: '/src/media/works/698-nature-morte-chez-monsieur-alata-souvenir-dorient-detail.webp'
 ---
 

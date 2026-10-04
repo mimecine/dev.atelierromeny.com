@@ -1,7 +1,8 @@
 ---
 id: 318
 title: Eruption
-image: '/src/media/works/318-eruption-detail.webp'
+images:
+  - '/src/media/works/318-eruption-detail.webp'
 old_image: '/src/media/works/318-eruption.webp'
 categories: Abstrait
 w: 40
@@ -17,6 +18,5 @@ tags:
   - painting
   - mixed media
   - abstract
-detail: '/src/media/works/318-eruption-detail.webp'
 ---
 

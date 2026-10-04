@@ -1,7 +1,8 @@
 ---
 id: 489
 title: Clair obscur
-image: '/src/media/works/489-clair-obscur-detail.webp'
+images:
+  - '/src/media/works/489-clair-obscur-detail.webp'
 old_image: '/src/media/works/489-clair-obscur.webp'
 tags:
   - painting
@@ -16,6 +17,5 @@ year_start: 1958
 year_end: null
 file: '/src/media/works/489-clair-obscur.webp'
 uuid: 1ac4b6d4-5fde-4d13-b0ba-09c7dd51adff
-detail: '/src/media/works/489-clair-obscur-detail.webp'
 ---
 

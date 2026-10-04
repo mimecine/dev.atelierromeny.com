@@ -1,7 +1,8 @@
 ---
 id: 128
 title: Robert et son chien
-image: '/src/media/works/128-robert-et-son-chien-detail.webp'
+images:
+  - '/src/media/works/128-robert-et-son-chien-detail.webp'
 old_image: '/src/media/works/128-robert-et-son-chien.webp'
 categories: Figures humaines
 w: 64
@@ -19,6 +20,5 @@ tags:
   - figure
   - animal
   - dog
-detail: '/src/media/works/128-robert-et-son-chien-detail.webp'
 ---
 

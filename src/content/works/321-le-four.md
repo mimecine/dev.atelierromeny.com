@@ -10,12 +10,12 @@ file: '/src/media/works/321-le-four.webp'
 year: '1989'
 year_start: 1989
 year_end: null
-image: '/src/media/works/321-le-four-detail.webp'
+images:
+  - '/src/media/works/321-le-four-detail.webp'
 old_image: '/src/media/works/321-le-four.webp'
 uuid: 6ef2ad3b-8116-407c-8147-76600497fbbf
 tags:
   - painting
   - abstract
-detail: '/src/media/works/321-le-four-detail.webp'
 ---
 

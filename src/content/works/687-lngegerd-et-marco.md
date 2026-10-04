@@ -1,7 +1,8 @@
 ---
 id: 687
 title: Lngegerd et Marco
-image: '/src/media/works/687-lngegerd-et-marco-detail.webp'
+images:
+  - '/src/media/works/687-lngegerd-et-marco-detail.webp'
 old_image: '/src/media/works/687-lngegerd-et-marco.webp'
 collections:
   - nfs
@@ -21,6 +22,5 @@ tags:
   - painting
   - figure
   - mother and child
-detail: '/src/media/works/687-lngegerd-et-marco-detail.webp'
 ---
 

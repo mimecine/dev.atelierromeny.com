@@ -10,7 +10,8 @@ file: '/src/media/works/merguerite-la-reveuse.webp'
 year: '2008'
 year_start: 2008
 year_end: null
-image: '/src/media/works/merguerite-la-reveuse-detail.webp'
+images:
+  - '/src/media/works/merguerite-la-reveuse-detail.webp'
 old_image: '/src/media/works/merguerite-la-reveuse.webp'
 uuid: 54ec2cb0-2d0d-4d1b-a91e-be6f454263b0
 tags:
@@ -18,6 +19,5 @@ tags:
   - collage
   - figure
   - sleeping
-detail: '/src/media/works/merguerite-la-reveuse-detail.webp'
 ---
 

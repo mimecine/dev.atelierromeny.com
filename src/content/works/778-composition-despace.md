@@ -1,7 +1,8 @@
 ---
 id: 778
 title: Composition d'espace
-image: '/src/media/works/778-composition-despace-detail.webp'
+images:
+  - '/src/media/works/778-composition-despace-detail.webp'
 old_image: '/src/media/works/778-composition-despace.webp'
 categories: Abstrait
 w: 73
@@ -17,6 +18,5 @@ uuid: e6718ccf-f139-4e28-aed1-924110debe80
 tags:
   - painting
   - abstract
-detail: '/src/media/works/778-composition-despace-detail.webp'
 ---
 

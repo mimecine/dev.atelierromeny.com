@@ -1,7 +1,9 @@
 ---
 id: 59
 title: La Seine a Paris
-image: '/src/media/works/59-la-seine-a-paris-v2.webp'
+images:
+  - '/src/media/works/59-la-seine-a-paris-v2.webp'
+  - '/src/media/works/59-la-seine-a-paris-detail.webp'
 collections:
   - selected-paintings
 categories: Paysages
@@ -22,6 +24,5 @@ tags:
   - cityscape
   - river
   - Paris
-detail: '/src/media/works/59-la-seine-a-paris-detail.webp'
 ---
 

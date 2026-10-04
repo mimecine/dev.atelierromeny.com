@@ -1,7 +1,8 @@
 ---
 id: 382
 title: Gla'l'euls
-image: '/src/media/works/382-glaleuls-detail.webp'
+images:
+  - '/src/media/works/382-glaleuls-detail.webp'
 old_image: '/src/media/works/382-glaleuls.webp'
 categories: Fleurs
 w: 46
@@ -18,6 +19,5 @@ tags:
   - painting
   - flowers
   - gladioli
-detail: '/src/media/works/382-glaleuls-detail.webp'
 ---
 

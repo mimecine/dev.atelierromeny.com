@@ -1,7 +1,9 @@
 ---
 id: 611
 title: Composition
-image: '/src/media/works/611-composition-v2.webp'
+images:
+  - '/src/media/works/611-composition-v2.webp'
+  - '/src/media/works/611-composition-detail.webp'
 collections:
   - selected-paintings
 categories: Abstrait
@@ -19,6 +21,5 @@ old_image: '/src/media/works/611-composition.webp'
 tags:
   - painting
   - abstract
-detail: '/src/media/works/611-composition-detail.webp'
 ---
 

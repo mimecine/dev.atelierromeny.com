@@ -4,9 +4,11 @@ categories: Works on Paper
 collections:
   - works-on-paper
 uuid: a2dd5b75-97ff-49af-bdbf-f6fa33fa5049
-image: '/src/media/works/print-022.webp'
 images:
+  - '/src/media/works/print-022.webp'
   - '/src/media/works/print-022-2.webp'
+  - '/src/media/works/print-022-detail.webp'
+thumbnail: 2
 tags:
   - print
   - etching
@@ -19,8 +21,6 @@ year_start: 1970
 note: "Inscription (read from photo): 7/10, \"Natten\"?, 1970 -- title uncertain"
 sheet_w: 52
 sheet_h: 38
-thumbnail: 2
-detail: '/src/media/works/print-022-detail.webp'
 edition: "7/10"
 ---
 

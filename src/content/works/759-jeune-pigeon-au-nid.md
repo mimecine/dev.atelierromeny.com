@@ -1,7 +1,8 @@
 ---
 id: 759
 title: Jeune pigeon au nid
-image: '/src/media/works/759-jeune-pigeon-au-nid-detail.webp'
+images:
+  - '/src/media/works/759-jeune-pigeon-au-nid-detail.webp'
 old_image: '/src/media/works/759-jeune-pigeon-au-nid.webp'
 collections:
   - nfs
@@ -22,6 +23,5 @@ tags:
   - bird
   - pigeon
   - nest
-detail: '/src/media/works/759-jeune-pigeon-au-nid-detail.webp'
 ---
 

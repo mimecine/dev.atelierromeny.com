@@ -1,7 +1,8 @@
 ---
 id: 775
 title: Souvenir d'Auvergne 2
-image: '/src/media/works/775-souvenir-dauvergne-2-detail.webp'
+images:
+  - '/src/media/works/775-souvenir-dauvergne-2-detail.webp'
 old_image: '/src/media/works/775-souvenir-dauvergne-2.webp'
 categories: Abstrait
 w: 40
@@ -16,6 +17,5 @@ uuid: b8f98064-33a6-40bb-aeb6-423a0ce3c730
 tags:
   - painting
   - abstract
-detail: '/src/media/works/775-souvenir-dauvergne-2-detail.webp'
 ---
 

@@ -1,7 +1,8 @@
 ---
 id: 315
 title: Sonata 13 juillet 1993
-image: '/src/media/works/315-sonata-13-juillet-1993-detail.webp'
+images:
+  - '/src/media/works/315-sonata-13-juillet-1993-detail.webp'
 old_image: '/src/media/works/315-sonata-13-juillet-1993.webp'
 categories: Abstrait
 w: 55
@@ -18,6 +19,5 @@ tags:
   - painting
   - abstract
   - music
-detail: '/src/media/works/315-sonata-13-juillet-1993-detail.webp'
 ---
 

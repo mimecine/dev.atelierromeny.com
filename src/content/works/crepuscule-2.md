@@ -1,7 +1,8 @@
 ---
 id: null
 title: Crépuscule 2
-image: '/src/media/works/crepuscule-2-detail.webp'
+images:
+  - '/src/media/works/crepuscule-2-detail.webp'
 old_image: '/src/media/works/crepuscule-2.webp'
 categories: Abstract
 w: 33
@@ -18,6 +19,5 @@ tags:
   - abstract
   - landscape
   - sunset
-detail: '/src/media/works/crepuscule-2-detail.webp'
 ---
 

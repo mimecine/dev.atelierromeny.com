@@ -1,7 +1,8 @@
 ---
 id: null
 title: La farandole des fruits
-image: '/src/media/works/la-farandole-des-fruits-detail.webp'
+images:
+  - '/src/media/works/la-farandole-des-fruits-detail.webp'
 old_image: '/src/media/works/la-farandole-des-fruits.webp'
 categories: Nature Mortes
 w: 50
@@ -18,6 +19,5 @@ tags:
   - still life
   - fruit
   - flowers
-detail: '/src/media/works/la-farandole-des-fruits-detail.webp'
 ---
 

@@ -1,7 +1,9 @@
 ---
 id: 387
 title: Le cimetiére de Villars
-image: '/src/media/works/387-le-cimetiere-de-villars.webp'
+images:
+  - '/src/media/works/387-le-cimetiere-de-villars.webp'
+  - '/src/media/works/387-le-cimetiere-de-villars-detail.webp'
 categories: Paysages
 w: 57
 h: 72
@@ -19,6 +21,5 @@ tags:
   - cemetery
   - cypress
   - village
-detail: '/src/media/works/387-le-cimetiere-de-villars-detail.webp'
 ---
 

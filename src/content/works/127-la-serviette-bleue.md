@@ -1,8 +1,8 @@
 ---
 id: 127
 title: La serviette bleue
-image: '/src/media/works/127-la-serviette-bleue-v2.webp'
 images:
+  - '/src/media/works/127-la-serviette-bleue-v2.webp'
   - '/src/media/works/127-la-serviette-bleue-v2-2.webp'
   - '/src/media/works/127-la-serviette-bleue-v2-3.webp'
   - '/src/media/works/127-la-serviette-bleue-v2-4.webp'
@@ -11,6 +11,7 @@ images:
   - '/src/media/works/127-la-serviette-bleue-v2-7.webp'
   - '/src/media/works/127-la-serviette-bleue-v2-8.webp'
   - '/src/media/works/127-la-serviette-bleue-v2-9.webp'
+  - '/src/media/works/127-la-serviette-bleue-detail.webp'
 old_image: '/src/media/works/127-la-serviette-bleue.webp'
 collections:
   - selected-paintings
@@ -30,5 +31,4 @@ year_start: 1972
 year_end: null
 file: '/src/media/works/127-la-serviette-bleue.webp'
 uuid: 13470fa9-5eb9-40c6-ab67-51b941314997
-detail: '/src/media/works/127-la-serviette-bleue-detail.webp'
 ---

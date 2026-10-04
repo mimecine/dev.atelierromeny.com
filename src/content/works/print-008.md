@@ -4,7 +4,9 @@ categories: Works on Paper
 collections:
   - works-on-paper
 uuid: 6189d3cb-ea72-47ec-bf76-dd03cb22f61b
-image: '/src/media/works/print-008.webp'
+images:
+  - '/src/media/works/print-008.webp'
+  - '/src/media/works/print-008-detail.webp'
 tags:
   - print
   - relief print
@@ -18,7 +20,6 @@ w: 50
 h: 31
 sheet_w: 61.5
 sheet_h: 49.5
-detail: '/src/media/works/print-008-detail.webp'
 edition: "9/15"
 ---
 

@@ -1,7 +1,8 @@
 ---
 id: null
 title: Petite Improvisation 2
-image: '/src/media/works/petite-improvisation-2.webp'
+images:
+  - '/src/media/works/petite-improvisation-2.webp'
 collections:
   - nfs
 categories: Abstract

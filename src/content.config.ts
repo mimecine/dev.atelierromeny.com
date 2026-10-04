@@ -9,12 +9,12 @@ const _works = defineCollection({
       // Older CMS saves wrote the id as a string ('127')
       id: z.union([z.number(), z.string().regex(/^\d+$/).transform(Number)]).optional().nullish(),
       title: z.string().optional().nullish(),
-      image: image().optional().nullish(),
+      // the main photo first; the detail (…-detail.webp: the artwork alone, cut out and
+      // straightened by scripts/make-details) last
       images: z.array(image()).optional().nullish(),
       hidden_images: z.array(image()).optional().nullish(), // kept in the files, not shown on the site
-      thumbnail: z.number().int().optional().nullish(), // which image is the thumbnail: 1 = image, 2 = images[0], …
+      thumbnail: z.number().int().optional().nullish(), // which of `images` is the thumbnail, 1-based
       old_image: image().optional().nullish(), // pre-reshoot photo; shown only when the work has no other image
-      detail: image().optional().nullish(), // the artwork alone, cut out and straightened (scripts/make_details.py); shown last on the work page
       description: z.string().optional().nullish(),
       categories: z.string().optional().nullish(),
       w: z.number().optional().nullish(),

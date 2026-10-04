@@ -10,7 +10,8 @@ file: '/src/media/works/580-au-caf.webp'
 year: '2003'
 year_start: 2003
 year_end: null
-image: '/src/media/works/580-au-caf-detail.webp'
+images:
+  - '/src/media/works/580-au-caf-detail.webp'
 old_image: '/src/media/works/580-au-caf.webp'
 uuid: 988da031-4dbb-48ed-ad3d-4058eb52f597
 tags:
@@ -21,6 +22,5 @@ tags:
   - music
   - mandolin
   - fruit
-detail: '/src/media/works/580-au-caf-detail.webp'
 ---
 

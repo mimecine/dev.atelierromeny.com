@@ -1,7 +1,8 @@
 ---
 id: null
 title: Wo Hin 1
-image: '/src/media/works/wo-hin-1-detail.webp'
+images:
+  - '/src/media/works/wo-hin-1-detail.webp'
 old_image: '/src/media/works/wo-hin-1.webp'
 categories: Abstract
 w: 38
@@ -18,6 +19,5 @@ tags:
   - collage
   - abstract
   - map
-detail: '/src/media/works/wo-hin-1-detail.webp'
 ---
 

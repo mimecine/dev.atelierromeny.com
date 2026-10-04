@@ -1,7 +1,8 @@
 ---
 id: 763
 title: La rose, contraste
-image: '/src/media/works/763-la-rose-contraste-detail.webp'
+images:
+  - '/src/media/works/763-la-rose-contraste-detail.webp'
 old_image: '/src/media/works/763-la-rose-contraste.webp'
 collections:
   - nfs
@@ -21,6 +22,5 @@ tags:
   - still life
   - flowers
   - rose
-detail: '/src/media/works/763-la-rose-contraste-detail.webp'
 ---
 

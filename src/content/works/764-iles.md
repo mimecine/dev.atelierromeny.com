@@ -1,7 +1,8 @@
 ---
 id: 764
 title: Iles
-image: '/src/media/works/764-iles.webp'
+images:
+  - '/src/media/works/764-iles.webp'
 collections:
   - marco
 categories: Abstrait

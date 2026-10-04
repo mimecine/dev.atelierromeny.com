@@ -10,7 +10,8 @@ file: '/src/media/works/324-baby-boom.webp'
 year: '1991'
 year_start: 1991
 year_end: null
-image: '/src/media/works/324-baby-boom-detail.webp'
+images:
+  - '/src/media/works/324-baby-boom-detail.webp'
 old_image: '/src/media/works/324-baby-boom.webp'
 uuid: 27b89b80-fd9b-4188-aa03-dc2598a58cb0
 tags:
@@ -18,6 +19,5 @@ tags:
   - collage
   - figure
   - child
-detail: '/src/media/works/324-baby-boom-detail.webp'
 ---
 

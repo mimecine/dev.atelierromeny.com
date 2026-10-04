@@ -1,7 +1,8 @@
 ---
 id: 492
 title: Les oiseaux qui s'envolent (l'espoir)
-image: '/src/media/works/492-les-oiseaux-qui-senvolent-lespoir.webp'
+images:
+  - '/src/media/works/492-les-oiseaux-qui-senvolent-lespoir.webp'
 categories: Accident dans la montagne
 w: 140
 h: 120

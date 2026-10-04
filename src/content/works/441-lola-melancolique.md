@@ -1,7 +1,8 @@
 ---
 id: 441
 title: Lola, mélancolique
-image: '/src/media/works/441-lola-melancolique-detail.webp'
+images:
+  - '/src/media/works/441-lola-melancolique-detail.webp'
 old_image: '/src/media/works/441-lola-melancolique.webp'
 collections:
   - nfs
@@ -21,6 +22,5 @@ tags:
   - figure
   - sleeping
   - hammock
-detail: '/src/media/works/441-lola-melancolique-detail.webp'
 ---
 

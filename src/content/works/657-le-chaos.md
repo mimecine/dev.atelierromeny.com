@@ -1,7 +1,8 @@
 ---
 id: 657
 title: Le chaos
-image: '/src/media/works/657-le-chaos-v2.webp'
+images:
+  - '/src/media/works/657-le-chaos-v2.webp'
 collections:
   - selected-paintings
 categories: La création

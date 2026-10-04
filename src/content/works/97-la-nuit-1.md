@@ -1,7 +1,9 @@
 ---
 id: 97
 title: La nuit 1
-image: '/src/media/works/97-la-nuit-1-v2.webp'
+images:
+  - '/src/media/works/97-la-nuit-1-v2.webp'
+  - '/src/media/works/97-la-nuit-1-detail.webp'
 collections:
   - selected-paintings
 categories: Abstrait
@@ -20,6 +22,5 @@ tags:
   - painting
   - abstract
   - night
-detail: '/src/media/works/97-la-nuit-1-detail.webp'
 ---
 

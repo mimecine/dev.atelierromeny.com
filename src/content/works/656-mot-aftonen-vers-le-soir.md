@@ -1,7 +1,8 @@
 ---
 id: 656
 title: Mot Aftonen (vers le soir)
-image: '/src/media/works/656-mot-aftonen-vers-le-soir-detail.webp'
+images:
+  - '/src/media/works/656-mot-aftonen-vers-le-soir-detail.webp'
 old_image: '/src/media/works/656-mot-aftonen-vers-le-soir.webp'
 categories: Paysages
 w: 40
@@ -18,6 +19,5 @@ tags:
   - abstract
   - landscape
   - sun
-detail: '/src/media/works/656-mot-aftonen-vers-le-soir-detail.webp'
 ---
 

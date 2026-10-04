@@ -1,7 +1,8 @@
 ---
 id: 91
 title: La nuit
-image: '/src/media/works/91-la-nuit-detail.webp'
+images:
+  - '/src/media/works/91-la-nuit-detail.webp'
 old_image: '/src/media/works/91-la-nuit.webp'
 categories: Abstrait
 w: 65
@@ -17,6 +18,5 @@ tags:
   - painting
   - abstract
   - night
-detail: '/src/media/works/91-la-nuit-detail.webp'
 ---
 

@@ -1,7 +1,8 @@
 ---
 id: 720
 title: Le Ventoux couronn
-image: '/src/media/works/720-le-ventoux-couronn-detail.webp'
+images:
+  - '/src/media/works/720-le-ventoux-couronn-detail.webp'
 old_image: '/src/media/works/720-le-ventoux-couronn.webp'
 categories: Paysages
 w: 65
@@ -21,6 +22,5 @@ tags:
   - tree
   - clouds
   - Mont Ventoux
-detail: '/src/media/works/720-le-ventoux-couronn-detail.webp'
 ---
 

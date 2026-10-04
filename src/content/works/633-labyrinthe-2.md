@@ -1,7 +1,8 @@
 ---
 id: 633
 title: Labyrinthe 2
-image: '/src/media/works/633-labyrinthe-2.webp'
+images:
+  - '/src/media/works/633-labyrinthe-2.webp'
 categories: Abstrait
 w: 80
 h: 80

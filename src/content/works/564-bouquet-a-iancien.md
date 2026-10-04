@@ -1,7 +1,8 @@
 ---
 id: 564
 title: Bouquet å I‘ancien
-image: '/src/media/works/564-bouquet-a-iancien-detail.webp'
+images:
+  - '/src/media/works/564-bouquet-a-iancien-detail.webp'
 old_image: '/src/media/works/564-bouquet-a-iancien.webp'
 categories: Fleurs
 w: 38
@@ -18,6 +19,5 @@ tags:
   - painting
   - still life
   - flowers
-detail: '/src/media/works/564-bouquet-a-iancien-detail.webp'
 ---
 

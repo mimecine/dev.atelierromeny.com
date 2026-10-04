@@ -1,10 +1,11 @@
 """
 Make a "detail" image for each work: the artwork alone, cut out of its photo,
 straightened, without frame or mat. Saved as src/media/works/<slug>-detail.webp
-and recorded in the work's `detail` field (shown last in the work page's strip).
+and added as the last of the work's `images` (the last image in the work page's strip).
 
-Source photo: the work's chosen thumbnail (thumbnail: n over image + images),
-else its image, else old_image. (A work whose image is its detail uses old_image.)
+Source photo: the work's chosen thumbnail (thumbnail: n over its images, not counting
+the detail), else its first image, else old_image. (A work whose only image is its
+detail uses old_image.)
 
 Outline of the artwork:
   - prints (on the burlap backdrop): the paper sheet, found like measure_prints.py
@@ -17,9 +18,9 @@ trimmed off.
 
 Review first, write afterwards:
 
-    scripts/venv/bin/python scripts/make_details.py --review /tmp/details 127-la-serviette-bleue print-003
-    scripts/venv/bin/python scripts/make_details.py --review /tmp/details --all     # contact sheets of everything
-    scripts/venv/bin/python scripts/make_details.py --write --all                   # images + `detail` fields
+    scripts/make-details --review /tmp/details 127-la-serviette-bleue print-003
+    scripts/make-details --review /tmp/details --all     # contact sheets of everything
+    scripts/make-details --write --all                   # detail images, added to `images`
 
 Works that already have a `detail` are skipped unless named or --force is given.
 Doubtful results are listed (CHECK) and not written unless --include-flagged.
@@ -83,10 +84,9 @@ def listing(fm, key):
 
 
 def source_image(fm):
-    # Works that only had an old photo use their detail as `image` (old photo moved to
-    # old_image): make the detail from the photo, not from itself.
-    detail = scalar(fm, "detail")
-    images = [p for p in [scalar(fm, "image"), *listing(fm, "images")] if p and p != detail]
+    # The detail (last of `images`) is never a source. Works that only had an old photo
+    # have just their detail: make it from the old photo, not from itself.
+    images = [p for p in listing(fm, "images") if not is_detail(p)]
     if not images:
         old = scalar(fm, "old_image")
         return old
@@ -95,17 +95,28 @@ def source_image(fm):
     return images[i]
 
 
+def is_detail(path):
+    return path.endswith("-detail.webp")
+
+
+def has_detail(fm):
+    return any(is_detail(p) for p in listing(fm, "images"))
+
+
 def is_print(fm, src):
     return "/print-" in src or (scalar(fm, "categories") or "").lower() in ("works on paper", "print")
 
 
 def set_detail(md, value):
+    """Make `value` the last of the work's `images` (replacing an earlier detail)."""
     fm, text = frontmatter(md)
-    line = f"detail: '{value}'"
-    if re.search(r"^detail:", fm, re.M):
-        fm2 = re.sub(r"^detail:.*$", line, fm, count=1, flags=re.M)
+    paths = [p for p in listing(fm, "images") if not is_detail(p)] + [value]
+    block = "images:\n" + "\n".join(f"  - '{p}'" for p in paths)
+    m = re.search(r"^images:[ \t]*\n(?:[ \t]+-.*(?:\n|$))*", fm, re.M)
+    if m:
+        fm2 = fm[: m.start()] + block + ("\n" if m.group(0).endswith("\n") else "") + fm[m.end():]
     else:
-        fm2 = fm + "\n" + line
+        fm2 = fm + "\n" + block
     open(md, "w", encoding="utf-8").write(text.replace(fm, fm2, 1))
 
 
@@ -318,7 +329,7 @@ def main():
     ap.add_argument("works", nargs="*", help="work slugs (file names without .md)")
     ap.add_argument("--all", action="store_true")
     ap.add_argument("--review", help="folder for review images (contact sheets)")
-    ap.add_argument("--write", action="store_true", help="save detail images and set the `detail` field")
+    ap.add_argument("--write", action="store_true", help="save detail images and add them as the last of `images`")
     ap.add_argument("--force", action="store_true", help="redo works that already have a detail")
     ap.add_argument("--include-flagged", action="store_true")
     args = ap.parse_args()
@@ -337,7 +348,7 @@ def main():
     for md in mds:
         slug = os.path.basename(md)[:-3]
         fm, _ = frontmatter(md)
-        if scalar(fm, "detail") and not (args.force or not args.all):
+        if has_detail(fm) and not (args.force or not args.all):
             skipped += 1
             continue
         src = source_image(fm)

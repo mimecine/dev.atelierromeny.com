@@ -1,7 +1,8 @@
 ---
 id: 546
 title: Le cardinai
-image: '/src/media/works/546-le-cardinai-detail.webp'
+images:
+  - '/src/media/works/546-le-cardinai-detail.webp'
 old_image: '/src/media/works/546-le-cardinai.webp'
 categories: Natures mortes
 w: 89
@@ -18,6 +19,5 @@ tags:
   - still life
   - music
   - mandolin
-detail: '/src/media/works/546-le-cardinai-detail.webp'
 ---
 

@@ -1,7 +1,8 @@
 ---
 id: 481
 title: Trou de Gargas avec Lisou
-image: '/src/media/works/481-trou-de-gargas-avec-lisou-detail.webp'
+images:
+  - '/src/media/works/481-trou-de-gargas-avec-lisou-detail.webp'
 old_image: '/src/media/works/481-trou-de-gargas-avec-lisou.webp'
 categories: Paysages
 w: 100
@@ -17,6 +18,5 @@ tags:
   - painting
   - landscape
   - tree
-detail: '/src/media/works/481-trou-de-gargas-avec-lisou-detail.webp'
 ---
 

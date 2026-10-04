@@ -1,7 +1,10 @@
 ---
 id: 366
 title: Cobra
-image: '/src/media/works/366-cobra-v2.webp'
+images:
+  - '/src/media/works/366-cobra-v2.webp'
+  - '/src/media/works/366-cobra-v2-2.webp'
+  - '/src/media/works/366-cobra-detail.webp'
 collections:
   - marco
   - selected-paintings
@@ -17,11 +20,8 @@ year_end: null
 file: '/src/media/works/366-cobra.webp'
 uuid: fb866b52-45f6-4a40-ac92-e583feb6fd0b
 old_image: '/src/media/works/366-cobra.webp'
-images:
-  - '/src/media/works/366-cobra-v2-2.webp'
 tags:
   - painting
   - abstract
-detail: '/src/media/works/366-cobra-detail.webp'
 ---
 

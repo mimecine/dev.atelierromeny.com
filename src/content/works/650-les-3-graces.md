@@ -10,7 +10,8 @@ file: '/src/media/works/650-les-3-graces.webp'
 year: '1970'
 year_start: 1970
 year_end: null
-image: '/src/media/works/650-les-3-graces.webp'
+images:
+  - '/src/media/works/650-les-3-graces.webp'
 uuid: 10cd25d0-66a3-4192-9938-241cfc01f765
 tags:
   - painting

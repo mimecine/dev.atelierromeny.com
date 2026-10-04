@@ -66,8 +66,8 @@ function workInfo(id: number) {
     w: w.data.w ?? null,
     h: w.data.h ?? null,
     location: w.data.new_location ?? w.data.location ?? null,
-    image: w.data.image ? path.basename(w.data.image) : null,
-    images: (w.data.images ?? []).map((i: string) => path.basename(i)),
+    image: w.data.images?.[0] ? path.basename(w.data.images[0]) : null,
+    images: (w.data.images ?? []).slice(1).map((i: string) => path.basename(i)),
   }));
 }
 

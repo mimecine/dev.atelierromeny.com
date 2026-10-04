@@ -1,7 +1,9 @@
 ---
 id: 429
 title: Brand..Jord (terre brulée)
-image: '/src/media/works/429-brand-jord-terre-brulee.webp'
+images:
+  - '/src/media/works/429-brand-jord-terre-brulee.webp'
+  - '/src/media/works/429-brandjord-terre-brulee-detail.webp'
 collections:
   - nfs
   - selected-paintings
@@ -20,6 +22,5 @@ old_image: '/src/media/works/429-brandjord-terre-brulee.webp'
 tags:
   - painting
   - abstract
-detail: '/src/media/works/429-brandjord-terre-brulee-detail.webp'
 ---
 

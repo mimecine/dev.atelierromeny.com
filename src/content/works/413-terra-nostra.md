@@ -1,7 +1,8 @@
 ---
 id: 413
 title: Terra nostra
-image: '/src/media/works/413-terra-nostra.webp'
+images:
+  - '/src/media/works/413-terra-nostra.webp'
 categories: Abstrait
 w: 90
 h: 130

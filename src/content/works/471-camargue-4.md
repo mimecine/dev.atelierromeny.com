@@ -1,7 +1,9 @@
 ---
 id: 471
 title: Camargue 4
-image: '/src/media/works/471-camargue-4-v2.webp'
+images:
+  - '/src/media/works/471-camargue-4-v2.webp'
+  - '/src/media/works/471-camargue-4-detail.webp'
 categories: Abstrait
 w: 100
 h: 80
@@ -19,6 +21,5 @@ tags:
   - abstract
   - landscape
   - Camargue
-detail: '/src/media/works/471-camargue-4-detail.webp'
 ---
 

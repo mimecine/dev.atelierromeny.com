@@ -10,7 +10,6 @@ file: null
 year: '1992'
 year_start: 1992
 year_end: null
-image: null
 uuid: 98f58737-dbac-425d-ad5a-673ce03dcfe0
 ---
 

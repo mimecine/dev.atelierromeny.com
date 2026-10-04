@@ -10,7 +10,8 @@ file: '/src/media/works/417-couple.webp'
 year: '1982'
 year_start: 1982
 year_end: null
-image: '/src/media/works/417-couple-detail.webp'
+images:
+  - '/src/media/works/417-couple-detail.webp'
 old_image: '/src/media/works/417-couple.webp'
 uuid: 65bd19be-d8b5-4b18-adfb-a32d78a8e57f
 tags:
@@ -19,6 +20,5 @@ tags:
   - figure
   - couple
   - nude
-detail: '/src/media/works/417-couple-detail.webp'
 ---
 

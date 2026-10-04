@@ -11,7 +11,6 @@ file: null
 year: '1983'
 year_start: 1983
 year_end: null
-image: null
 uuid: 5a80bd73-19dc-4298-8815-e784c3ab8e26
 ---
 

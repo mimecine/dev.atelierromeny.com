@@ -1,7 +1,8 @@
 ---
 id: 70
 title: JS BACH 2
-image: '/src/media/works/70-js-bach-2-detail.webp'
+images:
+  - '/src/media/works/70-js-bach-2-detail.webp'
 old_image: '/src/media/works/70-js-bach-2.webp'
 categories: Musique
 w: 27
@@ -20,6 +21,5 @@ tags:
   - music
   - Bach
   - lettering
-detail: '/src/media/works/70-js-bach-2-detail.webp'
 ---
 

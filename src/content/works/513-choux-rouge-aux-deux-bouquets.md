@@ -1,7 +1,8 @@
 ---
 id: 513
 title: Choux rouge aux deux bouquets
-image: '/src/media/works/513-choux-rouge-aux-deux-bouquets.webp'
+images:
+  - '/src/media/works/513-choux-rouge-aux-deux-bouquets.webp'
 categories: Natures mortes
 w: 100
 h: 80

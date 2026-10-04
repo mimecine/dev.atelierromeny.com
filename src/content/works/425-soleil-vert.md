@@ -1,7 +1,9 @@
 ---
 id: 425
 title: Soleil vert
-image: '/src/media/works/425-soleil-vert-v2.webp'
+images:
+  - '/src/media/works/425-soleil-vert-v2.webp'
+  - '/src/media/works/425-soleil-vert-detail.webp'
 collections:
   - selected-paintings
 categories: Abstrait
@@ -21,6 +23,5 @@ tags:
   - semi-abstract
   - sun
   - plant
-detail: '/src/media/works/425-soleil-vert-detail.webp'
 ---
 

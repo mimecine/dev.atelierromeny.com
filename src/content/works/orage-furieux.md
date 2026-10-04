@@ -10,7 +10,8 @@ file: '/src/media/works/orage-furieux.webp'
 year: '2008'
 year_start: 2008
 year_end: null
-image: '/src/media/works/orage-furieux.webp'
+images:
+  - '/src/media/works/orage-furieux.webp'
 uuid: d9e5464c-fc91-48d6-ab81-209928716df2
 tags:
   - painting

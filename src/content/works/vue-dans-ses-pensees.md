@@ -10,13 +10,13 @@ file: '/src/media/works/vue-dans-ses-pensees.webp'
 year: '2008'
 year_start: 2008
 year_end: null
-image: '/src/media/works/vue-dans-ses-pensees-detail.webp'
+images:
+  - '/src/media/works/vue-dans-ses-pensees-detail.webp'
 old_image: '/src/media/works/vue-dans-ses-pensees.webp'
 uuid: b2016121-9d9e-452e-b03c-cf129b263df6
 tags:
   - painting
   - figure
   - nude
-detail: '/src/media/works/vue-dans-ses-pensees-detail.webp'
 ---
 

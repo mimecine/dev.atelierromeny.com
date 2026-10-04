@@ -10,7 +10,6 @@ file: null
 year: '1978'
 year_start: 1978
 year_end: null
-image: null
 uuid: 3161945a-f7e6-41ab-8287-c582c7f347a6
 ---
 

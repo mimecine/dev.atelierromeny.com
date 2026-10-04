@@ -11,7 +11,8 @@ file: '/src/media/works/5-melancolie.webp'
 year: '1979'
 year_start: 1979
 year_end: null
-image: '/src/media/works/5-melancolie.webp'
+images:
+  - '/src/media/works/5-melancolie.webp'
 uuid: 1a0a016b-875a-4970-96cd-2885ee8dd9a6
 tags:
   - painting

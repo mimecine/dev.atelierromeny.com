@@ -1,7 +1,8 @@
 ---
 id: 607
 title: Arbetare (I'ouvrier)
-image: '/src/media/works/607-arbetare-iouvrier-detail.webp'
+images:
+  - '/src/media/works/607-arbetare-iouvrier-detail.webp'
 old_image: '/src/media/works/607-arbetare-iouvrier.webp'
 categories: Figures humaines
 w: 42
@@ -19,6 +20,5 @@ tags:
   - portrait
   - figure
   - worker
-detail: '/src/media/works/607-arbetare-iouvrier-detail.webp'
 ---
 

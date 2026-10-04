@@ -1,7 +1,8 @@
 ---
 id: 771
 title: Deux tétes
-image: '/src/media/works/771-deux-tetes-detail.webp'
+images:
+  - '/src/media/works/771-deux-tetes-detail.webp'
 old_image: '/src/media/works/771-deux-tetes.webp'
 categories: Cartes
 w: 46
@@ -19,6 +20,5 @@ tags:
   - collage
   - face
   - portrait
-detail: '/src/media/works/771-deux-tetes-detail.webp'
 ---
 

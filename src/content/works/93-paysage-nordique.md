@@ -1,7 +1,8 @@
 ---
 id: 93
 title: Paysage nordique
-image: '/src/media/works/93-paysage-nordique-detail.webp'
+images:
+  - '/src/media/works/93-paysage-nordique-detail.webp'
 old_image: '/src/media/works/93-paysage-nordique.webp'
 collections:
   - nfs
@@ -19,6 +20,5 @@ tags:
   - painting
   - abstract
   - landscape
-detail: '/src/media/works/93-paysage-nordique-detail.webp'
 ---
 

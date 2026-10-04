@@ -10,7 +10,8 @@ file: '/src/media/works/195-le-fumnanbule.webp'
 year: '1998'
 year_start: 1998
 year_end: null
-image: '/src/media/works/195-le-fumnanbule-detail.webp'
+images:
+  - '/src/media/works/195-le-fumnanbule-detail.webp'
 old_image: '/src/media/works/195-le-fumnanbule.webp'
 uuid: 1bb20ebf-7767-499e-bdbd-587f60d28b96
 tags:
@@ -18,6 +19,5 @@ tags:
   - figure
   - circus
   - tightrope walker
-detail: '/src/media/works/195-le-fumnanbule-detail.webp'
 ---
 

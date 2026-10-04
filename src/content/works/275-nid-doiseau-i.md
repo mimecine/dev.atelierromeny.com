@@ -1,7 +1,8 @@
 ---
 id: 275
 title: Nid d'oiseau I
-image: '/src/media/works/275-nid-doiseau-i-detail.webp'
+images:
+  - '/src/media/works/275-nid-doiseau-i-detail.webp'
 old_image: '/src/media/works/275-nid-doiseau-i.webp'
 categories: Animaux
 w: 33
@@ -18,6 +19,5 @@ tags:
   - semi-abstract
   - bird
   - nest
-detail: '/src/media/works/275-nid-doiseau-i-detail.webp'
 ---
 

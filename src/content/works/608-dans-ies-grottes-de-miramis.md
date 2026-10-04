@@ -1,7 +1,9 @@
 ---
 id: 608
 title: Dans Ies grottes de Miramis
-image: '/src/media/works/608-dans-ies-grottes-de-miramis-v2.webp'
+images:
+  - '/src/media/works/608-dans-ies-grottes-de-miramis-v2.webp'
+  - '/src/media/works/608-dans-ies-grottes-de-miramis-detail.webp'
 collections:
   - selected-paintings
 categories: Abstrait
@@ -20,6 +22,5 @@ tags:
   - painting
   - abstract
   - cave
-detail: '/src/media/works/608-dans-ies-grottes-de-miramis-detail.webp'
 ---
 

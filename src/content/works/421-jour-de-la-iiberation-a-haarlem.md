@@ -1,7 +1,8 @@
 ---
 id: 421
 title: Jour de la Iibération a Haarlem
-image: '/src/media/works/421-jour-de-la-iiberation-a-haarlem.webp'
+images:
+  - '/src/media/works/421-jour-de-la-iiberation-a-haarlem.webp'
 categories: Paysages
 w: 60
 h: 75

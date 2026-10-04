@@ -1,7 +1,9 @@
 ---
 id: 652
 title: Poisson sur poéle
-image: '/src/media/works/652-poisson-sur-poele-v2.webp'
+images:
+  - '/src/media/works/652-poisson-sur-poele-v2.webp'
+  - '/src/media/works/652-poisson-sur-poele-detail.webp'
 collections:
   - selected-paintings
 categories: Natures mortes
@@ -21,6 +23,5 @@ tags:
   - still life
   - fish
   - stove
-detail: '/src/media/works/652-poisson-sur-poele-detail.webp'
 ---
 

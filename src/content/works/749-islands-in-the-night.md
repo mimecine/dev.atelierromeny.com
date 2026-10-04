@@ -2,7 +2,8 @@
 uuid: f27312c8-b301-45cc-ae34-73e1f50874f5
 id: 749
 title: Islands in the night
-image: '/src/media/works/749-islands-in-the-night-detail.webp'
+images:
+  - '/src/media/works/749-islands-in-the-night-detail.webp'
 old_image: '/src/media/works/749-islands-in-the-night.webp'
 categories: Abstrait
 w: 80
@@ -18,6 +19,5 @@ tags:
   - painting
   - abstract
   - night
-detail: '/src/media/works/749-islands-in-the-night-detail.webp'
 ---
 

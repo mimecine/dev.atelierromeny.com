@@ -1,7 +1,8 @@
 ---
 id: null
 title: Crépuscule 5
-image: '/src/media/works/crepuscule-5-detail.webp'
+images:
+  - '/src/media/works/crepuscule-5-detail.webp'
 old_image: '/src/media/works/crepuscule-5.webp'
 categories: Abstract
 w: 33
@@ -18,6 +19,5 @@ tags:
   - landscape
   - night
   - sky
-detail: '/src/media/works/crepuscule-5-detail.webp'
 ---
 

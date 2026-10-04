@@ -1,7 +1,8 @@
 ---
 id: 162
 title: Conversation sous la Iampe
-image: '/src/media/works/162-conversation-sous-la-iampe-detail.webp'
+images:
+  - '/src/media/works/162-conversation-sous-la-iampe-detail.webp'
 old_image: '/src/media/works/162-conversation-sous-la-iampe.webp'
 collections:
   - nfs
@@ -21,6 +22,5 @@ tags:
   - figure
   - interior
   - conversation
-detail: '/src/media/works/162-conversation-sous-la-iampe-detail.webp'
 ---
 

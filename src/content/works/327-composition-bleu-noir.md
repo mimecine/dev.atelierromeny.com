@@ -1,7 +1,8 @@
 ---
 id: 327
 title: Composition bleu noir
-image: '/src/media/works/327-composition-bleu-noir-detail.webp'
+images:
+  - '/src/media/works/327-composition-bleu-noir-detail.webp'
 old_image: '/src/media/works/327-composition-bleu-noir.webp'
 categories: Abstrait
 w: 41
@@ -16,6 +17,5 @@ uuid: f8f132ae-f3e8-415c-a8d4-3257717913a7
 tags:
   - painting
   - abstract
-detail: '/src/media/works/327-composition-bleu-noir-detail.webp'
 ---
 

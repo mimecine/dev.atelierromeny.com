@@ -1,7 +1,8 @@
 ---
 id: 659
 title: Les eaux
-image: '/src/media/works/659-les-eaux.webp'
+images:
+  - '/src/media/works/659-les-eaux.webp'
 categories: La création
 w: 180
 h: 130

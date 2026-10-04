@@ -1,7 +1,8 @@
 ---
 id: 101
 title: La nuit 2 / Royeaumont
-image: '/src/media/works/101-la-nuit-2-royeaumont-detail.webp'
+images:
+  - '/src/media/works/101-la-nuit-2-royeaumont-detail.webp'
 old_image: '/src/media/works/101-la-nuit-2-royeaumont.webp'
 categories: Abstrait
 w: 50
@@ -17,6 +18,5 @@ uuid: fced13c0-be04-41a4-a871-01fa17a555ba
 tags:
   - painting
   - abstract
-detail: '/src/media/works/101-la-nuit-2-royeaumont-detail.webp'
 ---
 

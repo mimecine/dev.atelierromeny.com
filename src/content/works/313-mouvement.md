@@ -1,7 +1,10 @@
 ---
 id: 313
 title: Mouvement
-image: '/src/media/works/313-mouvement-v2.webp'
+images:
+  - '/src/media/works/313-mouvement-v2.webp'
+  - '/src/media/works/313-mouvement-v2-2.webp'
+thumbnail: 2
 collections:
   - selected-paintings
 categories: Abstrait
@@ -16,11 +19,8 @@ year_end: null
 file: '/src/media/works/313-mouvement.webp'
 uuid: 6137592d-68fd-447c-bf32-5969aca3a8f9
 old_image: '/src/media/works/313-mouvement.webp'
-images:
-  - '/src/media/works/313-mouvement-v2-2.webp'
 tags:
   - painting
   - abstract
-thumbnail: 2
 ---
 

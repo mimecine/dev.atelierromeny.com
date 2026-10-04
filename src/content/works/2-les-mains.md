@@ -11,7 +11,8 @@ file: '/src/media/works/2-les-mains.webp'
 year: '1981'
 year_start: 1981
 year_end: null
-image: '/src/media/works/2-les-mains-detail.webp'
+images:
+  - '/src/media/works/2-les-mains-detail.webp'
 old_image: '/src/media/works/2-les-mains.webp'
 uuid: 37aa276f-3b25-491d-a640-2c8072b837e0
 collections:
@@ -20,6 +21,5 @@ tags:
   - painting
   - hand
   - figure
-detail: '/src/media/works/2-les-mains-detail.webp'
 ---
 

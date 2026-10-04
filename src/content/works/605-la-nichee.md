@@ -1,7 +1,8 @@
 ---
 id: 605
 title: La nichée
-image: '/src/media/works/605-la-nichee-detail.webp'
+images:
+  - '/src/media/works/605-la-nichee-detail.webp'
 old_image: '/src/media/works/605-la-nichee.webp'
 collections:
   - nfs
@@ -22,6 +23,5 @@ tags:
   - nest
   - tree
   - animal
-detail: '/src/media/works/605-la-nichee-detail.webp'
 ---
 

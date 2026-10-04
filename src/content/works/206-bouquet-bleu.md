@@ -1,7 +1,9 @@
 ---
 id: 206
 title: Bouquet bleu
-image: '/src/media/works/206-bouquet-bleu-v2.webp'
+images:
+  - '/src/media/works/206-bouquet-bleu-v2.webp'
+  - '/src/media/works/206-bouquet-bleu-detail.webp'
 collections:
   - marco
   - nfs
@@ -21,6 +23,5 @@ tags:
   - painting
   - still life
   - flowers
-detail: '/src/media/works/206-bouquet-bleu-detail.webp'
 ---
 

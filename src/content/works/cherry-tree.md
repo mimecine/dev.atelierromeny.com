@@ -10,7 +10,8 @@ file: '/src/media/works/cherry-tree.webp'
 year: '---'
 year_start: null
 year_end: null
-image: '/src/media/works/cherry-tree.webp'
+images:
+  - '/src/media/works/cherry-tree.webp'
 uuid: a960b572-bdde-4427-b172-12fd4b2cb488
 tags:
   - painting

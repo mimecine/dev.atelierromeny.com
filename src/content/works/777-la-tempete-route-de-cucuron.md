@@ -1,7 +1,9 @@
 ---
 id: 777
 title: La tempéte route de Cucuron
-image: '/src/media/works/777-la-tempete-route-de-cucuron-v2.webp'
+images:
+  - '/src/media/works/777-la-tempete-route-de-cucuron-v2.webp'
+  - '/src/media/works/777-la-tempete-route-de-cucuron-detail.webp'
 collections:
   - selected-paintings
 categories: Paysages
@@ -21,6 +23,5 @@ tags:
   - landscape
   - storm
   - field
-detail: '/src/media/works/777-la-tempete-route-de-cucuron-detail.webp'
 ---
 

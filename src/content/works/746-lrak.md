@@ -11,7 +11,8 @@ file: '/src/media/works/746-lrak.webp'
 year: '2004'
 year_start: 2004
 year_end: null
-image: '/src/media/works/746-lrak-detail.webp'
+images:
+  - '/src/media/works/746-lrak-detail.webp'
 old_image: '/src/media/works/746-lrak.webp'
 uuid: eec369b1-3044-4856-9f43-0015aa5d53df
 collections:
@@ -22,6 +23,5 @@ tags:
   - figure
   - nude
   - war
-detail: '/src/media/works/746-lrak-detail.webp'
 ---
 

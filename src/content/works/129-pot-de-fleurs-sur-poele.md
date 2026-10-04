@@ -1,7 +1,8 @@
 ---
 id: 129
 title: Pot de fleurs sur poéle
-image: '/src/media/works/129-pot-de-fleurs-sur-poele-detail.webp'
+images:
+  - '/src/media/works/129-pot-de-fleurs-sur-poele-detail.webp'
 old_image: '/src/media/works/129-pot-de-fleurs-sur-poele.webp'
 collections:
   - nfs
@@ -19,6 +20,5 @@ tags:
   - painting
   - still life
   - flowers
-detail: '/src/media/works/129-pot-de-fleurs-sur-poele-detail.webp'
 ---
 

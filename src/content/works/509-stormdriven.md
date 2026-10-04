@@ -1,7 +1,8 @@
 ---
 id: 509
 title: Stormdriven
-image: '/src/media/works/509-stormdriven.webp'
+images:
+  - '/src/media/works/509-stormdriven.webp'
 categories: Abstrait
 w: 150
 h: 110

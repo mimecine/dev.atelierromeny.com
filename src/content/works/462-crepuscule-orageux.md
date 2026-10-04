@@ -1,7 +1,8 @@
 ---
 id: 462
 title: Crépuscule orageux
-image: '/src/media/works/462-crepuscule-orageux-detail.webp'
+images:
+  - '/src/media/works/462-crepuscule-orageux-detail.webp'
 old_image: '/src/media/works/462-crepuscule-orageux.webp'
 categories: Abstrait
 w: 120
@@ -16,6 +17,5 @@ uuid: 0dac6873-8ea6-4fcc-8156-1b8bc12f94fb
 tags:
   - painting
   - abstract
-detail: '/src/media/works/462-crepuscule-orageux-detail.webp'
 ---
 

@@ -1,7 +1,11 @@
 ---
 id: 602
 title: Med Strömmen (courant dans I'eau)
-image: '/src/media/works/602-med-strommen-courant-dans-i-eau.webp'
+images:
+  - '/src/media/works/602-med-strommen-courant-dans-i-eau.webp'
+  - '/src/media/works/602-med-strommen-courant-dans-i-eau-2.webp'
+  - '/src/media/works/602-med-strommen-courant-dans-i-eau-3.webp'
+  - '/src/media/works/602-med-strommen-courant-dans-i-eau-4.webp'
 collections:
   - selected-paintings
 categories: Abstrait
@@ -16,10 +20,6 @@ year_end: null
 file: '/src/media/works/602-med-strommen-courant-dans-ieau.webp'
 uuid: 40893b90-91de-485a-b62b-ee35f15d6d8d
 old_image: '/src/media/works/602-med-strommen-courant-dans-ieau.webp'
-images:
-  - '/src/media/works/602-med-strommen-courant-dans-i-eau-2.webp'
-  - '/src/media/works/602-med-strommen-courant-dans-i-eau-3.webp'
-  - '/src/media/works/602-med-strommen-courant-dans-i-eau-4.webp'
 tags:
   - painting
   - abstract

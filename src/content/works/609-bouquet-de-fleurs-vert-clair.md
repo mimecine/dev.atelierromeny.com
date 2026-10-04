@@ -1,7 +1,9 @@
 ---
 id: 609
 title: Bouquet de fleurs (vert Clair)
-image: '/src/media/works/609-bouquet-de-fleurs-vert-clair-v2.webp'
+images:
+  - '/src/media/works/609-bouquet-de-fleurs-vert-clair-v2.webp'
+  - '/src/media/works/609-bouquet-de-fleurs-vert-clair-detail.webp'
 collections:
   - selected-paintings
 categories: Fleurs
@@ -20,6 +22,5 @@ tags:
   - painting
   - still life
   - flowers
-detail: '/src/media/works/609-bouquet-de-fleurs-vert-clair-detail.webp'
 ---
 

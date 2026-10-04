@@ -1,7 +1,8 @@
 ---
 id: 46
 title: Contraste 1982 / Lumiere
-image: '/src/media/works/46-contraste-1982-lumiere.webp'
+images:
+  - '/src/media/works/46-contraste-1982-lumiere.webp'
 categories: Abstrait
 w: 120
 h: 100

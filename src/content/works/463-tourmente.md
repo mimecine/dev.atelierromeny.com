@@ -1,7 +1,8 @@
 ---
 id: 463
 title: Tourmente
-image: '/src/media/works/463-tourmente-detail.webp'
+images:
+  - '/src/media/works/463-tourmente-detail.webp'
 old_image: '/src/media/works/463-tourmente.webp'
 collections:
   - marco
@@ -19,6 +20,5 @@ uuid: 6c175668-f6de-4381-958c-353d83809223
 tags:
   - painting
   - abstract
-detail: '/src/media/works/463-tourmente-detail.webp'
 ---
 

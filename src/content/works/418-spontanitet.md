@@ -1,7 +1,8 @@
 ---
 id: 418
 title: Spontanitet
-image: '/src/media/works/418-spontanitet.webp'
+images:
+  - '/src/media/works/418-spontanitet.webp'
 collections:
   - nfs
 categories: Abstrait

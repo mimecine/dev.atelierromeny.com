@@ -4,7 +4,8 @@ categories: Works on Paper
 collections:
   - works-on-paper
 uuid: db8bcf60-c091-4cf9-8d3d-d4573553c06d
-image: '/src/media/works/print-062.webp'
+images:
+  - '/src/media/works/print-062.webp'
 tags:
   - print
   - etching

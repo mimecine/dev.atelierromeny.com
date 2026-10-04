@@ -1,7 +1,11 @@
 ---
 id: 335
 title: La jetée (Golf breker)
-image: '/src/media/works/335-la-jetee-golf-breker-v2.webp'
+images:
+  - '/src/media/works/335-la-jetee-golf-breker-v2.webp'
+  - '/src/media/works/335-la-jetee-golf-breker-v2-2.webp'
+  - '/src/media/works/335-la-jetee-golf-breker-detail.webp'
+thumbnail: 2
 collections:
   - selected-paintings
 categories: Paysages
@@ -16,12 +20,8 @@ year_end: null
 file: '/src/media/works/335-la-jetee-golf-breker.webp'
 uuid: 38f420d5-87c1-4c06-b7fa-6167d9be2905
 old_image: '/src/media/works/335-la-jetee-golf-breker.webp'
-images:
-  - '/src/media/works/335-la-jetee-golf-breker-v2-2.webp'
 tags:
   - painting
   - landscape
-thumbnail: 2
-detail: '/src/media/works/335-la-jetee-golf-breker-detail.webp'
 ---
 

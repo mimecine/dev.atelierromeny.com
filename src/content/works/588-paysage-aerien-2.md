@@ -1,7 +1,8 @@
 ---
 id: 588
 title: Paysage aérien 2
-image: '/src/media/works/588-paysage-aerien-2-detail.webp'
+images:
+  - '/src/media/works/588-paysage-aerien-2-detail.webp'
 old_image: '/src/media/works/588-paysage-aerien-2.webp'
 categories: Abstrait
 w: 95
@@ -16,6 +17,5 @@ uuid: 5febad2f-567e-4674-b955-b9c327fcd82d
 tags:
   - painting
   - abstract
-detail: '/src/media/works/588-paysage-aerien-2-detail.webp'
 ---
 

@@ -10,7 +10,8 @@ file: '/src/media/works/aurora-1.webp'
 year: '2006'
 year_start: 2006
 year_end: null
-image: '/src/media/works/aurora-1-detail.webp'
+images:
+  - '/src/media/works/aurora-1-detail.webp'
 old_image: '/src/media/works/aurora-1.webp'
 uuid: b6f06f1c-0541-4369-9753-a6aa2e9c3ba8
 tags:
@@ -19,6 +20,5 @@ tags:
   - sky
   - sun
   - village
-detail: '/src/media/works/aurora-1-detail.webp'
 ---
 

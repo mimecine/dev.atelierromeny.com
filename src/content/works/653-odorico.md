@@ -1,7 +1,8 @@
 ---
 id: 653
 title: Odorico
-image: '/src/media/works/653-odorico-detail.webp'
+images:
+  - '/src/media/works/653-odorico-detail.webp'
 old_image: '/src/media/works/653-odorico.webp'
 collections:
   - nfs
@@ -18,6 +19,5 @@ uuid: 4a13f511-e744-4b76-a69f-cc078c9c3bd8
 tags:
   - painting
   - portrait
-detail: '/src/media/works/653-odorico-detail.webp'
 ---
 

@@ -10,7 +10,8 @@ file: '/src/media/works/72-inspire-nature-les-rochers.webp'
 year: '1998'
 year_start: 1998
 year_end: null
-image: '/src/media/works/72-inspire-nature-les-rochers.webp'
+images:
+  - '/src/media/works/72-inspire-nature-les-rochers.webp'
 uuid: e4c6676f-954c-49a8-af91-3dc361acefb5
 tags:
   - painting

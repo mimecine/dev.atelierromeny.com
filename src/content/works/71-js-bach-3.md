@@ -1,7 +1,8 @@
 ---
 id: 71
 title: JS BACH 3
-image: '/src/media/works/71-js-bach-3.webp'
+images:
+  - '/src/media/works/71-js-bach-3.webp'
 categories: Musique
 w: 20
 h: 20

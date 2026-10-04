@@ -1,7 +1,8 @@
 ---
 id: 636
 title: Mistral
-image: '/src/media/works/636-mistral-detail.webp'
+images:
+  - '/src/media/works/636-mistral-detail.webp'
 old_image: '/src/media/works/636-mistral.webp'
 collections:
   - nfs
@@ -21,6 +22,5 @@ tags:
   - painting
   - abstract
   - landscape
-detail: '/src/media/works/636-mistral-detail.webp'
 ---
 

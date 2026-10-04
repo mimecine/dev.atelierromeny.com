@@ -10,7 +10,8 @@ file: '/src/media/works/124-desert-marin-ii.webp'
 year: '1984'
 year_start: 1984
 year_end: null
-image: '/src/media/works/124-desert-marin-ii.webp'
+images:
+  - '/src/media/works/124-desert-marin-ii.webp'
 uuid: c8929f0f-f973-4482-ad4f-90e3de610507
 tags:
   - mixed media

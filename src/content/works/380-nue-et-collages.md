@@ -10,7 +10,8 @@ file: '/src/media/works/380-nue-et-collages.webp'
 year: '1975'
 year_start: 1975
 year_end: null
-image: '/src/media/works/380-nue-et-collages-detail.webp'
+images:
+  - '/src/media/works/380-nue-et-collages-detail.webp'
 old_image: '/src/media/works/380-nue-et-collages.webp'
 uuid: ec4c45f4-9a96-4170-a7f1-33a82ca9e95c
 tags:
@@ -19,6 +20,5 @@ tags:
   - figure
   - nude
   - map
-detail: '/src/media/works/380-nue-et-collages-detail.webp'
 ---
 

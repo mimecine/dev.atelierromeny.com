@@ -1,7 +1,8 @@
 ---
 id: 6
 title: Affection animale
-image: '/src/media/works/6-affection-animale-detail.webp'
+images:
+  - '/src/media/works/6-affection-animale-detail.webp'
 old_image: '/src/media/works/6-affection-animale.webp'
 collections:
   - alisa
@@ -20,6 +21,5 @@ tags:
   - painting
   - animal
   - semi-abstract
-detail: '/src/media/works/6-affection-animale-detail.webp'
 ---
 

@@ -13,13 +13,13 @@ year_end: null
 uuid: fd79a44a-09e0-496e-9695-283b7e55cf17
 collections:
   - selected-paintings
-image: '/src/media/works/119-chaise-poisson-et-rhubarbe-detail.webp'
+images:
+  - '/src/media/works/119-chaise-poisson-et-rhubarbe-detail.webp'
 old_image: '/src/media/works/119-chaise-poisson-et-rhubarbe.webp'
 tags:
   - painting
   - still life
   - fish
   - chair
-detail: '/src/media/works/119-chaise-poisson-et-rhubarbe-detail.webp'
 ---
 

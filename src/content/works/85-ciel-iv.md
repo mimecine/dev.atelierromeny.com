@@ -1,7 +1,8 @@
 ---
 id: 85
 title: Ciel IV
-image: '/src/media/works/85-ciel-iv-detail.webp'
+images:
+  - '/src/media/works/85-ciel-iv-detail.webp'
 old_image: '/src/media/works/85-ciel-iv.webp'
 categories: Abstrait
 w: 54
@@ -17,6 +18,5 @@ tags:
   - painting
   - abstract
   - sky
-detail: '/src/media/works/85-ciel-iv-detail.webp'
 ---
 

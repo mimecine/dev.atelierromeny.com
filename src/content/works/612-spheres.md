@@ -1,7 +1,9 @@
 ---
 id: 612
 title: Sphéres
-image: '/src/media/works/612-spheres-v2.webp'
+images:
+  - '/src/media/works/612-spheres-v2.webp'
+  - '/src/media/works/612-spheres-detail.webp'
 collections:
   - selected-paintings
 categories: Abstrait
@@ -19,6 +21,5 @@ old_image: '/src/media/works/612-spheres.webp'
 tags:
   - painting
   - abstract
-detail: '/src/media/works/612-spheres-detail.webp'
 ---
 

@@ -1,7 +1,8 @@
 ---
 id: 152
 title: Branche d'amandier
-image: '/src/media/works/152-branche-damandier-detail.webp'
+images:
+  - '/src/media/works/152-branche-damandier-detail.webp'
 old_image: '/src/media/works/152-branche-damandier.webp'
 collections:
   - marco
@@ -20,6 +21,5 @@ tags:
   - tree
   - blossom
   - almond
-detail: '/src/media/works/152-branche-damandier-detail.webp'
 ---
 

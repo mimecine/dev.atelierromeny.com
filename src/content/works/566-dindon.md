@@ -1,7 +1,8 @@
 ---
 id: 566
 title: Dindon
-image: '/src/media/works/566-dindon-detail.webp'
+images:
+  - '/src/media/works/566-dindon-detail.webp'
 old_image: '/src/media/works/566-dindon.webp'
 categories: Animaux
 w: 65
@@ -18,6 +19,5 @@ tags:
   - animal
   - bird
   - turkey
-detail: '/src/media/works/566-dindon-detail.webp'
 ---
 

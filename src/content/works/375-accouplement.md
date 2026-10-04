@@ -1,7 +1,8 @@
 ---
 id: 375
 title: Accouplement
-image: '/src/media/works/375-accouplement-detail.webp'
+images:
+  - '/src/media/works/375-accouplement-detail.webp'
 old_image: '/src/media/works/375-accouplement.webp'
 collections:
   - alisa
@@ -22,6 +23,5 @@ tags:
   - animal
   - cat
   - mating
-detail: '/src/media/works/375-accouplement-detail.webp'
 ---
 

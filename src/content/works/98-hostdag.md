@@ -1,7 +1,9 @@
 ---
 id: 98
 title: Höstdag
-image: '/src/media/works/98-hostdag-v2.webp'
+images:
+  - '/src/media/works/98-hostdag-v2.webp'
+  - '/src/media/works/98-hostdag-detail.webp'
 collections:
   - selected-paintings
 categories: Abstrait
@@ -19,6 +21,5 @@ tags:
   - painting
   - abstract
   - autumn
-detail: '/src/media/works/98-hostdag-detail.webp'
 ---
 

@@ -1,7 +1,8 @@
 ---
 id: 379
 title: Nature morte au melon / Fruits et pichet
-image: '/src/media/works/379-nature-morte-au-melon-fruits-et-pichet.webp'
+images:
+  - '/src/media/works/379-nature-morte-au-melon-fruits-et-pichet.webp'
 collections:
   - nfs
 categories: Natures mortes

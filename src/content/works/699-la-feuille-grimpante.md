@@ -1,7 +1,8 @@
 ---
 id: 699
 title: La feuille grimpante
-image: '/src/media/works/699-la-feuille-grimpante-detail.webp'
+images:
+  - '/src/media/works/699-la-feuille-grimpante-detail.webp'
 old_image: '/src/media/works/699-la-feuille-grimpante.webp'
 collections:
   - nfs
@@ -20,6 +21,5 @@ tags:
   - plant
   - leaves
   - flowers
-detail: '/src/media/works/699-la-feuille-grimpante-detail.webp'
 ---
 

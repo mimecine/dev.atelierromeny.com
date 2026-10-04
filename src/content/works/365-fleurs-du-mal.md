@@ -1,7 +1,14 @@
 ---
 id: 365
 title: Fleurs du mal
-image: '/src/media/works/365-fleurs-du-mal-v2.webp'
+images:
+  - '/src/media/works/365-fleurs-du-mal-v2.webp'
+  - '/src/media/works/365-fleurs-du-mal-v2-2.webp'
+  - '/src/media/works/365-fleurs-du-mal-v2-3.webp'
+  - '/src/media/works/365-fleurs-du-mal-v2-4.webp'
+  - '/src/media/works/365-fleurs-du-mal-v2-5.webp'
+  - '/src/media/works/365-fleurs-du-mal-v2-6.webp'
+  - '/src/media/works/365-fleurs-du-mal-v2-7.webp'
 collections:
   - selected-paintings
 categories: Abstrait
@@ -16,13 +23,6 @@ year_end: null
 file: '/src/media/works/365-fleurs-du-mal.webp'
 uuid: 15234b37-7b4a-4fcb-968f-30091a454514
 old_image: '/src/media/works/365-fleurs-du-mal.webp'
-images:
-  - '/src/media/works/365-fleurs-du-mal-v2-2.webp'
-  - '/src/media/works/365-fleurs-du-mal-v2-3.webp'
-  - '/src/media/works/365-fleurs-du-mal-v2-4.webp'
-  - '/src/media/works/365-fleurs-du-mal-v2-5.webp'
-  - '/src/media/works/365-fleurs-du-mal-v2-6.webp'
-  - '/src/media/works/365-fleurs-du-mal-v2-7.webp'
 tags:
   - painting
   - abstract

@@ -4,7 +4,9 @@ categories: Works on Paper
 collections:
   - works-on-paper
 uuid: 63a73f60-e613-467b-bd7b-533aefccd84d
-image: '/src/media/works/print-057.webp'
+images:
+  - '/src/media/works/print-057.webp'
+  - '/src/media/works/print-057-detail.webp'
 tags:
   - watercolour
   - landscape
@@ -19,6 +21,5 @@ w: 23.5
 h: 20.5
 sheet_w: 58
 sheet_h: 46
-detail: '/src/media/works/print-057-detail.webp'
 ---
 

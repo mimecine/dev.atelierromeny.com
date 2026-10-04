@@ -10,7 +10,8 @@ file: '/src/media/works/francine.webp'
 year: '2008'
 year_start: 2008
 year_end: null
-image: '/src/media/works/francine.webp'
+images:
+  - '/src/media/works/francine.webp'
 uuid: e84eb530-2f77-4575-b73e-341a6e64aaaa
 tags:
   - painting

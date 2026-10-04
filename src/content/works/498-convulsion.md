@@ -1,7 +1,12 @@
 ---
 id: 498
 title: Convulsion
-image: '/src/media/works/498-convulsion-v2.webp'
+images:
+  - '/src/media/works/498-convulsion-v2.webp'
+  - '/src/media/works/498-convulsion-v2-2.webp'
+  - '/src/media/works/498-convulsion-v2-3.webp'
+  - '/src/media/works/498-convulsion-v2-4.webp'
+  - '/src/media/works/498-convulsion-v2-5.webp'
 collections:
   - selected-paintings
 categories: Abstrait
@@ -16,11 +21,6 @@ year_end: null
 file: '/src/media/works/498-convulsion.webp'
 uuid: b5b979cb-8e04-4636-a0b9-52cf337b2f19
 old_image: '/src/media/works/498-convulsion.webp'
-images:
-  - '/src/media/works/498-convulsion-v2-2.webp'
-  - '/src/media/works/498-convulsion-v2-3.webp'
-  - '/src/media/works/498-convulsion-v2-4.webp'
-  - '/src/media/works/498-convulsion-v2-5.webp'
 tags:
   - painting
   - abstract

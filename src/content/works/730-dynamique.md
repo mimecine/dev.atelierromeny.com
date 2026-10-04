@@ -1,7 +1,8 @@
 ---
 id: 730
 title: Dynamique
-image: '/src/media/works/730-dynamique.webp'
+images:
+  - '/src/media/works/730-dynamique.webp'
 categories: Abstrait
 w: 130
 h: 81

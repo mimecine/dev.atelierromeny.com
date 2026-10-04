@@ -1,7 +1,8 @@
 ---
 id: 344
 title: Vers Apt
-image: '/src/media/works/344-vers-apt-detail.webp'
+images:
+  - '/src/media/works/344-vers-apt-detail.webp'
 old_image: '/src/media/works/344-vers-apt.webp'
 categories: Paysages
 w: 81
@@ -19,6 +20,5 @@ tags:
   - street
   - village
   - car
-detail: '/src/media/works/344-vers-apt-detail.webp'
 ---
 

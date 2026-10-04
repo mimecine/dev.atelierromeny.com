@@ -28,7 +28,7 @@ Everything is in `src/content/`, and each part can be edited in the CMS:
 
 | Path | What it holds |
 | :-- | :-- |
-| `works/*.md` | One file per work: `id` (inventory number), title, year, size, location, `image`, extra `images`, `thumbnail`, `collections` |
+| `works/*.md` | One file per work: `id` (inventory number), title, year, size, location, `images`, `thumbnail`, `collections` |
 | `collections/*.md` | Named groups of works. Each has its own page at `/<collection>` and its works at `/<collection>/<work>` |
 | `pages/*.md` | Free pages such as `bio.md`, served at `/<page>`. A page's `image` floats to the right of its text |
 | `photos/*.md` | Photos with a title, caption, optional date and a description (the text), at `/photos/` and `/photos/<slug>/`, newest first. Images go in `src/media/photos`. Not in the menu yet |
@@ -36,15 +36,16 @@ Everything is in `src/content/`, and each part can be edited in the CMS:
 
 A few notes on works:
 
-- **Thumbnail:** `thumbnail` picks which image appears in grids, search results and link previews: 1 is `image`, 2 is the first of `images`, and so on. The work page opens on that image, with the strip below in the saved order.
+- **Thumbnail:** `thumbnail` picks which image appears in grids, search results and link previews: 1 is the first of `images`, 2 the second, and so on. The work page opens on that image, with the strip below in the saved order.
 - **Addresses:** each work's canonical page is `/works/<slug>/`: search results, the sitemap and saved works link there, and its collection pages point their canonical link at it. `/_works/<slug>/` is the same page for browsing all works and is never indexed. `/works/` itself redirects home.
-- **Old image:** `old_image` keeps the photo a work had before it was reshot. It's shown only when the work has no `image` or `images`.
-- **Detail:** `detail` is the artwork alone: cut out of its photo, straightened, without frame or mat. It's shown last on the work page.
+- **Old image:** `old_image` keeps the photo a work had before it was reshot. It's shown only when the work has no `images`.
+- **Images:** the main photo comes first. Hide any of them with `hidden_images`; they stay in the files.
+- **Detail:** the last of `images`, named `<slug>-detail.webp`, is the artwork alone: cut out of its photo, straightened, without frame or mat.
   - `scripts/make-details` (`make_details.py`) makes it from the work's chosen thumbnail photo.
   - **Outlines:** prints use `measure_prints.py`'s sheet and image detection; paintings use rembg, or the backdrop colour for close-ups on a plain background.
   - **Frames:** they're trimmed at the deepest straight line found on at least three sides.
   - **Review first:** run with `--review <folder>` for contact sheets. Doubtful results (CHECK) aren't written unless `--include-flagged`.
-  - **Works never reshot:** where a work only had an old photo, its detail is used as `image` and the photo moved to `old_image`, so old photos stay out of sight.
+  - **Works never reshot:** where a work only had an old photo, its detail is its only image and the photo moved to `old_image`, so old photos stay out of sight.
 
 ### Front page sections
 
@@ -164,7 +165,7 @@ The Python scripts in `scripts/` each have a launcher you can run directly. On f
 | Launcher | Does |
 |---|---|
 | `scripts/measure-prints` | Measures prints in their photos and writes image and sheet sizes (cm). Calibrate first with `--calibrate`. |
-| `scripts/make-details` | Makes each work's `detail` image. |
+| `scripts/make-details` | Makes each work's detail image (the last of `images`). |
 | `scripts/straighten-paintings` | Removes the background from painting photos and warps them flat. |
 | `scripts/process-paintings`, `scripts/deskew-and-crop`, `scripts/straighten-painting` | Older crop and straighten experiments. |
 

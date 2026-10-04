@@ -1,7 +1,8 @@
 ---
 id: 57
 title: 3 musiciens
-image: '/src/media/works/57-3-musiciens-detail.webp'
+images:
+  - '/src/media/works/57-3-musiciens-detail.webp'
 old_image: '/src/media/works/57-3-musiciens.webp'
 collections:
   - marco
@@ -22,6 +23,5 @@ tags:
   - figure
   - music
   - metro
-detail: '/src/media/works/57-3-musiciens-detail.webp'
 ---
 

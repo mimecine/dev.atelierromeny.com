@@ -1,7 +1,8 @@
 ---
 id: 451
 title: Ciel VII
-image: '/src/media/works/451-ciel-vii.webp'
+images:
+  - '/src/media/works/451-ciel-vii.webp'
 categories: Abstrait
 w: 100
 h: 100

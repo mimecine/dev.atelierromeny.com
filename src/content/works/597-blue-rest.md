@@ -1,7 +1,8 @@
 ---
 id: 597
 title: Blue rest
-image: '/src/media/works/597-blue-rest-detail.webp'
+images:
+  - '/src/media/works/597-blue-rest-detail.webp'
 old_image: '/src/media/works/597-blue-rest.webp'
 collections:
   - nfs
@@ -18,6 +19,5 @@ uuid: bdd03d36-7665-4972-801d-4e184b50a665
 tags:
   - painting
   - abstract
-detail: '/src/media/works/597-blue-rest-detail.webp'
 ---
 

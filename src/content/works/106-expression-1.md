@@ -1,7 +1,8 @@
 ---
 id: 106
 title: Expression 1
-image: '/src/media/works/106-expression-1.webp'
+images:
+  - '/src/media/works/106-expression-1.webp'
 categories: Abstrait
 w: 81
 h: 60

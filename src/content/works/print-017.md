@@ -4,7 +4,9 @@ categories: Works on Paper
 collections:
   - works-on-paper
 uuid: 25aa6c22-87e5-4ca5-b9c5-4f1361dfc516
-image: '/src/media/works/print-017.webp'
+images:
+  - '/src/media/works/print-017.webp'
+  - '/src/media/works/print-017-detail.webp'
 tags:
   - print
   - etching
@@ -19,7 +21,6 @@ w: 15.5
 h: 19.5
 sheet_w: 31
 sheet_h: 38.5
-detail: '/src/media/works/print-017-detail.webp'
 edition: "9/35"
 ---
 

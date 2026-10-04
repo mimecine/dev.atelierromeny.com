@@ -1,7 +1,8 @@
 ---
 id: 447
 title: Hommage à Kandinsky
-image: '/src/media/works/447-hommage-a-kandinsky-detail.webp'
+images:
+  - '/src/media/works/447-hommage-a-kandinsky-detail.webp'
 old_image: '/src/media/works/447-hommage-a-kandinsky.webp'
 collections:
   - nfs
@@ -20,6 +21,5 @@ uuid: 51877c69-3dc2-4dcb-994c-8c96df628b6d
 tags:
   - painting
   - abstract
-detail: '/src/media/works/447-hommage-a-kandinsky-detail.webp'
 ---
 

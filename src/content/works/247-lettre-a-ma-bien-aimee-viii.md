@@ -10,7 +10,8 @@ file: '/src/media/works/247-lettre-a-ma-bien-aimee-viii.webp'
 year: '1993'
 year_start: 1993
 year_end: null
-image: '/src/media/works/247-lettre-a-ma-bien-aimee-viii-detail.webp'
+images:
+  - '/src/media/works/247-lettre-a-ma-bien-aimee-viii-detail.webp'
 old_image: '/src/media/works/247-lettre-a-ma-bien-aimee-viii.webp'
 uuid: 72dbc304-f73e-4de9-9b46-7ec243d1bc30
 tags:
@@ -19,6 +20,5 @@ tags:
   - figure
   - mother and child
   - letter
-detail: '/src/media/works/247-lettre-a-ma-bien-aimee-viii-detail.webp'
 ---
 

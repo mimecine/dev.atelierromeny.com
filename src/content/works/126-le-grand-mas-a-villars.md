@@ -1,7 +1,8 @@
 ---
 id: 126
 title: Le grand mas à Villars
-image: '/src/media/works/126-le-grand-mas-a-villars-detail.webp'
+images:
+  - '/src/media/works/126-le-grand-mas-a-villars-detail.webp'
 old_image: '/src/media/works/126-le-grand-mas-a-villars.webp'
 categories: Paysages
 w: 100
@@ -18,6 +19,5 @@ tags:
   - landscape
   - field
   - house
-detail: '/src/media/works/126-le-grand-mas-a-villars-detail.webp'
 ---
 

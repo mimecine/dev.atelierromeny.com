@@ -10,7 +10,8 @@ file: '/src/media/works/430-stad-en-land.webp'
 year: '1978'
 year_start: 1978
 year_end: null
-image: '/src/media/works/430-stad-en-land-detail.webp'
+images:
+  - '/src/media/works/430-stad-en-land-detail.webp'
 old_image: '/src/media/works/430-stad-en-land.webp'
 uuid: 331e9c96-5aaa-4e51-ac78-a36e0d0dbc90
 tags:
@@ -19,6 +20,5 @@ tags:
   - artist at work
   - nude
   - cityscape
-detail: '/src/media/works/430-stad-en-land-detail.webp'
 ---
 

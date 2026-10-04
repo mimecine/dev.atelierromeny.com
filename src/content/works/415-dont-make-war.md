@@ -11,7 +11,6 @@ file: null
 year: '1990'
 year_start: 1990
 year_end: null
-image: null
 uuid: 10261afc-25bd-44cc-a784-24d7ee3a3a3f
 ---
 

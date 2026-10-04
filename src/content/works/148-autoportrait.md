@@ -11,7 +11,8 @@ file: '/src/media/works/148-autoportrait.webp'
 year: '1987'
 year_start: 1987
 year_end: null
-image: '/src/media/works/148-autoportrait.webp'
+images:
+  - '/src/media/works/148-autoportrait.webp'
 uuid: 00d00ec1-7986-4651-9bcb-d3a16ebd57ae
 tags:
   - painting

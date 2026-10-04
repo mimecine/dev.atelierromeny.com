@@ -1,7 +1,8 @@
 ---
 id: null
 title: Crépuscule 4
-image: '/src/media/works/crepuscule-4-detail.webp'
+images:
+  - '/src/media/works/crepuscule-4-detail.webp'
 old_image: '/src/media/works/crepuscule-4.webp'
 categories: Landscape
 w: 33
@@ -17,6 +18,5 @@ tags:
   - painting
   - landscape
   - sky
-detail: '/src/media/works/crepuscule-4-detail.webp'
 ---
 

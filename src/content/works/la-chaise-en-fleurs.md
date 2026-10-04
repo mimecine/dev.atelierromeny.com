@@ -1,7 +1,8 @@
 ---
 id: 20001
 title: La chaise en fleurs
-image: '/src/media/works/la-chaise-en-fleurs-detail.webp'
+images:
+  - '/src/media/works/la-chaise-en-fleurs-detail.webp'
 old_image: '/src/media/works/la-chaise-en-fleurs.webp'
 collections:
   - marco
@@ -22,6 +23,5 @@ tags:
   - chair
   - flowers
   - fruit
-detail: '/src/media/works/la-chaise-en-fleurs-detail.webp'
 ---
 

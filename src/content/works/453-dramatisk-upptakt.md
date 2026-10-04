@@ -1,7 +1,8 @@
 ---
 id: 453
 title: Dramatisk upptakt
-image: '/src/media/works/453-dramatisk-upptakt-detail.webp'
+images:
+  - '/src/media/works/453-dramatisk-upptakt-detail.webp'
 old_image: '/src/media/works/453-dramatisk-upptakt.webp'
 categories: Abstrait
 w: 100
@@ -17,6 +18,5 @@ uuid: c5f5a152-a935-43ea-9602-83485880551a
 tags:
   - painting
   - abstract
-detail: '/src/media/works/453-dramatisk-upptakt-detail.webp'
 ---
 

@@ -10,7 +10,8 @@ file: '/src/media/works/673-baby-boom-assis.webp'
 year: '1991'
 year_start: 1991
 year_end: null
-image: '/src/media/works/673-baby-boom-assis-detail.webp'
+images:
+  - '/src/media/works/673-baby-boom-assis-detail.webp'
 old_image: '/src/media/works/673-baby-boom-assis.webp'
 uuid: 9549630c-6f87-45db-aecc-ff032a0c1e53
 tags:
@@ -19,6 +20,5 @@ tags:
   - collage
   - child
   - sun
-detail: '/src/media/works/673-baby-boom-assis-detail.webp'
 ---
 

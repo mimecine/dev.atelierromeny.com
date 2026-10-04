@@ -1,7 +1,8 @@
 ---
 id: null
 title: Petite improvisation I
-image: '/src/media/works/petite-improvisation-i.webp'
+images:
+  - '/src/media/works/petite-improvisation-i.webp'
 categories: Abstract
 w: 46
 h: 38

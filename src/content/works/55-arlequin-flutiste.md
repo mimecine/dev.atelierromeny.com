@@ -1,7 +1,8 @@
 ---
 id: 55
 title: Arlequin flutiste
-image: '/src/media/works/55-arlequin-flutiste-detail.webp'
+images:
+  - '/src/media/works/55-arlequin-flutiste-detail.webp'
 old_image: '/src/media/works/55-arlequin-flutiste.webp'
 categories: Métro
 w: 81
@@ -21,6 +22,5 @@ tags:
   - flute
   - harlequin
   - metro
-detail: '/src/media/works/55-arlequin-flutiste-detail.webp'
 ---
 

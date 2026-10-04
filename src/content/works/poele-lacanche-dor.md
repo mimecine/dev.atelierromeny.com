@@ -1,7 +1,8 @@
 ---
 id: null
 title: Poële 'Lacanche d'Or'
-image: '/src/media/works/poele-lacanche-dor-detail.webp'
+images:
+  - '/src/media/works/poele-lacanche-dor-detail.webp'
 old_image: '/src/media/works/poele-lacanche-dor.webp'
 categories: Nature Mortes
 w: 73
@@ -19,6 +20,5 @@ tags:
   - fruit
   - vegetables
   - stove
-detail: '/src/media/works/poele-lacanche-dor-detail.webp'
 ---
 

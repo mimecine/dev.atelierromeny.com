@@ -1,7 +1,8 @@
 ---
 id: 664
 title: L'eau
-image: '/src/media/works/664-leau.webp'
+images:
+  - '/src/media/works/664-leau.webp'
 categories: Abstrait
 w: 160
 h: 125

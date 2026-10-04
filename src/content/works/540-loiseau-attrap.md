@@ -10,7 +10,8 @@ file: '/src/media/works/540-loiseau-attrap.webp'
 year: '2002'
 year_start: 2002
 year_end: null
-image: '/src/media/works/540-loiseau-attrap-detail.webp'
+images:
+  - '/src/media/works/540-loiseau-attrap-detail.webp'
 old_image: '/src/media/works/540-loiseau-attrap.webp'
 uuid: 002bc9b2-7efb-4c97-9dc6-cf6592702b2e
 tags:
@@ -18,6 +19,5 @@ tags:
   - bird
   - hand
   - animal
-detail: '/src/media/works/540-loiseau-attrap-detail.webp'
 ---
 

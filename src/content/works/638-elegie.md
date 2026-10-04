@@ -1,7 +1,8 @@
 ---
 id: 638
 title: Elégie
-image: '/src/media/works/638-elegie.webp'
+images:
+  - '/src/media/works/638-elegie.webp'
 categories: Abstrait
 w: 75
 h: 60

@@ -1,7 +1,8 @@
 ---
 id: 700
 title: Tryptique d‘automne
-image: '/src/media/works/700-tryptique-dautomne.webp'
+images:
+  - '/src/media/works/700-tryptique-dautomne.webp'
 categories: Abstrait
 w: 195
 h: 100

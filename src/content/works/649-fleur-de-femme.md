@@ -1,7 +1,8 @@
 ---
 id: 649
 title: Fleur de femme
-image: '/src/media/works/649-fleur-de-femme.webp'
+images:
+  - '/src/media/works/649-fleur-de-femme.webp'
 categories: Abstrait
 w: 250
 h: 155

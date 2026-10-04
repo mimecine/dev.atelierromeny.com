@@ -1,7 +1,8 @@
 ---
 id: 519
 title: Serge Bec
-image: '/src/media/works/519-serge-bec-detail.webp'
+images:
+  - '/src/media/works/519-serge-bec-detail.webp'
 old_image: '/src/media/works/519-serge-bec.webp'
 categories: Figures humaines
 w: 73
@@ -17,6 +18,5 @@ tags:
   - painting
   - portrait
   - figure
-detail: '/src/media/works/519-serge-bec-detail.webp'
 ---
 

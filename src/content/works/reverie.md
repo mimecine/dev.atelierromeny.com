@@ -10,7 +10,8 @@ file: '/src/media/works/reverie.webp'
 year: '2006'
 year_start: 2006
 year_end: null
-image: '/src/media/works/reverie-detail.webp'
+images:
+  - '/src/media/works/reverie-detail.webp'
 old_image: '/src/media/works/reverie.webp'
 uuid: 32885a3d-b7db-4ab2-b435-dccb6e6772b9
 tags:
@@ -21,6 +22,5 @@ tags:
   - figure
   - nude
   - map
-detail: '/src/media/works/reverie-detail.webp'
 ---
 

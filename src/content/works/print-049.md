@@ -4,7 +4,9 @@ categories: Works on Paper
 collections:
   - works-on-paper
 uuid: c1093d19-f27e-4186-8feb-8cced463836d
-image: '/src/media/works/print-049.webp'
+images:
+  - '/src/media/works/print-049.webp'
+  - '/src/media/works/print-049-detail.webp'
 tags:
   - watercolour
   - still life
@@ -17,6 +19,5 @@ w: 55.5
 h: 37.5
 sheet_w: 55.5
 sheet_h: 37.5
-detail: '/src/media/works/print-049-detail.webp'
 ---
 

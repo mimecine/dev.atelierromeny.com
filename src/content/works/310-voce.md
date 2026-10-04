@@ -1,7 +1,8 @@
 ---
 id: 310
 title: Voce
-image: '/src/media/works/310-voce-detail.webp'
+images:
+  - '/src/media/works/310-voce-detail.webp'
 old_image: '/src/media/works/310-voce.webp'
 collections:
   - marco
@@ -22,6 +23,5 @@ tags:
   - painting
   - abstract
   - lettering
-detail: '/src/media/works/310-voce-detail.webp'
 ---
 

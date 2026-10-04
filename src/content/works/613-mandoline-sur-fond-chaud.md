@@ -1,7 +1,9 @@
 ---
 id: 613
 title: Mandoline sur fond Chaud
-image: '/src/media/works/613-mandoline-sur-fond-chaud-v2.webp'
+images:
+  - '/src/media/works/613-mandoline-sur-fond-chaud-v2.webp'
+  - '/src/media/works/613-mandoline-sur-fond-chaud-detail.webp'
 collections:
   - selected-paintings
 categories: Natures mortes
@@ -22,6 +24,5 @@ tags:
   - music
   - mandolin
   - fruit
-detail: '/src/media/works/613-mandoline-sur-fond-chaud-detail.webp'
 ---
 

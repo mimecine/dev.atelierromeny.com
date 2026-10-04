@@ -10,7 +10,8 @@ file: '/src/media/works/dead-bird.jpg'
 year: '2004'
 year_start: 2004
 year_end: null
-image: '/src/media/works/dead-bird.jpg'
+images:
+  - '/src/media/works/dead-bird.jpg'
 uuid: 9698c1da-4606-408d-8f59-0ada71ec11c9
 ---
 

@@ -10,12 +10,12 @@ file: '/src/media/works/635-composition-vivante.webp'
 year: '1969'
 year_start: 1969
 year_end: null
-image: '/src/media/works/635-composition-vivante-detail.webp'
+images:
+  - '/src/media/works/635-composition-vivante-detail.webp'
 old_image: '/src/media/works/635-composition-vivante.webp'
 uuid: ae1a005a-0b39-4496-97f3-37386042e405
 tags:
   - painting
   - abstract
-detail: '/src/media/works/635-composition-vivante-detail.webp'
 ---
 

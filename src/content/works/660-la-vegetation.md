@@ -1,7 +1,8 @@
 ---
 id: 660
 title: La végétation
-image: '/src/media/works/660-la-vegetation-v2.webp'
+images:
+  - '/src/media/works/660-la-vegetation-v2.webp'
 collections:
   - selected-paintings
 categories: La création

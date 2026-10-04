@@ -1,7 +1,8 @@
 ---
 id: 571
 title: Paysage aérien 1
-image: '/src/media/works/571-paysage-aerien-1-detail.webp'
+images:
+  - '/src/media/works/571-paysage-aerien-1-detail.webp'
 old_image: '/src/media/works/571-paysage-aerien-1.webp'
 categories: Abstrait
 w: 65
@@ -16,6 +17,5 @@ uuid: ac87d64f-f302-4585-b40f-43a400857b29
 tags:
   - painting
   - abstract
-detail: '/src/media/works/571-paysage-aerien-1-detail.webp'
 ---
 

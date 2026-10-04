@@ -1,7 +1,8 @@
 ---
 id: null
 title: Amandier
-image: '/src/media/works/amandier-detail.webp'
+images:
+  - '/src/media/works/amandier-detail.webp'
 old_image: '/src/media/works/amandier.webp'
 collections:
   - marco
@@ -20,6 +21,5 @@ tags:
   - tree
   - blossom
   - almond
-detail: '/src/media/works/amandier-detail.webp'
 ---
 

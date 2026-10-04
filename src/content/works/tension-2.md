@@ -10,7 +10,8 @@ file: '/src/media/works/tension-2.webp'
 year: '---'
 year_start: null
 year_end: null
-image: '/src/media/works/tension-2.webp'
+images:
+  - '/src/media/works/tension-2.webp'
 uuid: 671fa6a9-f884-4fab-a782-0c8ef20b29be
 tags:
   - painting

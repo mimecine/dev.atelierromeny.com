@@ -73,7 +73,7 @@ export const computedColumns = (collection: string): ComputedColumn[] =>
 export const COLUMN_DEFAULTS: Record<string, { order: string[]; hidden: string[] }> = {
   works: {
     order: [
-      "title", "image", "images", "detail", "thumbnail",
+      "title", "images", "thumbnail",
       "w", "h", "_area", "_base_price", "rating", "_price",
       "year", "edition", "collections", "categories", "sheet_w", "sheet_h",
     ],
@@ -86,11 +86,9 @@ export const COLUMN_DEFAULTS: Record<string, { order: string[]; hidden: string[]
 
 export const FIELD_OPTIONS: Record<string, Record<string, FieldOptions>> = {
   works: {
-    thumbnail: { pickFrom: ["image", "images"] },
-    image: { entryImages: true },
+    thumbnail: { pickFrom: ["images"] },
     images: { entryImages: true },
     old_image: { entryImages: true },
-    detail: { entryImages: true },
     hidden_images: { entryImages: true },
   },
 };

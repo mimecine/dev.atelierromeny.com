@@ -1,7 +1,8 @@
 ---
 id: 317
 title: Tourbillon
-image: '/src/media/works/317-tourbillon.webp'
+images:
+  - '/src/media/works/317-tourbillon.webp'
 categories: Abstrait
 w: 40
 h: 30

@@ -10,7 +10,8 @@ file: '/src/media/works/600-skanegard.webp'
 year: '1973'
 year_start: 1973
 year_end: null
-image: '/src/media/works/600-skanegard.webp'
+images:
+  - '/src/media/works/600-skanegard.webp'
 uuid: a0e07e1a-b5b5-42f7-a1b8-b31cf3314b2d
 tags:
   - painting

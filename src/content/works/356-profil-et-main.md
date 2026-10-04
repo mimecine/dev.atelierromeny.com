@@ -10,7 +10,8 @@ file: '/src/media/works/356-profil-et-main.webp'
 year: '1973'
 year_start: 1973
 year_end: null
-image: '/src/media/works/356-profil-et-main-detail.webp'
+images:
+  - '/src/media/works/356-profil-et-main-detail.webp'
 old_image: '/src/media/works/356-profil-et-main.webp'
 uuid: 6aeb7927-d590-4007-b521-776253a676be
 tags:
@@ -19,6 +20,5 @@ tags:
   - hand
   - face
   - insect
-detail: '/src/media/works/356-profil-et-main-detail.webp'
 ---
 

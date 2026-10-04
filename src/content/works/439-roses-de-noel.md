@@ -1,7 +1,9 @@
 ---
 id: 439
 title: Roses de Noél
-image: '/src/media/works/439-roses-de-noel-v2.webp'
+images:
+  - '/src/media/works/439-roses-de-noel-v2.webp'
+  - '/src/media/works/439-roses-de-noel-v2-2.webp'
 collections:
   - selected-paintings
 categories: Fleurs
@@ -16,8 +18,6 @@ year_end: null
 file: '/src/media/works/439-roses-de-noel.webp'
 uuid: dce2a9a7-da49-4d9a-ac3f-a559ba5b4517
 old_image: '/src/media/works/439-roses-de-noel.webp'
-images:
-  - '/src/media/works/439-roses-de-noel-v2-2.webp'
 tags:
   - painting
   - flowers

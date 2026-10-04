@@ -1,7 +1,8 @@
 ---
 id: 9
 title: Amandier en fleurs 2
-image: '/src/media/works/9-amandier-en-fleurs-2-detail.webp'
+images:
+  - '/src/media/works/9-amandier-en-fleurs-2-detail.webp'
 old_image: '/src/media/works/9-amandier-en-fleurs-2.webp'
 categories: Arbres en fleurs
 w: 89
@@ -16,6 +17,5 @@ uuid: 53ce9ab2-c5be-4b0b-bb53-0fbf85647688
 tags:
   - painting
   - abstract
-detail: '/src/media/works/9-amandier-en-fleurs-2-detail.webp'
 ---
 

@@ -1,7 +1,8 @@
 ---
 id: null
 title: Branche d'abricot
-image: '/src/media/works/branche-dabricot.webp'
+images:
+  - '/src/media/works/branche-dabricot.webp'
 categories: Nature morte
 w: 46
 h: 27

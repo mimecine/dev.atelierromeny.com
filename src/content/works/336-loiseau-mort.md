@@ -1,7 +1,8 @@
 ---
 id: 336
 title: L'oiseau mort
-image: '/src/media/works/336-loiseau-mort-detail.webp'
+images:
+  - '/src/media/works/336-loiseau-mort-detail.webp'
 old_image: '/src/media/works/336-loiseau-mort.webp'
 categories: Animaux
 w: 48
@@ -17,6 +18,5 @@ tags:
   - painting
   - animal
   - bird
-detail: '/src/media/works/336-loiseau-mort-detail.webp'
 ---
 

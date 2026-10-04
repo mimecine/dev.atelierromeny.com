@@ -1,7 +1,10 @@
 ---
 id: 483
 title: Snölandskap
-image: '/src/media/works/483-snolandskap-v2.webp'
+images:
+  - '/src/media/works/483-snolandskap-v2.webp'
+  - '/src/media/works/483-snolandskap-v2-2.webp'
+  - '/src/media/works/483-snolandskap-detail.webp'
 collections:
   - selected-paintings
 categories: Paysages
@@ -16,13 +19,10 @@ year_end: null
 file: '/src/media/works/483-snolandskap.webp'
 uuid: d8563709-d8a5-4564-96d3-4bee74edd528
 old_image: '/src/media/works/483-snolandskap.webp'
-images:
-  - '/src/media/works/483-snolandskap-v2-2.webp'
 tags:
   - painting
   - landscape
   - snow
   - winter
-detail: '/src/media/works/483-snolandskap-detail.webp'
 ---
 

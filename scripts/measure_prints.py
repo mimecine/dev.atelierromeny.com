@@ -75,11 +75,9 @@ def image_for(md_path):
     if not m:
         return None
     fm = m.group(1)
-    img = frontmatter_value(fm, "image")
-    if not img:
-        # fall back to first entry of `images:`
-        lst = re.search(r"^images:\s*\n\s*-\s*(.+)$", fm, re.M)
-        img = lst.group(1).strip().strip("'\"") if lst else None
+    # the main photo: the first of `images` (the detail, if any, is last)
+    lst = re.search(r"^images:\s*\n\s*-\s*(.+)$", fm, re.M)
+    img = lst.group(1).strip().strip("'\"") if lst else None
     if not img:
         return None
     return os.path.join(ROOT, img.lstrip("/"))

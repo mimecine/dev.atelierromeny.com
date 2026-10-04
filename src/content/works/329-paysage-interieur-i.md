@@ -1,7 +1,9 @@
 ---
 id: 329
 title: Paysage intérieur I
-image: '/src/media/works/329-paysage-interieur-i-v2.webp'
+images:
+  - '/src/media/works/329-paysage-interieur-i-v2.webp'
+  - '/src/media/works/329-paysage-interieur-i-detail.webp'
 collections:
   - nfs
   - selected-paintings
@@ -20,6 +22,5 @@ old_image: '/src/media/works/329-paysage-interieur-i.webp'
 tags:
   - painting
   - abstract
-detail: '/src/media/works/329-paysage-interieur-i-detail.webp'
 ---
 

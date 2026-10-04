@@ -1,7 +1,8 @@
 ---
 id: 341
 title: Crane de chien
-image: '/src/media/works/341-crane-de-chien-detail.webp'
+images:
+  - '/src/media/works/341-crane-de-chien-detail.webp'
 old_image: '/src/media/works/341-crane-de-chien.webp'
 categories: Observations
 w: 50
@@ -18,6 +19,5 @@ tags:
   - skull
   - dog
   - animal
-detail: '/src/media/works/341-crane-de-chien-detail.webp'
 ---
 

@@ -1,7 +1,8 @@
 ---
 id: 367
 title: Fruits
-image: '/src/media/works/367-fruits-detail.webp'
+images:
+  - '/src/media/works/367-fruits-detail.webp'
 old_image: '/src/media/works/367-fruits.webp'
 categories: Abstrait
 w: 70
@@ -17,6 +18,5 @@ tags:
   - painting
   - abstract
   - fruit
-detail: '/src/media/works/367-fruits-detail.webp'
 ---
 

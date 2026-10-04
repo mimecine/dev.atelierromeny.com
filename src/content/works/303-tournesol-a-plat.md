@@ -1,7 +1,8 @@
 ---
 id: 303
 title: Tournesol a plat
-image: '/src/media/works/303-tournesol-a-plat.webp'
+images:
+  - '/src/media/works/303-tournesol-a-plat.webp'
 collections:
   - nfs
   - reserved-am

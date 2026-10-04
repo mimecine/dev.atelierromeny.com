@@ -10,7 +10,6 @@ file: null
 year: '1970'
 year_start: 1970
 year_end: null
-image: null
 uuid: e2aa1e24-9b47-4f25-8569-b59280cedf25
 ---
 

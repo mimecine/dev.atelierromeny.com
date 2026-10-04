@@ -1,7 +1,8 @@
 ---
 id: 535
 title: Aux chandelles rouges
-image: '/src/media/works/535-aux-chandelles-rouges-detail.webp'
+images:
+  - '/src/media/works/535-aux-chandelles-rouges-detail.webp'
 old_image: '/src/media/works/535-aux-chandelles-rouges.webp'
 categories: Natures mortes
 w: 73
@@ -18,6 +19,5 @@ tags:
   - still life
   - fruit
   - candle
-detail: '/src/media/works/535-aux-chandelles-rouges-detail.webp'
 ---
 

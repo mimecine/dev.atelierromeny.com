@@ -1,7 +1,9 @@
 ---
 id: 488
 title: Hommage a un musicien anonyme
-image: '/src/media/works/488-hommage-a-un-musicien-anonyme-v2.webp'
+images:
+  - '/src/media/works/488-hommage-a-un-musicien-anonyme-v2.webp'
+  - '/src/media/works/488-hommage-a-un-musicien-anonyme-detail.webp'
 collections:
   - selected-paintings
 categories: Natures mortes
@@ -22,6 +24,5 @@ tags:
   - music
   - violin
   - flowers
-detail: '/src/media/works/488-hommage-a-un-musicien-anonyme-detail.webp'
 ---
 

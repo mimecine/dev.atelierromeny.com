@@ -1,7 +1,8 @@
 ---
 id: 342
 title: Grenverk
-image: '/src/media/works/342-grenverk-detail.webp'
+images:
+  - '/src/media/works/342-grenverk-detail.webp'
 old_image: '/src/media/works/342-grenverk.webp'
 categories: Abstrait
 w: 80
@@ -17,6 +18,5 @@ uuid: a88fb95a-2272-4322-84bf-3dc24c92b4bb
 tags:
   - painting
   - abstract
-detail: '/src/media/works/342-grenverk-detail.webp'
 ---
 

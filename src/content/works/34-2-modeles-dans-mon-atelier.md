@@ -1,7 +1,8 @@
 ---
 id: 34
 title: 2 modéles dans mon atelier
-image: '/src/media/works/34-2-modeles-dans-mon-atelier-detail.webp'
+images:
+  - '/src/media/works/34-2-modeles-dans-mon-atelier-detail.webp'
 old_image: '/src/media/works/34-2-modeles-dans-mon-atelier.webp'
 collections:
   - marco
@@ -21,6 +22,5 @@ tags:
   - nude
   - interior
   - studio
-detail: '/src/media/works/34-2-modeles-dans-mon-atelier-detail.webp'
 ---
 

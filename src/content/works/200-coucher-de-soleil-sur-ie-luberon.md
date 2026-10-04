@@ -1,7 +1,9 @@
 ---
 id: 200
 title: Coucher de soleil sur Ie Luberon
-image: '/src/media/works/200-coucher-de-soleil-sur-ie-luberon-v2.webp'
+images:
+  - '/src/media/works/200-coucher-de-soleil-sur-ie-luberon-v2.webp'
+  - '/src/media/works/200-coucher-de-soleil-sur-ie-luberon-detail.webp'
 collections:
   - selected-paintings
 categories: Paysages
@@ -21,6 +23,5 @@ tags:
   - landscape
   - sunset
   - Luberon
-detail: '/src/media/works/200-coucher-de-soleil-sur-ie-luberon-detail.webp'
 ---
 

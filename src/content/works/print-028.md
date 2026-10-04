@@ -4,7 +4,9 @@ categories: Works on Paper
 collections:
   - works-on-paper
 uuid: 5f36de0d-2d31-4f0f-be21-ebf6e8d4dc00
-image: '/src/media/works/print-028.webp'
+images:
+  - '/src/media/works/print-028.webp'
+  - '/src/media/works/print-028-detail.webp'
 tags:
   - print
   - screen print
@@ -20,7 +22,6 @@ w: 51
 h: 36.5
 sheet_w: 61.5
 sheet_h: 49.5
-detail: '/src/media/works/print-028-detail.webp'
 edition: "37/45"
 ---
 

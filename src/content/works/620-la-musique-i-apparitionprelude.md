@@ -1,7 +1,8 @@
 ---
 id: 620
 title: 'La musique I: apparition=prélude'
-image: '/src/media/works/620-la-musique-i-apparitionprelude-detail.webp'
+images:
+  - '/src/media/works/620-la-musique-i-apparitionprelude-detail.webp'
 old_image: '/src/media/works/620-la-musique-i-apparitionprelude.webp'
 categories: Abstrait
 w: 116
@@ -17,6 +18,5 @@ tags:
   - painting
   - abstract
   - music
-detail: '/src/media/works/620-la-musique-i-apparitionprelude-detail.webp'
 ---
 

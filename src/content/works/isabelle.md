@@ -10,13 +10,13 @@ file: '/src/media/works/isabelle.webp'
 year: '2008'
 year_start: 2008
 year_end: null
-image: '/src/media/works/isabelle-detail.webp'
+images:
+  - '/src/media/works/isabelle-detail.webp'
 old_image: '/src/media/works/isabelle.webp'
 uuid: fb1f19c6-f711-4678-a218-a93e8e138e8b
 tags:
   - painting
   - figure
   - nude
-detail: '/src/media/works/isabelle-detail.webp'
 ---
 

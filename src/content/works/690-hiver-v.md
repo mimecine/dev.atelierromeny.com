@@ -1,7 +1,8 @@
 ---
 id: 690
 title: Hiver V
-image: '/src/media/works/690-hiver-v-detail.webp'
+images:
+  - '/src/media/works/690-hiver-v-detail.webp'
 old_image: '/src/media/works/690-hiver-v.webp'
 categories: Abstrait
 w: 65
@@ -19,6 +20,5 @@ tags:
   - winter
   - moon
   - tree
-detail: '/src/media/works/690-hiver-v-detail.webp'
 ---
 

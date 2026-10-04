@@ -1,7 +1,8 @@
 ---
 id: 331
 title: Paysage provencal - Sablet
-image: '/src/media/works/331-paysage-provencal-sablet-detail.webp'
+images:
+  - '/src/media/works/331-paysage-provencal-sablet-detail.webp'
 old_image: '/src/media/works/331-paysage-provencal-sablet.webp'
 categories: Paysages
 w: 40
@@ -19,6 +20,5 @@ tags:
   - mountain
   - field
   - Provence
-detail: '/src/media/works/331-paysage-provencal-sablet-detail.webp'
 ---
 

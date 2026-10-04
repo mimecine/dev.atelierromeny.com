@@ -1,7 +1,8 @@
 ---
 id: 102
 title: Reflets
-image: '/src/media/works/102-reflets-detail.webp'
+images:
+  - '/src/media/works/102-reflets-detail.webp'
 old_image: '/src/media/works/102-reflets.webp'
 categories: Abstrait
 w: 55
@@ -17,6 +18,5 @@ uuid: c6ffc839-92e8-4074-b17e-55e1efec5c2e
 tags:
   - painting
   - abstract
-detail: '/src/media/works/102-reflets-detail.webp'
 ---
 

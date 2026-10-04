@@ -1,7 +1,8 @@
 ---
 id: 458
 title: Souvenir d'un maitre verrier
-image: '/src/media/works/458-souvenir-dun-maitre-verrier-detail.webp'
+images:
+  - '/src/media/works/458-souvenir-dun-maitre-verrier-detail.webp'
 old_image: '/src/media/works/458-souvenir-dun-maitre-verrier.webp'
 categories: Abstrait
 w: 92
@@ -16,6 +17,5 @@ uuid: 1b8529ba-44bb-4a78-9dc5-405e0b6d4787
 tags:
   - painting
   - abstract
-detail: '/src/media/works/458-souvenir-dun-maitre-verrier-detail.webp'
 ---
 

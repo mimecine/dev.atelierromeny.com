@@ -1,7 +1,8 @@
 ---
 id: 616
 title: Le cerisier chez Ies Blancs
-image: '/src/media/works/616-le-cerisier-chez-ies-blancs-detail.webp'
+images:
+  - '/src/media/works/616-le-cerisier-chez-ies-blancs-detail.webp'
 old_image: '/src/media/works/616-le-cerisier-chez-ies-blancs.webp'
 categories: Automne
 w: 90
@@ -17,6 +18,5 @@ tags:
   - painting
   - tree
   - cherry
-detail: '/src/media/works/616-le-cerisier-chez-ies-blancs-detail.webp'
 ---
 

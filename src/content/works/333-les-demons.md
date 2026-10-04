@@ -10,7 +10,8 @@ file: '/src/media/works/333-les-demons.webp'
 year: '1980'
 year_start: 1980
 year_end: null
-image: '/src/media/works/333-les-demons-detail.webp'
+images:
+  - '/src/media/works/333-les-demons-detail.webp'
 old_image: '/src/media/works/333-les-demons.webp'
 uuid: 55708e27-6127-4642-b62b-507c71d60e67
 tags:
@@ -19,6 +20,5 @@ tags:
   - portrait
   - black and white
   - candle
-detail: '/src/media/works/333-les-demons-detail.webp'
 ---
 

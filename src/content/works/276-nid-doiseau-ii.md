@@ -1,7 +1,8 @@
 ---
 id: 276
 title: Nid d'oiseau II
-image: '/src/media/works/276-nid-doiseau-ii-detail.webp'
+images:
+  - '/src/media/works/276-nid-doiseau-ii-detail.webp'
 old_image: '/src/media/works/276-nid-doiseau-ii.webp'
 categories: Animaux
 w: 46
@@ -18,6 +19,5 @@ tags:
   - semi-abstract
   - bird
   - nest
-detail: '/src/media/works/276-nid-doiseau-ii-detail.webp'
 ---
 

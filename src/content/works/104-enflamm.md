@@ -1,7 +1,8 @@
 ---
 id: 104
 title: Enflamm
-image: '/src/media/works/104-enflamm-detail.webp'
+images:
+  - '/src/media/works/104-enflamm-detail.webp'
 old_image: '/src/media/works/104-enflamm.webp'
 categories: Abstrait
 w: 46
@@ -16,6 +17,5 @@ uuid: ddb7511f-b630-46a3-a812-9947849bbab7
 tags:
   - painting
   - abstract
-detail: '/src/media/works/104-enflamm-detail.webp'
 ---
 

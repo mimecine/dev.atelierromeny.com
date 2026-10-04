@@ -1,7 +1,8 @@
 ---
 id: 643
 title: Le Mont Ventoux 2
-image: '/src/media/works/643-le-mont-ventoux-2.webp'
+images:
+  - '/src/media/works/643-le-mont-ventoux-2.webp'
 categories: Paysages
 w: 100
 h: 81

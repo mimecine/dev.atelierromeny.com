@@ -1,7 +1,8 @@
 ---
 id: null
 title: Card Players
-image: '/src/media/works/card-players.webp'
+images:
+  - '/src/media/works/card-players.webp'
 collections:
   - nfs
 categories: Figures

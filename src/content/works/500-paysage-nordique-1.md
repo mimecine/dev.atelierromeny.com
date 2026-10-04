@@ -1,7 +1,9 @@
 ---
 id: 500
 title: Paysage nordique 1
-image: '/src/media/works/500-paysage-nordique-1-v2.webp'
+images:
+  - '/src/media/works/500-paysage-nordique-1-v2.webp'
+  - '/src/media/works/500-paysage-nordique-1-detail.webp'
 collections:
   - selected-paintings
 categories: Abstrait
@@ -20,6 +22,5 @@ tags:
   - painting
   - abstract
   - landscape
-detail: '/src/media/works/500-paysage-nordique-1-detail.webp'
 ---
 

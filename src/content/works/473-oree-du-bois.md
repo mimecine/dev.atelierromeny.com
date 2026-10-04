@@ -1,7 +1,8 @@
 ---
 id: 473
 title: Orée du bois
-image: '/src/media/works/473-oree-du-bois-detail.webp'
+images:
+  - '/src/media/works/473-oree-du-bois-detail.webp'
 old_image: '/src/media/works/473-oree-du-bois.webp'
 collections:
   - nfs
@@ -20,6 +21,5 @@ tags:
   - landscape
   - forest
   - tree
-detail: '/src/media/works/473-oree-du-bois-detail.webp'
 ---
 

@@ -1,7 +1,8 @@
 ---
 id: 491
 title: Espania
-image: '/src/media/works/491-espania-detail.webp'
+images:
+  - '/src/media/works/491-espania-detail.webp'
 old_image: '/src/media/works/491-espania.webp'
 categories: Abstrait
 w: 130
@@ -17,6 +18,5 @@ uuid: c05199fd-731e-4934-906e-a897cb531f47
 tags:
   - painting
   - abstract
-detail: '/src/media/works/491-espania-detail.webp'
 ---
 

@@ -1,7 +1,8 @@
 ---
 id: 369
 title: Marco
-image: '/src/media/works/369-marco-detail.webp'
+images:
+  - '/src/media/works/369-marco-detail.webp'
 old_image: '/src/media/works/369-marco.webp'
 collections:
   - nfs
@@ -19,6 +20,5 @@ tags:
   - painting
   - portrait
   - figure
-detail: '/src/media/works/369-marco-detail.webp'
 ---
 
