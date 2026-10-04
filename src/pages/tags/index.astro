@@ -40,7 +40,7 @@ const labels = Object.fromEntries(tags.map((t) => [t.slug, t.label]));
         <p x-cloak x-show="!loading && !items.length" class="text-gray-500">No works have all of these tags. Remove one to widen the selection.</p>
         <div class="works-grid">
           <template x-for="item in items" :key="item.id">
-            <a :href="`/_works/${item.id}`" :title="[item.title || 'No title recorded', item.year_start].filter(Boolean).join(', ')">
+            <a :href="`/works/${item.id}/`" :title="[item.title || 'No title recorded', item.year_start].filter(Boolean).join(', ')">
               <div class="work-item">
                 <div class="work-thumbnail-container">
                   <img :src="item.image" :alt="item.title || ''" :width="item.width" :height="item.height" class="work-thumbnail" loading="lazy" />

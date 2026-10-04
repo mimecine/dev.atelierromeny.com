@@ -23,7 +23,7 @@ const rejectedWorks = works.filter(
       {
         works.map((work) => (
             <div class="work-item h-full" data-key={work.id}>
-          <a href={`/works/${work.id}`}>
+          <a href={`/_works/${work.id}/`}>
               <div class="work-thumbnail-container">
                 {thumbnailOf(work) && (
                   <Image

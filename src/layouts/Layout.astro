@@ -27,8 +27,11 @@ interface Props {
   bodyclasses?: string | string[];
   slug?: string;
   /** Include this page in site search. Opt-in, so each work is indexed once (its
-   *  /_works/ page) rather than once per collection it's in. See SearchMeta.astro. */
+   *  /works/ page) rather than once per collection it's in. See SearchMeta.astro. */
   searchable?: boolean;
+  /** The page's preferred address, when the same content lives at several (a work in
+   *  each of its collections); defaults to this page's own path */
+  canonical?: string;
   /** Ask search engines not to index this page */
   noindex?: boolean;
   /** Text printed at the top right of every sheet, beside the logo */
@@ -44,6 +47,7 @@ const {
   bodyclasses,
   searchable = false,
   noindex = false,
+  canonical = Astro.url.pathname,
   printInfo,
   title = frontmatter?.title,
   ...props
@@ -147,7 +151,7 @@ const isHome = Astro.url.pathname === "/";
     <meta property="og:type" content="website" />
     <meta property="og:title" content={shareTitle} />
     {pageDescription && <meta property="og:description" content={pageDescription} />}
-    <meta property="og:url" content={absolute(Astro.url.pathname)} />
+    <meta property="og:url" content={absolute(canonical)} />
     {
       share && (
         <>
@@ -163,7 +167,7 @@ const isHome = Astro.url.pathname === "/";
     {noindex && <meta name="robots" content="noindex" />}
     {/* The site is also reachable on dev.atelierromeny.com and workers.dev; point search
         engines at the main domain (`site` in astro.config.mjs) */}
-    {Astro.site && <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site).href} />}
+    {Astro.site && <link rel="canonical" href={new URL(canonical, Astro.site).href} />}
     <slot name="head" />
     <title>{title && `${title} -`} Atelier Romeny</title>
     <ClientRouter />

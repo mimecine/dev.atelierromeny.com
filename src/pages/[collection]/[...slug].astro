@@ -17,13 +17,14 @@ import { byTitle, hasImage, thumbnailOf, titleOf } from "@src/lib/works";
 
 
 export async function getStaticPaths() {
+  // (getStaticPaths runs on its own: it can't use helpers from the rest of the frontmatter)
+  const isAllWorks = (id: string) => id === "works" || id === "_works";
   const collections = await getCollection("collections");
-  const allWorks = {
-    id: "_works",
-    collection: "collections",
-    data: { title: "Works" },
-  };
-  collections.push(allWorks);
+  // Two all-works contexts: /works/<slug>/ is each work's public, canonical address;
+  // /_works/<slug>/ is the same page for browsing everything (never indexed).
+  for (const id of ["works", "_works"]) {
+    collections.push({ id, collection: "collections", data: { title: "Works" } } as any);
+  }
 
   const works = await getCollection("works");
   const navDigest = await getNavDigest();
@@ -33,7 +34,7 @@ export async function getStaticPaths() {
       .filter(hasImage)
       .filter((work) =>
         work.data.collections?.includes(collection.id) ||
-        collection.id === "_works"
+        isAllWorks(collection.id)
       )
       .sort((a, b) =>
         byTitle(a, b)
@@ -73,13 +74,16 @@ type Params = {
 const { work, collection } = Astro.props;
 
 const { Content } = await render(work);
+const isAllWorks = (id: string) => id === "works" || id === "_works";
+// The canonical /works/ page is indexed when the work is shown in a menu collection.
+const inMenu = (work.data.collections ?? []).some(isMenuCollection);
 
 const works = (await getCollection("works"))
   .filter(hasImage)
   .filter(
     (work) =>
       work.data.collections?.includes(collection.id || "") ||
-      collection.id === "_works"
+      isAllWorks(collection.id)
   )
   .sort(
     byTitle
@@ -92,7 +96,7 @@ console.log(
     .filter(
       (work) =>
         work.data.collections?.includes(collection.id || "") ||
-        collection.id === "_works"
+        isAllWorks(collection.id)
     ).length
 );
 
@@ -140,8 +144,9 @@ const { count, index } = works.reduce(
     work.data.w && work.data.h && `${work.data.w} × ${work.data.h} cm`,
   ].filter(Boolean).join(", ")}
   bodyclasses="work-page"
-  searchable={collection.id === "_works"}
-  noindex={!isMenuCollection(collection.id)}
+  canonical={`/works/${work.id}/`}
+  searchable={collection.id === "works"}
+  noindex={collection.id === "works" ? !inMenu : !isMenuCollection(collection.id)}
 >
   <section class="flex flex-col flex-1 min-h-0 w-full max-w-4xl mx-auto">
     <SearchMeta

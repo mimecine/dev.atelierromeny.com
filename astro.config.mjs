@@ -32,6 +32,9 @@ export default defineConfig({
   site: 'https://atelierromeny.com',
   output: 'server',
 
+  // /works/<slug>/ is each work's canonical page; the folder itself has no index.
+  redirects: { '/works': '/' },
+
   image: isDev ? { service: passthroughImageService() } : undefined,
 
   vite: {
