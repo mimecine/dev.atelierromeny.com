@@ -242,59 +242,18 @@ function previewFor(path: string): string | Promise<string> {
 }
 
 // Hovering a thumbnail shows a larger version just below it. The preview ignores the
-// mouse (pointer-events: none), so the thumbnail and its buttons stay clickable, except
-// for photos in an image list with hide/thumbnail fields: their preview has checkboxes,
-// and stays open while the pointer moves onto it.
-const previewControls = h("div", { class: "preview-controls" });
-const preview = h("div", { class: "preview", hidden: true }, h("img", { alt: "" }), previewControls);
+// mouse (pointer-events: none), so the thumbnail and its buttons stay clickable.
+// Clicking a photo in an image list opens the bigger viewer, with its controls (below).
+const preview = h("div", { class: "preview", hidden: true }, h("img", { alt: "" }));
 let previewTimer: number | undefined;
 let previewFor_: HTMLImageElement | undefined;
 
-/** Image-list photos whose preview offers the Hidden / Thumbnail checkboxes. */
+/** Image-list photos: which entry, column and position they show (for the viewer). */
 const tileInfo = new WeakMap<HTMLImageElement, { entry: Entry; col: Column; index: number }>();
 const columnByKey = (key: string) => state.columns.find((c) => c.key === key);
 
-function fillPreviewControls(img: HTMLImageElement) {
-  const info = tileInfo.get(img);
-  const hideKey = info?.col.options.hideIn, thumbKey = info?.col.options.thumbnailIn;
-  preview.classList.toggle("interactive", !!(hideKey || thumbKey));
-  if (!info || !(hideKey || thumbKey)) return previewControls.replaceChildren();
-  const { entry, col, index } = info;
-  const path = img.dataset.path!;
-  const box = (label: string, checked: boolean, title: string, onChange: (on: boolean) => void) => {
-    const input = h("input", { type: "checkbox" }) as HTMLInputElement;
-    input.checked = checked;
-    input.addEventListener("change", () => onChange(input.checked));
-    return h("label", { title }, input, label);
-  };
-  const parts: HTMLElement[] = [];
-  if (hideKey) {
-    const hidden: string[] = (entry.data[hideKey] ?? []).map(String);
-    parts.push(
-      box("Hidden", hidden.includes(path), "Kept in the list, left off the site", (on) => {
-        const next = on ? [...hidden, path] : hidden.filter((p) => p !== path);
-        setValue(entry, columnByKey(hideKey)!, next.length ? next : null);
-        refreshCell(entry, col);
-        fillPreviewControls(img); // re-read the values for the next click
-      })
-    );
-  }
-  if (thumbKey) {
-    const n = Number(entry.data[thumbKey]) || 1;
-    parts.push(
-      box("Thumbnail", n === index + 1, "Shown in grids, search and link previews", (on) => {
-        const k = on ? index + 1 : 1;
-        setValue(entry, columnByKey(thumbKey)!, k === 1 ? null : k);
-        refreshCell(entry, col);
-        fillPreviewControls(img);
-      })
-    );
-  }
-  previewControls.replaceChildren(...parts);
-}
 function showPreview(img: HTMLImageElement) {
   previewFor_ = img;
-  fillPreviewControls(img);
   const target = preview.querySelector("img")!;
   const place = () => {
     if (previewFor_ !== img) return;
@@ -321,20 +280,147 @@ function hidePreview() {
 }
 document.addEventListener("mouseover", (e) => {
   const img = (e.target as HTMLElement).closest?.("img.thumb") as HTMLImageElement | null;
-  if (!img || img === previewFor_) return;
+  if (!img || img === previewFor_ || img.closest(".viewer") || viewing) return;
   clearTimeout(previewTimer);
   previewTimer = window.setTimeout(() => showPreview(img), 250);
 });
 document.addEventListener("mouseout", (e) => {
-  if (!(e.target as HTMLElement).closest?.("img.thumb")) return;
-  // An interactive preview stays open if the pointer is on its way to it.
-  if (preview.classList.contains("interactive") && !preview.hidden) {
-    clearTimeout(previewTimer);
-    previewTimer = window.setTimeout(() => !preview.matches(":hover") && hidePreview(), 250);
-  } else hidePreview();
+  if ((e.target as HTMLElement).closest?.("img.thumb")) hidePreview();
 });
-preview.addEventListener("mouseleave", hidePreview);
 addEventListener("scroll", hidePreview, true);
+
+// ---------------------------------------------------------------- image viewer
+
+// Clicking a photo in an image list opens this viewer next to it and keeps it open:
+// Hidden / Thumbnail checkboxes on top (where the image list has those fields), the
+// image, and ‹ › (or ← →) to flip through the entry's images. × / Esc / a click
+// elsewhere closes it.
+const viewer = h("div", { class: "viewer", hidden: true, role: "dialog", "aria-label": "Image" });
+let viewing: { entry: Entry; col: Column; index: number } | undefined;
+
+function viewerList() {
+  return viewing ? ((viewing.entry.data[viewing.col.key] ?? []) as unknown[]).map(String) : [];
+}
+
+function openViewer(entry: Entry, col: Column, index: number, anchor: HTMLElement) {
+  hidePreview();
+  viewing = { entry, col, index };
+  renderViewer();
+  viewer.hidden = false;
+  // Below the photo (or above it when there's no room), kept on screen
+  const r = anchor.getBoundingClientRect();
+  const place = () => {
+    const w = viewer.offsetWidth, vh = viewer.offsetHeight;
+    viewer.style.left = `${Math.max(8, Math.min(r.left, innerWidth - w - 8))}px`;
+    const below = r.bottom + 6;
+    viewer.style.top = `${below + vh > innerHeight - 8 ? Math.max(8, Math.min(r.top - vh - 6, innerHeight - vh - 8)) : below}px`;
+  };
+  place();
+  viewer.querySelector("img")?.addEventListener("load", place, { once: true });
+}
+
+function closeViewer() {
+  viewing = undefined;
+  viewer.hidden = true;
+}
+
+function flip(step: number) {
+  if (!viewing) return;
+  const n = viewerList().length;
+  if (n < 2) return;
+  viewing.index = (viewing.index + step + n) % n;
+  renderViewer();
+}
+
+function renderViewer() {
+  if (!viewing) return;
+  const { entry, col } = viewing;
+  const list = viewerList();
+  if (!list.length) return closeViewer();
+  viewing.index = Math.min(viewing.index, list.length - 1);
+  const index = viewing.index;
+  const path = list[index];
+  const hideKey = col.options.hideIn, thumbKey = col.options.thumbnailIn;
+
+  const box = (label: string, checked: boolean, title: string, onChange: (on: boolean) => void) => {
+    const input = h("input", { type: "checkbox" }) as HTMLInputElement;
+    input.checked = checked;
+    input.addEventListener("change", () => onChange(input.checked));
+    return h("label", { title }, input, label);
+  };
+  const controls: HTMLElement[] = [];
+  if (hideKey) {
+    const hidden: string[] = (entry.data[hideKey] ?? []).map(String);
+    controls.push(
+      box("Hidden", hidden.includes(path), "Kept in the list, left off the site", (on) => {
+        const next = on ? [...hidden, path] : hidden.filter((p) => p !== path);
+        setValue(entry, columnByKey(hideKey)!, next.length ? next : null);
+        refreshCell(entry, col);
+        renderViewer();
+      })
+    );
+  }
+  if (thumbKey) {
+    const n = Number(entry.data[thumbKey]) || 1;
+    controls.push(
+      box("Thumbnail", n === index + 1, "Shown in grids, search and link previews", (on) => {
+        const k = on ? index + 1 : 1;
+        setValue(entry, columnByKey(thumbKey)!, k === 1 ? null : k);
+        refreshCell(entry, col);
+        renderViewer();
+      })
+    );
+  }
+
+  const img = h("img", { alt: "", title: path.split("/").pop() }) as HTMLImageElement;
+  const src = previewFor(path);
+  if (typeof src === "string") img.src = src;
+  else src.then((u) => viewing && viewerList()[viewing.index] === path && (img.src = u)).catch(() => img.classList.add("broken"));
+
+  const many = list.length > 1;
+  viewer.replaceChildren(
+    h(
+      "div",
+      { class: "viewer-top" },
+      ...controls,
+      h("span", { class: "viewer-count" }, many ? `${index + 1} / ${list.length}` : ""),
+      h("button", { type: "button", class: "viewer-close", title: "Close (Esc)", on: { click: closeViewer } }, "×")
+    ),
+    h(
+      "div",
+      { class: "viewer-stage" },
+      many ? h("button", { type: "button", class: "viewer-nav prev", title: "Previous (←)", on: { click: () => flip(-1) } }, "‹") : "",
+      img,
+      many ? h("button", { type: "button", class: "viewer-nav next", title: "Next (→)", on: { click: () => flip(1) } }, "›") : ""
+    ),
+    h("div", { class: "viewer-name" }, path.split("/").pop()!)
+  );
+}
+
+document.addEventListener("click", (e) => {
+  const img = (e.target as HTMLElement).closest?.("img.thumb") as HTMLImageElement | null;
+  const info = img && tileInfo.get(img);
+  if (info) {
+    e.stopPropagation();
+    hidePreview();
+    return openViewer(info.entry, info.col, info.index, img!);
+  }
+});
+document.addEventListener("mousedown", (e) => {
+  if (!viewing) return;
+  const t = e.target as HTMLElement;
+  if (viewer.contains(t)) return;
+  const img = t.closest?.("img.thumb") as HTMLImageElement | null;
+  if (img && tileInfo.has(img)) return; // opening another photo
+  closeViewer();
+});
+document.addEventListener("keydown", (e) => {
+  if (!viewing) return;
+  if ((e.target as HTMLElement).matches?.("input[type=text], input[type=number], input[type=search], textarea")) return;
+  if (e.key === "Escape") closeViewer();
+  else if (e.key === "ArrowLeft") (e.preventDefault(), flip(-1));
+  else if (e.key === "ArrowRight") (e.preventDefault(), flip(1));
+});
 
 const lazyImages = new IntersectionObserver(
   (items) => {
@@ -1557,7 +1643,7 @@ async function start() {
     state.thumbs[path] = Array.isArray(v) ? v[0] : v;
     if (Array.isArray(v)) state.previews[path] = v[1];
   }
-  document.body.append(preview);
+  document.body.append(preview, viewer);
 
   const folders = (config.collections as CollectionConfig[]).filter((c) => c.folder);
   const select = $<HTMLSelectElement>("#collection");
