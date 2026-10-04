@@ -4,10 +4,10 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev --host",
-    "build": "astro build",
+    "build": "rm -f node_modules/.astro/data-store.json && astro build",
     "preview": "astro preview --host",
     "astro": "astro",
-    "deploy": "astro build && wrangler deploy --config dist/server/wrangler.json",
+    "deploy": "bun run build && wrangler deploy --config dist/server/wrangler.json",
     "cf:preview": "astro build && wrangler dev --config dist/server/wrangler.json",
     "generate-types": "astro build && wrangler types --config dist/server/wrangler.json",
     "match-photos": "bun scripts/photo-matcher/server.ts",
