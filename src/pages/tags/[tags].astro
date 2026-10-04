@@ -4,7 +4,7 @@ import Layout from "@layouts/Layout.astro";
 import WorkCard from "@components/WorkCard.astro";
 import { type CollectionEntry, getCollection } from "astro:content";
 import { shortHash, getNavDigest } from "@src/lib/cache-key";
-import { hasImage } from "@src/lib/works";
+import { byTitle, hasImage } from "@src/lib/works";
 import { TAG_SEPARATOR, tagIndex, tagPath, tagSlugsOf } from "@src/lib/tags";
 
 // One page per tag, and one per pair of tags that some work actually has together.
@@ -39,7 +39,7 @@ interface Props {
 }
 
 const { slugs, members, combos } = Astro.props;
-const works = [...members].sort((a, b) => (a.data.title ?? "Untitled").localeCompare(b.data.title ?? "Untitled"));
+const works = [...members].sort(byTitle);
 const allTags = tagIndex(await getCollection("works", hasImage));
 const label = (slug: string) => allTags.find((t) => t.slug === slug)?.label ?? slug;
 

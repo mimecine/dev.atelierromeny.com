@@ -1,5 +1,5 @@
 ---
-title: No title recorded
+title: null
 categories: Works on Paper
 collections:
   - selected-prints

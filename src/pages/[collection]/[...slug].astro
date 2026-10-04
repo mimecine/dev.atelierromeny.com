@@ -13,7 +13,7 @@ import Star from "@components/Star.astro";
 import { shortHash, getNavDigest } from "@src/lib/cache-key";
 import { workTransitionName } from "@src/lib/view-transition";
 import { isMenuCollection } from "@src/lib/settings";
-import { hasImage, thumbnailOf } from "@src/lib/works";
+import { byTitle, hasImage, thumbnailOf, titleOf } from "@src/lib/works";
 import { tagPath, tagSlug } from "@src/lib/tags";
 
 
@@ -37,7 +37,7 @@ export async function getStaticPaths() {
         collection.id === "_works"
       )
       .sort((a, b) =>
-        a.data.title?.localeCompare(b.data.title || "(Untitled)") || 0
+        byTitle(a, b)
       );
 
     // Prev/next links and the "N of M" counter depend on the full ordered
@@ -83,7 +83,7 @@ const works = (await getCollection("works"))
       collection.id === "_works"
   )
   .sort(
-    (a, b) => a.data.title?.localeCompare(b.data.title || "(Untitled)") || 0
+    byTitle
   );
 
 console.log(
@@ -128,16 +128,16 @@ const { count, index } = works.reduce(
 ---
 
 <Layout
-  title={work.data.title || "Untitled"}
+  title={titleOf(work)}
   printInfo={[
-    work.data.title || "Untitled",
+    titleOf(work),
     work.data.year_start,
     work.data.w && work.data.h && `${work.data.w} × ${work.data.h} cm`,
     work.data.id && `#${work.data.id}`,
   ].filter(Boolean).join(", ")}
   image={thumbnailOf(work)}
   description={[
-    `Edlef Romeny, ${work.data.title || "Untitled"}`,
+    `Edlef Romeny, ${titleOf(work)}`,
     work.data.year_start,
     work.data.w && work.data.h && `${work.data.w} × ${work.data.h} cm`,
   ].filter(Boolean).join(", ")}
@@ -148,12 +148,12 @@ const { count, index } = works.reduce(
   <section class="flex flex-col flex-1 min-h-0 w-full max-w-4xl mx-auto">
     <SearchMeta
       type="work"
-      title={[work.data.title || "Untitled", work.data.year_start, work.data.id && `#${work.data.id}`].filter(Boolean).join(", ")}
+      title={[titleOf(work), work.data.year_start, work.data.id && `#${work.data.id}`].filter(Boolean).join(", ")}
     />
     <WorkImages work={work} transitionName={workTransitionName(collection.id, work.id)} />
     <!-- When printing, this line is printed beside the logo instead (printInfo above) -->
     <div class="work-info py-3 w-full text-center font-bold shrink-0 print:hidden">
-      {work.data.title || "Untitled"}
+      {titleOf(work)}
       {work.data.year_start && `, ${work.data.year_start || "Undated"}`}
       {work.data.year_start && work.data.year_end && ` - ${work.data.year_end}`}
       {work.data.w && work.data.h && `( ${work.data.w} x ${work.data.h} )`}

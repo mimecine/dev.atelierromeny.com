@@ -6,7 +6,7 @@ import WorkCard from "@components/WorkCard.astro";
 import SearchMeta from "@components/SearchMeta.astro";
 import { shortHash, getNavDigest } from "@src/lib/cache-key";
 import { isMenuCollection } from "@src/lib/settings";
-import { hasImage, thumbnailOf } from "@src/lib/works";
+import { byTitle, hasImage, thumbnailOf } from "@src/lib/works";
 
 export async function getStaticPaths() {
   let collections = await getCollection("collections",(col) => col.data.published !== false);
@@ -49,9 +49,7 @@ const { Content } = await render(collection);
 
 const works = (await getCollection("works",(work) => hasImage(work) && (work.data.collections?.includes(collection.id) ||
 collection.data.title === "Works")))
-  .sort(
-    (a, b) => a.data.title?.localeCompare(b.data.title || "(Untitled)") || 0
-  );
+  .sort(byTitle);
 ---
 
 <Layout

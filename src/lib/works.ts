@@ -21,3 +21,11 @@ export function thumbnailIndex(work: Work) {
 }
 
 export const thumbnailOf = (work: Work) => imagesOf(work)[thumbnailIndex(work)];
+
+/** Shown wherever a work has no title. (A title actually recorded as "Untitled" is kept.) */
+export const NO_TITLE = "No title recorded";
+export const titleOf = (work: Work) => work.data.title || NO_TITLE;
+
+/** By title, works without a title last. */
+export const byTitle = (a: Work, b: Work) =>
+  (a.data.title ? 0 : 1) - (b.data.title ? 0 : 1) || (a.data.title ?? "").localeCompare(b.data.title ?? "");

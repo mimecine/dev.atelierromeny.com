@@ -2,7 +2,7 @@
 import type { CollectionEntry } from "astro:content";
 import { Image } from "astro:assets";
 import { workTransitionName } from "@src/lib/view-transition";
-import { thumbnailOf } from "@src/lib/works";
+import { thumbnailOf, titleOf } from "@src/lib/works";
 
 interface Props {
   work: CollectionEntry<"works">;
@@ -18,7 +18,7 @@ const thumbnail = thumbnailOf(work);
 
 <a
   href={`/${collection}/${work.id}`}
-  title={[work.data.title || "Untitled", work.data.year_start].filter(Boolean).join(", ")}
+  title={[titleOf(work), work.data.year_start].filter(Boolean).join(", ")}
 >
   <div class="work-item" data-key={work.id}>
     <div class="work-thumbnail-container">

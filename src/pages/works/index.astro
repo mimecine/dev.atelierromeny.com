@@ -3,7 +3,7 @@ export const prerender = true;
 import Layout from "../../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
-import { thumbnailOf } from "@src/lib/works";
+import { thumbnailOf, titleOf } from "@src/lib/works";
 
 const works = await getCollection("works");
 ---
@@ -22,7 +22,7 @@ const works = await getCollection("works");
               class="rounded shadow group-hover:scale-105 transition-transform duration-200"
             />
           )}
-          <div class="mt-2 text-lg font-semibold">{work.data.title || "Untitled"}</div>
+          <div class="mt-2 text-lg font-semibold">{titleOf(work)}</div>
           {work.data.year_start && <div class="text-sm text-gray-500">{work.data.year_start}</div>}
         </a>
       ))}

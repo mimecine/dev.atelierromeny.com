@@ -1,6 +1,7 @@
 ---
 export const prerender = true;
 import Layout from "../../layouts/Layout.astro";
+import { titleOf } from "@src/lib/works";
 import {
   type CollectionEntry,
   getCollection,
@@ -27,12 +28,12 @@ const work = Astro.props;
 const { Content } = await render(work);
 ---
 
-<Layout title={work.data.title || "~ Untitled ~"} noindex>
+<Layout title={titleOf(work)} noindex>
   <section class="grid max-w-4xl mx-auto py-4">
     <div>
       <div class="flex flex-col h-[75vh]"><WorkImages work={work} /></div>
     <div class="py-4 w-full text-center font-bold">
-      {work.data.title || "Untitled"}
+      {titleOf(work)}
       {work.data.year_start && `, ${work.data.year_start || "Undated"}`}
       {work.data.year_start && work.data.year_end && ` - ${work.data.year_end}`}
       {work.data.w && work.data.h && `( ${work.data.w} x ${work.data.h} )`}
