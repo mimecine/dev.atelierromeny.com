@@ -33,11 +33,7 @@ const { Content } = await render(work);
     <div>
       <div class="flex flex-col h-[75vh]"><WorkImages work={work} /></div>
     <div class="py-4 w-full text-center font-bold">
-      {titleOf(work)}
-      {work.data.year_start && `, ${work.data.year_start || "Undated"}`}
-      {work.data.year_start && work.data.year_end && ` - ${work.data.year_end}`}
-      {work.data.w && work.data.h && `( ${work.data.w} x ${work.data.h} )`}
-      {work.data.id && `, #${work.data.id}`}
+      <span class="capitalize">{titleOf(work)}</span>{work.data.year_start && `, ${work.data.year_start}`}{work.data.year_start && work.data.year_end && `–${work.data.year_end}`}{work.data.w && work.data.h && ` (${work.data.w} × ${work.data.h} cm)`}
     </div>
       <!-- {work.data.description && <div>{work.data.description}</div>} -->
       <!-- {

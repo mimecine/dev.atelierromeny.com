@@ -133,7 +133,6 @@ const { count, index } = works.reduce(
     titleOf(work),
     work.data.year_start,
     work.data.w && work.data.h && `${work.data.w} × ${work.data.h} cm`,
-    work.data.id && `#${work.data.id}`,
   ].filter(Boolean).join(", ")}
   image={thumbnailOf(work)}
   description={[
@@ -148,16 +147,12 @@ const { count, index } = works.reduce(
   <section class="flex flex-col flex-1 min-h-0 w-full max-w-4xl mx-auto">
     <SearchMeta
       type="work"
-      title={[titleOf(work), work.data.year_start, work.data.id && `#${work.data.id}`].filter(Boolean).join(", ")}
+      title={[titleOf(work), work.data.year_start].filter(Boolean).join(", ")}
     />
     <WorkImages work={work} transitionName={workTransitionName(collection.id, work.id)} />
     <!-- When printing, this line is printed beside the logo instead (printInfo above) -->
     <div class="work-info py-3 w-full text-center font-bold shrink-0 print:hidden">
-      {titleOf(work)}
-      {work.data.year_start && `, ${work.data.year_start || "Undated"}`}
-      {work.data.year_start && work.data.year_end && ` - ${work.data.year_end}`}
-      {work.data.w && work.data.h && `( ${work.data.w} x ${work.data.h} )`}
-      {work.data.id && `, #${work.data.id}`}
+      <span class="capitalize">{titleOf(work)}</span>{work.data.year_start && `, ${work.data.year_start}`}{work.data.year_start && work.data.year_end && `–${work.data.year_end}`}{work.data.w && work.data.h && ` (${work.data.w} × ${work.data.h} cm)`}
       <span class="print:hidden" data-pagefind-ignore x-data={`{ id: ${JSON.stringify(work.id)} }`}>
         <button
           type="button"

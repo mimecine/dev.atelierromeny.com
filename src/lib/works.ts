@@ -2,11 +2,17 @@ import type { CollectionEntry } from "astro:content";
 
 type Work = CollectionEntry<"works">;
 
-/** The images a work shows, in order: `image`, then `images`. A work with neither
- *  falls back to its old (pre-reshoot) photo. */
+/** `image`, then `images`, hidden ones included: the list `thumbnail` counts in. */
+const allImagesOf = (work: Work) => [work.data.image, ...(work.data.images ?? [])].filter((img) => !!img);
+
+/** The images a work shows, in order: `image`, then `images`, minus any listed under
+ *  `hidden_images` (kept in the files, just not shown). A work with neither falls back to
+ *  its old (pre-reshoot) photo; one whose images are all hidden shows none. */
 export function imagesOf(work: Work) {
-  const current = [work.data.image, ...(work.data.images ?? [])].filter((img) => !!img);
-  return current.length ? current : [work.data.old_image].filter((img) => !!img);
+  const all = allImagesOf(work);
+  if (!all.length) return [work.data.old_image].filter((img) => !!img);
+  const hidden = new Set((work.data.hidden_images ?? []).map((img) => img.src));
+  return all.filter((img) => !hidden.has(img!.src));
 }
 
 /** Whether the work has any picture to show (it's left out of grids otherwise). */
@@ -17,7 +23,9 @@ export const hasImage = (work: Work) => imagesOf(work).length > 0;
  *  of More Images, …), otherwise the first image. */
 export function thumbnailIndex(work: Work) {
   const n = work.data.thumbnail;
-  return n && n >= 1 && n <= imagesOf(work).length ? n - 1 : 0;
+  const chosen = n && n >= 1 ? allImagesOf(work)[n - 1] : undefined;
+  const i = chosen ? imagesOf(work).indexOf(chosen) : -1;
+  return i >= 0 ? i : 0; // the chosen one is hidden or missing: the first shown image
 }
 
 export const thumbnailOf = (work: Work) => imagesOf(work)[thumbnailIndex(work)];

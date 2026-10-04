@@ -41,7 +41,7 @@ import Star from "@components/Star.astro";
               />
             </div>
             <div class="pt-1 text-sm text-center">
-              <span x-text="item.title || 'No title recorded'"></span><span x-show="item.year_start" x-text="', ' + item.year_start"></span>
+              <span class="capitalize" x-text="item.title || 'No title recorded'"></span><span x-show="item.year_start" x-text="', ' + item.year_start"></span>
             </div>
           </a>
         </div>

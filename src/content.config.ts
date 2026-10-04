@@ -11,6 +11,7 @@ const _works = defineCollection({
       title: z.string().optional().nullish(),
       image: image().optional().nullish(),
       images: z.array(image()).optional().nullish(),
+      hidden_images: z.array(image()).optional().nullish(), // kept in the files, not shown on the site
       thumbnail: z.number().int().optional().nullish(), // which image is the thumbnail: 1 = image, 2 = images[0], …
       old_image: image().optional().nullish(), // pre-reshoot photo; shown only when the work has no other image
       description: z.string().optional().nullish(),
