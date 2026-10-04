@@ -25,7 +25,8 @@ Every work is printed with what was measured, and anything that looks doubtful
 is marked CHECK with the reasons, then listed again at the end. A doubtful
 sheet or image isn't written unless you pass --include-flagged (best used with
 the works named). For a work painted/printed to the edge, --image-is-sheet
-writes the sheet size as w/h too.
+writes the sheet size as w/h too; works whose image visibly runs to the paper
+edge (no margin) get that automatically.
 """
 
 import argparse
@@ -46,6 +47,10 @@ WORK_WIDTH = 1500
 
 # Below this share of ink inside the image box, the detection is suspect
 FILL_MIN = 0.4
+
+# Brightness std-dev in a band just inside the paper edge: bare paper margins
+# stay well below this, watercolours/prints running to the edge go above
+EDGE_TEXTURE = 10
 
 
 def read_frontmatter(path):
@@ -158,6 +163,21 @@ def find_image(sheet):
     return box, edges, area / (bw * bh)
 
 
+def no_margin(sheet):
+    """True when the image runs to the paper edge (watercolours, full-bleed
+    prints): a band just inside the edge is textured on 3+ sides, where a
+    margin of bare paper is flat."""
+    h, w = sheet.shape[:2]
+    a, b = int(0.008 * min(w, h)), int(0.025 * min(w, h))
+    L = cv2.cvtColor(sheet, cv2.COLOR_BGR2LAB)[..., 0].astype(np.float32)
+    bands = [L[a:b, a:w - a], L[h - b:h - a, a:w - a], L[a:h - a, a:b], L[a:h - a, w - b:w - a]]
+    return sum(band.std() > EDGE_TEXTURE for band in bands) >= 3
+
+
+def checks_for(checks, what):
+    return [c for c in checks if c[0] == what]
+
+
 def sanity_checks(img, quad, clean, box, edges, fill):
     """Reasons a measurement looks doubtful, as (affects, reason) where affects
     is "sheet" or "image". Image checks build on the sheet, so a doubtful sheet
@@ -208,9 +228,16 @@ def measure(path, debug_dir=None):
     M = cv2.getPerspectiveTransform(quad, dst)
     sheet = cv2.warpPerspective(img, M, (round(sw), round(sh)))
     box, edges, fill = find_image(sheet)
+    checks = sanity_checks(img, quad, clean, box, edges, fill)
 
+    # No margin: the image is the sheet. Not trusted when the outline isn't a
+    # clean rectangle, since hands and torn corners also make the edge busy.
+    bleed = clean and no_margin(sheet)
+    if bleed:
+        box = (0, 0, sw, sh)
+        checks = checks_for(checks, "sheet")
     result = {"sheet": (sw * scale, sh * scale), "image": None, "shape": full.shape[:2],
-              "checks": sanity_checks(img, quad, clean, box, edges, fill)}
+              "checks": checks, "no_margin": bleed}
     if box:
         result["image"] = (box[2] * scale, box[3] * scale)
 
@@ -317,7 +344,8 @@ def main():
     ap.add_argument("--include-flagged", action="store_true",
                     help="also write measurements that need checking")
     ap.add_argument("--image-is-sheet", action="store_true",
-                    help="write the sheet size as w/h too (works printed/painted to the edge)")
+                    help="write the sheet size as w/h too, for named works printed/painted to the "
+                         "edge that weren't recognised as such")
     ap.add_argument("--csv", metavar="FILE", help="also save all measurements and checks as CSV")
     ap.add_argument("--debug", metavar="DIR", help="write overlay images (green=sheet, red=image)")
     args = ap.parse_args()
@@ -353,14 +381,16 @@ def main():
         sheet = cm(r["sheet"])
         image = sheet if args.image_is_sheet else cm(r["image"]) if r["image"] else None
         if args.image_is_sheet:
-            checks = [c for c in checks if c[0] == "sheet"]
+            checks = checks_for(checks, "sheet")
+        same = args.image_is_sheet or r["no_margin"]
         sheet_s = f"{sheet[0]:g} x {sheet[1]:g}"
-        img_s = f"{image[0]:g} x {image[1]:g}" if image else "-"
+        img_s = "= sheet" if same else f"{image[0]:g} x {image[1]:g}" if image else "-"
         mark = "CHECK" if checks else "ok"
-        print(f"{slug:<16} sheet {sheet_s:<13} image {img_s:<13} {mark}")
+        print(f"{slug:<16} sheet {sheet_s:<13} image {img_s:<13} {mark}"
+              + ("  (no margin found)" if r["no_margin"] else ""))
         for _, why in checks:
             print(f"{'':<18}- {why}")
-        rows.append((slug, sheet, image, checks))
+        rows.append((slug, sheet, image, same, checks))
         if checks:
             flagged.append((slug, [why for _, why in checks]))
 
@@ -387,9 +417,10 @@ def main():
     if args.csv:
         with open(args.csv, "w", newline="", encoding="utf-8") as f:
             out = csv.writer(f)
-            out.writerow(["work", "sheet_w", "sheet_h", "image_w", "image_h", "check"])
-            for slug, sheet, image, checks in rows:
-                out.writerow([slug, *sheet, *(image or ("", "")), "; ".join(why for _, why in checks)])
+            out.writerow(["work", "sheet_w", "sheet_h", "image_w", "image_h", "image_is_sheet", "check"])
+            for slug, sheet, image, same, checks in rows:
+                out.writerow([slug, *sheet, *(image or ("", "")), "yes" if same else "",
+                              "; ".join(why for _, why in checks)])
         print(f"\nwrote {args.csv}")
 
     if flagged:
