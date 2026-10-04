@@ -7,15 +7,18 @@ export const tagSlug = (tag: string) =>
   tag
     .toLowerCase()
     .normalize("NFD")
-    .replace(/[̀-ͯ]/g, "")
+    .replace(/[\u0300-\u036f]/g, "") // strip accents: "trädet" → "tradet"
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "");
 
 /** A work's tags as slugs, without duplicates. */
 export const tagSlugsOf = (work: Work) => [...new Set((work.data.tags ?? []).map(tagSlug).filter(Boolean))];
 
-/** Path of a tag page. Slugs are sorted so "a,b" and "b,a" share one page. */
-export const tagPath = (slugs: string[]) => `/tags/${[...new Set(slugs)].sort().join(",")}/`;
+/** Joins tags in a tag page address: /tags/bird+etching/. */
+export const TAG_SEPARATOR = "+";
+
+/** Path of a tag page. Slugs are sorted so "a+b" and "b+a" share one page. */
+export const tagPath = (slugs: string[]) => `/tags/${[...new Set(slugs)].sort().join(TAG_SEPARATOR)}/`;
 
 /** Every tag in use: its slug, the label to show (most common spelling) and how many works carry it. */
 export function tagIndex(works: Work[]) {

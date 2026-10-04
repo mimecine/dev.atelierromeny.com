@@ -990,12 +990,16 @@ function sortValue(entry: Entry, col: Column): string | number {
 }
 
 function rowsToShow() {
-  const q = state.filter.trim().toLowerCase();
+  // Comma-separated terms must all match, each anywhere in the row: "bird, etching"
+  const terms = state.filter.toLowerCase().split(",").map((t) => t.trim()).filter(Boolean);
   let rows = state.entries;
-  if (q) {
-    rows = rows.filter((e) =>
-      [e.slug, ...state.columns.map((c) => e.data[c.key])].some((v) => v != null && JSON.stringify(v).toLowerCase().includes(q))
-    );
+  if (terms.length) {
+    rows = rows.filter((e) => {
+      const values = [e.slug, ...state.columns.map((c) => e.data[c.key])]
+        .filter((v) => v != null)
+        .map((v) => JSON.stringify(v).toLowerCase());
+      return terms.every((t) => values.some((v) => v.includes(t)));
+    });
   }
   if (state.sort) {
     const col = state.columns.find((c) => c.key === state.sort!.key);

@@ -5,7 +5,7 @@ import WorkCard from "@components/WorkCard.astro";
 import { type CollectionEntry, getCollection } from "astro:content";
 import { shortHash, getNavDigest } from "@src/lib/cache-key";
 import { hasImage } from "@src/lib/works";
-import { tagIndex, tagPath, tagSlugsOf } from "@src/lib/tags";
+import { TAG_SEPARATOR, tagIndex, tagPath, tagSlugsOf } from "@src/lib/tags";
 
 // One page per tag, and one per pair of tags that some work actually has together.
 // Any other combination (three or more, or no shared works) is filtered in the
@@ -18,11 +18,11 @@ export async function getStaticPaths() {
     const slugs = tagSlugsOf(work).sort();
     slugs.forEach((a, i) => {
       combos.add(a);
-      for (const b of slugs.slice(i + 1)) combos.add(`${a},${b}`);
+      for (const b of slugs.slice(i + 1)) combos.add(`${a}${TAG_SEPARATOR}${b}`);
     });
   }
   return [...combos].map((combo) => {
-    const slugs = combo.split(",");
+    const slugs = combo.split(TAG_SEPARATOR);
     const members = works.filter((w) => slugs.every((s) => tagSlugsOf(w).includes(s)));
     return {
       params: { tags: combo },
@@ -45,8 +45,8 @@ const label = (slug: string) => allTags.find((t) => t.slug === slug)?.label ?? s
 
 // Where a combination lives: its own page when one was built, the browser filter otherwise.
 const href = (s: string[]) => {
-  const key = [...new Set(s)].sort().join(",");
-  return combos.has(key) ? tagPath(s) : `/tags/?t=${encodeURIComponent(key)}`;
+  const key = [...new Set(s)].sort().join(TAG_SEPARATOR);
+  return combos.has(key) ? tagPath(s) : `/tags/?t=${[...new Set(s)].sort().join(",")}`;
 };
 
 // Tags that narrow this selection down, with how many of these works carry each.

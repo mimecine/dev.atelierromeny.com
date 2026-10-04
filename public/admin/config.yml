@@ -32,7 +32,7 @@ collections:
     create: true
     slug: "{{title}}"
     summary: "{{title}}, {{year}}, {{location}}, #{{id}}"  
-    search_fields: ["title", "year", "location, new_location"]
+    search_fields: ["title", "year", "location", "new_location", "tags", "categories", "note"]
     # filter:
     #   field: "image"
     #   pattern: ".{5,}"
