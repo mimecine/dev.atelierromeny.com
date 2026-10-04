@@ -1,6 +1,6 @@
 ---
 title: "Le bouquet bleu"
-categories: Print
+categories: Works on Paper
 collections:
   - selected-prints
 uuid: 9fa611e3-99e5-4b35-b73f-5e244e96c342

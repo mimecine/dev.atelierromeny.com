@@ -1,6 +1,6 @@
 ---
 title: "Solspegling III"
-categories: Print
+categories: Works on Paper
 collections:
   - selected-prints
 uuid: 546702a8-c652-429b-b6f7-297ebde507e4

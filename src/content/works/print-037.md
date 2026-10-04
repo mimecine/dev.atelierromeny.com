@@ -1,6 +1,6 @@
 ---
 title: "Fantasia"
-categories: Print
+categories: Works on Paper
 collections:
   - selected-prints
 uuid: 63804caa-8816-4adf-bcf0-7f6548f4fc82

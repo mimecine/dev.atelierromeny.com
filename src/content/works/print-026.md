@@ -1,6 +1,6 @@
 ---
 title: No title recorded
-categories: Print
+categories: Works on Paper
 collections:
   - selected-prints
 uuid: 33ea7a67-9269-40b4-9c50-fbd6523e8b20

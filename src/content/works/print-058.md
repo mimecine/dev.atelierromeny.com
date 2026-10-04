@@ -1,6 +1,6 @@
 ---
 title: "Vigne IV"
-categories: Print
+categories: Works on Paper
 collections:
   - selected-prints
 uuid: b173b9a8-88d3-4284-af0e-97bd3b010f3d

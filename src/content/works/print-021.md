@@ -1,6 +1,6 @@
 ---
 title: "Holland"
-categories: Print
+categories: Works on Paper
 collections:
   - selected-prints
 uuid: b9aa207e-c27f-4cab-8545-bca9bc83b277

@@ -1,6 +1,6 @@
 ---
 title: "Död skata"
-categories: Print
+categories: Works on Paper
 collections:
   - selected-prints
 uuid: 46729533-dc61-4694-9267-cf76c218a980

@@ -1,6 +1,6 @@
 ---
 title: "Morgon"
-categories: Print
+categories: Works on Paper
 collections:
   - selected-prints
 uuid: ecfc97ec-4f09-47b9-b314-a645d41ba8e8

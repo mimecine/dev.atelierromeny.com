@@ -1,6 +1,6 @@
 ---
 title: "Nocturne"
-categories: Print
+categories: Works on Paper
 collections:
   - selected-prints
 uuid: 0c369557-6a87-450d-9f8d-b0c72574da8d

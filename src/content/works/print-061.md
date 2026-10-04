@@ -1,6 +1,6 @@
 ---
 title: "Mina iris"
-categories: Print
+categories: Works on Paper
 collections:
   - selected-prints
 uuid: b0de8a69-523b-4a5d-a24f-e48d911ef178

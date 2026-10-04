@@ -1,6 +1,6 @@
 ---
 title: "Savojkål"
-categories: Print
+categories: Works on Paper
 collections:
   - selected-prints
 uuid: 3e503edb-ad24-4c94-8f22-54b84394a0f1

@@ -1,6 +1,6 @@
 ---
 title: "Nature morte"
-categories: Print
+categories: Works on Paper
 collections:
   - selected-prints
 uuid: 5f36de0d-2d31-4f0f-be21-ebf6e8d4dc00

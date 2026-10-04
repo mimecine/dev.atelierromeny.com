@@ -1,6 +1,6 @@
 ---
 title: "Le bouquet"
-categories: Print
+categories: Works on Paper
 collections:
   - selected-prints
 uuid: 09062a96-c31c-4854-85ee-c9c82ea6dcaa

@@ -1,6 +1,6 @@
 ---
 title: "Trädet"
-categories: Print
+categories: Works on Paper
 collections:
   - selected-prints
 uuid: 4bb00c58-f7a5-4bc2-897d-cd3b7f547ed1

@@ -1,6 +1,6 @@
 ---
 title: "Tournesol II"
-categories: Print
+categories: Works on Paper
 collections:
   - selected-prints
 uuid: 609b8891-2dd6-47f2-b20b-f47174f20e09

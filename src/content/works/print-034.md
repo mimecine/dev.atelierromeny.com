@@ -1,6 +1,6 @@
 ---
 title: "Morning"
-categories: Print
+categories: Works on Paper
 collections:
   - selected-prints
 uuid: 7b4a8c6d-626c-4cd6-940f-09af318c91e3

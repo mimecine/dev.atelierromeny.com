@@ -1,6 +1,6 @@
 ---
 title: "Silverskog"
-categories: Print
+categories: Works on Paper
 collections:
   - selected-prints
 uuid: 50e25dee-071c-466b-8fb2-44eb42fc5fe6

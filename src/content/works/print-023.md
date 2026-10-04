@@ -1,6 +1,6 @@
 ---
 title: "Aan de Middellandse Zee"
-categories: Print
+categories: Works on Paper
 collections:
   - selected-prints
 uuid: ebc6f19c-8fd4-4105-acc5-f61f6ea69b57

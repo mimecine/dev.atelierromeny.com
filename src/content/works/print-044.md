@@ -1,6 +1,6 @@
 ---
 title: "Elle joue"
-categories: Print
+categories: Works on Paper
 collections:
   - selected-prints
 uuid: df621349-6346-4f1f-ba0e-320e06495a31
