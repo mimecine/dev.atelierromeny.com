@@ -28,6 +28,8 @@ import measure_prints as mp  # noqa: E402  (quad_size)
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ROTATIONS = os.path.join(ROOT, "scripts", "pictures-rotate.json")
+# Per-file detection overrides, e.g. {"PXL_…": {"method": "backdrop", "threshold": 40}}
+FIXES = os.path.join(ROOT, "scripts", "pictures-fix.json")
 WORK = 1200
 MAX_OUT = 3000
 
@@ -37,11 +39,24 @@ def load(path):
     return cv2.cvtColor(np.array(im), cv2.COLOR_RGB2BGR)
 
 
-def find_print(img):
-    """Corners of the photo print (full-resolution px), and whether the outline is clean."""
+def find_print(img, method="rembg", threshold=30):
+    """Corners of the photo print (full-resolution px), and whether the outline is clean.
+    method: "rembg" (AI cut-out), "backdrop" (differs from the linen colour), or "both"
+    (union of the two, for prints with pale areas close to the linen)."""
     s = WORK / max(img.shape[:2])
     small = cv2.resize(img, None, fx=s, fy=s, interpolation=cv2.INTER_AREA)
-    mask = (md.rembg_mask(small) > 128).astype(np.uint8) * 255
+    masks = []
+    if method in ("rembg", "both"):
+        masks.append((md.rembg_mask(small) > 128).astype(np.uint8) * 255)
+    if method in ("backdrop", "both"):
+        lab = cv2.cvtColor(cv2.GaussianBlur(small, (5, 5), 0), cv2.COLOR_BGR2LAB).astype(np.float32)
+        h, w = small.shape[:2]
+        b = int(0.04 * min(h, w))
+        border = np.ones((h, w), bool)
+        border[b:-b, b:-b] = False
+        linen = np.median(lab[border], axis=0)
+        masks.append(((np.linalg.norm(lab - linen, axis=2) > threshold) * 255).astype(np.uint8))
+    mask = masks[0] if len(masks) == 1 else cv2.bitwise_or(*masks)
     quad, clean, share = md.quad_from_mask(mask)
     if quad is None:
         return None, False
@@ -95,11 +110,12 @@ def main():
     args = ap.parse_args()
 
     rotations = json.load(open(ROTATIONS)) if os.path.exists(ROTATIONS) else {}
+    fixes = json.load(open(FIXES)) if os.path.exists(FIXES) else {}
     tiles, flagged = [], []
     for i, path in enumerate(sorted(args.files), 1):
         name = os.path.splitext(os.path.basename(path))[0]
         img = load(path)
-        quad, clean = find_print(img)
+        quad, clean = find_print(img, **fixes.get(name, {}))
         if quad is None:
             print(f"{i:2d} {name}: CHECK no print found")
             flagged.append(name)

@@ -1,0 +1,18 @@
+{
+ "PXL_20261004_213837629.MP": {
+  "method": "backdrop"
+ },
+ "PXL_20261004_213859915.MP": {
+  "method": "backdrop"
+ },
+ "PXL_20261004_213927824.MP": {
+  "method": "backdrop"
+ },
+ "PXL_20261004_214022037.MP": {
+  "method": "backdrop"
+ },
+ "PXL_20261004_214042378.MP": {
+  "method": "both",
+  "threshold": 40
+ }
+}

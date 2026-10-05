@@ -1,4 +1,7 @@
-// Fullscreen zoom/pan viewer for any <img data-zoom-src="…">. Listeners are delegated
+// Fullscreen zoom/pan viewer for any <img data-zoom-src="…">. The <img> fills the whole
+// stage (the picture is letterboxed inside it by object-contain): Panzoom's zoom-to-point
+// assumes the element starts at the stage's corner, and a centred, narrower <img> made
+// the zoom drift sideways. Listeners are delegated
 // from `document`, so this survives ClientRouter page swaps without re-initialising.
 import Panzoom, { type PanzoomObject } from "@panzoom/panzoom";
 
@@ -7,6 +10,16 @@ let swallowKeyup = false;
 let initialised = false;
 
 const BUTTON = "size-10 grid place-items-center rounded-full bg-white/15 text-white text-xl hover:bg-white/30 cursor-pointer";
+
+/** Whether a click hit the picture rather than the empty bands object-contain leaves. */
+function onPicture(img: HTMLImageElement, e: MouseEvent) {
+  const r = img.getBoundingClientRect();
+  if (!img.naturalWidth || !img.naturalHeight) return true;
+  const scale = Math.min(r.width / img.naturalWidth, r.height / img.naturalHeight);
+  const w = img.naturalWidth * scale, h = img.naturalHeight * scale;
+  const x = r.left + (r.width - w) / 2, y = r.top + (r.height - h) / 2;
+  return e.clientX >= x && e.clientX <= x + w && e.clientY >= y && e.clientY <= y + h;
+}
 
 function viewer() {
   let dialog = document.getElementById("zoom-viewer") as HTMLDialogElement | null;
@@ -17,8 +30,8 @@ function viewer() {
   dialog.className =
     "m-0 p-0 w-screen h-dvh max-w-none max-h-none bg-black/95 backdrop:bg-black/95 overflow-hidden";
   dialog.innerHTML = `
-    <div data-stage class="w-full h-full grid place-items-center overflow-hidden touch-none">
-      <img alt="" draggable="false" class="max-w-full max-h-dvh object-contain select-none cursor-grab" />
+    <div data-stage class="relative w-full h-full overflow-hidden touch-none">
+      <img alt="" draggable="false" class="absolute inset-0 w-full h-full object-contain select-none cursor-grab" />
     </div>
     <div class="absolute top-3 right-3 flex gap-2">
       <button type="button" data-zoom="in" aria-label="Zoom in" class="${BUTTON}">+</button>
@@ -40,8 +53,9 @@ function viewer() {
     else if (action === "out") pz?.zoomOut();
     else if (action === "reset") pz?.reset();
     else if (action === "close") dialog!.close();
-    // A click on the dark area around an unzoomed image closes too
-    else if (e.target === stage && (pz?.getScale() ?? 1) <= 1.01) dialog!.close();
+    // A click on the dark area around an unzoomed picture closes too (the letterbox
+    // bands are part of the <img> now, so check where the picture itself is drawn)
+    else if ((pz?.getScale() ?? 1) <= 1.01 && (e.target === stage || (e.target === img && !onPicture(img, e)))) dialog!.close();
   });
   stage.addEventListener("wheel", (e) => pz?.zoomWithWheel(e));
   img.addEventListener("dblclick", (e) => {
