@@ -17,6 +17,9 @@
 		"directory": "./dist",
 		"not_found_handling": "404-page"
 	},
+	// Branch builds (e.g. `dev`) upload a preview version instead of deploying; this
+	// gives each one its own URL: https://<branch>-atelierromeny.mimecom.workers.dev
+	"preview_urls": true,
 	"observability": {
 		"enabled": true
 	}

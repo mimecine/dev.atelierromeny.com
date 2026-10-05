@@ -7,3 +7,5 @@
 - Make a first go at generating a pictures collection from the images
 - Table view with small(now), medium, large thumbnails
 - Classify styles (expressionism, etc) into it's own field
+- Have search pick up tags on works
+- Make collections able to sort manually (maybe that's just another type of collection)
