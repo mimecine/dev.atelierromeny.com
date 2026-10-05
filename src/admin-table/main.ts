@@ -421,7 +421,9 @@ const lazyImages = new IntersectionObserver(
       if (!it.isIntersecting) continue;
       const img = it.target as HTMLImageElement;
       lazyImages.unobserve(img);
-      const src = thumbFor(img.dataset.path!);
+      const path = img.dataset.path!;
+      // Large thumbnails use the build's 720px preview when there is one (sharper on hi-dpi screens)
+      const src = (thumbSize === "l" && !img.closest(".popover, .modal") && state.previews[path]) || thumbFor(path);
       if (typeof src === "string") img.src = src;
       else src.then((u) => (img.src = u)).catch(() => img.classList.add("broken"));
     }
@@ -1047,7 +1049,34 @@ const DEFAULT_WIDTH: Record<string, number> = {
   text: 200, longtext: 260, number: 84, boolean: 76, select: 140, relation: 240, image: 84,
   images: 280, imagechoice: 84, strings: 190, markdown: 280, unsupported: 160,
 };
-const widthOf = (col: Column) => state.widths[col.key] ?? Math.max(DEFAULT_WIDTH[col.kind] ?? 160, col.label.length * 8 + 28);
+
+// Thumbnail size (toolbar S / M / L): a class on <body> sets the CSS sizes (--thumb, --thumb-list);
+// image columns the user hasn't resized grow with it.
+type ThumbSize = "s" | "m" | "l";
+const THUMB_SCALE: Record<ThumbSize, number> = { s: 1, m: 1.8, l: 3 };
+let thumbSize: ThumbSize = "s";
+try {
+  const saved = localStorage.getItem("atelier-table.thumbSize");
+  if (saved === "m" || saved === "l") thumbSize = saved;
+} catch {}
+function defaultWidth(kind: string): number {
+  const f = THUMB_SCALE[thumbSize];
+  if (kind === "image" || kind === "imagechoice") return Math.round(56 * f) + 28;
+  if (kind === "images") return Math.round(48 * f) * 5 + 40; // about five tiles a row
+  return DEFAULT_WIDTH[kind] ?? 160;
+}
+const widthOf = (col: Column) => state.widths[col.key] ?? Math.max(defaultWidth(col.kind), col.label.length * 8 + 28);
+
+function setThumbSize(size: ThumbSize, rerender = true) {
+  thumbSize = size;
+  document.body.classList.toggle("thumbs-m", size === "m");
+  document.body.classList.toggle("thumbs-l", size === "l");
+  for (const b of document.querySelectorAll<HTMLButtonElement>("#thumb-size button")) b.setAttribute("aria-pressed", String(b.dataset.size === size));
+  try {
+    localStorage.setItem("atelier-table.thumbSize", size);
+  } catch {}
+  if (rerender && state.collection) renderTable();
+}
 
 // ".v2": layouts saved before COLUMN_DEFAULTS existed start over once
 const layoutKey = () => `atelier-table.layout.v2.${state.collection?.name}`;
@@ -1621,6 +1650,7 @@ async function connectBackend(): Promise<Backend | undefined> {
 }
 
 async function start() {
+  setThumbSize(thumbSize, false);
   const config = parseYaml(await (await fetch("/admin/config.yml")).text());
   const [owner, name] = String(config.backend.repo).split("/");
   state.repo = { owner, name, branch: config.backend.branch ?? "main" };
@@ -1654,6 +1684,10 @@ async function start() {
     renderTable();
   });
   $("#columns").addEventListener("click", (e) => columnsMenu(e.currentTarget as HTMLElement));
+  $("#thumb-size").addEventListener("click", (e) => {
+    const size = (e.target as HTMLElement).closest<HTMLButtonElement>("button[data-size]")?.dataset.size as ThumbSize | undefined;
+    if (size && size !== thumbSize) setThumbSize(size);
+  });
   $("#media").addEventListener("click", () => {
     const c = state.collection;
     mediaBrowser({ folder: c?.media_folder ? makeFolder(c.media_folder, c.public_folder) : undefined }).then(() => updateToolbar());
