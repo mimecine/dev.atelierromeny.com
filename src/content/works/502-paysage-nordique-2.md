@@ -6,6 +6,7 @@ images:
   - /src/media/works/502-paysage-nordique-2.webp
 collections:
   - selected-paintings
+  - review-details
 categories: Abstrait
 w: 120
 h: 100

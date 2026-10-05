@@ -3,6 +3,7 @@ title: null
 categories: Works on Paper
 collections:
   - works-on-paper
+  - review-details
 uuid: 3e755054-c07e-49bb-8899-7faceda99179
 images:
   - '/src/media/works/print-053.webp'

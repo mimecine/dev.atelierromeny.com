@@ -18,5 +18,7 @@ tags:
   - abstract
   - triptych
   - autumn
+collections:
+  - review-details
 ---
 

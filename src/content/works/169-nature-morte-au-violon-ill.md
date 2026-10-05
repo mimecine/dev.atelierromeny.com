@@ -5,6 +5,7 @@ images:
   - '/src/media/works/169-nature-morte-au-violon-ill.webp'
 collections:
   - nfs
+  - review-details
 categories: Natures mortes
 w: 60
 h: 81

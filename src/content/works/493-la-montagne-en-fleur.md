@@ -5,6 +5,7 @@ images:
   - '/src/media/works/493-la-montagne-en-fleur.webp'
 collections:
   - nfs
+  - review-details
 categories: Accident dans la montagne
 w: 140
 h: 120

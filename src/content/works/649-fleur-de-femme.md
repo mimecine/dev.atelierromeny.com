@@ -19,5 +19,7 @@ tags:
   - figure
   - nude
   - flowers
+collections:
+  - review-details
 ---
 

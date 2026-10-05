@@ -19,5 +19,7 @@ tags:
   - figure
   - nude
   - letter
+collections:
+  - review-details
 ---
 

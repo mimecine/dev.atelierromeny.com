@@ -6,6 +6,7 @@ images:
   - '/src/media/works/313-mouvement-v2-2.webp'
 collections:
   - selected-paintings
+  - review-details
 categories: Abstrait
 w: 46
 h: 38

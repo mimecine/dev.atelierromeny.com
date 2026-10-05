@@ -6,6 +6,7 @@ images:
 collections:
   - nfs
   - reserved-am
+  - review-details
 categories: Abstrait
 w: 80
 h: 60

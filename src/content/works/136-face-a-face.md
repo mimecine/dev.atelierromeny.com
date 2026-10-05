@@ -17,5 +17,7 @@ tags:
   - painting
   - animal
   - dog
+collections:
+  - review-details
 ---
 

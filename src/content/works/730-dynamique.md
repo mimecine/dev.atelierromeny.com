@@ -18,5 +18,7 @@ tags:
   - painting
   - abstract
   - sun
+collections:
+  - review-details
 ---
 

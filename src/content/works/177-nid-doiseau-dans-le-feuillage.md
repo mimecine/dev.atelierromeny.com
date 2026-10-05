@@ -5,6 +5,7 @@ images:
   - '/src/media/works/177-nid-doiseau-dans-le-feuillage.webp'
 collections:
   - nfs
+  - review-details
 categories: Animaux
 w: 32
 h: 32

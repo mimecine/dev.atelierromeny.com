@@ -17,5 +17,7 @@ tags:
   - mixed media
   - assemblage
   - abstract
+collections:
+  - review-details
 ---
 

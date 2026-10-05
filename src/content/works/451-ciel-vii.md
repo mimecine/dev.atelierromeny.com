@@ -17,5 +17,7 @@ tags:
   - painting
   - abstract
   - sky
+collections:
+  - review-details
 ---
 

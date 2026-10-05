@@ -20,5 +20,7 @@ tags:
   - music
   - Bach
   - lettering
+collections:
+  - review-details
 ---
 

@@ -18,5 +18,7 @@ tags:
   - figure
   - couple
   - kiss
+collections:
+  - review-details
 ---
 

@@ -18,5 +18,7 @@ tags:
   - abstract
   - triptych
   - religious
+collections:
+  - review-details
 ---
 

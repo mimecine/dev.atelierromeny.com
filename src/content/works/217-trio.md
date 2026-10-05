@@ -17,5 +17,7 @@ tags:
   - painting
   - figure
   - music
+collections:
+  - review-details
 ---
 

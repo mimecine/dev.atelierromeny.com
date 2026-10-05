@@ -5,6 +5,7 @@ images:
   - '/src/media/works/379-nature-morte-au-melon-fruits-et-pichet.webp'
 collections:
   - nfs
+  - review-details
 categories: Natures mortes
 w: 80
 h: 100

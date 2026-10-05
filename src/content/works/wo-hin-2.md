@@ -18,5 +18,7 @@ tags:
   - collage
   - abstract
   - map
+collections:
+  - review-details
 ---
 

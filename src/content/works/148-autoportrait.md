@@ -19,5 +19,7 @@ tags:
   - self-portrait
   - portrait
   - artist at work
+collections:
+  - review-details
 ---
 

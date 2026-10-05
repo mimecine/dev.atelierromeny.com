@@ -20,5 +20,7 @@ tags:
   - house
   - tree
   - Sweden
+collections:
+  - review-details
 ---
 

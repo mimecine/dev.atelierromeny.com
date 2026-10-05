@@ -5,6 +5,7 @@ images:
   - '/src/media/works/163-les-deux-cousines.webp'
 collections:
   - nfs
+  - review-details
 categories: Figures humaines
 w: 61
 h: 41

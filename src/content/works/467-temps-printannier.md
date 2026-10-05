@@ -17,5 +17,7 @@ tags:
   - painting
   - abstract
   - spring
+collections:
+  - review-details
 ---
 

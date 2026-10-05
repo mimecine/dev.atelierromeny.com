@@ -7,6 +7,7 @@ images:
 thumbnail: 2
 collections:
   - selected-paintings
+  - review-details
 categories: Natures mortes
 w: 60
 h: 81

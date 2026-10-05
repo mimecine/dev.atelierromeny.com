@@ -5,6 +5,7 @@ images:
   - '/src/media/works/card-players.webp'
 collections:
   - nfs
+  - review-details
 categories: Figures
 w: 42
 h: 29

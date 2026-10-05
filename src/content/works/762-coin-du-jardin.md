@@ -6,6 +6,7 @@ images:
   - /src/media/works/762-coin-du-jardin.webp
 collections:
   - selected-paintings
+  - review-details
 categories: Fleurs
 w: 60
 h: 50

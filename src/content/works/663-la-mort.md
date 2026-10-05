@@ -17,6 +17,7 @@ images:
 uuid: d50fd6db-b6c1-4064-a9c8-a050db39ec6d
 collections:
   - selected-paintings
+  - review-details
 old_image: '/src/media/works/663-la-mort.webp'
 tags:
   - painting

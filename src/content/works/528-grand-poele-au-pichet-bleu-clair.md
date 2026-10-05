@@ -5,6 +5,7 @@ images:
   - '/src/media/works/528-grand-poele-au-pichet-bleu-clair.webp'
 collections:
   - nfs
+  - review-details
 categories: Natures mortes
 w: 73
 h: 100

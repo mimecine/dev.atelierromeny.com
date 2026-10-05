@@ -19,5 +19,7 @@ tags:
   - figure
   - flowers
   - garden
+collections:
+  - review-details
 ---
 

@@ -5,6 +5,7 @@ images:
   - '/src/media/works/764-iles.webp'
 collections:
   - marco
+  - review-details
 categories: Abstrait
 w: 59
 h: 45

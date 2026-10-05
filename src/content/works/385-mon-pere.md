@@ -18,5 +18,7 @@ tags:
   - painting
   - portrait
   - father
+collections:
+  - review-details
 ---
 

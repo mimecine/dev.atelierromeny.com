@@ -20,5 +20,7 @@ tags:
   - music
   - saxophone
   - jazz
+collections:
+  - review-details
 ---
 

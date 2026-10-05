@@ -16,6 +16,7 @@ images:
 uuid: d0f09e3a-67ad-41fd-9302-2159db63edcf
 collections:
   - selected-paintings
+  - review-details
 tags:
   - painting
   - still life

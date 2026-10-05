@@ -18,5 +18,7 @@ tags:
   - painting
   - self-portrait
   - portrait
+collections:
+  - review-details
 ---
 

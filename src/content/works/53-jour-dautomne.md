@@ -5,6 +5,7 @@ images:
   - '/src/media/works/53-jour-dautomne.webp'
 collections:
   - nfs
+  - review-details
 categories: Abstrait
 w: 135
 h: 120

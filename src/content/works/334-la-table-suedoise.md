@@ -21,5 +21,7 @@ tags:
   - bottle
   - flowers
   - fruit
+collections:
+  - review-details
 ---
 

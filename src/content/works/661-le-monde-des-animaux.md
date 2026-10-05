@@ -8,6 +8,7 @@ images:
   - '/src/media/works/661-le-monde-des-animaux-v2-4.webp'
 collections:
   - selected-paintings
+  - review-details
 categories: La création
 w: 180
 h: 130

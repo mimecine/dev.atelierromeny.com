@@ -20,5 +20,7 @@ tags:
   - figure
   - nude
   - couple
+collections:
+  - review-details
 ---
 

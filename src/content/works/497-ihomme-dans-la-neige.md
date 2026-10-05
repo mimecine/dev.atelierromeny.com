@@ -19,5 +19,7 @@ tags:
   - figure
   - snow
   - winter
+collections:
+  - review-details
 ---
 

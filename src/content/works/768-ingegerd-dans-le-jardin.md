@@ -21,5 +21,7 @@ tags:
   - garden
   - fruit
   - watermelon
+collections:
+  - review-details
 ---
 

@@ -20,5 +20,7 @@ tags:
   - street
   - celebration
   - Haarlem
+collections:
+  - review-details
 ---
 

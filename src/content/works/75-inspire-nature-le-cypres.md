@@ -18,5 +18,7 @@ tags:
   - mixed media
   - abstract
   - cypress
+collections:
+  - review-details
 ---
 

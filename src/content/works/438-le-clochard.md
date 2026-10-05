@@ -18,5 +18,7 @@ tags:
   - figure
   - sleeping
   - street
+collections:
+  - review-details
 ---
 

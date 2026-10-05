@@ -17,5 +17,7 @@ tags:
   - painting
   - abstract
   - lettering
+collections:
+  - review-details
 ---
 

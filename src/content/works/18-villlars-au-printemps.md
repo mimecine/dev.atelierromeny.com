@@ -20,5 +20,7 @@ tags:
   - blossom
   - village
   - spring
+collections:
+  - review-details
 ---
 

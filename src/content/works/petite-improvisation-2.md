@@ -5,6 +5,7 @@ images:
   - '/src/media/works/petite-improvisation-2.webp'
 collections:
   - nfs
+  - review-details
 categories: Abstract
 w: 38
 h: 46

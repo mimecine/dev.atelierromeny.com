@@ -19,5 +19,7 @@ tags:
   - blossom
   - cherry
   - landscape
+collections:
+  - review-details
 ---
 

@@ -19,5 +19,7 @@ tags:
   - portrait
   - dog
   - animal
+collections:
+  - review-details
 ---
 

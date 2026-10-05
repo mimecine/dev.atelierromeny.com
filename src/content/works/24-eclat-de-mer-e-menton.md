@@ -20,5 +20,7 @@ tags:
   - moon
   - night
   - Menton
+collections:
+  - review-details
 ---
 

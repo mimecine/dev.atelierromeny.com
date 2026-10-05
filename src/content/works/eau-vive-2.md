@@ -17,5 +17,7 @@ tags:
   - painting
   - abstract
   - water
+collections:
+  - review-details
 ---
 

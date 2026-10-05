@@ -5,6 +5,7 @@ images:
   - '/src/media/works/211-pensees.webp'
 collections:
   - nfs
+  - review-details
 categories: Fleurs
 w: 60
 h: 50

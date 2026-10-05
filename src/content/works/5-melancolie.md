@@ -18,5 +18,7 @@ tags:
   - painting
   - figure
   - portrait
+collections:
+  - review-details
 ---
 

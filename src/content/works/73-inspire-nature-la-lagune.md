@@ -18,5 +18,7 @@ tags:
   - mixed media
   - abstract
   - water
+collections:
+  - review-details
 ---
 

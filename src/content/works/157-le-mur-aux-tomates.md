@@ -6,6 +6,7 @@ images:
   - /src/media/works/157-le-mur-aux-tomates.webp
 collections:
   - selected-paintings
+  - review-details
 categories: Natures mortes
 w: 61
 h: 50

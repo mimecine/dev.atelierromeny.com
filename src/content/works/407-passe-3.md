@@ -20,5 +20,7 @@ tags:
   - animal
   - figure
   - landscape
+collections:
+  - review-details
 ---
 

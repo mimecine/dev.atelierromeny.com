@@ -17,5 +17,7 @@ tags:
   - painting
   - animal
   - gorilla
+collections:
+  - review-details
 ---
 

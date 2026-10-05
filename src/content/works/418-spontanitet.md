@@ -5,6 +5,7 @@ images:
   - '/src/media/works/418-spontanitet.webp'
 collections:
   - nfs
+  - review-details
 categories: Abstrait
 w: 115
 h: 100

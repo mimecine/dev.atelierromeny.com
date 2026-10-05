@@ -18,5 +18,7 @@ tags:
   - abstract
   - water
   - sun
+collections:
+  - review-details
 ---
 
