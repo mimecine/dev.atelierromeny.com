@@ -9,3 +9,4 @@
 - Classify styles (expressionism, etc) into it's own field
 - Have search pick up tags on works
 - Make collections able to sort manually (maybe that's just another type of collection)
+- The zoom script is wonky. Zooming more in the viewer have the image take off to the left
