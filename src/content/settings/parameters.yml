@@ -1,4 +1,3 @@
-# Settings > Parameters in the CMS: password, pricing, SEO and analytics.
 password:
   enabled: false
   password: edlef
@@ -11,14 +10,14 @@ pricing:
   price_per_m2: 2000
   rating_step_percent: 20
 seo:
-  site_title: Edlef Romeny
   description: Edlef Romeny. A Dutch/Swedish artist who lived and painted in Provence.
   share_image: /src/media/works/127-la-serviette-bleue-v2.webp
   ga: G-T3WYVEPH4Q
+  site_title: Edlef Romeny
   author: Marco Romeny
   email: marco@mimecom.net
-advanced:
-  css: ""
-  js: ""
 photos:
-  every: 12
+  every: 0
+advanced:
+  css: ''
+  js: ''
