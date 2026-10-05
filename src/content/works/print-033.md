@@ -19,9 +19,9 @@ tags:
   - nest
 note: "Inscription (read from photo): not legible -- inscription above crop, too small to read"
 w: 24.5
-h: 25
+h: 24.5
 sheet_w: 48.5
-sheet_h: 58.5
+sheet_h: 59.5
 hidden_images:
   - /src/media/works/print-033-2.webp
   - /src/media/works/print-033-3.webp
