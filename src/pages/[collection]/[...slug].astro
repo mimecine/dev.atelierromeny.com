@@ -13,7 +13,7 @@ import Star from "@components/Star.astro";
 import { shortHash, getNavDigest } from "@src/lib/cache-key";
 import { workTransitionName } from "@src/lib/view-transition";
 import { isMenuCollection } from "@src/lib/settings";
-import { byTitle, hasImage, thumbnailOf, titleOf } from "@src/lib/works";
+import { byTitle, isShown, thumbnailOf, titleOf } from "@src/lib/works";
 
 
 export async function getStaticPaths() {
@@ -31,7 +31,7 @@ export async function getStaticPaths() {
 
   return collections.flatMap((collection) => {
     const collectionWorks = works
-      .filter(hasImage)
+      .filter(isShown)
       .filter((work) =>
         work.data.collections?.includes(collection.id) ||
         isAllWorks(collection.id)
@@ -79,7 +79,7 @@ const isAllWorks = (id: string) => id === "works" || id === "_works";
 const inMenu = (work.data.collections ?? []).some(isMenuCollection);
 
 const works = (await getCollection("works"))
-  .filter(hasImage)
+  .filter(isShown)
   .filter(
     (work) =>
       work.data.collections?.includes(collection.id || "") ||
@@ -92,7 +92,7 @@ const works = (await getCollection("works"))
 console.log(
   "len",
   (await getCollection("works"))
-    .filter(hasImage)
+    .filter(isShown)
     .filter(
       (work) =>
         work.data.collections?.includes(collection.id || "") ||
