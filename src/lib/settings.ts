@@ -24,6 +24,8 @@ export interface Settings {
   /** default image for link previews */
   share_image?: string;
   barrier?: Barrier;
+  /** mix a photo into collection grids after every this many works (0 = off) */
+  photos_every?: number;
 }
 
 /** Settings > Parameters > Password */
@@ -110,6 +112,7 @@ export function loadSettings(): Settings {
     ...(parameters.seo ?? {}),
     ...(parameters.advanced ?? {}),
     barrier: parameters.password,
+    photos_every: Number(parameters.photos?.every ?? 0) || 0,
   };
 }
 

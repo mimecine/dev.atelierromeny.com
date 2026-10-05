@@ -7,6 +7,9 @@ import SearchMeta from "@components/SearchMeta.astro";
 import { shortHash, getNavDigest } from "@src/lib/cache-key";
 import { isMenuCollection } from "@src/lib/settings";
 import { byTitle, hasImage, thumbnailOf } from "@src/lib/works";
+import PhotoCard from "@components/PhotoCard.astro";
+import { randomPhotos } from "@src/lib/photos";
+import { loadSettings } from "@src/lib/settings";
 
 export async function getStaticPaths() {
   let collections = await getCollection("collections",(col) => col.data.published !== false);
@@ -50,6 +53,15 @@ const { Content } = await render(collection);
 const works = (await getCollection("works",(work) => hasImage(work) && (work.data.collections?.includes(collection.id) ||
 collection.data.title === "Works")))
   .sort(byTitle);
+
+// Settings > Parameters > Photos: a random photo after every N works (not on _works,
+// the all-works list, nor with ?detail debugging in mind).
+const every = collection.id === "_works" ? 0 : loadSettings().photos_every ?? 0;
+const photos = every ? await randomPhotos(Math.floor(works.length / every)) : [];
+const items = works.flatMap((work, i) => {
+  const photo = every && (i + 1) % every === 0 ? photos[(i + 1) / every - 1] : undefined;
+  return photo ? [{ work, i }, { photo }] : [{ work, i }];
+});
 ---
 
 <Layout
@@ -64,7 +76,15 @@ collection.data.title === "Works")))
     <SearchMeta type="collection" title={collection.data.title || "Works"} />
     <Content />
     <div class="works-grid" data-pagefind-ignore data-detail-grid>
-      {works.map((work, i) => <WorkCard work={work} collection={collection.id} searchImage={i === 0} detailSrc />)}
+      {
+        items.map((item) =>
+          "photo" in item ? (
+            item.photo && <PhotoCard photo={item.photo} />
+          ) : (
+            <WorkCard work={item.work} collection={collection.id} searchImage={item.i === 0} detailSrc />
+          )
+        )
+      }
     </div>
   </section>
 </Layout>

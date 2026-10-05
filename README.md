@@ -146,6 +146,14 @@ Pages without an entry link to the CMS itself. Visitors never see it (`src/lib/c
   - **Everywhere else** (images newer than the last build, local folders, `bun dev`, where that list is empty because dev doesn't resize images): the browser reads the image and shrinks it to 240px itself, a few at a time.
 - **Missing features:** it doesn't create or delete entries; do that in Sveltia (each row's ↗ opens it there).
 
+## Photos (pictures of Edlef)
+
+`scripts/make_pictures.py` turns phone shots of old photo prints on the linen backdrop into the Photos section's images. It finds each print, straightens it, keeps about 6% of linen around it as a mat (`--margin`), rotates it upright and saves a WebP of at most 3000px to `src/media/photos`.
+- **Rotation:** set by hand in `scripts/pictures-rotate.json`, degrees clockwise per file.
+- **Review first:** `--review <folder>` writes a numbered contact sheet.
+- **Originals:** the phone originals are kept out of git, in `match/photo-originals`.
+- **In the grids:** collection pages mix in a random photo after every N works (*Settings → Parameters → Photos in grids*, 0 = off). Landscape photos span two columns, portrait ones one. The all-works page has none.
+
 ## Adding new photos of works
 
 For a batch of reshot paintings:

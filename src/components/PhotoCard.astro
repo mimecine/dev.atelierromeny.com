@@ -1,0 +1,33 @@
+---
+// A photo from /photos/ mixed into a work grid as an accent, shown whole: landscape
+// photos span two columns, portrait ones one. Links to the photo's page.
+import { Image } from "astro:assets";
+import type { Photo } from "@src/lib/photos";
+
+interface Props {
+  photo: Photo;
+}
+const { photo } = Astro.props;
+const { title, image, caption } = photo.data;
+const wide = image.width / image.height > 1.2;
+---
+
+<a href={`/photos/${photo.id}/`} class:list={["photo-card", { wide }]} title={caption || title}>
+  <Image src={image} alt={caption || title} width={wide ? 1000 : 600} class="w-full h-auto" />
+</a>
+
+<style>
+  .photo-card {
+    display: block;
+    align-self: center;
+  }
+  .photo-card.wide {
+    grid-column: span 2;
+  }
+  .photo-card :global(img) {
+    transition: opacity 0.2s;
+  }
+  .photo-card:hover :global(img) {
+    opacity: 0.9;
+  }
+</style>

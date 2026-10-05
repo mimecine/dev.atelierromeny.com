@@ -20,3 +20,5 @@ seo:
 advanced:
   css: ""
   js: ""
+photos:
+  every: 12

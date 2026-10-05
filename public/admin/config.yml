@@ -382,6 +382,12 @@ collections:
               - { label: "Site Title", name: "site_title", widget: "string", required: false, hint: "Not used yet" }
               - { label: "Author", name: "author", widget: "string", required: false, hint: "Not used yet" }
               - { label: "Email", name: "email", widget: "string", required: false, hint: "Not used yet" }
+          - label: "Photos in grids"
+            name: "photos"
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "One photo after every … works", name: every, widget: number, value_type: int, min: 0, default: 12, hint: "A random photo (from Photos) is mixed into collection pages, two columns wide. 0 turns it off." }
           - label: "Advanced"
             name: "advanced"
             widget: object
