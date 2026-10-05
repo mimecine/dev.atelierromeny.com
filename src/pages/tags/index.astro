@@ -2,10 +2,10 @@
 export const prerender = true;
 import Layout from "@layouts/Layout.astro";
 import { getCollection } from "astro:content";
-import { hasImage } from "@src/lib/works";
+import { isShown } from "@src/lib/works";
 import { tagIndex, tagPath } from "@src/lib/tags";
 
-const tags = tagIndex(await getCollection("works", hasImage));
+const tags = tagIndex(await getCollection("works", isShown));
 const labels = Object.fromEntries(tags.map((t) => [t.slug, t.label]));
 ---
 

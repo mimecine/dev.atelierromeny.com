@@ -18,6 +18,10 @@ export function imagesOf(work: Work) {
 /** Whether the work has any picture to show (it's left out of grids otherwise). */
 export const hasImage = (work: Work) => imagesOf(work).length > 0;
 
+/** Whether the work appears on the site: not unpublished, and has a picture. Use this
+ *  for every public listing and page. */
+export const isShown = (work: Work) => work.data.published !== false && hasImage(work);
+
 /** Position (0-based) of the image used for grids, search and link previews, which is
  *  also the one the work page opens on: `thumbnail` picks it (1 = the first of `images`),
  *  otherwise the first image. */

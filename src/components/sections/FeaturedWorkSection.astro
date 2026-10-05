@@ -3,7 +3,7 @@
 import { getEntry } from "astro:content";
 import { Image } from "astro:assets";
 import SectionHeader from "./SectionHeader.astro";
-import { thumbnailOf, titleOf } from "@src/lib/works";
+import { isShown, thumbnailOf, titleOf } from "@src/lib/works";
 import { renderMarkdown } from "@src/lib/markdown";
 import type { Section } from "@src/lib/settings";
 
@@ -11,7 +11,8 @@ interface Props {
   section: Section;
 }
 const { section } = Astro.props;
-const work = section.work ? await getEntry("works", String(section.work)) : undefined;
+const found = section.work ? await getEntry("works", String(section.work)) : undefined;
+const work = found && isShown(found) ? found : undefined;
 const image = work && thumbnailOf(work);
 const html = await renderMarkdown(section.text);
 const imageRight = section.image_side === "right";

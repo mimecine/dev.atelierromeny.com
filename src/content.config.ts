@@ -33,6 +33,7 @@ const _works = defineCollection({
       year_end: z.number().optional().nullish(),
       collections: z.array(z.string()).optional().nullish(),
       tags: z.array(z.string()).optional().nullish(),
+      published: z.boolean().optional().nullish(), // false = left off the site (missing = shown)
     }),
 });
 

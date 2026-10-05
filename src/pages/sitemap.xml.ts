@@ -2,7 +2,7 @@ export const prerender = true;
 import type { APIRoute } from "astro";
 import { getCollection } from "astro:content";
 import { isMenuCollection } from "@src/lib/settings";
-import { hasImage } from "@src/lib/works";
+import { isShown } from "@src/lib/works";
 
 // Lists exactly the pages open to search engines (the same rule as the noindex tags):
 // home, published markdown pages, collections linked from Settings > Navigation, and the
@@ -18,7 +18,7 @@ export const GET: APIRoute = async ({ site }) => {
     "collections",
     (c) => c.data.published !== false && isMenuCollection(c.id)
   );
-  const works = await getCollection("works", hasImage);
+  const works = await getCollection("works", isShown);
   const ids = new Set(collections.map((c) => c.id));
   for (const collection of collections) paths.push(`/${collection.id}/`);
   for (const work of works) {

@@ -4,14 +4,14 @@ import Layout from "@layouts/Layout.astro";
 import WorkCard from "@components/WorkCard.astro";
 import { type CollectionEntry, getCollection } from "astro:content";
 import { shortHash, getNavDigest } from "@src/lib/cache-key";
-import { byTitle, hasImage } from "@src/lib/works";
+import { byTitle, isShown } from "@src/lib/works";
 import { TAG_SEPARATOR, tagIndex, tagPath, tagSlugsOf } from "@src/lib/tags";
 
 // One page per tag, and one per pair of tags that some work actually has together.
 // Any other combination (three or more, or no shared works) is filtered in the
 // browser on /tags/?t=… — see tags/index.astro and the redirect in 404.astro.
 export async function getStaticPaths() {
-  const works = (await getCollection("works")).filter(hasImage);
+  const works = (await getCollection("works")).filter(isShown);
   const navDigest = await getNavDigest();
   const combos = new Set<string>();
   for (const work of works) {
@@ -40,7 +40,7 @@ interface Props {
 
 const { slugs, members, combos } = Astro.props;
 const works = [...members].sort(byTitle);
-const allTags = tagIndex(await getCollection("works", hasImage));
+const allTags = tagIndex(await getCollection("works", isShown));
 const label = (slug: string) => allTags.find((t) => t.slug === slug)?.label ?? slug;
 
 // Where a combination lives: its own page when one was built, the browser filter otherwise.
