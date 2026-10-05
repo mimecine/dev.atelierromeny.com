@@ -30,6 +30,14 @@ export function thumbnailIndex(work: Work) {
 
 export const thumbnailOf = (work: Work) => imagesOf(work)[thumbnailIndex(work)];
 
+/** The work's detail (the artwork alone, made by scripts/make-details): the last of `images`
+ *  when it's a `…-detail.webp` (hidden or not). In a build the file name carries a hash
+ *  (`…-detail.AbC123.webp`), in dev a query string. */
+export function detailOf(work: Work) {
+  const last = allImagesOf(work).at(-1);
+  return last && /-detail(\.[\w-]+)?\.webp(\?.*)?$/.test(last.src) ? last : undefined;
+}
+
 /** Shown wherever a work has no title. (A title actually recorded as "Untitled" is kept.) */
 export const NO_TITLE = "No title recorded";
 export const titleOf = (work: Work) => work.data.title || NO_TITLE;
