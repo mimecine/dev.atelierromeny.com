@@ -19,7 +19,5 @@ tags:
   - couple
   - portrait
   - landscape
-collections:
-  - review-details
 ---
 

@@ -172,6 +172,11 @@ const { count, index } = works.reduce(
       </span>
     </div>
 
+    {/* Tags aren't shown on the page, but are indexed by search (and read by screen readers) */}
+    {work.data.tags?.length ? (
+      <p class="sr-only">Tags: {work.data.tags.join(", ")}</p>
+    ) : null}
+
     <ul class="grid grid-cols-3 w-full place-items-center uppercase shrink-0 print:hidden" data-pagefind-ignore x-data>
       <li>
         {

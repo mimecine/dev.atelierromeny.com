@@ -22,7 +22,5 @@ tags:
   - lamb
   - animal
   - landscape
-collections:
-  - review-details
 ---
 

@@ -19,7 +19,5 @@ tags:
   - figure
   - landscape
   - field
-collections:
-  - review-details
 ---
 

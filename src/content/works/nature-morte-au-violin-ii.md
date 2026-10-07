@@ -19,7 +19,5 @@ tags:
   - music
   - violin
   - bottle
-collections:
-  - review-details
 ---
 

@@ -6,7 +6,6 @@ images:
   - /src/media/works/439-roses-de-noel-v2.webp
 collections:
   - selected-paintings
-  - review-details
 categories: Fleurs
 w: 130
 h: 90

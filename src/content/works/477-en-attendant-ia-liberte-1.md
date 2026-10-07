@@ -20,7 +20,5 @@ tags:
   - birdcage
   - tree
   - animal
-collections:
-  - review-details
 ---
 

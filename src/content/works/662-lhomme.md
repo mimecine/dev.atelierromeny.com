@@ -18,7 +18,5 @@ tags:
   - abstract
   - figure
   - creation series
-collections:
-  - review-details
 ---
 

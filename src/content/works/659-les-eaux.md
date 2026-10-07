@@ -19,7 +19,5 @@ tags:
   - abstract
   - water
   - creation series
-collections:
-  - review-details
 ---
 

@@ -17,7 +17,5 @@ tags:
   - painting
   - abstract
   - storm
-collections:
-  - review-details
 ---
 

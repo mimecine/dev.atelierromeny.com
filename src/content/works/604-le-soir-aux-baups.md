@@ -18,7 +18,5 @@ tags:
   - landscape
   - sunset
   - tree
-collections:
-  - review-details
 ---
 

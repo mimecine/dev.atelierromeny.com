@@ -16,7 +16,5 @@ uuid: 0177bc1a-b2f7-4c69-9be3-33d141c767fc
 tags:
   - painting
   - landscape
-collections:
-  - review-details
 ---
 

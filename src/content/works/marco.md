@@ -5,7 +5,6 @@ images:
   - '/src/media/works/marco.webp'
 collections:
   - nfs
-  - review-details
 categories: Portrait
 w: 99
 h: 69

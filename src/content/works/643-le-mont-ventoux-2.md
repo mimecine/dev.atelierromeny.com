@@ -19,7 +19,5 @@ tags:
   - tree
   - mountain
   - Mont Ventoux
-collections:
-  - review-details
 ---
 

@@ -18,7 +18,5 @@ tags:
   - painting
   - still life
   - fruit
-collections:
-  - review-details
 ---
 

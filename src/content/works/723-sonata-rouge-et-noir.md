@@ -18,7 +18,5 @@ tags:
   - still life
   - music
   - violin
-collections:
-  - review-details
 ---
 

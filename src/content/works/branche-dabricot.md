@@ -19,7 +19,5 @@ tags:
   - fruit
   - apricot
   - branch
-collections:
-  - review-details
 ---
 

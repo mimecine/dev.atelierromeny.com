@@ -18,7 +18,5 @@ tags:
   - mixed media
   - semi-abstract
   - hunter
-collections:
-  - review-details
 ---
 

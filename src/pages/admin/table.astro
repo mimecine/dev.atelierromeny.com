@@ -22,6 +22,11 @@ export const prerender = true;
       <span id="count" class="count"></span>
       <button id="columns" type="button">Columns</button>
       <button id="media" type="button">Media</button>
+      <span id="thumb-size" class="seg" role="group" aria-label="Thumbnail size" title="Thumbnail size">
+        <button type="button" data-size="s" aria-pressed="true" title="Small thumbnails">S</button>
+        <button type="button" data-size="m" aria-pressed="false" title="Medium thumbnails">M</button>
+        <button type="button" data-size="l" aria-pressed="false" title="Large thumbnails">L</button>
+      </span>
       <span class="spacer"></span>
       <span id="status" class="status"></span>
       <span id="backend" class="backend"></span>
@@ -44,12 +49,23 @@ export const prerender = true;
     --accent: #2f5bd3;
     --changed: #fff6d6;
     --chip: #ece9e3;
+    /* thumbnail sizes in the table cells; body.thumbs-m / .thumbs-l scale them */
+    --thumb: 56px;
+    --thumb-list: 44px;
     color-scheme: light;
     font: 13px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif;
     color: var(--text);
   }
   * {
     box-sizing: border-box;
+  }
+  body.thumbs-m {
+    --thumb: 100px;
+    --thumb-list: 80px;
+  }
+  body.thumbs-l {
+    --thumb: 168px;
+    --thumb-list: 132px;
   }
   body {
     margin: 0;
@@ -105,6 +121,30 @@ export const prerender = true;
   }
   .count {
     color: var(--muted);
+  }
+  /* S / M / L thumbnail size: one segmented control */
+  .seg {
+    display: inline-flex;
+  }
+  .bar .seg button {
+    padding: 0 9px;
+    border-radius: 0;
+    margin-left: -1px;
+    color: var(--muted);
+  }
+  .bar .seg button:first-child {
+    border-radius: 6px 0 0 6px;
+    margin-left: 0;
+  }
+  .bar .seg button:last-child {
+    border-radius: 0 6px 6px 0;
+  }
+  .bar .seg button[aria-pressed="true"] {
+    position: relative;
+    border-color: var(--accent);
+    background: #eef3ff;
+    color: var(--accent);
+    font-weight: 600;
   }
   .spacer {
     flex: 1;
@@ -603,22 +643,22 @@ export const prerender = true;
   }
   .thumb {
     display: block;
-    width: 56px;
-    height: 56px;
+    width: var(--thumb);
+    height: var(--thumb);
     object-fit: cover;
     border-radius: 3px;
     background: #f0eee9;
   }
   .images:not(.single) .thumb {
-    width: 44px;
-    height: 44px;
+    width: var(--thumb-list);
+    height: var(--thumb-list);
   }
   .thumb.broken {
     outline: 1px solid #f3b8b3;
   }
   .add-tile {
-    width: 44px;
-    height: 44px;
+    width: var(--thumb-list);
+    height: var(--thumb-list);
     border: 1px dashed #c9c4ba;
     border-radius: 3px;
     background: none;
@@ -627,8 +667,8 @@ export const prerender = true;
     font-size: 18px;
   }
   .single .add-tile {
-    width: 56px;
-    height: 56px;
+    width: var(--thumb);
+    height: var(--thumb);
   }
 
   .popover {

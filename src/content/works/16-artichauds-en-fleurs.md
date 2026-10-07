@@ -17,7 +17,5 @@ tags:
   - painting
   - flowers
   - artichoke
-collections:
-  - review-details
 ---
 

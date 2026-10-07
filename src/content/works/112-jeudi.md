@@ -19,7 +19,5 @@ tags:
   - collage
   - figure
   - nude
-collections:
-  - review-details
 ---
 

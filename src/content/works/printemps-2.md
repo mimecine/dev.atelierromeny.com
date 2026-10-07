@@ -19,7 +19,5 @@ tags:
   - poppies
   - meadow
   - spring
-collections:
-  - review-details
 ---
 

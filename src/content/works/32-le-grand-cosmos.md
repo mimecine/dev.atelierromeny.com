@@ -17,7 +17,5 @@ tags:
   - painting
   - abstract
   - cosmos
-collections:
-  - review-details
 ---
 

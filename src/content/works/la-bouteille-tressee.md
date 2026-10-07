@@ -19,7 +19,5 @@ tags:
   - bottle
   - fruit
   - vegetables
-collections:
-  - review-details
 ---
 

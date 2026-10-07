@@ -19,7 +19,5 @@ tags:
   - fruit
   - music
   - mandolin
-collections:
-  - review-details
 ---
 

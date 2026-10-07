@@ -17,7 +17,5 @@ uuid: 98ba2d7c-191f-4258-bddd-cc68cb72b562
 tags:
   - painting
   - abstract
-collections:
-  - review-details
 ---
 

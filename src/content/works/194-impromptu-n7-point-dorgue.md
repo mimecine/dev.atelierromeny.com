@@ -18,7 +18,5 @@ tags:
   - mixed media
   - collage
   - abstract
-collections:
-  - review-details
 ---
 

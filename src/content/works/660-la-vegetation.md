@@ -6,7 +6,6 @@ images:
   - /src/media/works/660-la-vegetation.webp
 collections:
   - selected-paintings
-  - review-details
 categories: La création
 w: 180
 h: 130

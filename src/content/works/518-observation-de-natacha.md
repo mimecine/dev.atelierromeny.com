@@ -17,7 +17,5 @@ tags:
   - painting
   - figure
   - sleeping
-collections:
-  - review-details
 ---
 

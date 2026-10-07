@@ -18,7 +18,5 @@ tags:
   - figure
   - music
   - guitar
-collections:
-  - review-details
 ---
 

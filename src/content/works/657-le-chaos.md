@@ -6,7 +6,6 @@ images:
   - /src/media/works/657-le-chaos.webp
 collections:
   - selected-paintings
-  - review-details
 categories: La création
 w: 180
 h: 130

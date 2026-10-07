@@ -19,7 +19,5 @@ tags:
   - nude
   - group
   - sun
-collections:
-  - review-details
 ---
 

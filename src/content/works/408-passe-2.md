@@ -19,7 +19,5 @@ tags:
   - bull
   - animal
   - figure
-collections:
-  - review-details
 ---
 

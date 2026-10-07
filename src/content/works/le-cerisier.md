@@ -19,7 +19,5 @@ tags:
   - tree
   - cherry
   - mountain
-collections:
-  - review-details
 ---
 

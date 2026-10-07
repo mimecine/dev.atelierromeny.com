@@ -19,7 +19,5 @@ tags:
   - semi-abstract
   - bird
   - landscape
-collections:
-  - review-details
 ---
 

@@ -6,7 +6,6 @@ images:
   - '/src/media/works/422-nature-morte-en-bleu-clair-v2-2.webp'
 collections:
   - selected-paintings
-  - review-details
 categories: Natures mortes
 w: 81
 h: 65

@@ -5,7 +5,6 @@ images:
   - '/src/media/works/poele-au-fruits.webp'
 collections:
   - nfs
-  - review-details
 categories: Nature Morte
 w: 61
 h: 54

@@ -136,6 +136,7 @@ Pages without an entry link to the CMS itself. Visitors never see it (`src/lib/c
   - They list every value with a count, plus "(none)".
   - Several tags or collections must all match; several categories match any of them.
   - Active filters are remembered per collection; × clears one.
+- **Thumbnail size:** S / M / L in the toolbar (remembered in this browser). Image columns you haven't resized grow with it; Large uses the 720px previews where the build has them.
 - **Hover preview:** hovering an image shows a larger version below it. It ignores the mouse, so clicks still go through.
 - **Caching:** loaded collections are kept in this browser (IndexedDB `atelier-table`), so the table opens instantly from the cached copy, then refreshes.
   - **On GitHub:** a refresh compares Git object ids and downloads only files that changed.

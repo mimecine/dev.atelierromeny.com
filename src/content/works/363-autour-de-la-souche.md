@@ -8,7 +8,6 @@ images:
 thumbnail: 2
 collections:
   - selected-paintings
-  - review-details
 categories: Abstrait
 w: 73
 h: 54

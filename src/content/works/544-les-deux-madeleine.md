@@ -18,7 +18,5 @@ tags:
   - figure
   - religious
   - group
-collections:
-  - review-details
 ---
 

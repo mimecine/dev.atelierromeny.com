@@ -19,7 +19,5 @@ tags:
   - interior
   - chair
   - bottle
-collections:
-  - review-details
 ---
 

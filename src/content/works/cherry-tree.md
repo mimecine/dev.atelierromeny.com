@@ -18,7 +18,5 @@ tags:
   - tree
   - blossom
   - cherry
-collections:
-  - review-details
 ---
 

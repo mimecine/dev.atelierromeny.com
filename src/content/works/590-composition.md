@@ -6,7 +6,6 @@ images:
   - /src/media/works/590-composition.webp
 collections:
   - selected-paintings
-  - review-details
 categories: Abstrait
 w: 75
 h: 60

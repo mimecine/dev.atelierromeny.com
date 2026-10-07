@@ -21,7 +21,5 @@ tags:
   - winter
   - sun
   - mountain
-collections:
-  - review-details
 ---
 

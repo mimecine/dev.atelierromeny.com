@@ -5,7 +5,6 @@ images:
   - '/src/media/works/285-cerisier-belles-de-mai.webp'
 collections:
   - nfs
-  - review-details
 categories: Arbres en fleurs
 w: 81
 h: 116

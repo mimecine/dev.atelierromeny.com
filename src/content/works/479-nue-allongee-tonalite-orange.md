@@ -17,7 +17,5 @@ tags:
   - painting
   - figure
   - nude
-collections:
-  - review-details
 ---
 

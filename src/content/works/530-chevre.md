@@ -5,7 +5,6 @@ images:
   - '/src/media/works/530-chevre.webp'
 collections:
   - nfs
-  - review-details
 categories: Animaux
 w: 64
 h: 53

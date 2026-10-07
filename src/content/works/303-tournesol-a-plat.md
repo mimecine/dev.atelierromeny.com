@@ -6,7 +6,6 @@ images:
 collections:
   - nfs
   - reserved-am
-  - review-details
 categories: Natures mortes
 w: 65
 h: 46

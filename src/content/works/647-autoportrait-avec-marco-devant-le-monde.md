@@ -19,7 +19,5 @@ tags:
   - portrait
   - figure
   - child
-collections:
-  - review-details
 ---
 

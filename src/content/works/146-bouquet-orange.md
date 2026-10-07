@@ -17,7 +17,5 @@ tags:
   - painting
   - still life
   - flowers
-collections:
-  - review-details
 ---
 

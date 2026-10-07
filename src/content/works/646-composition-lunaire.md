@@ -17,7 +17,5 @@ tags:
   - painting
   - abstract
   - moon
-collections:
-  - review-details
 ---
 

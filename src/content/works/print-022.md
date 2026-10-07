@@ -19,9 +19,7 @@ year: "1970"
 year_start: 1970
 note: "Inscription (read from photo): 7/10, \"Natten\"?, 1970 -- title uncertain"
 sheet_w: 52
-sheet_h: 38.5
-w: 42
-h: 29.5
+sheet_h: 38
 edition: "7/10"
 hidden_images:
   - /src/media/works/print-022-2.webp

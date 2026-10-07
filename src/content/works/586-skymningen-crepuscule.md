@@ -7,7 +7,6 @@ images:
 collections:
   - nfs
   - selected-paintings
-  - review-details
 categories: Abstrait
 w: 61
 h: 38

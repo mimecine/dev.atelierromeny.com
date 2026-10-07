@@ -17,7 +17,5 @@ tags:
   - painting
   - mixed media
   - abstract
-collections:
-  - review-details
 ---
 

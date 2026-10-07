@@ -1,8 +1,8 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import { Image, getImage } from "astro:assets";
+import { Image } from "astro:assets";
 import { workTransitionName } from "@src/lib/view-transition";
-import { detailOf, thumbnailOf, titleOf } from "@src/lib/works";
+import { thumbnailOf, titleOf } from "@src/lib/works";
 
 interface Props {
   work: CollectionEntry<"works">;
@@ -10,22 +10,17 @@ interface Props {
   collection: string;
   /** use this thumbnail as the page's image in search results */
   searchImage?: boolean;
-  /** put the work's detail image URL (600px) in data-detail-src, for the ?detail
-   *  debug view of collection pages (see src/pages/[collection]/index.astro) */
-  detailSrc?: boolean;
 }
 
-const { work, collection, searchImage, detailSrc } = Astro.props;
+const { work, collection, searchImage } = Astro.props;
 const thumbnail = thumbnailOf(work);
-const detail = detailSrc ? detailOf(work) : undefined;
-const detailUrl = detail && (await getImage({ src: detail, width: 600 })).src;
 ---
 
 <a
   href={`/${collection}/${work.id}`}
   title={[titleOf(work), work.data.year_start].filter(Boolean).join(", ")}
 >
-  <div class="work-item" data-key={work.id} data-detail-src={detailUrl}>
+  <div class="work-item" data-key={work.id}>
     <div class="work-thumbnail-container">
       {
         thumbnail && (

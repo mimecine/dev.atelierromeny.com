@@ -19,7 +19,5 @@ tags:
   - music
   - guitar
   - bottle
-collections:
-  - review-details
 ---
 

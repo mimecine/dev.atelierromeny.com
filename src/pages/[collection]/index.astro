@@ -63,50 +63,12 @@ collection.data.title === "Works")))
   <section class="grid max-w-6xl mx-auto py-4">
     <SearchMeta type="collection" title={collection.data.title || "Works"} />
     <Content />
-    <div class="works-grid" data-pagefind-ignore data-detail-grid>
-      {works.map((work, i) => <WorkCard work={work} collection={collection.id} searchImage={i === 0} detailSrc />)}
+    <div class="works-grid" data-pagefind-ignore>
+      {works.map((work, i) => <WorkCard work={work} collection={collection.id} searchImage={i === 0} />)}
     </div>
   </section>
 </Layout>
 
-<script>
-  // Debugging: with ?detail in the URL (e.g. /review-details/?detail) each card shows its
-  // work's detail image (data-detail-src, rendered by WorkCard) instead of the thumbnail,
-  // and works without a detail get a "no detail" badge. The page is static, so it's done here.
-  const showDetails = () => {
-    if (!new URLSearchParams(location.search).has("detail")) return;
-    document
-      .querySelectorAll<HTMLElement>("[data-detail-grid] .work-item:not([data-detail-view])")
-      .forEach((item) => {
-        item.dataset.detailView = "";
-        const img = item.querySelector("img");
-        const src = item.dataset.detailSrc;
-        if (src && img) {
-          img.removeAttribute("srcset");
-          img.removeAttribute("sizes");
-          img.src = src;
-        } else item.dataset.detailView = "none";
-      });
-  };
-  document.addEventListener("astro:page-load", showDetails);
-</script>
-
 <style>
   @reference "../../styles/global.css";
-
-  [data-detail-grid] :global(.work-item[data-detail-view="none"] .work-thumbnail-container) {
-    position: relative;
-  }
-  [data-detail-grid] :global(.work-item[data-detail-view="none"] .work-thumbnail-container::after) {
-    content: "no detail";
-    position: absolute;
-    top: 0.25rem;
-    left: 0.25rem;
-    padding: 0 0.4rem;
-    font-size: 0.7rem;
-    line-height: 1.4;
-    color: #fff;
-    background: #b91c1c;
-    border-radius: 0.25rem;
-  }
 </style>

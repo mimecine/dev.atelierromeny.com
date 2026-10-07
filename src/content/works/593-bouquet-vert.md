@@ -5,7 +5,6 @@ images:
   - '/src/media/works/593-bouquet-vert.webp'
 collections:
   - nfs
-  - review-details
 categories: Fleurs
 w: 52
 h: 70

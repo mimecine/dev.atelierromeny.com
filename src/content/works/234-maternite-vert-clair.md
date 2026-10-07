@@ -18,7 +18,5 @@ tags:
   - painting
   - figure
   - mother and child
-collections:
-  - review-details
 ---
 

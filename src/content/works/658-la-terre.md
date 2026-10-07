@@ -6,7 +6,6 @@ images:
   - /src/media/works/658-la-terre-v2.webp
 collections:
   - selected-paintings
-  - review-details
 categories: La création
 w: 180
 h: 130

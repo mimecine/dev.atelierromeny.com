@@ -20,7 +20,5 @@ tags:
   - cabbage
   - fruit
   - bottle
-collections:
-  - review-details
 ---
 
