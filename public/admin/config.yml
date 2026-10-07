@@ -125,6 +125,8 @@ collections:
       - { label: "Published", name: "published", widget: "boolean", default: false }
       - { label: "Shown In Menu", name: "inmenu", widget: "boolean", default: false}
       - { label: "Featured Image (Currently Unused)", name: "image", widget: "image", required: false }
+      - { label: "Sort", name: "sort", widget: "select", default: "title", required: false, options: [{ label: "By title", value: "title" }, { label: "Manually", value: "manual" }], hint: "Manually: in the order set by dragging in /admin/order/ (works not placed there come last, by title)." }
+      - { label: "Manual order", name: "order", widget: "list", required: false, collapsed: true, hint: "Work slugs, kept up to date by /admin/order/. Drag works there rather than editing this.", field: { label: "Work", name: "work", widget: "string" } }
       - { label: "Description", name: "body", widget: "markdown", required: false }
       - { label: "Notes", name: "notes", widget: "text", required: false }
 
@@ -216,7 +218,7 @@ collections:
                   - { label: "Show Header", name: show_title, widget: boolean, default: true }
                   - { label: "Columns", name: columns, widget: select, options: [2, 3, 4, 5, 6], default: 3, hint: "On phones at most 2" }
                   - { label: "Number of works", name: limit, widget: number, value_type: int, min: 0, default: 0, required: false, hint: "0 shows them all. When some are left out, a 'See all' link is added." }
-                  - { label: "Order", name: sort, widget: select, default: "title", options: [{ label: "By title", value: "title" }, { label: "Newest first", value: "newest" }, { label: "Oldest first", value: "oldest" }] }
+                  - { label: "Order", name: sort, widget: select, default: "title", options: [{ label: "By title", value: "title" }, { label: "Newest first", value: "newest" }, { label: "Oldest first", value: "oldest" }, { label: "Manually (the collection's own order)", value: "manual" }] }
                   - { label: "'See all' link text", name: more_label, widget: string, required: false, hint: "Default: See all <number>" }
                   - { label: "Max Rows (old)", name: max_rows, widget: number, value_type: int, min: 0, required: false, hint: "Used only when Number of works is 0" }
                   - { label: "Hide?", name: hidden, widget: boolean, default: false }

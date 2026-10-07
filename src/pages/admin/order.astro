@@ -1,0 +1,202 @@
+---
+// Drag a collection's works into the order you want (the collection's "Manually" sort).
+// A companion to Sveltia CMS (/admin/) and the table view; code in src/admin-table/order.ts.
+export const prerender = true;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Collection order · Atelier Romeny admin</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <header class="bar">
+      <a class="back" href="/admin/" title="Back to Sveltia CMS">← CMS</a>
+      <select id="collection" aria-label="Collection"></select>
+      <span id="count" class="count"></span>
+      <label class="size" title="Thumbnail size">
+        Size <input id="size" type="range" min="90" max="320" step="10" value="160" />
+      </label>
+      <button id="by-title" type="button" title="Start over from A to Z">A–Z</button>
+      <button id="by-newest" type="button" title="Start over from the newest">Newest</button>
+      <button id="by-oldest" type="button" title="Start over from the oldest">Oldest</button>
+      <span class="spacer"></span>
+      <span id="status" class="status"></span>
+      <span id="backend" class="backend"></span>
+      <button id="discard" type="button" hidden>Discard</button>
+      <button id="save" type="button" class="primary" disabled>Saved</button>
+    </header>
+    <p class="hint" id="hint">
+      Drag works to reorder them. Hover a work for “to top” / “to end”. Saving also sets the collection's
+      Sort to Manually.
+    </p>
+    <main id="grid"></main>
+    <script>
+      import "../../admin-table/order";
+    </script>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --border: #e3e1dc;
+    --head: #f6f5f2;
+    --text: #1f1d1a;
+    --muted: #8a857c;
+    --accent: #2f5bd3;
+    --size: 160px;
+    color-scheme: light;
+    font: 13px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: var(--text);
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    background: #fff;
+  }
+  button,
+  select,
+  input {
+    font: inherit;
+  }
+  button,
+  select {
+    padding: 4px 10px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: #fff;
+    cursor: pointer;
+  }
+  button.primary {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+  }
+  button:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+  .bar {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 8px 12px;
+    background: var(--head);
+    border-bottom: 1px solid var(--border);
+  }
+  .bar .back {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .spacer {
+    flex: 1;
+  }
+  .count,
+  .backend,
+  .size {
+    color: var(--muted);
+  }
+  .status.error {
+    color: #b91c1c;
+  }
+  .status.ok {
+    color: #15803d;
+  }
+  .hint {
+    margin: 10px 16px 0;
+    color: var(--muted);
+  }
+  #grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--size), 1fr));
+    gap: 14px;
+    padding: 16px;
+  }
+  .tile {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: #fff;
+    overflow: hidden;
+    cursor: grab;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 0.08);
+  }
+  .tile.dragging {
+    opacity: 0.35;
+  }
+  .tile .pic {
+    aspect-ratio: 1;
+    background: #3a3836;
+    display: flex;
+  }
+  .tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #f1efe9;
+    pointer-events: none;
+  }
+  .tile .pic.contain img {
+    object-fit: contain;
+  }
+  .tile .name {
+    padding: 6px 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .tile .name b {
+    color: var(--muted);
+    font-weight: 500;
+    margin-right: 4px;
+  }
+  .tile.off {
+    opacity: 0.55;
+  }
+  .tile .badge {
+    position: absolute;
+    right: 6px;
+    bottom: 34px;
+    padding: 0 7px;
+    border-radius: 6px;
+    background: #bde4f2;
+    font-size: 12px;
+  }
+  .tile .go {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    display: none;
+    gap: 4px;
+  }
+  .tile:hover .go {
+    display: flex;
+  }
+  .tile .go button {
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: rgb(255 255 255 / 0.92);
+  }
+  .tile.moved {
+    outline: 2px solid var(--accent);
+  }
+  .connect {
+    grid-column: 1 / -1;
+    padding: 40px;
+    text-align: center;
+  }
+</style>

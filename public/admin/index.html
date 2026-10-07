@@ -7,7 +7,8 @@
     <style>
       /* Link to the spreadsheet view (/admin/table/). Sits outside Sveltia's own
          markup, so CMS updates can't break it (or be broken by it). */
-      #table-view-link {
+      #table-view-link,
+      #order-view-link {
         position: fixed;
         left: 12px;
         bottom: 12px;
@@ -21,7 +22,11 @@
         opacity: 0.6;
         transition: opacity 0.15s;
       }
-      #table-view-link:hover {
+      #order-view-link {
+        left: 112px;
+      }
+      #table-view-link:hover,
+      #order-view-link:hover {
         opacity: 1;
       }
     </style>
@@ -32,5 +37,6 @@
          @sveltia/cms in package.json, then check the admin still loads. -->
     <script src="https://unpkg.com/@sveltia/cms@0.227/dist/sveltia-cms.js"></script>
     <a id="table-view-link" href="/admin/table/" title="Edit collections as a spreadsheet">Table view</a>
+    <a id="order-view-link" href="/admin/order/" title="Drag a collection's works into order">Collection order</a>
   </body>
 </html>

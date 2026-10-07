@@ -12,7 +12,7 @@ const { section } = Astro.props;
 const id = String(section.collection);
 const collection = await getEntry("collections", id);
 const works = collection?.data.published
-  ? sortWorks(await getCollection("works", (w) => isShown(w) && !!w.data.collections?.includes(id)), section.sort)
+  ? sortWorks(await getCollection("works", (w) => isShown(w) && !!w.data.collections?.includes(id)), section.sort, collection.data.order)
   : [];
 const columns = Math.min(Math.max(Number(section.columns) || 3, 1), 6);
 // "Number of works" wins; older sections may still use "Max rows"

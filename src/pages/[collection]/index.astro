@@ -7,6 +7,7 @@ import SearchMeta from "@components/SearchMeta.astro";
 import { shortHash, getNavDigest } from "@src/lib/cache-key";
 import { isMenuCollection } from "@src/lib/settings";
 import { byTitle, isShown, thumbnailOf } from "@src/lib/works";
+import { sortManually } from "@src/lib/sections";
 import PhotoCard from "@components/PhotoCard.astro";
 import { randomPhotos } from "@src/lib/photos";
 import { loadSettings } from "@src/lib/settings";
@@ -50,9 +51,10 @@ type Props = CollectionEntry<"collections">;
 const collection = Astro.props;
 const { Content } = await render(collection);
 
-const works = (await getCollection("works",(work) => isShown(work) && (work.data.collections?.includes(collection.id) ||
+let works = (await getCollection("works",(work) => isShown(work) && (work.data.collections?.includes(collection.id) ||
 collection.data.title === "Works")))
   .sort(byTitle);
+if (collection.data.sort === "manual") works = sortManually(works, collection.data.order);
 
 // Settings > Parameters > Photos: a random photo after every N works (not on _works,
 // the all-works list, nor with ?detail debugging in mind).

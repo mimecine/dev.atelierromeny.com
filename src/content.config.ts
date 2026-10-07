@@ -49,6 +49,8 @@ const _collections = defineCollection({
       image: image().optional().nullish(),
       published: z.boolean().optional().nullish(),
       inmenu: z.boolean().optional().nullish(),
+      sort: z.string().optional().nullish(), // "manual" = in the order below; otherwise by title
+      order: z.array(z.string()).optional().nullish(), // work slugs, set in /admin/order/
     }),
 });
 
