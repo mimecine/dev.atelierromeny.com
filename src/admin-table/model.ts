@@ -46,6 +46,7 @@ export type Kind =
   | "markdown"
   | "imagechoice"
   | "computed"
+  | "detail"
   | "unsupported";
 
 export interface Column {

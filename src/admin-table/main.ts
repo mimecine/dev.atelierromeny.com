@@ -26,6 +26,7 @@ import {
   type FieldConfig,
 } from "./model";
 import { prepareUpload, slugifyBase } from "./images";
+import { createCropper, type Cropper } from "./cropper";
 import { COLUMN_DEFAULTS, FACETS, FIELD_OPTIONS, PRICING_FILE, computedColumns, pricing } from "./settings";
 
 // ---------------------------------------------------------------- state
@@ -114,6 +115,7 @@ function setValue(entry: Entry, col: Column, value: unknown) {
   updateToolbar();
   refreshCell(entry, col);
   for (const c of state.columns) if (c.computed?.from.includes(col.key)) refreshCell(entry, c);
+  if (col.kind === "images") for (const c of state.columns) if (c.kind === "detail") refreshCell(entry, c);
 }
 
 // ---------------------------------------------------------------- media
@@ -786,11 +788,133 @@ function inlineEditor(td: HTMLElement, entry: Entry, col: Column, make: () => HT
   if ("select" in el) el.select();
 }
 
+
+// ---------------------------------------------------------------- detail
+
+const DETAIL_RE = /-detail(\.[\w-]+)?\.webp(\?.*)?$/;
+/** The work's detail: the last of its images when that is a "…-detail.webp". */
+function detailOf(entry: Entry): string | undefined {
+  const list: string[] = Array.isArray(entry.data.images) ? entry.data.images.map(String) : [];
+  const last = list[list.length - 1];
+  return last && DETAIL_RE.test(last) ? last : undefined;
+}
+
+async function readAny(path: string): Promise<Blob> {
+  const up = state.uploads.get(path);
+  if (up) return up.blob;
+  return state.backend.readBlob(stripSlash(path));
+}
+
+/** Keep a picture made here as an upload (saved with the next Save); returns its public path. */
+function stageBlob(folder: MediaFolder, blob: Blob, makeName: (n: number) => string): string {
+  let n = 1;
+  while (state.thumbs[`${folder.pub}/${makeName(n)}`] || state.uploads.has(`${folder.pub}/${makeName(n)}`) || (state.entries ?? []).some((e) => (e.data.images ?? []).map(String).includes(`${folder.pub}/${makeName(n)}`))) n++;
+  const name = makeName(n);
+  const publicPath = `${folder.pub}/${name}`;
+  state.uploads.set(publicPath, { blob, url: URL.createObjectURL(blob), repoPath: `${folder.media}/${name}`, keep: true });
+  return publicPath;
+}
+
+const detailModal = h("div", { class: "detail-modal", hidden: true, role: "dialog", "aria-modal": "true", "aria-label": "Detail" });
+let cropperInUse: Cropper | undefined;
+
+function closeDetail() {
+  cropperInUse?.destroy();
+  cropperInUse = undefined;
+  detailModal.hidden = true;
+  detailModal.replaceChildren();
+  document.body.classList.remove("viewer-open");
+}
+
+function openDetail(entry: Entry, imagesCol: Column) {
+  hidePreview();
+  document.body.classList.add("viewer-open");
+  detailModal.hidden = false;
+  showDetail(entry, imagesCol);
+}
+
+function detailHead(entry: Entry, extra?: HTMLElement) {
+  return h(
+    "div",
+    { class: "viewer-head" },
+    h("h2", {}, `${entry.data.title ?? entry.slug} · detail`),
+    extra ?? "",
+    h("button", { type: "button", class: "viewer-close", title: "Close (Esc)", on: { click: closeDetail } }, "×")
+  );
+}
+
+function showDetail(entry: Entry, imagesCol: Column) {
+  cropperInUse?.destroy();
+  cropperInUse = undefined;
+  const path = detailOf(entry);
+  const pic = h("div", { class: "detail-pic" });
+  if (path) {
+    const img = h("img", { alt: "" }) as HTMLImageElement;
+    const src = previewFor(path);
+    if (typeof src === "string") img.src = src;
+    else src.then((u) => (img.src = u)).catch(() => {});
+    pic.append(img, h("p", {}, path.split("/").pop()!));
+  } else pic.append(h("p", { class: "muted" }, "This work has no detail yet."));
+  const go = h("button", { type: "button", class: "primary", on: { click: () => cropDetail(entry, imagesCol) } }, path ? "Make a new detail from another photo…" : "Make a detail from a photo…");
+  detailModal.replaceChildren(detailHead(entry), h("div", { class: "detail-body" }, pic, h("div", { class: "detail-actions" }, go)));
+}
+
+function cropDetail(entry: Entry, imagesCol: Column) {
+  const photos: string[] = (Array.isArray(entry.data.images) ? entry.data.images.map(String) : []);
+  const current = detailOf(entry);
+  const folder = mediaFolderFor(imagesCol);
+  const add = (blob: Blob, asDetail: boolean) => {
+    const list = photos.slice();
+    const had = detailOf(entry);
+    const path = stageBlob(folder, blob, (n) => `${entry.slug}-crop${n > 1 ? n : ""}${asDetail ? "-detail" : ""}.webp`);
+    // a detail goes last; an extra photo goes just before the current detail
+    if (asDetail || !had) list.push(path);
+    else list.splice(list.length - 1, 0, path);
+    setValue(entry, imagesCol, list);
+    updateToolbar();
+    showDetail(entry, imagesCol);
+    status(asDetail ? "New detail added as the last image; save to upload it." : "Added as an extra photo; save to upload it.");
+  };
+  const cropper = createCropper({
+    readPhoto: readAny,
+    actions: [
+      { label: "Use as the detail", primary: true, run: (blob) => add(blob, true) },
+      { label: "Add as an extra photo", run: (blob) => add(blob, false) },
+    ],
+  });
+  cropperInUse = cropper;
+  detailModal.replaceChildren(
+    detailHead(entry, h("button", { type: "button", on: { click: () => showDetail(entry, imagesCol) } }, "← Back")),
+    h("div", { class: "detail-crop" }, cropper.el)
+  );
+  cropper.layout();
+  const first = photos.find((p) => p !== current) ?? photos[0];
+  cropper.setPhotos(photos, first);
+}
+
+document.body.append(detailModal);
+document.addEventListener("keydown", (e) => {
+  if (!detailModal.hidden && e.key === "Escape") {
+    e.preventDefault();
+    closeDetail();
+  }
+});
+
 function fillCell(td: HTMLTableCellElement, entry: Entry, col: Column) {
   const v = entry.data[col.key];
   td.classList.toggle("changed", entry.dirty.has(col.key));
   td.onclick = td.ondragover = td.ondragleave = td.ondrop = null;
   switch (col.kind) {
+    case "detail": {
+      const path = detailOf(entry);
+      const imagesCol = state.columns.find((c) => c.kind === "images");
+      const box = h("span", { class: `tile detail-cell${path ? "" : " none"}`, title: path ? "Click to see the detail or make a new one" : "No detail yet: click to make one from a photo" });
+      if (path) box.append(thumb(path));
+      else box.append(h("span", { class: "plus" }, "+"));
+      if (imagesCol) box.addEventListener("click", (e) => (e.stopPropagation(), openDetail(entry, imagesCol)));
+      td.replaceChildren(box);
+      break;
+    }
     case "computed": {
       const n = col.computed!.value(entry.data);
       td.replaceChildren(h("div", { class: "text num computed", title: "Worked out from other fields" }, n == null ? "" : col.computed!.format(n)));
@@ -1061,7 +1185,7 @@ try {
 } catch {}
 function defaultWidth(kind: string): number {
   const f = THUMB_SCALE[thumbSize];
-  if (kind === "image" || kind === "imagechoice") return Math.round(56 * f) + 28;
+  if (kind === "image" || kind === "imagechoice" || kind === "detail") return Math.round(56 * f) + 28;
   if (kind === "images") return Math.round(48 * f) * 5 + 40; // about five tiles a row
   return DEFAULT_WIDTH[kind] ?? 160;
 }
@@ -1157,6 +1281,7 @@ function headerCell(col: Column, colEl: HTMLTableColElement, table: HTMLTableEle
 }
 
 function sortValue(entry: Entry, col: Column): string | number {
+  if (col.kind === "detail") return detailOf(entry) ? 1 : "";
   const v = col.computed ? col.computed.value(entry.data) : entry.data[col.key];
   if (v == null || v === "") return "";
   if (typeof v === "number") return v;
@@ -1470,6 +1595,10 @@ async function loadCollection(name: string) {
     const col: Column = { field: { name: c.key, label: c.label }, kind: "computed", key: c.key, label: c.label, options: {}, computed: c };
     const at = cols.findIndex((x) => x.key === c.after);
     cols.splice(at < 0 ? cols.length : at + 1, 0, col);
+  }
+  if (collection.name === "works") {
+    const at = cols.findIndex((x) => x.kind === "images");
+    if (at >= 0) cols.splice(at + 1, 0, { field: { name: "_detail", label: "Detail" }, kind: "detail", key: "_detail", label: "Detail", options: {} });
   }
   state.columns = cols;
   state.hidden = loadHidden();

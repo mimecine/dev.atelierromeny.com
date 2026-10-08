@@ -22,54 +22,11 @@ export const prerender = true;
         <input id="work" list="works" placeholder="Type a title or number…" autocomplete="off" />
         <datalist id="works"></datalist>
       </label>
-      <label class="field">
-        Photo
-        <select id="photo"></select>
-      </label>
-      <button id="open" type="button" title="Use a photo from your computer instead (or drop one on the picture)">Open file…</button>
       <span class="spacer"></span>
       <span id="status" class="status"></span>
       <span id="backend" class="backend"></span>
     </header>
-    <div class="layout">
-      <div id="stage" class="stage" tabindex="0">
-        <canvas id="canvas"></canvas>
-        <p id="empty" class="empty">Pick a work and one of its photos, or drop a photo here.</p>
-      </div>
-      <aside class="side">
-        <div class="preview"><canvas id="preview" width="10" height="10"></canvas></div>
-        <p id="size" class="size"></p>
-        <div class="row">
-          <button id="rot-l" type="button" title="Turn the result a quarter turn anticlockwise">⟲</button>
-          <button id="rot-r" type="button" title="Turn the result a quarter turn clockwise">⟳</button>
-          <button id="reset" type="button" title="Put the corners back">Reset corners</button>
-        </div>
-        <div class="row">
-          <button id="fit" type="button">Fit</button>
-          <button id="actual" type="button" title="Show the photo at 100%">100%</button>
-          <label class="field">
-            Max edge
-            <select id="max">
-              <option value="1500">1500</option>
-              <option value="2000">2000</option>
-              <option value="3000" selected>3000</option>
-              <option value="4000">4000</option>
-              <option value="6000">6000</option>
-            </select>
-          </label>
-        </div>
-        <button id="save" type="button" class="primary" disabled>Save as an extra photo</button>
-        <p class="hint">
-          Drag the four corners onto the painting's corners (1 top left, 2 top right, 3 bottom right, 4 bottom left). Scroll to
-          zoom, drag the background to move. With a corner selected, the arrow keys nudge it by a pixel (Shift: ten); keys
-          1–4 select a corner. The magnifier shows where it sits.
-        </p>
-        <p class="hint">
-          The result is added to the work's photos just before its detail image, so nothing changes on the site until you
-          choose it (in the table view or the CMS) as the detail.
-        </p>
-      </aside>
-    </div>
+    <div id="host" class="host"></div>
     <script>
       import "../../admin-table/crop";
     </script>
@@ -97,35 +54,13 @@ export const prerender = true;
     flex-direction: column;
     background: #fff;
   }
-  button,
-  select,
   input {
     font: inherit;
-  }
-  button,
-  select,
-  input {
     padding: 4px 10px;
     border: 1px solid var(--border);
     border-radius: 6px;
-    background: #fff;
-  }
-  button {
-    cursor: pointer;
-  }
-  button.primary {
-    background: var(--accent);
-    border-color: var(--accent);
-    color: #fff;
-    padding: 8px 12px;
-    font-weight: 600;
-  }
-  button:disabled {
-    opacity: 0.5;
-    cursor: default;
   }
   .bar {
-    z-index: 5;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -146,11 +81,7 @@ export const prerender = true;
     color: var(--muted);
   }
   #work {
-    width: 260px;
-    color: var(--text);
-  }
-  #photo {
-    max-width: 240px;
+    width: 300px;
     color: var(--text);
   }
   .spacer {
@@ -165,85 +96,8 @@ export const prerender = true;
   .status.ok {
     color: #15803d;
   }
-  .layout {
+  .host {
     flex: 1;
     min-height: 0;
-    display: flex;
-  }
-  .stage {
-    position: relative;
-    flex: 1;
-    min-width: 0;
-    background: #2b2926;
-    overflow: hidden;
-    outline: none;
-  }
-  .stage.drop {
-    outline: 3px dashed var(--accent);
-    outline-offset: -8px;
-  }
-  .stage canvas {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    touch-action: none;
-  }
-  .empty {
-    position: absolute;
-    inset: 0;
-    display: grid;
-    place-items: center;
-    margin: 0;
-    color: #bdb8ae;
-    pointer-events: none;
-  }
-  .side {
-    width: 320px;
-    flex: none;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 12px;
-    border-left: 1px solid var(--border);
-    background: var(--head);
-    overflow-y: auto;
-  }
-  .preview {
-    display: grid;
-    place-items: center;
-    height: 280px;
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-  }
-  .preview canvas {
-    max-width: 100%;
-    max-height: 100%;
-  }
-  .size {
-    margin: 0;
-    color: var(--muted);
-    text-align: center;
-  }
-  .row {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  .hint {
-    margin: 0;
-    color: var(--muted);
-  }
-  @media (max-width: 800px) {
-    .layout {
-      flex-direction: column;
-    }
-    .side {
-      width: auto;
-      border-left: 0;
-      border-top: 1px solid var(--border);
-    }
   }
 </style>

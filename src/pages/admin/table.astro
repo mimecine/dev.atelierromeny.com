@@ -359,6 +359,51 @@ export const prerender = true;
     pointer-events: none;
   }
 
+  /* detail column and its pop-up (viewer, or the corner cropper) */
+  .detail-cell {
+    cursor: pointer;
+  }
+  .detail-cell.none {
+    display: inline-grid;
+    place-items: center;
+    color: var(--muted);
+    border-style: dashed;
+  }
+  .detail-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 120;
+    display: flex;
+    flex-direction: column;
+    background: rgb(250 249 246 / 0.99);
+  }
+  .detail-modal[hidden] {
+    display: none;
+  }
+  .detail-body {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    padding: 16px;
+    overflow: auto;
+  }
+  .detail-pic {
+    text-align: center;
+  }
+  .detail-pic img {
+    max-width: min(90vw, 900px);
+    max-height: 64vh;
+    border: 1px solid var(--border);
+    background: #fff;
+  }
+  .detail-crop {
+    flex: 1;
+    min-height: 0;
+  }
+
   /* image viewer: the whole window, every image of the entry with its checkboxes */
   .viewer {
     position: fixed;
