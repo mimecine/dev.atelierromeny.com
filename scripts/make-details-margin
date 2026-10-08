@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Second-pass detail crops with a margin, from the large photos. --help for options.
+exec "$(dirname "${BASH_SOURCE[0]}")/py" make_details_margin.py "$@"

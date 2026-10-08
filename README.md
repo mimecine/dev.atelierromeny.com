@@ -46,6 +46,7 @@ A few notes on works:
   - **Outlines:** prints use `measure_prints.py`'s sheet and image detection; paintings use rembg, or the backdrop colour for close-ups on a plain background.
   - **Frames:** they're trimmed at the deepest straight line found on at least three sides.
   - **Review first:** run with `--review <folder>` for contact sheets. Doubtful results (CHECK) aren't written unless `--include-flagged`.
+  - **Second pass with a margin:** `scripts/make-details-margin <folder of large photos> [--prints] --out <folder> [--review <folder>] [--margin 5]` finds the same outlines but keeps `--margin` percent of the surroundings on every side (no frame trimming) and writes `<name>-margin.webp` (up to 5000px) to the output folder, leaving the repo alone; doubtful ones are written as `-margin-check.webp`. Meant as input for the corner cropper.
   - **Works never reshot:** where a work only had an old photo, its detail is its only image and the photo moved to `old_image`, so old photos stay out of sight.
 
 ### Front page sections
