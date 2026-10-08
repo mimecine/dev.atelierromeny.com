@@ -106,6 +106,10 @@ When this browser is signed in to Sveltia (GitHub or local folder), every page s
 
 Pages without an entry link to the CMS itself. Visitors never see it (`src/lib/cms-link.ts`; pages pass `cmsPath` to the layout), and it's left out when printing.
 
+## Straighten & crop
+
+`/admin/crop/` (the "Straighten & crop" link next to "Collection order" in the CMS) opens one of a work's photos (or a file from your computer, or one dropped on the page). Drag the four numbered corners onto the painting's corners (scroll to zoom, drag the background to move, arrow keys nudge the selected corner, keys 1-4 select one; a magnifier shows the corner), and the page flattens the quad with a perspective warp, in the browser, with a live preview. "Save as an extra photo" writes `<slug>-crop.webp` to `src/media/works/` and inserts it into the work's `images` just before the detail, as one commit; nothing on the site changes until you pick it as the detail. Corner positions are remembered per photo in the browser. Code: `src/admin-table/crop.ts`.
+
 ## Collection order
 
 `/admin/order/` (the "Collection order" link next to "Table view" in the CMS) is a grid of a collection's works to drag into order, with "to top" / "to end" buttons and A–Z / Newest / Oldest to start over from. Saving writes the collection's `order` (work slugs) and `sort: manual` in one commit; it uses the table view's storage (`backend.ts`). Code: `src/admin-table/order.ts`.
