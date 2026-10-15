@@ -7,6 +7,8 @@ old_image: '/src/media/works/687-lngegerd-et-marco.webp'
 collections:
   - nfs
   - to-dispose
+  - disposed
+  - review-destroyed
 categories: Figures humaines
 w: 48
 h: 64

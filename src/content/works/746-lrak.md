@@ -17,6 +17,8 @@ old_image: '/src/media/works/746-lrak.webp'
 uuid: eec369b1-3044-4856-9f43-0015aa5d53df
 collections:
   - to-dispose
+  - disposed
+  - review-destroyed
 tags:
   - painting
   - collage

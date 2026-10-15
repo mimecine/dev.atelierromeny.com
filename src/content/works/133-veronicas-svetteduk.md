@@ -17,6 +17,8 @@ old_image: '/src/media/works/133-veronicas-svetteduk.webp'
 uuid: f01f85cc-d2b0-42ab-9bc7-ea627d23d94d
 collections:
   - to-dispose
+  - disposed
+  - review-destroyed
 tags:
   - painting
   - religious

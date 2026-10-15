@@ -17,6 +17,8 @@ old_image: '/src/media/works/2-les-mains.webp'
 uuid: 37aa276f-3b25-491d-a640-2c8072b837e0
 collections:
   - to-dispose
+  - disposed
+  - review-destroyed
 tags:
   - painting
   - hand

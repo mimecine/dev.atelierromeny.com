@@ -17,6 +17,8 @@ old_image: '/src/media/works/237-karine-et-son-petit-ii.webp'
 uuid: 2029acf3-65c5-48c1-9489-744da76e40ad
 collections:
   - to-dispose
+  - disposed
+  - review-destroyed
 tags:
   - painting
   - figure
