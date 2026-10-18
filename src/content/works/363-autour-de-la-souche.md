@@ -2,9 +2,10 @@
 id: 363
 title: Autour de la Souche
 images:
-  - '/src/media/works/363-autour-de-la-souche-v2.webp'
-  - '/src/media/works/363-autour-de-la-souche-v2-2.webp'
-  - '/src/media/works/363-autour-de-la-souche-v2-3.webp'
+  - /src/media/works/363-autour-de-la-souche-v2.webp
+  - /src/media/works/363-autour-de-la-souche-v2-2.webp
+  - /src/media/works/363-autour-de-la-souche-v2-3.webp
+  - /src/media/works/363-autour-de-la-souche-crop-detail.webp
 thumbnail: 2
 collections:
   - selected-paintings
