@@ -303,6 +303,24 @@ function viewerList() {
   return viewing ? ((viewing.entry.data[viewing.col.key] ?? []) as unknown[]).map(String) : [];
 }
 
+
+/** Move image `from` to position `to` in an image list; the thumbnail number follows its image. */
+function reorderImages(entry: Entry, col: Column, from: number, to: number) {
+  const list: string[] = (Array.isArray(entry.data[col.key]) ? entry.data[col.key] : []).map(String);
+  if (from === to || from < 0 || from >= list.length) return;
+  const thumbKey = col.options.thumbnailIn;
+  const thumbPath = thumbKey ? list[(Number(entry.data[thumbKey]) || 1) - 1] : undefined;
+  const next = [...list];
+  const [moved] = next.splice(from, 1);
+  next.splice(Math.min(to, next.length), 0, moved);
+  setValue(entry, col, next);
+  const thumbCol = thumbKey ? columnByKey(thumbKey) : undefined;
+  if (thumbCol && thumbPath) {
+    const k = next.indexOf(thumbPath) + 1;
+    setValue(entry, thumbCol, k <= 1 ? null : k);
+  }
+}
+
 function openViewer(entry: Entry, col: Column, index: number) {
   hidePreview();
   viewing = { entry, col, index };
@@ -379,13 +397,37 @@ function renderViewer() {
     if (typeof src === "string") img.src = src;
     else src.then((u) => (img.src = u)).catch(() => img.classList.add("broken"));
     const hiddenNow = hideKey && (entry.data[hideKey] ?? []).map(String).includes(path);
-    return h(
+    controls.push(
+      h("button", { type: "button", class: "viewer-straighten", title: "Straighten and crop this photo by its corners", on: { click: () => cropDetail(entry, col, path, true) } }, "Straighten…")
+    );
+    const fig = h(
       "figure",
-      { class: `viewer-tile${index === viewing!.index ? " current" : ""}${hiddenNow ? " is-hidden" : ""}` },
+      { class: `viewer-tile${index === viewing!.index ? " current" : ""}${hiddenNow ? " is-hidden" : ""}`, draggable: "true", "data-index": String(index), title: "Drag to reorder" },
       h("div", { class: "viewer-controls" }, h("span", { class: "viewer-num" }, String(index + 1)), ...controls),
       h("div", { class: "viewer-img" }, img),
       h("figcaption", {}, path.split("/").pop()!)
     );
+    fig.addEventListener("dragstart", (e: DragEvent) => {
+      e.dataTransfer!.setData("text/x-viewer-index", String(index));
+      e.dataTransfer!.effectAllowed = "move";
+    });
+    fig.addEventListener("dragover", (e: DragEvent) => {
+      if (e.dataTransfer?.types.includes("text/x-viewer-index")) {
+        e.preventDefault();
+        fig.classList.add("drop");
+      }
+    });
+    fig.addEventListener("dragleave", () => fig.classList.remove("drop"));
+    fig.addEventListener("drop", (e: DragEvent) => {
+      fig.classList.remove("drop");
+      const from = e.dataTransfer?.getData("text/x-viewer-index");
+      if (from == null || from === "") return;
+      e.preventDefault();
+      if (viewing) viewing.index = index;
+      reorderImages(entry, col, Number(from), index);
+      changed();
+    });
+    return fig;
   });
 
   viewer.replaceChildren(
@@ -411,7 +453,7 @@ document.addEventListener("click", (e) => {
   }
 });
 document.addEventListener("keydown", (e) => {
-  if (viewing && e.key === "Escape") {
+  if (viewing && e.key === "Escape" && detailModal.hidden) {
     e.preventDefault();
     closeViewer();
   }
@@ -823,7 +865,7 @@ function closeDetail() {
   cropperInUse = undefined;
   detailModal.hidden = true;
   detailModal.replaceChildren();
-  document.body.classList.remove("viewer-open");
+  if (!viewing) document.body.classList.remove("viewer-open");
 }
 
 function openDetail(entry: Entry, imagesCol: Column) {
@@ -859,7 +901,11 @@ function showDetail(entry: Entry, imagesCol: Column) {
   detailModal.replaceChildren(detailHead(entry), h("div", { class: "detail-body" }, pic, h("div", { class: "detail-actions" }, go)));
 }
 
-function cropDetail(entry: Entry, imagesCol: Column) {
+function cropDetail(entry: Entry, imagesCol: Column, startPath?: string, fromViewer = false) {
+  if (fromViewer) {
+    hidePreview();
+    detailModal.hidden = false;
+  }
   const photos: string[] = (Array.isArray(entry.data.images) ? entry.data.images.map(String) : []);
   const current = detailOf(entry);
   const folder = mediaFolderFor(imagesCol);
@@ -867,13 +913,23 @@ function cropDetail(entry: Entry, imagesCol: Column) {
     const list = photos.slice();
     const had = detailOf(entry);
     const path = stageBlob(folder, blob, (n) => `${entry.slug}-crop${n > 1 ? n : ""}${asDetail ? "-detail" : ""}.webp`);
-    // a detail goes last; an extra photo goes just before the current detail
-    if (asDetail || !had) list.push(path);
+    // a detail goes last; an extra photo goes right after the photo it was made from
+    // (else just before the current detail)
+    const at = startPath ? list.indexOf(startPath) : -1;
+    if (asDetail) list.push(path);
+    else if (at >= 0) list.splice(at + 1, 0, path);
+    else if (!had) list.push(path);
     else list.splice(list.length - 1, 0, path);
     setValue(entry, imagesCol, list);
     updateToolbar();
-    showDetail(entry, imagesCol);
-    status(asDetail ? "New detail added as the last image; save to upload it." : "Added as an extra photo; save to upload it.");
+    if (fromViewer) {
+      closeDetail();
+      if (viewing) {
+        viewing.index = list.indexOf(path);
+        renderViewer();
+      }
+    } else showDetail(entry, imagesCol);
+    status(asDetail ? "New detail added as the last image; save to upload it." : "Added as a photo; save to upload it.");
   };
   const cropper = createCropper({
     readPhoto: readAny,
@@ -884,11 +940,11 @@ function cropDetail(entry: Entry, imagesCol: Column) {
   });
   cropperInUse = cropper;
   detailModal.replaceChildren(
-    detailHead(entry, h("button", { type: "button", on: { click: () => showDetail(entry, imagesCol) } }, "← Back")),
+    detailHead(entry, h("button", { type: "button", on: { click: () => (fromViewer ? closeDetail() : showDetail(entry, imagesCol)) } }, "← Back")),
     h("div", { class: "detail-crop" }, cropper.el)
   );
   cropper.layout();
-  const first = photos.find((p) => p !== current) ?? photos[0];
+  const first = startPath ?? photos.find((p) => p !== current) ?? photos[0];
   cropper.setPhotos(photos, first);
 }
 
@@ -896,6 +952,7 @@ document.body.append(detailModal);
 document.addEventListener("keydown", (e) => {
   if (!detailModal.hidden && e.key === "Escape") {
     e.preventDefault();
+    e.stopImmediatePropagation();
     closeDetail();
   }
 });
@@ -1072,10 +1129,7 @@ function fillCell(td: HTMLTableCellElement, entry: Entry, col: Column) {
           if (from == null || from === "") return;
           e.preventDefault();
           e.stopPropagation();
-          const next = [...list];
-          const [moved] = next.splice(Number(from), 1);
-          next.splice(i, 0, moved);
-          setValue(entry, col, next);
+          reorderImages(entry, col, Number(from), i);
         });
         box.append(tile);
       });

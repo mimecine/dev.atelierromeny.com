@@ -467,6 +467,16 @@ export const prerender = true;
     box-shadow: 0 1px 4px rgb(0 0 0 / 0.08);
     overflow: hidden;
   }
+  .viewer-tile {
+    cursor: grab;
+  }
+  .viewer-tile.drop {
+    outline: 3px solid var(--accent);
+  }
+  .viewer-straighten {
+    padding: 0 8px;
+    font-size: 12px;
+  }
   .viewer-tile.current {
     border-color: var(--accent);
   }

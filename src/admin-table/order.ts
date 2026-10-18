@@ -158,7 +158,16 @@ function render() {
         "div",
         { class: `tile${w.off ? " off" : ""}${moved.has(slug) ? " moved" : ""}`, draggable: "true", "data-slug": slug, title: w.title },
         h("div", { class: "pic" }, img),
-        h("div", { class: "name" }, h("b", {}, ""), w.title || "No title recorded"),
+        h(
+          "div",
+          { class: "name" },
+          h("b", {}, ""),
+          h(
+            "a",
+            { href: `/admin/#/collections/works/entries/${encodeURIComponent(w.slug)}`, target: "_blank", rel: "noopener", draggable: "false", title: `Edit ${w.title || w.slug} in the CMS` },
+            w.title || "No title recorded"
+          )
+        ),
         w.off && h("span", { class: "badge" }, w.off),
         h(
           "span",

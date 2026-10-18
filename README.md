@@ -113,7 +113,7 @@ Pages without an entry link to the CMS itself. Visitors never see it (`src/lib/c
 
 ## Collection order
 
-`/admin/order/` (the "Collection order" link next to "Table view" in the CMS) is a grid of a collection's works to drag into order, with "to top" / "to end" buttons and A–Z / Newest / Oldest to start over from. Saving writes the collection's `order` (work slugs) and `sort: manual` in one commit; it uses the table view's storage (`backend.ts`). Code: `src/admin-table/order.ts`.
+`/admin/order/` (the "Collection order" link next to "Table view" in the CMS) is a grid of a collection's works to drag into order, with "to top" / "to end" buttons and A–Z / Newest / Oldest to start over from. A work's title opens it in the CMS (new tab). Saving writes the collection's `order` (work slugs) and `sort: manual` in one commit; it uses the table view's storage (`backend.ts`). Code: `src/admin-table/order.ts`.
 
 - The collection's own page, its work pages' previous/next links, and a home "Collection" section set to Order › Manually all follow `order`. Works missing from `order` come last, by title; switching Sort back to "By title" keeps the list.
 
