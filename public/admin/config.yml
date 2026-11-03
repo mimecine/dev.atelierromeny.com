@@ -384,6 +384,18 @@ collections:
               - { label: "Site Title", name: "site_title", widget: "string", required: false, hint: "Not used yet" }
               - { label: "Author", name: "author", widget: "string", required: false, hint: "Not used yet" }
               - { label: "Email", name: "email", widget: "string", required: false, hint: "Not used yet" }
+          - label: "Appearance"
+            name: "appearance"
+            widget: object
+            collapsed: true
+            fields:
+              - label: "Theme"
+                name: theme
+                widget: select
+                default: plain
+                options:
+                  - { label: "Plain: no background texture, no shadows, no logo transition", value: plain }
+                  - { label: "Paper: paper background, sunk-in logo, logo transition between pages", value: paper }
           - label: "Photos in grids"
             name: "photos"
             widget: object

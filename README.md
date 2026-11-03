@@ -47,6 +47,7 @@ A few notes on works:
   - **Frames:** they're trimmed at the deepest straight line found on at least three sides.
   - **Review first:** run with `--review <folder>` for contact sheets. Doubtful results (CHECK) aren't written unless `--include-flagged`.
   - **Second pass with a margin:** `scripts/make-details-margin <folder of large photos> [--prints] --out <folder> [--review <folder>] [--margin 5]` finds the same outlines but keeps `--margin` percent of the surroundings on every side (no frame trimming) and writes `<name>-margin.webp` (up to 5000px) to the output folder, leaving the repo alone; doubtful ones are written as `-margin-check.webp`. Meant as input for the corner cropper.
+  - **Hidden for now:** `HIDE_DETAILS` in `src/lib/works.ts` keeps detail images off the site (work pages, grids, search) while the crops are redone; set it to `false` to show them again. The `?detail` grid view and the admin tools still see them. A work whose only image is its detail shows its `old_image` meanwhile.
   - **Works never reshot:** where a work only had an old photo, its detail is its only image and the photo moved to `old_image`, so old photos stay out of sight.
 
 ### Front page sections
@@ -110,6 +111,10 @@ Pages without an entry link to the CMS itself. Visitors never see it (`src/lib/c
 ## Straighten & crop
 
 `/admin/crop/` (the "Straighten & crop" link next to "Collection order" in the CMS) opens one of a work's photos (or a file from your computer, or one dropped on the page). Drag the four numbered corners onto the painting's corners (scroll to zoom, drag the background to move, arrow keys nudge the selected corner, keys 1-4 select one; a magnifier shows the corner), and the page flattens the quad with a perspective warp, in the browser, with a live preview. "Save as an extra photo" writes `<slug>-crop.webp` to `src/media/works/` and inserts it into the work's `images` just before the detail, as one commit; nothing on the site changes until you pick it as the detail. Corner positions are remembered per photo in the browser. In the table view, works have a **Detail** column (the detail is the last of `images` when named `…-detail.webp`; there is no separate field): click it to see the detail, or "Make a new detail from another photo…" to open the same cropper, with "Use as the detail" (added as the last image) or "Add as an extra photo"; both are staged and saved with the table's Save. Code: `src/admin-table/cropper.ts` (the tool), `crop.ts` (the page).
+
+## Theme
+
+Settings > Parameters > Appearance > Theme (`appearance.theme` in `parameters.yml`): **Plain** (the default; also when the setting is missing) has no background texture, no shadow on the logo and no separate logo transition between pages (it fades with the page). **Paper** is the earlier look: the paper tile background, the sunk-in logo and the logo's own transition. The layout puts `theme-plain` / `theme-paper` on `<html>`; the rules are in `src/layouts/Layout.astro`.
 
 ## Collection order
 

@@ -26,6 +26,8 @@ export interface Settings {
   barrier?: Barrier;
   /** mix a photo into collection grids after every this many works (0 = off) */
   photos_every?: number;
+  /** Settings > Parameters > Appearance: "plain" (default) or "paper" (paper background, sunk logo, logo transition) */
+  theme?: "plain" | "paper";
 }
 
 /** Settings > Parameters > Password */
@@ -113,6 +115,7 @@ export function loadSettings(): Settings {
     ...(parameters.advanced ?? {}),
     barrier: parameters.password,
     photos_every: Number(parameters.photos?.every ?? 0) || 0,
+    theme: parameters.appearance?.theme === "paper" ? "paper" : "plain",
   };
 }
 
