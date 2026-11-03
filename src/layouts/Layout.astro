@@ -69,6 +69,7 @@ const {
   ga,
   description: siteDescription,
   share_image,
+  theme,
 } = loadSettings();
 
 // Link previews (Open Graph / Twitter cards): a 1200px JPEG, which every service accepts.
@@ -142,7 +143,7 @@ const isHome = Astro.url.pathname === "/";
   lang="en"
   transition:name="root"
   transition:animate="fade"
-  class:list={bodyclasses}
+  class:list={[`theme-${theme}`, bodyclasses]}
   id={slug && `slug-${slug}`}
 >
   <head>
@@ -281,10 +282,17 @@ const isHome = Astro.url.pathname === "/";
     /* Seamless paper tile (800px, shown at half size so the grain stays fine), faded
        with a cream wash on top. Raise --paper-fade towards 1 to make it fainter. */
     --paper-fade: 0.5;
+  }
+  /* Theme "paper" (Settings > Parameters > Appearance); "plain" has no background texture */
+  .theme-paper body {
     background:
       linear-gradient(rgb(250 248 243 / var(--paper-fade)), rgb(250 248 243 / var(--paper-fade))),
       #f1ece2 url("../media/assets/paper-tile.jpg") repeat;
     background-size: auto, 400px 400px;
+  }
+  /* Plain: the logo doesn't get its own transition between pages (it fades with the page) */
+  .theme-plain .site-header .logo {
+    view-transition-name: none !important;
   }
 
   /* Home: large logo centred over the menu. Other pages: small logo in the left
@@ -342,10 +350,12 @@ const isHome = Astro.url.pathname === "/";
        the lower-right rim catches the light. In em, so it scales with the logo.
        Ink a touch lighter than black, warm to match the paper. */
     color: #2a2622;
+    font-size: 1.0625rem; /* 15% below text-xl */
+  }
+  .theme-paper .site-header .logo {
     text-shadow:
       min(-1px, -0.007em) min(-1px, -0.007em) max(1px, 0.008em) rgb(40 28 12 / 0.22),
       max(1px, 0.007em) max(1px, 0.007em) 0 rgb(255 255 255 / 0.6);
-    font-size: 1.0625rem; /* 15% below text-xl */
   }
   @media (min-width: 48rem) {
     .site-header .logo {

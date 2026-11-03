@@ -21,3 +21,5 @@ photos:
 advanced:
   css: ''
   js: ''
+appearance:
+  theme: plain
