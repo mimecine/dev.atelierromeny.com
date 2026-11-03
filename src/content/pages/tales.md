@@ -1,5 +1,5 @@
 ---
-title: Stories
+title: Tales Told
 published: true
 image: ''
 tags: []
@@ -8,7 +8,9 @@ css: ''
 js: ''
 ---
 
-# Stories from _Letters to Joakim_
+# Tales Told
+
+From the memoir _Letters to Joakim_
 
 _Between 1979 and 1981, in Paris and Provence and mostly at four in the morning, my father wrote his life down as a series of letters to "Joakim", a reader who turns out, on the very last page, to be more or less himself. What follows are a few of the stories from that typescript, retold by me, his youngest son, who has the advantage of knowing how they end and the disadvantage of not having been there for any of them._
 
