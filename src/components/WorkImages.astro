@@ -44,6 +44,9 @@ const zoomSrcs = await Promise.all(
             data-zoom-src={zoomSrcs[i]}
             data-pagefind-meta={i === searchIndex ? "image[src]" : undefined}
             title="Click to zoom"
+            loading={i === start ? "eager" : "lazy"}
+            fetchpriority={i === start ? "high" : undefined}
+            decoding={i === start ? "sync" : "async"}
             x-show={`active === ${i}`}
             style={
               i !== start
