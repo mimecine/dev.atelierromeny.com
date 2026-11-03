@@ -8,6 +8,8 @@ css: ''
 js: ''
 ---
 
+# A STRANGELY NAMED ARTIST
+
 Edlef was born on February 14th, 1926 in Sint-Michielsgestel, a village in the south of the Netherlands, and given a name almost too long: Edlef Wybo Rudolph Arthur ter Haar Romeny. On his canvases it would later shrink to a single word, _Romeny_.
 
 His father, Barend, was a Reformed minister. His mother, Elisabeth, died in 1930, when Edlef was four. He and his brother Barend, a year older, grew up in a series of parsonages, partly in Twente, in the flat, green, east of the country. Somewhere in those quiet rooms he discovered that what he wanted, more than anything, was to make pictures.
