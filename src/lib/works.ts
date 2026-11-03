@@ -5,14 +5,24 @@ type Work = CollectionEntry<"works">;
 /** `images`, hidden ones included: the list `thumbnail` counts in. */
 const allImagesOf = (work: Work) => (work.data.images ?? []).filter((img) => !!img);
 
+/** Detail images are kept in the files but left off the site while this is true (the `?detail`
+ *  grid view still shows them, for review). Set to false to show them again, last in each
+ *  work's strip. */
+export const HIDE_DETAILS = true;
+const isDetailSrc = (src: string) => /-detail(\.[\w-]+)?\.webp(\?.*)?$/.test(src);
+
 /** The images a work shows, in order (the main photo first, the detail last), minus any listed under
- *  `hidden_images` (kept in the files, just not shown). A work without images falls back to
- *  its old (pre-reshoot) photo; one whose images are all hidden shows none. */
+ *  `hidden_images` (kept in the files, just not shown) and, for now, the detail. A work without
+ *  images (or whose only image is its detail) falls back to its old (pre-reshoot) photo; one whose
+ *  images are all hidden shows none. */
 export function imagesOf(work: Work) {
   const all = allImagesOf(work);
-  if (!all.length) return [work.data.old_image].filter((img) => !!img);
   const hidden = new Set((work.data.hidden_images ?? []).map((img) => img.src));
-  return all.filter((img) => !hidden.has(img!.src));
+  const shown = all.filter((img) => !hidden.has(img!.src) && !(HIDE_DETAILS && isDetailSrc(img!.src)));
+  if (!all.length || (HIDE_DETAILS && !shown.length && all.every((img) => isDetailSrc(img!.src)))) {
+    return [work.data.old_image].filter((img) => !!img);
+  }
+  return shown;
 }
 
 /** Whether the work has any picture to show (it's left out of grids otherwise). */
@@ -39,7 +49,7 @@ export const thumbnailOf = (work: Work) => imagesOf(work)[thumbnailIndex(work)];
  *  (`…-detail.AbC123.webp`), in dev a query string. */
 export function detailOf(work: Work) {
   const last = allImagesOf(work).at(-1);
-  return last && /-detail(\.[\w-]+)?\.webp(\?.*)?$/.test(last.src) ? last : undefined;
+  return last && isDetailSrc(last.src) ? last : undefined;
 }
 
 /** Shown wherever a work has no title. (A title actually recorded as "Untitled" is kept.) */
