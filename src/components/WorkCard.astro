@@ -19,11 +19,14 @@ const { work, collection, searchImage, detailSrc } = Astro.props;
 const thumbnail = thumbnailOf(work);
 const detail = detailSrc ? detailOf(work) : undefined;
 const detailUrl = detail && (await getImage({ src: detail, width: 600 })).src;
+// The large image the work page opens on (same size as WorkImages), fetched when the card is hovered.
+const fullUrl = thumbnail && (await getImage({ src: thumbnail, width: 1024 })).src;
 ---
 
 <a
   href={`/${collection}/${work.id}`}
   title={[titleOf(work), work.data.year_start].filter(Boolean).join(", ")}
+  data-preload-src={fullUrl}
 >
   <div class="work-item" data-key={work.id} data-detail-src={detailUrl}>
     <div class="work-thumbnail-container">
