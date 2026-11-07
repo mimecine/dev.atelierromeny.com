@@ -2,10 +2,10 @@
 id: 773
 title: Calanque de Sormiou
 images:
-  - '/src/media/works/773-calanque-de-sormiou-v2.webp'
-  - '/src/media/works/773-calanque-de-sormiou-v2-2.webp'
-  - '/src/media/works/773-calanque-de-sormiou-v2-3.webp'
-  - '/src/media/works/773-calanque-de-sormiou-detail.webp'
+  - /src/media/works/773-calanque-de-sormiou-v2-3.webp
+  - /src/media/works/773-calanque-de-sormiou-v2.webp
+  - /src/media/works/773-calanque-de-sormiou-v2-2.webp
+  - /src/media/works/773-calanque-de-sormiou-detail.webp
 collections:
   - selected-paintings
 categories: Paysages
