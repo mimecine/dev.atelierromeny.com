@@ -29,5 +29,6 @@ tags:
 hidden_images:
   - /src/media/works/773-calanque-de-sormiou-v2-2.webp
 cleanest: /src/media/works/773-calanque-de-sormiou-v2-3.webp
+thumbnail: 2
 ---
 
