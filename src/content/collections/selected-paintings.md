@@ -17,11 +17,11 @@ order:
   - 590-composition
   - 611-composition
   - 498-convulsion
-  - 587-efter-regnet-apres-la-pluie
   - 459-cosmos
   - 608-dans-ies-grottes-de-miramis
-  - 586-skymningen-crepuscule
   - 660-la-vegetation
+  - 586-skymningen-crepuscule
+  - 587-efter-regnet-apres-la-pluie
   - 97-la-nuit-1
   - 601-extase
   - 365-fleurs-du-mal
