@@ -43,6 +43,7 @@ order:
   - 613-mandoline-sur-fond-chaud
   - 602-med-strommen-courant-dans-ieau
   - 313-mouvement
+  - 661-le-monde-des-animaux
   - 684-nature-morte-au-violon-l
   - 698-nature-morte-chez-monsieur-alata-souvenir-dorient
   - 422-nature-morte-en-bleu-clair
@@ -73,7 +74,6 @@ order:
   - "461"
   - 657-le-chaos
   - 663-la-mort
-  - 661-le-monde-des-animaux
   - 429-brandjord-terre-brulee
   - 339-crabe
   - 516-le-grand-soleil
