@@ -17,12 +17,11 @@ order:
   - 590-composition
   - 611-composition
   - 498-convulsion
+  - 587-efter-regnet-apres-la-pluie
   - 459-cosmos
   - 608-dans-ies-grottes-de-miramis
-  - 660-la-vegetation
-  - 587-efter-regnet-apres-la-pluie
   - 586-skymningen-crepuscule
-  - 329-paysage-interieur-i
+  - 660-la-vegetation
   - 97-la-nuit-1
   - 601-extase
   - 365-fleurs-du-mal
@@ -39,11 +38,11 @@ order:
   - 570-nature-morte-a-la-cythare
   - 658-la-terre
   - 157-le-mur-aux-tomates
+  - 661-le-monde-des-animaux
   - 386-le-verseur-e-petrole
   - 613-mandoline-sur-fond-chaud
   - 602-med-strommen-courant-dans-ieau
   - 313-mouvement
-  - 661-le-monde-des-animaux
   - 684-nature-morte-au-violon-l
   - 698-nature-morte-chez-monsieur-alata-souvenir-dorient
   - 422-nature-morte-en-bleu-clair
@@ -67,16 +66,12 @@ order:
   - 423-stillife-of-bottles
   - 579-table-genereuse
   - 322-tgv-2
+  - 329-paysage-interieur-i
   - 156-tournesols
   - "815"
   - "904"
   - 150-vent-dans-les-champs-de-ble
   - "461"
-  - 657-le-chaos
-  - 663-la-mort
-  - 429-brandjord-terre-brulee
   - 339-crabe
-  - 516-le-grand-soleil
-  - 98-hostdag
 sort: manual
 ---
