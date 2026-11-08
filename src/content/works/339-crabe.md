@@ -6,6 +6,7 @@ images:
   - '/src/media/works/339-crabe-detail.webp'
 collections:
   - nfs
+  - selected-paintings
 categories: Animaux
 w: 50
 h: 40
