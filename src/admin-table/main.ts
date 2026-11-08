@@ -92,7 +92,7 @@ const stripSlash = (p: string) => p.replace(/^\/+/, "");
 function status(message: string, kind: "info" | "error" | "ok" = "info", link?: { href: string; text: string }) {
   const el = $("#status");
   el.className = `status ${kind}`;
-  el.replaceChildren(message, link ? h("a", { href: link.href, target: "_blank", rel: "noopener" }, link.text) : "");
+  el.replaceChildren(message, link ? h("a", { href: link.href, target: "sveltia" }, link.text) : "");
 }
 
 const dirtyEntries = () => state.entries.filter((e) => e.dirty.size > 0);
@@ -116,6 +116,7 @@ function setValue(entry: Entry, col: Column, value: unknown) {
   refreshCell(entry, col);
   for (const c of state.columns) if (c.computed?.from.includes(col.key)) refreshCell(entry, c);
   if (col.kind === "images") for (const c of state.columns) if (c.kind === "detail") refreshCell(entry, c);
+  if (entry === previewing) pushPreview();
 }
 
 // ---------------------------------------------------------------- media
@@ -831,6 +832,85 @@ function inlineEditor(td: HTMLElement, entry: Entry, col: Column, make: () => HT
 }
 
 
+
+// ---------------------------------------------------------------- preview tab
+
+// The 👁 on a row opens the entry in the preview tab (/admin/preview/, named "preview"):
+// the site's own template filled with the entry as it is now, unsaved edits included, kept
+// up to date over a BroadcastChannel. The tab asks for the current state when it loads.
+const PREVIEWABLE = ["works", "pages", "photos", "collections"];
+const previewChannel = new BroadcastChannel("atelier-preview");
+let previewing: Entry | undefined;
+let tabPreviewTimer: ReturnType<typeof setTimeout> | undefined;
+const dataUrls = new Map<string, Promise<string>>();
+
+const blobToDataUrl = (blob: Blob) =>
+  new Promise<string>((resolve, reject) => {
+    const r = new FileReader();
+    r.onload = () => resolve(String(r.result));
+    r.onerror = () => reject(r.error);
+    r.readAsDataURL(blob);
+  });
+
+/** URLs for the entry's pictures that the preview tab can use: the build's images where
+ *  they exist, otherwise (new uploads, local files) the picture itself as a data: URL. */
+async function previewAssets(entry: Entry): Promise<Record<string, string>> {
+  const paths: string[] = [];
+  const collect = (v: unknown) => {
+    if (typeof v === "string" && /^\/.+\.(webp|jpe?g|png|gif|avif)(\?.*)?$/i.test(v)) paths.push(v);
+    else if (Array.isArray(v)) v.forEach(collect);
+  };
+  for (const [k, v] of Object.entries(entry.data)) if (k !== "body") collect(v);
+  const out: Record<string, string> = {};
+  await Promise.all(
+    [...new Set(paths)].slice(0, 24).map(async (path) => {
+      const built = state.previews[path];
+      if (built && !state.uploads.has(path)) return void (out[path] = built);
+      let p = dataUrls.get(path);
+      if (!p) {
+        p = (async () => {
+          const up = state.uploads.get(path);
+          const src = up ? up.url : await previewFor(path);
+          return blobToDataUrl(await (await fetch(src)).blob());
+        })();
+        dataUrls.set(path, p);
+      }
+      try {
+        out[path] = await p;
+      } catch {}
+    })
+  );
+  return out;
+}
+
+async function sendPreview() {
+  const entry = previewing;
+  if (!entry || !state.collection) return;
+  const assets = await previewAssets(entry);
+  let data: Record<string, any>;
+  try {
+    data = structuredClone(entry.data);
+  } catch {
+    data = JSON.parse(JSON.stringify(entry.data));
+  }
+  previewChannel.postMessage({ type: "entry", collection: state.collection.name, slug: entry.slug, data, assets });
+}
+
+function pushPreview() {
+  clearTimeout(tabPreviewTimer);
+  tabPreviewTimer = setTimeout(sendPreview, 200);
+}
+
+function openPreview(entry: Entry) {
+  previewing = entry;
+  window.open(`/admin/preview/?collection=${encodeURIComponent(state.collection!.name)}&slug=${encodeURIComponent(entry.slug)}`, "preview");
+  pushPreview();
+}
+
+previewChannel.addEventListener("message", (e) => {
+  if (e.data?.type === "hello" && previewing) pushPreview();
+});
+
 // ---------------------------------------------------------------- detail
 
 const DETAIL_RE = /-detail(\.[\w-]+)?\.webp(\?.*)?$/;
@@ -1527,8 +1607,8 @@ function renderTable() {
     return c;
   });
   const openCol = h("col") as HTMLTableColElement;
-  openCol.style.width = "32px";
-  table.style.width = `${32 + cols.reduce((sum, c) => sum + widthOf(c), 0)}px`;
+  openCol.style.width = "56px";
+  table.style.width = `${56 + cols.reduce((sum, c) => sum + widthOf(c), 0)}px`;
   const thead = h("thead", {}, h("tr", {}, h("th", { class: "open" }, ""), ...cols.map((col, i) => headerCell(col, colEls[i], table))));
   const tbody = h("tbody");
   for (const entry of rows) {
@@ -1538,7 +1618,10 @@ function renderTable() {
       h(
         "td",
         { class: "open" },
-        h("a", { href: `/admin/#/collections/${state.collection!.name}/entries/${encodeURIComponent(entry.slug)}`, target: "_blank", title: `Open ${entry.name} in Sveltia` }, "↗")
+        h("a", { href: `/admin/#/collections/${state.collection!.name}/entries/${encodeURIComponent(entry.slug)}`, target: "sveltia", title: `Open ${entry.name} in Sveltia` }, "↗"),
+        PREVIEWABLE.includes(state.collection!.name)
+          ? h("a", { href: "#", class: "eye", title: "Preview in the preview tab (with unsaved edits)", on: { click: (e: Event) => (e.preventDefault(), openPreview(entry)) } }, "👁")
+          : ""
       )
     );
     for (const col of cols) {

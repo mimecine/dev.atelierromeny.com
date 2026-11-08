@@ -200,6 +200,7 @@ const isHome = Astro.url.pathname === "/";
       class="cms-link"
       href={cmsPath ? `/admin/#/collections/${cmsPath}` : "/admin/"}
       title={cmsPath ? "Edit this in the CMS" : "Open the CMS"}
+      target="sveltia"
       hidden
     >
       {cmsPath ? "Edit" : "CMS"}

@@ -1,0 +1,30 @@
+---
+// Preview template for works: mirrors src/pages/[collection]/[...slug].astro (the picture and
+// thumbnail strip as WorkImages.astro, the info line, previous/next). See PreviewShell.astro.
+import PreviewShell from "@components/PreviewShell.astro";
+export const prerender = true;
+---
+
+<PreviewShell name="work" bodyclasses="work-page">
+  <section class="flex flex-col flex-1 min-h-0 w-full max-w-4xl mx-auto">
+    <div class="flex flex-col flex-1 min-h-0">
+      <div class="relative flex-1 min-h-[60vh]">
+        <img data-field-src="_main" alt="" class="absolute inset-0 w-full h-full object-contain" />
+        <div class="absolute inset-0 grid place-content-center bg-gray-200 border" data-if="_missing">Image missing</div>
+      </div>
+      <ul class="flex justify-center items-center gap-2 h-15 pt-3 shrink-0" data-list="_strip">
+        <template>
+          <li>
+            <img data-field-src="value" alt="" class="h-12 w-auto object-contain border border-transparent opacity-60" />
+          </li>
+        </template>
+      </ul>
+    </div>
+    <div class="work-info py-3 w-full text-center font-bold shrink-0" data-field="_info"></div>
+    <ul class="grid grid-cols-3 w-full place-items-center uppercase shrink-0">
+      <li><span><span class="text-black opacity-30">&larr;</span> Previous</span></li>
+      <li></li>
+      <li><span>Next <span class="text-black opacity-30">&rarr;</span></span></li>
+    </ul>
+  </section>
+</PreviewShell>

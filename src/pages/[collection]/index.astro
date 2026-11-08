@@ -74,9 +74,9 @@ const items = works.flatMap((work, i) => {
   searchable
   noindex={!isMenuCollection(collection.id)}
 >
-  <section class="grid max-w-6xl mx-auto py-4">
+  <section class="grid w-full py-4">
     <SearchMeta type="collection" title={collection.data.title || "Works"} />
-    <Content />
+    <div class="w-full max-w-6xl mx-auto"><Content /></div>
     <div class="works-grid" data-pagefind-ignore data-detail-grid>
       {
         items.map((item) =>

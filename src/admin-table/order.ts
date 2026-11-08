@@ -26,7 +26,7 @@ function status(text: string, kind = "", link?: { href: string; text: string }) 
   const el = $("#status");
   el.className = `status ${kind}`;
   el.textContent = text;
-  if (link) el.append(" ", h("a", { href: link.href, target: "_blank", rel: "noopener" }, link.text));
+  if (link) el.append(" ", h("a", { href: link.href, target: link.href.startsWith("/admin/") ? "sveltia" : "_blank" }, link.text));
 }
 
 interface Work {
@@ -164,7 +164,7 @@ function render() {
           h("b", {}, ""),
           h(
             "a",
-            { href: `/admin/#/collections/works/entries/${encodeURIComponent(w.slug)}`, target: "_blank", rel: "noopener", draggable: "false", title: `Edit ${w.title || w.slug} in the CMS` },
+            { href: `/admin/#/collections/works/entries/${encodeURIComponent(w.slug)}`, target: "sveltia", draggable: "false", title: `Edit ${w.title || w.slug} in the CMS` },
             w.title || "No title recorded"
           )
         ),

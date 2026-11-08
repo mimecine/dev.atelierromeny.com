@@ -1,0 +1,41 @@
+---
+// A live preview of what the table view is editing, in its own tab (named "preview"): the
+// table view sends the entry (saved or not) over a BroadcastChannel, and this page shows it
+// in the site's own template. Code: src/admin-table/preview-tab.ts.
+export const prerender = true;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Preview · Atelier Romeny admin</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <style is:global>
+      .preview-note {
+        position: fixed;
+        z-index: 2147483000;
+        right: 12px;
+        bottom: 12px;
+        max-width: 24rem;
+        padding: 6px 12px;
+        border-radius: 999px;
+        background: rgb(30 30 30 / 0.78);
+        color: #fff;
+        font: 600 12px/1.4 system-ui, sans-serif;
+      }
+      .preview-note a {
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="preview"></div>
+    <p class="preview-note" id="note">Waiting for the table view…</p>
+    <script>
+      import "../../admin-table/preview-tab";
+    </script>
+  </body>
+</html>

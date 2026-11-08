@@ -65,7 +65,7 @@ collections:
       - { label: "Without images", field: images, empty: true }
       - { label: "Has hidden images", field: hidden_images, empty: false }
     editor:
-      preview: false
+      preview: true
     fields:
       - { label: "Title", name: "title", widget: "string", required: true }
       - label: "Images"
@@ -119,7 +119,7 @@ collections:
     slug: "{{title}}"
 
     editor:
-      preview: false
+      preview: true
     fields:
       - { label: "Title", name: "title", widget: "string", required: true }
       - { label: "Published", name: "published", widget: "boolean", default: false }

@@ -74,13 +74,14 @@
     @apply mt-2;
   }
   .works-grid {
-    /* Two columns on phones, as many 300px columns as fit from sm up */
+    /* Two columns on phones, as many 260px columns as fit from sm up (the pages using it run
+     the full width of the window, so wide screens get 4, 5, 6 … columns) */
     grid-template-columns: repeat(2, minmax(0, 1fr));
     @apply py-4 grid gap-2 sm:gap-4;
   }
   @media (min-width: 40rem) {
     .works-grid {
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     }
   }
   /* Front page collection sections choose their column count (--cols, --cols-sm on phones) */

@@ -15,7 +15,7 @@ export const prerender = true;
   </head>
   <body>
     <header class="bar">
-      <a class="back" href="/admin/" title="Back to Sveltia CMS">← CMS</a>
+      <a class="back" href="/admin/" target="sveltia" title="Back to Sveltia CMS">← CMS</a>
       <select id="collection" aria-label="Collection"></select>
       <span id="count" class="count"></span>
       <label class="size" title="Thumbnail size">
@@ -36,6 +36,8 @@ export const prerender = true;
     </p>
     <main id="grid"></main>
     <script>
+      // The window name is what target="order_view" links look for: always the same tab
+      window.name = "order_view";
       import "../../admin-table/order";
     </script>
   </body>

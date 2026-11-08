@@ -26,7 +26,7 @@ function status(text: string, kind = "", link?: { href: string; text: string }) 
   const el = $("#status");
   el.className = `status ${kind}`;
   el.textContent = text;
-  if (link) el.append(" ", h("a", { href: link.href, target: "_blank", rel: "noopener" }, link.text));
+  if (link) el.append(" ", h("a", { href: link.href, target: link.href.startsWith("/admin/") ? "sveltia" : "_blank" }, link.text));
 }
 
 interface Work {
