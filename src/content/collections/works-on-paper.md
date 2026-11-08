@@ -6,6 +6,7 @@ image: ''
 notes: ''
 uuid: dcc3d59b-45f0-4f0c-8c92-1fce526a2793
 order:
+  - print-023
   - print-001
   - print-037
   - print-021
@@ -20,7 +21,6 @@ order:
   - print-028
   - print-060
   - print-007
-  - print-023
   - print-018
   - print-025
   - print-039
@@ -63,7 +63,6 @@ order:
   - print-052
   - print-053
   - print-054
-  - print-055
   - print-056
   - print-057
   - print-062
