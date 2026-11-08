@@ -33,6 +33,7 @@ order:
   - print-005
   - print-006
   - print-039
+  - print-045
   - print-016
   - print-017
   - print-044
@@ -45,7 +46,6 @@ order:
   - print-042
   - print-033
   - print-031
-  - print-045
   - print-043
   - print-058
   - print-015
