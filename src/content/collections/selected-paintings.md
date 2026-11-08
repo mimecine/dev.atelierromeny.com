@@ -21,6 +21,7 @@ order:
   - 608-dans-ies-grottes-de-miramis
   - 660-la-vegetation
   - 587-efter-regnet-apres-la-pluie
+  - 586-skymningen-crepuscule
   - 329-paysage-interieur-i
   - 97-la-nuit-1
   - 601-extase
@@ -56,7 +57,6 @@ order:
   - 652-poisson-sur-poele
   - 439-roses-de-noel
   - 772-saint-saturnin-dapt
-  - 586-skymningen-crepuscule
   - 483-snolandskap
   - 200-coucher-de-soleil-sur-ie-luberon
   - 689-soleil-dorage
