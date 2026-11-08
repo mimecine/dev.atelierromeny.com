@@ -20,8 +20,9 @@ order:
   - 459-cosmos
   - 608-dans-ies-grottes-de-miramis
   - 660-la-vegetation
-  - 586-skymningen-crepuscule
   - 587-efter-regnet-apres-la-pluie
+  - 586-skymningen-crepuscule
+  - 329-paysage-interieur-i
   - 97-la-nuit-1
   - 601-extase
   - 365-fleurs-du-mal
@@ -66,7 +67,6 @@ order:
   - 423-stillife-of-bottles
   - 579-table-genereuse
   - 322-tgv-2
-  - 329-paysage-interieur-i
   - 156-tournesols
   - "815"
   - "904"
