@@ -39,7 +39,6 @@ order:
   - 570-nature-morte-a-la-cythare
   - 658-la-terre
   - 157-le-mur-aux-tomates
-  - 661-le-monde-des-animaux
   - 386-le-verseur-e-petrole
   - 613-mandoline-sur-fond-chaud
   - 602-med-strommen-courant-dans-ieau
@@ -73,5 +72,6 @@ order:
   - 150-vent-dans-les-champs-de-ble
   - "461"
   - 339-crabe
+  - 661-le-monde-des-animaux
 sort: manual
 ---
