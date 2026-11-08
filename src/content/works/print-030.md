@@ -1,8 +1,6 @@
 ---
 title: null
 categories: Works on Paper
-collections:
-  - works-on-paper
 uuid: a5a1da67-f44c-4598-ac1a-fcbbca13c691
 images:
   - '/src/media/works/print-030.webp'
