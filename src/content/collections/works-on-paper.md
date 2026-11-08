@@ -27,7 +27,6 @@ order:
   - print-008
   - print-009
   - print-012
-  - print-040
   - print-019
   - print-058
   - print-002
@@ -39,10 +38,10 @@ order:
   - print-039
   - print-015
   - print-016
-  - print-020
   - print-017
   - print-022
   - print-024
+  - print-020
   - print-044
   - print-026
   - print-029
@@ -52,6 +51,7 @@ order:
   - print-035
   - print-036
   - print-041
+  - print-040
   - print-042
   - print-045
   - print-046
@@ -61,10 +61,10 @@ order:
   - print-050
   - print-051
   - print-052
+  - print-057
   - print-054
   - print-056
   - print-053
-  - print-057
   - print-062
   - print-043
 sort: manual
