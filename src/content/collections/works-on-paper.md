@@ -33,10 +33,10 @@ order:
   - print-005
   - print-006
   - print-039
-  - print-036
   - print-016
   - print-017
   - print-044
+  - print-036
   - print-022
   - print-024
   - print-020
