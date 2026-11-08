@@ -19,34 +19,28 @@ order:
   - 498-convulsion
   - 459-cosmos
   - 608-dans-ies-grottes-de-miramis
+  - 660-la-vegetation
   - 587-efter-regnet-apres-la-pluie
+  - 97-la-nuit-1
   - 601-extase
   - 365-fleurs-du-mal
   - 94-forsspel-ressac
   - 488-hommage-a-un-musicien-anonyme
-  - 98-hostdag
   - 351-jouve-le-facteur-de-villars
   - 153-lautomne-autour-de-moi
   - 335-la-jetee-golf-breker
-  - 663-la-mort
-  - 97-la-nuit-1
+  - 127-la-serviette-bleue
   - 609-bouquet-de-fleurs-vert-clair
   - 59-la-seine-a-paris
-  - 127-la-serviette-bleue
   - 149-la-table-garnie-1
   - 777-la-tempete-route-de-cucuron
-  - 40-la-terre
+  - 570-nature-morte-a-la-cythare
   - 658-la-terre
-  - 660-la-vegetation
-  - 657-le-chaos
-  - 516-le-grand-soleil
-  - 661-le-monde-des-animaux
   - 157-le-mur-aux-tomates
   - 386-le-verseur-e-petrole
   - 613-mandoline-sur-fond-chaud
   - 602-med-strommen-courant-dans-ieau
   - 313-mouvement
-  - 570-nature-morte-a-la-cythare
   - 684-nature-morte-au-violon-l
   - 698-nature-morte-chez-monsieur-alata-souvenir-dorient
   - 422-nature-morte-en-bleu-clair
@@ -64,8 +58,10 @@ order:
   - 772-saint-saturnin-dapt
   - 586-skymningen-crepuscule
   - 483-snolandskap
+  - 200-coucher-de-soleil-sur-ie-luberon
   - 689-soleil-dorage
   - 425-soleil-vert
+  - 40-la-terre
   - 612-spheres
   - 423-stillife-of-bottles
   - 579-table-genereuse
@@ -75,8 +71,12 @@ order:
   - "904"
   - 150-vent-dans-les-champs-de-ble
   - "461"
+  - 657-le-chaos
+  - 663-la-mort
+  - 661-le-monde-des-animaux
   - 429-brandjord-terre-brulee
-  - 200-coucher-de-soleil-sur-ie-luberon
   - 339-crabe
+  - 516-le-grand-soleil
+  - 98-hostdag
 sort: manual
 ---
