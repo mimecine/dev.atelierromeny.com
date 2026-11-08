@@ -40,6 +40,7 @@ order:
   - print-016
   - print-017
   - print-044
+  - print-035
   - print-022
   - print-024
   - print-020
@@ -64,7 +65,6 @@ order:
   - print-056
   - print-053
   - print-062
-  - print-035
   - print-030
   - print-026
 sort: manual
