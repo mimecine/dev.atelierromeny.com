@@ -15,6 +15,8 @@ order:
   - 366-cobra
   - 762-coin-du-jardin
   - 590-composition
+  - 339-crabe
+  - 661-le-monde-des-animaux
   - 611-composition
   - 498-convulsion
   - 459-cosmos
@@ -71,7 +73,5 @@ order:
   - "904"
   - 150-vent-dans-les-champs-de-ble
   - "461"
-  - 339-crabe
-  - 661-le-monde-des-animaux
 sort: manual
 ---
