@@ -1,32 +1,35 @@
 ---
-id: 663
 title: La Mort
-categories: La création
-w: 180
-h: 130
-location: secondary storage
-new_location: Basement
-note: null
-file: '/src/media/works/663-la-mort.webp'
-year: '1965'
-year_start: 1965
-year_end: null
 images:
   - /src/media/works/663-la-mort-v2-2.webp
   - /src/media/works/663-la-mort-v2.webp
-uuid: d50fd6db-b6c1-4064-a9c8-a050db39ec6d
+hidden_images:
+  - /src/media/works/663-la-mort-v2.webp
+thumbnail: 2
+cleanest: /src/media/works/663-la-mort-v2-2.webp
+old_image: /src/media/works/663-la-mort.webp
+w: 180
+h: 130
+rating: null
+sheet_w: null
+sheet_h: null
+year: '1965'
+year_start: 1965
+year_end: null
+edition: ''
 collections:
-  - selected-paintings
   - review-details
-old_image: '/src/media/works/663-la-mort.webp'
+categories: La création
 tags:
   - painting
   - abstract
   - death
   - creation series
-hidden_images:
-  - /src/media/works/663-la-mort-v2.webp
-cleanest: /src/media/works/663-la-mort-v2-2.webp
-thumbnail: 2
+published: true
+location: secondary storage
+new_location: Basement
+note: ''
+id: 663
+file: /src/media/works/663-la-mort.webp
+uuid: d50fd6db-b6c1-4064-a9c8-a050db39ec6d
 ---
-
