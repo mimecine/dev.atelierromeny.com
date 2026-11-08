@@ -32,8 +32,8 @@ order:
   - print-002
   - print-005
   - print-006
-  - print-039
   - print-045
+  - print-039
   - print-016
   - print-017
   - print-044
