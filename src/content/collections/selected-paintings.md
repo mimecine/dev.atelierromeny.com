@@ -47,9 +47,7 @@ order:
   - 424-negroide
   - 329-paysage-interieur-i
   - 500-paysage-nordique-1
-  - 502-paysage-nordique-2
   - 501-paysage-nordique-4
-  - 499-paysage-nordique-5
   - 610-plante-abstraite
   - 591-poele-aux-fruits-et-aubergine
   - 476-poele-aux-fruits-iii
@@ -78,5 +76,7 @@ order:
   - 339-crabe
   - 516-le-grand-soleil
   - 98-hostdag
+  - 502-paysage-nordique-2
+  - 499-paysage-nordique-5
 sort: manual
 ---
