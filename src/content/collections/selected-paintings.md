@@ -21,6 +21,7 @@ order:
   - 608-dans-ies-grottes-de-miramis
   - 660-la-vegetation
   - 587-efter-regnet-apres-la-pluie
+  - 329-paysage-interieur-i
   - 97-la-nuit-1
   - 601-extase
   - 365-fleurs-du-mal
@@ -45,9 +46,10 @@ order:
   - 698-nature-morte-chez-monsieur-alata-souvenir-dorient
   - 422-nature-morte-en-bleu-clair
   - 424-negroide
-  - 329-paysage-interieur-i
   - 500-paysage-nordique-1
   - 501-paysage-nordique-4
+  - 502-paysage-nordique-2
+  - 499-paysage-nordique-5
   - 610-plante-abstraite
   - 591-poele-aux-fruits-et-aubergine
   - 476-poele-aux-fruits-iii
@@ -76,7 +78,5 @@ order:
   - 339-crabe
   - 516-le-grand-soleil
   - 98-hostdag
-  - 502-paysage-nordique-2
-  - 499-paysage-nordique-5
 sort: manual
 ---
