@@ -18,8 +18,6 @@ order:
   - 611-composition
   - 498-convulsion
   - 459-cosmos
-  - 200-coucher-de-soleil-sur-ie-luberon
-  - 339-crabe
   - 608-dans-ies-grottes-de-miramis
   - 587-efter-regnet-apres-la-pluie
   - 601-extase
@@ -78,5 +76,7 @@ order:
   - 150-vent-dans-les-champs-de-ble
   - "461"
   - 429-brandjord-terre-brulee
+  - 200-coucher-de-soleil-sur-ie-luberon
+  - 339-crabe
 sort: manual
 ---
