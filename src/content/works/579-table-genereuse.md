@@ -2,10 +2,10 @@
 id: 579
 title: Table Généreuse
 images:
-  - '/src/media/works/579-table-genereuse-v2.webp'
-  - '/src/media/works/579-table-genereuse-v2-2.webp'
-  - '/src/media/works/579-table-genereuse-v2-3.webp'
-  - '/src/media/works/579-table-genereuse-detail.webp'
+  - /src/media/works/579-table-genereuse-v2-3.webp
+  - /src/media/works/579-table-genereuse-v2.webp
+  - /src/media/works/579-table-genereuse-v2-2.webp
+  - /src/media/works/579-table-genereuse-detail.webp
 collections:
   - selected-paintings
 categories: Natures mortes
