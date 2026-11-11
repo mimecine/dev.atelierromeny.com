@@ -1,0 +1,19 @@
+---
+// Shell for the CMS preview templates in src/pages/cms-preview/. These pages aren't for
+// visitors: the previews (src/cms/preview-render.ts) fetch them, copy their stylesheets and
+// page classes, and fill the placeholders with the entry being edited. They use the real
+// Layout, so they always have the site's current CSS and markup (live in dev, at build
+// time otherwise). Only the header and <main> are copied. Placeholder attributes are
+// described in src/cms/preview-render.ts.
+import Layout from "@layouts/Layout.astro";
+
+interface Props {
+  name: string;
+  bodyclasses?: string;
+}
+const { name, bodyclasses } = Astro.props;
+---
+
+<Layout title={`CMS preview template: ${name}`} noindex bodyclasses={bodyclasses}>
+  <slot />
+</Layout>

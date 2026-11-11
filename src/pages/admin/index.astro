@@ -1,0 +1,51 @@
+---
+// The Sveltia CMS admin. Bundled from the npm package (rather than loaded from a CDN) so
+// the custom preview panes in src/cms/previews.ts can be registered before it starts.
+// The configuration is /admin/config.yml. To update Sveltia, bump @sveltia/cms in package.json.
+export const prerender = true;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Sveltia CMS</title>
+    <link href="/admin/config.yml" type="text/yaml" rel="cms-config-url" />
+    <style is:global>
+      /* Links to the custom admin pages. They sit outside Sveltia's own markup, so CMS
+         updates can't break them (or be broken by them). Each opens in its own named tab. */
+      .admin-link {
+        position: fixed;
+        bottom: 12px;
+        z-index: 2147483000;
+        padding: 6px 12px;
+        border-radius: 999px;
+        background: rgb(30 30 30 / 0.78);
+        color: #fff;
+        font: 600 12px/1 system-ui, sans-serif;
+        text-decoration: none;
+        opacity: 0.6;
+        transition: opacity 0.15s;
+      }
+      .admin-link:hover {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <a class="admin-link" style="left: 12px" href="/admin/table/" target="table_view" title="Edit collections as a spreadsheet">Table view</a>
+    <a class="admin-link" style="left: 112px" href="/admin/order/" target="order_view" title="Drag a collection's works into order">Collection order</a>
+    <a class="admin-link" style="left: 248px" href="/admin/crop/" target="crop_view" title="Straighten and crop a photo by pointing out its corners">Straighten &amp; crop</a>
+    <script>
+      import { init } from "@sveltia/cms";
+      import { registerPreviews } from "@src/cms/previews";
+
+      // The window name is what target="sveltia" links look for: always the same tab
+      window.name = "sveltia";
+      registerPreviews();
+      init();
+    </script>
+  </body>
+</html>

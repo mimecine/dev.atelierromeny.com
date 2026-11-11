@@ -16,7 +16,7 @@ export const prerender = true;
   </head>
   <body>
     <header class="bar">
-      <a class="back" href="/admin/" title="Back to Sveltia CMS">← CMS</a>
+      <a class="back" href="/admin/" target="sveltia" title="Back to Sveltia CMS">← CMS</a>
       <label class="field">
         Work
         <input id="work" list="works" placeholder="Type a title or number…" autocomplete="off" />
@@ -28,6 +28,8 @@ export const prerender = true;
     </header>
     <div id="host" class="host"></div>
     <script>
+      // The window name is what target="crop_view" links look for: always the same tab
+      window.name = "crop_view";
       import "../../admin-table/crop";
     </script>
   </body>

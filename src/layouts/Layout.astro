@@ -70,6 +70,7 @@ const {
   description: siteDescription,
   share_image,
   theme,
+  grid,
 } = loadSettings();
 
 // Link previews (Open Graph / Twitter cards): a 1200px JPEG, which every service accepts.
@@ -143,7 +144,7 @@ const isHome = Astro.url.pathname === "/";
   lang="en"
   transition:name="root"
   transition:animate="fade"
-  class:list={[`theme-${theme}`, bodyclasses]}
+  class:list={[`theme-${theme}`, `grid-${grid}`, bodyclasses]}
   id={slug && `slug-${slug}`}
 >
   <head>
@@ -200,6 +201,7 @@ const isHome = Astro.url.pathname === "/";
       class="cms-link"
       href={cmsPath ? `/admin/#/collections/${cmsPath}` : "/admin/"}
       title={cmsPath ? "Edit this in the CMS" : "Open the CMS"}
+      target="sveltia"
       hidden
     >
       {cmsPath ? "Edit" : "CMS"}

@@ -1,0 +1,16 @@
+---
+// Preview template for pages (Bio, About, Tales Told…): mirrors src/pages/[slug].astro.
+import PreviewShell from "@components/PreviewShell.astro";
+export const prerender = true;
+---
+
+<PreviewShell name="page">
+  <section class="grid max-w-4xl mx-auto py-4 font-serif">
+    <div class="prose prose-lg w-full lg:w-4xl mx-auto [&>:first-child+*]:mt-0 [&>:first-child+*]:!pt-0 [&_:is(h1,h2,h3,h4)+p]:!pt-0">
+      <div class="not-prose float-right ml-4 mb-2 mt-[0.3em] w-40 sm:w-52" data-if="image">
+        <img data-field-src="image" alt="" class="w-full h-auto" />
+      </div>
+      <div data-field-html="body" data-placeholder="Page text"></div>
+    </div>
+  </section>
+</PreviewShell>

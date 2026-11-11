@@ -16,10 +16,11 @@ seo:
   site_title: Edlef Romeny
   author: Marco Romeny
   email: marco@mimecom.net
+appearance:
+  theme: plain
+  grid: '3'
 photos:
   every: 0
 advanced:
   css: ''
   js: ''
-appearance:
-  theme: plain
