@@ -74,13 +74,41 @@
     @apply mt-2;
   }
   .works-grid {
-    /* Two columns on phones, as many 260px columns as fit from sm up (the pages using it run
-     the full width of the window, so wide screens get 4, 5, 6 … columns) */
+    /* Two columns on phones, as many 260px columns as fit from sm up */
     grid-template-columns: repeat(2, minmax(0, 1fr));
     @apply py-4 grid gap-2 sm:gap-4;
   }
   @media (min-width: 40rem) {
     .works-grid {
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    }
+  }
+  /* Settings > Parameters > Appearance > Grid columns (class on <html>): the pages with
+     a grid of works are 3, 4 or 5 columns wide from lg up, or "fluid": the full width of
+     the window with as many columns as fit (4, 5, 6… on wide screens). */
+  .works-page {
+    @apply mx-auto;
+    max-width: var(--works-max, 72rem);
+  }
+  .grid-4 {
+    --works-max: 90rem;
+    --works-cols: 4;
+  }
+  .grid-5 {
+    --works-max: 110rem;
+    --works-cols: 5;
+  }
+  .grid-3 {
+    --works-cols: 3;
+  }
+  .grid-fluid .works-page {
+    max-width: none;
+  }
+  @media (min-width: 64rem) {
+    .works-page .works-grid:not(.fixed-cols) {
+      grid-template-columns: repeat(var(--works-cols, 3), minmax(0, 1fr));
+    }
+    .grid-fluid .works-page .works-grid:not(.fixed-cols) {
       grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     }
   }

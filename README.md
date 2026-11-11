@@ -118,7 +118,7 @@ Pages without an entry link to the CMS itself. Visitors never see it (`src/lib/c
 - **Sveltia is bundled:** `/admin/` is `src/pages/admin/index.astro`, which imports `@sveltia/cms` from npm (so the previews can be registered) and reads `/admin/config.yml`. To update Sveltia, bump `@sveltia/cms` in `package.json`; there's no CDN pin any more. Settings files (home sections, navigation…) have no preview.
 - **Preview tab for the table view:** the 👁 on a table row opens `/admin/preview/` (its own tab) showing that entry in the same template, including unsaved edits, which the table view sends over a BroadcastChannel as you edit (`src/admin-table/preview-tab.ts`). Images not built yet go across as data URLs.
 - **Named tabs:** the admin pages set `window.name` (`sveltia`, `table_view`, `order_view`, `crop_view`, `preview`) and every link between them uses the matching `target`, so each always opens in, and reuses, the same tab. That includes the site's "Edit" button.
-- **Wide grids:** collection, tag and saved pages run the full width of the window and fit as many 260px columns as there are room for (4, 5, 6… on wide screens); text above the grid keeps its reading width.
+- **Grid columns:** Settings > Parameters > Appearance > Grid columns: 3 (the default), 4 or 5 columns from the lg breakpoint up, or Fluid (the full width of the window, as many 260px columns as fit). It applies to collection, tag and Saved pages, as a class on `<html>` (`grid-3`, `grid-4`, `grid-5`, `grid-fluid`); the rules are in `global.css`. Text above the grid keeps its reading width.
 
 ## Theme
 

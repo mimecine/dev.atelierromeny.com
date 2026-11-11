@@ -396,6 +396,16 @@ collections:
                 options:
                   - { label: "Plain: no background texture, no shadows, no logo transition", value: plain }
                   - { label: "Paper: paper background, sunk-in logo, logo transition between pages", value: paper }
+              - label: "Grid columns"
+                name: grid
+                widget: select
+                default: "3"
+                hint: "Collection, tag and Saved pages on wide screens (phones and tablets adapt on their own). Fluid runs the full width of the window with as many columns as fit."
+                options:
+                  - { label: "3 columns", value: "3" }
+                  - { label: "4 columns", value: "4" }
+                  - { label: "5 columns", value: "5" }
+                  - { label: "Fluid: full width, as many columns as fit", value: fluid }
           - label: "Photos in grids"
             name: "photos"
             widget: object

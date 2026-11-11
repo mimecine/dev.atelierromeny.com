@@ -28,6 +28,8 @@ export interface Settings {
   photos_every?: number;
   /** Settings > Parameters > Appearance: "plain" (default) or "paper" (paper background, sunk logo, logo transition) */
   theme?: "plain" | "paper";
+  /** Settings > Parameters > Appearance > Grid columns: 3, 4 or 5 fixed columns, or "fluid" (as many as fit, full width) */
+  grid?: "3" | "4" | "5" | "fluid";
 }
 
 /** Settings > Parameters > Password */
@@ -116,6 +118,7 @@ export function loadSettings(): Settings {
     barrier: parameters.password,
     photos_every: Number(parameters.photos?.every ?? 0) || 0,
     theme: parameters.appearance?.theme === "paper" ? "paper" : "plain",
+    grid: ["4", "5", "fluid"].includes(String(parameters.appearance?.grid)) ? String(parameters.appearance.grid) as "4" | "5" | "fluid" : "3",
   };
 }
 
